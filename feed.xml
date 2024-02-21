@@ -1,0 +1,3145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>gorpeln的个人博客 - gorpeln</title>
+    <link>https://gorpeln.top</link>
+    <description>记录技术上的成长以及生活里的点点滴滴...</description>
+    
+      <item>
+        <title>博客黑夜模式：Dark Reader 插件</title>
+        <link>https://gorpeln.top/article/17016025546</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17016025546</guid>
+        <pubDate>2023-12-03</pubDate>
+        <description>&lt;p&gt;亲爱的读者，现在你可以更加自由地调整我们的博客浏览模式了！如果你喜欢在夜晚或低光环境下浏览，我们建议你使用 &lt;strong&gt;Chrome&lt;/strong&gt; 浏览器，并安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dark Reader&lt;/code&gt; 插件。这个插件简单易用，适用于各类网站，包括我们的博客。启用黑夜模式，不仅有助于减轻眼睛的疲劳，还能提供更加舒适的阅读环境。安装 Dark Reader 插件只需几步简单操作，快来尝试吧，让博客在黑夜中焕发新光彩！&lt;/p&gt;
+
+&lt;h3 id=&quot;dark-reader-简介&quot;&gt;Dark Reader 简介&lt;/h3&gt;
+
+&lt;p&gt;适用于所有网站的暗色主题。关爱眼睛，就使用 Dark Reader 进行日常浏览。&lt;/p&gt;
+
+&lt;p&gt;这是一个护眼扩展程序，通过实时生成黑暗主题，为每一个网站启用夜间模式。 Dark Reader 反转明亮的颜色，使网页内容具有高对比度并易于在夜间阅读。&lt;/p&gt;
+
+&lt;p&gt;您可以调整亮度、对比度，应用棕褐色滤镜、黑暗模式，设置字体和忽略的网站列表。&lt;/p&gt;
+
+&lt;p&gt;我们可能会要求您通过捐款来支持应用程序的开发。您可能会在设置弹出窗口中看到有关 Dark Reader 的新闻。有针对经验丰富的用户的开发人员工具。&lt;/p&gt;
+
+&lt;p&gt;Dark Reader 无广告，也不会向任何地方发送用户的数据。它完全开源 &lt;a href=&quot;https://github.com/darkreader/darkreader&quot;&gt;https://github.com/darkreader/darkreader&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;下载安装&quot;&gt;下载安装&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;插件下载地址：&lt;/strong&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh&quot;&gt;https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;开源地址：&lt;/strong&gt;&lt;a href=&quot;https://github.com/darkreader/darkreader&quot;&gt;https://github.com/darkreader/darkreader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;蓝奏云：&lt;/strong&gt;&lt;a href=&quot;https://gorpeln.lanzoul.com/itV2o1gt1uve%0A&quot;&gt;https://gorpeln.lanzoul.com/itV2o1gt1uve&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;安装方法：&lt;/strong&gt; &lt;br /&gt;
+　　方法1. chrome插件商店下载直接安装   &lt;br /&gt;
+　　方法2. 开源地址、蓝奏云下载的直接解压，在chrome浏览器输入栏输入&lt;strong&gt;chrome://extensions/&lt;/strong&gt;，开启开发者模式，点击&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;加载已解压的扩展程序&lt;/code&gt;&lt;/strong&gt;即可。
+　　&lt;/p&gt;
+&lt;h3 id=&quot;使用效果&quot;&gt;使用效果&lt;/h3&gt;
+&lt;p&gt;Dark Reader 启用前
+&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234541.png!gorpeln&quot; alt=&quot;20231203192234541&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dark Reader 启用后&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234542.png!gorpeln&quot; alt=&quot;20231203192234542&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234543.png!gorpeln&quot; alt=&quot;20231203192234543&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234544.png!gorpeln&quot; alt=&quot;20231203192234544&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234545.png!gorpeln&quot; alt=&quot;20231203192234545&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234546.png!gorpeln&quot; alt=&quot;20231203192234546&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234547.png!gorpeln&quot; alt=&quot;20231203192234547&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>个性二维码合集</title>
+        <link>https://gorpeln.top/article/16990919984</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16990919984</guid>
+        <pubDate>2023-11-04</pubDate>
+        <description>&lt;p&gt;探索个性二维码，每个都是数字艺术的小宝藏。这些小图案背后蕴含着独特的故事。扫一扫，用手机开启一场别样的冒险，发现属于你的精彩故事。或许，在其中的某一张，你将找到属于自己的独特之旅。数字艺术的魅力，从这些个性十足的二维码开始。让它们为你的日常生活注入新奇，感受创意的奇妙。快来和我一同探索这个数字世界的神秘角落吧！&lt;/p&gt;
+
+&lt;html lang=&quot;zh&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;style&gt;
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+    .thumbnail-container {
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; /* 开启自动换行 */
+        justify-content: center; /* 让缩略图水平居中 */
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        margin: 5px; /* 调整缩略图之间的间距 */
+        cursor: pointer;
+    }
+
+    .thumbnail.active {
+        border: 2px solid #333; /* 激活状态添加边框 */
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- 添加更多的图片 --&gt;
+&lt;div class=&quot;slideshow-container&quot;&gt;
+
+	&lt;script&gt;
+ 		for (var i = 1; i &lt; 15; i++) {
+            document.write(&quot;&lt;div class=&apos;mySlides&apos;&gt;&lt;img src=&apos;https://img.gorpeln.top/p/qrcode_&quot; + i + &quot;.jpg&apos; style=&apos;width:100%&apos;&gt;&lt;/div&gt;&quot;);       
+        }
+	&lt;/script&gt;
+
+
+    &lt;a class=&quot;prev&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
+    &lt;a class=&quot;next&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- 添加更多的缩略图 --&gt;
+&lt;div class=&quot;thumbnail-container&quot;&gt;
+
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_1.jpg&quot; onclick=&quot;currentSlide(1)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_2.jpg&quot; onclick=&quot;currentSlide(2)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_3.jpg&quot; onclick=&quot;currentSlide(3)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_4.jpg&quot; onclick=&quot;currentSlide(4)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_5.jpg&quot; onclick=&quot;currentSlide(5)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_6.jpg&quot; onclick=&quot;currentSlide(6)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_7.jpg&quot; onclick=&quot;currentSlide(7)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_8.jpg&quot; onclick=&quot;currentSlide(8)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_9.jpg&quot; onclick=&quot;currentSlide(9)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_10.jpg&quot; onclick=&quot;currentSlide(10)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_11.jpg&quot; onclick=&quot;currentSlide(11)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_12.jpg&quot; onclick=&quot;currentSlide(12)&quot; /&gt;
+  	&lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_13.jpg&quot; onclick=&quot;currentSlide(13)&quot; /&gt;
+    &lt;img class=&quot;thumbnail&quot; src=&quot;https://img.gorpeln.top/p/qrcode_14.jpg&quot; onclick=&quot;currentSlide(14)&quot; /&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName(&quot;mySlides&quot;);
+        let thumbnails = document.getElementsByClassName(&quot;thumbnail&quot;);
+
+        if (n &gt; slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n &lt; 1) {
+            slideIndex = slides.length;
+        }
+
+        for (i = 0; i &lt; slides.length; i++) {
+            slides[i].style.display = &quot;none&quot;;
+        }
+
+        for (i = 0; i &lt; thumbnails.length; i++) {
+            thumbnails[i].classList.remove(&quot;active&quot;);
+        }
+
+        slides[slideIndex - 1].style.display = &quot;block&quot;;
+        thumbnails[slideIndex - 1].classList.add(&quot;active&quot;);
+    }
+&lt;/script&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>8周年：来自GPT的总结</title>
+        <link>https://gorpeln.top/article/16927632006</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16927632006</guid>
+        <pubDate>2023-08-23</pubDate>
+        <description>&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gorpeln的个人博客 - gorpeln&lt;/code&gt;&lt;/strong&gt; 博客&lt;strong&gt;八周年&lt;/strong&gt;了。&lt;br /&gt;
+  &lt;br /&gt;
+转眼间，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;八年&lt;/code&gt;的悠悠岁月已如同手中紧握的沙子，无声无息的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;流逝&lt;/code&gt;。&lt;br /&gt;
+光阴似箭，日月如梭。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;时间&lt;/code&gt;像一匹飞驰的骏马，转眼间，从我们的身边&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;飞逝&lt;/code&gt;而去。&lt;br /&gt;
+后来，南山的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;风&lt;/code&gt;吹散了谷堆，北海的水淹没了墓碑，多少事&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;沧海桑田&lt;/code&gt;，无数人来了又回。 &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;时间&lt;/code&gt;是一直藏在黑暗中的温柔的手，在你一出神一&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;恍惚&lt;/code&gt;之间，物走星移。&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;博 客 八 周 年 快 乐 ！&lt;/code&gt;&lt;/strong&gt; 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg!gorpeln&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;&lt;br /&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+使用GPT帮我总结一下八年时光：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;博客八周年了,记录技术上的成长以及生活里的点点滴滴...,写一个有纪念意义的文章，要求1000字&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;八年前，我创建了自己的博客，开始记录自己在技术和生活方面的点点滴滴。这八年来，我学到了很多东西，也经历了很多事情。在博客八周年这个特殊的时刻，我想写一篇有纪念意义的文章，回顾自己的成长历程，分享自己的心得和经验，以及表达感激之情。
+  
+在技术方面，我从最初的编程小白，到现在的技术专家，经历了很多挑战和困难。我记得当时学习编程的时候，遇到了很多问题，有时候甚至不知道该怎么下手。但是我从来没有放弃过，通过不断的学习和实践，我逐渐掌握了编程的基本技能，学会了如何解决问题。在这个过程中，我也遇到了很多优秀的开发者和导师，他们给了我很多帮助和支持，让我能够更快地成长。
+  
+除了技术方面的成长，我也分享了自己生活中的点滴。我喜欢旅行、阅读、美食等等，这些都成为了我生活中的重要组成部分。我在博客中分享了自己的旅行经历、阅读心得、美食体验等等，这些内容不仅让读者更好地了解我的生活和思想，也让我的博客更加丰富多彩。
+  
+在这八年中，我也遇到了很多挑战和困难。有时候我会感到迷茫和无助，但是我从来没有放弃过，我相信只要坚持不懈，总会迎来成功的一天。在这个过程中，我也得到了很多人的支持和帮助，我想感谢他们，因为没有他们的支持，我可能无法走到今天的位置。
+  
+最后，我想展望一下未来。我相信技术的发展会给我们带来更多的机遇和挑战，我也会继续学习和成长，不断提高自己的技能。同时，我也希望能够继续分享自己的经验和心得，为其他开发者提供帮助和支持。我相信只要坚持不懈，我们都能够实现自己的梦想。
+  
+八年的博客生涯，让我学到了很多东西，也让我成长了很多。我想感谢所有读者、支持者、合作伙伴以及家人朋友，因为没有你们的支持，我无法走到今天的位置。同时，我也希望我的博客能够继续发展壮大，为更多人提供帮助和支持。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;博客八周年了,记录技术上的成长以及生活里的点点滴滴...,写一个有纪念意义的文章，要求5000字&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;很高兴能够在这个特殊的时刻，写一篇有纪念意义的文章，记录自己八年来的成长历程和生活点滴。在这篇文章中，我将分享更多的心得和经验，希望能够为读者提供更多的帮助和启示。
+  
+第一部分：技术成长历程
+  
+回顾自己的技术成长历程，我想从最初学习编程的经历开始说起。当时我还是一名大学生，对计算机编程一窍不通。但是我对计算机科学非常感兴趣，所以我决定学习编程。我选择了一门编程语言，开始学习。刚开始的时候，我遇到了很多问题，有时候甚至不知道该怎么下手。但是我从来没有放弃过，我相信只要坚持不懈，总会迎来成功的一天。
+  
+通过不断的学习和实践，我逐渐掌握了编程的基本技能，学会了如何解决问题。我开始写一些简单的程序，例如计算器、猜数字游戏等等。这些小程序虽然很简单，但是对于我来说却是一个很大的进步。我开始感到自己的编程能力在不断提高。
+  
+随着时间的推移，我开始接触到更加复杂的编程项目。我参加了一些编程比赛，这些比赛让我更加深入地了解了编程的本质。我开始学习数据结构、算法等高级编程技术，这些技术让我能够写出更加高效、优美的代码。
+  
+在这个过程中，我也遇到了很多优秀的开发者和导师，他们给了我很多帮助和支持，让我能够更快地成长。我参加了一些编程社区和开发者论坛，与其他开发者交流经验和技巧。这些经验和技巧让我受益匪浅，让我能够更好地应对各种编程问题。
+  
+现在，我已经成为了一名技术专家，拥有了丰富的编程经验和技能。我参与了很多大型项目，包括网站开发、移动应用开发、人工智能等等。我也成为了一名导师，帮助其他开发者提高自己的技能。我相信只要坚持不懈，我们都能够实现自己的梦想。
+   
+第二部分：生活点滴
+   
+除了技术方面的成长，我也分享了自己生活中的点滴。我喜欢旅行、阅读、美食等等，这些都成为了我生活中的重要组成部分。我在博客中分享了自己的旅行经历、阅读心得、美食体验等等，这些内容不仅让读者更好地了解我的生活和思想，也让我的博客更加丰富多彩。
+  
+我记得有一次，我去了一家很有名的餐厅，品尝了一道非常美味的菜肴。我在博客中分享了这个经历，还写了一篇关于这道菜肴的文章。很多读者看完我的文章后，也去了这家餐厅品尝这道菜肴，他们也非常喜欢这道菜肴。这让我感到非常开心，因为我能够为读者带来一些美好的体验。
+  
+我还喜欢阅读，我读了很多好书，例如《活着》、《百年孤独》等等。这些书籍让我更好地了解了人性和生命的意义。我在博客中分享了自己的阅读心得，希望能够激发读者对阅读的兴趣。
+  
+我也喜欢旅行，我去过很多不同的地方，例如欧洲、亚洲、北美等等。每个地方都有自己独特的文化和风景，让我感到非常惊奇和兴奋。我在博客中分享了自己的旅行经历，希望能够激发读者对旅行的兴趣。
+  
+第三部分：心得和经验
+  
+在这八年中，我积累了很多心得和经验，我想分享一些给读者。
+  
+首先，我认为学习是一件非常重要的事情。只有不断学习，我们才能够保持竞争力，不断提高自己的技能。我们应该保持好奇心，不断探索新的领域和技术。
+  
+其次，我认为实践是学习的关键。只有通过实践，我们才能够真正掌握知识和技能。我们应该多写代码，多参与项目，不断提高自己的实践能力。
+  
+第三，我认为交流是非常重要的。我们应该与其他开发者交流经验和技巧，学习他们的经验和技巧。我们也应该与其他人分享自己的经验和技巧，帮助他们提高自己的技能。
+  
+第四，我认为坚持不懈是成功的关键。在学习和实践的过程中，我们会遇到很多挑战和困难。但是只要坚持不懈，我们总会迎来成功的一天。我们应该相信自己，相信自己的能力。
+  
+第五，我认为分享是非常重要的。我们应该分享自己的经验和技巧，帮助其他人提高自己的技能。我们也应该分享自己的生活点滴，让其他人更好地了解我们的生活和思想。
+  
+第四部分：表达感激之情
+  
+在博客八周年这个特殊的时刻，我想表达自己的感激之情。首先，我要感谢所有读者，因为有你们的支持，我的博客才能够发展壮大。我也要感谢所有支持者和合作伙伴，因为有你们的帮助，我才能够走到今天的位置。最后，我要感谢我的家人和朋友，因为有你们的支持和鼓励，我才能够坚持不懈，追求自己的梦想。
+  
+结语
+  
+在这篇文章中，我回顾了自己在技术和生活方面的成长历程，分享了自己的心得和经验，表达了自己的感激之情。我相信只要坚持不懈，我们都能够实现自己的梦想。我也希望我的博客能够继续发展壮大，为更多人提供帮助和支持。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>同一台电脑上使用多个GitHub账号</title>
+        <link>https://gorpeln.top/article/16895899334</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16895899334</guid>
+        <pubDate>2023-07-17</pubDate>
+        <description>&lt;h3 id=&quot;使用需求&quot;&gt;使用需求&lt;/h3&gt;
+
+&lt;blockquote class=&quot;prompt-info&quot;&gt;
+  &lt;p&gt;通常情况下，我们会有两个 github 账号：一个是公司的，另一个是私人的。由于 github 是使用 SSH key 的 fingerprint (对应的公钥id_rsa_pub)来判定你是哪个账户，而不是通过用户名，如果是在多台电脑上使用一个账号，可以为该账号添加多个 SSH key，如果是一台电脑使用多个账号，则分别生成多个 SSH key 添加到对应的账户即可。所以本文要实现的是公号和私号在 git 上同时使用，两者互不干扰。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;步骤一生成多个-ssh-key&quot;&gt;步骤一：生成多个 SSH key&lt;/h3&gt;
+&lt;p&gt;为了举例方便，这里使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;one&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;two&lt;/code&gt; 两个账户。
+使用cd ~/.ssh切换工作目录，然后使用如下命令生成两个钥匙，中间一路回车。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen -t rsa -f ~/.ssh/id_rsa_one -C &quot;one@xxx.com&quot;
+ssh-keygen -t rsa -f ~/.ssh/id_rsa_two -C &quot;two@xxx.com&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这样会在~/.ssh目录下生成四个文件：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id_rsa.one      //账号 one 的私钥
+id_rsa.one.pub  //账号 one 的公钥
+id_rsa.two
+id_rsa.two.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;步骤二创建配置文件-config&quot;&gt;步骤二：创建配置文件 config&lt;/h3&gt;
+&lt;p&gt;在 ~/.ssh目录下新建 config 文件，令不同 Host 实际映射到同一 HostName，但密钥文件不同。根据自己情况修改&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-two&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accountTwo-name&lt;/code&gt;的值。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# --- 第一个账号 ---
+Host account-one    # 如：gorpeln
+	HostName github.com
+	User account-name  # 如：gorpeln
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa_one
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+# --- 第二个账号 ---
+Host account-two    # 如：gorpelnTwo
+	HostName github.com
+	User accountTwo-name  # 如：gorpelnTwo
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa_two
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;步骤三添加-ssh-key-及-测试&quot;&gt;步骤三：添加 SSH key 及 测试&lt;/h3&gt;
+&lt;p&gt;分别登陆两个 github 账号，在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; —&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SSH and GPG keys&lt;/code&gt; 中，点击 “new SSH key”，把 “id_rsa.one.pub” 和 “id_rsa.two.pub”这两个公钥的内容分别添加到相应的账号中。
+为了确认我们可以通过 SSH 连接 github，可通过输入下面命令来验证&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 验证账号一
+ssh -T git@gorpeln 
+# 验证账号二
+ssh -T git@gorpelnTwo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果看到下面信息，就说明连接正常。&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hi gorpeln! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;步骤四用户名和邮箱配置&quot;&gt;步骤四：用户名和邮箱配置&lt;/h3&gt;
+&lt;p&gt;在第二步创建配置文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt;时，可以直接将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;设置为你的主账号（账号一）名字，如我的GitHub账户名为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;，你可以了通过&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/gorpeln&lt;/code&gt;访问到我，则直接将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;设置为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;，则对于使用主账号（账号一）操作的git仓库，正常&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;即可，不需要其他额外的操作。全局的用户名和邮箱可以直接配置为主账号（账号一）。&lt;/p&gt;
+
+&lt;p&gt;对于次账号（账号二）管理的项目则需要单独配置相应的账号和邮箱。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 设置局部 用户名/邮箱 配置
+git config user.name &quot;xxxx&quot;
+git config user.email &quot;xxxx@xx.com&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;步骤五使用-git&quot;&gt;步骤五：使用 git&lt;/h3&gt;
+&lt;p&gt;git 的使用一般是从其他仓库直接 clone 或本地新建，注意配置用户名和邮箱。&lt;/p&gt;
+
+&lt;p&gt;如果你步骤四：用户名和邮箱配置为主账号（账号一），那么该账号操作和配置第二个账号前的操作完全相同，没有任何变化，正常操作即可。&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 远程仓库地址为：git@github.com:gorpeln/repo.git
+git clone git@github.com:gorpeln/repo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;次账号（账号二 ）操作项目&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 远程仓库地址为：git@github.com:gorpeln-two/repo.git
+git clone git@gorpelnTwo:gorpeln-two/repo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果你使用第三方图形工具操作，如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sourcetree&lt;/code&gt;,进行操作时，记得不要忘了&lt;strong&gt;远程仓库地址&lt;/strong&gt;的修改。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</title>
+        <link>https://gorpeln.top/article/16874238349</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16874238349</guid>
+        <pubDate>2023-06-22</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln&quot; alt=&quot;20230622165034171&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你浏览过一些 GitHub 的开源项目，你一定见过很多 README 文档中都会出现的五颜六色、各式各样的「小牌子」。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034172.png!gorpeln&quot; alt=&quot;20230622165034172&quot; /&gt;
+最初，这些「小牌子」的主要作用是为了显示「某个 GitHub 项目」的「某种状态」，比如项目的编译是否成功、文档是否更新至最新、软件的下载数量有多少……不过，从原理的角度来说，这些「小牌子」都是通过我们给「牌子渲染服务器」提供一些数据后，服务器返回给我们一个 SVG 格式的图片来工作的。我们将返回的 SVG 图片嵌入到 GitHub 的 README 文档或其他网页里面，就完成了一个「小牌子」的制作。&lt;/p&gt;
+
+&lt;p&gt;因此，我们不仅可以将这些「小牌子」用在 GitHub 里，如果你拥有自己的「个人主页」、「博客」或其他展示个人资料的地方，只要你可以控制网页的 HTML，能自己向其中插入一些自定义代码，你就可以借助于「小牌子服务器」来自制一些好看又能实时更新的「个人资料展示牌」、「订阅地址标识牌」等等。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034173.png!gorpeln&quot; alt=&quot;20230622165034173&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;shieldsio-的基本用法&quot;&gt;Shields.io 的基本用法&lt;/h3&gt;
+
+&lt;h4 id=&quot;简单定制静态小牌子&quot;&gt;简单定制静态小牌子&lt;/h4&gt;
+&lt;p&gt;Shields.io 就是一个我们开头提到的「牌子渲染服务」。事实上，GitHub 上面大部分「小牌子」都是用 Shields.io 来渲染的。我们可以借助于 Shields.io 服务定制一些个性化的「小牌子」。一个最简单的例子就是：&lt;a href=&quot;https://img.shields.io/badge/%E9%A3%8E%E6%9C%AA%E6%AD%A2-gorpeln-da282a&quot;&gt;https://img.shields.io/badge/风未止-gorpeln-da282a&lt;/a&gt;，这一请求可以渲染得到如下效果的小牌子。&lt;/p&gt;
+
+&lt;p&gt;可以发现，简单定制小牌子非常方便，最最基础的语法规则就是：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034174.png!gorpeln&quot; alt=&quot;20230622165034174&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/{左半部分标签}-{右半部分标签}-{右半部分颜色}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;另外，在 Shields.io 的官网上面有非常方便的「小牌子生成器」，我们可以直接用它来构造一个「小牌子」，只需要按照下图的样子：填入左半边标签、填入右半边标签，再定义右半边的颜色，点击 Make Badge 即可生成。其中，右半边的颜色我们可以用官方提供的几种预设颜色名称（下方 Colors）或者我们自己提供十六进制颜色代码都可以。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034175.png!gorpeln&quot; alt=&quot;20230622165034175&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们按照上面的方法构造一个链接，就制作完成我们的小牌子啦！这样得到的链接是一个 SVG 图片链接，我们可以直接用插入图片的语法规则加到我们的 Markdown 文本文件中或 HTML 里面。&lt;/p&gt;
+
+&lt;h4 id=&quot;动态实时更新的小牌子&quot;&gt;动态实时更新的小牌子&lt;/h4&gt;
+&lt;p&gt;事实上，我们前面生成的小牌子都是静态的小牌子：其中的文本内容是固定不变的，仅能用于做一个好看的标识。而事实上，Shields.io 生成的小牌子完全支持动态数据显示，比如粉丝、关注者数量、RSS 订阅者数量……&lt;/p&gt;
+
+&lt;p&gt;如果我们想要显示一些动态变化的数据，那么我们就需要一个受支持的数据接口，这样我们的「Shields.io 小牌子生成服务器」就会先行从这一数据接口请求相应的动态数据，并按照请求的结果将数据渲染成不同的「小牌子」。（具体的语法请继续向下阅读）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034176.png!gorpeln&quot; alt=&quot;20230622165034176&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;但是，虽然 Shields.io 服务 API 的功能非常完善，能够支持许多第三方 API 节点的数据服务，但是有一些服务：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API 接口返回复杂，无法直接用 Shields.io 简单处理&lt;/li&gt;
+  &lt;li&gt;API 访问缓慢、不稳定，经常出现超时或无法访问的情况&lt;/li&gt;
+  &lt;li&gt;访问一些数据需要进行认证，直接访问会返回 403 无权限&lt;/li&gt;
+  &lt;li&gt;直接不对外公开 API 接口，没有面向开发者的开放平台，无法直接请求数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当我们想要显示这些平台的关注者数量、粉丝数量时，往往就力不从心了。因此，我使用 Serverless 技术实现了「Substats: Subscriber Statistics」—— 一个专注提供多个服务、平台、网站的粉丝、关注、订阅数量的 API 中转站，用来专门处理这些单靠 Shields.io 不方便直接处理的疑难杂症。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Substats 项目开源在：GitHub - &lt;a href=&quot;https://github.com/spencerwooo/Substats&quot;&gt;spencerwooo/Substats&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Substats 的 API 地址位于：Home - &lt;a href=&quot;https://api.spencerwoo.com/substats/&quot;&gt;Substats API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;另外，关于如何调用 Substats API，我还撰写了比较详细的文档：&lt;a href=&quot;https://substats.spencerwoo.com/&quot;&gt;Substats Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面我来简单介绍一下如何利用 Substats 配合 Shields.io 定制小牌子 ( •̀ ω •́ )✧&lt;/p&gt;
+
+&lt;h3 id=&quot;用-substats-配合-shieldsio-制作动态小牌子&quot;&gt;用 Substats 配合 Shields.io 制作动态小牌子&lt;/h3&gt;
+
+&lt;h4 id=&quot;通过-substats-api-获取我们期望的数据&quot;&gt;通过 Substats API 获取我们期望的数据&lt;/h4&gt;
+
+&lt;p&gt;为了更好的配合 Shields.io 服务，我特意将 Substats 的 API 设计成简单拼接 URL 即可进行数据请求。Substats API 的语法非常简单，我们只需要关注并提供如下的两个字段即可进行请求：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;目标服务名称 source：你所想要请求的服务、网站和平台名（比如：gorpeln、weibo……）&lt;/li&gt;
+  &lt;li&gt;请求数据标签 queryKey：在这一服务中查询的关注数据对应的标签或名称（比如我的用户名 gorpeln）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这样，我们就可以用这样的语法来拼接一个 URL（注意第一个字符是 ?，其他用 &amp;amp; 拼接）：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source={目标服务名称}&amp;amp;queryKey={请求数据标签}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;利用这样的语法，我们就可以进行数据请求啦。继续上面图示中的例子，比如我想要制作一个实时显示我自己的gorpeln的github关注数量的小牌子，我拼接成的 URL 即为：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=github&amp;amp;queryKey=gorpeln
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;非常方便！这一 URL 会给我们返回类似下面的 JSON 结果：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;status&quot;: 200,
+  &quot;data&quot;: {
+    &quot;totalSubs&quot;: 999,
+    &quot;subsInEachSource&quot;: {
+      &quot;github&quot;: 999
+    },
+    &quot;failedSources&quot;: {}
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;我们可以这样理解返回的 JSON 数据：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;status&lt;/code&gt; 是请求是否成功，成功即为 200（表示 HTTP OK）&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; 就是请求返回的数据（其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;totalSubs&lt;/code&gt; 表示总关注数量，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subsInEachSource&lt;/code&gt; 表示每个服务请求到的粉丝数据，最后 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;failedSources&lt;/code&gt; 表示请求失败的数据源。）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以看到我们所需要的字段即为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$.data.totalSubs&lt;/code&gt;，也就是 999 —— 我的github总关注人数。接下来，我们只需要告诉 Shields.io：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;我们请求的 URL 地址&lt;/li&gt;
+  &lt;li&gt;返回数据中所要的字段&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这两个参数，即可成功制作一个动态小牌子。&lt;/p&gt;
+
+&lt;h4 id=&quot;用-shieldsio-制作最终动态小牌子&quot;&gt;用 Shields.io 制作最终动态小牌子&lt;/h4&gt;
+
+&lt;p&gt;我们继续借助 Shields.io 官网上面提供的「小牌子生成器」，这次我们稍微向下滚动，找到 Dynamic 版本「小牌子生成器」，并按照这样的规则依次操作：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;数据类型 data type 选择：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;标签 label 填入：小牌子左侧的标签，比如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github关注&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;API 地址 data url 填入：我们刚刚的 API URL：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://api.spencerwoo.com/substats/?source=github&amp;amp;queryKey=gorpeln&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;请求字段 query 填入：我们 Substats API 数据中的这一字段：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$.data.totalSubs&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;标签颜色 color 填入：一个十六进制的颜色代码，比如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;da282a&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;……（余下的两个参数：前缀 prefix 和后缀 suffix，可以根据自己的需要自行定义）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这样，我们就借助 Shields.io 构造出来一个自定义的动态 SVG 小牌子（由于我们的请求中包含有 URL 中非法的字符，因此下面这个是 URL 编码之后的 SVG 小牌子地址）：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/dynamic/json?color=da282a&amp;amp;label=github%E5%85%B3%E6%B3%A8&amp;amp;query=%24.data.totalSubs&amp;amp;url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dgorpeln
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034177.png!gorpeln&quot; alt=&quot;20230622165034177&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;其他-substats-api-的功能和语法规则&quot;&gt;其他 Substats API 的功能和语法规则&lt;/h3&gt;
+&lt;p&gt;另外，Substats API 还可以串联多个不同的数据源和它们对应的请求参数。比如，我同时请求酷安、网易云音乐、GitHub 三个平台上面的关注，即可这样构造请求（多个 source 和 queryKey 组合按照顺序进行请求即可，顺序在请求过程中不会丢失）：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=coolapk&amp;amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;amp;source=neteaseMusic&amp;amp;queryKey=339332&amp;amp;source=github&amp;amp;queryKey=gorpeln
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以看到，上面的 URL 里，我直接串联了多个 source 和 queryKey 的请求组合，同时请求。这样我们就可以得到这三个平台上面关注者数量的总和 totalSubs，以及每个平台各自的关注者数量 subsInEachSource：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;status&quot;: 200,
+  &quot;data&quot;: {
+    &quot;totalSubs&quot;: 1312,
+    &quot;subsInEachSource&quot;: {
+      &quot;coolapk&quot;: 638,
+      &quot;neteaseMusic&quot;: 361,
+      &quot;github&quot;: 313
+    },
+    &quot;failedSources&quot;: {}
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;那么，我们就可以直接用 Shields.io 构造一个如下的 SVG 小牌子：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/dynamic/json?color=0084ff&amp;amp;label=%E9%85%B7%E5%AE%89|%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90|GitHub&amp;amp;query=$.data.totalSubs&amp;amp;url=https://api.spencerwoo.com/substats/?source=coolapk&amp;amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;amp;source=neteaseMusic&amp;amp;queryKey=339332&amp;amp;source=github&amp;amp;queryKey=gorpeln
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这样我们就可以直接得到三个平台总关注数量的一个「小牌子」&lt;/p&gt;
+
+&lt;p&gt;同时，如果你想同时请求多个平台，但是平台中请求的数据标签名称是一样的，比如我们同时请求 Feedly 和 NewsBlur 两个 RSS 订阅服务里我自己的 RSS 链接 &lt;a href=&quot;https://gorpeln.top/feed.xml&quot;&gt;https://gorpeln.top/feed.xml&lt;/a&gt; 的订阅数量，那么我们可以：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;直接用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; 将 feedly 和 newsblur 直接连接，传递给 source 作为参数&lt;/li&gt;
+  &lt;li&gt;并将 RSS 链接传递给 queryKey 作为参数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;从而构造这样的请求：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=feedly|newsblur&amp;amp;queryKey=https://gorpeln.top/feed.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这样，我们就可以直接得到两个平台同一个 RSS 源的总订阅数量：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;status&quot;: 200,
+  &quot;data&quot;: {
+    &quot;totalSubs&quot;: 17,
+    &quot;subsInEachSource&quot;: {
+      &quot;feedly&quot;: 14,
+      &quot;newsblur&quot;: 3
+    },
+    &quot;failedSources&quot;: {}
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;从而制作表示 RSS 链接总订阅人数的「小牌子」：&lt;/p&gt;
+
+&lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
+&lt;p&gt;Substats 是我借助 Serverless 技术构建的一个 Cloudflare Worker，直接部署在 Cloudflare 全球 CDN 节点上，访问速度非常的快。因此，如果你使用 Substats 和 Shields.io 来制作「小牌子」，生成 SVG 所消耗的时间的占比较大的部分应该是和原服务 API 沟通的时间（比如 NewsBlur 就特别慢）。&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>个人网站，零成本、低门槛创建专属数据分析工具：umami.is</title>
+        <link>https://gorpeln.top/article/16829158558</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16829158558</guid>
+        <pubDate>2023-05-01</pubDate>
+        <description>&lt;p&gt;&lt;strong&gt;Google Analytics&lt;/strong&gt; 应该是当今互联网使用最广泛的网站流量分析服务。通过在网页中嵌入追踪代码，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 能够帮我们收集网站的流量来源，同时自动分析跳出率、转化率等核心指标。但是对于大部分中小型站点而言，接入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 并不是最理想的选择，因为它太复杂了，同时国内访问也不太方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami.is&lt;/code&gt; 则可以看作是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 的精简版解决方案，它完全免费且开源，非常适合中小站点的网络流量统计分析。相对于复杂的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami.is&lt;/code&gt; 的界面也更加简洁，只关注于核心指标，并方便分享出去。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735961.png!gorpeln&quot; alt=&quot;20230501123735961&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;前期准备&quot;&gt;前期准备&lt;/h3&gt;
+&lt;p&gt;你需要完成以下 3 个步骤：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;访问 &lt;a href=&quot;https://github.com/umami-software/umami&quot;&gt;umami.is 代码仓库&lt;/a&gt;，点击右上方 Fork 到自己的帐号。&lt;/li&gt;
+  &lt;li&gt;访问 &lt;a href=&quot;https://vercel.com/dashboard&quot;&gt;Vercel注册&lt;/a&gt;页面，点击使用 GitHub 登录到 Vercel。&lt;/li&gt;
+  &lt;li&gt;访问 &lt;a href=&quot;https://supabase.com/dashboard/projects&quot;&gt;Supabase注册&lt;/a&gt; 页面，点击使用 GitHub 登录到 Supabase。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1在supabase创建数据库&quot;&gt;1、在Supabase创建数据库&lt;/h3&gt;
+&lt;p&gt;我们需要先在 Supabase 的主界面中找到 New Project 按钮创建一个新的数据库。名字可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami&lt;/code&gt;，然后设置一个自己记得住的数据库密码（一会要用）。下方的 Region 区域选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Northeast Asia（Tokyo）&lt;/code&gt;东京区域。Supabase 本身使用了 AWS 云服务，东京区域在大陆地区的访问速度还是比较理想的。等待数据库建立，需要几分钟的时间。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735962.png!gorpeln&quot; alt=&quot;20230501123735962&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;建立之后，点击左下方的 Project Settings，选择 Database，找到 Connection string 中的 URL 一栏，&lt;strong&gt;复制内容，并将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[YOUR-PASSWORD]&lt;/code&gt;替换为上一步生成的密码&lt;/strong&gt;。
+Supabase 平台的操作就结束了。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735963.png!gorpeln&quot; alt=&quot;20230501123735963&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2在-vercel-部署-umami&quot;&gt;2、在 Vercel 部署 Umami&lt;/h3&gt;
+&lt;p&gt;登录&lt;a href=&quot;https://vercel.com/dashboard&quot;&gt;Vercel&lt;/a&gt; 之后，点击右上角 Add New Project，并导入事先 Fork 的项目仓库。创建项目的页面中，会自动加载你 GitHub 帐号下方的代码仓库。还记得准备步骤 Fork 的 umami.is 仓库吗？选中即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735964.png!gorpeln&quot; alt=&quot;20230501123735964&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在 Configure Project 中需要设置两个环境变量（&lt;strong&gt;Environment Variables&lt;/strong&gt;）。
+分别添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATABASE_URL&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HASH_SALT&lt;/code&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATABASE_URL&lt;/code&gt;：是上一步在 Subabase 复制的 URL，记得替换自己的 Password；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HASH_SALT&lt;/code&gt;：它的值可以是任意随机英文字符串，比如我使用了我的用户名 HUHUHANG，你也可以自定义其他随机字符串&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最后点击 Deploy，等待两分钟。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735965.png!gorpeln&quot; alt=&quot;20230501123735965&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3测试和设置&quot;&gt;3、测试和设置&lt;/h3&gt;
+&lt;p&gt;至此，主要步骤已经顺利完成，你需要做的只是耐心等待项目部署完毕。完成之后，Vercel 会自动跳转到项目主页，并随机分配一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;域名&lt;/code&gt;（需要科学上网，可以绑定自己的域名）。点击 &lt;strong&gt;Visit&lt;/strong&gt; 访问项目，umami 默认的后台登录的用户名是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt;，密码是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;1自定义域名&quot;&gt;1）自定义域名&lt;/h4&gt;
+&lt;p&gt;首先是设置一个独立域名，当然前提条件是你有自己的域名，没有的话可以到任意域名服务商（阿里云、腾讯云等）购买。当然你也可以一直使用 Vercel 自动分配的域名（Vercel 自动分配的域名需要科学上网）。&lt;/p&gt;
+
+&lt;h4 id=&quot;2重设-umami-密码并绑定站点&quot;&gt;2）重设 umami 密码并绑定站点&lt;/h4&gt;
+&lt;p&gt;不要忘记到 umami 后台重设默认的管理员密码。同时，你可以新建站点并获取到数据追踪代码嵌入到你的站点中。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735966.png!gorpeln&quot; alt=&quot;20230501123735966&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这里非常推荐开启「&lt;strong&gt;启用共享链接&lt;/strong&gt;」的选项，这是 umami 的一大特色，可以方便分享你的站点访问数据。同时当你自己查看时，可以免登录。你可以 &lt;a href=&quot;https://umami.gorpeln.eu.org/share/oWC5HwUyPml1gkRI/gorpeln.top&quot;&gt;访问我的示例分享页面&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：如果需要删除网站，先将语言切换至 English，中文状态无法删除。&lt;/p&gt;
+
+&lt;h3 id=&quot;4常见问题和小结&quot;&gt;4、常见问题和小结&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Q：Vercel 和 Supabase 是免费的吗？我能用多久？&lt;/strong&gt; &lt;br /&gt;
+A：目前 Vercel 的个人帐号完全免费，企业帐号才需要付费。Supabase 的免费数据库存在 500 MB 的限制，对于中小站点这个容量理论上够用很多年了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q：umami 的访问速度如何？&lt;/strong&gt;  &lt;br /&gt;
+A：据我所知，Vercel 使用了 Google Cloud 的云服务，距离大陆地区最近的节点在台湾省和香港特别行政区，访问速度还算理想。而 Supabase 使用了 AWS 云服务，一开始我们创建的数据库就选择了离大陆地区最近的东京数据中心。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q：umami 后续如何升级？&lt;/strong&gt; &lt;br /&gt;
+A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码仓库更新时，Vercel 会帮你自动部署上线最新版本的 umami。你可以不定期访问你 Fork 后的代码仓库，选中 Fetch upstream 从 umami 官方仓库同步最新的代码后即可自动升级。当然，你还可以从一开始直接部署官方仓库的代码，完全跟随官方版本迭代升级。&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>全飞秒近视手术过程和恢复记录</title>
+        <link>https://gorpeln.top/article/16827504397</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16827504397</guid>
+        <pubDate>2023-04-29</pubDate>
+        <description>&lt;p&gt;4 月中旬做了一个&lt;strong&gt;全飞秒&lt;/strong&gt;近视手术，在这里记录一下当天、术后的感受，希望可以给到好奇的同学一些参考。&lt;/p&gt;
+
+&lt;h3 id=&quot;手术当天&quot;&gt;手术当天&lt;/h3&gt;
+&lt;p&gt;长话短说，实际手术过程 2 分钟搞定。&lt;/p&gt;
+
+&lt;p&gt;3 月份突发奇想不戴眼镜是不是很爽，然后就去检查了下适合做什么的，好多台机器验了下眼睛，最后发了 2 瓶眼药水在术前 3 天开始滴。&lt;/p&gt;
+
+&lt;p&gt;到了做的那天，先去交钱，验光，然后排队等到叫，换上手术服，不能带手机，眼睛等外部东西，先洗眼睛 10mim，不停用药水去冲，挺酸爽。然后给脸部用酒精全消毒，接着坐到手术室门口等叫号。&lt;/p&gt;
+
+&lt;p&gt;叫到号后，会先在眼睛里面滴麻药眼药水，然后就扶进去了，躺到机器上，一只眼睛一只眼睛做，过程就是盯着绿灯看 20s，然后告诉你非常棒，最后一边几秒钟用镊子夹出切割体，最后用机器观察了下，没问题直接出手术室。&lt;/p&gt;
+
+&lt;p&gt;出来以后，出来后眼睛不疼，不过开始流泪了，手里拿着眼药水，分别每 5 分钟累计滴 4 次，这个过程开始时候是那种想哭流泪的感觉，然后是又困又想哭那种感觉，最后是很困眼睛有点儿酸胀感觉。慢慢发现看远处东西相比戴眼镜时候要有 50%效果了，不过基本有一种朦胧美，近处的东西基本看不清，老花眼感觉，药水滴完以后，医生检查下，没有问题就回家了，说是明天会逐步恢复。&lt;/p&gt;
+
+&lt;p&gt;回家路上，发现所有灯光都有一层蒙雾感，好比多了一个下雨过后背景感觉，同样很困，到家以后躺着又不想睡觉了，但是也不想也看不清手机，听了一小时老郭的济公传，笑哈哈，就出门吃饭了。&lt;/p&gt;
+
+&lt;p&gt;回到家，发现手机看得清了，不过边框全部加了一层雾化美，今天晚 10 点前睡觉，期待明天起床世界光明，Hello World！&lt;/p&gt;
+
+&lt;h3 id=&quot;手术后第一天&quot;&gt;手术后第一天&lt;/h3&gt;
+&lt;p&gt;昨晚睡得早，早上7 点就醒了，眯眯眼开了个小灯发现房间里面东西全部都清楚了，甚至远处书柜的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JavaScript 权威指南&lt;/code&gt;这本书名都看清了，很神奇，有一种瞎子复明的神奇感觉。&lt;/p&gt;
+
+&lt;p&gt;立马起床拉开窗帘，看到远处一人斜挎着黑色背包勾着腰边走路边看手机，环卫工人带着黄色帽子穿着橙色衣服在扫街，对面小河边一人戴着淡黄色帽子白色上衣黑色裤子白色鞋子在跑步，应该以前戴眼镜也看得到这种，不过没有怎么 Care 就过去了，早上远处视力应该恢复到术前水平了，但是近处看手机还有强自发光物体文字还是有一圈淡淡的光晕，不习惯但挺好看。&lt;/p&gt;
+
+&lt;p&gt;上午开车去进行了第一天复查，后面一周一月三月半年都需要去复查下，可以给这个时间给大伙同步状态，到了医院检查了下视力，居然双眼 1.0，不敢想象摘了眼镜我居然可以看到这么小的 E，然后医生检查下，说恢复得不错，给安排了下接下来一周要滴的眼药水，一共 3 瓶，累积 4 到 6 次的，然后就离开了。&lt;/p&gt;
+
+&lt;p&gt;注意事项是白天外出需要带墨镜，在室内无所谓，但是我想着防止揉眼睛昨天给买了一个护目镜，戴着还挺舒服，睡觉也可以戴着，从医院出来，想着也不想看手机，就去了散散步，外面热但是很凉快有风，11 点出去，走了 4 公里样子然后找了山顶一个咖啡厅坐了坐，看了看书，今天看纸质书以及不发光的 Kindle 感觉和之前戴眼镜没啥区别了，看手机文字发光由于有光晕也没怎么看，晚上回家，发现路上红绿灯还是有些光晕，不过比昨天弱很多了，应该几天后会正常。&lt;/p&gt;
+
+&lt;p&gt;第一天大概就这样了，不过有一个事情很麻烦，就是眼睛 7 天不能碰水，只能找理发店帮忙洗头发，其他的除了眼药水还挺舒服，和正常没啥区别了。明天应该可以正常上班，不过不能久看电脑和敲代码，请个假在家办公也行。&lt;/p&gt;
+
+&lt;h3 id=&quot;手术后第一周&quot;&gt;手术后第一周&lt;/h3&gt;
+&lt;p&gt;今天去做了术后一周复查，双眼1.2说是恢复挺好，整体视力是和手术前戴眼镜差不多了，不过还是不能久看电脑屏幕，需要时不时歇一歇才能缓解，此外看红绿灯还有一点光晕，不过都属于正常情况，一个月后预计会正常。&lt;/p&gt;
+
+&lt;p&gt;这周第一天休假了，在家处理简单事情，打开电脑那一刻一种凹面镜感觉，不太能适应，同时不能久看，带上墨镜舒服很多，不过有些滑稽，这天除去发光体不适应，其他的都正常。&lt;/p&gt;
+
+&lt;p&gt;第二天正常上班，也即手术后第三天，特地将电脑手机系统都调大一个度，上午基本能适应，下午眼睛还是不能久看，加上办公室灯光反光屏幕更加干扰，还好下午有几个技术方案评审，给过去了。防止明天继续不适应，特地jd买了以前开车防眩光夜视镜，隔天早上就到了。&lt;/p&gt;
+
+&lt;p&gt;后面3天上班，加上夜视镜的过滤强光，以及视觉能力本身逐步的恢复，到周五的时候终于差不多满足之前上班时候戴眼镜状态了，不过会刻意不过度用眼，看久了电脑还是会眼睛累，特地也问了下之前做过朋友，属于正常情况，继续等恢复。&lt;/p&gt;
+
+&lt;p&gt;关于青年人的眼睛近视，其实正常用眼在你成年后，近视度数基本上不会太涨，和医生交流说大部分度数变坏都是晚上用手机刷剧打游戏，特别是熄灯后忘记时间，平时看电脑办公属于长距离不会太伤害眼睛的。&lt;/p&gt;
+
+&lt;p&gt;这个恢复过程，有三个东西帮助很大。&lt;br /&gt;
+第一个必须是&lt;strong&gt;夜视镜&lt;/strong&gt;，超级推荐开车朋友搞一个，白天可以过滤强阳光，看到的树叶都是加了滤镜那种舒服，晚上可以过滤对方刺眼车光，对于杭州这种光污染比较严重的城市，简直是神器。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039121.jpg!gorpeln&quot; alt=&quot;20230429144039121&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第二个是一个叫做海露的&lt;strong&gt;滴眼液&lt;/strong&gt;，其实一共有开3个滴眼液，另外两个用于消炎的，海露这个用于缓解疲劳和干眼的，滴着挺舒服的，戴眼镜或者隐形的朋友可以试试，不过需要找到适合自己情况的种类。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039122.jpg!gorpeln&quot; alt=&quot;20230429144039122&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第三个就是&lt;strong&gt;墨镜&lt;/strong&gt;了，将之前的近视墨镜换成了平视的镜片，白天强光或者外出必备，之前戴眼镜时去眼镜店配了一个近视墨镜（其实有数据淘宝更便宜），在外面太阳场景玩远比带着普通眼镜要舒服太多了。&lt;/p&gt;
+
+&lt;p&gt;基本就是这样的体验，最近还想着养成一个晚11点前睡觉习惯，看能坚持多久。&lt;/p&gt;
+
+&lt;h3 id=&quot;手术后第一个月&quot;&gt;手术后第一个月&lt;/h3&gt;
+&lt;p&gt;全飞秒近视手术后的第 40 天记录，上周末有去医院进行术后复查，将我的一个月视觉感受记录于此。&lt;/p&gt;
+
+&lt;p&gt;整体状态，视力检查两只眼睛 1.2，当前看远处风景，近处电脑均恢复到之前戴眼镜的效果，较上次一周后的明显区别是「眼睛看久了电脑也不累了，外出假如不是大太阳，不带墨镜也习惯了」，不过有 2 ～ 3 次早上起床眼睛感觉还是有点儿干涩，之前一周左右是眼睛看久了屏幕会花需要休息，外出需戴墨镜。&lt;/p&gt;
+
+&lt;p&gt;这个月还是每天 4 次的滴眼药水，海露和丽爱思，用于眼睛保湿防干涩，后面就只需滴海露，海露滴完蛮舒服，以后应该也会常备着代替日常眼药水。&lt;/p&gt;
+
+&lt;p&gt;不过视力好了也有一个担心，由于没有啥不适，敲代码会容易和之前一样上瘾，一天 9 小时都对着电脑有恃无恐，后面这一块需注意，每小时通过手表提醒休息下，需要克制。&lt;/p&gt;
+
+&lt;p&gt;不戴眼镜的生活还是蛮爽的，身体好比少了一个外部设备的轻松感，不过半年内还不能游泳，等待下次来更新半年后感受。&lt;/p&gt;
+
+&lt;h3 id=&quot;答好友疑问&quot;&gt;答好友疑问&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;为什么要做手术？&lt;/strong&gt;  &lt;br /&gt;
+其实我是属于比较喜欢尝试的人，同时当时设备了解到已经很先进了，加上医生也牛逼，后面想去玩玩冲浪已经刺激运动戴眼镜真不方便，已经戴了 10 年眼镜了，觉得还年轻，不想老了遗憾而已。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;是否可以推荐医院和医生？&lt;/strong&gt;    &lt;br /&gt;
+抱歉这种属于有风险的事情，平安还好，出事了就麻烦了，很建议想做的去医院检查下，医生会有专业建议能不能做，以及用什么方案，同时并不是越贵越好，而是越适合自己的越好，当前每种方案技术其实很先进了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;你不怕后遗症吗？&lt;/strong&gt;   &lt;br /&gt;
+后遗症我在文章后面会贴一下，一般是干眼症啥的，不过滴眼药水可以慢慢缓解变好，同时我不是太在乎短期问题，更在乎长期不戴眼镜的体验，同时肯定是有后遗症的，只不过带来的好处会大于问题风险以及钱的成本。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;马化腾不做我不做？&lt;/strong&gt;    &lt;br /&gt;
+其实眼科手术并不是想做就做，还取决于年龄、角膜厚度、眼睛本身的健康状态很多因素决定，会有一个比较全面的术前检查。此外其实近视手术定义上并不是治病的那种手术，居然被定义成“医美类型”，好比整容一样，并不是所有的整容医生都会自己去整一下一样。&lt;/p&gt;
+
+&lt;h3 id=&quot;万事需谨慎&quot;&gt;万事需谨慎&lt;/h3&gt;
+&lt;p&gt;有类似诉求同学，可以小红书或者 YouTube 先了解一波来做功课，这里我找到几张图用于分析手术对比，优缺点，后遗症，注意事项，贴到下面，不过万事须谨慎，这东西还是有极低概率的风险。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039123.jpg!gorpeln&quot; alt=&quot;20230429144039123&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039124.jpg!gorpeln&quot; alt=&quot;20230429144039124&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039125.jpg!gorpeln&quot; alt=&quot;20230429144039125&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039126.jpg!gorpeln&quot; alt=&quot;20230429144039126&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>高德地图产品使用体验报告</title>
+        <link>https://gorpeln.top/article/16786112870</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16786112870</guid>
+        <pubDate>2023-03-12</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;编辑导语：导航类软件，已经成为了我们生活中必不可少的一大工具，能够解决我们对陌生环境的一些痛点。本文以高德地图为例，分享了该软件的使用感受，总结了高德地图的用户体验感，一起来看看。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;一产品概况&quot;&gt;一、产品概况&lt;/h3&gt;
+&lt;h4 id=&quot;1-体验环境&quot;&gt;1. 体验环境&lt;/h4&gt;
+&lt;p&gt;产品体验：高德地图&lt;/p&gt;
+
+&lt;p&gt;软件版本：11.13.0.2925&lt;/p&gt;
+
+&lt;p&gt;手机系统：MIUI 12.5.10&lt;/p&gt;
+
+&lt;p&gt;体验人：gorpeln&lt;/p&gt;
+
+&lt;h4 id=&quot;2-产品概况&quot;&gt;2. 产品概况&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Slogan&lt;/em&gt;&lt;/strong&gt;：「导航专业，数据准确」&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;产品介绍&lt;/em&gt;&lt;/strong&gt;：是一款高德软件有限公司旗下的一款地图导航类APP。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;官方介绍&lt;/em&gt;&lt;/strong&gt;：高德地图(Amap) 是一款免费的地图导航产品，由电子地图、导航和LBS服务解决方案提供商高德软件(纳斯达克:Amap)提供。高德地图数据覆盖中国大陆及香港澳门，遍及337个地级2857个县级以上行政区划单位；导航支持GPS、基站、网络等多种方式。可自动生成“最短”“最快”“最省钱”等多种路线规划以供选择，可根据实时路况选择最优公交/驾车出行路线。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-产品发展历程&quot;&gt;3. 产品发展历程&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;（1）第一阶段：艰辛探索和技术积累（2002年——2004年）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;高德的创业团队从20世纪90年代起就已开始涉足GPS领域的工作，2002年7月，高德软件有限公司成立后，高德的研发团队经过艰辛探索，根据当时国家基础地图数据的特点，历经半年的时间，终于开发完成一套具有自主知识产权的数据采集工具和编辑处理平台。&lt;/p&gt;
+
+&lt;p&gt;技术的探索和创新给高德带来了商业契机。2002年8月，高德与爱信AW、富士Ten等公司合资成立北京艾迪菲导航科技有限公司，开始致力于车载导航电子地图销售市场的开拓。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2002年7月，高德软件有限公司成立。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2002年8月，高德与爱信AW、富士Ten等公司合资成立“北京艾迪菲导航科技有限公司”。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2003年1月，高德开发完成具有自主知识产权的数据采集工具和编辑处理平台。&lt;/p&gt;
+
+&lt;p&gt;2004年6月，高德成为全国第一家获得导航电子地图甲级测绘资质的民营企业，并通过ISO9001认证。获得甲级测绘资质后，高德开始大规模采集数据，逐步构建了一个优质的数据库。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2004年6月，高德成为国家甲级测绘资质单位并成为全国第一家获得导航电子地图甲级测绘资质的民营企业。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（2）第二阶段：发展壮大和引领行业（2005年——2009年）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;高德获得导航电子地图甲级测绘资质后，在进行导航电子地图数据库内容和导航引擎研发、积累的同时，致力于探索和创新商业模式，为客户提供一体化解决方案，拓展业务领域。&lt;/p&gt;
+
+&lt;p&gt;高德领先的核心技术和创新的商业模式使高德的产品服务在汽车导航应用、无线互联网位置服务应用、政府和企业应用三大业务领域取得优异的成绩，也确立了高德在中国导航产业的领先地位。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2005年8月，高德收购中国领先的基础地图服务提供商北京图盟科技有限公司。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2005年8月，高德开始向宝马、本田等车型提供导航电子地图。并为新浪和Google等网站提供本地搜索服务。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2007年5月，高德全资收购厦门纳维特科技有限公司。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2007年10月，完成西藏数据采集作业，标志着高德完成覆盖全国的实景数据采集。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2009年1月，高德成为2010年上海世博会导航地图及应用服务项目独家赞助商。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（3）第三阶段：成功上市，全力转型（2010年——2014年）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2010年7月1日，高德在美国纳斯达克全球精选市场成功上市，股票代码为AMAP，实现了公司发展新的历史性跨越。&lt;/p&gt;
+
+&lt;p&gt;【大事记】2010年7月1日，高德控股有限公司（AutoNaviHoldingsLimited）在美国纳斯达克全球精选市场成功上市，股票代码为AMAP。&lt;/p&gt;
+
+&lt;p&gt;2010年9月，高德获得国家测绘局颁发的《互联网地图服务甲级测绘资质》，这是高德继获得导航电子地图甲级测绘资质、航空摄影甲级测绘资质后的第三个甲级测绘资质。10月，高德荣登2010德勤高科技、高成长中国50强。&lt;/p&gt;
+
+&lt;p&gt;【大事记】高德荣登2010德勤高科技、高成长中国50强。&lt;/p&gt;
+
+&lt;p&gt;世博会期间，所有世博会指定导航终端设备里都装载了高德地图，不论是城际间，还是世博园区内，游客们都能充分感受高德地图在道路导航、实时交通、路线规划等方面的便利，为所有参展方和参观者营造难忘的世博体验。&lt;/p&gt;
+
+&lt;p&gt;高德也由此获得由中国地理信息系统协会颁发的“上海世博会GIS服务特殊贡献单位”奖。&lt;/p&gt;
+
+&lt;p&gt;2012年9月，高德成为苹果在中国的地图服务提供商，并于9月24日正式上线服务。这大大的加快了高德在整个移动互联网领域前进的步伐，在整个产业界引起了巨大的轰动。&lt;/p&gt;
+
+&lt;p&gt;当月，高德公司荣获中国卫星导航定位协会颁发的“中国卫星导航与位置服务行业2012最具价值品牌”，高德地图凭借其出色的产品性能和用户体验，荣获2012中国互联网大会“最佳实践”奖。2014年02月，阿里以11亿美元现金完购高德。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（4）第四阶段：阿里全资收购高德（2014年4月至今）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2014年4月，高德正式与阿里巴巴集团达成并购协议。阿里将以每股普通股5.25美元或每股美国存托股份(ADS)21.00美元的收购对价收购高德其余72%的股份。&lt;/p&gt;
+
+&lt;p&gt;高德公司的经营范围是电子出版物批发、网上销售；增值电信业务中的信息服务业务；第二类增值电信业务中的呼叫中心业务；测绘服务；设计、制作、代理、发布广告；货物进出口、技术进出口、代理进出口；销售计算机软硬件及外围设备；技术开发、技术转让、技术咨询、技术服务等。&lt;/p&gt;
+
+&lt;h3 id=&quot;二市场分析&quot;&gt;二、市场分析&lt;/h3&gt;
+&lt;h4 id=&quot;1-中国手机地图发展现状&quot;&gt;1. 中国手机地图发展现状&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447681.png!gorpeln&quot; alt=&quot;图2-1 2015-2020年中国手机地图用户规模及预测&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据艾媒网数据显示，中国手机地图的用户规模可以看出来，使用手机地图的人数规模不断上涨，从2015年到2016年的增长速度最快，有9.8% 的增长速度，这一年与高德地图、百度地图上线后功能的完善有很大关系，后期因为手机地图市场逐渐饱和，用户增长也不是那么明显，但是使用手机地图的人数依然上涨，趋势依然明显，根据艾媒网数据预测预计2022年使用手机地图的用户有望超过8.5亿人。&lt;/p&gt;
+
+&lt;p&gt;小结：手机地图的用户数量从2015年的6.05亿增长到2020年的7.68亿，增长了近30%，预计到2022年末增长率可达40%，近些年逐渐速度放缓，这种现象同很多互联网产品一样，前期市场处于蓝海领域，地图导航技术不够专业，相应的服务不够完善，增长空间大，而后期在产品定位用户需求不断精准，地图定位、导航、大数据等专业技术不断发展，致使产品用户数量在不断增加，而后期市场趋于饱和，增速逐渐减缓。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447682.jpeg!gorpeln&quot; alt=&quot;图2-2 2020 Q3季度中国手机地图APP活跃量&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从数据来看中国高德地图和百度地图占据的用户数量是最多的，而腾讯地图和搜狗地图占据的用户数量明显是没有高德和百度的用户数量大。&lt;/p&gt;
+
+&lt;p&gt;而数据背后真实的原因在于高德地图依托阿里系内部资源合作和AI技术支持，连接饿了么口碑为用户提供本地生活服务功能，不断完善功能产品，提高地理信息精确度，在市场竞争中占据有利地位，综合品牌竞争力行业内属于领先地位。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447683.jpg!gorpeln&quot; alt=&quot;图2-3 主要手机地图用户认知度&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2019年第三季度主要手机地图产品用户认知方面，高德地图依托阿里系生活服务、移动出行资源和车载导航的普及，用户认知度排名第一，为88.3%，百度地图作为百度旗下重要产品，在语音智能，无人驾驶等领域具有重要地位，用户认知度紧随其后为86.7%。&lt;/p&gt;
+
+&lt;p&gt;总结：通过分析中国手机地图市场现状可以发现，高德地图的使用情况和市场占有率都是最好的，原因在于高德地图在驾车、公交、步行、骑行、打车甚至是火车导航等功能方面不断完善，特别是准确的公交地铁信息，以及驾车时候的智能语音系统提醒限速、摄像头、红绿灯等一系列的功能的不断完善，用户的使用产品的体验在不断增强，用户数量在逐步积累增加。&lt;/p&gt;
+
+&lt;p&gt;发展预测：随着大数据、区块链等技术的发展，人们越来越多的使用地理地图，和基于地理位置相关的服务，并且在中国地图应用活动用户数已接近8亿，且增速减缓，中国地图应用行业步入成熟期。&lt;/p&gt;
+
+&lt;p&gt;用户使用手机地图的需求主要在两大方面：一方面，未来手机地图场景化应用在面向在线旅行、移动出行的需求越来越大，另一方面，针对无人驾驶，车联网等新型产品也成为地图行业提供增量空间，因此后期中国手机地图的发展方向将会在完善的生态体系，人工智能方向不断发展。&lt;/p&gt;
+
+&lt;h4 id=&quot;2-行业宏观环境分析pest&quot;&gt;2. 行业宏观环境分析（PEST）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;（1）【P】政治环境&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2017年7月1日起正式施行《中华人民共和国 测给法》，加强对互联网地图服务的监管 严格了用于测纶的无人机准人制度。促进了 地理信息成果的共享和应用：&lt;/p&gt;
+
+&lt;p&gt;2018年发改者及地方政府发、多项法规，为 自动驾驶保驾护航。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（2）【E】经济环境&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我国旅游业、移动出行、生活服务等型快的調 费市场为手机地图提供增量空间；我国汽车保有最逐年增长，带动了地图企业车 載导航硬件设备市场的发展；我国布局车联网，为手机地图行业需来新的增涨空间。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（3）【S】社会环境&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我国城市公共交通拥堵现象严重，地图企业 与交通部门合作。推出“交通大脑”，缓解交通紧张状态我国消费升级，旅游成为居民的日常消费。使用手机地图查询量点信息成为眼游常态；中国提出了“中国制造2025”，具体到汽车 领城，无人驾驶。新能源汽车等新型慢式生机物物。手机地国赋前汽车导航，提供两藏度服务。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（4）【T】技术环境&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用户参与地理信息收集，并将地照POI数据更新及交通路况等信息上传至平台；我国地理测绘技术的进步、北斗卫星导航系统的完善，大大提高手机地图信息的准确性和全面性：人工智能、VR技术的发展，提高了地离信息的准确度。&lt;/p&gt;
+
+&lt;p&gt;总结：从中国手机地图的行业宏观环境分析来看，中国手机地图的发展前景还是不错的，从政治和社会环境来看，针对紧张的交通用户的环境，搭建起手机地图导航的管理体系是非常有必要的，现在的技术手段和经济环境来看，大力研发技术所能投入的资本是不断增加的，不论是国家还是企业都在这方面投入的资本都很大。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-商业模式&quot;&gt;3. 商业模式&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;（1）对于与地图相关商家的增值服务&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;高德地图通过实时交通路况、在线导航和第三方生活服务资源整合等增值服务，致力于打造以位置为纽带整合诸多第三方信息及商务服务, 占领更多的智能终端，将各类生活服务、电子商务融合其中，最终一站式解决用户在移动生活中的种种需求，发展出海量用户。借助庞大的用户规模与活跃的客户群吸引商家，形成资金回流，其中主要有以下三种方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;为本地生活服务商家提供基于位置服务，获取服务费用&lt;/strong&gt;  &lt;br /&gt;
+  高德公司提供数据以按期收取服务费或授权费并且根据订单的完成数量收取一定利润分成，以获得稳定现金流。比如高德在地图版块也增添了“出租车”业务，与滴滴打车、快的打车同时合作，获得服务费用及分成。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;通过搜索项目获得广告费用&lt;/strong&gt;   &lt;br /&gt;
+  首先，高德地图效仿百度搜索引擎的商业模式，采用关键词搜索竞价排名的方式，使竞价高的商家获得更多关注并收取费用。另外，高德地图在手机某些项目中划出一部分作为广告区域，由商家竞价获得投放权以获得服务费。最后，高德地图建立大数据库对搜索数据进行深度挖掘，为商家进行广告定点投放、精准市场营销提供数据支持，获得相应咨询费。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;面向地图标示点商家的增值服务&lt;/strong&gt;  &lt;br /&gt;
+在大用户基数下为商家提供不同层次的特殊标示服务，打开某地区地图时，该商家将会有突出的展示，依据地图展示层次收取相应费用，将为商家获得更多关注。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;（2）手机预装软件和与运营商合作客户端下载软件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;公司与三星、摩托罗拉等众多手机终端厂商合作，为其提供手机预装导航数据和软件。为了使手机消费者使用更便利，手机厂商会有选择的预装部分优秀的软件，于是就必然要向软件提供商支付一定的授权费用，但是随着免费软件的普及，该份额在逐渐减少。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（3）流量变现&lt;/strong&gt; &lt;br /&gt;
+依据互联网的特性，免费的产品还是会占据主流，取得更多的市场份额，创造更大的用户规模，最后通过流量变现实现盈利模式。高德将会与手机运营商展开流量经营方面的合作，包括定向流量和流量奖励，通过获得流量费用分成形成利润。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（4）互联网位置服务&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;作为中国市场上为数不多的具有三甲测绘资质的民用企业，高德地图将处理好的测绘数据或基于位置的定位导航技术提供给其他与位置相结合的企业。比如大家所熟知的高德与苹果中国地图的合作，以及此前高德与新浪、阿里巴巴、腾讯、京东在基础地图方面的合作，向赶集网、搜房网等12万家网站和第三方开发者提供地图API服务。同时获取更多GPS信息反馈，完善基础地图数据。&lt;/p&gt;
+
+&lt;h4 id=&quot;4-营销方式&quot;&gt;4. 营销方式&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;（1）线上营销&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;建立专业的公司网站，对公司的主要业务进行详细清晰地介绍，提供免费的网络地图并提供免费下载软件的渠道。在网站内开设专业技术讨论交流区，为对基于位置技术等互联网技术达人提供交流平台，通过注册的方式，增强其影响力，加强顾客粘性。另外，设置意见反馈区，及时与消费者沟通，了解产品的提升空间，提高产品竞争力。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;“有声有色”的独特的产品代言形式，提升品牌形象。2013年签约超高的人气和影响力和敬业精神兼具的“全民女神”林志玲做品牌代言人，不仅有平面代言，林志玲的女神娃娃音也被植入地图、导航全过程，推出了国内地图导航领域内的首款明星真人语音导航。听觉体验作为地图导航重要的一环，女神音在为用户提供功能性服务的同时，更能为用户的生活增添乐趣。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;线上贴片广告等有针对性的投放广告。在著名的门户网站、视频网站投放短小精悍的广告，提高品牌的影响力。比如2013年上旬，高德地图推出了一组名为“高德地图哪都熟”的主题广告，将高德地图整合的诸多生活服务巧妙的展示在受众面前。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;借助微博、微信等社交互动平台进行推广，并借此第一时间了解公众的需求与建议。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;（2）线下营销&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;电影营销：结合《乔布斯传》国内首映，高德地图借用宣传优势，以苹果独家在华地图服务商的身份展开粉丝营销。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;与草莓音乐节达成战略合作，在音乐节活动现场，高德诸多结合驾驶情景与音乐的展示，让参会的年轻人感受高德带来的便利，提升高德在年轻人中的品牌效应。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;高德也在结合自身产品进行O2O营销，发挥其本地化生活服务入口的作用，通过团购、优惠券、酒店预订等与电商合作进行推广。尤其是与阿里的跨界营销更为紧密，比如双十一购物盛宴的导航辅助，消费者可借助高德地图发现线下打折商铺的具体位置，与阿里等电商合作也有助于提升知名度。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;基于用户角度和自身优势的主题广告，包括投放在公交车、出租车等交通工具上，指引用户去往终点；投放在地铁站中，提示“前方即将换乘”等。另外还有结合具体位置的广告巷战和定制服务，针对各地活跃人群的需求，结合高德地图功能，提供找代驾、打车、避堵等实用功能信息。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;启动高德LBS应用大赛，向广大IT从业者及开发爱好者而举办的产品开发大赛，一方面推广其云到端的全套LBS解决方案，另一方面为公司的发展储备人才。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;（3）打造良好的企业形象&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;以“开放、包容、合作、创新”作为企业文化，以“知你所在，寻你所需，移动生活尽在掌握”作为企业使命，内部设立良好的激励机制，调动内部人员的积极性。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;良好的危机公关能力。2013年中央电视台315晚会上，央视称，高德地图的位置共享服务会收集用户账号和密码，并以明文的方式传给高德的服务器。面对央视质疑，高德第一份声明就先向用户致歉，并在微博上表示，晚会曝光两年前的旧版本早已第一时间被修复，用户的隐私问题一定会得到高德保护。在负面评论还没有形成之际，高德已就央视曝光的问题对民众给予回应和释疑，用面对负面不逃避、以正面回应换取社会正面理解的态度，展现出了一个成熟企业应对得宜、诚恳有担当的企业形象。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;积极承担社会责任。2013年雅安地震时期，高德向雅安捐助150万元，包括100万元现金和价值约50万元的高德导航应用。并从自身平台优势出发、结合位置推出了高德地图“雅安寻人救助平台”。为抗震救灾不遗余力的高德地图被誉为“用地图承载爱”，用情感和用户互动，展示出了充满正能量的企业形象与态度，赢来了收获与肯定。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;三用户分析&quot;&gt;三、用户分析&lt;/h3&gt;
+&lt;h4 id=&quot;1-用户规模&quot;&gt;1. 用户规模&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447684.png!gorpeln&quot; alt=&quot;20230312165447684&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据阿里巴巴《2021年财政年度报告》的数据显示，高德地图的日均活跃用户数如今稳定在1亿左右，并逐步由一个导航工具，走向路途中指引方向的跨场景、多功能的生活服务平台。此外，根据QuestMoblie的数据显示，&lt;/p&gt;
+
+&lt;p&gt;2021年6月，高德地图的月活跃用户规模达到6.3亿左右，较2020年同期的5.3亿上升了1亿左右，增速为18.9%;在此当中，有68.8%的新安装用户来自于百度地图，有17.5%的新安装用户来自于腾讯地图。&lt;/p&gt;
+
+&lt;p&gt;而百度的月活跃人数略微落后，根据百度的年报数据显示，2020年百度地图的月活跃人数为3.16亿人。&lt;/p&gt;
+
+&lt;p&gt;总结：高德的用户规模已经占据中国手机地图类APP行业内的龙头，并且地图在出行方式上覆盖全，运营型功能最多，在被调研者中的评价普遍较高，使用时长也较久，说明高德地图的用户体验和黏性较高&lt;/p&gt;
+
+&lt;h4 id=&quot;2-用户标签&quot;&gt;2. 用户标签&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447685.png!gorpeln&quot; alt=&quot;20230312165447685&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;从性别来看&lt;/strong&gt;：  &lt;br /&gt;
+男性比例占据六成，女性群体只占据四成。&lt;/p&gt;
+
+    &lt;p&gt;数据原因原因如下：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;男性群体做司机的数量相比较女生来说较多，因此需求更高。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;男性针对地理方向感相比女生来说更强一些，因此使用地图导航也会跟更多。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;平时日常生活出行大部分比例是男性开车，男性对导航的需求就更大。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;从年龄分布来看&lt;/strong&gt;：  &lt;br /&gt;
+其中超过四成的用户是24岁一下的年轻人，三成的用户是24-30岁的人群，普遍来看年轻群体是高德的主要使用群体。&lt;/p&gt;
+
+    &lt;p&gt;数据原因如下：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;这一类群体属于刚步入社会，对于出行、旅行、自驾游等需求很大，因此会频繁的使用地图导航软件；&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;这类群体的用户生活状态不是特别文档，流动性较强，因此对于地域的熟悉度没有那么高，因此对于地图导航需求很大；&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;针对30岁左右的用户，他们这对打车的需求很大，因此这一部分的用户也是地图导航的主要使用者。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;从经济收入来看&lt;/strong&gt;：  &lt;br /&gt;
+消费水平看，导航软件的使用用户消费水平都是中等消费水平的用户10K一下收入群体占据高德地图80%。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总结：整体来看，高德的用户大都还是年轻群体，属于Z时代的用户居多，这一类用户针对出行，旅行，驾车等需求较大，男性群体对于位置导航的掌控也是居多，这也一方面说明了高德再提供附加功能上面可以根据据这一类用户进行精准推送给，深挖用户需求，从而完善产品。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-核心用户&quot;&gt;3. 核心用户&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1、车主&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;车主在城市经常遇到交通拥堵，在陌生的地方不熟悉路线、找不到加油站、停车场等情况的时候，这个时候就需要手机地图提供实时路况、地图规划、周边加油站停车场搜索等各种导航功能。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2、大众用户&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用户对于公交地铁，打车服务、地点搜索，路线规划、景区信息等需求不断增加，因此对于手机地图的使用也逐渐成为常态化。&lt;/p&gt;
+
+&lt;h4 id=&quot;4-用户场景&quot;&gt;4. 用户场景&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;①场景一：大学生&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;基本属性：男，20岁&lt;/p&gt;
+
+&lt;p&gt;用户行为：周末喜欢外出游玩&lt;/p&gt;
+
+&lt;p&gt;用户特征：大学生，喜欢去不一样的地方游玩&lt;/p&gt;
+
+&lt;p&gt;使用场景：小明是一个在校大学生，初次来到大城市上学，对身边的环境很是好奇，对周围的景区也特别感兴趣，但是自己又不知道怎么去，找不到地方，这个时候，同学小军，给他推荐了高德地图，高德地图可以直接查找自己想找的位置，然后规划路线，根据不同的出项方式规划时间，定位数据非常准确，小明很快就根据位置信息找到了自己想去的景区，然后愉快的玩耍。&lt;/p&gt;
+
+&lt;p&gt;需求：公交查询，到站提醒，周边搜索，室内地图，打车服务，景点搜索。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;②场景二：司机&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;基本属性：男，35岁&lt;/p&gt;
+
+&lt;p&gt;用户行为：日常开网约车&lt;/p&gt;
+
+&lt;p&gt;用户特征：网约车司机，长期开车&lt;/p&gt;
+
+&lt;p&gt;使用场景：罗师傅是一个网约车司机，日常就是在各个网约车平台接单，日常担心接乘客和送乘客时间过长问题，因此就需要时刻规划路线，并且对于上下班这种高峰期往往把握不好那条路可以避开高峰路段问题，因此很是需要可以提前知道路况，恰巧有一天发现同事在使用高德地图，发现高德地图可以看到道路拥挤状况以及最短时间路程规划，于是罗师傅开始使用高德地图，每次都以最短时间接到客户，并且送单时间也很快，于是罗师傅变成了高德的核心用户。&lt;/p&gt;
+
+&lt;p&gt;需求：路线规划，拥挤提醒，红绿灯提醒，加油站寻找，速度提醒，摄像头提醒。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;③场景三：旅行者&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;基本属性：男，26岁&lt;/p&gt;
+
+&lt;p&gt;用户行为：异地旅行&lt;/p&gt;
+
+&lt;p&gt;用户特征：喜欢在不同地方旅行&lt;/p&gt;
+
+&lt;p&gt;使用场景：小天是一个忠实旅游爱好者，喜欢在不同的城市旅游，但是自己的经济花销有限，因此他每次都要规划好自己的行程，包括坐公交的费用，他偶然在一次旅行时候发现高德地图不仅针对公交路线十分明确，他还可以实时的更新自己的位置，还剩几站路，此次下次换乘提醒，步行距离导航等等，十分详细这对小天异地旅行来说简直不要太完美，因此小天很快就成为了高德地图的忠实用户。&lt;/p&gt;
+
+&lt;p&gt;需求：地点搜索，路线规划，酒店、餐饮预定、实时路况，实时公交。&lt;/p&gt;
+
+&lt;p&gt;总结：从用户在使用高德地图不同的场景中可以看出来，高德地图是针对对于出行，旅行，驾车等有需求的人提供的导航功能，有这一类需求的用户大多是年轻群体，他们的消费理念是属于年轻化，有活力的消费群体，给他们提供导航服务就应该十分有效率，高德在这一块做的还是非常高效。&lt;/p&gt;
+
+&lt;h4 id=&quot;5-用户痛点&quot;&gt;5. 用户痛点&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1、道路不熟悉，找不到路（主要针对道路陌生用户）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;现在交通路线越来越便利，用户出行需求变大，但是由于道路交通复杂，用户来到一个陌生地区，不知道自己应该如何到达自己的目的地，因此很需要手机地图来提供目的地查找，路线规划等详情信息。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2、道路交通拥挤，躲避不开（主要针对高峰期出行用户）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;主要针对的是司机，开车上下班的上班族，此类用户在面对出行高峰期的时候，常常遇到道路拥挤，堵车的情况，由于无法提前知道路况，所以经常在路上耽误较长时间，因此用户对于道路拥挤的情况想要一个手机地图产品去解决这样一个痛点。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3、找不到加油站停车场等建筑（针对场景多变，道路不熟悉）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;对于自驾出行对于路况不清楚的情况，常常会出现找不到加油站和停车场这些场所而带来很大不便，所以手机地图对于一些标志性的场景都会进行一个明显的标注，手机地图可以很好的解决用户的这类痛点。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4、找到地点之后，想要快速打车（想要快速打车）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;地图给用户带来最大的便捷就是可以快速定位目的地，但是有很多地图应用查到目的地之后，还需要找另外一个软件进行重新定位打车，有时候会出现定位出现偏差的情况，因此手机地图直接可以连接打车服务，定位之后可以一键叫车，对于用户来说很是方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5、公交车老是等不到，不知道时间（想要公交路线规划的用户）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;交通发达导致用户出行方式变得多样化，很多用户习惯于公交地铁出行，面对不熟悉的场景的时候，往往需要导航来帮助规划路线，此时在站台知道下一班车到哪了，还有多久到，就产生很大的需求。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6、找不到周边景区、美食（喜欢景区游玩的用户）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;外出游玩的用户越来越多，对于景区、美食的需求越来越大，并且用户想要在地点打卡，但是找不到地方的用户非常多，对于精准的景区地点，以及游玩攻略，路线规划等需求就越来越大，地图就可以通过精准定位来很好的解决用户的这类痛点。&lt;/p&gt;
+
+&lt;p&gt;总结：用户对于使用手机地图的场景越来越多，需求也越来越大，地图需要不断的完善产品的定位、导航、场景信息等大数据以及功能的完善来解决用户在不同场景下的痛点，并且在这基础上去不断的通过加强互联网+导航，以及人工智能导航的新技术的提升，在满足用户能用的基础上，让用户对自己的产品产生更多的好感，让更多的用户认为手机地图好用是非常重要的。&lt;/p&gt;
+
+&lt;h3 id=&quot;四产品分析&quot;&gt;四、产品分析&lt;/h3&gt;
+&lt;h4 id=&quot;1-战略层分析&quot;&gt;1. 战略层分析&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447686.png!gorpeln&quot; alt=&quot;20230312165447686&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;描述：从产品定位角度来看三者。高德地图借助人工智能技术，进一步深化“互联网+出行”，拓展出行内容；深化“出行+”，全力打造出行生态。百度地图，也是高度应用AI人工智能技术，深化发展服务产品。再看腾讯地图，围绕海量数据和精准导航开展其功能，增加街景地图，特色语音导航（如王者荣耀语音包）等特色功能吸引年轻用户群，同时还逐步探索出行服务内容。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;从战略层角度来看手机地图行业未来发展趋势：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;人工智能+地图&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;随着人工智能、大数据、AR等技 术不断应用于手机地图领域，出 现了无人驾驶、语音导航等技术, 未来，人工智能不再局限于基础 服务，智能服务成为新的发展方 向，通过后台分析为用户提供符 合用户偏好的定制化服务。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;场景化应用&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;我国地理测绘、卫星导航等技术 的进步，以及用户UGC撞集地理 信息，手机地圈的准确性和全面 性大大提升，基于真实地理位置 的手机地图产品基础功能同质化 严重，场景化服务将成为手机地 围 圈平台差异化竞争的关键。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;自动驾驶&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;人工智能技术和国家政策红利。 推动自动驾驶爆发式增长。在此 背景下，地图行业布局高精地图 领域，将地理数据精度提高至分 米级，实时为汽车精确导航&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;区块链&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;数字货币带来区块链项目爆发式增长，其开源技术以及共建共享的核心思想，为手机地图带来新发展，以去中心化模式采集实时地理信息，区块链的去中心化，不可篡改等特性，可以从技术层面保护用户隐私。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总结：从手机地图的战略层来看，高德地图是占据这强硬的技术支持，以及国家政策的帮助，为政府提供辅助决策和支持服务，这样给高德进行了一个很好的赋能，高德地图借助人工智能技术，进一步深化“互联网+出行”，拓展出行内容；深化“出行+”，全力打造出行生态；以后手机的地图的发展趋势应该是更加完善的场景化的应用，加上现在国家致力发展新能源汽车行业，包括自动驾驶等一些技术，高德地图应该在这些方面再去深入研究发展。&lt;/p&gt;
+
+&lt;h4 id=&quot;2-结构层分析&quot;&gt;2. 结构层分析&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447687.png!gorpeln&quot; alt=&quot;20230312165447687&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;结构图描述：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;从一级标题来看：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;首页&lt;/code&gt;界面的内容是用户最关心的核心功能：当前位置、路线、去公司、下班、今日温度，这些基础功能是最基本，也是最贴近用户需求的。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;附近&lt;/code&gt;界面的内容主要是包含了基于用户当前位置，周边的一些生活服务，这一点就很人性化；具体来看：饭店、饮品店、娱乐休闲；这些选项，方便在用户确认位置后的第一时间，能够快速直达点击自己所需要的服务。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;我的&lt;/code&gt;界面，相当于为用户进行了私人化定制，可以根据自己的日常操作，收藏常用地点，常用路线，了解历史形成信息；一方面方便用户统计过去以往行程、另一方面方便用户管理自己私人专属内容。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;从二级标题来看：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首页界面含有“唤醒小德”这一选项，通过语音唤醒，增加了软件的方便性、智能性；附近界面含有“消费券”等活动接口，间接达到了引流，引导客户消费到指定商家的目的。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;我的&lt;/code&gt;界面含有：点亮城市、打卡地点等一些列“成就”属性内容，为一款地图软件增加了“主人”精神，确实能够达到让客户更有成就这一目的；除此以外，服务项：打车、酒店、景点门票等系列选项，能够一键式实现用户群体的游玩、旅行需要，很是方便；“组队出行“这款功能更是方便了，团队自驾的小伙伴，能够实时查看对方车辆的位置信息。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：高德地图通过“首页”tab将出行相关的工具/功能前置在首页，首页信息全，出行相关功能在首页展开，低频需求在更多工具中可展开，支持首页展示功能/工具的自定义，主次分明，把核心功能放在首要位置，减少用户流失。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：内容多，因此操作就较为复杂，百度地图和腾讯地图均将详细工具功能折叠在二级页面，首页简单明了，希望高德地图可以对页面布局以及功能的使用方面再去优化一下。&lt;/p&gt;
+
+&lt;p&gt;总结：分析高德的结构层可以看出来，高德在首页界面的内容是用户最关心的核心功能：当前位置、路线、去公司、下班、今日温度，这些基础功能是最基本，也是最贴近用户需求的。而二级界面“唤醒小德”“消费券”等接口也在不断增加用户停留使用时长，增加用户粘性都有很好的效果。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-产品体验分析&quot;&gt;3. 产品体验分析&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;（1）步行导航功能体验&lt;/strong&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447688.png!gorpeln&quot; alt=&quot;20230312165447688&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;页面描述&lt;/strong&gt;：进入app，地图以上北下南方式展现，用户的图标由一“圆形”和“指南标”串联组成，“指南标”会随着人的朝向而实时转动，这一设计方便人确定了此时此刻的方位朝向，方便下一步的路线导航；搜索地址后，会出现搜索地址的位置信息，之后点击路线即可进入导航界面，导航界面有刷新定位和时间，距离显示，再点击导航，便开始以第一视角的导航，周围的建筑以立体的形式展现，箭头也是随着手机方向进行改变。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：首先进入APP，系统给会自动根据GPS给自己定位，首先是地图显示用户所处的位置，以及周边的建筑和建筑名称，下面有一个搜索栏，用户可以填入自己想要知道的位置，填写完位置之后，进行搜索，若搜索成功则会跳转到该位置界面，再点击路线，高德则会对用户当前的位置与目的地的位置进行路线规划，此时会显示路线、距离、时长等，用户点击开始导航，然后就会跳转到详细导航界面，到达目的地时，软件自动结束导航。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：操作便捷快速，位置信息十分准确，路线规划也十分准确，预估时长精准无误，界面干净，用户操作起来没有明显障碍。搜索页面展示历史搜索记录，用户可选择历史记录搜索目的地，减少步长，提升用户体验；&lt;/p&gt;
+
+&lt;p&gt;搜索页上方有类别选项（如美食、酒店等），点击后跳转至相应列表，可筛选和自定义排序，用于行为明确但目标模糊的场景（如明确要吃饭，但对去哪家餐厅吃不明确。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：当无历史记录（被清空或新用户未产生搜索记录）或历史记录过少时，搜索框下方为空。&lt;/p&gt;
+
+&lt;p&gt;优化建议：搜索框下方为空时可展示附近推荐地点、热门地点、用户设定内容（如家/公司）等，帮助用户更快完成目标地址查找。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（2）公交地铁导航功能&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447689.png!gorpeln&quot; alt=&quot;20230312165447689&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：用户进入APP，定位自己位置之后，用户再搜索栏中搜索目的地，然后选择公交地铁的出行方式出行，平台根据出行时间的长短进行排序，并且也会考虑出行费用，然后进行一个推荐序列供用户选则，用户点击选中的路线之后会跳转到详细路线里面，此时会出现用户到目的地的路线规划，以及到站台的步行路线导航，还有途经的每一站，怕错过的乘客还可以选择下车提醒，到达目的地之后导航会自动关闭。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：从定位来看，用户和目的地的位置十分准确，不存在导航错误的情况；从路线规划上来看，数据详细，其中步行导航的时间和坐车时间都是详细的展示给用户，用户可以灵活的安排自己的时间；从人性化角度来看，怕用户找不到上车点于是加上了步行导航，怕用户做过车站，于是加了下车提醒按钮。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：针对特定的时间，比如上下班的高峰期，以及节假日等路上堵车的时候，公交车的速度会明显降低，所以用户不能明确的知道自己需要多久到达目的地的，因此应该尽可能去推荐用户使用地铁出行方式，如果没有地铁可以提前对用户进行提醒。&lt;/p&gt;
+
+&lt;p&gt;优化建议：根据路况以及人流量，进行深度计算用户所需时间，给用户提供更加准确的路线规划。&lt;/p&gt;
+
+&lt;p&gt;总结：以上两个功能可以看得出来高德地图的导航功能，能够较好地满足驾车出行要求，路况实时更新，时间预估准确。高德可以考虑增加一些细节优化，丰富地图内容，更改车主菜单选项、提高出行方案的合理性，在用户体验上更好。&lt;/p&gt;
+
+&lt;h3 id=&quot;五总结&quot;&gt;五、总结&lt;/h3&gt;
+&lt;h4 id=&quot;1-swot分析&quot;&gt;1. SWOT分析&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;【S】优势&lt;/p&gt;
+
+    &lt;p&gt;拥有强大的后援支持，专业的测绘团队，软件研发和产品化的能力强优质的电子地图数据库，完备的生产链，产品多样化十年专业地图服务，经验丰富&lt;/p&gt;
+
+    &lt;p&gt;高德是全国唯一拥有航空摄影测绘产能的导航地图供应商。公司综合了高精度的航空摄 影采集，车辆采集、步行采集等多种数据采集手段，保障了地图数据的全面性、精确性 和深入性。高德的地图覆盖范围和PDL 数据在国内处于领先地位。其09版地图数据中全国道路里程数达到235万公里,兴趣点多达1250万个,一项数值位列全国第一高德的优势在于，卓越的地图表现力为了满足不断提升的导航和位置服务需求，高德在地图表现力方面进行了持续的大规模 投入。业界领先的市街图、实景路口扩大图、3D地标和城市等，将显若提升用户的使用体验。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;【W】劣势&lt;/p&gt;
+
+    &lt;p&gt;地图相对标准化，区分度小，资源整合程度较低，相比较携程美团，在本地生活这一块的业务具有明显差异。&lt;/p&gt;
+
+    &lt;p&gt;商场内导航不准确、难用；实时公交覆盖不全；酒店预订需跳转到APP，且价格更新不及时；分叉路口等场景提醒不及时；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;【O】机遇&lt;/p&gt;
+
+    &lt;p&gt;消费者对地图的刚性需求，商户对位置相关的需要增强，阿里的资金技术信息支持，中国汽车导航的装配率较低。&lt;/p&gt;
+
+    &lt;p&gt;以出行交通为核心功能的应用，同样具备丰富的延伸空间，包括生活服务、共享出行、电商、O2O等诸多行业均可衍生出对地图服务的密集需求，如此前北京针对部分严重拥堵路段，实施的疏导交通拥堵类app便是基于地图类功能模块以及拥堵大数据进行开发生成的。&lt;/p&gt;
+
+    &lt;p&gt;目前，地图功能在app中应用十分广泛，摩拜、美团、携程等各种生活服务类app，均需调用百度、高德等地图API模块，并加以优化来满足自身的业务需求;这也是当下API的优势所在，随着API经济的崛起，越来越多的第三方服务商将自己的核心服务向外界开放，这也使得企业在规划移动产品时，能够将更多的精力放在产品本身。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;【T】威胁&lt;/p&gt;
+
+    &lt;p&gt;与同质企业竞争十分激烈，传统导航产品的盗版问题。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-总结&quot;&gt;2. 总结&lt;/h4&gt;
+&lt;p&gt;高德地图致力于成为用户“出行”的首选APP。从各种交通方式的导航、延伸到出行过程中的具体问题的解决，如限行、电子眼的提醒、打车、公交乘车码等，丰富用户出行场景。&lt;/p&gt;
+
+&lt;p&gt;另外还具备酒店、美食等附近地点的查找和推荐，进一步解决用户只有需求（如吃饭）无明确地点场景下的出行问题。满足各年龄段不同用户的不同出行需求，也因此成为了用户活跃量最大的地图app。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;将地图类的APP分两条主线来看：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;导航&lt;/p&gt;
+
+    &lt;p&gt;地图类产品最核心的功能就是导航，帮助用户从一点尽可能快地、安全地到达另一点。这也是用户最基本地需求。地图类产品其实都在基于现实生活中最真实的交通出行需求做产品设计，比如包含尽可能多的出行方式，为用户提供最智能优化的出行方案。同时，这其中也在围绕导航做一些个性化的功能。比如导航设置时提供多样化的选择，满足用户听觉和视觉的双重用户体验。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;相关的内容和服务&lt;/p&gt;
+
+    &lt;p&gt;这也是地图类产品基于位置所做的功能，根据用户输入的目的地，挖掘具体场景下的需求。比如用户导航的目的地可能是家和公司，这是最基本的日常通勤场景；周末时候的休闲娱乐，可能去KTV、游乐园；周末附近的自驾游场景；长途旅游场景；日常的购物场景等等。基于这些不同的场景，可以为用户提供相关的内容和服务。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这里也可以分为通用的和特定场景下的。通用的比如停车场推荐，营业时间、地点介绍信息，附近美食推荐、酒店推荐等等；特定场景下的比如火车站、景点内会有人流量统计，游玩时会有行程推荐、攻略推荐等等。&lt;/p&gt;
+
+&lt;p&gt;所以除了加大力度研发自己的硬性技术，增加自己的核心竞争力，也可以将相关的内容和服务做到更优秀，让用户在使用产品的时候不能能够满足能用心理还能让用户产生好用，想用的心理。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>30张高清地图全面解读中国地理</title>
+        <link>https://gorpeln.top/article/16755875711</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16755875711</guid>
+        <pubDate>2023-02-05</pubDate>
+        <description>&lt;h3 id=&quot;1中国政区地图&quot;&gt;1、中国政区地图&lt;/h3&gt;
+&lt;p&gt;中国行政区划由省级行政区、地级行政区、县级行政区、乡级行政区组成。&lt;/p&gt;
+
+&lt;p&gt;省级行政区：23个省、5个自治区、4个直辖市、2个特别行政区，共34个省级行政区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931151.png!gorpeln&quot; alt=&quot;20230205165931151&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2中国地形图&quot;&gt;2、中国地形图&lt;/h3&gt;
+&lt;p&gt;中国地形地势西高东低，呈阶梯状分布；地形多种多样，山区面积广大。&lt;/p&gt;
+
+&lt;p&gt;地势西高东低，向海洋倾斜，一方面有利于海洋上湿润气流深入内地，形成降水；另一方面使许多大河滚滚东流，沟通了东西交通，方便了沿海和内地的经济联系。河流自西向东，逐级下降，河流落差大，水能蕴藏丰富。&lt;/p&gt;
+
+&lt;p&gt;在中国辽阔大地上，有雄伟的高原、起伏的山岭、广阔的平原、低缓的丘陵，还有四周群山环抱、中间低平的大小盆地。多种多样的地形为因地制宜，发展农、林、牧、副提供有利条件。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931152.png!gorpeln&quot; alt=&quot;20230205165931152&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3中国地势三级阶梯示意图&quot;&gt;3、中国地势三级阶梯示意图&lt;/h3&gt;
+&lt;p&gt;我国地势西高东低，呈三级阶梯状逐级下降，阶梯状分布特点，使我国大多数河流为自西向东。&lt;/p&gt;
+
+&lt;p&gt;阶梯第一级主要分布在青藏高原附近，海拔在4000米以上。&lt;/p&gt;
+
+&lt;p&gt;阶梯第二级主要分布在我国主要高原，如内蒙古高原，黄土高原，云贵高原，海拔1-2千米。&lt;/p&gt;
+
+&lt;p&gt;阶梯第三级主要分布在我国主要平原，海拔500米以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931153.png!gorpeln&quot; alt=&quot;20230205165931153&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4中国地理分区图&quot;&gt;4、中国地理分区图&lt;/h3&gt;
+&lt;p&gt;中国四大区域：西北地区、北方地区、南方地区、青藏地区四大地形区域。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931154.png!gorpeln&quot; alt=&quot;20230205165931154&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931155.png!gorpeln&quot; alt=&quot;20230205165931155&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5中国三大自然区内部差异&quot;&gt;5、中国三大自然区内部差异&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931156.png!gorpeln&quot; alt=&quot;20230205165931156&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;6中国重要自然地理界线&quot;&gt;6、中国重要自然地理界线&lt;/h3&gt;
+&lt;p&gt;中国一、二级阶梯界线是昆仑山、阿尔金山、祁连山、横断山脉；二、三级阶梯界线为大兴安岭、太行山、巫山、雪峰山。季风区与非季风区界线是大兴安岭、阴山、贺兰山、巴颜喀拉山、冈底斯山，该线西北为非季风区，东南为季风区。&lt;/p&gt;
+
+&lt;p&gt;秦岭——淮河一线是一条我国重要地理分界线，包括南北方分界线，800mm等降水量，湿润区与半湿润区界线，旱作水田分界线，亚热带与暖温带分界线，1月平均气温0°C等温线等。400mm等降水量线还为半湿润半干旱、农耕畜牧、暖温带中温带、森林草原、黄土高原与内蒙古高原分界线。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931157.png!gorpeln&quot; alt=&quot;20230205165931157&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;7中国气候类型分布图&quot;&gt;7、中国气候类型分布图&lt;/h3&gt;
+&lt;p&gt;中国幅员辽阔，跨纬度较广，距海远近差距较大，加之地势高低不同，地貌类型及山脉走向多样，因而气温、降水的组合差别很大，形成了各地多种多样的气候。从气候类型上看，东部属季风气候，西北部属温带大陆性干旱气候，青藏高原属高寒气候。&lt;/p&gt;
+
+&lt;p&gt;中国的气候具有夏季高温多雨、冬季寒冷少雨、高温期与多雨期一致的季风气候特征。中国受冬、夏季风交替影响的地区广，是世界上季风最典型、季风气候最显著的地区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931158.png!gorpeln&quot; alt=&quot;20230205165931158&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;8中国干湿分区图&quot;&gt;8、中国干湿分区图&lt;/h3&gt;
+&lt;p&gt;我国干湿地区主要根据年降水量分布。主要分布如下：&lt;/p&gt;
+
+&lt;p&gt;800mm年等降水量线：以秦岭-淮河为界，以南为湿润区，以北为半湿润区；&lt;/p&gt;
+
+&lt;p&gt;400mm年等降水量线：以大兴安岭-长城为界，向西南，经青藏高原到冈底斯山，划分半湿润区和半干旱区；&lt;/p&gt;
+
+&lt;p&gt;200mm年等降水量线：以内蒙古中部——贺兰山——祁连山经青藏高原为界，划分半干旱区和干旱区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931159.png!gorpeln&quot; alt=&quot;20230205165931159&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931160.png!gorpeln&quot; alt=&quot;20230205165931160&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;9中国年降水量分布图&quot;&gt;9、中国年降水量分布图&lt;/h3&gt;
+&lt;p&gt;中国年降水量空间分布的规律是：从东南沿海向西北内陆递减。中国降水主要是由夏季东南季风带来，东南季风为中国带来太平洋水汽，使得东南沿海地区成为中国年降水量最为丰富地区。西北地区由于深居内陆，距海遥远，成为中国年降水量最少地区。&lt;/p&gt;
+
+&lt;p&gt;从中国年降水量分布图可看出：800毫米等降水量线大致在淮河北—秦岭—青藏高原东南边缘一线；400毫米等降水量线大致在大兴安岭—张家口—兰州—拉萨—喜马拉雅山东南端一线。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931161.png!gorpeln&quot; alt=&quot;20230205165931161&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931162.png!gorpeln&quot; alt=&quot;20230205165931162&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;10中国东部锋面雨带的移动&quot;&gt;10、中国东部锋面雨带的移动&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931163.png!gorpeln&quot; alt=&quot;20230205165931163&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;11中国七月气温分布图&quot;&gt;11、中国七月气温分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931164.png!gorpeln&quot; alt=&quot;20230205165931164&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;12中国一月平均气温分布图&quot;&gt;12、中国一月平均气温分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931165.png!gorpeln&quot; alt=&quot;20230205165931165&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;13中国水系分布图&quot;&gt;13、中国水系分布图&lt;/h3&gt;
+&lt;p&gt;中国是世界上河流最多的国家之一，有许多源远流长的大江大河，河湖地区分布不均，内外流区域兼备。中国外流区与内流区界线大致是：北段大体沿着大兴安岭—阴山—贺兰山—祁连山（东部）一线，南段沿着巴颜喀拉山—冈底斯山一线，这条线东南部是外流区，约占全国总面积2/3，河流水量占全国河流总水量95%以上。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931166.webp!gorpeln&quot; alt=&quot;20230205165931166&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;14中国自然植被分布图&quot;&gt;14、中国自然植被分布图&lt;/h3&gt;
+&lt;p&gt;我国疆域辽阔，植被类型十分丰富。主要划分为8种：针叶林、针阔混交林、温带草原区、温带荒漠区、温带落叶阔叶林区、亚热带常绿阔叶林区、热带季雨林/雨林区、青藏高原高寒植被区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931167.png!gorpeln&quot; alt=&quot;20230205165931167&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;15中国土地资源分布图&quot;&gt;15、中国土地资源分布图&lt;/h3&gt;
+&lt;p&gt;中国土地资源有四个基本特点：绝对数量大，人均占有少；类型复杂多样，耕地比重小；利用情况复杂，生产力地区差异明显；地区分布不均，保护和开发问题突出。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931168.png!gorpeln&quot; alt=&quot;20230205165931168&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;16中国水资源分布图&quot;&gt;16、中国水资源分布图&lt;/h3&gt;
+&lt;p&gt;河流和湖泊是中国主要的淡水资源。中国水资源的分布情况是南多北少，而耕地的分布却是南少北多。水、土资源配合欠佳的状况，进一步加剧了中国北方地区缺水的程度。中国人均径流量为2200立方米，是世界人均径流量的24.7%。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931169.png!gorpeln&quot; alt=&quot;20230205165931169&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;17中国海洋资源分布图&quot;&gt;17、中国海洋资源分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931170.png!gorpeln&quot; alt=&quot;20230205165931170&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;18中国矿产资源分布图&quot;&gt;18、中国矿产资源分布图&lt;/h3&gt;
+&lt;p&gt;中国幅员广大，地质条件多样，矿产资源丰富，已探明储量的有157种。其中钨、锑、稀土、钼、钒和钛等的探明储量居世界首位。煤、铁、铅锌、铜、银、汞、锡、镍、磷灰石、石棉等的储量均居世界前列。中国矿产资源分布的主要特点是，地区分布不均匀。如铁主要分布于辽宁、冀东和川西，西北很少；煤主要分布在华北、西北、东北和西南区，其中山西、内蒙古、新疆等省区最集中，而东南沿海各省则很少。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931171.png!gorpeln&quot; alt=&quot;20230205165931171&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;19中国主要非能源矿产分布图&quot;&gt;19、中国主要非能源矿产分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931172.png!gorpeln&quot; alt=&quot;20230205165931172&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;20中国新能源分布图&quot;&gt;20、中国新能源分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931173.png!gorpeln&quot; alt=&quot;20230205165931173&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;21中国主要火山地震分布图&quot;&gt;21、中国主要火山地震分布图&lt;/h3&gt;
+&lt;p&gt;我国地处全球两大地震带之间，是一个多地震国家。地震带主要分布在：东南—台湾和福建沿海一带，华北—太行山沿线和京津唐渤地区，西南—青藏高原、云南和四川西部，西北—新疆和陕甘宁部分地区。&lt;/p&gt;
+
+&lt;p&gt;中国的火山，约660座，其中绝大部分是死火山。活火山和休眠火山主要分布在台湾省、昆仑山区、黑龙江省、长白山和云南腾冲等地。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931174.png!gorpeln&quot; alt=&quot;20230205165931174&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;22中国水灾分布图&quot;&gt;22、中国水灾分布图&lt;/h3&gt;
+&lt;p&gt;我国洪涝灾害总体呈现出夏多冬少、东多西少，沿海多、内陆少，平原湖区多、高原山地少等分布特点。我国洪涝灾害的高发区集中在广西东南部、广东沿海、海南、浙江沿海以及浙赣皖交界处、辽宁、四川的局部地区。我国受暴雨洪水威胁的主要地区分布在长江、黄河、淮河、海河、珠江、松花江、辽河等7大江河下游和东南沿海地区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931175.png!gorpeln&quot; alt=&quot;20230205165931175&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;23中国旱灾分布图&quot;&gt;23、中国旱灾分布图&lt;/h3&gt;
+&lt;p&gt;我国是世界上主要的干旱国家之一，干旱区的面积约为280万平方公里，半干旱和半湿润易旱区的面积约为213万平方公里，主要分布在昆仑山——秦岭——淮河一线以北，所以干旱是西北区最主要的气候特征和自然灾害。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931176.png!gorpeln&quot; alt=&quot;20230205165931176&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;24中国沙尘暴灾害分布图&quot;&gt;24、中国沙尘暴灾害分布图&lt;/h3&gt;
+&lt;p&gt;我国的沙尘暴主要发生在北方地区，其中南疆盆地、青海西南部、西藏西部及内蒙古中西部和甘肃中北部是沙尘暴的多发区。春季是中国沙尘暴多发季节，4月最多，占全年的22.7%。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931177.png!gorpeln&quot; alt=&quot;20230205165931177&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;25中国泥石流滑坡崩塌灾害分布&quot;&gt;25、中国泥石流、滑坡崩塌灾害分布&lt;/h3&gt;
+&lt;p&gt;我国泥石流、滑坡等地质灾害主要分布在我国的中西部，以西南地区最为集中，主要的地形区有云贵高原等。我国西南部地区高原、山区地形起伏较大，加上降雨量相对较多而且集中，雨水侵蚀增加了滑坡的下滑力，形成不稳定的区域，因而滑坡和泥石流灾害频发。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931178.png!gorpeln&quot; alt=&quot;20230205165931178&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;26中国气象灾害分布图&quot;&gt;26、中国气象灾害分布图&lt;/h3&gt;
+&lt;p&gt;中国地域辽阔，东部处于东亚季风区，而西部地处内陆，天气气候复杂，是世界上受气象灾害影响是严重的国家之一。我国的气象灾害主要特点：&lt;/p&gt;
+
+&lt;p&gt;普遍性。从时间和空间分布上看，每年都有灾，无处没有灾，旱、涝灾害最为频繁。&lt;/p&gt;
+
+&lt;p&gt;区域性。总体看来，北方旱多，南方涝多。旱区主要分布在黄淮海地区及黄土高原，洪涝主要发生在珠江、长江中下游地区及淮河流域等地。&lt;/p&gt;
+
+&lt;p&gt;季节性。春季往往南涝北旱，盛夏往往南旱北涝。&lt;/p&gt;
+
+&lt;p&gt;持续性。同一种灾害常连季出现。如华北常出现春夏连旱或伏秋连旱，长江中下游易出现伏秋连旱，华南常会冬春连旱。&lt;/p&gt;
+
+&lt;p&gt;交替性。不同的气象灾害常交替出现，如旱、涝交替出现。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931179.png!gorpeln&quot; alt=&quot;20230205165931179&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;27中国主要民族分布图&quot;&gt;27、中国主要民族分布图&lt;/h3&gt;
+&lt;p&gt;中国自古以来是一个多民族国家。汉族人口比重最大，约占全国人口总数91.51%；其它55个民族总人口偏少，约占全国总人口8.49%，故称其为少数民族。&lt;/p&gt;
+
+&lt;p&gt;中国各民族分布的特点是：大杂居、小聚居、相互交错居住。中国少数民族人口虽少，但分布很广，主要分布在内蒙古、新疆、宁夏、广西、西藏、云南、贵州、青海、四川、甘肃、黑龙江、辽宁、吉林、湖南、湖北、海南、台湾等省、自治区。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931180.png!gorpeln&quot; alt=&quot;20230205165931180&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;28中国旅游资源分布图&quot;&gt;28、中国旅游资源分布图&lt;/h3&gt;
+&lt;p&gt;中国自然旅游资源，以名山秀水、山水风光最为重要。如五岳名山（东岳泰山、西岳华山、北岳恒山、南岳衡山、中岳嵩山），四大佛教名山（五台山、九华山、普陀山、峨眉山）和景色奇绝的黄山、庐山、石林等；桂林山水、长江三峡等；杭州西湖美景、无锡太湖风光、海南三亚的天涯海角、云南的大理、丽江、西双版纳和台湾日月潭湖光山色等，都是闻名的旅游胜地。&lt;/p&gt;
+
+&lt;p&gt;人文旅游景观有有八大古都（西安、洛阳、安阳、南京、开封、杭州、北京、郑州）、万里长城、京杭大运河、北京故宫和皇家陵园，西安秦始皇兵马俑，南京明孝陵、中山陵，苏州园林建筑，承德避暑山庄，洛阳龙门石窟，敦煌石窟壁画等，都举世闻名。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931181.png!gorpeln&quot; alt=&quot;20230205165931181&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;29中国世界遗产分布图&quot;&gt;29、中国世界遗产分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931182.png!gorpeln&quot; alt=&quot;20230205165931182&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;30中国环境保护分布图&quot;&gt;30、中国环境保护分布图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931183.png!gorpeln&quot; alt=&quot;20230205165931183&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>下载神器：Aria2搭建</title>
+        <link>https://gorpeln.top/article/16726547033</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16726547033</guid>
+        <pubDate>2023-01-02</pubDate>
+        <description>&lt;h3 id=&quot;aria2简介&quot;&gt;Aria2简介&lt;/h3&gt;
+
+&lt;p&gt;Aria2是一款同时支持多线程、P2P下载、BT下载的多功能下载工具。其速度，同样取决于网速和资源质量。但是一般情况，多线程下载，总是比普通浏览器下载、wget下载快很多，并且Aria2还支持远程传递下载。&lt;/p&gt;
+
+&lt;h3 id=&quot;为什么要用aria2&quot;&gt;为什么要用Aria2&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;传递下载&lt;/code&gt;&lt;br /&gt;
+其实，说传递下载有点不准确，其实就是RPC传递下载链接。如：你本地有资源，但是你要外出，你可以通过RPC，直接传递本地下载资源（响应头、下载链接）到服务器上的Aria2，达到“离线下载”的目的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;稳定性&lt;/code&gt;&lt;br /&gt;
+使用浏览器下载，如果网络变更一次，那么可能就会直接下载失败。但是，如果使用Aria2下载，会自动等待网络重新连接，且对已经下载好的部分，支持断点续传。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;多线程&lt;/code&gt;&lt;br /&gt;
+Aria2作为一个多线程下载器，就不多说了。官方版本Aria2最大16线程下载普通资源。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;磁力&amp;amp;种子&lt;/code&gt;&lt;br /&gt;
+Aria2可以下载磁力链接（magnet）资源，以及种子资源（.torrent）。相对于多了一种下载路径。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;macos上搭建aria2&quot;&gt;macOS上搭建Aria2&lt;/h3&gt;
+&lt;h4 id=&quot;homebrew安装aria2&quot;&gt;Homebrew安装Aria2&lt;/h4&gt;
+&lt;p&gt;因为有brew，所以只需要同步Aria2文件到本地即可：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install aria2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823583.png!gorpeln&quot; alt=&quot;20230102181823583&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;配置aria2conf&quot;&gt;配置aria2.conf&lt;/h4&gt;
+&lt;p&gt;在终端输入：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 进入用户家目录
+cd ~
+# 创建Aria2的配置目录
+mkdir .aria2
+# 进入目录内
+cd .aria2
+# 获取当前终端绝对路径
+pwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;获取终端当前地址，我的是：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Users/gorpeln/.aria2&lt;/code&gt;&lt;br /&gt;
+创建aria2.conf文件&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch aria2.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;打开这个文件并配置（你可以使用命令open ~/.aria2/aria2.conf打开或者直接用vim），然后写入Aria2的配置，你可以使用我的aria2配置：&lt;/p&gt;
+
+&lt;p&gt;下载:&lt;a href=&quot;https://gorpeln.lanzoul.com/iPUZN156hkfa&quot;&gt;https://gorpeln.lanzoul.com/iPUZN156hkfa&lt;/a&gt; 密码:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bys2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;之后，&lt;strong&gt;更改其中内容&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;dir：通过Aria2下载的文件，存放地址（绝对路径）&lt;/li&gt;
+  &lt;li&gt;on-download-stop：指向配置文件内deleteAria2.sh&lt;/li&gt;
+  &lt;li&gt;on-download-complete：同样指向配置文件内deleteAria2.sh&lt;/li&gt;
+  &lt;li&gt;dht-file-path：指向配置文件内dht.dat&lt;/li&gt;
+  &lt;li&gt;dht-file-path6：同样指向配置文件内dht.dat&lt;/li&gt;
+  &lt;li&gt;rpc-secret：设置Aria2验证远程码&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;连接密码，后面连接需要使用&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823584.png!gorpeln&quot; alt=&quot;20230102181823584&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;你可以把&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dht.dat&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deleteAria2.sh&lt;/code&gt;移动到/Users/gorpeln/.aria2文件夹内，方便管理。&lt;br /&gt;
+macOS上.开头文件为隐藏文件，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command + shift + .&lt;/code&gt;可以显示隐藏隐藏文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;启动aria2服务&quot;&gt;启动Aria2服务&lt;/h4&gt;
+&lt;h5 id=&quot;1直接运行&quot;&gt;1.直接运行&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aria2c --conf-path=&quot;/Users/gorpeln/.aria2/aria2.conf&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这样，aria2服务就启动成功了。&lt;/p&gt;
+
+&lt;h5 id=&quot;2写入脚本运行&quot;&gt;2.写入脚本运行&lt;/h5&gt;
+&lt;p&gt;新建一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;文本文件.txt&lt;/code&gt;,加入&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria2c --conf-path=/Users/gorpeln/.aria2/aria2.conf
+&lt;/code&gt;，保存后，修改文件的后缀为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria2.command&lt;/code&gt;,文件直接放在桌面，下次运行直接&lt;strong&gt;双击&lt;/strong&gt;文件即可。&lt;/p&gt;
+
+&lt;h3 id=&quot;aria2具体使用&quot;&gt;Aria2具体使用&lt;/h3&gt;
+&lt;h4 id=&quot;一本地使用aria2&quot;&gt;一、本地使用Aria2&lt;/h4&gt;
+&lt;h5 id=&quot;1启动aria2主服务&quot;&gt;1.启动Aria2主服务&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;双击`aria2.command`  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;2配置ariang&quot;&gt;2.配置AriaNG&lt;/h5&gt;
+&lt;p&gt;下载AriaNG Native：&lt;a href=&quot;https://github.com/mayswind/AriaNg-Native/releases&quot;&gt;AriaNG&lt;/a&gt;，打开即可。&lt;/p&gt;
+
+&lt;h5 id=&quot;3正式下载文件&quot;&gt;3.正式下载文件&lt;/h5&gt;
+&lt;p&gt;只需要在AriaNG上，点击新建—将磁力链接/下载链接复制—立即下载即可开始下载。&lt;/p&gt;
+
+&lt;h4 id=&quot;二alist使用aria2&quot;&gt;二、alist使用Aria2&lt;/h4&gt;
+&lt;p&gt;首先进入系统后台后，点击其他，配置Aria2相关信息。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823585.png!gorpeln&quot; alt=&quot;20230102181823585&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后返回到alist前台。点击小齿轮填写aria2参数。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823586.png!gorpeln&quot; alt=&quot;20230102181823586&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;到处，在alist中，我们的aria2就配置完成了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823587.png!gorpeln&quot; alt=&quot;20230102181823587&quot; /&gt;&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>Alist安卓手机的配置</title>
+        <link>https://gorpeln.top/article/16718726252</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16718726252</guid>
+        <pubDate>2022-12-24</pubDate>
+        <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;Alist 有这么几个好处：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装方便快捷；&lt;/li&gt;
+  &lt;li&gt;可以配置除本地之外的网盘，如可以添加百度网盘、阿里云盘等；&lt;/li&gt;
+  &lt;li&gt;播放视频等可以调用本地播放器，如PC端的PotPlayer，安卓端的MxPlayer；&lt;/li&gt;
+  &lt;li&gt;无需 root；&lt;/li&gt;
+  &lt;li&gt;支持WebDav。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;安装-termux&quot;&gt;安装 termux&lt;/h3&gt;
+&lt;p&gt;termux 现在需要从 f-droid 上下载了，地址为 &lt;a href=&quot;https://f-droid.org/zh_Hans/packages/com.termux/&quot;&gt;https://f-droid.org/zh_Hans/packages/com.termux/&lt;/a&gt;。&lt;br /&gt;
+选择最新版下载即可。下载好之后直接安装，能够打开的话，一般来说就没什么问题了，可以进行下一步操作了。&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20221224170345603.jpg!gorpeln&quot; alt=&quot;20221224170345603&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;换源&quot;&gt;换源&lt;/h3&gt;
+&lt;p&gt;在清华大学镜像站&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/help/termux/&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/termux/&lt;/a&gt;，复制下图的命令并运行：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20221224170345604.png!gorpeln&quot; alt=&quot;20221224170345604&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在回车后，会提示是否继续，输入 y 并回车，会更新源。之后在提示的时候，按下回车，使用默认配置即可。&lt;/p&gt;
+
+&lt;h3 id=&quot;安装-alist&quot;&gt;安装 Alist&lt;/h3&gt;
+&lt;p&gt;Alist 的安装较为简单。打开 termux，输入下面的指令直接安装：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pkg install alist -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;然后输入下面的指令开启 alist：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alist server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;配置-alist-存储&quot;&gt;配置 Alist 存储&lt;/h3&gt;
+&lt;p&gt;如果使用当前安装 alist 的手机访问 alist，直接在手机浏览器中输入 0.0.0.0:5244 进行访问。进入之后，大概率会看到这个界面：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20221224170345605.png!gorpeln&quot; alt=&quot;20221224170345605&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击下面的登录，输入之前的账户和密码。登录成功之后，点击下面的管理，进入管理界面。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20221224170345606.png!gorpeln&quot; alt=&quot;20221224170345606&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;具体的网盘挂载查看官方文档 &lt;a href=&quot;https://alist.nn.ci/zh/&quot;&gt;https://alist.nn.ci/zh/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;termux常用命令&quot;&gt;Termux常用命令&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pkg search &amp;lt;query&amp;gt;              # 搜索包
+pkg install &amp;lt;package&amp;gt;           # 安装包
+pkg uninstall &amp;lt;package&amp;gt;         # 卸载包
+pkg reinstall &amp;lt;package&amp;gt;         # 重新安装包
+pkg update                      # 更新源
+pkg upgrade                     # 升级软件包
+pkg list-all                    # 列出可供安装的所有包
+pkg list-installed              # 列出已经安装的包
+pkg show &amp;lt;package&amp;gt;              # 显示某个包的详细信息
+pkg files &amp;lt;package&amp;gt;             # 显示某个包的相关文件夹路径
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>GitHub Actions</title>
+        <link>https://gorpeln.top/article/16682372627</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16682372627</guid>
+        <pubDate>2022-11-12</pubDate>
+        <description>&lt;h3 id=&quot;一github-action-简介&quot;&gt;一、GitHub Action 简介&lt;/h3&gt;
+
+&lt;h4 id=&quot;什么是github-action-&quot;&gt;什么是Github Action ?&lt;/h4&gt;
+&lt;p&gt;GitHub Actions是一个持续集成和持续交付的平台，它可以帮助你通过自动化的构建（包括编译、发布、自动化测试）来验证你的代码，从而尽快地发现集成错误。github于2019年11月后对该功能全面开放，现在所有的github用户可以直接使用该功能。GitHub 提供 Linux、Windows 和 macOS 虚拟机来运行您的工作流程，或者您可以在自己的数据中心或云基础架构中托管自己的自托管运行器。在使用Github Action之前首先需要了解以下前置知识:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;持续集成/持续交付的概念。&lt;/li&gt;
+  &lt;li&gt;Git相关知识。&lt;/li&gt;
+  &lt;li&gt;Linux或Windows或macOS脚本相关知识。&lt;/li&gt;
+  &lt;li&gt;Yaml基础语法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;什么是yaml-&quot;&gt;什么是Yaml ?&lt;/h4&gt;
+&lt;p&gt;编写Github Action的流程时，需要创建一个workflow工作流，workflow必须存储在你的项目库根路径下的.github/workflows目录中，每一个 workflow对应一个具体的.yml 文件（或者 .yaml）。&lt;br /&gt;
+yml是YAML（YAML Ain’t Markup Language）语言的文件，以数据为中心，比properties、xml等更适合做配置文件，主要有以下几个特点:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;大小写敏感。&lt;/li&gt;
+  &lt;li&gt;使用缩进表示层级关系。&lt;/li&gt;
+  &lt;li&gt;缩进只能使用空格，不能用 TAB 字符。&lt;/li&gt;
+  &lt;li&gt;缩进的空格数量不重要，只要层级相同的元素左对齐即可。&lt;/li&gt;
+  &lt;li&gt;‘#’ 表示注释。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;github-action基本概念&quot;&gt;Github Action基本概念&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;workflow&lt;/code&gt;: 一个 workflow 就是一个完整的工作流过程，每个workflow 包含一组 jobs任务。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;job&lt;/code&gt; : jobs任务包含一个或多个job ，每个 job包含一系列的 steps 步骤。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step&lt;/code&gt; : 每个 step 步骤可以执行指令或者使用一个 action 动作。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt; : 每个 action 动作就是一个通用的基本单元。&lt;/p&gt;
+
+&lt;h4 id=&quot;github-action-的使用限制&quot;&gt;Github Action 的使用限制&lt;/h4&gt;
+&lt;p&gt;在使用免费版本的Github Action是有如下限制的:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;作业执行时间&lt;/code&gt; - 工作流中的每个作业最多可以运行 6 小时的执行时间。如果作业达到此限制，该作业将终止且无法完成。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;工作流运行时间&lt;/code&gt; - 每个工作流运行限制为 35 天。如果工作流运行达到此限制，则工作流运行将被取消。此时间段包括执行持续时间以及等待和批准所花费的时间。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API 请求&lt;/code&gt; - 您可以在一小时内跨存储库中的所有操作执行多达 1000 个 API 请求。如果超出此限制，其他 API 调用将失败，这可能会导致作业失败。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;并发作业&lt;/code&gt; - 可以在帐户中运行的并发作业数取决于 GitHub 计划，如下表所示。如果超出，则任何其他作业都将排队。&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th style=&quot;text-align: center&quot;&gt;GitHub 计划&lt;/th&gt;
+          &lt;th style=&quot;text-align: center&quot;&gt;并发作业总数&lt;/th&gt;
+          &lt;th style=&quot;text-align: center&quot;&gt;最大并发 macOS 作业数&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;自由&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;20&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;专业版&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;40&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;团队&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;60&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;企业&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;180&lt;/td&gt;
+          &lt;td style=&quot;text-align: center&quot;&gt;50&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;作业矩阵&lt;/code&gt; - 作业矩阵每次工作流运行最多可以生成 256 个作业。此限制适用于 GitHub 托管和自托管的运行程序。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;工作流运行队列&lt;/code&gt; - 每个存储库的排队时间间隔不超过 500 个工作流运行，间隔为 10 秒。如果工作流运行达到此限制，则工作流运行将终止且无法完成。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;具体以最新版官方文档为主:&lt;a href=&quot;https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration&quot;&gt;usage-limits-billing-and-administration&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二github-action的使用&quot;&gt;二、GitHub Action的使用&lt;/h3&gt;
+&lt;h4 id=&quot;workflow&quot;&gt;workflow&lt;/h4&gt;
+&lt;p&gt;在项目库根路径下的.github/workflows目录中创建一个.yml 文件（或者 .yaml）:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: hello-github-actions
+# 触发 workflow 的事件
+on:
+  push:
+    # 分支随意
+    branches:
+      - master
+# 一个workflow由执行的一项或多项job
+jobs:
+  # 一个job任务，任务名为build
+  build:
+    #运行在最新版ubuntu系统中
+    runs-on: ubuntu-latest
+    #步骤合集
+    steps:
+      #新建一个名为checkout_actions的步骤
+      - name: checkout_actions
+        #使用checkout@v2这个action获取源码
+        uses: actions/checkout@v2 
+      #使用建一个名为setup-node的步骤
+      - name: setup-node
+        #使用setup-node@v1这个action
+        uses: actions/setup-node@v1
+        #指定某个action 可能需要输入的参数
+        with:
+          node-version: &apos;14&apos;
+      - name: npm install and build
+        #执行执行某个shell命令或脚本
+        run: |
+          npm install
+          npm run build
+      - name: commit push
+        #执行执行某个shell命令或脚本
+        run: |
+          git config --global user.email xxx@163.com
+          git config --global user.name xxxx
+          git add .
+          git commit -m &quot;update&quot; -a
+          git push
+         # 环境变量
+        env:
+          email: xxx@163.com   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;name&quot;&gt;name&lt;/h4&gt;
+&lt;p&gt;Workflow的名字，随便可以设置，就是工作流的名字。如果省略该字段，默认为当前 workflow 的文件名。&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: hello-github-actions
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;on&quot;&gt;on&lt;/h4&gt;
+&lt;p&gt;触发的事件，可以是一个事件数组。
+在代码仓库Push时触发:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#push时触发
+on: push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以用数组指定多个条件触发:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#push和merge时触发
+on: [push, merge]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;还可以对条件进行限制触发:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#当master分支push时触发，可以限定分支或标签。
+on:
+  push:
+    branches:
+      - master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;完整的事件列表，请查看&lt;a href=&quot;https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows&quot;&gt;官方文档&lt;/a&gt;。除了代码库事件，GitHub Actions 也支持外部事件触发，或者定时运行。&lt;/p&gt;
+
+&lt;h4 id=&quot;jobs&quot;&gt;jobs&lt;/h4&gt;
+&lt;h5 id=&quot;1job&quot;&gt;1.job&lt;/h5&gt;
+&lt;p&gt;jobs表示要执行的一项或多项任务。jobs可以包含一个或多个job，一个job就是一个任务，这个任务可以包含多个步骤(steps):&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
+  job1:
+    ...
+  job2:
+    ...     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;需要注意的是每一个Job都是并发执行的并不是按照申明的先后顺序执行的， 如果多个job 之间存在依赖关系，那么你可能需要使用 needs :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
+  job1:
+  
+  job2:
+    needs: job1
+  
+  job3:
+    needs: [job1, job2]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这里的needs声明了job2 必须等待 job1 成功完成，job3必须等待 job1 和 job2依次成功完成。因此，这个 workflow 的运行顺序依次为：job1、job2、job3。needs字段指定当前任务的依赖关系，即运行顺序。&lt;/p&gt;
+
+&lt;h5 id=&quot;2job-runs-on&quot;&gt;2.job-&amp;gt;runs-on&lt;/h5&gt;
+&lt;p&gt;runs-on字段指定运行所需要的虚拟机环境。它是必填字段，目前可用的虚拟机如下:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ubuntu-latest，ubuntu-18.04或ubuntu-16.04。&lt;/li&gt;
+  &lt;li&gt;windows-latest，windows-2019或windows-2016。&lt;/li&gt;
+  &lt;li&gt;macOS-latest或macOS-10.14。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;指定job的运行环境:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
+  job1:
+    runs-on: ubuntu-18.04
+  job2:
+    runs-on: macos-10.15
+  job3:
+    runs-on: windows-2019    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;github 会提供一个配置很不错的服务器做为 runner，&lt;br /&gt;
+Windows 和 Linux 虚拟机的硬件规格：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2 核处理器。&lt;/li&gt;
+  &lt;li&gt;7 GB 内存。&lt;/li&gt;
+  &lt;li&gt;14 GB 固态硬盘空间。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;macOS 虚拟机的硬件规格：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;3 核处理器。&lt;/li&gt;
+  &lt;li&gt;14 GB 内存。&lt;/li&gt;
+  &lt;li&gt;14 GB 固态硬盘空间。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你有网络时延的需求，（比如推送及拉取镜像时产生的网络时延），你也可以&lt;a href=&quot;https://docs.github.com/zh/actions/using-github-hosted-runners/customizing-github-hosted-runners&quot;&gt;自建runner&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;h5 id=&quot;3job-env&quot;&gt;3.job-&amp;gt;env&lt;/h5&gt;
+&lt;p&gt;使用env可以给该任务或者是步骤配置环境变量:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; env:
+   name: &quot;gorpeln&quot;
+ run: |
+   echo $name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;环境变量可以配置在以下地方:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;jobs-&amp;gt;job-&amp;gt;env&lt;/li&gt;
+  &lt;li&gt;jobs-&amp;gt;job-&amp;gt;steps.env&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;4job-steps&quot;&gt;4.job-&amp;gt;steps&lt;/h5&gt;
+&lt;p&gt;steps字段指定每个 Job 的运行步骤，每个job由多个step构成，它会从上至下依次执行。steps可以包含一个或多个步骤，每个 step 步骤可以有:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;：步骤名称，步骤的名称。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env&lt;/code&gt;：该步骤所需的环境变量。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt; : 每个步骤的唯一标识符&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uses&lt;/code&gt; : 使用哪个action，这个表示使用别人预先设置好的Actions，比如因为我代码中要用到python，所以就用了actions/setup-python@v1来设置python环境，不用我自己设置了。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt;: 指定某个action 可能需要输入的参数。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt;: 执行哪些指令，具体运行什么命令行代码。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;continue-on-error&lt;/code&gt; : 设置为 true 允许此步骤失败job 仍然通过。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeout-minutes&lt;/code&gt; : step 的超时时间。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例如:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+name: Sync To Gitee
+on: [ push ]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    #创建一个打印环境变量的步骤
+    - name: PrintName
+      env:
+        name: &quot;zhangsan&quot;
+      run: |
+        echo $name
+    #创建一个安装Python环境的步骤    
+    - name: SetUpPython
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    #创建一个安装Python包的步骤 
+    - name: Install dependencies
+      run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          pip install bs4
+          pip install lxml     
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;使用uses指的是这一步骤需要先调用哪个 Action。 Action 是组成工作流最核心最基础的元素。 每个 Action 可以看作封装的独立脚本，有自己的操作逻辑，我们只需要 uses 并通过 with 传入参数即可。 比如 actions/checkout@v2 就是官方社区贡献的用来拉取仓库分支的 Action， 你不需要考虑安装 git 命令工具，只需要把分支参数传入即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;5action&quot;&gt;5.Action&lt;/h5&gt;
+&lt;p&gt;Github Actions 是GitHub的持续集成服务。持续集成由很多操作组成，比如登录远程服务器，发布内容到第三方服务等等，这些相同的操作完全可以提取出来制作成脚本供所有人使用。GitHub允许开发者把每个操作写成独立的脚本文件，存放到代码仓库，使得其他开发者可以引用该脚本，这个脚本就是一个Action。如果你需要某种功能的Action可以从GitHub社区共享的action官方市场查找，也可以自己编程Action开源出来供大家使用。既然 actions 是代码仓库，当然就有版本的概念，用户可以引用某个具体版本的 action。 下面都是合法的 action 引用:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;actions/setup-node@74bc508 # 指向一个 commit
+actions/setup-node@v1.0    # 指向一个标签
+actions/setup-node@master  # 指向一个分支
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;github-actions-中使用密文&quot;&gt;GitHub Actions 中使用密文&lt;/h4&gt;
+&lt;p&gt;在持续集成的过程中，我们可能会使用到自己的敏感数据，这些数据不应该被开源并泄露。那么如何才能安全的使用这些敏感数据呢?GithubActions提供了Secrets变量来实现这一效果。我们可以在 github repo 上依次点击 Settings -&amp;gt; Secrets-&amp;gt; Actions-&amp;gt;New repository secret创建一个敏感数据例如:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OSS_KEY_ID&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OSS_KEY_SECRET&lt;/code&gt;， 然后我们就可以在Github Action脚本中使用这一变量了:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-  name:  setup  aliyun  oss
+    uses:  manyuanrong/setup-ossutil@master
+    with:
+        endpoint:  oss-cn-beijing.aliyuncs.com
+        access-key-id:  $
+        access-key-secret:  $
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这里的secret就是一种context，描述 CI/CD 一个workflow 中的上下文信息，使用$语法表示。&lt;a href=&quot;https://docs.github.com/zh/actions/learn-github-actions/expressions&quot;&gt;更多context信息可以参考官方文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-action执行结果&quot;&gt;GitHub Action执行结果&lt;/h4&gt;
+&lt;p&gt;对于GitHub Action的执行流程我们可以通过repo 上依次点击Actions就可以看到Action的状态和执行结果等信息:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20221112151422378.png!gorpeln&quot; alt=&quot;20221112151422378&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;三示例&quot;&gt;三.示例&lt;/h3&gt;
+&lt;h4 id=&quot;push代码发送邮件通知&quot;&gt;Push代码发送邮件通知&lt;/h4&gt;
+&lt;p&gt;使用GitHub Action实现Push代码发送邮件通知功能。 主要通过 GitHub Action 监听代码 push 事件，并发送邮件（前提是邮箱需要开通 SMTP 服务）。
+在项目中 ./github/workflows/ 路径下添加 .yml 或者 .yaml文件，名字可以随便取。在这里我取名为 github-action-email.yml:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: github-action-email
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # 检出代码
+    - name: CheckoutRepo
+      uses: actions/checkout@v2
+    # 获取master分支上最新一条提交的git log  
+    - name: GetLastLog
+      id: git_log
+      uses: Edisonboy/latest-git-log-action@main
+      with:
+        tag: origin/master
+    # 发送邮件    
+    - name: Send email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.qq.com
+        server_port: 465
+        username: ${-{secrets.MAIL_USERNAME}-}  #删除`-`
+        password: ${-{secrets.MAIL_PASSWORD}-}    #删除`-`
+        subject: Github Actions job result
+        to: ${-{secrets.MAIL_TOUSERNAME}-}    #删除`-`
+        from: ${-{secrets.MAIL_USERNAME}-}    #删除`-`
+        body: ${-{github.repository}-} push log : ${-{steps.git_log.outputs.log}-}  #删除`-`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;secrets.XXX ： GitHub 允许仓库所有者创建和管理需要保密性的参数。例如邮件的账号和密码都是属于敏感参数。 可以通过项目Settings -&amp;gt; Secrets -&amp;gt; Actions配置密码，在这里我们添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_USERNAME&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_PASSWORD&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_TOUSERNAME&lt;/code&gt; 三个配置参数（注意：这里的密码是指 SMTP 服务的授权密码）。&lt;/p&gt;
+
+&lt;p&gt;上下文：可以访问工作流程运行、运行器环境、作业及步骤相关信息的方式${-{github.repository}-}：当前仓库的的所有者和仓库名称。${-{steps.git_log_outputs.log}-} ：获取step id 为 git_log 的输出集。&lt;/p&gt;
+
+&lt;p&gt;因为我们定义 push 为触发条件，所以当我们只有push 代码后，我们定义的 GitHub Action 才会被执行。然后在 GitHub 上的 Action 能够实时看到当前的执行状态。&lt;/p&gt;
+
+&lt;h4 id=&quot;自动保持-github-提交状态常绿&quot;&gt;自动保持 GitHub 提交状态常绿。&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: autogreen
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: &quot;0 0 * * *&quot;
+
+jobs:
+  autogreen:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+  
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Auto green
+        run: |
+          git config --local user.email &quot;xxx@email.com&quot;
+          git config --local user.name &quot;${-{ github.actor }-}&quot;
+          git remote set-url origin https://${-{ github.actor }-}:${-{ secrets.GITHUB_TOKEN }-}@github.com/${-{ github.repository }-}
+          git pull --rebase
+          git commit --allow-empty -m &quot;a commit a day keeps your girlfriend away&quot;
+          git push
+          # 删除所有  {-{  和  }-}  中的  - 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 GitHub Actions 的定时任务功能，每隔一段时间自动执行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;，提交信息为 “a commit a day keeps your girlfriend away”&lt;br /&gt;
+修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user.email &quot;xxx@email.com&quot;&lt;/code&gt; 为自己的 GitHub 邮箱账号 &lt;br /&gt;
+修改&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- cron: &quot;0 0 * * *&quot;&lt;/code&gt;来调整频率&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌───────────── 分钟 (0 - 59)   
+│ ┌───────────── 小时 (0 - 23)   
+│ │ ┌───────────── 日 (1 - 31)   
+│ │ │ ┌───────────── 月 (1 - 12 或 JAN-DEC)   
+│ │ │ │ ┌───────────── 星期 (0 - 6 或 SUN-SAT)   
+│ │ │ │ │   
+│ │ │ │ │  
+│ │ │ │ │   
+* * * * * 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;每个时间字段的含义：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;符号&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;描述&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;举例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;任意值&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;* * * * *&lt;/code&gt; 每天每小时每分钟&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;值分隔符&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1,3,4,7 * * * *&lt;/code&gt; 每小时的 1 3 4 7 分钟&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- &lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;范围&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1-6 * * * *&lt;/code&gt; 每小时的 1-6 分钟&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;每&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*/15 * * * *&lt;/code&gt; 每隔 15 分钟&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;注：由于 GitHub Actions 的限制，如果设置为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;* * * * *&lt;/code&gt; 实际的执行频率为每 5 分执行一次。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;项目地址：&lt;/strong&gt;&lt;a href=&quot;https://github.com/gorpeln/DailyWork&quot;&gt;https://github.com/gorpeln/DailyWork&lt;/a&gt;&lt;br /&gt;
+⚠️ 千万不要 Fork，因为 fork 项目的动态并不会让你变绿 ⚠️&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>关闭谷歌浏览器更新 Mac</title>
+        <link>https://gorpeln.top/article/16621400624</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16621400624</guid>
+        <pubDate>2022-09-03</pubDate>
+        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422271.png!gorpeln&quot; alt=&quot;20220903013422271&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;终端中输入命令：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Library/Google/GoogleSoftwareUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422272.png!gorpeln&quot; alt=&quot;20220903013422272&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上面的目录如果不存在，执行下面的命令&lt;br /&gt;
+修改文件夹GoogleSoftwareUpdate的拥有者，阻止谷歌对其的写入权限      &lt;br /&gt;
+终端中输入命令：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/Library/Google 
+sudo chown root:wheel GoogleSoftwareUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422273.png!gorpeln&quot; alt=&quot;20220903013422273&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422274.png!gorpeln&quot; alt=&quot;20220903013422274&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;设置后还是有更新的标志，卸载谷歌浏览器，下载了最新的谷歌浏览器重新安装。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;恢复操作恢复谷歌浏览器自动更新设置，终端中输入命令：&lt;br /&gt;
+// 恢复文件夹的拥有者是本人，恢复文件夹的写入权限&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown [自己电脑的管理员名称-admin]:wheel GoogleSoftwareUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;// 例如 电脑管理员名称是 adminaa&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown adminaa:wheel GoogleSoftwareUpdate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>研发说这个需求实现不了，为什么？</title>
+        <link>https://gorpeln.top/article/16610720911</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16610720911</guid>
+        <pubDate>2022-08-21</pubDate>
+        <description>&lt;h3 id=&quot;一需求原因&quot;&gt;一、需求原因&lt;/h3&gt;
+&lt;p&gt;研发对需求不认可，觉得需求不合理，这是最关键问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1）需求本身有问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;任何产品经理的需求方案都不会一直完美的，被研发提出问题也算正常，不需要慌，再次思考下这个点就好，将最合理的需求方案再次过会评审，达成一致。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2）需求本身没问题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;产品经理可以发挥你的口才了，业务场景、用户、价值等这一些全部跟研发讲下，研发不像产品，很多时候他们不了解业务，尤其是B端，理解没那么强，角度跟你不一致，多解释下就好。&lt;/p&gt;
+
+&lt;p&gt;毕竟需求评审不单单是评审这个功能点，也需要让大家理解需求背后的原因。&lt;/p&gt;
+
+&lt;h3 id=&quot;二技术原因&quot;&gt;二、技术原因&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1）现有技术实现不了&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;现有的需求没有技术是实现不了的。真的说了这个的就是研发本身能力不够，当然了，我们需要解决问题，如果研发说这个，可以考虑换个替代方案，两边沟通好就行，产品经理也需要灵活处理事情。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2）现有技术可以实现，比较难&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这就是一个优先级和排期的问题了，比较难就是给足时间嘛，如果比较重要的需求，产品经理就可以协调下排期，这个不是问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3）需要更改系统现有技术框架&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;比如一个中台系统，用了 FastAdmin 的集成框架开发，你的需求想要在里面加个视频效果、动画效果啥的，这可能就需要换框架了，采用一个前后端分离的来处理，这个就不好搞了。&lt;/p&gt;
+
+&lt;h3 id=&quot;三时间原因&quot;&gt;三、时间原因&lt;/h3&gt;
+&lt;p&gt;时间原因有两个，一是研发本身有需求在身，新的需求期望上线时间可能有影响；二是新的需求要求时间本身研发就满足不了。&lt;/p&gt;
+
+&lt;p&gt;两者其实都好沟通，说出来就好。这里有个建议，需求评审前，可以跟研发负责人先简单过一下，需求的开发工时，有个大致的了解在后面评审就会好很多。&lt;/p&gt;
+
+&lt;p&gt;当然，如果产品经理懂技术，在研发的工时评估上就更占据主动性，也会更合理，我是很提倡产品经理学习技术的，不求你可以写代码，至少能懂个大概。&lt;/p&gt;
+
+&lt;h3 id=&quot;四成本原因&quot;&gt;四、成本原因&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1）价值不高&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;因为一些比较初级的产品经理，可能对研发的时间成本考虑不完全，一些对用户价值确实不算高的需求，研发需求花很多时间开发，这就是个问题。&lt;/p&gt;
+
+&lt;p&gt;当研发跟你说了，你理解了他们的工时，就要去做改变，不要觉得他们反驳你就失落，这都是成长。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2）价值很高&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;还是跟前面一样，研发没有理解透彻，看起来很容易的功能，对业务方可能会节省很大一笔人力资源，还是那句话，需求评审不单单是评审这个功能点，也需要让大家理解需求背后的原因。&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>B站“崩溃”始末</title>
+        <link>https://gorpeln.top/article/16577323953</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16577323953</guid>
+        <pubDate>2022-07-14</pubDate>
+        <description>&lt;h3 id=&quot;至暗时刻&quot;&gt;至暗时刻&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;2021年7月13日22:52&lt;/strong&gt;，SRE收到大量服务和域名的接入层不可用报警，客服侧开始收到大量用户反馈B站无法使用，同时内部同学也反馈B站无法打开，甚至APP首页也无法打开。基于报警内容，SRE第一时间怀疑机房、网络、四层LB、七层SLB等基础设施出现问题，紧急发起语音会议，拉各团队相关人员开始紧急处理（为了方便理解，下述事故处理过程做了部分简化）。&lt;/p&gt;
+
+&lt;h3 id=&quot;初因定位&quot;&gt;初因定位&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;22:55&lt;/strong&gt; 远程在家的相关同学登陆VPN后，无法登陆内网鉴权系统（B站内部系统有统一鉴权，需要先获取登录态后才可登陆其他内部系统），导致无法打开内部系统，无法及时查看监控、日志来定位问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;22:57&lt;/strong&gt; 在公司Oncall的SRE同学（无需VPN和再次登录内网鉴权系统）发现在线业务主机房七层SLB（基于OpenResty构建） CPU 100%，无法处理用户请求，其他基础设施反馈未出问题，此时已确认是接入层七层SLB故障，排除SLB以下的业务层问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23:07&lt;/strong&gt; 远程在家的同学紧急联系负责VPN和内网鉴权系统的同学后，了解可通过绿色通道登录到内网系统。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23:17&lt;/strong&gt; 相关同学通过绿色通道陆续登录到内网系统，开始协助处理问题，此时处理事故的核心同学（七层SLB、四层LB、CDN）全部到位。&lt;/p&gt;
+
+&lt;h3 id=&quot;故障止损&quot;&gt;故障止损&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;23:20&lt;/strong&gt;  SLB运维分析发现在故障时流量有突发，怀疑SLB因流量过载不可用。因主机房SLB承载全部在线业务，先Reload SLB未恢复后尝试拒绝用户流量冷重启SLB，冷重启后CPU依然100%，未恢复。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23:22&lt;/strong&gt;  从用户反馈来看，多活机房服务也不可用。SLB运维分析发现多活机房SLB请求大量超时，但CPU未过载，准备重启多活机房SLB先尝试止损。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23:23&lt;/strong&gt;  此时内部群里同学反馈主站服务已恢复，观察多活机房SLB监控，请求超时数量大大降低，业务成功率恢复到50%以上。此时做了多活的业务核心功能基本恢复正常，如APP推荐、APP播放、评论&amp;amp;弹幕拉取、动态、追番、影视等。非多活服务暂未恢复。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23:25 - 23:55&lt;/strong&gt; 未恢复的业务暂无其他立即有效的止损预案，此时尝试恢复主机房的SLB。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;我们通过Perf发现SLB CPU热点集中在Lua函数上，怀疑跟最近上线的Lua代码有关，开始尝试回滚最近上线的Lua代码。&lt;/li&gt;
+  &lt;li&gt;近期SLB配合安全同学上线了自研Lua版本的WAF，怀疑CPU热点跟此有关，尝试去掉WAF后重启SLB，SLB未恢复。&lt;/li&gt;
+  &lt;li&gt;SLB两周前优化了Nginx在balance_by_lua阶段的重试逻辑，避免请求重试时请求到上一次的不可用节点，此处有一个最多10次的循环逻辑，怀疑此处有性能热点，尝试回滚后重启SLB，未恢复。&lt;/li&gt;
+  &lt;li&gt;SLB一周前上线灰度了对 HTTP2 协议的支持，尝试去掉 H2 协议相关的配置并重启SLB，未恢复。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;新建源站slb&quot;&gt;新建源站SLB&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;00:00&lt;/strong&gt;  SLB运维尝试回滚相关配置依旧无法恢复SLB后，决定重建一组全新的SLB集群，让CDN把故障业务公网流量调度过来，通过流量隔离观察业务能否恢复。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;00:20&lt;/strong&gt;  SLB新集群初始化完成，开始配置四层LB和公网IP。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:00&lt;/strong&gt;  SLB新集群初始化和测试全部完成，CDN开始切量。SLB运维继续排查CPU 100%的问题，切量由业务SRE同学协助。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:18&lt;/strong&gt;  直播业务流量切换到SLB新集群，直播业务恢复正常。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:40&lt;/strong&gt;  主站、电商、漫画、支付等核心业务陆续切换到SLB新集群，业务恢复。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:50&lt;/strong&gt;  此时在线业务基本全部恢复。&lt;/p&gt;
+
+&lt;h3 id=&quot;恢复slb&quot;&gt;恢复SLB&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;01:00&lt;/strong&gt; SLB新集群搭建完成后，在给业务切量止损的同时，SLB运维开始继续分析CPU 100%的原因。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:10 - 01:27&lt;/strong&gt; 使用Lua 程序分析工具跑出一份详细的火焰图数据并加以分析，发现 CPU 热点明显集中在对 lua-resty-balancer 模块的调用中，从 SLB 流量入口逻辑一直分析到底层模块调用，发现该模块内有多个函数可能存在热点。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:28 - 01:38&lt;/strong&gt; 选择一台SLB节点，在可能存在热点的函数内添加 debug 日志，并重启观察这些热点函数的执行结果。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:39 - 01:58&lt;/strong&gt; 在分析 debug 日志后，发现 lua-resty-balancer模块中的 _gcd 函数在某次执行后返回了一个预期外的值：nan，同时发现了触发诱因的条件：某个容器IP的weight=0。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01:59 - 02:06&lt;/strong&gt; 怀疑是该 _gcd 函数触发了 jit 编译器的某个 bug，运行出错陷入死循环导致SLB CPU 100%，临时解决方案：全局关闭 jit 编译。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;02:07&lt;/strong&gt; SLB运维修改SLB 集群的配置，关闭 jit 编译并分批重启进程，SLB CPU 全部恢复正常，可正常处理请求。同时保留了一份异常现场下的进程core文件，留作后续分析使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;02:31 - 03:50&lt;/strong&gt; SLB运维修改其他SLB集群的配置，临时关闭 jit 编译，规避风险。&lt;/p&gt;
+
+&lt;h3 id=&quot;根因定位&quot;&gt;根因定位&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;11:40&lt;/strong&gt; 在线下环境成功复现出该 bug，同时发现SLB 即使关闭 jit 编译也仍然存在该问题。此时我们也进一步定位到此问题发生的诱因：在服务的某种特殊发布模式中，会出现容器实例权重为0的情况。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;12:30&lt;/strong&gt; 经过内部讨论，我们认为该问题并未彻底解决，SLB 仍然存在极大风险，为了避免问题的再次产生，最终决定：平台禁止此发布模式；SLB 先忽略注册中心返回的权重，强制指定权重。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;13:24&lt;/strong&gt; 发布平台禁止此发布模式。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;14:06&lt;/strong&gt; SLB 修改Lua代码忽略注册中心返回的权重。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;14:30&lt;/strong&gt; SLB 在UAT环境发版升级，并多次验证节点权重符合预期，此问题不再产生。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;15:00 - 20:00&lt;/strong&gt; 生产所有 SLB 集群逐渐灰度并全量升级完成。&lt;/p&gt;
+
+&lt;h3 id=&quot;原因说明&quot;&gt;原因说明&lt;/h3&gt;
+
+&lt;h4 id=&quot;背景&quot;&gt;背景&lt;/h4&gt;
+
+&lt;p&gt;B站在19年9月份从Tengine迁移到了OpenResty，基于其丰富的Lua能力开发了一个服务发现模块，从我们自研的注册中心同步服务注册信息到Nginx共享内存中，SLB在请求转发时，通过Lua从共享内存中选择节点处理请求，用到了OpenResty的lua-resty-balancer模块。到发生故障时已稳定运行快两年时间。&lt;/p&gt;
+
+&lt;p&gt;在故障发生的前两个月，有业务提出想通过服务在注册中心的权重变更来实现SLB的动态调权，从而实现更精细的灰度能力。SLB团队评估了此需求后认为可以支持，开发完成后灰度上线。&lt;/p&gt;
+
+&lt;h4 id=&quot;诱因&quot;&gt;诱因&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;在某种发布模式中，应用的实例权重会短暂的调整为0，此时注册中心返回给SLB的权重是字符串类型的”0”。此发布模式只有生产环境会用到，同时使用的频率极低，在SLB前期灰度过程中未触发此问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB 在balance_by_lua阶段，会将共享内存中保存的服务IP、Port、Weight 作为参数传给lua-resty-balancer模块用于选择upstream server，在节点 weight = “0” 时，balancer 模块中的 _gcd 函数收到的入参 b 可能为 “0”。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;根因&quot;&gt;根因&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220714011315895.png!gorpeln&quot; alt=&quot;20220714011315895&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lua 是动态类型语言，常用习惯里变量不需要定义类型，只需要为变量赋值即可。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lua在对一个数字字符串进行算术操作时，会尝试将这个数字字符串转成一个数字。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在 Lua 语言中，如果执行数学运算 n % 0，则结果会变为 nan（Not A Number）。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;_gcd函数对入参没有做类型校验，允许参数b传入：”0”。同时因为”0” != 0，所以此函数第一次执行后返回是 _gcd(“0”,nan)。如果传入的是int 0，则会触发[ if b == 0 ]分支逻辑判断，不会死循环。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;_gcd(“0”,nan)函数再次执行时返回值是 _gcd(nan,nan)，然后Nginx worker开始陷入死循环，进程 CPU 100%。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;问题分析&quot;&gt;问题分析&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-为何故障刚发生时无法登陆内网后台&quot;&gt;1. 为何故障刚发生时无法登陆内网后台？&lt;/h4&gt;
+
+&lt;p&gt;事后复盘发现，用户在登录内网鉴权系统时，鉴权系统会跳转到多个域名下种登录的Cookie，其中一个域名是由故障的SLB代理的，受SLB故障影响当时此域名无法处理请求，导致用户登录失败。流程如下：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220714011315896.png!gorpeln&quot; alt=&quot;20220714011315896&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;事后我们梳理了办公网系统的访问链路，跟用户链路隔离开，办公网链路不再依赖用户访问链路。&lt;/p&gt;
+
+&lt;h4 id=&quot;2-为何多活slb在故障开始阶段也不可用&quot;&gt;2. 为何多活SLB在故障开始阶段也不可用？&lt;/h4&gt;
+
+&lt;p&gt;多活SLB在故障时因CDN流量回源重试和用户重试，流量突增4倍以上，连接数突增100倍到1000W级别，导致这组SLB过载。后因流量下降和重启，逐渐恢复。此SLB集群日常晚高峰CPU使用率30%左右，剩余Buffer不足两倍。如果多活SLB容量充足，理论上可承载住突发流量， 多活业务可立即恢复正常。此处也可以看到，在发生机房级别故障时，多活是业务容灾止损最快的方案，这也是故障后我们重点投入治理的一个方向。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220714011315897.png!gorpeln&quot; alt=&quot;20220714011315897&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-为何在回滚slb变更无效后才选择新建源站切量而不是并行&quot;&gt;3. 为何在回滚SLB变更无效后才选择新建源站切量，而不是并行？&lt;/h4&gt;
+
+&lt;p&gt;我们的SLB团队规模较小，当时只有一位平台开发和一位组件运维。在出现故障时，虽有其他同学协助，但SLB组件的核心变更需要组件运维同学执行或review，所以无法并行。&lt;/p&gt;
+
+&lt;h4 id=&quot;4-为何新建源站切流耗时这么久&quot;&gt;4. 为何新建源站切流耗时这么久？&lt;/h4&gt;
+
+&lt;p&gt;我们的公网架构如下：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220714011315898.png!gorpeln&quot; alt=&quot;20220714011315898&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;此处涉及三个团队：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB团队：选择SLB机器、SLB机器初始化、SLB配置初始化&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;四层LB团队：SLB四层LB公网IP配置&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CDN团队：CDN更新回源公网IP、CDN切量&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SLB的预案中只演练过SLB机器初始化、配置初始化，但和四层LB公网IP配置、CDN之间的协作并没有做过全链路演练，元信息在平台之间也没有联动，比如四层LB的Real Server信息提供、公网运营商线路、CDN回源IP的更新等。所以一次完整的新建源站耗时非常久。在事故后这一块的联动和自动化也是我们的重点优化方向，目前一次新集群创建、初始化、四层LB公网IP配置已经能优化到5分钟以内。&lt;/p&gt;
+
+&lt;h4 id=&quot;5-后续根因定位后证明关闭jit编译并没有解决问题那当晚故障的slb是如何恢复的&quot;&gt;5. 后续根因定位后证明关闭jit编译并没有解决问题，那当晚故障的SLB是如何恢复的？&lt;/h4&gt;
+
+&lt;p&gt;当晚已定位到诱因是某个容器IP的weight=”0”。此应用在1:45时发布完成，weight=”0”的诱因已消除。所以后续关闭jit虽然无效，但因为诱因消失，所以重启SLB后恢复正常。&lt;/p&gt;
+
+&lt;p&gt;如果当时诱因未消失，SLB关闭jit编译后未恢复，基于定位到的诱因信息：某个容器IP的weight=0，也能定位到此服务和其发布模式，快速定位根因。&lt;/p&gt;
+
+&lt;h3 id=&quot;优化改进&quot;&gt;优化改进&lt;/h3&gt;
+
+&lt;p&gt;此事故不管是技术侧还是管理侧都有很多优化改进。此处我们只列举当时制定的技术侧核心优化改进方向。&lt;/p&gt;
+
+&lt;h4 id=&quot;1-多活建设&quot;&gt;1. 多活建设&lt;/h4&gt;
+
+&lt;p&gt;在23:23时，做了多活的业务核心功能基本恢复正常，如APP推荐、APP播放、评论&amp;amp;弹幕拉取、动态、追番、影视等。故障时直播业务也做了多活，但当晚没及时恢复的原因是：直播移动端首页接口虽然实现了多活，但没配置多机房调度。导致在主机房SLB不可用时直播APP首页一直打不开，非常可惜。通过这次事故，我们发现了多活架构存在的一些严重问题：&lt;/p&gt;
+
+&lt;h5 id=&quot;多活基架能力不足&quot;&gt;多活基架能力不足&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;机房与业务多活定位关系混乱。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CDN多机房流量调度不支持用户属性固定路由和分片。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;业务多活架构不支持写，写功能当时未恢复。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;部分存储组件多活同步和切换能力不足，无法实现多活。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;业务多活元信息缺乏平台管理&quot;&gt;业务多活元信息缺乏平台管理&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;哪个业务做了多活？&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;业务是什么类型的多活，同城双活还是异地单元化？&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;业务哪些URL规则支持多活，目前多活流量调度策略是什么？&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;上述信息当时只能用文档临时维护，没有平台统一管理和编排。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;多活切量容灾能力薄弱&quot;&gt;多活切量容灾能力薄弱&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;多活切量依赖CDN同学执行，其他人员无权限，效率低。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;无切量管理平台，整个切量过程不可视。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;接入层、存储层切量分离，切量不可编排。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;无业务多活元信息，切量准确率和容灾效果差。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我们之前的多活切量经常是这么一个场景：业务A故障了，要切量到多活机房。SRE跟研发沟通后确认要切域名A+URL A，告知CDN运维。CDN运维切量后研发发现还有个URL没切，再重复一遍上面的流程，所以导致效率极低，容灾效果也很差。&lt;/p&gt;
+
+&lt;p&gt;所以我们多活建设的主要方向：&lt;/p&gt;
+
+&lt;h5 id=&quot;多活基架能力建设&quot;&gt;多活基架能力建设&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;优化多活基础组件的支持能力，如数据层同步组件优化、接入层支持基于用户分片，让业务的多活接入成本更低。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;重新梳理各机房在多活架构下的定位，梳理Czone、Gzone、Rzone业务域。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;推动不支持多活的核心业务和已实现多活但架构不规范的业务改造优化。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;多活管控能力提升&quot;&gt;多活管控能力提升&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;统一管控所有多活业务的元信息、路由规则，联动其他平台，成为多活的元数据中心。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;支持多活接入层规则编排、数据层编排、预案编排、流量编排等，接入流程实现自动化和可视化。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;抽象多活切量能力，对接CDN、存储等组件，实现一键全链路切量，提升效率和准确率。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;支持多活切量时的前置能力预检，切量中风险巡检和核心指标的可观测。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2-slb治理&quot;&gt;2. SLB治理&lt;/h4&gt;
+
+&lt;h5 id=&quot;架构治理&quot;&gt;架构治理&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;故障前一个机房内一套SLB统一对外提供代理服务，导致故障域无法隔离。后续SLB需按业务部门拆分集群，核心业务部门独立SLB集群和公网IP。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;跟CDN团队、四层LB&amp;amp;网络团队一起讨论确定SLB集群和公网IP隔离的管理方案。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;明确SLB能力边界，非SLB必备能力，统一下沉到API Gateway，SLB组件和平台均不再支持，如动态权重的灰度能力。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;运维能力&quot;&gt;运维能力&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB管理平台实现Lua代码版本化管理，平台支持版本升级和快速回滚。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB节点的环境和配置初始化托管到平台，联动四层LB的API，在SLB平台上实现四层LB申请、公网IP申请、节点上线等操作，做到全流程初始化5分钟以内。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB作为核心服务中的核心，在目前没有弹性扩容的能力下，30%的使用率较高，需要扩容把CPU降低到15%左右。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;优化CDN回源超时时间，降低SLB在极端故障场景下连接数。同时对连接数做极限性能压测。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;自研能力&quot;&gt;自研能力&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;运维团队做项目有个弊端，开发完成自测没问题后就开始灰度上线，没有专业的测试团队介入。此组件太过核心，需要引入基础组件测试团队，对SLB输入参数做完整的异常测试。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;跟社区一起，Review使用到的OpenResty核心开源库源代码，消除其他风险。基于Lua已有特性和缺陷，提升我们Lua代码的鲁棒性，比如变量类型判断、强制转换等。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;招专业做LB的人。我们选择基于Lua开发是因为Lua简单易上手，社区有类似成功案例。团队并没有资深做Nginx组件开发的同学，也没有做C/C++开发的同学。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-故障演练&quot;&gt;3. 故障演练&lt;/h4&gt;
+
+&lt;p&gt;本次事故中，业务多活流量调度、新建源站速度、CDN切量速度&amp;amp;回源超时机制均不符合预期。所以后续要探索机房级别的故障演练方案：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;模拟CDN回源单机房故障，跟业务研发和测试一起，通过双端上的业务真实表现来验收多活业务的容灾效果，提前优化业务多活不符合预期的隐患。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;灰度特定用户流量到演练的CDN节点，在CDN节点模拟源站故障，观察CDN和源站的容灾效果。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;模拟单机房故障，通过多活管控平台，演练业务的多活切量止损预案。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;4-应急响应&quot;&gt;4. 应急响应&lt;/h4&gt;
+
+&lt;p&gt;B站一直没有NOC/技术支持团队，在出现紧急事故时，故障响应、故障通报、故障协同都是由负责故障处理的SRE同学来承担。如果是普通事故还好，如果是重大事故，信息同步根本来不及。所以事故的应急响应机制必须优化：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;优化故障响应制度，明确故障中故障指挥官、故障处理人的职责，分担故障处理人的压力。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;事故发生时，故障处理人第一时间找backup作为故障指挥官，负责故障通报和故障协同。在团队里强制执行，让大家养成习惯。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;建设易用的故障通告平台，负责故障摘要信息录入和故障中进展同步。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本次故障的诱因是某个服务使用了一种特殊的发布模式触发。我们的事件分析平台目前只提供了面向应用的事件查询能力，缺少面向用户、面向平台、面向组件的事件分析能力：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;跟监控团队协作，建设平台控制面事件上报能力，推动更多核心平台接入。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SLB建设面向底层引擎的数据面事件变更上报和查询能力，比如服务注册信息变更时某个应用的IP更新、weight变化事件可在平台查询。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;扩展事件查询分析能力，除面向应用外，建设面向不同用户、不同团队、不同平台的事件查询分析能力，协助快速定位故障诱因。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+
+&lt;p&gt;此次事故发生时，B站挂了迅速登上全网热搜，作为技术人员，身上的压力可想而知。事故已经发生，我们能做的就是深刻反思，吸取教训，总结经验，砥砺前行。&lt;/p&gt;
+
+&lt;p&gt;此篇作为“713事故”系列之第一篇，向大家简要介绍了故障产生的诱因、根因、处理过程、优化改进。后续文章会详细介绍“713事故”后我们是如何执行优化落地的，敬请期待。&lt;/p&gt;
+
+&lt;p&gt;最后，想说一句：多活的高可用容灾架构确实生效了。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p style=&quot;color: #888888;font-weight: 300&quot;&gt;原文链接：https://blog.csdn.net/qq_32106893/article/details/125755180&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>MacOS实战：时光本 - 笔记工具</title>
+        <link>https://gorpeln.top/article/16542416251</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16542416251</guid>
+        <pubDate>2022-06-03</pubDate>
+        <description>&lt;p&gt;趁年轻，做自己想做的！ - gorpeln　　&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;时光本&lt;/strong&gt;是一款专注效率与记录的笔记工具。可以帮助你整理各种信息，包括&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;便签&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;清单&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;图片&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;纪念日&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;地址&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;链接&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;银行卡&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;名片&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;待办&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;日程&lt;/code&gt;等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;高效记录&lt;/strong&gt;    &lt;br /&gt;
+提供便签、清单、图片、纪念日、地址、链接、银行卡、名片等多种类型&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;专注效率&lt;/strong&gt;   &lt;br /&gt;
+提供笔记紧急程度、分类，帮助你更好的归纳整理，提高效率&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;安全可靠&lt;/strong&gt;  &lt;br /&gt;
+为保证数据安全，所有数据均采用本地存储，把数据归还给用户&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MacOS&lt;/code&gt; Mac端：&lt;a href=&quot;https://apps.apple.com/cn/app/id1495623965?platform=mac&quot;&gt;https://apps.apple.com/cn/app/id1495623965?platform=mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iOS&lt;/code&gt; iPhone端：&lt;a href=&quot;https://apps.apple.com/cn/app/id1495623965?platform=iphone&quot;&gt;https://apps.apple.com/cn/app/id1495623965?platform=iphone&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>MacOS：NSMenu</title>
+        <link>https://gorpeln.top/article/16516610954</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16516610954</guid>
+        <pubDate>2022-05-04</pubDate>
+        <description>&lt;h3 id=&quot;一添加顶部mainmenu目录&quot;&gt;一、添加顶部(mainMenu)目录&lt;/h3&gt;
+&lt;h4 id=&quot;1简单常用的一级目录&quot;&gt;1、简单常用的一级目录&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)addMenu{
+    
+    //获取主目录
+    NSMenu *mainMenu = [NSApp mainMenu];
+    NSLog(@&quot;%@ - %@&quot;,mainMenu,[mainMenu itemArray]);
+    
+    //添加一级目录
+    NSMenuItem *oneItem = [[NSMenuItem alloc] init];
+    [oneItem setTitle:@&quot;Load_TEXT&quot;];
+    [mainMenu addItem:oneItem];
+    
+    //添加二级目录项
+    NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@&quot;Load_TEXT&quot;];
+  
+    [subMenu addItemWithTitle:@&quot;Load1&quot;action:@selector(load1) keyEquivalent:@&quot;E&quot;];
+    [subMenu addItemWithTitle:@&quot;Load2&quot;action:@selector(load2) keyEquivalent:@&quot;R&quot;];
+    
+    [oneItem setSubmenu:subMenu];
+    
+     //更新
+    [NSApp setMainMenu:mainMenu];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2添加二三级目录&quot;&gt;2、添加二三级目录&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)addMenu{
+    
+    NSImageView *imgView = [[NSImageView alloc]initWithFrame:NSMakeRect(100, 100, 100, 100)];
+    [self.window.contentView addSubview:imgView];
+    imgView.image = [NSImage imageNamed:@&quot;apple&quot;];
+    
+    //1.获取主目录
+    NSMenu *mainMenu = [NSApp mainMenu];
+    
+    NSLog(@&quot;%@ - %@&quot;,mainMenu,[mainMenu itemArray]);
+    
+    //2.添加一级目录
+    NSMenuItem *oneItem = [[NSMenuItem alloc] initWithTitle:@&quot;一级目录&quot; action:nil keyEquivalent:@&quot;O&quot;];
+    [oneItem setTitle:@&quot;Load_TEXT&quot;]; //设置文字无效
+    [mainMenu insertItem:oneItem atIndex:2];
+    
+    //3.添加二级目录项
+    NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@&quot;一级目录&quot;]; //这里设置一级目录的名字有效
+    [oneItem setSubmenu:subMenu];
+    
+    [subMenu addItemWithTitle:@&quot;Load1&quot;action:@selector(load1) keyEquivalent:@&quot;E&quot;];
+    [subMenu addItemWithTitle:@&quot;Load2&quot;action:@selector(load2) keyEquivalent:@&quot;T&quot;];
+    
+    NSMenuItem *item3 = [[NSMenuItem alloc]initWithTitle:@&quot;Load3&quot; action:@selector(load2) keyEquivalent:@&quot;T&quot;];
+
+    [subMenu addItem:item3];
+    
+    //4、添加三级目录
+    NSMenu *subMenu3 = [[NSMenu alloc] initWithTitle:@&quot;三级目录&quot;];
+    [item3 setSubmenu:subMenu3];
+    
+    //5、给三级目录添加子目录
+    NSMenuItem *item30 = [[NSMenuItem alloc]initWithTitle:@&quot;-30&quot; action:@selector(load2) keyEquivalent:@&quot;T&quot;];
+    NSMenuItem *item31 = [[NSMenuItem alloc]initWithTitle:@&quot;-31&quot; action:@selector(load2) keyEquivalent:@&quot;T&quot;];
+    
+    [subMenu3 addItem:item30];
+    [subMenu3 addItem:item31];
+    
+     //更新
+    [NSApp setMainMenu:mainMenu];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;效果如图：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455190.png!gorpeln&quot; alt=&quot;20220504184455190&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二添加-dock-菜单&quot;&gt;二、添加 Dock 菜单&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1、在 delegate.m 中添加属性：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@property (nonatomic,strong) NSMenu *dockMenu;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2、初始化 menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;2.1 添加简单的一级 menu&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)addDockMenu{
+    
+    self.dockMenu = [[NSMenu alloc] initWithTitle:@&quot;DockMenu&quot;];
+    
+    [self.dockMenu setAutoenablesItems:NO];
+    
+    NSMenuItem *oneItem = [[NSMenuItem alloc] initWithTitle:@&quot;新的Dock目录&quot; action:@selector(load1) keyEquivalent:@&quot;P&quot;];
+    [oneItem setTarget: self];
+    [self.dockMenu addItem:oneItem];
+  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;效果如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455191.png!gorpeln&quot; alt=&quot;20220504184455191&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.2 添加二级目录，三级的话，可以参考上一部分的代码&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)addDockMenu{
+    
+    self.dockMenu = [[NSMenu alloc] initWithTitle:@&quot;DockMenu&quot;];
+    
+    [self.dockMenu setAutoenablesItems:NO];
+    
+    NSMenuItem *oneItem = [[NSMenuItem alloc] initWithTitle:@&quot;新的Dock目录&quot; action:@selector(load1) keyEquivalent:@&quot;P&quot;];
+    [oneItem setTarget: self];
+    
+    [self.dockMenu addItem:oneItem];
+    
+    NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@&quot;一级目录&quot;]; //这里设置一级目录的名字有效
+    [oneItem setSubmenu:subMenu];
+    
+    [subMenu addItemWithTitle:@&quot;Load1&quot;action:@selector(load1) keyEquivalent:@&quot;E&quot;];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;3、在系统代理方法中返回该目录&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (NSMenu *)applicationDockMenu:(NSApplication *)sender{
+    return self.dockMenu;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;三状态栏nsstatusitem添加菜单&quot;&gt;三、状态栏（NSStatusItem）添加菜单&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@&quot;Load_TEXT&quot;];
+[subMenu addItemWithTitle:@&quot;Load1&quot;action:@selector(load1) keyEquivalent:@&quot;E&quot;];
+[subMenu addItemWithTitle:@&quot;Load2&quot;action:@selector(load2) keyEquivalent:@&quot;R&quot;];
+statusItem.menu = subMenu;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455192.png!gorpeln&quot; alt=&quot;20220504184455192&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;四给一个nsview添加右击菜单&quot;&gt;四、给一个NSView添加右击菜单&lt;/h3&gt;
+&lt;p&gt;这里的快捷键可能无法直接使用。邮件点击该 View，再使用快捷键有效。&lt;br /&gt;
+一个目录可以添加给多个控件。&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)addViewMenu{
+
+    NSMenu *newMenu = [[NSMenu alloc] initWithTitle:@&quot;View 的目录&quot;];
+    
+    NSMenuItem* newItem = [[NSMenuItem alloc] initWithTitle:@&quot;View 的item&quot; action:@selector(load1) keyEquivalent:@&quot;E&quot;];
+    
+    [newItem setEnabled:YES];
+    [newItem setTarget:self];
+    
+    [newMenu addItem:newItem];
+    
+    [self.indicater0 setMenu:newMenu];
+    [self.indicater1 setMenu:newMenu];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455193.png!gorpeln&quot; alt=&quot;20220504184455193&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;五小结&quot;&gt;五、小结&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一级目录 和 二级目录 都属于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSMenu&lt;/code&gt; 类。&lt;/li&gt;
+  &lt;li&gt;一级目录和二级目录的内容属于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSMenuItem&lt;/code&gt; 类。&lt;/li&gt;
+  &lt;li&gt;一个一级目录下，只能有一个二级目录，只能用 setSubmenu 设置一级下的二级目录；&lt;/li&gt;
+  &lt;li&gt;二级目录下面可以有多个 item，可以用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addItemWithTitle&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insertItemWithTitle&lt;/code&gt; 来添加。&lt;/li&gt;
+  &lt;li&gt;keyEquivalent 是配置的快捷键，如果配置 E，则 command + shif + E 可以调用这个方法。 E 区分大小写，小写无效。&lt;/li&gt;
+  &lt;li&gt;insertItem 的时候，需要注意 index 的位置。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455194.png!gorpeln&quot; alt=&quot;20220504184455194&quot; /&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>MacOS：NSButton</title>
+        <link>https://gorpeln.top/article/16514594954</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16514594954</guid>
+        <pubDate>2022-05-02</pubDate>
+        <description>&lt;h3 id=&quot;一创建&quot;&gt;一、创建&lt;/h3&gt;
+&lt;h4 id=&quot;1常见创建代码&quot;&gt;1、常见创建代码&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)testBtn{
+    
+    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];
+    btn.title = @&quot;标题&quot;;                                   // 按钮文字
+    btn.image = [NSImage imageNamed:@&quot;icon_norm&quot;];                                   // 按钮图片
+    [btn setTarget:self];
+    [btn setAction:@selector(btnOnClick)];                              // 按钮触发的方法
+    btn.alternateTitle = @&quot;选中&quot;;                             // 开启状态文字
+    btn.alternateImage = [NSImage imageNamed:@&quot;icon_high&quot;];                           // 开启状态图片
+    btn.state = 1;                                     // 按钮的状态
+    
+    btn.imagePosition = NSImageBelow;                     // 图文位置
+    btn.imageScaling = NSImageScaleNone;         // 设置图片缩放
+    btn.bordered = NO;                               // 按钮是否有边框
+    btn.transparent = NO;                            // 按钮是否透明
+    // 以下设置的快捷键为: Shift + Command + I (如果设置的和系统的冲突，则不会触发)
+    btn.keyEquivalent = @&quot;I&quot;;                             // 快捷键
+    [btn setKeyEquivalentModifierMask:NSEventModifierFlagShift]; // 快捷键掩码
+    btn.highlighted = YES;                                 // 按钮是否为高亮
+
+    [self.window.contentView addSubview:btn];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2nsbuttonconvenience-分类中的类创建方法&quot;&gt;2、NSButtonConvenience 分类中的类创建方法&lt;/h4&gt;
+&lt;h5 id=&quot;21-buttonwithimage&quot;&gt;2.1 buttonWithImage&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@&quot;pupu&quot;] target:self action:@selector(btnOnClick:)];
+btn.frame = CGRectMake(100, 100, 200, 200);
+btn.wantsLayer = YES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220502104455110.png!gorpeln&quot; alt=&quot;20220502104455110&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;22-buttonwithtitle&quot;&gt;2.2 buttonWithTitle&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSButton *btn = [NSButton buttonWithTitle:@&quot;123&quot; image:[NSImage imageNamed:@&quot;pupu&quot;] target:self action:@selector(btnOnClick:)];
+btn.frame = CGRectMake(100, 100, 100, 400);
+btn.wantsLayer = YES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220502104455111.png!gorpeln&quot; alt=&quot;20220502104455111&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二修改imagetitle-的-rect&quot;&gt;二、修改image/title 的 rect&lt;/h3&gt;
+&lt;p&gt;NSButton 是创建子类继承自 NSButton，然后再子button 的.m 文件中重写 titleForRect 方法；
+在 cocoa 中，很多控件都需要通过重写cell 来修改内部的rect。如下：&lt;/p&gt;
+
+&lt;p&gt;1、创建 NaviButtonCell 继承自 NSButtonCell，在 .m 文件中设置 rect：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(NSRect)imageRectForBounds:(NSRect)rect{
+    return NSMakeRect(13, 10, 9, 9);
+}
+
+-(NSRect)titleRectForBounds:(NSRect)rect{
+    return NSMakeRect(24, 0, rect.size.width - 24, rect.size.height);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2、创建 NaviButton 继承自 NSButton，在 .m 中设置 cellClass:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@implementation NaviButton
+
+- (void)drawRect:(NSRect)dirtyRect {
+    [super drawRect:dirtyRect];
+    
+    // Drawing code here.
+}
+
++(Class)cellClass{
+    return [NaviButtonCell class];
+}
+
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;三实用-category&quot;&gt;三、实用 category&lt;/h3&gt;
+&lt;h4 id=&quot;1一个简单地没有边框的按钮&quot;&gt;1、一个简单地没有边框的按钮&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msCommonSetting{
+    
+    [self msSetLayerColor:[NSColor clearColor]];
+    [self setBezelStyle:NSBezelStyleRoundRect];
+    self.bordered = NO;
+    self.imagePosition = NSImageLeft;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2纯图片按钮&quot;&gt;2、纯图片按钮&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msPureImageBtn:(NSImage *)image{
+ 
+    [self msCommonSetting];
+    
+    [self setImage:image];
+    self.imageScaling = NSImageScaleNone;
+    self.imagePosition =  NSImageOnly;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3设置按钮文字颜色&quot;&gt;3、设置按钮文字颜色&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msSetButtonTitle:(NSString *)title color:(NSColor*)color{
+    
+        if(color ==nil) {
+            color = kColor_TextBlack;
+        }
+        NSFont *font = self.font;
+        NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:font,
+                               NSFontAttributeName,
+                               color,
+                               NSForegroundColorAttributeName,
+                               nil];
+        NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
+        [self setAttributedTitle:attributedString];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;4按钮文字居中&quot;&gt;4、按钮文字居中&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//文字居中
+- (void)msSetButtonCenterTitle:(NSString *)title color:(NSColor*)color{
+    
+    if(color ==nil) {
+        color = kColor_TextBlack;
+    }
+    NSFont *font = self.font;
+    NSMutableParagraphStyle *centredStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    [centredStyle setAlignment:NSCenterTextAlignment];
+  
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:centredStyle,NSParagraphStyleAttributeName,
+                           font,NSFontAttributeName,
+                           color,NSForegroundColorAttributeName,
+                           nil];
+    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
+    [self setAttributedTitle:attributedString];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</title>
+        <link>https://gorpeln.top/article/16491590954</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16491590954</guid>
+        <pubDate>2022-04-05</pubDate>
+        <description>&lt;h3 id=&quot;一nswindownswindowcontrollernsviewcontrollernsview-之间的关系&quot;&gt;一、NSWindow、NSWindowController、NSViewController、NSView 之间的关系&lt;/h3&gt;
+
+&lt;h4 id=&quot;1nswindowcontroller-管理-nswindow-之间的交互&quot;&gt;1、NSWindowController 管理 NSWindow 之间的交互；&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSWindowController&lt;/code&gt; 有一个属性为 window ，使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initWithWindow&lt;/code&gt; 初始化时，可以设置自定义的 window 为自己的 window。&lt;/p&gt;
+
+&lt;h4 id=&quot;2nsviewcontroller-管理-nswindow-内容的展示&quot;&gt;2、NSViewController 管理 NSWindow 内容的展示&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSWindow&lt;/code&gt; 的内容由&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contentViewController&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contentView&lt;/code&gt; 决定。
+contentViewController 是一个 NSViewController 类；用 NSViewController 来管理 NSWindow 内容的展示更方便。&lt;/p&gt;
+
+&lt;p&gt;设置 某个 NSViewController 子类a 为 NSWindow 的 contentViewController 后：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;window.contentView = window.contentViewController.view = a.view
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3nsviewcontroller-内容为-nsview&quot;&gt;3、NSViewController 内容为 NSView&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSViewController&lt;/code&gt; 的内容由一个个的 NSView 决定。&lt;/p&gt;
+
+&lt;h3 id=&quot;二创建-nswindow&quot;&gt;二、创建 NSWindow&lt;/h3&gt;
+&lt;p&gt;创建项目后，删除工程自带的 xib中的window，在delegate中添加 NSWindow 属性&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@property(nonatomic,strong) NSWindow *window1;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;懒加载初始化，并在启动时展示出来&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(NSWindow *)window1{
+    if (!_window1) {
+        NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable ;
+        _window1 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 200, 300) styleMask:style backing:NSBackingStoreBuffered defer:YES];
+//        _window1.contentViewController = self.firstVC;
+    }
+    return _window1;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+        [self.window1 center];
+        [self.window1 orderFront:nil];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;运行程序，就可以看到我们创建的window了。&lt;/p&gt;
+
+&lt;h4 id=&quot;设置window的内容&quot;&gt;设置window的内容&lt;/h4&gt;
+
+&lt;h5 id=&quot;1设置contentview&quot;&gt;1、设置contentView&lt;/h5&gt;
+&lt;p&gt;往 contentView 添加内容&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;OneView *view = [[OneView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+[self.window.contentView addSubview:view];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;其中 OneView 继承自 NSView，并在 OneView.m 中添加自定义设置&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)drawRect:(NSRect)dirtyRect {
+    [super drawRect:dirtyRect];
+
+    self.wantsLayer = YES;
+    self.layer.backgroundColor = [NSColor cyanColor].CGColor;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455572.png!gorpeln&quot; alt=&quot;20220405194455572&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2设置-contentviewcontroller&quot;&gt;2、设置 contentViewController&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]init];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这个窗口的显示内容，由 FirstViewController 决定。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455573.png!gorpeln&quot; alt=&quot;20220405194455573&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;设置完 contentViewController 后，window.contentView 就是 self.window.contentViewController.view&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    NSLog(@&quot;contentViewController : %@ , Controller.view : %@ , contentView : %@&quot;,self.window.contentViewController,self.window.contentViewController.view,self.window.contentView);
+    
+    self.window.contentViewController = [[FirstViewController alloc]init];
+    
+    NSLog(@&quot;contentViewController : %@ , Controller.view : %@ , contentView : %@&quot;,self.window.contentViewController,self.window.contentViewController.view,self.window.contentView);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;打印日志如下：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MSWindowDemo[3030:262893] contentViewController : (null) , 
+Controller.view : (null) , 
+contentView : &amp;lt;NSView: 0x604000120aa0&amp;gt;
+
+MSWindowDemo[3030:262893] contentViewController : &amp;lt;FirstViewController: 0x6000000c2e60&amp;gt; , 
+Controller.view : &amp;lt;NSView: 0x600000122800&amp;gt; ,
+contentView : &amp;lt;NSView: 0x600000122800&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;3设置-contentviewcontroller-同时往-contentview-上添加东西&quot;&gt;3、设置 contentViewController 同时往 contentView 上添加东西&lt;/h5&gt;
+&lt;p&gt;效果按照添加顺序叠加&lt;/p&gt;
+
+&lt;p&gt;3.1 如果先设置 contentViewController ，再往 contentView 上添加控件。实际上是往 contentViewController.view 上添加控件。效果如下：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455574.png!gorpeln&quot; alt=&quot;20220405194455574&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3.2 如果先添加 contentView，再设置 contentViewController，contentViewController的内容会覆盖之前的设置。效果同&lt;a href=&quot;#2设置-contentviewcontroller&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;三创建-nswindowcontroller&quot;&gt;三、创建 NSWindowController&lt;/h3&gt;
+&lt;p&gt;创建项目后，删除工程自带的 xib中的window，创建继承自 NSWindowController 的类，弹出该控制器的 window.&lt;/p&gt;
+
+&lt;p&gt;delegate中弹窗部分代码如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    [self.firstWindowC.window center];
+    [self.firstWindowC.window orderFront:nil];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;1不勾选xib&quot;&gt;1、不勾选xib&lt;/h4&gt;
+&lt;h5 id=&quot;11-使用-init-初始化无法正常显示窗口&quot;&gt;1.1 使用 init 初始化，无法正常显示窗口&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_firstWindowC = [[FirstWindowController alloc]init];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;12-使用-initwithwindow-初始化可以显示窗口&quot;&gt;1.2 使用 initWithWindow 初始化，可以显示窗口&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable ;
+        NSWindow *window0 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 400, 200) styleMask:style backing:NSBackingStoreBuffered defer:YES];
+        _firstWindowC = [[FirstWindowController alloc]initWithWindow:window0];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2勾选xib&quot;&gt;2、勾选xib&lt;/h4&gt;
+&lt;h5 id=&quot;21-使用-initwithwindownibname-初始化可以正常显示窗口&quot;&gt;2.1 使用 initWithWindowNibName 初始化，可以正常显示窗口&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_secWindowC = [[SecWindowController alloc]initWithWindowNibName:@&quot;SecWindowController&quot;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2.1.1 在 windowDidLoad 中设置window，无法设置frame&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455575.png!gorpeln&quot; alt=&quot;20220405194455575&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.1.2 在 windowDidLoad 中设置 self.window 指针，会弹出两个窗口&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)windowDidLoad {
+    [super windowDidLoad];
+    
+    NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable ;
+    NSWindow *window0 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 200, 300) styleMask:style backing:NSBackingStoreBuffered defer:YES];
+    
+    self.window = window0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;22-使用-init-初始化无法正常显示窗口&quot;&gt;2.2 使用 init 初始化，无法正常显示窗口&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_secWindowC = [[SecWindowController alloc]init];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2.2.1 在 windowDidLoad 中设置 self.window 指针（代码同 2.1.2），还是无法正常显示窗口&lt;/p&gt;
+
+&lt;p&gt;2.2.2 使用 initWithWindow 初始化，会弹出窗口，效果同 1.2&lt;/p&gt;
+
+&lt;p&gt;跟初始化的 xib 中的窗口无关了。&lt;/p&gt;
+
+&lt;h3 id=&quot;四nsviewcontroller&quot;&gt;四、NSViewController&lt;/h3&gt;
+&lt;p&gt;创建 FirstViewController 继承自 NSViewController，并将 FirstViewController 示例设置为 window.contentViewController&lt;/p&gt;
+
+&lt;h4 id=&quot;1创建时不勾选xib&quot;&gt;1、创建时不勾选xib&lt;/h4&gt;
+&lt;h5 id=&quot;11-使用-init-方法初始化显示-window-失败&quot;&gt;1.1 使用 init 方法初始化，显示 window 失败。&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.firstVC = [[FirstViewController alloc]init];
+self.window.contentViewController = self.firstVC;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;上述代码会报下述错误&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-[NSNib _initWithNibNamed:bundle:options:] could not load the nibName: FirstViewController in bundle (null).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;尝试在控制台打印这个 VC 的 view，也无法得到相关信息。&lt;/p&gt;
+
+&lt;p&gt;Mac 中创建 NSViewController 不会自动创建 view，就像是 创建view 不会自动创建 layer 一样。&lt;/p&gt;
+&lt;h5 id=&quot;12-初始化-nsviewcontroller并设置view显示成功&quot;&gt;1.2 初始化 NSViewController，并设置view，显示成功&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(SecViewController *)secVC{
+    if (!_secVC) {
+        _secVC = [[SecViewController alloc]init];
+        NSView *view = [[NSView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+        view.wantsLayer = YES;
+        view.layer.backgroundColor = [NSColor yellowColor].CGColor;
+        _secVC.view = view;
+        
+    }
+    return _secVC;
+}
+
+self.window1.contentViewController = self.secVC;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;也可以将初始化的方法写在 VC 中，重写 loadView 方法。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(void)loadView{
+    NSView *view = [[NSView alloc]initWithFrame:CGRectMake(0, 0, 600, 400)];
+    view.wantsLayer = YES;
+    view.layer.backgroundColor = [NSColor yellowColor].CGColor;
+    self.view = view;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2勾选xib-1&quot;&gt;2、勾选xib&lt;/h4&gt;
+&lt;h5 id=&quot;21-使用-initwithnibname-初始化加载成功&quot;&gt;2.1 使用 initWithNibName 初始化，加载成功&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]initWithNibName:@&quot;FirstViewController&quot; bundle:nil];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;22使用-init-方法初始化加载成功效果同上&quot;&gt;2.2使用 init 方法初始化，加载成功，效果同上。&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]init];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;于是我想测试下，是否偷偷调用了 initWithNibName 方法，在 FirstViewController.m 中写下如下代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@implementation FirstViewController
+
+-(instancetype)init{
+    self = [super init];
+    NSLog(@&quot;First : init&quot;);
+    return self;
+}
+
+-(instancetype)initWithNibName:(NSNibName)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+ 
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    NSLog(@&quot;First nibNameOrNil : %@ , nibBundleOrNil : %@&quot;,nibNameOrNil,nibBundleOrNil);
+    
+    return self;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;再次运行，发现打印日志如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MSWindowDemo[3919:297186] First nibNameOrNil : (null) , nibBundleOrNil : (null)
+MSWindowDemo[3919:297186] First : init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;说明使用 init 方法会默认调用 initWithNibName 方法去寻找 xib文件。&lt;/p&gt;
+
+&lt;h3 id=&quot;五综合不显示的问题等&quot;&gt;五、综合、不显示的问题等&lt;/h3&gt;
+&lt;h4 id=&quot;1nswindow-or-nswindowcontroller-需要被强引用&quot;&gt;1、NSWindow or NSWindowController 需要被强引用&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示失败
+- (void)test4{
+    
+    FirstWindowController *firstWC = [[FirstWindowController alloc]initWithWindowNibName:@&quot;FirstWindowController&quot;];
+    [firstWC.window orderFront:nil];
+    [firstWC.window center];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;需要改为：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示成功
+- (void)test4{
+    
+    FirstWindowController *firstWC = [[FirstWindowController alloc]initWithWindowNibName:@&quot;FirstWindowController&quot;];
+    [firstWC.window orderFront:nil];
+    [firstWC.window center];
+    
+    self.firstWC = firstWC;
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;部分情况下，window 可能会显示出来，但是 window 上的按钮可能点击无效。&lt;/p&gt;
+
+&lt;h4 id=&quot;2示例nsview-nsviewcontrollernswindownswindowcontroller&quot;&gt;2、示例:NSView –&amp;gt;NSViewController–&amp;gt;NSWindow–&amp;gt;NSWindowController&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)test3{
+    
+    NSView *view = [[NSView alloc] init];
+    view.wantsLayer = YES;
+    view.layer.backgroundColor = [NSColor redColor].CGColor;
+    
+    NSViewController *viewController = [[NSViewController alloc]init];
+    viewController.view = view;
+    
+    NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable;
+    NSRect rect = NSMakeRect(0, 0, 400, 200);
+    NSWindow *window = [[NSWindow alloc]initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+    window.contentViewController = viewController;
+    
+    self.windowController = [[NSWindowController alloc]initWithWindow:window];
+    [self.windowController.window center];
+    [self.windowController.window orderFront:nil];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这样创建的逻辑是没有问题的，但是 window 不会显示出来；&lt;br /&gt;
+原因是，不知道 window 的大小；&lt;br /&gt;
+解决方法，初始化 NSView 的时候，要设置 frame; 那么 window 的大小就会是这个 view.frame;&lt;/p&gt;
+
+&lt;p&gt;代码可改为如下&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//可以显示，且窗口大小为 view 的大小：{300，300}
+NSView *view = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 300, 300)];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3示例-nsviewnswindownswindowcontroller&quot;&gt;3、示例 NSView–&amp;gt;NSWindow–&amp;gt;NSWindowController&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示成功
+- (void)test2{
+    
+    NSView *view0 = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 400, 400)];
+    view0.wantsLayer = YES;
+    view0.layer.backgroundColor = [NSColor redColor].CGColor;
+    
+    NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable;
+    NSRect rect = NSMakeRect(0, 0, 400, 200);
+    NSWindow *window = [[NSWindow alloc]initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+    window.contentView = view0;
+    
+    self.windowController = [[NSWindowController alloc]initWithWindow:window];
+    [self.windowController.window center];
+    [self.windowController.window orderFront:nil];
+    
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>MacOS：使用代码重启应用</title>
+        <link>https://gorpeln.top/article/16489862954</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16489862954</guid>
+        <pubDate>2022-04-03</pubDate>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@interface AppDelegate : NSObject &amp;lt;NSApplicationDelegate&amp;gt;
+-(void)relaunchApp; //重启应用
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@interface AppDelegate ()
+@property (nonatomic, assign) BOOL              toRelaunch;   //重启应用
+@end
+
+@implementation AppDelegate  
+-(void)applicationWillTerminate:(NSNotification *)notification{
+    if (self.toRelaunch) {
+        [[NSWorkspace sharedWorkspace] launchAppWithBundleIdentifier:kBundleId options:NSWorkspaceLaunchAsync | NSWorkspaceLaunchNewInstance additionalEventParamDescriptor:nil launchIdentifier:nil];
+    }
+}
+
+-(void)relaunchApp{
+    self.toRelaunch = YES;
+    [[NSApplication sharedApplication] terminate:nil];
+
+}
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+      </item>
+    
+  </channel>
+</rss>

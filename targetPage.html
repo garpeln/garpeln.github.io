@@ -1,0 +1,173 @@
+<!-- target-page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Page</title>
+    <style>
+        
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+
+       
+
+.page_link_wrapper{
+
+}
+
+.page_link_wrapper .page_link {
+    background: #ececec;
+    border-radius: 20px;
+    padding: 32px;
+
+}
+
+
+.page_link_wrapper .page_link .page_header {
+    text-align: center;
+}
+
+.page_link_wrapper .page_link .page_title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+
+}
+
+
+.page_link_wrapper .page_link .page_desc {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 494px;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+
+.page_link_wrapper .page_link .page_target {
+    cursor: pointer;
+    border-radius: 16px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 12px 16px;
+    color: #292525;
+    word-break: break-word;
+    text-align: center;
+}
+
+.page_link_wrapper .page_link .btn_wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.page_link_wrapper .page_link .btn_wrapper .btn {
+    width: 120px;
+    height: 48px;
+    background: #000;
+    color: #fff;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+
+.footer_txt {
+    text-align: center;
+    color: var(--B40);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 24px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="page_link_wrapper">
+    <div class="page_link">
+        <div class="page_header">
+            <img src="https://cdn-static.sspai.com/ui/logo/otter__go.png" alt="即将离开少数派" width="128">
+        </div>
+        <div class="page_title">即将离开<text>【Gorpeln的个人博客】</text></div>
+        <p class="page_desc">你访问的网站可能包含未知的安全风险，如需继续访问，请手动复制链接访问，并注意保护帐号和隐私信息</p>
+        <div id="target" data-clipboard-text="https://img.shields.io/badge/%E5%B0%91%E6%95%B0%E6%B4%BE-SpencerWoo-da282a" class="page_target">
+            <span>
+                <span>
+                    <a><span id="targetUrl"></span></a>
+                </span>
+            </span>
+        </div>
+        <div class="btn_wrapper">
+            <button class="btn" onclick="confirmRedirect()">继续前往</button>
+        </div>
+    </div>
+    <footer class="footer_txt">
+        <div>
+            <i class="iconfont iconfont-logo-simple"></i>
+        </div>
+        <div>© 2015-2023 gorpeln</div>
+    </footer>
+</div>
+
+
+
+    <script>
+        // 在页面加载时执行的代码
+        window.onload = function() {
+            // 获取 URL 参数中的真实链接
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectUrl = urlParams.get('redirectUrl');
+
+            // 如果存在真实链接，则显示在页面上
+            if (redirectUrl) {
+                document.getElementById('targetUrl').innerText = redirectUrl;
+            } else {
+                alert("无法获取真实链接");
+            }
+        };
+
+        function confirmRedirect() {
+            // 获取 URL 参数中的真实链接
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectUrl = urlParams.get('redirectUrl');
+
+            // 如果存在真实链接，则跳转到真实链接
+            if (redirectUrl) {
+                // 可以在这里进行其他操作，如记录日志等
+                // ...
+
+                window.location.href = redirectUrl;
+            } else {
+                alert("无法获取真实链接");
+            }
+        }
+    </script>
+
+</body>
+</html>

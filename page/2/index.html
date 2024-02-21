@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>gorpeln的个人博客 - gorpeln</title>
+
+  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本" />
+  <meta name="description" content="记录技术上的成长以及生活里的点点滴滴...">
+
+  <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
+  <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+  <meta name="sogou_site_verification" content="26zXpPj0Uh" />
+  <meta name="bytedance-verification-code" content="MqzzXLM7ZrcvpeHXsC6/" />
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/main.css" >
+  <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+  <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="/page/2/">
+  <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+
+  <script async src="https://umami.gorpeln.eu.org/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+  
+</head>
+
+
+
+
+<header class="site-header">
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <style type="text/css">
+    html * {
+        
+    }
+
+    .menuNav {
+        position: fixed;
+        bottom: 1em;
+        left: 0;
+    }
+
+    .menuNav * {
+        text-decoration: none;
+        font-size: 10pt;
+    }
+
+    .menuNav * a:hover {
+        /*background-color: rgba(0, 0, 0, 0.75);*/
+    }
+
+    .menuBtn{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+    }
+
+    .menuNav {
+        list-style: none;
+        display: none;
+        margin-left: 10px;
+    }
+
+    .menuNav li {
+        float: left;
+        border-top: 1px solid #aaa;
+        background-color: rgba(0, 0, 0, 0.70);
+        
+    }
+
+    .menuNav li a {
+        color: #fff;
+        padding: 15px 0;
+        display: block;
+        width: 2em;
+        text-align: center;
+
+    }
+
+    .menuNav li a i{
+        margin-right: 0.5em;
+    }
+
+    .menuNav li a:focus {
+        -moz-outline-style: none;
+    }
+
+    .menuNav li .sub-nav {
+     position: absolute;
+    bottom: 0;
+    left: calc(2em - 40px);
+    list-style: none;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    display: none;
+    }
+
+    .menuNav li .sub-nav li {
+        text-align: center;
+        clear: left;
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        position: relative;
+    }
+
+    .menuNav li .sub-nav li a {
+        height: 34px;
+        line-height: 34px;
+        width: 138px;
+        padding: 0;
+        display: inline-block;
+    }
+
+    @media (max-width: 678px) {
+        .menuNav {
+            display: block;
+        }
+    }
+    </style>
+    <script type="text/javascript">
+
+
+    $(function() {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function() {
+        var submenu = $(this).children('ul');
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function(event) {
+        var target = $(event.target);
+        if (!target.closest('.menuNav').length) {
+          $('.menuNav ul').slideUp(300);
+        }
+      });
+    });
+
+    </script>
+            <ul class="menuNav">
+                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                    <ul class="sub-nav">
+                        <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+                        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+                        <li><a href="/works"><i class="fab fa-git-square fa-fw"></i>项目</a></li>
+                        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+                        <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+                        <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+                    </ul>
+                </li>
+            </ul>
+</header>
+
+<body>
+<script>
+  $(document).ready(function() {
+    $("#toc").toc({
+      noBackToTopLinks: true,
+      title: '',
+      minimumHeaders: 3,
+      headers: 'h1, h2, h3, h4, h5, h6',
+      listType: 'ul',// values: [ol|ul]
+      showEffect: 'slideDown',// values: [show|slideDown|fadeIn|none]
+      showSpeed: '0',// set to 0 to deactivate effect  | slow
+      classes: {
+        list: '',
+        item: ''
+      },
+      highlightOnScroll: true,
+      highlightOffset: 100
+    });
+  });
+</script>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+                    <div class="profile box-shadow center">
+                        <div class="overlay"></div>
+                        <div class="center gavatar">
+                            <a href="/" class="profile_gavatar"><img class="circle" src="/assets/img/logo.png"></a>
+                        </div>
+                        <div class="nickname">
+                            风未止
+                        </div>
+                        <div class="center profile_desc">
+                            趁年轻，做自己想做的！
+                        </div>
+                        <div class="center profile_subdesc">
+                            There is no best, only better!
+                            <br />
+                        </div>
+                        <div class="site-state">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives" target="_blank">
+                                    <span class="site-state-item-count">152</span>
+                                    <span class="site-state-item-name">归档</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories" target="_blank">
+                                    <span class="site-state-item-count">10</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags" target="_blank">
+                                    <span class="site-state-item-count">592</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
+                        </div>
+                    </div>
+                    <div class="siteNav">
+                        <div class="navTitle">博客导航</div>
+                        <ul>
+                            <li onclick="pushNew('/')"><a><i class="fas fa-home fa-fw"></i>首页</a></li>
+                            <li onclick="pushNew('/categories')"><a><i class="fas fa-th fa-fw"></i>分类</a>
+                                <span class="articleCount">10
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
+                                <span class="articleCount">592
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
+                                <span class="articleCount">152
+                                        </span>
+                            </li>
+                            <!-- <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li> -->
+                            <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                                <span class="articleCount">4
+                                </span>
+                            </li>         
+                            <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                            <li onclick="pushNew('/login')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                                <span class="articleCount">※
+                                </span>
+                            </li>                            
+                            <li onclick="pushNew('/about')"><a><i class="fas fa-user fa-fw"></i>关于</a></li>
+                            <li id="cb-search-btn"><a><i class="fas fa-search fa-fw"></i>搜索</a>
+                                <span class="search-tip">双击 control
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categoryNav">
+                        <div class="categoryNavTitle">文章分类</div>
+                        <div>
+                        <ul>
+                            
+                            <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                                <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
+                                <a name="个人博客" style="font-size:13px;color: white" class="articleCount">15
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#其他')" class="categoryList">
+                                <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
+                                <a name="其他" style="font-size:13px;color: white" class="articleCount">16
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                                <a name="web前端" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">web前端</a>
+                                <a name="web前端" style="font-size:13px;color: white" class="articleCount">5
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                                <a name="iOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">iOS</a>
+                                <a name="iOS" style="font-size:13px;color: white" class="articleCount">40
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                                <a name="程序人生" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">程序人生</a>
+                                <a name="程序人生" style="font-size:13px;color: white" class="articleCount">21
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                                <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
+                                <a name="MacOS" style="font-size:13px;color: white" class="articleCount">20
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                                <a name="产品和运营" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">产品和运营</a>
+                                <a name="产品和运营" style="font-size:13px;color: white" class="articleCount">11
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#Git')" class="categoryList">
+                                <a name="Git" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">Git</a>
+                                <a name="Git" style="font-size:13px;color: white" class="articleCount">7
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                                <a name="微信小程序" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">微信小程序</a>
+                                <a name="微信小程序" style="font-size:13px;color: white" class="articleCount">14
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                                <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
+                                <a name="教程福利" style="font-size:13px;color: white" class="articleCount">3
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="contactNav">
+                        <div class="contactNavTitle">个人档案</div>
+                        <div class="contact-container">
+                            <a class="contact-item" href="/assets/img/qqQRCode.jpg" target="_blank">
+                                <img src="/assets/img/qqLogo.png">
+                                <span class="contact-name">33964471</span>
+                            </a>
+                            <a class="contact-item" href="/" target="_blank">
+                                <img src="/assets/img/gmailLogo.png">
+                                <span class="contact-name">help#gorpeln.top</span>
+                            </a>
+                            <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                                <img src="/assets/img/csdnLogo.png">
+                                <span class="contact-name">gorpeln.blog.csdn.net</span>
+                            </a>
+                            <a class="contact-item" href="/about" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="contact-name">更多...</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="friendlinkNav" id="friendlinkNav">
+                        <div class="friendlinkNavTitle">友情链接</div>
+                        <div class="friend-container">
+                            
+                            <a class="friend-item" href="https://www.foreverblog.cn/" target="_blank">
+                                <img src="/assets/img/foreverblog.ico">
+                                <span class="friend-name">十年之约</span>
+                            </a>
+                            
+                            <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                                <img src="/assets/img/travelling-dark.png">
+                                <span class="friend-name">开往-友链接力</span>
+                            </a>
+                            
+                            <a class="friend-item" href="/links" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="friend-name">更多...</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="siteInfoNav" id="siteInfoNav">
+                        <div class="navTitle">网站资讯</div>
+                        <ul>
+                                <li>
+                                    <p >文章数目</p>
+                                    <p >152</p>
+                                </li>
+                                <li>
+                                    <p>本站总字数</p>
+                                    <p>83.6k</p> 
+
+                                </li>
+                                <li>
+                                    <p>已运行时间</p>
+                                    
+                                    
+                                    
+                                    
+
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3104天</p>
+                                </li>
+                                <li>
+                                    <p>最近更新时间</p>
+                                    <p id="current-date" data-value="2024-02-21 13:02:40 +0800">2024/02/21</p>
+                                </li>
+                            </ul>
+                    </div>
+                    <div id="toc" class="customCatalog"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+                    <div class="page-content" id="pjax"><html>
+
+<div>
+    <!-- 置顶文章 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- 普通文章 -->
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16718726252" target="_blank">Alist安卓手机的配置</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-12-24</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#教程福利" target="_blank">
+                        教程福利
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#Alist"  target="_blank">Alist</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#安卓"  target="_blank">安卓</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#termux"  target="_blank">termux</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">前言
+
+Alist 有这么几个好处：
+
+
+  安装方便快捷；
+  可以配置除本地之外的网盘，如可以添加百度网盘、阿里云盘等；
+  播放视频等可以调用本地播放器，如PC端的PotPlayer，安卓端的MxPlayer；
+  无需 root；
+  支持WebDav。
+
+
+安装 termux
+termux 现在需要从 f-droid 上下载了，地址为 https://f-droid.org/zh_...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16718726252" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16682372627" target="_blank">GitHub Actions</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-11-12</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#Git" target="_blank">
+                        Git
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#GitHub"  target="_blank">GitHub</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#Action"  target="_blank">Action</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#Yaml"  target="_blank">Yaml</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">一、GitHub Action 简介
+
+什么是Github Action ?
+GitHub Actions是一个持续集成和持续交付的平台，它可以帮助你通过自动化的构建（包括编译、发布、自动化测试）来验证你的代码，从而尽快地发现集成错误。github于2019年11月后对该功能全面开放，现在所有的github用户可以直接使用该功能。GitHub 提供 Linux、Windows 和 macOS...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16682372627" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16621400624" target="_blank">关闭谷歌浏览器更新 Mac</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-09-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#Chrome"  target="_blank">Chrome</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#更新"  target="_blank">更新</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#浏览器"  target="_blank">浏览器</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">
+
+终端中输入命令：
+cd /Library/Google/GoogleSoftwareUpdate
+
+
+
+上面的目录如果不存在，执行下面的命令
+修改文件夹GoogleSoftwareUpdate的拥有者，阻止谷歌对其的写入权限      
+终端中输入命令：
+cd ~/Library/Google 
+sudo chown root:wheel GoogleSoftwareUpdate
+
+
+
+...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16621400624" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16610720911" target="_blank">研发说这个需求实现不了，为什么？</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-08-21</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
+                        程序人生
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#研发"  target="_blank">研发</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#产品经理"  target="_blank">产品经理</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#技术"  target="_blank">技术</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">一、需求原因
+研发对需求不认可，觉得需求不合理，这是最关键问题。
+
+1）需求本身有问题
+
+任何产品经理的需求方案都不会一直完美的，被研发提出问题也算正常，不需要慌，再次思考下这个点就好，将最合理的需求方案再次过会评审，达成一致。
+
+2）需求本身没问题
+
+产品经理可以发挥你的口才了，业务场景、用户、价值等这一些全部跟研发讲下，研发不像产品，很多时候他们不了解业务，尤其是B端，理解没那么强，角度...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16610720911" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16577323953" target="_blank">B站“崩溃”始末</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-07-14</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                        其他
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#服务器"  target="_blank">服务器</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#nginx"  target="_blank">nginx</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#B站"  target="_blank">B站</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">至暗时刻
+
+2021年7月13日22:52，SRE收到大量服务和域名的接入层不可用报警，客服侧开始收到大量用户反馈B站无法使用，同时内部同学也反馈B站无法打开，甚至APP首页也无法打开。基于报警内容，SRE第一时间怀疑机房、网络、四层LB、七层SLB等基础设施出现问题，紧急发起语音会议，拉各团队相关人员开始紧急处理（为了方便理解，下述事故处理过程做了部分简化）。
+
+初因定位
+
+22:55 远...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16577323953" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16542416251" target="_blank">MacOS实战：时光本 - 笔记工具</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-06-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#个人博客"  target="_blank">个人博客</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#时光本"  target="_blank">时光本</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#小程序"  target="_blank">小程序</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">趁年轻，做自己想做的！ - gorpeln　　
+
+时光本是一款专注效率与记录的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、待办、日程等。
+
+高效记录    
+提供便签、清单、图片、纪念日、地址、链接、银行卡、名片等多种类型
+
+专注效率   
+提供笔记紧急程度、分类，帮助你更好的归纳整理，提高效率
+
+安全可靠  
+为保证数据安全，所有数据均采用本地...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16542416251" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16516610954" target="_blank">MacOS：NSMenu</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-05-04</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSMenu"  target="_blank">NSMenu</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSMenuItem"  target="_blank">NSMenuItem</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSApp"  target="_blank">NSApp</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">一、添加顶部(mainMenu)目录
+1、简单常用的一级目录
+- (void)addMenu{
+    
+    //获取主目录
+    NSMenu *mainMenu = [NSApp mainMenu];
+    NSLog(@"%@ - %@",mainMenu,[mainMenu itemArray]);
+    
+    //添加一级目录
+    NSMenuItem *oneI...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16516610954" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16514594954" target="_blank">MacOS：NSButton</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-05-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSButton"  target="_blank">NSButton</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSImageOnly"  target="_blank">NSImageOnly</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#setAction"  target="_blank">setAction</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">一、创建
+1、常见创建代码
+- (void)testBtn{
+    
+    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];
+    btn.title = @"标题";                                   // 按钮文字
+    btn.image...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16514594954" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16491590954" target="_blank">MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-04-05</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSWindow"  target="_blank">NSWindow</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSWindowController"  target="_blank">NSWindowController</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSViewController"  target="_blank">NSViewController</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">一、NSWindow、NSWindowController、NSViewController、NSView 之间的关系
+
+1、NSWindowController 管理 NSWindow 之间的交互；
+NSWindowController 有一个属性为 window ，使用 initWithWindow 初始化时，可以设置自定义的 window 为自己的 window。
+
+2、NSViewC...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16491590954" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16489862954" target="_blank">MacOS：使用代码重启应用</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2022-04-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                        MacOS
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#relaunch"  target="_blank">relaunch</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSWorkspace"  target="_blank">NSWorkspace</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#NSWorkspaceLaunchAsync"  target="_blank">NSWorkspaceLaunchAsync</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">@interface AppDelegate : NSObject &lt;NSApplicationDelegate&gt;
+-(void)relaunchApp; //重启应用
+@end
+
+
+@interface AppDelegate ()
+@property (nonatomic, assign) BOOL              toRelaunch;   //重启应用
+@end...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16489862954" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
+    
+
+    <!-- 分页 -->
+    <style>
+.box_paginator {
+    display: block;
+    margin-top: 2.5em;
+    position: relative;
+    text-align: center;
+}
+
+.btn-groups {
+
+}
+
+.btn-outline {
+    display: inline-table;
+    border-radius: 4px;
+    min-width: 1.8em;
+    margin-bottom: 0.5em;
+    padding: 0 0.4em;
+    color: rgba(55, 55, 75, 0.75);
+    box-shadow: 1px 1px 1px #dfd6d6;
+    font-weight: 300;
+}
+
+.active {
+    background: rgba(55, 55, 75, 0.75);
+    color: #fff;
+
+}
+
+.disable {
+    color: #ccc;
+    border: 0px solid #aaa;
+}
+
+.totalCount{
+    border: 0 solid #aaa;
+    font-size: 0.8em;
+    box-shadow: none;
+}
+</style>
+
+<!-- 分页链接 -->
+<div class="box_paginator">
+    <div class="btn-groups">
+        
+            
+                <a href="/" class="btn-outline">首页</a>
+            
+            <!-- 如果有前一页的页号 -->
+            
+                <!-- 如果前一页的页号是1 -->
+                
+                    <a href="/" class="btn-outline"><i class="far fa-angle-double-left"></i></a>
+                
+            
+            
+                
+                    
+                        
+                            
+                                <a href="/" class="btn-outline">1</a>
+                            
+                        
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        
+                    
+                
+                    
+                        
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        
+                            <a href="javascript:;" class="active btn-outline">2</a>
+                        
+                    
+                
+                    
+                        
+                            
+                                <a href="/page/3" class="btn-outline">3</a>
+                            
+                        
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        
+                    
+                
+                    
+                        
+                            
+                                <a href="/page/4" class="btn-outline">4</a>
+                            
+                        
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        
+                    
+                
+                    
+                        
+                            
+                                <a href="/page/5" class="btn-outline">5</a>
+                            
+                        
+                        <!--如果当前页码数和num相等，则不会出现连接地址，也不能点击，并且加上背景色样式-->
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+ 
+            
+                <a href="/page/3" class="btn-outline"><i class="far fa-angle-double-right"></i></a>
+                <a href="/page/15" class="btn-outline">末页</a>
+            
+                <a class="btn-outline disable totalCount">第2页 / 共15页</a>
+        <!-- 只有一页的情况 -->
+        
+</div>
+
+<style type="text/css">
+    .tags-a {
+        color:#888;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: 'serif';
+    }
+    .topTip {
+        background: #EE3B3B;
+        background:linear-gradient(80deg,#FFA54F,#FF4500);
+        color: #fff;
+        padding: 0 8px;
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: 4px;
+        margin-right: 0.5em;
+        text-align: center;
+    }
+</style>
+</html></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 二维码、顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/page/2/')"></div>
+        <div class="qrcodeImg" id="qrcode"></div>
+        <div id="backtotop">
+            <a href="#">
+                <div class="bttbg"></div>
+            </a>
+        </div>
+    </div>
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
+    <div class="footerDes">
+        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
+        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2</a>  |  
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
+            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号</a> | 
+        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务</a> | 
+        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031">
+            <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" />萌ICP备20240031号</a>
+    </div>
+</footer>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- search -->
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
+    <div style="position: fixed; top: 2.5em; right: 2.5em;">
+        <img src="/assets/img/search_close.png" id="cb-close-btn" />
+    </div>
+</div>
+<link rel="stylesheet" href="/search/css/cb-search.css">
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<!-- 动态显示网站运行时间 -->
+<script language=javascript>
+
+const fullYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = fullYear;
+
+
+function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000
+    var minutes = seconds * 60
+    var hours = minutes * 60
+    var days = hours * 24
+    var years = days * 365
+    var today = new Date()
+    var todayYear = today.getFullYear()
+    var todayMonth = today.getMonth() + 1
+    var todayDate = today.getDate()
+    var todayHour = today.getHours()
+    var todayMinute = today.getMinutes()
+    var todaySecond = today.getSeconds()
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) 
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份 0为1月
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2015, 8, 23, 0, 0, 0)
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+    var diff = t2 - t1
+    var diffYears = Math.floor(diff / years)
+    var diffDays = Math.floor((diff / days) - diffYears * 365)
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+    document.getElementById("htmer_time").innerHTML = " 本站已安全运行：" + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒&nbsp;&nbsp;<i class='fas fa-heartbeat' id='heartbeat'></i>";
+
+}
+siteTime();
+</script>
+<script language=JavaScript>
+    function over(obj) {
+        obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {
+
+    }
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = '/article/15462756619';
+    }
+</script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?97ba5540ec47cf065f1e2c7c57814156";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X32389EHZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X32389EHZY');
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?48d96a1962ac94410ea549269e50bcc20fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+
+
+<style>
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.runTime {
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none; /* 隐藏默认的文本下划线 */
+    display: inline-block;
+    position: relative;
+}
+
+.runTime:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    /*background-color: #888;*/
+    bottom: 4px;
+    left: 0;
+    border-bottom: 1px dashed #777;
+}
+
+
+.footerImg{
+    margin-top: -3px;
+    margin-right:  2px;
+}
+.footerDes,.footerDes a{
+    color: #666;
+    text-align: center; /* Center the text within the .footerDes div */
+    bottom: -0.25em;
+    font-size: 12px;
+}
+
+#heartbeat {
+    color: red;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+</style>
+</body>
+<script>
+function pushNew(path) {
+    if (path == '/') {
+        window.location.href = path;
+    } else {
+        window.open(path);
+    }
+}
+</script>
+<script>
+    function menuFixed(id, otherId) {
+        var obj = document.getElementById(id);
+        var _getHeight = obj.offsetTop;
+
+        window.onscroll = function() {
+            changePos(id, _getHeight, otherId);
+        }
+    }
+
+    function changePos(id, height, otherId) {
+        var obj = document.getElementById(id);
+        var friendlinkObj = document.getElementById(otherId);
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTop < height) {
+            obj.style.position = 'relative';
+        } else {
+            obj.style.position = 'fixed';
+        }        
+        obj.style.width = friendlinkObj.offsetWidth + 'px';
+
+    }
+
+    $(document).ready(function() {
+        menuFixed('toc', 'siteInfoNav');
+    });
+
+</script>
+
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+    // 生成二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 180,
+        height : 180
+    });
+    function createQrcode(url) {
+        console.log('生成我二维码' + url);
+
+        qrcode.makeCode('https://gorpeln.cn' + url);
+
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        } else {
+            qrcodeImg.style.display = 'block';
+        }
+    }
+
+    // 隐藏二维码
+    function hiddenQRCode() {
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        }
+    }
+
+
+function changeContent(element) {
+    
+    
+    
+
+    
+    
+
+  element.innerHTML = 8 + '年' + 184 + '天';
+
+}
+
+function restoreContent(element) {
+    
+    
+    
+    
+    element.innerHTML = 3104 + '天';
+}
+
+
+
+
+
+</script>
+
+ <script>
+
+     var value = document.getElementById("current-date").getAttribute("data-value");
+     console.log(value); // 输出：hello
+    // 创建一个表示给定日期和时间的 Date 对象
+    var givenDate = new Date(value);
+
+    // 获取当前时间的 Date 对象
+    var currentDate = new Date();
+
+    // 获取前一天的时间
+    var previousDate = new Date(currentDate);
+    previousDate.setDate(currentDate.getDate() - 1);
+
+    // 获取年、月、日
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+    var day = previousDate.getDate();
+
+    // 比较给定日期和当前日期
+    if (givenDate < previousDate) {
+   // 将日期显示在页面上
+        var dateElement = document.getElementById("current-date");
+        dateElement.textContent = year + "/" + month + "/" + day
+    } 
+
+  </script>
+
+
+</html>

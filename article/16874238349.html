@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子 | gorpeln的个人博客 - gorpeln</title>
+
+  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,Substats,Shields,小牌子,Cloudflare,github" />
+  <meta name="description" content="">
+
+  <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
+  <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+  <meta name="sogou_site_verification" content="26zXpPj0Uh" />
+  <meta name="bytedance-verification-code" content="MqzzXLM7ZrcvpeHXsC6/" />
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/main.css" >
+  <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+  <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="/article/16874238349">
+  <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+
+  <script async src="https://umami.gorpeln.eu.org/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+  
+</head>
+
+
+
+
+<header class="site-header">
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <style type="text/css">
+    html * {
+        
+    }
+
+    .menuNav {
+        position: fixed;
+        bottom: 1em;
+        left: 0;
+    }
+
+    .menuNav * {
+        text-decoration: none;
+        font-size: 10pt;
+    }
+
+    .menuNav * a:hover {
+        /*background-color: rgba(0, 0, 0, 0.75);*/
+    }
+
+    .menuBtn{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+    }
+
+    .menuNav {
+        list-style: none;
+        display: none;
+        margin-left: 10px;
+    }
+
+    .menuNav li {
+        float: left;
+        border-top: 1px solid #aaa;
+        background-color: rgba(0, 0, 0, 0.70);
+        
+    }
+
+    .menuNav li a {
+        color: #fff;
+        padding: 15px 0;
+        display: block;
+        width: 2em;
+        text-align: center;
+
+    }
+
+    .menuNav li a i{
+        margin-right: 0.5em;
+    }
+
+    .menuNav li a:focus {
+        -moz-outline-style: none;
+    }
+
+    .menuNav li .sub-nav {
+     position: absolute;
+    bottom: 0;
+    left: calc(2em - 40px);
+    list-style: none;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    display: none;
+    }
+
+    .menuNav li .sub-nav li {
+        text-align: center;
+        clear: left;
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        position: relative;
+    }
+
+    .menuNav li .sub-nav li a {
+        height: 34px;
+        line-height: 34px;
+        width: 138px;
+        padding: 0;
+        display: inline-block;
+    }
+
+    @media (max-width: 678px) {
+        .menuNav {
+            display: block;
+        }
+    }
+    </style>
+    <script type="text/javascript">
+
+
+    $(function() {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function() {
+        var submenu = $(this).children('ul');
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function(event) {
+        var target = $(event.target);
+        if (!target.closest('.menuNav').length) {
+          $('.menuNav ul').slideUp(300);
+        }
+      });
+    });
+
+    </script>
+            <ul class="menuNav">
+                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                    <ul class="sub-nav">
+                        <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+                        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+                        <li><a href="/works"><i class="fab fa-git-square fa-fw"></i>项目</a></li>
+                        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+                        <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+                        <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+                    </ul>
+                </li>
+            </ul>
+</header>
+
+<body>
+<script>
+  $(document).ready(function() {
+    $("#toc").toc({
+      noBackToTopLinks: true,
+      title: '',
+      minimumHeaders: 3,
+      headers: 'h1, h2, h3, h4, h5, h6',
+      listType: 'ul',// values: [ol|ul]
+      showEffect: 'slideDown',// values: [show|slideDown|fadeIn|none]
+      showSpeed: '0',// set to 0 to deactivate effect  | slow
+      classes: {
+        list: '',
+        item: ''
+      },
+      highlightOnScroll: true,
+      highlightOffset: 100
+    });
+  });
+</script>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+                    <div class="profile box-shadow center">
+                        <div class="overlay"></div>
+                        <div class="center gavatar">
+                            <a href="/" class="profile_gavatar"><img class="circle" src="/assets/img/logo.png"></a>
+                        </div>
+                        <div class="nickname">
+                            风未止
+                        </div>
+                        <div class="center profile_desc">
+                            趁年轻，做自己想做的！
+                        </div>
+                        <div class="center profile_subdesc">
+                            There is no best, only better!
+                            <br />
+                        </div>
+                        <div class="site-state">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives" target="_blank">
+                                    <span class="site-state-item-count">152</span>
+                                    <span class="site-state-item-name">归档</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories" target="_blank">
+                                    <span class="site-state-item-count">10</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags" target="_blank">
+                                    <span class="site-state-item-count">592</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
+                        </div>
+                    </div>
+                    <div class="siteNav">
+                        <div class="navTitle">博客导航</div>
+                        <ul>
+                            <li onclick="pushNew('/')"><a><i class="fas fa-home fa-fw"></i>首页</a></li>
+                            <li onclick="pushNew('/categories')"><a><i class="fas fa-th fa-fw"></i>分类</a>
+                                <span class="articleCount">10
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
+                                <span class="articleCount">592
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
+                                <span class="articleCount">152
+                                        </span>
+                            </li>
+                            <!-- <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li> -->
+                            <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                                <span class="articleCount">4
+                                </span>
+                            </li>         
+                            <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                            <li onclick="pushNew('/login')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                                <span class="articleCount">※
+                                </span>
+                            </li>                            
+                            <li onclick="pushNew('/about')"><a><i class="fas fa-user fa-fw"></i>关于</a></li>
+                            <li id="cb-search-btn"><a><i class="fas fa-search fa-fw"></i>搜索</a>
+                                <span class="search-tip">双击 control
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categoryNav">
+                        <div class="categoryNavTitle">文章分类</div>
+                        <div>
+                        <ul>
+                            
+                            <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                                <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
+                                <a name="个人博客" style="font-size:13px;color: white" class="articleCount">15
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#其他')" class="categoryList">
+                                <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
+                                <a name="其他" style="font-size:13px;color: white" class="articleCount">16
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                                <a name="web前端" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">web前端</a>
+                                <a name="web前端" style="font-size:13px;color: white" class="articleCount">5
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                                <a name="iOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">iOS</a>
+                                <a name="iOS" style="font-size:13px;color: white" class="articleCount">40
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                                <a name="程序人生" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">程序人生</a>
+                                <a name="程序人生" style="font-size:13px;color: white" class="articleCount">21
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                                <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
+                                <a name="MacOS" style="font-size:13px;color: white" class="articleCount">20
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                                <a name="产品和运营" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">产品和运营</a>
+                                <a name="产品和运营" style="font-size:13px;color: white" class="articleCount">11
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#Git')" class="categoryList">
+                                <a name="Git" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">Git</a>
+                                <a name="Git" style="font-size:13px;color: white" class="articleCount">7
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                                <a name="微信小程序" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">微信小程序</a>
+                                <a name="微信小程序" style="font-size:13px;color: white" class="articleCount">14
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                                <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
+                                <a name="教程福利" style="font-size:13px;color: white" class="articleCount">3
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="contactNav">
+                        <div class="contactNavTitle">个人档案</div>
+                        <div class="contact-container">
+                            <a class="contact-item" href="/assets/img/qqQRCode.jpg" target="_blank">
+                                <img src="/assets/img/qqLogo.png">
+                                <span class="contact-name">33964471</span>
+                            </a>
+                            <a class="contact-item" href="/" target="_blank">
+                                <img src="/assets/img/gmailLogo.png">
+                                <span class="contact-name">help#gorpeln.top</span>
+                            </a>
+                            <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                                <img src="/assets/img/csdnLogo.png">
+                                <span class="contact-name">gorpeln.blog.csdn.net</span>
+                            </a>
+                            <a class="contact-item" href="/about" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="contact-name">更多...</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="friendlinkNav" id="friendlinkNav">
+                        <div class="friendlinkNavTitle">友情链接</div>
+                        <div class="friend-container">
+                            
+                            <a class="friend-item" href="https://www.foreverblog.cn/" target="_blank">
+                                <img src="/assets/img/foreverblog.ico">
+                                <span class="friend-name">十年之约</span>
+                            </a>
+                            
+                            <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                                <img src="/assets/img/travelling-dark.png">
+                                <span class="friend-name">开往-友链接力</span>
+                            </a>
+                            
+                            <a class="friend-item" href="/links" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="friend-name">更多...</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="siteInfoNav" id="siteInfoNav">
+                        <div class="navTitle">网站资讯</div>
+                        <ul>
+                                <li>
+                                    <p >文章数目</p>
+                                    <p >152</p>
+                                </li>
+                                <li>
+                                    <p>本站总字数</p>
+                                    <p>83.6k</p> 
+
+                                </li>
+                                <li>
+                                    <p>已运行时间</p>
+                                    
+                                    
+                                    
+                                    
+
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3104天</p>
+                                </li>
+                                <li>
+                                    <p>最近更新时间</p>
+                                    <p id="current-date" data-value="2024-02-21 13:02:40 +0800">2024/02/21</p>
+                                </li>
+                            </ul>
+                    </div>
+                    <div id="toc" class="customCatalog"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+                    <div class="page-content" id="pjax"><div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</h1>
+  	<div class="info">
+  	        时间：
+  	        <text style="padding-top: 0;">2023-06-22</text>&nbsp;&nbsp;&nbsp;&nbsp;
+  	        分类：
+  	        <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+  	            个人博客
+  	        </a>
+  	        &nbsp;&nbsp;&nbsp;&nbsp;
+  	        标签：
+  	        
+  	        <span class="index-post-tag">
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#Substats"  target="_blank">Substats</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#Shields"  target="_blank">Shields</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#小牌子"  target="_blank">小牌子</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#Cloudflare"  target="_blank">Cloudflare</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#github"  target="_blank">github</a>
+  	                
+  	            
+  	        </span>
+  	        
+  	</div>
+  </header>
+
+  <article class="post-content">
+    <p><img src="https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln" alt="20230622165034171" /></p>
+
+<p>如果你浏览过一些 GitHub 的开源项目，你一定见过很多 README 文档中都会出现的五颜六色、各式各样的「小牌子」。</p>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034172.png!gorpeln" alt="20230622165034172" />
+最初，这些「小牌子」的主要作用是为了显示「某个 GitHub 项目」的「某种状态」，比如项目的编译是否成功、文档是否更新至最新、软件的下载数量有多少……不过，从原理的角度来说，这些「小牌子」都是通过我们给「牌子渲染服务器」提供一些数据后，服务器返回给我们一个 SVG 格式的图片来工作的。我们将返回的 SVG 图片嵌入到 GitHub 的 README 文档或其他网页里面，就完成了一个「小牌子」的制作。</p>
+
+<p>因此，我们不仅可以将这些「小牌子」用在 GitHub 里，如果你拥有自己的「个人主页」、「博客」或其他展示个人资料的地方，只要你可以控制网页的 HTML，能自己向其中插入一些自定义代码，你就可以借助于「小牌子服务器」来自制一些好看又能实时更新的「个人资料展示牌」、「订阅地址标识牌」等等。</p>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034173.png!gorpeln" alt="20230622165034173" /></p>
+
+<h3 id="shieldsio-的基本用法">Shields.io 的基本用法</h3>
+
+<h4 id="简单定制静态小牌子">简单定制静态小牌子</h4>
+<p>Shields.io 就是一个我们开头提到的「牌子渲染服务」。事实上，GitHub 上面大部分「小牌子」都是用 Shields.io 来渲染的。我们可以借助于 Shields.io 服务定制一些个性化的「小牌子」。一个最简单的例子就是：<a href="https://img.shields.io/badge/%E9%A3%8E%E6%9C%AA%E6%AD%A2-gorpeln-da282a">https://img.shields.io/badge/风未止-gorpeln-da282a</a>，这一请求可以渲染得到如下效果的小牌子。</p>
+
+<p>可以发现，简单定制小牌子非常方便，最最基础的语法规则就是：</p>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034174.png!gorpeln" alt="20230622165034174" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://img.shields.io/badge/{左半部分标签}-{右半部分标签}-{右半部分颜色}
+
+</code></pre></div></div>
+<p>另外，在 Shields.io 的官网上面有非常方便的「小牌子生成器」，我们可以直接用它来构造一个「小牌子」，只需要按照下图的样子：填入左半边标签、填入右半边标签，再定义右半边的颜色，点击 Make Badge 即可生成。其中，右半边的颜色我们可以用官方提供的几种预设颜色名称（下方 Colors）或者我们自己提供十六进制颜色代码都可以。</p>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034175.png!gorpeln" alt="20230622165034175" /></p>
+
+<p>我们按照上面的方法构造一个链接，就制作完成我们的小牌子啦！这样得到的链接是一个 SVG 图片链接，我们可以直接用插入图片的语法规则加到我们的 Markdown 文本文件中或 HTML 里面。</p>
+
+<h4 id="动态实时更新的小牌子">动态实时更新的小牌子</h4>
+<p>事实上，我们前面生成的小牌子都是静态的小牌子：其中的文本内容是固定不变的，仅能用于做一个好看的标识。而事实上，Shields.io 生成的小牌子完全支持动态数据显示，比如粉丝、关注者数量、RSS 订阅者数量……</p>
+
+<p>如果我们想要显示一些动态变化的数据，那么我们就需要一个受支持的数据接口，这样我们的「Shields.io 小牌子生成服务器」就会先行从这一数据接口请求相应的动态数据，并按照请求的结果将数据渲染成不同的「小牌子」。（具体的语法请继续向下阅读）</p>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034176.png!gorpeln" alt="20230622165034176" /></p>
+
+<p>但是，虽然 Shields.io 服务 API 的功能非常完善，能够支持许多第三方 API 节点的数据服务，但是有一些服务：</p>
+
+<ul>
+  <li>API 接口返回复杂，无法直接用 Shields.io 简单处理</li>
+  <li>API 访问缓慢、不稳定，经常出现超时或无法访问的情况</li>
+  <li>访问一些数据需要进行认证，直接访问会返回 403 无权限</li>
+  <li>直接不对外公开 API 接口，没有面向开发者的开放平台，无法直接请求数据</li>
+</ul>
+
+<p>当我们想要显示这些平台的关注者数量、粉丝数量时，往往就力不从心了。因此，我使用 Serverless 技术实现了「Substats: Subscriber Statistics」—— 一个专注提供多个服务、平台、网站的粉丝、关注、订阅数量的 API 中转站，用来专门处理这些单靠 Shields.io 不方便直接处理的疑难杂症。</p>
+
+<ul>
+  <li>Substats 项目开源在：GitHub - <a href="https://github.com/spencerwooo/Substats">spencerwooo/Substats</a></li>
+  <li>Substats 的 API 地址位于：Home - <a href="https://api.spencerwoo.com/substats/">Substats API</a></li>
+  <li>另外，关于如何调用 Substats API，我还撰写了比较详细的文档：<a href="https://substats.spencerwoo.com/">Substats Documentation</a></li>
+</ul>
+
+<p>下面我来简单介绍一下如何利用 Substats 配合 Shields.io 定制小牌子 ( •̀ ω •́ )✧</p>
+
+<h3 id="用-substats-配合-shieldsio-制作动态小牌子">用 Substats 配合 Shields.io 制作动态小牌子</h3>
+
+<h4 id="通过-substats-api-获取我们期望的数据">通过 Substats API 获取我们期望的数据</h4>
+
+<p>为了更好的配合 Shields.io 服务，我特意将 Substats 的 API 设计成简单拼接 URL 即可进行数据请求。Substats API 的语法非常简单，我们只需要关注并提供如下的两个字段即可进行请求：</p>
+
+<ul>
+  <li>目标服务名称 source：你所想要请求的服务、网站和平台名（比如：gorpeln、weibo……）</li>
+  <li>请求数据标签 queryKey：在这一服务中查询的关注数据对应的标签或名称（比如我的用户名 gorpeln）</li>
+</ul>
+
+<p>这样，我们就可以用这样的语法来拼接一个 URL（注意第一个字符是 ?，其他用 &amp; 拼接）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.spencerwoo.com/substats/?source={目标服务名称}&amp;queryKey={请求数据标签}
+</code></pre></div></div>
+
+<p>利用这样的语法，我们就可以进行数据请求啦。继续上面图示中的例子，比如我想要制作一个实时显示我自己的gorpeln的github关注数量的小牌子，我拼接成的 URL 即为：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.spencerwoo.com/substats/?source=github&amp;queryKey=gorpeln
+</code></pre></div></div>
+<p>非常方便！这一 URL 会给我们返回类似下面的 JSON 结果：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "status": 200,
+  "data": {
+    "totalSubs": 999,
+    "subsInEachSource": {
+      "github": 999
+    },
+    "failedSources": {}
+  }
+}
+</code></pre></div></div>
+
+<p>我们可以这样理解返回的 JSON 数据：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">status</code> 是请求是否成功，成功即为 200（表示 HTTP OK）</li>
+  <li><code class="language-plaintext highlighter-rouge">data</code> 就是请求返回的数据（其中 <code class="language-plaintext highlighter-rouge">totalSubs</code> 表示总关注数量，<code class="language-plaintext highlighter-rouge">subsInEachSource</code> 表示每个服务请求到的粉丝数据，最后 <code class="language-plaintext highlighter-rouge">failedSources</code> 表示请求失败的数据源。）</li>
+</ul>
+
+<p>可以看到我们所需要的字段即为 <code class="language-plaintext highlighter-rouge">$.data.totalSubs</code>，也就是 999 —— 我的github总关注人数。接下来，我们只需要告诉 Shields.io：</p>
+
+<ol>
+  <li>我们请求的 URL 地址</li>
+  <li>返回数据中所要的字段</li>
+</ol>
+
+<p>这两个参数，即可成功制作一个动态小牌子。</p>
+
+<h4 id="用-shieldsio-制作最终动态小牌子">用 Shields.io 制作最终动态小牌子</h4>
+
+<p>我们继续借助 Shields.io 官网上面提供的「小牌子生成器」，这次我们稍微向下滚动，找到 Dynamic 版本「小牌子生成器」，并按照这样的规则依次操作：</p>
+
+<ol>
+  <li>数据类型 data type 选择：<code class="language-plaintext highlighter-rouge">JSON</code></li>
+  <li>标签 label 填入：小牌子左侧的标签，比如 <code class="language-plaintext highlighter-rouge">github关注</code></li>
+  <li>API 地址 data url 填入：我们刚刚的 API URL：<code class="language-plaintext highlighter-rouge">https://api.spencerwoo.com/substats/?source=github&amp;queryKey=gorpeln</code></li>
+  <li>请求字段 query 填入：我们 Substats API 数据中的这一字段：<code class="language-plaintext highlighter-rouge">$.data.totalSubs</code></li>
+  <li>标签颜色 color 填入：一个十六进制的颜色代码，比如：<code class="language-plaintext highlighter-rouge">da282a</code></li>
+  <li>……（余下的两个参数：前缀 prefix 和后缀 suffix，可以根据自己的需要自行定义）</li>
+</ol>
+
+<p>这样，我们就借助 Shields.io 构造出来一个自定义的动态 SVG 小牌子（由于我们的请求中包含有 URL 中非法的字符，因此下面这个是 URL 编码之后的 SVG 小牌子地址）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://img.shields.io/badge/dynamic/json?color=da282a&amp;label=github%E5%85%B3%E6%B3%A8&amp;query=%24.data.totalSubs&amp;url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dgorpeln
+</code></pre></div></div>
+
+<p><img src="https://img.gorpeln.top/blog/20230622165034177.png!gorpeln" alt="20230622165034177" /></p>
+
+<h3 id="其他-substats-api-的功能和语法规则">其他 Substats API 的功能和语法规则</h3>
+<p>另外，Substats API 还可以串联多个不同的数据源和它们对应的请求参数。比如，我同时请求酷安、网易云音乐、GitHub 三个平台上面的关注，即可这样构造请求（多个 source 和 queryKey 组合按照顺序进行请求即可，顺序在请求过程中不会丢失）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.spencerwoo.com/substats/?source=coolapk&amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;source=neteaseMusic&amp;queryKey=339332&amp;source=github&amp;queryKey=gorpeln
+</code></pre></div></div>
+<p>可以看到，上面的 URL 里，我直接串联了多个 source 和 queryKey 的请求组合，同时请求。这样我们就可以得到这三个平台上面关注者数量的总和 totalSubs，以及每个平台各自的关注者数量 subsInEachSource：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "status": 200,
+  "data": {
+    "totalSubs": 1312,
+    "subsInEachSource": {
+      "coolapk": 638,
+      "neteaseMusic": 361,
+      "github": 313
+    },
+    "failedSources": {}
+  }
+}
+</code></pre></div></div>
+<p>那么，我们就可以直接用 Shields.io 构造一个如下的 SVG 小牌子：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://img.shields.io/badge/dynamic/json?color=0084ff&amp;label=%E9%85%B7%E5%AE%89|%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90|GitHub&amp;query=$.data.totalSubs&amp;url=https://api.spencerwoo.com/substats/?source=coolapk&amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;source=neteaseMusic&amp;queryKey=339332&amp;source=github&amp;queryKey=gorpeln
+</code></pre></div></div>
+<p>这样我们就可以直接得到三个平台总关注数量的一个「小牌子」</p>
+
+<p>同时，如果你想同时请求多个平台，但是平台中请求的数据标签名称是一样的，比如我们同时请求 Feedly 和 NewsBlur 两个 RSS 订阅服务里我自己的 RSS 链接 <a href="https://gorpeln.top/feed.xml">https://gorpeln.top/feed.xml</a> 的订阅数量，那么我们可以：</p>
+
+<ul>
+  <li>直接用 <code class="language-plaintext highlighter-rouge">|</code> 将 feedly 和 newsblur 直接连接，传递给 source 作为参数</li>
+  <li>并将 RSS 链接传递给 queryKey 作为参数</li>
+</ul>
+
+<p>从而构造这样的请求：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api.spencerwoo.com/substats/?source=feedly|newsblur&amp;queryKey=https://gorpeln.top/feed.xml
+</code></pre></div></div>
+
+<p>这样，我们就可以直接得到两个平台同一个 RSS 源的总订阅数量：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "status": 200,
+  "data": {
+    "totalSubs": 17,
+    "subsInEachSource": {
+      "feedly": 14,
+      "newsblur": 3
+    },
+    "failedSources": {}
+  }
+}
+
+</code></pre></div></div>
+
+<p>从而制作表示 RSS 链接总订阅人数的「小牌子」：</p>
+
+<h3 id="小结">小结</h3>
+<p>Substats 是我借助 Serverless 技术构建的一个 Cloudflare Worker，直接部署在 Cloudflare 全球 CDN 节点上，访问速度非常的快。因此，如果你使用 Substats 和 Shields.io 来制作「小牌子」，生成 SVG 所消耗的时间的占比较大的部分应该是和原服务 API 沟通的时间（比如 NewsBlur 就特别慢）。</p>
+
+
+  </article>
+
+</div>
+
+  <div class="copyright">
+  	<div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+		<div>本文链接：<a href="https://gorpeln.top/article/16874238349">https://gorpeln.top/article/16874238349</a></div>
+</div>
+
+  <div class="prevandnext">
+    	  
+	    <div>
+	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/16895899334" title="同一台电脑上使用多个GitHub账号" style="color: #6666cc;font-size: 0.9em;"  target="_blank">同一台电脑上使用多个GitHub账号</a>
+	    </div>
+	  
+  	  
+	    <div>
+	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/16829158558" title="个人网站，零成本、低门槛创建专属数据分析工具：umami.is" style="color: #6666cc;font-size: 0.9em;"  target="_blank">个人网站，零成本、低门槛创建专属数据分析工具：umami.is</a>
+	    </div>
+	  
+	 
+  </div>
+  
+  <div class="livere">
+    <!-- page、post、about、links、works -->
+<head>
+    <script src='/assets/js/waline.js'></script>
+    <link href='/assets/css/waline.css' rel='stylesheet' />
+</head>
+
+<style>
+.wl-comment {
+    position: relative;
+    display: flex;
+    margin-bottom: 0.75em;
+}
+
+.wl-panel {
+    position: relative;
+    flex-shrink: 1;
+    width: 100%;
+    margin: 0.5em;
+    border: var(--waline-border);
+    border-radius: 1.2em;
+    background: var(--waline-bgcolor);
+    box-shadow: var(--waline-box-shadow);
+}
+
+.wl-header {
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 0 dashed #fff;
+}
+
+.wl-header-item {
+    display: flex;
+    flex: 1;
+}
+
+.wl-header label {
+    display: none;
+}
+
+.wl-header input {
+    border-bottom: 1px #dedede dashed;
+    padding: 15px 10px;
+    max-width: 100%;
+    font-size: 1.3em;
+    box-sizing: border-box;
+}
+
+.wl-header input:focus {
+    border-bottom-color: #eb5055;
+    background: rgba(0, 0, 0, 0);
+    ;
+}
+
+.wl-editor {
+    background-image: url(https://img.gorpeln.top/p/gorpeln_waline_bg.gif);
+    background-size: 24%;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+    background-color: rgba(255, 255, 255, 0);
+    min-height: 12em;
+    margin: 0;
+    border-radius: 0;
+    margin: 15px 20px;
+    font-size: 1.4em;
+    width: calc(100% - 40px);
+    transition: background-position 0.25s ease;
+}
+
+.wl-editor:focus {
+    background: #fff;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+}
+
+.wl-info .wl-text-number {
+    color: var(--waline-info-color);
+    font-size: 1.0em;
+}
+
+
+.wl-btn {
+    display: inline-block;
+    vertical-align: middle;
+    /* padding: 1em 2em;*/
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+    color: var(--waline-color);
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: .4s;
+    touch-action: manipulation;
+}
+
+.wl-btn.primary {
+    margin-right: 10px;
+}
+.wl-footer {
+    margin-bottom: 20px;
+}
+
+.wl-count {
+    font-size: 1.5em;
+    padding-left: 5px;
+}
+
+.wl-sort li {
+    font-size: 1.25em;
+}
+
+.wl-empty {
+    font-size: 1.4em;
+}
+
+.wl-power {
+    font-size: 1.1em;
+}
+
+.wl-card .wl-head .wl-nick{
+    font-size: 1.4em;
+}
+
+.wl-card .wl-time {
+    font-size: 1.2em;
+}
+
+.wl-card .wl-meta>span{
+    font-size: 1.0em;
+}
+
+.wl-card .wl-content{
+    font-size: 1.4em;
+}
+
+.wl-like>span{
+    font-size: 1.4em;
+}
+
+.wl-meta-head{
+    margin-bottom: 10px;
+}
+
+label[for="wl-image-upload"].wl-action {
+    display: none;
+}
+
+textarea::placeholder {
+    color: #dcdcdc;
+}
+
+.wl-cards .wl-user img{
+    width: 4em;
+    height: 4em;
+    box-shadow: 1px 1px 1px #dfd6d6;
+}
+
+.wl-card .wl-quote .wl-user img{
+    width: 3em;
+    height: 3em;
+    box-shadow: 1px 1px 1px #dfd6d6;
+}
+
+@media (max-width: 580px) {
+    .wl-header {
+        display: block;
+    }
+    .wl-header .wl-header-item {
+        border-bottom: 0 dashed #fff;
+    }
+    .wl-editor {
+        background-size: 40%;
+        min-height: 10em;
+    }
+    .wl-card .wl-meta>span{
+        font-size: 0.9em;
+    }
+}
+
+</style>
+
+<body>
+    <div id="waline"></div>
+    <script type="module">
+        // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+
+       Waline.init({
+            el: '#waline',
+            serverURL: 'https://waline.gorpeln.eu.org',
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+
+    </script>
+</body>
+  </div>
+<style type="text/css">
+    .tags-a {
+        color:#888 !important;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: 'serif';
+    }
+
+</style>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 二维码、顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/16874238349')"></div>
+        <div class="qrcodeImg" id="qrcode"></div>
+        <div id="backtotop">
+            <a href="#">
+                <div class="bttbg"></div>
+            </a>
+        </div>
+    </div>
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
+    <div class="footerDes">
+        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
+        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2</a>  |  
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
+            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号</a> | 
+        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务</a> | 
+        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031">
+            <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" />萌ICP备20240031号</a>
+    </div>
+</footer>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- search -->
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
+    <div style="position: fixed; top: 2.5em; right: 2.5em;">
+        <img src="/assets/img/search_close.png" id="cb-close-btn" />
+    </div>
+</div>
+<link rel="stylesheet" href="/search/css/cb-search.css">
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<!-- 动态显示网站运行时间 -->
+<script language=javascript>
+
+const fullYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = fullYear;
+
+
+function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000
+    var minutes = seconds * 60
+    var hours = minutes * 60
+    var days = hours * 24
+    var years = days * 365
+    var today = new Date()
+    var todayYear = today.getFullYear()
+    var todayMonth = today.getMonth() + 1
+    var todayDate = today.getDate()
+    var todayHour = today.getHours()
+    var todayMinute = today.getMinutes()
+    var todaySecond = today.getSeconds()
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) 
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份 0为1月
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2015, 8, 23, 0, 0, 0)
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+    var diff = t2 - t1
+    var diffYears = Math.floor(diff / years)
+    var diffDays = Math.floor((diff / days) - diffYears * 365)
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+    document.getElementById("htmer_time").innerHTML = " 本站已安全运行：" + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒&nbsp;&nbsp;<i class='fas fa-heartbeat' id='heartbeat'></i>";
+
+}
+siteTime();
+</script>
+<script language=JavaScript>
+    function over(obj) {
+        obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {
+
+    }
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = '/article/15462756619';
+    }
+</script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?97ba5540ec47cf065f1e2c7c57814156";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X32389EHZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X32389EHZY');
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?48d96a1962ac94410ea549269e50bcc20fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+
+
+<style>
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.runTime {
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none; /* 隐藏默认的文本下划线 */
+    display: inline-block;
+    position: relative;
+}
+
+.runTime:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    /*background-color: #888;*/
+    bottom: 4px;
+    left: 0;
+    border-bottom: 1px dashed #777;
+}
+
+
+.footerImg{
+    margin-top: -3px;
+    margin-right:  2px;
+}
+.footerDes,.footerDes a{
+    color: #666;
+    text-align: center; /* Center the text within the .footerDes div */
+    bottom: -0.25em;
+    font-size: 12px;
+}
+
+#heartbeat {
+    color: red;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+</style>
+</body>
+<script>
+function pushNew(path) {
+    if (path == '/') {
+        window.location.href = path;
+    } else {
+        window.open(path);
+    }
+}
+</script>
+<script>
+    function menuFixed(id, otherId) {
+        var obj = document.getElementById(id);
+        var _getHeight = obj.offsetTop;
+
+        window.onscroll = function() {
+            changePos(id, _getHeight, otherId);
+        }
+    }
+
+    function changePos(id, height, otherId) {
+        var obj = document.getElementById(id);
+        var friendlinkObj = document.getElementById(otherId);
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTop < height) {
+            obj.style.position = 'relative';
+        } else {
+            obj.style.position = 'fixed';
+        }        
+        obj.style.width = friendlinkObj.offsetWidth + 'px';
+
+    }
+
+    $(document).ready(function() {
+        menuFixed('toc', 'siteInfoNav');
+    });
+
+</script>
+
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+    // 生成二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 180,
+        height : 180
+    });
+    function createQrcode(url) {
+        console.log('生成我二维码' + url);
+
+        qrcode.makeCode('https://gorpeln.cn' + url);
+
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        } else {
+            qrcodeImg.style.display = 'block';
+        }
+    }
+
+    // 隐藏二维码
+    function hiddenQRCode() {
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        }
+    }
+
+
+function changeContent(element) {
+    
+    
+    
+
+    
+    
+
+  element.innerHTML = 8 + '年' + 184 + '天';
+
+}
+
+function restoreContent(element) {
+    
+    
+    
+    
+    element.innerHTML = 3104 + '天';
+}
+
+
+
+
+
+</script>
+
+ <script>
+
+     var value = document.getElementById("current-date").getAttribute("data-value");
+     console.log(value); // 输出：hello
+    // 创建一个表示给定日期和时间的 Date 对象
+    var givenDate = new Date(value);
+
+    // 获取当前时间的 Date 对象
+    var currentDate = new Date();
+
+    // 获取前一天的时间
+    var previousDate = new Date(currentDate);
+    previousDate.setDate(currentDate.getDate() - 1);
+
+    // 获取年、月、日
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+    var day = previousDate.getDate();
+
+    // 比较给定日期和当前日期
+    if (givenDate < previousDate) {
+   // 将日期显示在页面上
+        var dateElement = document.getElementById("current-date");
+        dateElement.textContent = year + "/" + month + "/" + day
+    } 
+
+  </script>
+
+
+</html>

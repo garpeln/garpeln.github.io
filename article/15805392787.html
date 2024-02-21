@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>关于 ASO 优化（一） | gorpeln的个人博客 - gorpeln</title>
+
+  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,App Store,app 推广,精品推荐,排行榜,ASO,留存量,用户量,激活量" />
+  <meta name="description" content="一、了解苹果应用商店应用商店的内容：精品推荐、排行榜、探索、搜索">
+
+  <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
+  <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+  <meta name="sogou_site_verification" content="26zXpPj0Uh" />
+  <meta name="bytedance-verification-code" content="MqzzXLM7ZrcvpeHXsC6/" />
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/css/main.css" >
+  <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+  <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="/article/15805392787">
+  <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+
+  <script async src="https://umami.gorpeln.eu.org/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+  
+</head>
+
+
+
+
+<header class="site-header">
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <style type="text/css">
+    html * {
+        
+    }
+
+    .menuNav {
+        position: fixed;
+        bottom: 1em;
+        left: 0;
+    }
+
+    .menuNav * {
+        text-decoration: none;
+        font-size: 10pt;
+    }
+
+    .menuNav * a:hover {
+        /*background-color: rgba(0, 0, 0, 0.75);*/
+    }
+
+    .menuBtn{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+    }
+
+    .menuNav {
+        list-style: none;
+        display: none;
+        margin-left: 10px;
+    }
+
+    .menuNav li {
+        float: left;
+        border-top: 1px solid #aaa;
+        background-color: rgba(0, 0, 0, 0.70);
+        
+    }
+
+    .menuNav li a {
+        color: #fff;
+        padding: 15px 0;
+        display: block;
+        width: 2em;
+        text-align: center;
+
+    }
+
+    .menuNav li a i{
+        margin-right: 0.5em;
+    }
+
+    .menuNav li a:focus {
+        -moz-outline-style: none;
+    }
+
+    .menuNav li .sub-nav {
+     position: absolute;
+    bottom: 0;
+    left: calc(2em - 40px);
+    list-style: none;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    display: none;
+    }
+
+    .menuNav li .sub-nav li {
+        text-align: center;
+        clear: left;
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        position: relative;
+    }
+
+    .menuNav li .sub-nav li a {
+        height: 34px;
+        line-height: 34px;
+        width: 138px;
+        padding: 0;
+        display: inline-block;
+    }
+
+    @media (max-width: 678px) {
+        .menuNav {
+            display: block;
+        }
+    }
+    </style>
+    <script type="text/javascript">
+
+
+    $(function() {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function() {
+        var submenu = $(this).children('ul');
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function(event) {
+        var target = $(event.target);
+        if (!target.closest('.menuNav').length) {
+          $('.menuNav ul').slideUp(300);
+        }
+      });
+    });
+
+    </script>
+            <ul class="menuNav">
+                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                    <ul class="sub-nav">
+                        <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+                        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+                        <li><a href="/works"><i class="fab fa-git-square fa-fw"></i>项目</a></li>
+                        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+                        <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+                        <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+                    </ul>
+                </li>
+            </ul>
+</header>
+
+<body>
+<script>
+  $(document).ready(function() {
+    $("#toc").toc({
+      noBackToTopLinks: true,
+      title: '',
+      minimumHeaders: 3,
+      headers: 'h1, h2, h3, h4, h5, h6',
+      listType: 'ul',// values: [ol|ul]
+      showEffect: 'slideDown',// values: [show|slideDown|fadeIn|none]
+      showSpeed: '0',// set to 0 to deactivate effect  | slow
+      classes: {
+        list: '',
+        item: ''
+      },
+      highlightOnScroll: true,
+      highlightOffset: 100
+    });
+  });
+</script>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+                    <div class="profile box-shadow center">
+                        <div class="overlay"></div>
+                        <div class="center gavatar">
+                            <a href="/" class="profile_gavatar"><img class="circle" src="/assets/img/logo.png"></a>
+                        </div>
+                        <div class="nickname">
+                            风未止
+                        </div>
+                        <div class="center profile_desc">
+                            趁年轻，做自己想做的！
+                        </div>
+                        <div class="center profile_subdesc">
+                            There is no best, only better!
+                            <br />
+                        </div>
+                        <div class="site-state">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives" target="_blank">
+                                    <span class="site-state-item-count">152</span>
+                                    <span class="site-state-item-name">归档</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories" target="_blank">
+                                    <span class="site-state-item-count">10</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags" target="_blank">
+                                    <span class="site-state-item-count">592</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
+                        </div>
+                    </div>
+                    <div class="siteNav">
+                        <div class="navTitle">博客导航</div>
+                        <ul>
+                            <li onclick="pushNew('/')"><a><i class="fas fa-home fa-fw"></i>首页</a></li>
+                            <li onclick="pushNew('/categories')"><a><i class="fas fa-th fa-fw"></i>分类</a>
+                                <span class="articleCount">10
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
+                                <span class="articleCount">592
+                                </span>
+                            </li>
+                            <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
+                                <span class="articleCount">152
+                                        </span>
+                            </li>
+                            <!-- <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li> -->
+                            <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                                <span class="articleCount">4
+                                </span>
+                            </li>         
+                            <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+                            <li onclick="pushNew('/login')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                                <span class="articleCount">※
+                                </span>
+                            </li>                            
+                            <li onclick="pushNew('/about')"><a><i class="fas fa-user fa-fw"></i>关于</a></li>
+                            <li id="cb-search-btn"><a><i class="fas fa-search fa-fw"></i>搜索</a>
+                                <span class="search-tip">双击 control
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categoryNav">
+                        <div class="categoryNavTitle">文章分类</div>
+                        <div>
+                        <ul>
+                            
+                            <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                                <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
+                                <a name="个人博客" style="font-size:13px;color: white" class="articleCount">15
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#其他')" class="categoryList">
+                                <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
+                                <a name="其他" style="font-size:13px;color: white" class="articleCount">16
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                                <a name="web前端" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">web前端</a>
+                                <a name="web前端" style="font-size:13px;color: white" class="articleCount">5
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                                <a name="iOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">iOS</a>
+                                <a name="iOS" style="font-size:13px;color: white" class="articleCount">40
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                                <a name="程序人生" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">程序人生</a>
+                                <a name="程序人生" style="font-size:13px;color: white" class="articleCount">21
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                                <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
+                                <a name="MacOS" style="font-size:13px;color: white" class="articleCount">20
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                                <a name="产品和运营" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">产品和运营</a>
+                                <a name="产品和运营" style="font-size:13px;color: white" class="articleCount">11
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#Git')" class="categoryList">
+                                <a name="Git" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">Git</a>
+                                <a name="Git" style="font-size:13px;color: white" class="articleCount">7
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                                <a name="微信小程序" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">微信小程序</a>
+                                <a name="微信小程序" style="font-size:13px;color: white" class="articleCount">14
+                                </a>
+                            </li>
+                            
+                            <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                                <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
+                                <a name="教程福利" style="font-size:13px;color: white" class="articleCount">3
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="contactNav">
+                        <div class="contactNavTitle">个人档案</div>
+                        <div class="contact-container">
+                            <a class="contact-item" href="/assets/img/qqQRCode.jpg" target="_blank">
+                                <img src="/assets/img/qqLogo.png">
+                                <span class="contact-name">33964471</span>
+                            </a>
+                            <a class="contact-item" href="/" target="_blank">
+                                <img src="/assets/img/gmailLogo.png">
+                                <span class="contact-name">help#gorpeln.top</span>
+                            </a>
+                            <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                                <img src="/assets/img/csdnLogo.png">
+                                <span class="contact-name">gorpeln.blog.csdn.net</span>
+                            </a>
+                            <a class="contact-item" href="/about" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="contact-name">更多...</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="friendlinkNav" id="friendlinkNav">
+                        <div class="friendlinkNavTitle">友情链接</div>
+                        <div class="friend-container">
+                            
+                            <a class="friend-item" href="https://www.foreverblog.cn/" target="_blank">
+                                <img src="/assets/img/foreverblog.ico">
+                                <span class="friend-name">十年之约</span>
+                            </a>
+                            
+                            <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                                <img src="/assets/img/travelling-dark.png">
+                                <span class="friend-name">开往-友链接力</span>
+                            </a>
+                            
+                            <a class="friend-item" href="/links" target="_blank">
+                                <img src="/assets/img/list_more.png">
+                                <span class="friend-name">更多...</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="siteInfoNav" id="siteInfoNav">
+                        <div class="navTitle">网站资讯</div>
+                        <ul>
+                                <li>
+                                    <p >文章数目</p>
+                                    <p >152</p>
+                                </li>
+                                <li>
+                                    <p>本站总字数</p>
+                                    <p>83.6k</p> 
+
+                                </li>
+                                <li>
+                                    <p>已运行时间</p>
+                                    
+                                    
+                                    
+                                    
+
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3104天</p>
+                                </li>
+                                <li>
+                                    <p>最近更新时间</p>
+                                    <p id="current-date" data-value="2024-02-21 13:02:40 +0800">2024/02/21</p>
+                                </li>
+                            </ul>
+                    </div>
+                    <div id="toc" class="customCatalog"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+                    <div class="page-content" id="pjax"><div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">关于 ASO 优化（一）</h1>
+  	<div class="info">
+  	        时间：
+  	        <text style="padding-top: 0;">2020-02-01</text>&nbsp;&nbsp;&nbsp;&nbsp;
+  	        分类：
+  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+  	            iOS
+  	        </a>
+  	        &nbsp;&nbsp;&nbsp;&nbsp;
+  	        标签：
+  	        
+  	        <span class="index-post-tag">
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#App Store"  target="_blank">App Store</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#app 推广"  target="_blank">app 推广</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#精品推荐"  target="_blank">精品推荐</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#排行榜"  target="_blank">排行榜</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#ASO"  target="_blank">ASO</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#留存量"  target="_blank">留存量</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#用户量"  target="_blank">用户量</a>
+  	                /
+  	            
+  	                
+  	                <a class="pjaxlink" href="/tags#激活量"  target="_blank">激活量</a>
+  	                
+  	            
+  	        </span>
+  	        
+  	</div>
+  </header>
+
+  <article class="post-content">
+    <h3 id="一了解苹果应用商店">一、了解苹果应用商店</h3>
+<p>应用商店的内容：<code class="language-plaintext highlighter-rouge">精品推荐</code>、<code class="language-plaintext highlighter-rouge">排行榜</code>、<code class="language-plaintext highlighter-rouge">探索</code>、<code class="language-plaintext highlighter-rouge">搜索</code></p>
+
+<ul>
+  <li>精品推荐：为苹果手动编辑的，苹果认为设计优良，很好的app。这些位置不容易被优化。</li>
+  <li>排行榜：排行榜分为免费榜，付费榜，推荐榜。</li>
+  <li>探索：内容过于深，用户使用不多。</li>
+  <li>搜索：
+    <ul>
+      <li>直接搜索：搜索精确，目的性强。</li>
+      <li>关键词搜索：搜索相关度高，寻找功能类似APP。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="二影响aso的主要因素">二、影响ASO的主要因素</h3>
+<ol>
+  <li>应用名称；</li>
+  <li>关键字标签；</li>
+  <li>应用描述；</li>
+  <li>应用icon；</li>
+  <li>应用截图及视频；</li>
+  <li>用户评价；</li>
+  <li>下载激活量；</li>
+  <li>活跃用户量；</li>
+  <li>用户留存量；</li>
+  <li>社会化分享的数据；</li>
+</ol>
+
+<h4 id="1权重大小排序">1、权重大小排序：</h4>
+<p>App Title &gt; Keywords &gt; APP Description &gt; IAP item Name／Description<br />
+即 APP名称 &gt; APP关键词 &gt; APP描述 &gt; 应用内购买名或描述。</p>
+
+<h4 id="2app-title撰写规则">2、App Title撰写规则</h4>
+<ol>
+  <li>App Title允许255个字节，大概90个字符，原则上充分利用所有字符；例如《趣味牛牛－史上最休闲的游戏，天天QQ微信博易空间飞车坑爹泡泡龙12306狗我多米虾音乐节奏大师，找你妹酷跑保卫萝卜陌陌游览器爱消除yyppstv，炸金花全民英雄NBA快播联盟魔漫相机斗地主风行唱吧》。随着苹果审核愈趋严格的大环境下，单纯的热词堆砌是行不通的，在热词填充APP Title时需要保证语句的通畅以及无矛盾存在（苹果审核人员的汉语理解能力这两年可用突飞猛进形容）。</li>
+  <li>APP Title与Keywords的权重无法叠加，如果在Title中出现，最好不要在Keywords再出现，浪费字符。</li>
+  <li>APP Title采用主标题加副标题的形式，主标题是APP名，副标题介绍APP作用并提升核心关键词的权重，例如《今日头条－个性化阅读推荐平台，定制你的新闻资讯》。</li>
+  <li>利用副标题的高权重，采用轮换战术，优化各个关核心键词，当已有核心关键词排名优化靠前，选用其他的核心关键词。如小咖秀－最火对嘴表演飙戏APP，自带美颜美妆功能的拍摄神器；</li>
+</ol>
+
+<h4 id="3keywords-撰写规则">3、Keywords 撰写规则</h4>
+<ol>
+  <li>Keywords共有100字符，越靠前的关键词权重越大。</li>
+  <li>没搜索排名，没热度的，并且分词没意义的，下一版删除。</li>
+  <li>核心关键词，务必放在App Title的副标题里面。</li>
+  <li>大量分析竞品的关键词，比对热度，建立属于自己APP的热词库。</li>
+  <li>挑选10个竞品，按照热度降序，排名前5的竞品词都可以放在Keywords。</li>
+</ol>
+
+<h4 id="4app-description-撰写规则">4、App Description 撰写规则</h4>
+<ol>
+  <li>描述性的字数控制在300-500，并保证核心关键词8-12的频次出现。</li>
+  <li>最好出现公司的联系方式，如公众号/微博账号/服务QQ/QQ群等。</li>
+  <li>描述中出现的关键词主要是对Keywords的补充，Keywords的权重和描述的权重是可以叠加的。</li>
+</ol>
+
+<h4 id="5用户评论撰写规则">5、用户评论撰写规则</h4>
+<p>自去年下半年苹果严打刷榜以来，下载量和评论的权重被逐步调低，尤其是那些本身权重就很低的账号去做下载和评论，几乎对APP权重影响不大，除非是堆量，但这样做风险系数很大。即使评论的权重被相应调低，但依旧是比重很高的一块，催生出现在的真实账户评论的业务。在做评论时，提前写好评论，如果想重点优化某些关键词，可让这些关键词在每条评论中频繁出现，这样操作对关键词排名的提升帮助较大。</p>
+
+<h4 id="6应用截图及视频">6、应用截图及视频</h4>
+<h5 id="1视频">1、视频</h5>
+<p>据说有效果，在AppStore推出来后大力推过，编辑对有视频的产品都很感冒;<br />
+但实际情况是编辑是否感冒无法有效确认，而视频的制作要求太多，麻烦的一塌糊涂，这也是绝大部分非游戏APP并不做视频的缘由吧;<br />
+结合自身实际情况，考虑进投入产出比，如果有资源也敢试一下，那不妨做下视频，总比没有的强。</p>
+
+<h5 id="2裸截图">2、裸截图</h5>
+<p>所谓裸截图，就是直接在手机上截图出来，不做任何设计修饰;<br />
+好处是APP本身内容是什么一目了然，用户不用下载就能提前了解到下载后的APP会长个什么样子，减少了盲知成本;<br />
+坏处就是裸截图一般都不会很好看，在这个还是看颜值的世界，不管对编辑还是对用户，都达不到一种视觉强奸，因此可能会影响编辑推荐的机会，也影响用户看到的第一感知，也许就不会下载甚至点击进去了。</p>
+
+<h5 id="3设计过的截图">3、设计过的截图</h5>
+
+<p>与裸截图相对，即对APP的裸截图进行包装设计;<br />
+一般都是添加背景色、文字描述、手机壳等，使得第一眼看起来有颜值，而且简短的文字描述能够很清晰的向用户介绍自己的APP是什么，能干什么等，有助于编辑和用户一见钟情。</p>
+
+<h4 id="7马甲">7、马甲</h4>
+<p>千万别做了，案例我就不举了，有⾥有⾯，⾏业操守，都在这摆着呢。⻢甲流早起还可以，现在真真的别想了，⼀个免费，⼀个付费，还差不多，⽤⻢甲包的 Title 去搏杀类别⼤词，再往主包导量，着实不是明智之举。App Store 已经觉醒，以前不是管不了，⽽是⼈家不想管，「放任⾃流」，当下每天扫⼏⼗万次，隔着⼀层半透明的玻璃，咱看不⻅⼈家，⼈家看咱们是⾮常清楚的。有⼀些⽅法，可以将付费版 App 爬到分榜 Top 10，之后再操作下就没问题了。</p>
+
+<h3 id="三关键字优化">三、关键字优化</h3>
+
+<h5 id="1关键词优化三大概念">1、关键词优化三大概念</h5>
+<ol>
+  <li>关联性（Relevance）：某个特定关键字与自家应用／目标用户之间的相关性，不相关的关键字很难产生有效的转化率。</li>
+  <li>难度（Difficulty）：某个特定关键字的竞争激励程度，对应值越高意味着它更难进入前列排名。</li>
+  <li>流量（Traffic）：某个特定关键字的抢手程度，在搜索中被搜索的次数越高，对应的值就越高，就是我们常说的高热度词。</li>
+</ol>
+
+<p>对于大多数人来说，都想挤破脑袋去抢关联性高／流量大的关键词，但这同时意味着关键词的竞争难度很大，如果选定关键词的设置位置不当以及APP本身没有较为可观的新增，排名在30开外是很正常。各位在追逐高热度词时一定要结合APP的现状进行分析，下面我给各位提供一套判定逻辑：<code class="language-plaintext highlighter-rouge">高关联性 + 合理难度 + 适当流量 ＋ （正确位置放置） = 增加自然下载量</code></p>
+<h5 id="2关键词优化具体操作">2、关键词优化具体操作</h5>
+<p>可以沿着 品牌词／关联词／竞品词／竞品关键词 的思路发掘理想的高关联度的关键词</p>
+
+<p>我们需要那些拥有一些搜索量的关键字，否则我们就会浪费关键字列表的宝贵空间，没有流量也就没有下载量。流量过高的，APP不一定能拥有好的排名，没有理想的排名，意味着没有下载量。<br />
+　　</p>
+<h5 id="3选词">3、选词</h5>
+<p>关键词的分类有品牌词、行为词、竞品词和长尾词。推荐工具：<a href="https://www.qimai.cn/">ASO100</a>（使用搜索指数排行，查询APP对应行业的关键词热度）。现在我们以脉脉为例进行详解。</p>
+
+<p>选词第一种方式：<code class="language-plaintext highlighter-rouge">榜单选词</code>。首先进行APP属性分析，从对应属性中寻找高热度关键词（后面简称“热词”），由于App Store属性分析过于冗杂，大家在利用这种方式寻找热词时一定要寻找与产品吻合度高的。脉脉为商务分榜，根据这种方式依次筛选出：脉脉、招聘、找工作、51job、猎聘网、领英、名片、大街网、工作、拉勾网、求职、人脉等热词。对热词进行分类。</p>
+
+<p>选词第二种方式：<code class="language-plaintext highlighter-rouge">竞品选词</code>。首先分析自家的产品有那些竞品，逐一分析竞品优化比较理想的关键词（重点关注TOP10），通过关键词热度、相关APP数量及质量、百度移动指数来判定关键词是否可用。分析脉脉竞品——赤兔，推荐工具<a href="https://www.qimai.cn/">七麦数据</a>。</p>
+
+<p>通过这种方式筛选出的关键词：领英、职场社交、linkedin、职场、人脉、职业、职位、简历等。对关键词进行分类。</p>
+
+<h5 id="4关键词拓展">4、关键词拓展</h5>
+<p>关键词拓展是通过苹果的检索规则，形成原本未添加的关键词，从而达到增加关键词覆盖数的目的，主要方式有：</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">组词</code>：在热词前后添加长尾词，长尾词是指两个或多个组合在一起的热度非最高的关键词。例如“职场社交”——“职场”热度4673、“社交”热度：6408，职场为长尾词。</li>
+  <li><code class="language-plaintext highlighter-rouge">分词</code>：分词是将添加设置的关键词进行相应分离，如在keyword中设置“职场社交”可能会形成“职场”和“社交”等关键词。</li>
+</ol>
+
+<p>通过组词（长尾词与热词组合成关键词的一种方式），可达到以下几点效果：</p>
+
+<p>1) 增加关键词覆盖数；<br />
+2) 稳定热词排名；<br />
+3) 降低优化难度，提升APP整体权重。</p>
+
+<p>组词技巧：选用热度适中，相关APP数量较多的长尾词，如“技巧”、“活动” 、“全民”就属于这类长尾词，以“技巧”为例，可以组合成“社交技巧” 、“职场技巧” 、“求职技巧”等。选这些词的原因很简单，关键词被收录的概率很大。</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200201144118951.png!gorpeln" alt="20200201144118951" /></p>
+
+
+  </article>
+
+</div>
+
+  <div class="copyright">
+  	<div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+		<div>本文链接：<a href="https://gorpeln.top/article/15805392787">https://gorpeln.top/article/15805392787</a></div>
+</div>
+
+  <div class="prevandnext">
+    	  
+	    <div>
+	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/00" title="杂记零" style="color: #6666cc;font-size: 0.9em;"  target="_blank">杂记零</a>
+	    </div>
+	  
+  	  
+	    <div>
+	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15788283058" title="iOS 微信打开第三方应用（Universal Links 和 URL Schemes）" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS 微信打开第三方应用（Universal Links 和 URL Schemes）</a>
+	    </div>
+	  
+	 
+  </div>
+  
+  <div class="livere">
+    <!-- page、post、about、links、works -->
+<head>
+    <script src='/assets/js/waline.js'></script>
+    <link href='/assets/css/waline.css' rel='stylesheet' />
+</head>
+
+<style>
+.wl-comment {
+    position: relative;
+    display: flex;
+    margin-bottom: 0.75em;
+}
+
+.wl-panel {
+    position: relative;
+    flex-shrink: 1;
+    width: 100%;
+    margin: 0.5em;
+    border: var(--waline-border);
+    border-radius: 1.2em;
+    background: var(--waline-bgcolor);
+    box-shadow: var(--waline-box-shadow);
+}
+
+.wl-header {
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 0 dashed #fff;
+}
+
+.wl-header-item {
+    display: flex;
+    flex: 1;
+}
+
+.wl-header label {
+    display: none;
+}
+
+.wl-header input {
+    border-bottom: 1px #dedede dashed;
+    padding: 15px 10px;
+    max-width: 100%;
+    font-size: 1.3em;
+    box-sizing: border-box;
+}
+
+.wl-header input:focus {
+    border-bottom-color: #eb5055;
+    background: rgba(0, 0, 0, 0);
+    ;
+}
+
+.wl-editor {
+    background-image: url(https://img.gorpeln.top/p/gorpeln_waline_bg.gif);
+    background-size: 24%;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+    background-color: rgba(255, 255, 255, 0);
+    min-height: 12em;
+    margin: 0;
+    border-radius: 0;
+    margin: 15px 20px;
+    font-size: 1.4em;
+    width: calc(100% - 40px);
+    transition: background-position 0.25s ease;
+}
+
+.wl-editor:focus {
+    background: #fff;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+}
+
+.wl-info .wl-text-number {
+    color: var(--waline-info-color);
+    font-size: 1.0em;
+}
+
+
+.wl-btn {
+    display: inline-block;
+    vertical-align: middle;
+    /* padding: 1em 2em;*/
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+    color: var(--waline-color);
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: .4s;
+    touch-action: manipulation;
+}
+
+.wl-btn.primary {
+    margin-right: 10px;
+}
+.wl-footer {
+    margin-bottom: 20px;
+}
+
+.wl-count {
+    font-size: 1.5em;
+    padding-left: 5px;
+}
+
+.wl-sort li {
+    font-size: 1.25em;
+}
+
+.wl-empty {
+    font-size: 1.4em;
+}
+
+.wl-power {
+    font-size: 1.1em;
+}
+
+.wl-card .wl-head .wl-nick{
+    font-size: 1.4em;
+}
+
+.wl-card .wl-time {
+    font-size: 1.2em;
+}
+
+.wl-card .wl-meta>span{
+    font-size: 1.0em;
+}
+
+.wl-card .wl-content{
+    font-size: 1.4em;
+}
+
+.wl-like>span{
+    font-size: 1.4em;
+}
+
+.wl-meta-head{
+    margin-bottom: 10px;
+}
+
+label[for="wl-image-upload"].wl-action {
+    display: none;
+}
+
+textarea::placeholder {
+    color: #dcdcdc;
+}
+
+.wl-cards .wl-user img{
+    width: 4em;
+    height: 4em;
+    box-shadow: 1px 1px 1px #dfd6d6;
+}
+
+.wl-card .wl-quote .wl-user img{
+    width: 3em;
+    height: 3em;
+    box-shadow: 1px 1px 1px #dfd6d6;
+}
+
+@media (max-width: 580px) {
+    .wl-header {
+        display: block;
+    }
+    .wl-header .wl-header-item {
+        border-bottom: 0 dashed #fff;
+    }
+    .wl-editor {
+        background-size: 40%;
+        min-height: 10em;
+    }
+    .wl-card .wl-meta>span{
+        font-size: 0.9em;
+    }
+}
+
+</style>
+
+<body>
+    <div id="waline"></div>
+    <script type="module">
+        // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+
+       Waline.init({
+            el: '#waline',
+            serverURL: 'https://waline.gorpeln.eu.org',
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+
+    </script>
+</body>
+  </div>
+<style type="text/css">
+    .tags-a {
+        color:#888 !important;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: 'serif';
+    }
+
+</style>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 二维码、顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15805392787')"></div>
+        <div class="qrcodeImg" id="qrcode"></div>
+        <div id="backtotop">
+            <a href="#">
+                <div class="bttbg"></div>
+            </a>
+        </div>
+    </div>
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
+    <div class="footerDes">
+        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
+        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2</a>  |  
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
+            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号</a> | 
+        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务</a> | 
+        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031">
+            <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" />萌ICP备20240031号</a>
+    </div>
+</footer>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- search -->
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
+    <div style="position: fixed; top: 2.5em; right: 2.5em;">
+        <img src="/assets/img/search_close.png" id="cb-close-btn" />
+    </div>
+</div>
+<link rel="stylesheet" href="/search/css/cb-search.css">
+<script src="/search/js/bootstrap3-typeahead.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<!-- 动态显示网站运行时间 -->
+<script language=javascript>
+
+const fullYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = fullYear;
+
+
+function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000
+    var minutes = seconds * 60
+    var hours = minutes * 60
+    var days = hours * 24
+    var years = days * 365
+    var today = new Date()
+    var todayYear = today.getFullYear()
+    var todayMonth = today.getMonth() + 1
+    var todayDate = today.getDate()
+    var todayHour = today.getHours()
+    var todayMinute = today.getMinutes()
+    var todaySecond = today.getSeconds()
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) 
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份 0为1月
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2015, 8, 23, 0, 0, 0)
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+    var diff = t2 - t1
+    var diffYears = Math.floor(diff / years)
+    var diffDays = Math.floor((diff / days) - diffYears * 365)
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+    document.getElementById("htmer_time").innerHTML = " 本站已安全运行：" + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒&nbsp;&nbsp;<i class='fas fa-heartbeat' id='heartbeat'></i>";
+
+}
+siteTime();
+</script>
+<script language=JavaScript>
+    function over(obj) {
+        obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {
+
+    }
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = '/article/15462756619';
+    }
+</script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?97ba5540ec47cf065f1e2c7c57814156";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X32389EHZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X32389EHZY');
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?48d96a1962ac94410ea549269e50bcc20fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+
+
+<style>
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.runTime {
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none; /* 隐藏默认的文本下划线 */
+    display: inline-block;
+    position: relative;
+}
+
+.runTime:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    /*background-color: #888;*/
+    bottom: 4px;
+    left: 0;
+    border-bottom: 1px dashed #777;
+}
+
+
+.footerImg{
+    margin-top: -3px;
+    margin-right:  2px;
+}
+.footerDes,.footerDes a{
+    color: #666;
+    text-align: center; /* Center the text within the .footerDes div */
+    bottom: -0.25em;
+    font-size: 12px;
+}
+
+#heartbeat {
+    color: red;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+</style>
+</body>
+<script>
+function pushNew(path) {
+    if (path == '/') {
+        window.location.href = path;
+    } else {
+        window.open(path);
+    }
+}
+</script>
+<script>
+    function menuFixed(id, otherId) {
+        var obj = document.getElementById(id);
+        var _getHeight = obj.offsetTop;
+
+        window.onscroll = function() {
+            changePos(id, _getHeight, otherId);
+        }
+    }
+
+    function changePos(id, height, otherId) {
+        var obj = document.getElementById(id);
+        var friendlinkObj = document.getElementById(otherId);
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTop < height) {
+            obj.style.position = 'relative';
+        } else {
+            obj.style.position = 'fixed';
+        }        
+        obj.style.width = friendlinkObj.offsetWidth + 'px';
+
+    }
+
+    $(document).ready(function() {
+        menuFixed('toc', 'siteInfoNav');
+    });
+
+</script>
+
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+    // 生成二维码
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 180,
+        height : 180
+    });
+    function createQrcode(url) {
+        console.log('生成我二维码' + url);
+
+        qrcode.makeCode('https://gorpeln.cn' + url);
+
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        } else {
+            qrcodeImg.style.display = 'block';
+        }
+    }
+
+    // 隐藏二维码
+    function hiddenQRCode() {
+        var qrcodeImg = document.getElementById('qrcode');
+        if (qrcodeImg.style.display == 'block') {
+            qrcodeImg.style.display = 'none';
+            qrcode.clear();
+        }
+    }
+
+
+function changeContent(element) {
+    
+    
+    
+
+    
+    
+
+  element.innerHTML = 8 + '年' + 184 + '天';
+
+}
+
+function restoreContent(element) {
+    
+    
+    
+    
+    element.innerHTML = 3104 + '天';
+}
+
+
+
+
+
+</script>
+
+ <script>
+
+     var value = document.getElementById("current-date").getAttribute("data-value");
+     console.log(value); // 输出：hello
+    // 创建一个表示给定日期和时间的 Date 对象
+    var givenDate = new Date(value);
+
+    // 获取当前时间的 Date 对象
+    var currentDate = new Date();
+
+    // 获取前一天的时间
+    var previousDate = new Date(currentDate);
+    previousDate.setDate(currentDate.getDate() - 1);
+
+    // 获取年、月、日
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+    var day = previousDate.getDate();
+
+    // 比较给定日期和当前日期
+    if (givenDate < previousDate) {
+   // 将日期显示在页面上
+        var dateElement = document.getElementById("current-date");
+        dateElement.textContent = year + "/" + month + "/" + day
+    } 
+
+  </script>
+
+
+</html>
