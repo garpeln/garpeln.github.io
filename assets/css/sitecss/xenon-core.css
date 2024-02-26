@@ -1,3 +1,38 @@
+
+@font-face {
+    font-family: 'FontAwesomePro';
+    src: url('/assets/fontawesome-pro/webfonts/fa-brands-400.woff2') format('woff2'),
+         url('/assets/fontawesome-pro/webfonts/fa-brands-400.woff') format('woff');
+    font-weight: 400; /* 可根据具体情况调整 */
+    font-style: normal; /* 可根据具体情况调整 */
+}
+
+/* 其他字体文件的声明，根据需要添加 */
+@font-face {
+    font-family: 'FontAwesomePro';
+    src: url('/assets/fontawesome-pro/webfonts/fa-light-300.woff2') format('woff2');
+    src: url('/assets/fontawesome-pro/webfonts/fa-light-300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesomePro';
+    src: url('/assets/fontawesome-pro/webfonts/fa-regular-400.woff2') format('woff2'),
+         url('/assets/fontawesome-pro/webfonts/fa-regular-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesomePro';
+    src: url('/assets/fontawesome-pro/webfonts/fa-solid-900.woff2') format('woff2'),
+         url('/assets/fontawesome-pro/webfonts/fa-solid-900.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 .ps-container .ps-scrollbar-x-rail {
     position: absolute;
     bottom: 3px;
@@ -918,7 +953,8 @@ body {
     display: table-cell;
     position: relative;
     width: 280px;
-/*    background: #2c2e2f;*/
+    /*background: #2c2e2f;*/
+    /*background: #34495e;*/
     z-index: 1
 }
 
@@ -976,7 +1012,7 @@ body {
     display: block;
     padding: 13px 5px;
     text-align: center;
-/*    border-bottom: 1px solid #313437*/
+    border-bottom: 1px solid #ececec
 }
 
 .sidebar-menu .main-menu a>i {
@@ -1012,7 +1048,7 @@ body {
 .sidebar-menu .main-menu li.has-sub>a:before {
     position: relative;
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: 'FontAwesomePro';
     content: '\f107';
     float: right;
     color: #6d747a;
@@ -1960,7 +1996,7 @@ body {
     .navbar.horizontal-menu .navbar-inner .navbar-nav li.has-sub>a:before {
         position: relative;
         display: inline-block;
-        font-family: FontAwesome;
+        font-family: 'FontAwesomePro';
         content: '\f107';
         float: right;
         color: #6d747a;
