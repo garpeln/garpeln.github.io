@@ -50,10 +50,17 @@
 
 .xe-comment{
     margin-top: 0.5em;
+    overflow: hidden; /* 确保超出部分被隐藏 */
+
 }
 
 .xe-comment p {
     margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; 
+    display: inline-block;
 }
 .overflowClip_1 {
     overflow: hidden;
