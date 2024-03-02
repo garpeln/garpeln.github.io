@@ -1202,8 +1202,8 @@ a:hover, a:focus {
 }
 
 .qrcodeImg {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     background: #E6E6FA;
     position: fixed;
     bottom: 80px;

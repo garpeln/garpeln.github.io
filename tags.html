@@ -384,11 +384,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3111天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3114天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-02-28 19:43:55 +0800">2024/02/28</p>
+                                    <p id="current-date" data-value="2024-03-02 21:03:08 +0800">2024/03/02</p>
                                 </li>
                             </ul>
                     </div>
@@ -12762,14 +12762,30 @@
     <footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
-        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
-        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2</a>  |  
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
-            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号</a> | 
-        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
-            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务</a> | 
         <a target="_blank" href="https://icp.gov.moe/?keyword=20240031">
-            <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" />萌ICP备20240031号</a>
+            <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
+            萌ICP备20240031号
+        </a> | 
+        <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号">
+            <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
+            官码2024000022号
+        </a> | 
+        <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号">
+            <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
+            MIIT备20240333号
+        </a>
+
+        <br/> 
+
+        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
+        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
+        </a> | 
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
+            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
+        </a> | 
+        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
+        </a>
     </div>
 </footer>
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
@@ -13000,13 +13016,12 @@ function pushNew(path) {
 <script>
     // 生成二维码
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width : 180,
-        height : 180
+        width : 150,
+        height : 150
     });
     function createQrcode(url) {
-        console.log('生成我二维码' + url);
 
-        qrcode.makeCode('https://gorpeln.cn' + url);
+        qrcode.makeCode('https://gorpeln.top' + url);
 
         var qrcodeImg = document.getElementById('qrcode');
         if (qrcodeImg.style.display == 'block') {
@@ -13035,7 +13050,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 191 + '天';
+  element.innerHTML = 8 + '年' + 194 + '天';
 
 }
 
@@ -13044,7 +13059,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3111 + '天';
+    element.innerHTML = 3114 + '天';
 }
 
 
