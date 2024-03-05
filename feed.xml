@@ -6,6 +6,55 @@
     <description>记录技术上的成长以及生活里的点点滴滴...</description>
     
       <item>
+        <title>GitHub贡献者可获取 Stark 空投</title>
+        <link>https://gorpeln.top/article/17087779433</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17087779433</guid>
+        <pubDate>2024-02-24</pubDate>
+        <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Starknet&lt;/code&gt; 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240224203223424.jpg!gorpeln&quot; alt=&quot;20240224203223424&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;领取条件&quot;&gt;领取条件&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在 2023 年 11 月 15 日之前，您至少向全球星数排名前 5,000 位的版本库提交了三次内容。其中至少一次提交发生在 2018 年或之后。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;即使不符合条件也先不要气馁，可以试着查一下资格，因为这 5000 个仓库的范围比较迷，我甚至都不记得自己是给哪个仓库贡献达标的……&lt;/p&gt;
+
+&lt;p&gt;打开 &lt;a href=&quot;provisions.starknet.io&quot;&gt;provisions.starknet.io&lt;/a&gt;，点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Eligibility check only&lt;/code&gt;，选择 GitHub，输入 GitHub 用户名，点击 Go，如果提示 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Congratulations&lt;/code&gt;，那你就可以领到这笔钱了。&lt;/p&gt;
+
+&lt;p&gt;接着点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Disconnect&lt;/code&gt;，点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Claim STRK&lt;/code&gt;，按步骤下载浏览器插件（选哪个都可以，我选择的是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Argent X&lt;/code&gt;），创建一个钱包地址，在核验资格的步骤选择最后一个 GitHub，授权 GitHub 账号，然后这笔钱就到自己的钱包里了，不知道各位都领了多少，我领到了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;111.1&lt;/code&gt;。大约 1~2 分钟检查钱包到账情况。&lt;/p&gt;
+
+&lt;h3 id=&quot;提现&quot;&gt;提现&lt;/h3&gt;
+&lt;p&gt;接下来提现到支付宝。由于我国的加密货币政策原因，提现一定要选择安全正规的大平台进行，提现的大致过程如下&lt;/p&gt;
+
+&lt;blockquote class=&quot;prompt-danger&quot;&gt;
+  &lt;p&gt;提醒！ &lt;br /&gt;
+此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;申请交易所账号：我用的是 &lt;a href=&quot;https://www.okx.com/cn&quot;&gt;欧易&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;下载 APP 进行实名认证：有实名认证的交易所能更大程度确保资金来源安全&lt;/li&gt;
+  &lt;li&gt;充币：币种选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STRK&lt;/code&gt;，充至交易账户，打开钱包按步骤将币转入欧易提供的地址内，等待 5~10 分钟到账&lt;/li&gt;
+  &lt;li&gt;卖出 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STRK&lt;/code&gt; 获得 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USDT&lt;/code&gt;：前往 STRK/USDT 的交易页面选择卖出，挂单，选市价委托（设置一个合理的限价也可以），数量 100%，等成交&lt;/li&gt;
+  &lt;li&gt;提币：卖完到资产页面，把 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USDT&lt;/code&gt; 余额从交易账户转到资金账户，点提币，C2C 交易，支付方式推荐选支付宝，选一个成交量比较高的靠谱的买家，填写支付宝账户并上传支付宝收款码，将 USDT 全部出售，1~20 分钟后即可到账，确认到账金额、付款方姓名正确后，回到交易所页面确认收款，交易完成&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote class=&quot;prompt-danger&quot;&gt;
+  &lt;p&gt;最后再次提醒！ &lt;br /&gt;
+此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;结语&quot;&gt;结语&lt;/h3&gt;
+&lt;p&gt;感谢那些一直默默付出的贡献者们，这次空投给开源社区打了一剂振奋剂，也引来了不少别出心裁之人……
+还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
         <title>博客黑夜模式：Dark Reader 插件</title>
         <link>https://gorpeln.top/article/17016025546</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17016025546</guid>
@@ -197,6 +246,64 @@
 &lt;br /&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>博客评论时一键填写自己的信息</title>
+        <link>https://gorpeln.top/article/16959932733</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16959932733</guid>
+        <pubDate>2023-09-29</pubDate>
+        <description>&lt;p&gt;使用浏览器书签实现博客网站留言评论时&lt;strong&gt;一键填写昵称/邮箱/网址&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;具体的使用方法：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;将本页添加到收藏夹保存为书签；&lt;/li&gt;
+  &lt;li&gt;右键刚刚创建的书签，选择“编辑”或“属性”；&lt;/li&gt;
+  &lt;li&gt;将“名称”一栏改为“一键填写留言评论信息”（见名知意即可，名称可换成其它的），并将“网址”或“地址”或“url”一栏原有的网址链接替换成上述 javascript 代码（代码里面的相关个人信息改为自己的哦~~），确定即可。&lt;/li&gt;
+  &lt;li&gt;以后遇到留言评论时，点一个这个书签即可自动一键填写个人信息！&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javascript: void
+function() {
+    var lauthor = [&quot;#author&quot;,&quot;input[name=&apos;comname&apos;]&quot;,&quot;#inpName&quot;,&quot;input[name=&apos;author&apos;]&quot;,&quot;#ds-dialog-name&quot;,&quot;#name&quot;,&quot;input[name=&apos;nick&apos;]&quot;,&quot;#comment_author&quot;],
+	lmail =[&quot;#mail&quot;,&quot;#email&quot;,&quot;input[name=&apos;commail&apos;]&quot;,&quot;#inpEmail&quot;,&quot;input[name=&apos;email&apos;]&quot;,&quot;#ds-dialog-email&quot;,&quot;input[name=&apos;mail&apos;]&quot;,&quot;#comment_email&quot;],
+	lurl =[&quot;#url&quot;,&quot;input[name=&apos;comurl&apos;]&quot;,&quot;#inpHomePage&quot;,&quot;#ds-dialog-url&quot;,&quot;input[name=&apos;url&apos;]&quot;,&quot;input[name=&apos;website&apos;]&quot;,&quot;#website&quot;,&quot;input[name=&apos;link&apos;]&quot;,&quot;#comment_url&quot;];
+    for (i = 0; i &amp;lt; lauthor.length; i++) {
+        var author = document.querySelector(lauthor[i]);
+        if (author != null) {
+            author.value = &apos;你的昵称&apos;;
+            author.dispatchEvent(new Event(&apos;input&apos;));
+            author.dispatchEvent(new Event(&apos;change&apos;));
+            break;
+        }
+    }
+    for (j = 0; j &amp;lt; lmail.length; j++) {
+        var mail = document.querySelector(lmail[j]);
+        if (mail != null) {
+            mail.value = &apos;你的邮箱&apos;;
+            mail.dispatchEvent(new Event(&apos;input&apos;));
+            mail.dispatchEvent(new Event(&apos;change&apos;));
+            break;
+        }
+    }
+    for (k = 0; k &amp;lt; lurl.length; k++) {
+        var url = document.querySelector(lurl[k]);
+        if (url != null) {
+            url.value = &apos;你的网址&apos;;
+            url.dispatchEvent(new Event(&apos;input&apos;));
+            url.dispatchEvent(new Event(&apos;change&apos;));
+            break;
+        }
+    }
+    return ! 1;
+} ()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
       </item>
     
@@ -2815,328 +2922,6 @@ btn.wantsLayer = YES;
     [self setAttributedTitle:attributedString];
     
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</title>
-        <link>https://gorpeln.top/article/16491590954</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16491590954</guid>
-        <pubDate>2022-04-05</pubDate>
-        <description>&lt;h3 id=&quot;一nswindownswindowcontrollernsviewcontrollernsview-之间的关系&quot;&gt;一、NSWindow、NSWindowController、NSViewController、NSView 之间的关系&lt;/h3&gt;
-
-&lt;h4 id=&quot;1nswindowcontroller-管理-nswindow-之间的交互&quot;&gt;1、NSWindowController 管理 NSWindow 之间的交互；&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSWindowController&lt;/code&gt; 有一个属性为 window ，使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initWithWindow&lt;/code&gt; 初始化时，可以设置自定义的 window 为自己的 window。&lt;/p&gt;
-
-&lt;h4 id=&quot;2nsviewcontroller-管理-nswindow-内容的展示&quot;&gt;2、NSViewController 管理 NSWindow 内容的展示&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSWindow&lt;/code&gt; 的内容由&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contentViewController&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contentView&lt;/code&gt; 决定。
-contentViewController 是一个 NSViewController 类；用 NSViewController 来管理 NSWindow 内容的展示更方便。&lt;/p&gt;
-
-&lt;p&gt;设置 某个 NSViewController 子类a 为 NSWindow 的 contentViewController 后：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;window.contentView = window.contentViewController.view = a.view
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;3nsviewcontroller-内容为-nsview&quot;&gt;3、NSViewController 内容为 NSView&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NSViewController&lt;/code&gt; 的内容由一个个的 NSView 决定。&lt;/p&gt;
-
-&lt;h3 id=&quot;二创建-nswindow&quot;&gt;二、创建 NSWindow&lt;/h3&gt;
-&lt;p&gt;创建项目后，删除工程自带的 xib中的window，在delegate中添加 NSWindow 属性&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@property(nonatomic,strong) NSWindow *window1;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;懒加载初始化，并在启动时展示出来&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(NSWindow *)window1{
-    if (!_window1) {
-        NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable ;
-        _window1 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 200, 300) styleMask:style backing:NSBackingStoreBuffered defer:YES];
-//        _window1.contentViewController = self.firstVC;
-    }
-    return _window1;
-}
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-        [self.window1 center];
-        [self.window1 orderFront:nil];
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;运行程序，就可以看到我们创建的window了。&lt;/p&gt;
-
-&lt;h4 id=&quot;设置window的内容&quot;&gt;设置window的内容&lt;/h4&gt;
-
-&lt;h5 id=&quot;1设置contentview&quot;&gt;1、设置contentView&lt;/h5&gt;
-&lt;p&gt;往 contentView 添加内容&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;OneView *view = [[OneView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
-[self.window.contentView addSubview:view];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;其中 OneView 继承自 NSView，并在 OneView.m 中添加自定义设置&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-
-    self.wantsLayer = YES;
-    self.layer.backgroundColor = [NSColor cyanColor].CGColor;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455572.png!gorpeln&quot; alt=&quot;20220405194455572&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;2设置-contentviewcontroller&quot;&gt;2、设置 contentViewController&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]init];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这个窗口的显示内容，由 FirstViewController 决定。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455573.png!gorpeln&quot; alt=&quot;20220405194455573&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;设置完 contentViewController 后，window.contentView 就是 self.window.contentViewController.view&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
-    NSLog(@&quot;contentViewController : %@ , Controller.view : %@ , contentView : %@&quot;,self.window.contentViewController,self.window.contentViewController.view,self.window.contentView);
-    
-    self.window.contentViewController = [[FirstViewController alloc]init];
-    
-    NSLog(@&quot;contentViewController : %@ , Controller.view : %@ , contentView : %@&quot;,self.window.contentViewController,self.window.contentViewController.view,self.window.contentView);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;打印日志如下：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MSWindowDemo[3030:262893] contentViewController : (null) , 
-Controller.view : (null) , 
-contentView : &amp;lt;NSView: 0x604000120aa0&amp;gt;
-
-MSWindowDemo[3030:262893] contentViewController : &amp;lt;FirstViewController: 0x6000000c2e60&amp;gt; , 
-Controller.view : &amp;lt;NSView: 0x600000122800&amp;gt; ,
-contentView : &amp;lt;NSView: 0x600000122800&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h5 id=&quot;3设置-contentviewcontroller-同时往-contentview-上添加东西&quot;&gt;3、设置 contentViewController 同时往 contentView 上添加东西&lt;/h5&gt;
-&lt;p&gt;效果按照添加顺序叠加&lt;/p&gt;
-
-&lt;p&gt;3.1 如果先设置 contentViewController ，再往 contentView 上添加控件。实际上是往 contentViewController.view 上添加控件。效果如下：
-&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455574.png!gorpeln&quot; alt=&quot;20220405194455574&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3.2 如果先添加 contentView，再设置 contentViewController，contentViewController的内容会覆盖之前的设置。效果同&lt;a href=&quot;#2设置-contentviewcontroller&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;三创建-nswindowcontroller&quot;&gt;三、创建 NSWindowController&lt;/h3&gt;
-&lt;p&gt;创建项目后，删除工程自带的 xib中的window，创建继承自 NSWindowController 的类，弹出该控制器的 window.&lt;/p&gt;
-
-&lt;p&gt;delegate中弹窗部分代码如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
-    [self.firstWindowC.window center];
-    [self.firstWindowC.window orderFront:nil];
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;1不勾选xib&quot;&gt;1、不勾选xib&lt;/h4&gt;
-&lt;h5 id=&quot;11-使用-init-初始化无法正常显示窗口&quot;&gt;1.1 使用 init 初始化，无法正常显示窗口&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_firstWindowC = [[FirstWindowController alloc]init];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h5 id=&quot;12-使用-initwithwindow-初始化可以显示窗口&quot;&gt;1.2 使用 initWithWindow 初始化，可以显示窗口&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable ;
-        NSWindow *window0 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 400, 200) styleMask:style backing:NSBackingStoreBuffered defer:YES];
-        _firstWindowC = [[FirstWindowController alloc]initWithWindow:window0];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2勾选xib&quot;&gt;2、勾选xib&lt;/h4&gt;
-&lt;h5 id=&quot;21-使用-initwithwindownibname-初始化可以正常显示窗口&quot;&gt;2.1 使用 initWithWindowNibName 初始化，可以正常显示窗口&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_secWindowC = [[SecWindowController alloc]initWithWindowNibName:@&quot;SecWindowController&quot;];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2.1.1 在 windowDidLoad 中设置window，无法设置frame&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20220405194455575.png!gorpeln&quot; alt=&quot;20220405194455575&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2.1.2 在 windowDidLoad 中设置 self.window 指针，会弹出两个窗口&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)windowDidLoad {
-    [super windowDidLoad];
-    
-    NSUInteger style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable ;
-    NSWindow *window0 = [[NSWindow alloc]initWithContentRect:CGRectMake(0, 0, 200, 300) styleMask:style backing:NSBackingStoreBuffered defer:YES];
-    
-    self.window = window0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h5 id=&quot;22-使用-init-初始化无法正常显示窗口&quot;&gt;2.2 使用 init 初始化，无法正常显示窗口&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_secWindowC = [[SecWindowController alloc]init];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2.2.1 在 windowDidLoad 中设置 self.window 指针（代码同 2.1.2），还是无法正常显示窗口&lt;/p&gt;
-
-&lt;p&gt;2.2.2 使用 initWithWindow 初始化，会弹出窗口，效果同 1.2&lt;/p&gt;
-
-&lt;p&gt;跟初始化的 xib 中的窗口无关了。&lt;/p&gt;
-
-&lt;h3 id=&quot;四nsviewcontroller&quot;&gt;四、NSViewController&lt;/h3&gt;
-&lt;p&gt;创建 FirstViewController 继承自 NSViewController，并将 FirstViewController 示例设置为 window.contentViewController&lt;/p&gt;
-
-&lt;h4 id=&quot;1创建时不勾选xib&quot;&gt;1、创建时不勾选xib&lt;/h4&gt;
-&lt;h5 id=&quot;11-使用-init-方法初始化显示-window-失败&quot;&gt;1.1 使用 init 方法初始化，显示 window 失败。&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.firstVC = [[FirstViewController alloc]init];
-self.window.contentViewController = self.firstVC;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;上述代码会报下述错误&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-[NSNib _initWithNibNamed:bundle:options:] could not load the nibName: FirstViewController in bundle (null).
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;尝试在控制台打印这个 VC 的 view，也无法得到相关信息。&lt;/p&gt;
-
-&lt;p&gt;Mac 中创建 NSViewController 不会自动创建 view，就像是 创建view 不会自动创建 layer 一样。&lt;/p&gt;
-&lt;h5 id=&quot;12-初始化-nsviewcontroller并设置view显示成功&quot;&gt;1.2 初始化 NSViewController，并设置view，显示成功&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(SecViewController *)secVC{
-    if (!_secVC) {
-        _secVC = [[SecViewController alloc]init];
-        NSView *view = [[NSView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
-        view.wantsLayer = YES;
-        view.layer.backgroundColor = [NSColor yellowColor].CGColor;
-        _secVC.view = view;
-        
-    }
-    return _secVC;
-}
-
-self.window1.contentViewController = self.secVC;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;也可以将初始化的方法写在 VC 中，重写 loadView 方法。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(void)loadView{
-    NSView *view = [[NSView alloc]initWithFrame:CGRectMake(0, 0, 600, 400)];
-    view.wantsLayer = YES;
-    view.layer.backgroundColor = [NSColor yellowColor].CGColor;
-    self.view = view;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2勾选xib-1&quot;&gt;2、勾选xib&lt;/h4&gt;
-&lt;h5 id=&quot;21-使用-initwithnibname-初始化加载成功&quot;&gt;2.1 使用 initWithNibName 初始化，加载成功&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]initWithNibName:@&quot;FirstViewController&quot; bundle:nil];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;22使用-init-方法初始化加载成功效果同上&quot;&gt;2.2使用 init 方法初始化，加载成功，效果同上。&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.window.contentViewController = [[FirstViewController alloc]init];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;于是我想测试下，是否偷偷调用了 initWithNibName 方法，在 FirstViewController.m 中写下如下代码：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@implementation FirstViewController
-
--(instancetype)init{
-    self = [super init];
-    NSLog(@&quot;First : init&quot;);
-    return self;
-}
-
--(instancetype)initWithNibName:(NSNibName)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
- 
-   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    NSLog(@&quot;First nibNameOrNil : %@ , nibBundleOrNil : %@&quot;,nibNameOrNil,nibBundleOrNil);
-    
-    return self;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;再次运行，发现打印日志如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MSWindowDemo[3919:297186] First nibNameOrNil : (null) , nibBundleOrNil : (null)
-MSWindowDemo[3919:297186] First : init
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;说明使用 init 方法会默认调用 initWithNibName 方法去寻找 xib文件。&lt;/p&gt;
-
-&lt;h3 id=&quot;五综合不显示的问题等&quot;&gt;五、综合、不显示的问题等&lt;/h3&gt;
-&lt;h4 id=&quot;1nswindow-or-nswindowcontroller-需要被强引用&quot;&gt;1、NSWindow or NSWindowController 需要被强引用&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示失败
-- (void)test4{
-    
-    FirstWindowController *firstWC = [[FirstWindowController alloc]initWithWindowNibName:@&quot;FirstWindowController&quot;];
-    [firstWC.window orderFront:nil];
-    [firstWC.window center];
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;需要改为：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示成功
-- (void)test4{
-    
-    FirstWindowController *firstWC = [[FirstWindowController alloc]initWithWindowNibName:@&quot;FirstWindowController&quot;];
-    [firstWC.window orderFront:nil];
-    [firstWC.window center];
-    
-    self.firstWC = firstWC;
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;部分情况下，window 可能会显示出来，但是 window 上的按钮可能点击无效。&lt;/p&gt;
-
-&lt;h4 id=&quot;2示例nsview-nsviewcontrollernswindownswindowcontroller&quot;&gt;2、示例:NSView –&amp;gt;NSViewController–&amp;gt;NSWindow–&amp;gt;NSWindowController&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)test3{
-    
-    NSView *view = [[NSView alloc] init];
-    view.wantsLayer = YES;
-    view.layer.backgroundColor = [NSColor redColor].CGColor;
-    
-    NSViewController *viewController = [[NSViewController alloc]init];
-    viewController.view = view;
-    
-    NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable;
-    NSRect rect = NSMakeRect(0, 0, 400, 200);
-    NSWindow *window = [[NSWindow alloc]initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
-    window.contentViewController = viewController;
-    
-    self.windowController = [[NSWindowController alloc]initWithWindow:window];
-    [self.windowController.window center];
-    [self.windowController.window orderFront:nil];
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这样创建的逻辑是没有问题的，但是 window 不会显示出来；&lt;br /&gt;
-原因是，不知道 window 的大小；&lt;br /&gt;
-解决方法，初始化 NSView 的时候，要设置 frame; 那么 window 的大小就会是这个 view.frame;&lt;/p&gt;
-
-&lt;p&gt;代码可改为如下&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//可以显示，且窗口大小为 view 的大小：{300，300}
-NSView *view = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 300, 300)];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;3示例-nsviewnswindownswindowcontroller&quot;&gt;3、示例 NSView–&amp;gt;NSWindow–&amp;gt;NSWindowController&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//显示成功
-- (void)test2{
-    
-    NSView *view0 = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 400, 400)];
-    view0.wantsLayer = YES;
-    view0.layer.backgroundColor = [NSColor redColor].CGColor;
-    
-    NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable;
-    NSRect rect = NSMakeRect(0, 0, 400, 200);
-    NSWindow *window = [[NSWindow alloc]initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
-    window.contentView = view0;
-    
-    self.windowController = [[NSWindowController alloc]initWithWindow:window];
-    [self.windowController.window center];
-    [self.windowController.window orderFront:nil];
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>MacOS：使用代码重启应用</title>
-        <link>https://gorpeln.top/article/16489862954</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16489862954</guid>
-        <pubDate>2022-04-03</pubDate>
-        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@interface AppDelegate : NSObject &amp;lt;NSApplicationDelegate&amp;gt;
--(void)relaunchApp; //重启应用
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@interface AppDelegate ()
-@property (nonatomic, assign) BOOL              toRelaunch;   //重启应用
-@end
-
-@implementation AppDelegate  
--(void)applicationWillTerminate:(NSNotification *)notification{
-    if (self.toRelaunch) {
-        [[NSWorkspace sharedWorkspace] launchAppWithBundleIdentifier:kBundleId options:NSWorkspaceLaunchAsync | NSWorkspaceLaunchNewInstance additionalEventParamDescriptor:nil launchIdentifier:nil];
-    }
-}
-
--(void)relaunchApp{
-    self.toRelaunch = YES;
-    [[NSApplication sharedApplication] terminate:nil];
-
-}
-@end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
       </item>
