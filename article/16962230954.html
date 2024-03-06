@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>iOS 微信打开第三方应用（Universal Links 和 URL Schemes） | gorpeln的个人博客 - gorpeln</title>
+  <title>Sublime Text 常用插件 | gorpeln的个人博客 - gorpeln</title>
 
-  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,微信,Universal Links,URL Schemes,第三方应用,通用链接,微信" />
-  <meta name="description" content="一、前言项目中时常有这种需求, 是通过链接跳转到应用内部，现在iOS主流的方案有两个">
+  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,Sublime,插件,备忘,ColorHelper,HTML" />
+  <meta name="description" content="一、Package Control无法使用解决办法">
 
   <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
   <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
 
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="canonical" href="/article/15788283058">
+  <link rel="canonical" href="/article/16962230954">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
   <script async src="https://umami.gorpeln.eu.org/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -398,13 +398,13 @@
                     <div class="page-content" id="pjax"><div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">iOS 微信打开第三方应用（Universal Links 和 URL Schemes）</h1>
+    <h1 class="post-title">Sublime Text 常用插件</h1>
   	<div class="info">
   	        时间：
-  	        <text style="padding-top: 0;">2020-01-12</text>&nbsp;&nbsp;&nbsp;&nbsp;
+  	        <text style="padding-top: 0;">2023-10-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
   	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-  	            iOS
+  	        <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+  	            MacOS
   	        </a>
   	        &nbsp;&nbsp;&nbsp;&nbsp;
   	        标签：
@@ -412,27 +412,23 @@
   	        <span class="index-post-tag">
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#微信"  target="_blank">微信</a>
+  	                <a class="pjaxlink" href="/tags#Sublime"  target="_blank">Sublime</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#Universal Links"  target="_blank">Universal Links</a>
+  	                <a class="pjaxlink" href="/tags#插件"  target="_blank">插件</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#URL Schemes"  target="_blank">URL Schemes</a>
+  	                <a class="pjaxlink" href="/tags#备忘"  target="_blank">备忘</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#第三方应用"  target="_blank">第三方应用</a>
+  	                <a class="pjaxlink" href="/tags#ColorHelper"  target="_blank">ColorHelper</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#通用链接"  target="_blank">通用链接</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#微信"  target="_blank">微信</a>
+  	                <a class="pjaxlink" href="/tags#HTML"  target="_blank">HTML</a>
   	                
   	            
   	        </span>
@@ -441,123 +437,47 @@
   </header>
 
   <article class="post-content">
-    <h3 id="一前言">一、前言</h3>
-<p>项目中时常有这种需求, 是通过链接跳转到应用内部，现在iOS主流的方案有两个</p>
+    <h4 id="一package-control无法使用解决办法">一、Package Control无法使用解决办法</h4>
 
-<ul>
-  <li><strong>Schema</strong>： 常用在于一个应用跳转到另一个应用内部，属于应用间的跳转。当然ios9以下，网页可以通过schema://跳转到App内部。但是这种方式跳转比较生硬，在每次跳转的时候都会弹框询问。如果iPhone中如果没有安装则会直接弹出错误提示。</li>
-  <li><strong>Universal Links（通用链接）</strong>： 常用于https链接来打开APP（手机中已经安装此APP），或者跳转到https链接（手机中没有安装此APP）。Universal Links就是一个通用链接，iOS9以上的用户，可以通过点击这个链接无缝的重定向到一个app应用，而不需要通过safari打开跳转。如果用户没有安装这个app，则会在safari中打开这个链接指向的网页。</li>
-</ul>
+<p>最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。</p>
 
-<p><br />
-<strong>Universal Links(通用链接)的优点</strong></p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">唯一性</code>: 不像自定义的scheme,因为它使用标准的http/https链接到你的web站点,所以它不会被其它的app所声明.另外,Custom URL scheme 因为是自定义的协议，所以在没有安装 app 的情况下是无法直接打开的，而 universal links 本身是一个 HTTP/HTTPS 链接，所以有更好的兼容性</li>
-  <li><code class="language-plaintext highlighter-rouge">安全</code>: 当用户的手机上安装了你的app,那么iOS将去你的网站上去下载你上传上去的说明文件(这个说明文件声明了你的app可以打开哪些类型的http链接).因为只有你自己才能上传文件到你网站的根目录,所以你的网站和你的app之间的关联是安全的.</li>
-  <li><code class="language-plaintext highlighter-rouge">可变</code>: 当用户手机上没有安装你的app的时候,Universal Links也能够工作.如果你愿意,在没有安装你的app的时候,用户点击链接,会在safari中展示你网站的内容.</li>
-  <li><code class="language-plaintext highlighter-rouge">简单</code>: 一个URL链接,可以同时作用于网站和app</li>
-  <li><code class="language-plaintext highlighter-rouge">私有</code>: 其它app可以在不需要知道你的app是否安装了的情况下和你的app相互通信.</li>
-</ul>
+<p>解决方法：</p>
 
-<h3 id="二需求场景">二、需求场景</h3>
-<p>（1）第三方应用集成了友盟分享到QQ和微信的功能<br />
-（2）第三方应用分享了一个web页面到微信或QQ<br />
-（3）打开分享的web页面，点击上面的某一个按钮<br />
-（4）如果用户安装了该应用，直接打开应用根据web地址中的参数跳转到对应的页面<br />
-（5）如果用户没有安装应用，直接跳转到appStore</p>
+<p>下载：<a href="https://github.com/wbond/package_control/releases">PackageControl</a> （https://github.com/wbond/package_control/releases）</p>
 
-<h3 id="三需求实现方案">三、需求实现方案</h3>
-<p>iOS9 之后提供的 Universal Links 功能</p>
-
-<h3 id="四需求实现步骤">四、需求实现步骤</h3>
-<h4 id="1-创建一个json文件名称必须为-apple-app-site-association️该文件不可带-json-的后缀名">1. 创建一个json文件，名称必须为 apple-app-site-association，⚠️该文件不可带 .json 的后缀名</h4>
-
-<p>apple-app-site-association 文件必须放在https服务器的根目录下，例：<code class="language-plaintext highlighter-rouge">https://gorpeln.top</code> 这个路径下 ⚠️一定是根目录，也就是说该文件必须是一级目录，供下载使用</p>
-
-<p>apple-app-site-association 文件格式：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "applinks": {
-        "apps": [],
-        "details": [{
-            "appID": "teamID.com.gorpeln.notes",
-            "paths": ["*"]
-        },
-        {
-            "appID": "teamID.com.gorpeln.notes",
-            "paths": ["*", "/qq_conn/111878720/*"]
-        }]
-    }
-}
+<p>之后得到一个<code class="language-plaintext highlighter-rouge">Package.Control.sublime.package</code>文件，将文件重命名为<code class="language-plaintext highlighter-rouge">Package Control.sublime-package</code><br />
+随后将这个文件放置到插件安装目录的（<code class="language-plaintext highlighter-rouge">Installed Packages</code>）目录下，路径为：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/用户名/Library/Application Support/Sublime Text/Installed Packages
 </code></pre></div></div>
-<p><strong><em>1）appID ：</em></strong> <br />
-　　appID 格式为 teamID.bundleId形式，譬如说我的teamID是xxxxxxxxxxx，bundleId是com.gorpeln.notes那么我的appID就是：xxxxxxxxxxx.com.gorpeln.notes。<br />
-　　teamID：打开<a href="https://developer.apple.com/account/">苹果官网</a>，点击Account，点击左边栏的 Membership,查找teamID</p>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505921.png!gorpeln" alt="20200112192505921" /></p>
+<h4 id="二package-control使用方法">二、Package Control使用方法</h4>
 
-<p><strong><em>2) paths：</em></strong>  <br />
-　　设定一个App的路径支持列表，只有这些指定的路径链接才会被App所处理。格式如下：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"paths": [ "/wwdc/news/", "NOT /videos/wwdc/2010/*", "/videos/wwdc/201?/*"]
-</code></pre></div></div>
-<ul>
-  <li>使用*配置，则整个网站都可以使用</li>
-  <li>使用特定的URL，例如<code class="language-plaintext highlighter-rouge">/wwdc/news/</code>来指定某一个特殊的链接。</li>
-  <li>在特定URL后面添加<code class="language-plaintext highlighter-rouge">*</code>，例如 <code class="language-plaintext highlighter-rouge">/videos/wwdc/2015/*</code>, 来指定网站的某一部分。如果你的网站是gorpeln.top,你的path写的是<code class="language-plaintext highlighter-rouge">/support/*</code>,那么当用户点击<code class="language-plaintext highlighter-rouge">gorpeln.top/support/myDoucument</code>,就可以进入你的app了,相反<code class="language-plaintext highlighter-rouge">gorpeln.top/other</code> 就不会.</li>
-  <li>除了使用<code class="language-plaintext highlighter-rouge">*</code>来匹配任意字符，你也可以使用 ?来匹配单个字符，你可以在路径当中结合这两个字符使用，例如 <code class="language-plaintext highlighter-rouge">/foo/*/bar/201?/mypage</code>。（配置的paths路径，是区分大小写的）</li>
-</ul>
-
-<p><strong><em>3) 验证apple-app-site-association文件</em></strong>  <br />
-　　文件配置完成之后，将其上传到你的服务器根目录或者.well-known这个子目录下。</p>
+<p>为插件管理包，通过快捷键 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code>
+打开，之后可以很方便的浏览、安装和卸载 Sublime Text 中的插件。</p>
 
 <ul>
-  <li>确保使用<code class="language-plaintext highlighter-rouge">https://yourdomain.com/apple-app-site-association</code>这个链接可以访问到，<code class="language-plaintext highlighter-rouge">yourdomain.com</code>为你的服务器域名。</li>
-  <li>也可以使用苹果的<a href="https://search.developer.apple.com/appsearch-validation-tool">验证网站</a>，验证文件是否能被苹果请求到。出现该提示为<code class="language-plaintext highlighter-rouge">apple-app-site-association</code>文件配置正确。</li>
+  <li>插件安装：输入 <code class="language-plaintext highlighter-rouge">install</code> <br />
+  后选择 <code class="language-plaintext highlighter-rouge">Package Control: Install Package</code></li>
+  <li>插件列表：输入 <code class="language-plaintext highlighter-rouge">list</code> <br />
+  后选择 <code class="language-plaintext highlighter-rouge">Package Control: List Packages</code></li>
+  <li>插件删除：输入 <code class="language-plaintext highlighter-rouge">remove</code> <br />
+  后选择 <code class="language-plaintext highlighter-rouge">Package Control: Remove Packages</code></li>
 </ul>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505922.png!gorpeln" alt="20200112192505922" /></p>
-
+<h4 id="三常用插件">三、常用插件：</h4>
 <ul>
-  <li>出现404错误码提示，则为<code class="language-plaintext highlighter-rouge">apple-app-site-association</code>文件未上传成功，或者使用<code class="language-plaintext highlighter-rouge">https://yourdomain.com/apple-app-site-association</code>路径无法访问。</li>
+  <li><code class="language-plaintext highlighter-rouge">ChineseLocalization</code> 汉化包</li>
+  <li><code class="language-plaintext highlighter-rouge">ColorHelper</code> 显示所选颜色值的颜色</li>
+  <li><code class="language-plaintext highlighter-rouge">HTML-CSS-JS Prettify</code> 一款集成了格式化（美化）html、css、js三种文件类型的插件</li>
+  <li><code class="language-plaintext highlighter-rouge">Auto Close HTML Tags</code> 写HTML代码时，自动补全闭合标签</li>
+  <li><code class="language-plaintext highlighter-rouge">BracketHighlighter</code> 代码匹配，可以匹配括号，引号等符号内的范围</li>
+  <li><code class="language-plaintext highlighter-rouge">Alignment</code> 使多行代码中的等号对齐</li>
+  <li><code class="language-plaintext highlighter-rouge">AutoFileName</code> 快捷输入文件名</li>
+  <li><code class="language-plaintext highlighter-rouge">SublimeCodeInte</code> 代码提示、补全</li>
+  <li><code class="language-plaintext highlighter-rouge">SublimeLinter</code> 代码检查的功能</li>
+  <li><code class="language-plaintext highlighter-rouge">View In Browser</code> Sublime Text 保存后网页自动同步更新</li>
+  <li><code class="language-plaintext highlighter-rouge">LiveReload</code> 调试网页实时自动更新</li>
 </ul>
-
-<h4 id="2-建立web网页和app应用之间的关联---app-ids配置-和-项目配置">2. 建立web网页和app应用之间的关联 -&gt; app IDs配置 和 项目配置</h4>
-<p><strong><em>（1）app IDs 配置</em></strong><br />
-　　进入开发者网站，找到你自己的bundleId，可以点击edit按钮，开启associate domains，如下图：
-<img src="https://img.gorpeln.top/blog/20200112192505923.png!gorpeln" alt="20200112192505923" /></p>
-
-<p><strong><em>（2）项目配置</em></strong> <br />
-　　在项目的Capablities中开启Associated domains，如下图：</p>
-
-<p><img src="https://img.gorpeln.top/blog/20200112192505924.png!gorpeln" alt="20200112192505924" /></p>
-
-<p>注意<code class="language-plaintext highlighter-rouge">domains</code>可以添加多个，前缀必须为<code class="language-plaintext highlighter-rouge">applinks:</code>，<code class="language-plaintext highlighter-rouge">applinks:</code>后为你的服务器的域名。</p>
-
-<p>代码接收Universal Links唤醒</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler
-{
-    if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
-        NSURL *webpageURL = userActivity.webpageURL;
-        NSString *host = webpageURL.host;
-        if ([host isEqualToString:@"gorpeln.top"]) {
-            //进行我们需要的处理
-        }
-        else {
-            [[UIApplication sharedApplication]openURL:webpageURL];
-        }
-    }
-    return YES;
-}
-</code></pre></div></div>
-<p>在appdelegate中实现上面这个方法，当使用Universal Links唤醒app时就执行这个方法。</p>
-
-<p><strong><em>（3）验证以上配置</em></strong> <br />
-　　快捷验证，在备忘录中输入<code class="language-plaintext highlighter-rouge">https://yourdomain.com/apple-app-site-association</code>，长按这个链接，出现下图提示则配置成功。</p>
-
-<p><img src="https://img.gorpeln.top/blog/20200112192505925.png!gorpeln" alt="20200112192505925" /></p>
-
-<p>备注：如果我们在手机上没有安装相应的应用，就可以通过Universal Links重定向进行跳转到下载也进行下载操作。因为我们在paths设置了路径限制，只要我们重定向的路径符合限制，就能先走本地是否安装程序，如果没有再跳转到相应下载页。</p>
-
 
   </article>
 
@@ -565,18 +485,18 @@
 
   <div class="copyright">
   	<div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
-		<div>本文链接：<a href="https://gorpeln.top/article/15788283058">https://gorpeln.top/article/15788283058</a></div>
+		<div>本文链接：<a href="https://gorpeln.top/article/16962230954">https://gorpeln.top/article/16962230954</a></div>
 </div>
 
   <div class="prevandnext">
     	  
 	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15805392787" title="关于 ASO 优化（一）" style="color: #6666cc;font-size: 0.9em;"  target="_blank">关于 ASO 优化（一）</a>
+	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/16990919984" title="个性二维码合集" style="color: #6666cc;font-size: 0.9em;"  target="_blank">个性二维码合集</a>
 	    </div>
 	  
   	  
 	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15786589400" title="临时邮箱 和 短信接码平台" style="color: #6666cc;font-size: 0.9em;"  target="_blank">临时邮箱 和 短信接码平台</a>
+	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/16959932733" title="博客评论时一键填写自己的信息" style="color: #6666cc;font-size: 0.9em;"  target="_blank">博客评论时一键填写自己的信息</a>
 	    </div>
 	  
 	 
@@ -863,7 +783,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15788283058')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/16962230954')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">

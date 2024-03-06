@@ -250,6 +250,55 @@
       </item>
     
       <item>
+        <title>Sublime Text 常用插件</title>
+        <link>https://gorpeln.top/article/16962230954</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/16962230954</guid>
+        <pubDate>2023-10-02</pubDate>
+        <description>&lt;h4 id=&quot;一package-control无法使用解决办法&quot;&gt;一、Package Control无法使用解决办法&lt;/h4&gt;
+
+&lt;p&gt;最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。&lt;/p&gt;
+
+&lt;p&gt;解决方法：&lt;/p&gt;
+
+&lt;p&gt;下载：&lt;a href=&quot;https://github.com/wbond/package_control/releases&quot;&gt;PackageControl&lt;/a&gt; （https://github.com/wbond/package_control/releases）&lt;/p&gt;
+
+&lt;p&gt;之后得到一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package.Control.sublime.package&lt;/code&gt;文件，将文件重命名为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control.sublime-package&lt;/code&gt;&lt;br /&gt;
+随后将这个文件放置到插件安装目录的（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Installed Packages&lt;/code&gt;）目录下，路径为：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Users/用户名/Library/Application Support/Sublime Text/Installed Packages
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;二package-control使用方法&quot;&gt;二、Package Control使用方法&lt;/h4&gt;
+
+&lt;p&gt;为插件管理包，通过快捷键 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Shift + P&lt;/code&gt;
+打开，之后可以很方便的浏览、安装和卸载 Sublime Text 中的插件。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;插件安装：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install&lt;/code&gt; &lt;br /&gt;
+  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: Install Package&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;插件列表：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list&lt;/code&gt; &lt;br /&gt;
+  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: List Packages&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;插件删除：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remove&lt;/code&gt; &lt;br /&gt;
+  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: Remove Packages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;三常用插件&quot;&gt;三、常用插件：&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ChineseLocalization&lt;/code&gt; 汉化包&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorHelper&lt;/code&gt; 显示所选颜色值的颜色&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML-CSS-JS Prettify&lt;/code&gt; 一款集成了格式化（美化）html、css、js三种文件类型的插件&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Auto Close HTML Tags&lt;/code&gt; 写HTML代码时，自动补全闭合标签&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BracketHighlighter&lt;/code&gt; 代码匹配，可以匹配括号，引号等符号内的范围&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alignment&lt;/code&gt; 使多行代码中的等号对齐&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AutoFileName&lt;/code&gt; 快捷输入文件名&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SublimeCodeInte&lt;/code&gt; 代码提示、补全&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SublimeLinter&lt;/code&gt; 代码检查的功能&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View In Browser&lt;/code&gt; Sublime Text 保存后网页自动同步更新&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveReload&lt;/code&gt; 调试网页实时自动更新&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
         <title>博客评论时一键填写自己的信息</title>
         <link>https://gorpeln.top/article/16959932733</link>
         <guid isPermaLink="true">https://gorpeln.top/article/16959932733</guid>
@@ -2786,143 +2835,6 @@ statusItem.menu = subMenu;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220504184455194.png!gorpeln&quot; alt=&quot;20220504184455194&quot; /&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>MacOS：NSButton</title>
-        <link>https://gorpeln.top/article/16514594954</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16514594954</guid>
-        <pubDate>2022-05-02</pubDate>
-        <description>&lt;h3 id=&quot;一创建&quot;&gt;一、创建&lt;/h3&gt;
-&lt;h4 id=&quot;1常见创建代码&quot;&gt;1、常见创建代码&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)testBtn{
-    
-    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];
-    btn.title = @&quot;标题&quot;;                                   // 按钮文字
-    btn.image = [NSImage imageNamed:@&quot;icon_norm&quot;];                                   // 按钮图片
-    [btn setTarget:self];
-    [btn setAction:@selector(btnOnClick)];                              // 按钮触发的方法
-    btn.alternateTitle = @&quot;选中&quot;;                             // 开启状态文字
-    btn.alternateImage = [NSImage imageNamed:@&quot;icon_high&quot;];                           // 开启状态图片
-    btn.state = 1;                                     // 按钮的状态
-    
-    btn.imagePosition = NSImageBelow;                     // 图文位置
-    btn.imageScaling = NSImageScaleNone;         // 设置图片缩放
-    btn.bordered = NO;                               // 按钮是否有边框
-    btn.transparent = NO;                            // 按钮是否透明
-    // 以下设置的快捷键为: Shift + Command + I (如果设置的和系统的冲突，则不会触发)
-    btn.keyEquivalent = @&quot;I&quot;;                             // 快捷键
-    [btn setKeyEquivalentModifierMask:NSEventModifierFlagShift]; // 快捷键掩码
-    btn.highlighted = YES;                                 // 按钮是否为高亮
-
-    [self.window.contentView addSubview:btn];
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2nsbuttonconvenience-分类中的类创建方法&quot;&gt;2、NSButtonConvenience 分类中的类创建方法&lt;/h4&gt;
-&lt;h5 id=&quot;21-buttonwithimage&quot;&gt;2.1 buttonWithImage&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@&quot;pupu&quot;] target:self action:@selector(btnOnClick:)];
-btn.frame = CGRectMake(100, 100, 200, 200);
-btn.wantsLayer = YES;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220502104455110.png!gorpeln&quot; alt=&quot;20220502104455110&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;22-buttonwithtitle&quot;&gt;2.2 buttonWithTitle&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSButton *btn = [NSButton buttonWithTitle:@&quot;123&quot; image:[NSImage imageNamed:@&quot;pupu&quot;] target:self action:@selector(btnOnClick:)];
-btn.frame = CGRectMake(100, 100, 100, 400);
-btn.wantsLayer = YES;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220502104455111.png!gorpeln&quot; alt=&quot;20220502104455111&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;二修改imagetitle-的-rect&quot;&gt;二、修改image/title 的 rect&lt;/h3&gt;
-&lt;p&gt;NSButton 是创建子类继承自 NSButton，然后再子button 的.m 文件中重写 titleForRect 方法；
-在 cocoa 中，很多控件都需要通过重写cell 来修改内部的rect。如下：&lt;/p&gt;
-
-&lt;p&gt;1、创建 NaviButtonCell 继承自 NSButtonCell，在 .m 文件中设置 rect：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-(NSRect)imageRectForBounds:(NSRect)rect{
-    return NSMakeRect(13, 10, 9, 9);
-}
-
--(NSRect)titleRectForBounds:(NSRect)rect{
-    return NSMakeRect(24, 0, rect.size.width - 24, rect.size.height);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2、创建 NaviButton 继承自 NSButton，在 .m 中设置 cellClass:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@implementation NaviButton
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
-+(Class)cellClass{
-    return [NaviButtonCell class];
-}
-
-
-@end
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;三实用-category&quot;&gt;三、实用 category&lt;/h3&gt;
-&lt;h4 id=&quot;1一个简单地没有边框的按钮&quot;&gt;1、一个简单地没有边框的按钮&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msCommonSetting{
-    
-    [self msSetLayerColor:[NSColor clearColor]];
-    [self setBezelStyle:NSBezelStyleRoundRect];
-    self.bordered = NO;
-    self.imagePosition = NSImageLeft;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2纯图片按钮&quot;&gt;2、纯图片按钮&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msPureImageBtn:(NSImage *)image{
- 
-    [self msCommonSetting];
-    
-    [self setImage:image];
-    self.imageScaling = NSImageScaleNone;
-    self.imagePosition =  NSImageOnly;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;3设置按钮文字颜色&quot;&gt;3、设置按钮文字颜色&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)msSetButtonTitle:(NSString *)title color:(NSColor*)color{
-    
-        if(color ==nil) {
-            color = kColor_TextBlack;
-        }
-        NSFont *font = self.font;
-        NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:font,
-                               NSFontAttributeName,
-                               color,
-                               NSForegroundColorAttributeName,
-                               nil];
-        NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
-        [self setAttributedTitle:attributedString];
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;4按钮文字居中&quot;&gt;4、按钮文字居中&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//文字居中
-- (void)msSetButtonCenterTitle:(NSString *)title color:(NSColor*)color{
-    
-    if(color ==nil) {
-        color = kColor_TextBlack;
-    }
-    NSFont *font = self.font;
-    NSMutableParagraphStyle *centredStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [centredStyle setAlignment:NSCenterTextAlignment];
-  
-    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:centredStyle,NSParagraphStyleAttributeName,
-                           font,NSFontAttributeName,
-                           color,NSForegroundColorAttributeName,
-                           nil];
-    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
-    [self setAttributedTitle:attributedString];
-    
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
       </item>
     
