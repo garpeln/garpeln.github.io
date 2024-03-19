@@ -1,0 +1,90 @@
+<div class="tiaozhuan-all">
+    <div class="tiaozhuan-nrong">
+        <div class="tiaozhuan-title">即将离开 『 gorpeln's Blog 』 ，跳转到以下外部链接</div>
+        <div id="tiaozhuan-link"></div>
+        <div class="tiaozhuan-info">请自行识别该链接是否安全，并保管好个人信息。</div>
+        <div class="tiaozhuan-button"><a href='' id='direct-link'>继续访问</a></div>
+    </div>
+</div>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const encodedTarget = params.get('target');
+    const target = atob(encodedTarget); // 使用 atob 进行 Base64 解码
+
+    if (target) {
+        document.getElementById('direct-link').href = target;
+        document.getElementById('tiaozhuan-link').textContent = '' + target; // 直接显示目标地址    
+    } else {
+        console.error('未指定重定向目标。');
+    }
+</script>
+
+<style>
+body {
+    background: #ececec;
+}
+
+.tiaozhuan-all {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -10px;
+    border-radius: 10px;
+    background: #fff url(../assets/img/go-wild.png) no-repeat center center / cover;
+    color: #666;
+    word-break: break-all;
+    max-width: 700px;
+    height: 350px;
+    text-align: center;
+    font-size: 0.85rem;
+    overflow: hidden;
+    margin: 100px auto 0;
+
+    @include breakpoint('small') {
+        aspect-ratio: 2 / 1;
+        height: auto;
+    }
+}
+
+.tiaozhuan-nrong {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 30px 20px;
+}
+
+.tiaozhuan-title {
+    font-size: 1.3rem;
+    color: #222;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.tiaozhuan-info {
+    margin-top: 6px;
+}
+
+.tiaozhuan-button {
+    margin-top: 20px;
+}
+
+.tiaozhuan-button a {
+    color: #fc9151;
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-size: .85rem;
+    border: 0.5px solid #fc9151;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    /*  .tiaozhuan-all{
+    background: url(/tiaozhuanico.png) no-repeat center center / cover;
+    color: #acacac;
+  }
+  .tiaozhuan-title{
+    color: #ddd;
+  }*/
+}
+</style>

@@ -201,7 +201,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">155</span>
+                                    <span class="site-state-item-count">158</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -213,7 +213,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">602</span>
+                                    <span class="site-state-item-count">614</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -230,11 +230,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">602
+                                <span class="articleCount">614
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">155
+                                <span class="articleCount">158
                                         </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -261,7 +261,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="font-size:13px;color: white" class="articleCount">16
+                                <a name="个人博客" style="font-size:13px;color: white" class="articleCount">18
                                 </a>
                             </li>
                             
@@ -285,7 +285,7 @@
                             
                             <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                                 <a name="程序人生" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">程序人生</a>
-                                <a name="程序人生" style="font-size:13px;color: white" class="articleCount">21
+                                <a name="程序人生" style="font-size:13px;color: white" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -370,7 +370,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >155</p>
+                                    <p >158</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -384,11 +384,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3122天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3131天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-03-10 10:24:18 +0800">2024/03/10</p>
+                                    <p id="current-date" data-value="2024-03-19 16:31:02 +0800">2024/03/19</p>
                                 </li>
                             </ul>
                     </div>
@@ -878,15 +878,15 @@ textarea::placeholder {
     <footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
-        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031">
+        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
             <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
             萌ICP备20240031号
         </a> | 
-        <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号">
+        <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
             <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
             官码2024000022号
         </a> | 
-        <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号">
+        <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
             <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
             MIIT备20240333号
         </a>
@@ -894,13 +894,15 @@ textarea::placeholder {
         <br/> 
 
         ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
-        <a href="http://beian.miit.gov.cn/"><img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
+        <a href="http://beian.miit.gov.cn/" class="footer-item">
+            <img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
         </a> | 
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
             <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
         </a> | 
-        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
-            本网站由<img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
+        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+            本网站由
+            <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
         </a>
     </div>
 </footer>
@@ -911,6 +913,7 @@ textarea::placeholder {
 <script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript" src="/assets/js/toc.js"></script>
+<script type="text/javascript" src="/assets/js/safe.js"></script>
 <!-- search -->
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
@@ -1166,7 +1169,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 202 + '天';
+  element.innerHTML = 8 + '年' + 211 + '天';
 
 }
 
@@ -1175,7 +1178,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3122 + '天';
+    element.innerHTML = 3131 + '天';
 }
 
 
