@@ -7,7 +7,7 @@ function checkParent(element, classNames) {
     }
     return false;
 }
-var excludedClasses = ['card-link', 'friend-item', 'contact-item', 'footer-item']; // 添加需要排除的a标签类名class
+var excludedClasses = ['card-link', 'link_item', 'contact-item', 'footer-item']; // 添加需要排除的a标签类名class
 window.addEventListener('load', (event) => {
     document.body.addEventListener('click', function(e) {
         let target = e.target;
