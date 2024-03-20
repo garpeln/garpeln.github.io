@@ -1,0 +1,177 @@
+[
+  {
+    "title": "个人站点",
+    "url": "/mysite",
+    "icon": "/favicon.ico",
+    "desc": "趁年轻，做自己想做的！",
+    "status": 2
+  },
+  {
+    "title": "王乐园个人博客",
+    "url": "https://blogs.kongjz.com",
+    "icon": "https://blogs.kongjz.com/favicon.ico",
+    "desc": "王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。",
+    "status": 2
+  },
+  {
+    "title": "会打篮球的程序猿",
+    "url": "http://www.lzhpo.com",
+    "icon": "https://img.gorpeln.top/p/friend_tx.jpeg",
+    "desc": "Talk is cheap, show me the code.",
+    "status": 2
+  },
+  {
+    "title": "关关和六六",
+    "url": "https://www.gmcllp.cn",
+    "icon": "https://www.gmcllp.cn/favicon.ico",
+    "desc": "向世界分享我们的故事",
+    "status": 2
+  },
+  {
+    "title": "忆梦小站",
+    "url": "https://www.onyi.net",
+    "icon": "https://i.niupic.com/images/2023/08/20/bBVR.jpg",
+    "desc": "微笑着挥手再见，但内心却深知，以后不会再相见。",
+    "status": 2
+  },
+  {
+    "title": "UsubeniFantasy",
+    "url": "https://ssshooter.com",
+    "icon": "https://ssshooter.com/logo.png",
+    "desc": "Write like you're running out of time.",
+    "status": 2
+  },
+  {
+    "title": "文西小记",
+    "url": "https://aizni.cn",
+    "icon": "https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640",
+    "desc": "简单传递美好",
+    "status": 2
+  },
+  {
+    "title": "皮皮赖's Blog",
+    "url": "https://www.lp.fyi",
+    "icon": "https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640",
+    "desc": "你我最后竟然也平凡到自命不凡",
+    "status": 2
+  },
+  {
+    "title": "不吐不快",
+    "url": "https://mianao.info",
+    "icon": "https://mianao.info/img/icon.png",
+    "desc": "我心中的一团火是不会熄地",
+    "status": 2
+  },
+  {
+    "title": "Debug客栈",
+    "url": "https://debuginn.com",
+    "icon": "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG",
+    "desc": "做一个爱分享的程序猿",
+    "status": 2
+  },
+  {
+    "title": "星辰日记",
+    "url": "https://blog.xsot.cn",
+    "icon": "https://img.iirose.cn/blog/logo.webp",
+    "desc": "我已很久不再成为我自己",
+    "status": 2
+  },
+  {
+    "title": "Hary的博客",
+    "url": "https://hary.cc/",
+    "icon": "https://hary.cc/ico.png",
+    "desc": "这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。",
+    "status": 2
+  },
+  {
+    "title": "Highlight",
+    "url": "https://wanglin.blog",
+    "icon": "https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg",
+    "desc": "记录生活点滴！",
+    "status": 2
+  },
+  {
+    "title": "乙未博客",
+    "url": "https://www.yvii.cn",
+    "icon": "https://www.yvii.cn/img/favicon.png",
+    "desc": "记录生活，分享与留存！",
+    "status": 2
+  },
+  {
+    "title": "Randwind’s blog",
+    "url": "https://www.randwind.com/",
+    "icon": "https://www.randwind.com/wp-content/uploads/2023/11/logo.png",
+    "desc": "做个自由自在的风。",
+    "status": 2
+  },
+  {
+    "title": "十年之约",
+    "url": "https://www.foreverblog.cn/blog/577.html",
+    "icon": "https://www.foreverblog.cn/favicon.ico",
+    "desc": "一个人的寂寞，一群人的狂欢。",
+    "status": 3
+  },
+  {
+    "title": "开往",
+    "url": "https://www.travellings.cn/go.html",
+    "icon": "/assets/img/travelling-dark.png",
+    "desc": "友链接力",
+    "status": 3
+  },
+  {
+    "title": "个站商店",
+    "url": "https://storeweb.cn",
+    "icon": "https://upload.storeweb.cn/image/logo.png",
+    "desc": "一个精致的，带社交元素的个人网站发布平台，博客收录网站",
+    "status": 3
+  },
+  {
+    "title": "博友圈",
+    "url": "https://www.boyouquan.com/about#add-link",
+    "icon": "https://www.boyouquan.com/assets/images/sites/logo/logo-small.png",
+    "desc": "博客人的朋友圈，博客收录与文章 RSS 聚合网站。",
+    "status": 3
+  },
+  {
+    "title": "BlogFinder",
+    "url": "https://bf.zzxworld.com/s/1187",
+    "icon": "https://bf.zzxworld.com/images/favicon.png",
+    "desc": "每个博客都是一座宝藏！",
+    "status": 3
+  },
+  {
+    "title": "一只胖橘",
+    "url": "https://www.akitten.cn/",
+    "icon": "https://www.akitten.cn/kitten.jpg",
+    "desc": "一个专注于计算机编程和硬件学习的博客主。",
+    "status": 1
+  },
+  {
+    "title": "布衣者",
+    "url": "https://www.mebyz.cn",
+    "icon": "https://1.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=100",
+    "desc": "正在努力折腾代码的博主。",
+    "status": 1
+  },
+  {
+    "title": "鸟不拉诗",
+    "url": "https://niaobulashi.com/",
+    "icon": "https://niaobulashi.com/favicon.ico",
+    "desc": "品味生活，分享技术",
+    "status": 1
+  },
+  {
+    "title": "熊孝兵",
+    "url": "https://wispx.cn",
+    "icon": "https://gravatar.loli.net/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&d=mm&r=g",
+    "desc": "我在纯白的世界里做着有关救赎的梦。",
+    "status": 1
+  },
+  {
+    "title": "芒果雪花汁",
+    "url": "https://www.wusongyong.com",
+    "icon": "https://www.wusongyong.com/usr/uploads/2019/11/logo.png?tdsourcetag=s_pcqq_aiomsg",
+    "desc": "愿你道路漫长，充满历险和发现",
+    "status": 0
+  }
+]

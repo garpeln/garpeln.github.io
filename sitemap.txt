@@ -168,6 +168,7 @@ https://gorpeln.top/categories
 https://gorpeln.top/feed.xml
 https://gorpeln.top/go-wild
 https://gorpeln.top/links
+https://gorpeln.top/links.json
 https://gorpeln.top/list
 https://gorpeln.top/login
 https://gorpeln.top/mysite
