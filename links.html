@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>友链 | gorpeln的个人博客 - gorpeln</title>
+  <title>友情链接 | gorpeln的个人博客 - gorpeln</title>
 
   <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本" />
   <meta name="description" content="记录技术上的成长以及生活里的点点滴滴...">
@@ -384,11 +384,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3131天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3132天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-03-19 16:31:02 +0800">2024/03/19</p>
+                                    <p id="current-date" data-value="2024-03-20 16:16:25 +0800">2024/03/20</p>
                                 </li>
                             </ul>
                     </div>
@@ -396,98 +396,73 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
                     <div class="page-content" id="pjax"><style>
-.tip{
-    color: #666;
-    margin-bottom: 1em;
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.links-box{
+
+.links-box {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
-}
-.user-card {
-    flex-shrink: 1;
-    display: flex;
-    align-items: stretch;
-    width: 12.5%;
 }
 
-
-.card-link {
-    margin: 0;
-    width: 100%;
-    font-size: 10px;
-    font-weight: 500;
+.item {
+    width: calc(50% - 1em);
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    line-height: 1.2;
-    border-radius: 4px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px #dfd6d6;
+    border-radius: 10px;
+    background:#fafafa;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius:50%;
+    box-shadow: 1px 1px 2px #dfd6d6;
+    margin: 10px 15px 10px 10px;
+}
+
+.item-content {
+    flex-grow: 1;
     overflow: hidden;
-    position: relative;
-    padding: 1rem 0.5rem;
-    color: #666;
+    white-space: nowrap;
 }
 
-.card-img {
-    object-fit: cover;
-    display: block;
-    width: 48px;
-    height: 48px;
-    background: #ececec;
-    border-radius: 48px;
-    margin: 0 0 0.5rem;
-    border: 1px dashed #ececec;
-
+.item-content h3 {
+    margin: 0;
+    font-size: 15px;
+    margin-top: 6px;
 }
 
-.user-card::before {
-    content: ''; /* 文字内容 */
-    position: absolute;
-    bottom: 100%; /* 将气泡放在 user-card 上方 */
-    left: 50%; /* 气泡水平居中 */
-    transform: translateX(-50%);
-    display: none; /* 初始时不显示 */
-    background-color: #fff;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.item-content p {
+    font-size: 13px;
+    color: #999; 
+    overflow: hidden;
+    text-overflow: ellipsis;  
+}   
+.links-title{
+    font-size: 1.8em;
+    margin: 0.4em 0 0.9em 0;
 }
-
-.user-card:hover::before {
-    display: block; /* 鼠标悬停时显示气泡 */
-}
-.card-img-container{
-    position: relative;
-    display: inline-block;
-}
-
-/* 显示在右上角的圆点 */
-.dot {
-    position: absolute;
-    top: 0;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; /* 使其成为圆形 */
-    border: 2px solid #dcdcdc;
-}
-
 
 @media (max-width: 767px) {
-    /* 在手机屏幕宽度小于等于 767px 时应用的样式 */
-    .user-card {
-        width: 25%;
+    .item {
+        width: 100%;
+        margin-right: 0;
     }
-}
+}   
 
 </style>
 
-<div class="post">
+<div class="post" style="margin-bottom:10px;display:block;">
     <div style="margin:0.5em;text-align:center;">
         <h3> 友链 & 留言</h3>
     </div>
@@ -495,8 +470,10 @@
     需要互加友链的请<text style="color:#6666cc;background: #ececec;padding: 0 5px;border-radius: 4px;font-size: 14px;margin-left: 5px;">先添加本站为友链</text>，然后在下面留言即可。<br /><br />
     对友链要求如下：<br />
     <ol>
-        <li>有非免费独立域名；</li>
-        <li>网站有较多原创内容。</li>
+        <li>有非免费独立域名</li>
+        <li>需建站6个月以上，且至少有10篇原创内容</li>
+        <li>网站排版整洁，无广告</li>
+        <li>无违反相关法律法规的内容</li>
     </ol>
     <blockquote style="background: #F5F5F5;padding: 0 20px;">
         <ul style="margin-left: 0;list-style: none;padding: 10px 0;">
@@ -508,839 +485,379 @@
     </blockquote>
     <br />
 </div>
-<div class="post" style="overflow:hidden;padding: 1em 3em;margin-top: 1em;">
-    <div class="tip">友链列表：(排名不分先后)</div>
-    <div>
-        <section class="links-box">
-               
-                   <div class="user-card">
-                     <a class="card-link" href="/mysite" title="趁年轻，做自己想做的！" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="/favicon.ico" alt="趁年轻，做自己想做的！" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot1"></div>
-                        </div>
-                        <div class="name">
-                        <span>个人站点</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
 
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot1");
 
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
 
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.foreverblog.cn/blog/577.html" title="一个人的寂寞，一群人的狂欢。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.foreverblog.cn/favicon.ico" alt="一个人的寂寞，一群人的狂欢。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot2"></div>
-                        </div>
-                        <div class="name">
-                        <span>十年之约</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot2");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://blogs.kongjz.com" title="王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://blogs.kongjz.com/favicon.ico" alt="王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot3"></div>
-                        </div>
-                        <div class="name">
-                        <span>王乐园个人博客</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot3");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="http://www.lzhpo.com" title="Talk is cheap, show me the code." target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://img.gorpeln.top/p/friend_tx.jpeg" alt="Talk is cheap, show me the code." width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot4"></div>
-                        </div>
-                        <div class="name">
-                        <span>会打篮球的程序猿</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot4");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.travellings.cn/go.html" title="友链接力" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="/assets/img/travelling-dark.png" alt="友链接力" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot5"></div>
-                        </div>
-                        <div class="name">
-                        <span>开往</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot5");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://storeweb.cn" title="一个精致的，带社交元素的个人网站发布平台，博客收录网站" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://upload.storeweb.cn/image/logo.png" alt="一个精致的，带社交元素的个人网站发布平台，博客收录网站" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot6"></div>
-                        </div>
-                        <div class="name">
-                        <span>个站商店</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot6");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.gmcllp.cn" title="向世界分享我们的故事" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.gmcllp.cn/favicon.ico" alt="向世界分享我们的故事" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot7"></div>
-                        </div>
-                        <div class="name">
-                        <span>关关和六六</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot7");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.onyi.net" title="微笑着挥手再见，但内心却深知，以后不会再相见。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://i.niupic.com/images/2023/08/20/bBVR.jpg" alt="微笑着挥手再见，但内心却深知，以后不会再相见。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot8"></div>
-                        </div>
-                        <div class="name">
-                        <span>忆梦小站</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot8");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://ssshooter.com" title="Write like you're running out of time." target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://ssshooter.com/logo.png" alt="Write like you're running out of time." width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot9"></div>
-                        </div>
-                        <div class="name">
-                        <span>UsubeniFantasy</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot9");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://aizni.cn" title="简单传递美好" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640" alt="简单传递美好" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot10"></div>
-                        </div>
-                        <div class="name">
-                        <span>文西小记</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot10");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.lp.fyi" title="你我最后竟然也平凡到自命不凡" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640" alt="你我最后竟然也平凡到自命不凡" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot11"></div>
-                        </div>
-                        <div class="name">
-                        <span>皮皮赖's Blog</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot11");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://mianao.info" title="我心中的一团火是不会熄地" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://mianao.info/img/icon.png" alt="我心中的一团火是不会熄地" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot12"></div>
-                        </div>
-                        <div class="name">
-                        <span>不吐不快</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot12");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://debuginn.com" title="做一个爱分享的程序猿" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG" alt="做一个爱分享的程序猿" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot13"></div>
-                        </div>
-                        <div class="name">
-                        <span>Debug客栈</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot13");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://blog.xsot.cn" title="我已很久不再成为我自己" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://img.iirose.cn/blog/logo.webp" alt="我已很久不再成为我自己" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot14"></div>
-                        </div>
-                        <div class="name">
-                        <span>星辰日记</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot14");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.boyouquan.com/about#add-link" title="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.boyouquan.com/assets/images/sites/logo/logo-small.png" alt="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot15"></div>
-                        </div>
-                        <div class="name">
-                        <span>博友圈</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot15");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://hary.cc/" title="这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://hary.cc/ico.png" alt="这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot16"></div>
-                        </div>
-                        <div class="name">
-                        <span>Hary的博客</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot16");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://wanglin.blog" title="记录生活点滴！" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg" alt="记录生活点滴！" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot17"></div>
-                        </div>
-                        <div class="name">
-                        <span>Highlight</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot17");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://bf.zzxworld.com/s/1187" title="每个博客都是一座宝藏！" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://bf.zzxworld.com/images/favicon.png" alt="每个博客都是一座宝藏！" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot18"></div>
-                        </div>
-                        <div class="name">
-                        <span>BlogFinder</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot18");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.yvii.cn" title="记录生活，分享与留存！" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.yvii.cn/img/favicon.png" alt="记录生活，分享与留存！" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot19"></div>
-                        </div>
-                        <div class="name">
-                        <span>乙未博客</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot19");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.randwind.com/" title="做个自由自在的风。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.randwind.com/wp-content/uploads/2023/11/logo.png" alt="做个自由自在的风。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot20"></div>
-                        </div>
-                        <div class="name">
-                        <span>Randwind’s blog</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("2", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot20");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.akitten.cn/" title="一个专注于计算机编程和硬件学习的博客主。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.akitten.cn/kitten.jpg" alt="一个专注于计算机编程和硬件学习的博客主。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot21"></div>
-                        </div>
-                        <div class="name">
-                        <span>一只胖橘</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("1", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot21");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.mebyz.cn" title="正在努力折腾代码的博主。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://1.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=100" alt="正在努力折腾代码的博主。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot22"></div>
-                        </div>
-                        <div class="name">
-                        <span>布衣者</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("1", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot22");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://niaobulashi.com/" title="品味生活，分享技术" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://niaobulashi.com/favicon.ico" alt="品味生活，分享技术" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot23"></div>
-                        </div>
-                        <div class="name">
-                        <span>鸟不拉诗</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("1", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot23");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://wispx.cn" title="我在纯白的世界里做着有关救赎的梦。" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://gravatar.loli.net/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&d=mm&r=g" alt="我在纯白的世界里做着有关救赎的梦。" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot24"></div>
-                        </div>
-                        <div class="name">
-                        <span>熊孝兵</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("1", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot24");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-                   <div class="user-card">
-                     <a class="card-link" href="https://www.wusongyong.com" title="愿你道路漫长，充满历险和发现" target="_blank">
-                        <div class="card-img-container">
-                            <img class="card-img" src="https://www.wusongyong.com/usr/uploads/2019/11/logo.png?tdsourcetag=s_pcqq_aiomsg" alt="愿你道路漫长，充满历险和发现" width="48" height="48" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-                            <div class="dot" id="statusDot25"></div>
-                        </div>
-                        <div class="name">
-                        <span>芒果雪花汁</span>
-                       </div>
-                     </a>
-                   </div>
-                    <script>
-                        var status = parseInt("0", 10);
-
-                        // 获取当前友链的圆点元素
-                        var dotElement = document.getElementById("statusDot25");
-
-                        // 根据 status 设置背景颜色
-                        if (status == 0) {
-                            console.log('status is 0');
-                            dotElement.style.backgroundColor = "rgba(128, 128, 128, 0.5)"; // 灰色
-                        } else if (status == 1) {
-                            console.log('status is 1');
-                            dotElement.style.backgroundColor = "rgba(255, 255, 0, 0.5)"; // 黄色
-                        } else if (status == 2) {
-                            console.log('status is 2');
-                            dotElement.style.backgroundColor = "rgba(0, 128, 0, 0.6)"; // 绿色
-                        } else {
-                            console.log('Unknown status:', status);
-                        }
-
-                    </script>
-                
-        </section>
-    </div>
+<div class="post" style="margin-bottom:10px;">
+    <div class="links-title">友链列表</div>
+    <section class="links-box">
+        
+        
+        <div class="item">
+            <img src="/favicon.ico" alt="个人站点">
+            <div class="item-content">
+                <h3>个人站点</h3>
+                <p>趁年轻，做自己想做的！</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://blogs.kongjz.com/favicon.ico" alt="王乐园个人博客">
+            <div class="item-content">
+                <h3>王乐园个人博客</h3>
+                <p>王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://img.gorpeln.top/p/friend_tx.jpeg" alt="会打篮球的程序猿">
+            <div class="item-content">
+                <h3>会打篮球的程序猿</h3>
+                <p>Talk is cheap, show me the code.</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://www.gmcllp.cn/favicon.ico" alt="关关和六六">
+            <div class="item-content">
+                <h3>关关和六六</h3>
+                <p>向世界分享我们的故事</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://i.niupic.com/images/2023/08/20/bBVR.jpg" alt="忆梦小站">
+            <div class="item-content">
+                <h3>忆梦小站</h3>
+                <p>微笑着挥手再见，但内心却深知，以后不会再相见。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://ssshooter.com/logo.png" alt="UsubeniFantasy">
+            <div class="item-content">
+                <h3>UsubeniFantasy</h3>
+                <p>Write like you're running out of time.</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640" alt="文西小记">
+            <div class="item-content">
+                <h3>文西小记</h3>
+                <p>简单传递美好</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640" alt="皮皮赖's Blog">
+            <div class="item-content">
+                <h3>皮皮赖's Blog</h3>
+                <p>你我最后竟然也平凡到自命不凡</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://mianao.info/img/icon.png" alt="不吐不快">
+            <div class="item-content">
+                <h3>不吐不快</h3>
+                <p>我心中的一团火是不会熄地</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG" alt="Debug客栈">
+            <div class="item-content">
+                <h3>Debug客栈</h3>
+                <p>做一个爱分享的程序猿</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://img.iirose.cn/blog/logo.webp" alt="星辰日记">
+            <div class="item-content">
+                <h3>星辰日记</h3>
+                <p>我已很久不再成为我自己</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://hary.cc/ico.png" alt="Hary的博客">
+            <div class="item-content">
+                <h3>Hary的博客</h3>
+                <p>这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg" alt="Highlight">
+            <div class="item-content">
+                <h3>Highlight</h3>
+                <p>记录生活点滴！</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://www.yvii.cn/img/favicon.png" alt="乙未博客">
+            <div class="item-content">
+                <h3>乙未博客</h3>
+                <p>记录生活，分享与留存！</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://www.randwind.com/wp-content/uploads/2023/11/logo.png" alt="Randwind’s blog">
+            <div class="item-content">
+                <h3>Randwind’s blog</h3>
+                <p>做个自由自在的风。</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </section>
 </div>
+<div class="post" style="margin-bottom:10px;">
+    <div class="links-title">博客组织</div>
+    <section class="links-box">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="item">
+            <img src="https://www.foreverblog.cn/favicon.ico" alt="十年之约">
+            <div class="item-content">
+                <h3>十年之约</h3>
+                <p>一个人的寂寞，一群人的狂欢。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="/assets/img/travelling-dark.png" alt="开往">
+            <div class="item-content">
+                <h3>开往</h3>
+                <p>友链接力</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://upload.storeweb.cn/image/logo.png" alt="个站商店">
+            <div class="item-content">
+                <h3>个站商店</h3>
+                <p>一个精致的，带社交元素的个人网站发布平台，博客收录网站</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://www.boyouquan.com/assets/images/sites/logo/logo-small.png" alt="博友圈">
+            <div class="item-content">
+                <h3>博友圈</h3>
+                <p>博客人的朋友圈，博客收录与文章 RSS 聚合网站。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://bf.zzxworld.com/images/favicon.png" alt="BlogFinder">
+            <div class="item-content">
+                <h3>BlogFinder</h3>
+                <p>每个博客都是一座宝藏！</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </section>
+</div>
+<div class="post" style="margin-bottom:10px;">
+    <div class="links-title">申请中...</div>
+    <section class="links-box">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="item">
+            <img src="https://www.akitten.cn/kitten.jpg" alt="一只胖橘">
+            <div class="item-content">
+                <h3>一只胖橘</h3>
+                <p>一个专注于计算机编程和硬件学习的博客主。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://1.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=100" alt="布衣者">
+            <div class="item-content">
+                <h3>布衣者</h3>
+                <p>正在努力折腾代码的博主。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://niaobulashi.com/favicon.ico" alt="鸟不拉诗">
+            <div class="item-content">
+                <h3>鸟不拉诗</h3>
+                <p>品味生活，分享技术</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://gravatar.loli.net/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&d=mm&r=g" alt="熊孝兵">
+            <div class="item-content">
+                <h3>熊孝兵</h3>
+                <p>我在纯白的世界里做着有关救赎的梦。</p>
+            </div>
+        </div>
+        
+        
+        
+        <div class="item">
+            <img src="https://www.wusongyong.com/usr/uploads/2019/11/logo.png?tdsourcetag=s_pcqq_aiomsg" alt="芒果雪花汁">
+            <div class="item-content">
+                <h3>芒果雪花汁</h3>
+                <p>愿你道路漫长，充满历险和发现</p>
+            </div>
+        </div>
+        
+        
+    </section>
+</div>
+
+
 <div class="livere">
     <!-- page、post、about、links、works -->
 <head>
@@ -1605,8 +1122,6 @@ textarea::placeholder {
     </script>
 </body>
 </div>
-
-
 </div>
                 </div>
             </div>
@@ -1917,7 +1432,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 211 + '天';
+  element.innerHTML = 8 + '年' + 212 + '天';
 
 }
 
@@ -1926,7 +1441,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3131 + '天';
+    element.innerHTML = 3132 + '天';
 }
 
 
