@@ -179,9 +179,9 @@ https://gorpeln.top/nav
 https://gorpeln.top/note
 https://gorpeln.top/privacy
 https://gorpeln.top/protocol
-https://gorpeln.top/protocol_01
-https://gorpeln.top/protocol_02
-https://gorpeln.top/protocol_03
+https://gorpeln.top/protocol_copyright_blog
+https://gorpeln.top/protocol_disclaimers_blog
+https://gorpeln.top/protocol_privacy_blog
 https://gorpeln.top/resume
 https://gorpeln.top/robots.txt
 https://gorpeln.top/search/cb-search.json
