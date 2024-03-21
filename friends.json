@@ -1,117 +1,119 @@
-[
-  {
-    "name": "会打篮球的程序猿",
-    "link": "http://www.lzhpo.com",
-    "avatar": "https://img.gorpeln.top/p/friend_tx.jpeg"
-  },
-  {
-    "name": "关关和六六",
-    "link": "https://www.gmcllp.cn",
-    "avatar": "https://www.gmcllp.cn/favicon.ico"
-  },
-  {
-    "name": "忆梦小站",
-    "link": "https://www.onyi.net",
-    "avatar": "https://i.niupic.com/images/2023/08/20/bBVR.jpg"
-  },
-  {
-    "name": "UsubeniFantasy",
-    "link": "https://ssshooter.com",
-    "avatar": "https://ssshooter.com/logo.png"
-  },
-  {
-    "name": "文西小记",
-    "link": "https://aizni.cn",
-    "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640"
-  },
-  {
-    "name": "皮皮赖's Blog",
-    "link": "https://www.lp.fyi",
-    "avatar": "https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640"
-  },
-  {
-    "name": "不吐不快",
-    "link": "https://mianao.info",
-    "avatar": "https://mianao.info/img/icon.png"
-  },
-  {
-    "name": "Debug客栈",
-    "link": "https://debuginn.com",
-    "avatar": "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG"
-  },
-  {
-    "name": "星辰日记",
-    "link": "https://blog.xsot.cn",
-    "avatar": "https://img.iirose.cn/blog/logo.webp"
-  },
-  {
-    "name": "Hary的博客",
-    "link": "https://hary.cc/",
-    "avatar": "https://hary.cc/ico.png"
-  },
-  {
-    "name": "Highlight",
-    "link": "https://wanglin.blog",
-    "avatar": "https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg"
-  },
-  {
-    "name": "乙未博客",
-    "link": "https://www.yvii.cn",
-    "avatar": "https://www.yvii.cn/img/favicon.png"
-  },
-  {
-    "name": "Randwind’s blog",
-    "link": "https://www.randwind.com/",
-    "avatar": "https://www.randwind.com/wp-content/uploads/2023/11/logo.png"
-  },
-  {
-    "name": "十年之约",
-    "link": "https://www.foreverblog.cn/blog/577.html",
-    "avatar": "https://www.foreverblog.cn/favicon.ico"
-  },
-  {
-    "name": "开往",
-    "link": "https://www.travellings.cn/go.html",
-    "avatar": "/assets/img/travelling-dark.png"
-  },
-  {
-    "name": "个站商店",
-    "link": "https://storeweb.cn",
-    "avatar": "https://upload.storeweb.cn/image/logo.png"
-  },
-  {
-    "name": "博友圈",
-    "link": "https://www.boyouquan.com/about#add-link",
-    "avatar": "https://www.boyouquan.com/assets/images/sites/logo/logo-small.png"
-  },
-  {
-    "name": "BlogFinder",
-    "link": "https://bf.zzxworld.com/s/1187",
-    "avatar": "https://bf.zzxworld.com/images/favicon.png"
-  },
-  {
-    "name": "一只胖橘",
-    "link": "https://www.akitten.cn/",
-    "avatar": "https://www.akitten.cn/kitten.jpg"
-  },
-  {
-    "name": "布衣者",
-    "link": "https://www.mebyz.cn",
-    "avatar": "https://1.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=100"
-  },
-  {
-    "name": "鸟不拉诗",
-    "link": "https://niaobulashi.com/",
-    "avatar": "https://niaobulashi.com/favicon.ico"
-  },
-  {
-    "name": "熊孝兵",
-    "link": "https://wispx.cn",
-    "avatar": "https://gravatar.loli.net/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&d=mm&r=g"
-  },
-  {
-    "name": "芒果雪花汁",
-    "link": "https://www.wusongyong.com",
-    "avatar": "https://www.wusongyong.com/usr/uploads/2019/11/logo.png?tdsourcetag=s_pcqq_aiomsg"
-  }
-]
+{
+  "friends": [
+    [
+      "会打篮球的程序猿",
+      "http://www.lzhpo.com",
+      "https://img.gorpeln.top/p/friend_tx.jpeg"
+    ],
+    [
+      "关关和六六",
+      "https://www.gmcllp.cn",
+      "https://www.gmcllp.cn/favicon.ico"
+    ],
+    [
+      "忆梦小站",
+      "https://www.onyi.net",
+      "https://i.niupic.com/images/2023/08/20/bBVR.jpg"
+    ],
+    [
+      "UsubeniFantasy",
+      "https://ssshooter.com",
+      "https://ssshooter.com/logo.png"
+    ],
+    [
+      "文西小记",
+      "https://aizni.cn",
+      "https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640"
+    ],
+    [
+      "皮皮赖's Blog",
+      "https://www.lp.fyi",
+      "https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640"
+    ],
+    [
+      "不吐不快",
+      "https://mianao.info",
+      "https://mianao.info/img/icon.png"
+    ],
+    [
+      "Debug客栈",
+      "https://debuginn.com",
+      "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG"
+    ],
+    [
+      "星辰日记",
+      "https://blog.xsot.cn",
+      "https://img.iirose.cn/blog/logo.webp"
+    ],
+    [
+      "Hary的博客",
+      "https://hary.cc/",
+      "https://hary.cc/ico.png"
+    ],
+    [
+      "Highlight",
+      "https://wanglin.blog",
+      "https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg"
+    ],
+    [
+      "乙未博客",
+      "https://www.yvii.cn",
+      "https://www.yvii.cn/img/favicon.png"
+    ],
+    [
+      "Randwind’s blog",
+      "https://www.randwind.com/",
+      "https://www.randwind.com/wp-content/uploads/2023/11/logo.png"
+    ],
+    [
+      "十年之约",
+      "https://www.foreverblog.cn/blog/577.html",
+      "https://www.foreverblog.cn/favicon.ico"
+    ],
+    [
+      "开往",
+      "https://www.travellings.cn/go.html",
+      "/assets/img/travelling-dark.png"
+    ],
+    [
+      "个站商店",
+      "https://storeweb.cn",
+      "https://upload.storeweb.cn/image/logo.png"
+    ],
+    [
+      "博友圈",
+      "https://www.boyouquan.com/about#add-link",
+      "https://www.boyouquan.com/assets/images/sites/logo/logo-small.png"
+    ],
+    [
+      "BlogFinder",
+      "https://bf.zzxworld.com/s/1187",
+      "https://bf.zzxworld.com/images/favicon.png"
+    ],
+    [
+      "一只胖橘",
+      "https://www.akitten.cn/",
+      "https://www.akitten.cn/kitten.jpg"
+    ],
+    [
+      "布衣者",
+      "https://www.mebyz.cn",
+      "https://1.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=100"
+    ],
+    [
+      "鸟不拉诗",
+      "https://niaobulashi.com/",
+      "https://niaobulashi.com/favicon.ico"
+    ],
+    [
+      "熊孝兵",
+      "https://wispx.cn",
+      "https://gravatar.loli.net/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&d=mm&r=g"
+    ],
+    [
+      "芒果雪花汁",
+      "https://www.wusongyong.com",
+      "https://www.wusongyong.com/usr/uploads/2019/11/logo.png?tdsourcetag=s_pcqq_aiomsg"
+    ]
+  ]
+}
