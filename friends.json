@@ -1,6 +1,11 @@
 {
   "friends": [
     [
+      "gorpeln",
+      "https://gorpeln.top",
+      "https://gorpeln.top/favicon.ico"
+    ],
+    [
       "会打篮球的程序猿",
       "http://www.lzhpo.com",
       "https://img.gorpeln.top/p/friend_tx.jpeg"
@@ -37,7 +42,7 @@
     ],
     [
       "Debug客栈",
-      "https://debuginn.com",
+      "https://blog.debuginn.com/",
       "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG"
     ],
     [
