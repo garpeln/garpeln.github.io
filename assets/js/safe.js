@@ -7,7 +7,16 @@ function checkParent(element, classNames) {
     }
     return false;
 }
-var excludedClasses = ['card-link', 'link_item', 'contact-item', 'footer-item']; // 添加需要排除的a标签类名class
+
+// 添加需要排除的a标签类名class
+var excludedClasses = [
+    'link_item',        // 友链 & 留言
+    'friend-item',      // 首页 - 友情链接
+    'contact-item',     // 首页 - 个人档案
+    'footer-item',      // footer
+    'cf-article-title'  // 友链文章
+]; 
+
 window.addEventListener('load', (event) => {
     document.body.addEventListener('click', function(e) {
         let target = e.target;

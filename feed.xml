@@ -149,7 +149,11 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;p style=&quot;color: #888888;font-weight: 300&quot;&gt;原文链接：https://koobai.com/zhongjiantiaozhuan&lt;/p&gt;
+&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;&quot;&gt;参考链接：
+    &lt;div&gt;
+        https://koobai.com/zhongjiantiaozhuan
+    &lt;/div&gt;
+&lt;/div&gt;
 </description>
       </item>
     
@@ -199,6 +203,85 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;p&gt;感谢那些一直默默付出的贡献者们，这次空投给开源社区打了一剂振奋剂，也引来了不少别出心裁之人……
 还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。&lt;/p&gt;
 
+</description>
+      </item>
+    
+      <item>
+        <title>部署友链朋友圈</title>
+        <link>https://gorpeln.top/article/17049566482</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17049566482</guid>
+        <pubDate>2024-01-11</pubDate>
+        <description>&lt;h3 id=&quot;在线预览&quot;&gt;在线预览：&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/friends&quot;&gt;https://gorpeln.top/friends&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;github部署爬虫&quot;&gt;Github部署爬虫&lt;/h3&gt;
+&lt;p&gt;官方文档：&lt;a href=&quot;https://fcircle-doc.yyyzyyyz.cn/&quot;&gt;https://fcircle-doc.yyyzyyyz.cn/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;首先，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Import&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fork&lt;/code&gt;此项目 &lt;a href=&quot;https://github.com/Rock-Candy-Tea/hexo-circle-of-friends&quot;&gt;https://github.com/Rock-Candy-Tea/hexo-circle-of-friends&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;编辑&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/hexo_circle_of_friend/fc_settings.yaml&lt;/code&gt;文件。根据注释，修改此处配置&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LINK: [
+     { link: &quot;https://gorpeln.top/links/&quot;, theme: &quot;commen2&quot; },  
+     # 友链页地址，修改为你的友链页地址以及相应的主题，若无相应主题，尝试commen1或commen2。
+     ...
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;针对还未适配主题或者有定制需求的用户，可以开启&lt;strong&gt;配置项友链&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SETTINGS_FRIENDS_LINKS: {
+    enable: true,
+    json_api: &quot;https://xxxx.com/xxx.json&quot;,
+    # json_api：通过json格式配置友链，详见：https://fcircle-doc.yyyzyyyz.cn/#/developmentdoc?id=配置项json友链
+    list: []
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后点击仓库的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;，添加4个变量。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_NAME&lt;/code&gt;(Github用户名)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_EMAIL&lt;/code&gt;(Github账户邮箱)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;(Github密钥，具有repo以及workflow权限)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STORAGE_TYPE&lt;/code&gt;(数据库类型，填写sqlite)&lt;/p&gt;
+
+&lt;p&gt;完成后，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;General&lt;/code&gt;，勾选&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;permissions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow all actions and reusable workflows&lt;/code&gt;以及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Workflow permissions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Read and write permissions&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vercel部署api&quot;&gt;Vercel部署API&lt;/h3&gt;
+&lt;p&gt;新建项目，导入仓库，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Deploy&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;等自动部署完成后，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Environment Variables&lt;/code&gt;，添加4个变量，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_NAME&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_EMAIL&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;（同上），还需添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VERCEL_ACCESS_TOKEN&lt;/code&gt;(&lt;strong&gt;Vercel&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Tokens&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Create&lt;/strong&gt;)。&lt;/p&gt;
+
+&lt;h3 id=&quot;运行爬虫&quot;&gt;运行爬虫&lt;/h3&gt;
+&lt;p&gt;回到Github仓库，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update-friends-posts&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable workflow&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run workflow&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run workflow&lt;/code&gt;。爬虫会自动爬取文章，同时Vercel会自动重新部署。&lt;/p&gt;
+
+&lt;h3 id=&quot;绑定域名&quot;&gt;绑定域名&lt;/h3&gt;
+&lt;p&gt;vercel遭遇域名污染导致无法访问，友链朋友圈的vercel部署也会受到影响，可以通过解析到自定义域名来解决。&lt;/p&gt;
+
+&lt;p&gt;来到Vercel项目，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Domains&lt;/code&gt;，根据提示输入域名并设置DNS即可。&lt;/p&gt;
+
+&lt;p&gt;在链接后加上&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/all&lt;/code&gt;获取全部文章&lt;/p&gt;
+
+&lt;h3 id=&quot;挂载前端代码&quot;&gt;挂载前端代码&lt;/h3&gt;
+&lt;p&gt;博客新建一个页面，放入以下代码： &lt;br /&gt;
+其中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apiurl&lt;/code&gt;就上在vercel上部署绑定的域名&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- 挂载友链朋友圈的容器 --&amp;gt;
+&amp;lt;div id=&quot;cf-container&quot;&amp;gt;与主机通讯中……&amp;lt;/div&amp;gt;
+&amp;lt;!-- 加样式和功能代码 --&amp;gt;
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://fastly.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&quot;&amp;gt;
+&amp;lt;!-- 匹配自己的友链或加载后端数据 --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+  var fdataUser = {
+    //jsonurl: &apos;https://cdn.edui.fun/lmm.json&apos;,  //【推荐】json 匹配模式
+    apiurl: &apos;https://hexo-circle-of-friends-lmm214.vercel.app/&apos;,  //自部署api
+  }
+&amp;lt;/script&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://fastly.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;&quot;&gt;参考链接：
+    &lt;div&gt;
+        https://blog.stevenw.cc/archives/BMn51E3Y
+        &lt;br /&gt;
+        https://immmmm.com/hi-friends-circle
+    &lt;/div&gt;
+&lt;/div&gt;
 </description>
       </item>
     
@@ -2933,60 +3016,6 @@ sudo chown root:wheel GoogleSoftwareUpdate
 &lt;p&gt;// 例如 电脑管理员名称是 adminaa&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown adminaa:wheel GoogleSoftwareUpdate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-      </item>
-    
-      <item>
-        <title>研发说这个需求实现不了，为什么？</title>
-        <link>https://gorpeln.top/article/16610720911</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16610720911</guid>
-        <pubDate>2022-08-21</pubDate>
-        <description>&lt;h3 id=&quot;一需求原因&quot;&gt;一、需求原因&lt;/h3&gt;
-&lt;p&gt;研发对需求不认可，觉得需求不合理，这是最关键问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1）需求本身有问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;任何产品经理的需求方案都不会一直完美的，被研发提出问题也算正常，不需要慌，再次思考下这个点就好，将最合理的需求方案再次过会评审，达成一致。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2）需求本身没问题&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;产品经理可以发挥你的口才了，业务场景、用户、价值等这一些全部跟研发讲下，研发不像产品，很多时候他们不了解业务，尤其是B端，理解没那么强，角度跟你不一致，多解释下就好。&lt;/p&gt;
-
-&lt;p&gt;毕竟需求评审不单单是评审这个功能点，也需要让大家理解需求背后的原因。&lt;/p&gt;
-
-&lt;h3 id=&quot;二技术原因&quot;&gt;二、技术原因&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1）现有技术实现不了&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;现有的需求没有技术是实现不了的。真的说了这个的就是研发本身能力不够，当然了，我们需要解决问题，如果研发说这个，可以考虑换个替代方案，两边沟通好就行，产品经理也需要灵活处理事情。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2）现有技术可以实现，比较难&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;这就是一个优先级和排期的问题了，比较难就是给足时间嘛，如果比较重要的需求，产品经理就可以协调下排期，这个不是问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3）需要更改系统现有技术框架&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;比如一个中台系统，用了 FastAdmin 的集成框架开发，你的需求想要在里面加个视频效果、动画效果啥的，这可能就需要换框架了，采用一个前后端分离的来处理，这个就不好搞了。&lt;/p&gt;
-
-&lt;h3 id=&quot;三时间原因&quot;&gt;三、时间原因&lt;/h3&gt;
-&lt;p&gt;时间原因有两个，一是研发本身有需求在身，新的需求期望上线时间可能有影响；二是新的需求要求时间本身研发就满足不了。&lt;/p&gt;
-
-&lt;p&gt;两者其实都好沟通，说出来就好。这里有个建议，需求评审前，可以跟研发负责人先简单过一下，需求的开发工时，有个大致的了解在后面评审就会好很多。&lt;/p&gt;
-
-&lt;p&gt;当然，如果产品经理懂技术，在研发的工时评估上就更占据主动性，也会更合理，我是很提倡产品经理学习技术的，不求你可以写代码，至少能懂个大概。&lt;/p&gt;
-
-&lt;h3 id=&quot;四成本原因&quot;&gt;四、成本原因&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1）价值不高&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;因为一些比较初级的产品经理，可能对研发的时间成本考虑不完全，一些对用户价值确实不算高的需求，研发需求花很多时间开发，这就是个问题。&lt;/p&gt;
-
-&lt;p&gt;当研发跟你说了，你理解了他们的工时，就要去做改变，不要觉得他们反驳你就失落，这都是成长。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2）价值很高&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;还是跟前面一样，研发没有理解透彻，看起来很容易的功能，对业务方可能会节省很大一笔人力资源，还是那句话，需求评审不单单是评审这个功能点，也需要让大家理解需求背后的原因。&lt;/p&gt;
 
 </description>
       </item>

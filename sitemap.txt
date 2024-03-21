@@ -1,6 +1,7 @@
 
 https://gorpeln.top/article/17094338798
 https://gorpeln.top/article/17087779433
+https://gorpeln.top/article/17049566482
 https://gorpeln.top/article/17040105944
 https://gorpeln.top/article/17016025546
 https://gorpeln.top/article/16990919984
@@ -166,6 +167,7 @@ https://gorpeln.top/apple-app-site-association
 https://gorpeln.top/archives
 https://gorpeln.top/categories
 https://gorpeln.top/feed.xml
+https://gorpeln.top/friends
 https://gorpeln.top/friends.json
 https://gorpeln.top/go-wild
 https://gorpeln.top/links
@@ -189,7 +191,6 @@ https://gorpeln.top/search/js/cb-search.js
 https://gorpeln.top/sitemap.txt
 https://gorpeln.top/sitemap.xml
 https://gorpeln.top/tags
-https://gorpeln.top/targetPage
 https://gorpeln.top/terms
 https://gorpeln.top/timeline
 https://gorpeln.top/vipAgreement

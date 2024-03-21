@@ -1203,7 +1203,7 @@ a:hover, a:focus {
 
 .qrcodeImg {
     width: 160px;
-    height: 160px;
+    height: 200px;
     background: #E6E6FA;
     position: fixed;
     bottom: 80px;
@@ -1219,6 +1219,14 @@ a:hover, a:focus {
 
 .qrcodeMoveTopTop{
     bottom: 180px;
+}
+.scan-text{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:0.9em;
+    color:#333;
 }
 /*
 #backtotop a:hover{
