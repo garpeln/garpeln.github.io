@@ -14,7 +14,8 @@ var excludedClasses = [
     'friend-item',      // 首页 - 友情链接
     'contact-item',     // 首页 - 个人档案
     'footer-item',      // footer
-    'cf-article-title'  // 友链文章
+    'cf-article-title', // 友链文章
+    'search-btn'        // 搜索按钮
 ]; 
 
 window.addEventListener('load', (event) => {

@@ -166,6 +166,8 @@ https://gorpeln.top/ads.txt
 https://gorpeln.top/apple-app-site-association
 https://gorpeln.top/archives
 https://gorpeln.top/categories
+https://gorpeln.top/copyright
+https://gorpeln.top/declaration
 https://gorpeln.top/feed.xml
 https://gorpeln.top/friends
 https://gorpeln.top/friends.json
@@ -177,11 +179,9 @@ https://gorpeln.top/mysite
 https://gorpeln.top/name
 https://gorpeln.top/nav
 https://gorpeln.top/note
+https://gorpeln.top/privacy-blog
 https://gorpeln.top/privacy
 https://gorpeln.top/protocol
-https://gorpeln.top/protocol_copyright_blog
-https://gorpeln.top/protocol_disclaimers_blog
-https://gorpeln.top/protocol_privacy_blog
 https://gorpeln.top/resume
 https://gorpeln.top/robots.txt
 https://gorpeln.top/search/cb-search.json

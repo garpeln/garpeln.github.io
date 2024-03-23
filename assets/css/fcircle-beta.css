@@ -23,10 +23,10 @@ Last Modified time : 20220211 98:00 by https://immmmm.com
 }
 /* 基本信息 */
 #cf-state {font-size:16px;border-radius:8px;box-shadow:none;max-width:810px;margin:auto;overflow:hidden;display:flex;flex-direction:row;flex-wrap:wrap;padding:8px 0;}
-.cf-state-data {width:100%;display:flex;}
+.cf-state-data {width:100%;display:flex;padding-top: 8px;}
 .cf-data-friends,.cf-data-active,.cf-data-article{height:60px;background:transparent;display:flex;flex-direction:column;width:33%;cursor:pointer;}
-.cf-label {font-size:16px;padding:0 3%;align-self:center;text-align:center;width:100%;height:30px;}
-.cf-message{align-self:center;text-align:center;padding:0 3%;width:50%;font-size:20px;}
+.cf-label {font-size:16px;padding:0 3%;align-self:center;text-align:center;width:100%;height:30px;color:#333;}
+.cf-message{align-self:center;text-align:center;padding:0 3%;width:50%;font-size:20px;color:#666}
 /* 排序按钮 */
 #cf-change{font-size:14px;display:block;padding:12px 0 4px;width:100%;text-align:center;}
 /* 更多按钮 */
