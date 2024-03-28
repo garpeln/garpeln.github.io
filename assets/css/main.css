@@ -433,7 +433,7 @@ li.article a:hover,li.article a:focus{
     text-decoration: none;
     font-size: 1em;
     margin-bottom: 0.5em;
-    margin-top: 1em;
+    margin-top: 0.64em;
     display: flex; /* 使用flex布局，确保span和a在同一行 */
     align-items: center; /* 垂直居中对齐 */
 }
