@@ -384,11 +384,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3140天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3146天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-03-28 09:43:15 +0800">2024/03/28</p>
+                                    <p id="current-date" data-value="2024-04-03 18:14:33 +0800">2024/04/03</p>
                                 </li>
                             </ul>
                     </div>
@@ -798,12 +798,14 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
   
   <div class="livere">
     <!-- page、post、about、links、works -->
+<!-- waline.js、waline.js.map、waline.css、waline.css.map -->
+<!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
 <head>
-    <script src='/assets/js/waline.js'></script>
     <link href='/assets/css/waline.css' rel='stylesheet' />
 </head>
 
 <style>
+
 .wl-comment {
     position: relative;
     display: flex;
@@ -876,7 +878,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
     font-size: 1.0em;
 }
 
-
 .wl-btn {
     display: inline-block;
     vertical-align: middle;
@@ -897,6 +898,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 .wl-btn.primary {
     margin-right: 10px;
 }
+
 .wl-footer {
     margin-bottom: 20px;
 }
@@ -1023,8 +1025,9 @@ textarea::placeholder {
           reactionTitle: '你认为这篇文章怎么样？',
         };
 
+        import { init } from '/assets/js/waline.js';
 
-       Waline.init({
+       init({
             el: '#waline',
             serverURL: 'https://waline.339336.xyz',
             lang: 'zh-CN',
@@ -1379,7 +1382,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 220 + '天';
+  element.innerHTML = 8 + '年' + 226 + '天';
 
 }
 
@@ -1388,7 +1391,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3140 + '天';
+    element.innerHTML = 3146 + '天';
 }
 
 
