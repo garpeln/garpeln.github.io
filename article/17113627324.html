@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Chrome插件 | gorpeln的个人博客 - gorpeln</title>
+  <title>App更新总提醒缺少出口合规证明 | gorpeln的个人博客 - gorpeln</title>
 
-  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,Chrome,插件,Adblock,QRcode,Chrono,Fatkun,Infinity,Linkclump" />
-  <meta name="description" content="文章于2023-12-05 15:08:51 更新">
+  <meta name="keywords" content="gorpeln,个人博客,gpchen,风未止,iOS,陈冠鹏,时光本,App Store Connect,上架,更新,出口,合规证明" />
+  <meta name="description" content="问题每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。">
 
   <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
   <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
 
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="canonical" href="/article/15178011950">
+  <link rel="canonical" href="/article/17113627324">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
   <script async src="https://umami.339336.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -398,13 +398,13 @@
                     <div class="page-content" id="pjax"><div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Chrome插件</h1>
+    <h1 class="post-title">App更新总提醒缺少出口合规证明</h1>
   	<div class="info">
   	        时间：
-  	        <text style="padding-top: 0;">2018-02-05</text>&nbsp;&nbsp;&nbsp;&nbsp;
+  	        <text style="padding-top: 0;">2024-03-25</text>&nbsp;&nbsp;&nbsp;&nbsp;
   	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-  	            MacOS
+  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+  	            iOS
   	        </a>
   	        &nbsp;&nbsp;&nbsp;&nbsp;
   	        标签：
@@ -412,35 +412,23 @@
   	        <span class="index-post-tag">
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#Chrome"  target="_blank">Chrome</a>
+  	                <a class="pjaxlink" href="/tags#App Store Connect"  target="_blank">App Store Connect</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#插件"  target="_blank">插件</a>
+  	                <a class="pjaxlink" href="/tags#上架"  target="_blank">上架</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#Adblock"  target="_blank">Adblock</a>
+  	                <a class="pjaxlink" href="/tags#更新"  target="_blank">更新</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#QRcode"  target="_blank">QRcode</a>
+  	                <a class="pjaxlink" href="/tags#出口"  target="_blank">出口</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#Chrono"  target="_blank">Chrono</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Fatkun"  target="_blank">Fatkun</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Infinity"  target="_blank">Infinity</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Linkclump"  target="_blank">Linkclump</a>
+  	                <a class="pjaxlink" href="/tags#合规证明"  target="_blank">合规证明</a>
   	                
   	            
   	        </span>
@@ -449,59 +437,20 @@
   </header>
 
   <article class="post-content">
-    <p><code class="language-plaintext highlighter-rouge">文章于2023-12-05 15:08:51 更新</code></p>
+    <h3 id="问题">问题</h3>
+<p>每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。</p>
 
-<p>常用的Chrome插件汇总备忘：</p>
+<p><img src="https://img.gorpeln.top/blog/20240325183212921.png!gorpeln" alt="20240325183212921" /></p>
 
-<p><strong>1、<a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb">Adblock Plus</a></strong> <br />
-　　Adblock Plus 是拥有超过 5 亿次下载的全球最受欢迎的广告拦截软件之一。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>其实在xcode中修改应用的plist来让你在提交之前就告知Apple合规证明这个事情。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180205112635158.jpg!gorpeln" alt="20180205112635158" /></p>
+<p>添加<code class="language-plaintext highlighter-rouge">ITSAppUsesNonExemptEncryption</code>，键设置为<code class="language-plaintext highlighter-rouge">false</code>即可。</p>
 
-<p><strong>2、<a href="https://chromewebstore.google.com/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8-quick-qr/afpbjjgbdimpioenaedcjgkaigggcdpp?hl=zh-CN&amp;utm_source=ext_sidebar">二维码生成器 (Quick QR)</a></strong>   <br />
-　　可以方便地把当前页面转化成二维码，也可以把网页上任何文本或链接，甚至是您输入的任意内容都转化成二维码 <br />
-　　 
-<img src="https://img.gorpeln.top/blog/20180205112635167_2-1.png!gorpeln" alt="20180205112635167_2" /></p>
+<p><img src="https://img.gorpeln.top/blog/20240325183212922.png!gorpeln" alt="20240325183212922" /></p>
 
-<p><strong>3、<a href="https://chromewebstore.google.com/detail/%E5%9C%A8%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%AE%A1%E7%90%86%E5%99%A8-%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%99%A8/opjjpmhoiojifppkkcdabiobhakljdgm">在线下载管理器 - 视频下载器</a></strong><br />
-　　Chrome在线管理器是多功能快速文件下载工具  <br />
-<img src="https://img.gorpeln.top/blog/20180205112635159_2.png!gorpeln" alt="20180205112635159_2" /></p>
-
-<p><strong>4、<a href="https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf">Fatkun图片批量下载</a></strong>  <br />
-　　找出当前页面的所有图片，提供按分辨率、链接等筛选图片，做一个简单好用的下载图片扩展！ <br />
-　　
-<img src="https://img.gorpeln.top/blog/20180205112635161.jpg!gorpeln" alt="20180205112635161" /></p>
-
-<p><strong>5、<a href="https://chromewebstore.google.com/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E5%85%8D%E8%B4%B9chatgpt/mhloojimgilafopcmlcikiidgbbnelip">iTab新标签页</a></strong><br />
-　　iTab 组件式图标自定义您的浏览器的标签页，精美日历、炫酷天气、每日头条、海量壁纸、常用网址随心订制，并有免费ChatGpt功能。</p>
-
-<p><img src="https://img.gorpeln.top/blog/20180205112635164_2.jpeg!gorpeln" alt="20180205112635164_2" /></p>
-
-<p><strong>6、<a href="https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh">Dark Reader</a></strong></p>
-
-<p>　　适用于所有网站的暗色主题。关爱眼睛，就使用 Dark Reader 进行日常浏览  <br />
-　　
-<img src="https://img.gorpeln.top/blog/20180205112635168_2.png!gorpeln" alt="20180205112635168_2" /></p>
-
-<p><strong>7、<a href="https://chromewebstore.google.com/detail/mgamelhnfokapndfdodnmfiningckjia">Clickable Links</a></strong>  <br />
-　　将不可点击的网址和电子邮件地址变成可点击的。我们将它们联系起来！</p>
-
-<p><img src="https://img.gorpeln.top/blog/20180205112635162_2.png!gorpeln" alt="20180205112635162_2" /></p>
-
-<p><strong>8、<a href="https://chromewebstore.google.com/detail/get-favicon/gpipahagclehninhhjkhbkliinfofnhe">Get Favicon</a></strong> <br />
-　　此扩展程序显示当前页面的图标以及图标的 URL 和尺寸。</p>
-
-<p><img src="https://img.gorpeln.top/blog/20180205112635163_2.png!gorpeln" alt="20180205112635163_2" /></p>
-
-<p><strong>9、<a href="https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo">篡改猴</a></strong> <br />
-　　篡改猴是一款功能强大的浏览器扩展功能，拥有超过1000万用户，可以在网站上运行用户脚本，从而提升您的浏览体验。许多中国用户称篡改猴为油猴。</p>
-
-<p><img src="https://img.gorpeln.top/blog/20180205112635160_2.png!gorpeln" alt="20180205112635160_2" /></p>
-
-<p><strong>10、<a href="https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj">Linkclump</a></strong><br />
-　　允许您同时打开，复制或书签多个链接</p>
-
-<p><img src="https://img.gorpeln.top/blog/20180205112635165.png!gorpeln" alt="20180205112635165" /></p>
+<h3 id="效果">效果</h3>
+<p><img src="https://img.gorpeln.top/blog/20240325183212923.png!gorpeln" alt="20240325183212923" /></p>
 
 
   </article>
@@ -510,19 +459,15 @@
 
   <div class="copyright">
   	<div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
-		<div>本文链接：<a href="https://gorpeln.top/article/15178011950">https://gorpeln.top/article/15178011950</a></div>
+		<div>本文链接：<a href="https://gorpeln.top/article/17113627324">https://gorpeln.top/article/17113627324</a></div>
 </div>
 </div>
 
   <div class="prevandnext">
     	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15204862561" title="短信验证码防刷机制" style="color: #6666cc;font-size: 0.9em;"  target="_blank">短信验证码防刷机制</a>
-	    </div>
-	  
   	  
 	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15166860457" title="Jekyll 使用" style="color: #6666cc;font-size: 0.9em;"  target="_blank">Jekyll 使用</a>
+	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/17094338798" title="外链跳转到中间页" style="color: #6666cc;font-size: 0.9em;"  target="_blank">外链跳转到中间页</a>
 	    </div>
 	  
 	 
@@ -812,7 +757,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15178011950')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17113627324')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">

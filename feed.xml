@@ -6,6 +6,29 @@
     <description>记录技术上的成长以及生活里的点点滴滴...</description>
     
       <item>
+        <title>App更新总提醒缺少出口合规证明</title>
+        <link>https://gorpeln.top/article/17113627324</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17113627324</guid>
+        <pubDate>2024-03-25</pubDate>
+        <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+&lt;p&gt;每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212921.png!gorpeln&quot; alt=&quot;20240325183212921&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;解决方法&quot;&gt;解决方法&lt;/h3&gt;
+&lt;p&gt;其实在xcode中修改应用的plist来让你在提交之前就告知Apple合规证明这个事情。&lt;/p&gt;
+
+&lt;p&gt;添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ITSAppUsesNonExemptEncryption&lt;/code&gt;，键设置为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt;即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212922.png!gorpeln&quot; alt=&quot;20240325183212922&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;效果&quot;&gt;效果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212923.png!gorpeln&quot; alt=&quot;20240325183212923&quot; /&gt;&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
         <title>外链跳转到中间页</title>
         <link>https://gorpeln.top/article/17094338798</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17094338798</guid>
@@ -2978,45 +3001,6 @@ return buf;
 &lt;p&gt;然后，refcode.h 就没地方能找到了。
 到处都写，无处会读
 至少要把一个变量弄成这样：到处被设置，但是几乎没有哪里用到它。不幸的是，现代编译器通常会阻止你做相反的事：到处读，没处写。不过你在 C 或 C++ 里还是可以这样做的。&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>关闭谷歌浏览器更新 Mac</title>
-        <link>https://gorpeln.top/article/16621400624</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16621400624</guid>
-        <pubDate>2022-09-03</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422271.png!gorpeln&quot; alt=&quot;20220903013422271&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;终端中输入命令：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Library/Google/GoogleSoftwareUpdate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422272.png!gorpeln&quot; alt=&quot;20220903013422272&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上面的目录如果不存在，执行下面的命令&lt;br /&gt;
-修改文件夹GoogleSoftwareUpdate的拥有者，阻止谷歌对其的写入权限      &lt;br /&gt;
-终端中输入命令：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/Library/Google 
-sudo chown root:wheel GoogleSoftwareUpdate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422273.png!gorpeln&quot; alt=&quot;20220903013422273&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20220903013422274.png!gorpeln&quot; alt=&quot;20220903013422274&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;设置后还是有更新的标志，卸载谷歌浏览器，下载了最新的谷歌浏览器重新安装。&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;恢复操作恢复谷歌浏览器自动更新设置，终端中输入命令：&lt;br /&gt;
-// 恢复文件夹的拥有者是本人，恢复文件夹的写入权限&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown [自己电脑的管理员名称-admin]:wheel GoogleSoftwareUpdate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;// 例如 电脑管理员名称是 adminaa&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown adminaa:wheel GoogleSoftwareUpdate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 </description>
       </item>
     
