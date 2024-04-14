@@ -28,7 +28,7 @@ window.addEventListener('load', (event) => {
             !checkParent(target, excludedClasses) &&
             !target.href.includes('gorpeln.top') &&
             !target.href.includes('gorpeln.eu.org') &&
-            !target.href.includes('339336.xyz') &&
+            !target.href.includes('202090.xyz') &&
             !target.href.includes('lab.gorpeln.top') &&
             !target.href.includes('github.com') &&
             target.hostname !== window.location.hostname) {
