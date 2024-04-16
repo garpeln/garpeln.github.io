@@ -382,6 +382,6 @@ function initFriendCircle(sortNow,changeUrl){
     console.log("第一次加载完成")
   }
 }
-
+clearLocal()
 // 执行初始化
 initFriendCircle(sortNow)
