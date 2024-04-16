@@ -146,7 +146,7 @@ function fetchNextArticle(){
   if(start <  articleNum){
     UrlNow = localStorage.getItem("urlNow")
     var fetchUrl = UrlNow+"rule="+sortNow+"&start="+start+"&end="+end
-    //console.log(fetchUrl)
+    console.log(fetchUrl)
     fetch(fetchUrl)
       .then(res => res.json())
       .then(json =>{
