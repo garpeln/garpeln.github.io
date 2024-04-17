@@ -1890,7 +1890,7 @@ div.gavatar a:hover {
 }
 
 .page-content {
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
     min-height: 50em;
     margin-bottom: 1em;
     border-radius: 7px;
