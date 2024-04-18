@@ -10,12 +10,13 @@ function checkParent(element, classNames) {
 
 // 添加需要排除的a标签类名class
 var excludedClasses = [
-    'link_item',        // 友链 & 留言
-    'friend-item',      // 首页 - 友情链接
-    'contact-item',     // 首页 - 个人档案
-    'footer-item',      // footer
-    'cf-article-title', // 友链文章
-    'search-btn'        // 搜索按钮
+    'link_item',            // 友链 & 留言
+    'friend-item',          // 首页 - 友情链接
+    'contact-item',         // 首页 - 个人档案
+    'footer-item',          // footer
+    'cf-article-title',     // 友链文章
+    'search-btn',           // 搜索按钮
+    'safe-item-auto-load'   // 其他 博客记录
 ]; 
 
 window.addEventListener('load', (event) => {
