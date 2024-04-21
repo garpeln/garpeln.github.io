@@ -203,6 +203,15 @@ nav[data-state="open"] ul li:nth-child(4) {
   width: 100%;
 }
 
+.footer-img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.container {
+    padding-bottom:8em;
+}
 @media screen and (max-width: 768px) {
   body {
     display: block;
