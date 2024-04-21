@@ -67,7 +67,7 @@ Last Modified time : 20220211 98:00 by https://immmmm.com
 .cf-overshow .cf-overshow-content{padding:10px 15px 30px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;background: #fff;}
 #cf-overshow .cf-overshow-close{position:sticky;display: block;width:100%;height:100%;}
 /* 颜色 */
-.cf-article .cf-article-title:hover{letter-spacing:2px;color:var(--lmm-hover) !important;}
+.cf-article .cf-article-title:hover{letter-spacing:2px;color:#6666cc !important;}
 #cf-more i.fas:hover{color:var(--lmm-hover);}
 #cf-state,#cf-more {background:var(--lmm-background);color:var(--lmm-fontcolor);}
 #cf-change,.cf-time-updated,.cf-time-created,.cf-article-floor{color:var(--lmm-floorcolor);}
