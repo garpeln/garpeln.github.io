@@ -218,7 +218,7 @@ nav[data-state="open"] ul li:nth-child(4) {
   }
 
   .container {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
