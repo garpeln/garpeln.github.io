@@ -152,7 +152,7 @@
                         <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
                         <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
                         <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
-                        <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+                        <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
                     </ul>
                 </li>
             </ul>
@@ -384,11 +384,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3164天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3165天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-04-21 19:57:20 +0800">2024/04/21</p>
+                                    <p id="current-date" data-value="2024-04-22 16:24:52 +0800">2024/04/22</p>
                                 </li>
                             </ul>
                     </div>
@@ -1619,17 +1619,12 @@ TCP通讯是需要三次握手的，就神似这张截图，确保对方在线�
 <script type="text/javascript" src="/assets/js/toc.js"></script>
 <script type="text/javascript" src="/assets/js/safe.js"></script>
 <!-- search -->
-<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
-      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+<div class="cb-search-tool" id="cb-close-btn">
     <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
-    <div style="position: fixed; top: 2.5em; right: 2.5em;">
-        <img src="/assets/img/search_close.png" id="cb-close-btn" />
-    </div>
 </div>
 <link rel="stylesheet" href="/search/css/cb-search.css">
 <script src="/search/js/bootstrap3-typeahead.min.js"></script>
 <script src="/search/js/cb-search.js"></script>
-<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
 <!-- 动态显示网站运行时间 -->
 <script language=javascript>
 
@@ -1863,7 +1858,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 244 + '天';
+  element.innerHTML = 8 + '年' + 245 + '天';
 
 }
 
@@ -1872,7 +1867,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3164 + '天';
+    element.innerHTML = 3165 + '天';
 }
 
 
