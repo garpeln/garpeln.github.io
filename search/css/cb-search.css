@@ -37,11 +37,13 @@
                 /* 子元素垂直居中 */
             }
 
-     .cb-search-tool ul li a {
-             white-space: nowrap;
+            .cb-search-tool ul li a {
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-\            }
+                \
+            }
+
             .cb-search-tool ul li a strong {
                 color: #27ae60;
             }
@@ -79,7 +81,7 @@
             .dropdown-menu {
                 position: relative;
                 float: none;
-                font-size: 20px;
+                font-size: 1em;
                 width: 70%;
                 margin: 0 2%;
             }
@@ -93,12 +95,12 @@
                 background-color: rgba(0, 0, 0, 0.85);
                 z-index: 9999;
                 display: none;
-                width:100%;
+                width: 100%;
             }
 
 
 
-.cb-search-tool ul {
+            .cb-search-tool ul {
                 width: 88%;
                 white-space: nowrap;
                 overflow: hidden;
@@ -106,7 +108,7 @@
                 margin-top: 10px;
                 border-radius: 12px;
                 padding: 0;
-                margin-left:6%;
+                margin-left: 6%;
             }
 
             .cb-search-tool ul li {
@@ -119,11 +121,12 @@
             }
 
 
-     .cb-search-tool ul li a {
-             white-space: nowrap;
+            .cb-search-tool ul li a {
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-\            }
+                \
+            }
 
             .cb-search-tool ul li a strong {
                 color: #27ae60;
@@ -148,7 +151,7 @@
                 top: 10%;
                 left: auto;
                 right: auto;
-                font-size: 20px;
+                font-size: 1em;
                 height: 60px;
                 background-color: #fff;
                 color: black;
