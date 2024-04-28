@@ -392,7 +392,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-04-28 15:35:06 +0800">2024/04/28</p>
+                                    <p id="current-date" data-value="2024-04-28 15:37:09 +0800">2024/04/28</p>
                                 </li>
                             </ul>
                     </div>
@@ -1499,7 +1499,7 @@ fetchData();
 
 async function fetchData() {
     try {
-        const response = await fetch('https://my-api-sage.vercel.app/api/blogNotice');
+        const response = await fetch('https://api.339336.xyz/api/blogNotice');
         const data = await response.json();
 
         if (data.length > 0 && data[0].isShow) {
