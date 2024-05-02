@@ -205,7 +205,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">161</span>
+                                    <span class="site-state-item-count">162</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -217,7 +217,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">627</span>
+                                    <span class="site-state-item-count">632</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -234,11 +234,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">627
+                                <span class="articleCount">632
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">161
+                                <span class="articleCount">162
                                         </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -319,7 +319,7 @@
                             
                             <li onclick="pushNew('/categories#教程福利')" class="categoryList">
                                 <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
-                                <a name="教程福利" style="" class="articleCount">4
+                                <a name="教程福利" style="" class="articleCount">5
                                 </a>
                             </li>
                             
@@ -374,11 +374,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >161</p>
+                                    <p >162</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>85.9k</p> 
+                                    <p>86.4k</p> 
 
                                 </li>
                                 <li>
@@ -392,7 +392,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 10:44:11 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-02 19:34:26 +0800">2024/05/02</p>
                                 </li>
                             </ul>
                     </div>
@@ -443,7 +443,26 @@
   <article class="post-content">
     <p><br /></p>
 
-<p>博客目标：<strong>简洁</strong>、<strong>高效</strong>。</p>
+<script src="/assets/js/typed.min.js"></script>
+
+<div style="text-align:left;font-size:2rem;">
+<text style="font-size:1.6rem;">博客目标：</text><strong id="typed3"></strong>
+
+</div>
+<script data-pjax="">
+  try {
+    var typed3 = new Typed("#typed3", {
+    strings: ['简洁、高效'],//字符串 ['我想说：我','我想说：爱','我想说：你']
+    startDelay: 10,//开始的延迟
+    typeSpeed: 200,//打字速度
+    backSpeed: 100,//回退速度
+    loop: true,//是否循环
+    showCursor: true,//显示游标
+    smartBackspace: true, //默认true
+    });
+  } catch (err) {
+  }
+</script>
 
 <p><br /></p>
 <div class="desItem"><span class="time">2024-03-21</span>修改<a href="/links" target="_blank">友链页面</a>，添加<a href="/friends" target="_blank">友链文章</a></div>

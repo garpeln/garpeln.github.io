@@ -205,7 +205,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">161</span>
+                                    <span class="site-state-item-count">162</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -217,7 +217,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">627</span>
+                                    <span class="site-state-item-count">632</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -234,11 +234,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">627
+                                <span class="articleCount">632
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">161
+                                <span class="articleCount">162
                                         </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -319,7 +319,7 @@
                             
                             <li onclick="pushNew('/categories#教程福利')" class="categoryList">
                                 <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
-                                <a name="教程福利" style="" class="articleCount">4
+                                <a name="教程福利" style="" class="articleCount">5
                                 </a>
                             </li>
                             
@@ -374,11 +374,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >161</p>
+                                    <p >162</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>85.9k</p> 
+                                    <p>86.4k</p> 
 
                                 </li>
                                 <li>
@@ -392,14 +392,16 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 10:44:11 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-02 19:34:26 +0800">2024/05/02</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="home" style="border-radius: 10px;">
+                    <div class="page-content" id="pjax"><script src="/assets/js/typed.min.js"></script>
+
+<div class="home" style="border-radius: 10px;">
     <h1 class="tag-name">关于我</h1>
     <p class="des">
         一个涉猎广泛且致力于成为一名架构师的狂热的iOS程序猿，充满新奇的想法并正在付诸于实际，幻想着有一天能升职加薪，当上总经理，出任CEO，迎娶白富美，走上人生巅峰！
@@ -451,7 +453,8 @@
     <p style="text-indent: 2em;margin-top: 1em;"><a href="/article/15462756619" style="color: #6666cc;font-size: 16px;" target="_blank">博客成长记录......</a></p>
     <br>
     <h1 class="tag-name">人生格言</h1>
-    <p class="des">趁年轻，做自己想做的！</p>
+    <!-- <p class="des" id="slogan">趁年轻，做自己想做的！</p> -->
+    <text  class="des" id="slogan" style="margin-left:2em;"></text>
     <p class="des">There is no best, only better!</p>
     <br>
     <h1 class="tag-name">特别声明</h1>
@@ -808,6 +811,23 @@ function hideImg() {
     document.getElementById("wxImg").style.display = 'none';
 }
 </script>
+
+
+<script data-pjax>
+  try {
+    var typed3 = new Typed("#slogan", {
+    strings: ['趁年轻，做自己想做的！'],//字符串 ['我想说：我','我想说：爱','我想说：你']
+    startDelay: 0,//开始的延迟
+    typeSpeed: 200,//打字速度
+    backSpeed: 100,//回退速度
+    loop: true,//是否循环
+    showCursor: true,//显示游标
+    smartBackspace: true, //默认true
+    });
+  } catch (err) {
+  }
+</script>   
+
 <style>
 h1::after {
     transition: all .35s;

@@ -6,6 +6,55 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
+        <title>衣服的洗涤保养说明</title>
+        <link>https://gorpeln.top/article/17123887439</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17123887439</guid>
+        <pubDate>2024-04-06</pubDate>
+        <description>&lt;p&gt;你认真读过衣服上的洗衣符号嘛？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142831.png!gorpeln&quot; alt=&quot;20240502170142831&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一般来说，主要有以下几类&lt;/p&gt;
+&lt;h3 id=&quot;水洗&quot;&gt;水洗&lt;/h3&gt;
+&lt;p&gt;基本符号是一个水盆&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142832.png!gorpeln&quot; alt=&quot;20240502170142832&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;漂白&quot;&gt;漂白&lt;/h3&gt;
+&lt;p&gt;基本符号是一个三角形
+&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142833.png!gorpeln&quot; alt=&quot;20240502170142833&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;干燥&quot;&gt;干燥&lt;/h3&gt;
+&lt;h4 id=&quot;自然干燥&quot;&gt;自然干燥&lt;/h4&gt;
+&lt;p&gt;自然干燥也就是悬挂晾干，基本符号是一个正方形
+&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142834.png!gorpeln&quot; alt=&quot;20240502170142834&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;翻转干燥&quot;&gt;翻转干燥&lt;/h4&gt;
+&lt;p&gt;翻转干燥也就是烘干，正方形里面有个圆圈，也叫转笼翻转干燥&lt;/p&gt;
+
+&lt;p&gt;圆点表示所允许的最高温度，一个圆点为较低温度（60℃），两个圆点为常规温度（80℃）。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142835.png!gorpeln&quot; alt=&quot;20240502170142835&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;熨烫&quot;&gt;熨烫&lt;/h3&gt;
+&lt;p&gt;基本符号是个熨斗&lt;/p&gt;
+
+&lt;p&gt;圆点表示熨斗底板的最高温度，一个圆点为110℃，二个圆点为150℃，三个圆点为200℃。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142836.png!gorpeln&quot; alt=&quot;20240502170142836&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;专业纺织品维护&quot;&gt;专业纺织品维护&lt;/h3&gt;
+&lt;p&gt;基本符号为圆圈或圆形。包括专业干洗和专业湿洗&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142837.png!gorpeln&quot; alt=&quot;20240502170142837&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;end&quot;&gt;END&lt;/h3&gt;
+&lt;p&gt;所以，最开始那个标签表示&lt;/p&gt;
+
+&lt;p&gt;最高30度，常规洗涤程序，不可漂白，悬挂晾干，熨烫熨斗底板最高温度110℃，不可干洗&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
         <title>倒计时关闭的JS 公告</title>
         <link>https://gorpeln.top/article/17123887436</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17123887436</guid>
@@ -2087,438 +2136,6 @@ pkg list-installed              # 列出已经安装的包
 pkg show &amp;lt;package&amp;gt;              # 显示某个包的详细信息
 pkg files &amp;lt;package&amp;gt;             # 显示某个包的相关文件夹路径
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>GitHub Actions</title>
-        <link>https://gorpeln.top/article/16682372627</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16682372627</guid>
-        <pubDate>2022-11-12</pubDate>
-        <description>&lt;h3 id=&quot;一github-action-简介&quot;&gt;一、GitHub Action 简介&lt;/h3&gt;
-
-&lt;h4 id=&quot;什么是github-action-&quot;&gt;什么是Github Action ?&lt;/h4&gt;
-&lt;p&gt;GitHub Actions是一个持续集成和持续交付的平台，它可以帮助你通过自动化的构建（包括编译、发布、自动化测试）来验证你的代码，从而尽快地发现集成错误。github于2019年11月后对该功能全面开放，现在所有的github用户可以直接使用该功能。GitHub 提供 Linux、Windows 和 macOS 虚拟机来运行您的工作流程，或者您可以在自己的数据中心或云基础架构中托管自己的自托管运行器。在使用Github Action之前首先需要了解以下前置知识:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;持续集成/持续交付的概念。&lt;/li&gt;
-  &lt;li&gt;Git相关知识。&lt;/li&gt;
-  &lt;li&gt;Linux或Windows或macOS脚本相关知识。&lt;/li&gt;
-  &lt;li&gt;Yaml基础语法。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;什么是yaml-&quot;&gt;什么是Yaml ?&lt;/h4&gt;
-&lt;p&gt;编写Github Action的流程时，需要创建一个workflow工作流，workflow必须存储在你的项目库根路径下的.github/workflows目录中，每一个 workflow对应一个具体的.yml 文件（或者 .yaml）。&lt;br /&gt;
-yml是YAML（YAML Ain’t Markup Language）语言的文件，以数据为中心，比properties、xml等更适合做配置文件，主要有以下几个特点:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;大小写敏感。&lt;/li&gt;
-  &lt;li&gt;使用缩进表示层级关系。&lt;/li&gt;
-  &lt;li&gt;缩进只能使用空格，不能用 TAB 字符。&lt;/li&gt;
-  &lt;li&gt;缩进的空格数量不重要，只要层级相同的元素左对齐即可。&lt;/li&gt;
-  &lt;li&gt;‘#’ 表示注释。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;github-action基本概念&quot;&gt;Github Action基本概念&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;workflow&lt;/code&gt;: 一个 workflow 就是一个完整的工作流过程，每个workflow 包含一组 jobs任务。&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;job&lt;/code&gt; : jobs任务包含一个或多个job ，每个 job包含一系列的 steps 步骤。&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step&lt;/code&gt; : 每个 step 步骤可以执行指令或者使用一个 action 动作。&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action&lt;/code&gt; : 每个 action 动作就是一个通用的基本单元。&lt;/p&gt;
-
-&lt;h4 id=&quot;github-action-的使用限制&quot;&gt;Github Action 的使用限制&lt;/h4&gt;
-&lt;p&gt;在使用免费版本的Github Action是有如下限制的:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;作业执行时间&lt;/code&gt; - 工作流中的每个作业最多可以运行 6 小时的执行时间。如果作业达到此限制，该作业将终止且无法完成。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;工作流运行时间&lt;/code&gt; - 每个工作流运行限制为 35 天。如果工作流运行达到此限制，则工作流运行将被取消。此时间段包括执行持续时间以及等待和批准所花费的时间。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API 请求&lt;/code&gt; - 您可以在一小时内跨存储库中的所有操作执行多达 1000 个 API 请求。如果超出此限制，其他 API 调用将失败，这可能会导致作业失败。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;并发作业&lt;/code&gt; - 可以在帐户中运行的并发作业数取决于 GitHub 计划，如下表所示。如果超出，则任何其他作业都将排队。&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th style=&quot;text-align: center&quot;&gt;GitHub 计划&lt;/th&gt;
-          &lt;th style=&quot;text-align: center&quot;&gt;并发作业总数&lt;/th&gt;
-          &lt;th style=&quot;text-align: center&quot;&gt;最大并发 macOS 作业数&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;自由&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;20&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;专业版&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;40&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;团队&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;60&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;企业&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;180&lt;/td&gt;
-          &lt;td style=&quot;text-align: center&quot;&gt;50&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;作业矩阵&lt;/code&gt; - 作业矩阵每次工作流运行最多可以生成 256 个作业。此限制适用于 GitHub 托管和自托管的运行程序。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;工作流运行队列&lt;/code&gt; - 每个存储库的排队时间间隔不超过 500 个工作流运行，间隔为 10 秒。如果工作流运行达到此限制，则工作流运行将终止且无法完成。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;具体以最新版官方文档为主:&lt;a href=&quot;https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration&quot;&gt;usage-limits-billing-and-administration&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;二github-action的使用&quot;&gt;二、GitHub Action的使用&lt;/h3&gt;
-&lt;h4 id=&quot;workflow&quot;&gt;workflow&lt;/h4&gt;
-&lt;p&gt;在项目库根路径下的.github/workflows目录中创建一个.yml 文件（或者 .yaml）:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: hello-github-actions
-# 触发 workflow 的事件
-on:
-  push:
-    # 分支随意
-    branches:
-      - master
-# 一个workflow由执行的一项或多项job
-jobs:
-  # 一个job任务，任务名为build
-  build:
-    #运行在最新版ubuntu系统中
-    runs-on: ubuntu-latest
-    #步骤合集
-    steps:
-      #新建一个名为checkout_actions的步骤
-      - name: checkout_actions
-        #使用checkout@v2这个action获取源码
-        uses: actions/checkout@v2 
-      #使用建一个名为setup-node的步骤
-      - name: setup-node
-        #使用setup-node@v1这个action
-        uses: actions/setup-node@v1
-        #指定某个action 可能需要输入的参数
-        with:
-          node-version: &apos;14&apos;
-      - name: npm install and build
-        #执行执行某个shell命令或脚本
-        run: |
-          npm install
-          npm run build
-      - name: commit push
-        #执行执行某个shell命令或脚本
-        run: |
-          git config --global user.email xxx@163.com
-          git config --global user.name xxxx
-          git add .
-          git commit -m &quot;update&quot; -a
-          git push
-         # 环境变量
-        env:
-          email: xxx@163.com   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;name&quot;&gt;name&lt;/h4&gt;
-&lt;p&gt;Workflow的名字，随便可以设置，就是工作流的名字。如果省略该字段，默认为当前 workflow 的文件名。&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: hello-github-actions
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;on&quot;&gt;on&lt;/h4&gt;
-&lt;p&gt;触发的事件，可以是一个事件数组。
-在代码仓库Push时触发:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#push时触发
-on: push
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;可以用数组指定多个条件触发:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#push和merge时触发
-on: [push, merge]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;还可以对条件进行限制触发:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#当master分支push时触发，可以限定分支或标签。
-on:
-  push:
-    branches:
-      - master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;完整的事件列表，请查看&lt;a href=&quot;https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows&quot;&gt;官方文档&lt;/a&gt;。除了代码库事件，GitHub Actions 也支持外部事件触发，或者定时运行。&lt;/p&gt;
-
-&lt;h4 id=&quot;jobs&quot;&gt;jobs&lt;/h4&gt;
-&lt;h5 id=&quot;1job&quot;&gt;1.job&lt;/h5&gt;
-&lt;p&gt;jobs表示要执行的一项或多项任务。jobs可以包含一个或多个job，一个job就是一个任务，这个任务可以包含多个步骤(steps):&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
-  job1:
-    ...
-  job2:
-    ...     
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;需要注意的是每一个Job都是并发执行的并不是按照申明的先后顺序执行的， 如果多个job 之间存在依赖关系，那么你可能需要使用 needs :&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
-  job1:
-  
-  job2:
-    needs: job1
-  
-  job3:
-    needs: [job1, job2]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这里的needs声明了job2 必须等待 job1 成功完成，job3必须等待 job1 和 job2依次成功完成。因此，这个 workflow 的运行顺序依次为：job1、job2、job3。needs字段指定当前任务的依赖关系，即运行顺序。&lt;/p&gt;
-
-&lt;h5 id=&quot;2job-runs-on&quot;&gt;2.job-&amp;gt;runs-on&lt;/h5&gt;
-&lt;p&gt;runs-on字段指定运行所需要的虚拟机环境。它是必填字段，目前可用的虚拟机如下:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ubuntu-latest，ubuntu-18.04或ubuntu-16.04。&lt;/li&gt;
-  &lt;li&gt;windows-latest，windows-2019或windows-2016。&lt;/li&gt;
-  &lt;li&gt;macOS-latest或macOS-10.14。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;指定job的运行环境:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jobs:
-  job1:
-    runs-on: ubuntu-18.04
-  job2:
-    runs-on: macos-10.15
-  job3:
-    runs-on: windows-2019    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;github 会提供一个配置很不错的服务器做为 runner，&lt;br /&gt;
-Windows 和 Linux 虚拟机的硬件规格：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;2 核处理器。&lt;/li&gt;
-  &lt;li&gt;7 GB 内存。&lt;/li&gt;
-  &lt;li&gt;14 GB 固态硬盘空间。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;macOS 虚拟机的硬件规格：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;3 核处理器。&lt;/li&gt;
-  &lt;li&gt;14 GB 内存。&lt;/li&gt;
-  &lt;li&gt;14 GB 固态硬盘空间。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果你有网络时延的需求，（比如推送及拉取镜像时产生的网络时延），你也可以&lt;a href=&quot;https://docs.github.com/zh/actions/using-github-hosted-runners/customizing-github-hosted-runners&quot;&gt;自建runner&lt;/a&gt; 。&lt;/p&gt;
-
-&lt;h5 id=&quot;3job-env&quot;&gt;3.job-&amp;gt;env&lt;/h5&gt;
-&lt;p&gt;使用env可以给该任务或者是步骤配置环境变量:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; env:
-   name: &quot;gorpeln&quot;
- run: |
-   echo $name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;环境变量可以配置在以下地方:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;jobs-&amp;gt;job-&amp;gt;env&lt;/li&gt;
-  &lt;li&gt;jobs-&amp;gt;job-&amp;gt;steps.env&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;4job-steps&quot;&gt;4.job-&amp;gt;steps&lt;/h5&gt;
-&lt;p&gt;steps字段指定每个 Job 的运行步骤，每个job由多个step构成，它会从上至下依次执行。steps可以包含一个或多个步骤，每个 step 步骤可以有:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;：步骤名称，步骤的名称。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env&lt;/code&gt;：该步骤所需的环境变量。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt; : 每个步骤的唯一标识符&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uses&lt;/code&gt; : 使用哪个action，这个表示使用别人预先设置好的Actions，比如因为我代码中要用到python，所以就用了actions/setup-python@v1来设置python环境，不用我自己设置了。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt;: 指定某个action 可能需要输入的参数。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt;: 执行哪些指令，具体运行什么命令行代码。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;continue-on-error&lt;/code&gt; : 设置为 true 允许此步骤失败job 仍然通过。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeout-minutes&lt;/code&gt; : step 的超时时间。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;例如:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
-name: Sync To Gitee
-on: [ push ]
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-    #创建一个打印环境变量的步骤
-    - name: PrintName
-      env:
-        name: &quot;zhangsan&quot;
-      run: |
-        echo $name
-    #创建一个安装Python环境的步骤    
-    - name: SetUpPython
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    #创建一个安装Python包的步骤 
-    - name: Install dependencies
-      run: |
-          python -m pip install --upgrade pip
-          pip install requests
-          pip install bs4
-          pip install lxml     
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;使用uses指的是这一步骤需要先调用哪个 Action。 Action 是组成工作流最核心最基础的元素。 每个 Action 可以看作封装的独立脚本，有自己的操作逻辑，我们只需要 uses 并通过 with 传入参数即可。 比如 actions/checkout@v2 就是官方社区贡献的用来拉取仓库分支的 Action， 你不需要考虑安装 git 命令工具，只需要把分支参数传入即可。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h5 id=&quot;5action&quot;&gt;5.Action&lt;/h5&gt;
-&lt;p&gt;Github Actions 是GitHub的持续集成服务。持续集成由很多操作组成，比如登录远程服务器，发布内容到第三方服务等等，这些相同的操作完全可以提取出来制作成脚本供所有人使用。GitHub允许开发者把每个操作写成独立的脚本文件，存放到代码仓库，使得其他开发者可以引用该脚本，这个脚本就是一个Action。如果你需要某种功能的Action可以从GitHub社区共享的action官方市场查找，也可以自己编程Action开源出来供大家使用。既然 actions 是代码仓库，当然就有版本的概念，用户可以引用某个具体版本的 action。 下面都是合法的 action 引用:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;actions/setup-node@74bc508 # 指向一个 commit
-actions/setup-node@v1.0    # 指向一个标签
-actions/setup-node@master  # 指向一个分支
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;github-actions-中使用密文&quot;&gt;GitHub Actions 中使用密文&lt;/h4&gt;
-&lt;p&gt;在持续集成的过程中，我们可能会使用到自己的敏感数据，这些数据不应该被开源并泄露。那么如何才能安全的使用这些敏感数据呢?GithubActions提供了Secrets变量来实现这一效果。我们可以在 github repo 上依次点击 Settings -&amp;gt; Secrets-&amp;gt; Actions-&amp;gt;New repository secret创建一个敏感数据例如:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OSS_KEY_ID&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OSS_KEY_SECRET&lt;/code&gt;， 然后我们就可以在Github Action脚本中使用这一变量了:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-  name:  setup  aliyun  oss
-    uses:  manyuanrong/setup-ossutil@master
-    with:
-        endpoint:  oss-cn-beijing.aliyuncs.com
-        access-key-id:  $
-        access-key-secret:  $
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这里的secret就是一种context，描述 CI/CD 一个workflow 中的上下文信息，使用$语法表示。&lt;a href=&quot;https://docs.github.com/zh/actions/learn-github-actions/expressions&quot;&gt;更多context信息可以参考官方文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;github-action执行结果&quot;&gt;GitHub Action执行结果&lt;/h4&gt;
-&lt;p&gt;对于GitHub Action的执行流程我们可以通过repo 上依次点击Actions就可以看到Action的状态和执行结果等信息:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20221112151422378.png!gorpeln&quot; alt=&quot;20221112151422378&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;三示例&quot;&gt;三.示例&lt;/h3&gt;
-&lt;h4 id=&quot;push代码发送邮件通知&quot;&gt;Push代码发送邮件通知&lt;/h4&gt;
-&lt;p&gt;使用GitHub Action实现Push代码发送邮件通知功能。 主要通过 GitHub Action 监听代码 push 事件，并发送邮件（前提是邮箱需要开通 SMTP 服务）。
-在项目中 ./github/workflows/ 路径下添加 .yml 或者 .yaml文件，名字可以随便取。在这里我取名为 github-action-email.yml:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: github-action-email
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    # 检出代码
-    - name: CheckoutRepo
-      uses: actions/checkout@v2
-    # 获取master分支上最新一条提交的git log  
-    - name: GetLastLog
-      id: git_log
-      uses: Edisonboy/latest-git-log-action@main
-      with:
-        tag: origin/master
-    # 发送邮件    
-    - name: Send email
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.qq.com
-        server_port: 465
-        username: ${-{secrets.MAIL_USERNAME}-}  #删除`-`
-        password: ${-{secrets.MAIL_PASSWORD}-}    #删除`-`
-        subject: Github Actions job result
-        to: ${-{secrets.MAIL_TOUSERNAME}-}    #删除`-`
-        from: ${-{secrets.MAIL_USERNAME}-}    #删除`-`
-        body: ${-{github.repository}-} push log : ${-{steps.git_log.outputs.log}-}  #删除`-`
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;secrets.XXX ： GitHub 允许仓库所有者创建和管理需要保密性的参数。例如邮件的账号和密码都是属于敏感参数。 可以通过项目Settings -&amp;gt; Secrets -&amp;gt; Actions配置密码，在这里我们添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_USERNAME&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_PASSWORD&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MAIL_TOUSERNAME&lt;/code&gt; 三个配置参数（注意：这里的密码是指 SMTP 服务的授权密码）。&lt;/p&gt;
-
-&lt;p&gt;上下文：可以访问工作流程运行、运行器环境、作业及步骤相关信息的方式${-{github.repository}-}：当前仓库的的所有者和仓库名称。${-{steps.git_log_outputs.log}-} ：获取step id 为 git_log 的输出集。&lt;/p&gt;
-
-&lt;p&gt;因为我们定义 push 为触发条件，所以当我们只有push 代码后，我们定义的 GitHub Action 才会被执行。然后在 GitHub 上的 Action 能够实时看到当前的执行状态。&lt;/p&gt;
-
-&lt;h4 id=&quot;自动保持-github-提交状态常绿&quot;&gt;自动保持 GitHub 提交状态常绿。&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: autogreen
-
-on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: &quot;0 0 * * *&quot;
-
-jobs:
-  autogreen:
-    runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-  
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v3
-
-      - name: Auto green
-        run: |
-          git config --local user.email &quot;xxx@email.com&quot;
-          git config --local user.name &quot;${-{ github.actor }-}&quot;
-          git remote set-url origin https://${-{ github.actor }-}:${-{ secrets.GITHUB_TOKEN }-}@github.com/${-{ github.repository }-}
-          git pull --rebase
-          git commit --allow-empty -m &quot;a commit a day keeps your girlfriend away&quot;
-          git push
-          # 删除所有  {-{  和  }-}  中的  - 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;使用 GitHub Actions 的定时任务功能，每隔一段时间自动执行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;，提交信息为 “a commit a day keeps your girlfriend away”&lt;br /&gt;
-修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user.email &quot;xxx@email.com&quot;&lt;/code&gt; 为自己的 GitHub 邮箱账号 &lt;br /&gt;
-修改&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- cron: &quot;0 0 * * *&quot;&lt;/code&gt;来调整频率&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌───────────── 分钟 (0 - 59)   
-│ ┌───────────── 小时 (0 - 23)   
-│ │ ┌───────────── 日 (1 - 31)   
-│ │ │ ┌───────────── 月 (1 - 12 或 JAN-DEC)   
-│ │ │ │ ┌───────────── 星期 (0 - 6 或 SUN-SAT)   
-│ │ │ │ │   
-│ │ │ │ │  
-│ │ │ │ │   
-* * * * * 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;每个时间字段的含义：&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;符号&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;描述&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;举例&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;任意值&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;* * * * *&lt;/code&gt; 每天每小时每分钟&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;值分隔符&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1,3,4,7 * * * *&lt;/code&gt; 每小时的 1 3 4 7 分钟&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- &lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;范围&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1-6 * * * *&lt;/code&gt; 每小时的 1-6 分钟&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;每&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*/15 * * * *&lt;/code&gt; 每隔 15 分钟&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;注：由于 GitHub Actions 的限制，如果设置为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;* * * * *&lt;/code&gt; 实际的执行频率为每 5 分执行一次。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;项目地址：&lt;/strong&gt;&lt;a href=&quot;https://github.com/gorpeln/DailyWork&quot;&gt;https://github.com/gorpeln/DailyWork&lt;/a&gt;&lt;br /&gt;
-⚠️ 千万不要 Fork，因为 fork 项目的动态并不会让你变绿 ⚠️&lt;/p&gt;
 </description>
       </item>
     

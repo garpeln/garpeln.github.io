@@ -205,7 +205,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">161</span>
+                                    <span class="site-state-item-count">162</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -217,7 +217,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">627</span>
+                                    <span class="site-state-item-count">632</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -234,11 +234,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">627
+                                <span class="articleCount">632
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">161
+                                <span class="articleCount">162
                                         </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -319,7 +319,7 @@
                             
                             <li onclick="pushNew('/categories#教程福利')" class="categoryList">
                                 <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
-                                <a name="教程福利" style="" class="articleCount">4
+                                <a name="教程福利" style="" class="articleCount">5
                                 </a>
                             </li>
                             
@@ -374,11 +374,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >161</p>
+                                    <p >162</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>85.9k</p> 
+                                    <p>86.4k</p> 
 
                                 </li>
                                 <li>
@@ -392,7 +392,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 10:44:11 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-02 19:34:26 +0800">2024/05/02</p>
                                 </li>
                             </ul>
                     </div>
@@ -728,8 +728,79 @@
     
     
     
+    
+    
 
     <!-- 普通文章 -->
+    
+    
+	    
+	    <div class="postbox">
+        	<div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16096373020" target="_blank">微信小程序使用Promise异步回调,以及使用简单递归算法</a>
+            </div>
+            <hr>
+            <div class="info">
+                    时间：
+                    <text style="padding-top: 0;">2021-01-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                    分类：
+                    <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
+                        微信小程序
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    标签：
+                    
+                    <span class="index-post-tag">
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#微信小程序"  target="_blank">微信小程序</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#分享"  target="_blank">分享</a>
+                                
+                                    /
+                                
+                            
+                        
+                            
+                            
+                                <a class="pjaxlink" href="/tags#异步"  target="_blank">异步</a>
+                                
+                                    
+                                
+                            
+                        
+                            
+                            
+                        
+                    </span>
+                    
+            </div>
+                    
+                <div class="contentAbstract">//分享好友
+onShareAppMessage: function () {
+    var that = this;
+    return new Promise((resolve,reject)=&gt;{
+      wx.showLoading({
+        title: '正在生成中...',
+        icon: 'none'
+      })
+      var ...</div>
+            
+        	</div>
+            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
+                <a href="/article/16096373020" class="readmore" target="_blank">阅读全文 》</a>
+            </div>
+    	</div>
+	    
+    
     
     
 	    
@@ -1434,73 +1505,6 @@ GPAPIManager.h
 	    
     
     
-    
-	    
-	    <div class="postbox">
-        	<div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15884027619" target="_blank">iOS多线程：NSOperation、NSOperationQueue (五)</a>
-            </div>
-            <hr>
-            <div class="info">
-                    时间：
-                    <text style="padding-top: 0;">2020-05-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                    分类：
-                    <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                        iOS
-                    </a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    标签：
-                    
-                    <span class="index-post-tag">
-                        
-                            
-                            
-                                <a class="pjaxlink" href="/tags#NSOperation"  target="_blank">NSOperation</a>
-                                
-                                    /
-                                
-                            
-                        
-                            
-                            
-                                <a class="pjaxlink" href="/tags#多线程"  target="_blank">多线程</a>
-                                
-                                    /
-                                
-                            
-                        
-                            
-                            
-                                <a class="pjaxlink" href="/tags#NSOperationQueue"  target="_blank">NSOperationQueue</a>
-                                
-                                    
-                                
-                            
-                        
-                            
-                            
-                        
-                            
-                            
-                        
-                    </span>
-                    
-            </div>
-                    
-                <div class="contentAbstract">1. NSOperation、NSOperationQueue 简介
-NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决方案。实际上 NSOperation、NSOperationQueue 是基于 GCD 更高一层的封装，完全面向对象。但是比 GCD 更简单易用、代码可读性也更高。
-
-为什么要使用 NSOperation、NSOperationQue...</div>
-            
-        	</div>
-            <div style="height:25px;width:100%;background:#fff;margin-top:5px;margin-bottom:5px">
-                <a href="/article/15884027619" class="readmore" target="_blank">阅读全文 》</a>
-            </div>
-    	</div>
-	    
-    
-    
 
     <!-- 分页 -->
     <style>
@@ -1576,9 +1580,9 @@ NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决�
  
             
                 <a href="/page/6" class="btn-outline"><i class="far fa-angle-double-right"></i></a>
-                <a href="/page/15" class="btn-outline">末页</a>
+                <a href="/page/16" class="btn-outline">末页</a>
             
-                <a class="btn-outline disable totalCount">第5页 / 共15页</a>
+                <a class="btn-outline disable totalCount">第5页 / 共16页</a>
         <!-- 只有一页的情况 -->
         
 </div>
