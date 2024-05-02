@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3174天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3175天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-01 19:43:16 +0800">2024/05/01</p>
+                                    <p id="current-date" data-value="2024-05-02 10:37:35 +0800">2024/05/02</p>
                                 </li>
                             </ul>
                     </div>
@@ -1586,6 +1586,14 @@ WOW.js 使用了 querySelectorAll 方法，IE 低版本会报错，支持IE10+�
 fetchData();
 
 async function fetchData() {
+    function kaygb_referrer() {
+        var kaygb_referrer = document.referrer;
+        if (kaygb_referrer != "") {
+            return " 你来自：<br>" + document.referrer
+        } else {
+            return ""
+        }
+    }
     try {
         const response = await fetch('https://api.339336.xyz/api/blogNotice');
         const data = await response.json();
@@ -1593,7 +1601,7 @@ async function fetchData() {
         if (data.length > 0 && data[0].isShow) {
             iziToast.show({
                 title: data[0].title, // 使用API返回的标题
-                message: data[0].message, // 使用API返回的消息内容
+                message: data[0].message+"<br >你好，欢迎你的到来！<br >" + kaygb_referrer(), // 使用API返回的消息内容
                 icon: data[0].icon, // 使用API返回的图标类名
                 color: data[0].color, // 使用API返回的颜色
                 timeout: data[0].time // 使用API返回的时间设置
@@ -1605,6 +1613,7 @@ async function fetchData() {
 }
 </script>  
  
+
 <style type="text/css">
     .tags-a {
         color:#888;
@@ -1919,7 +1928,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 254 + '天';
+  element.innerHTML = 8 + '年' + 255 + '天';
 
 }
 
@@ -1928,7 +1937,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3174 + '天';
+    element.innerHTML = 3175 + '天';
 }
 
 
