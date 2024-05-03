@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3175天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3176天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 19:36:29 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-03 17:37:22 +0800">2024/05/03</p>
                                 </li>
                             </ul>
                     </div>
@@ -443,28 +443,14 @@
   <article class="post-content">
     <p><br /></p>
 
-<script src="/assets/js/typed.min.js"></script>
-
 <div style="text-align:left;font-size:2rem;">
-<text style="font-size:1.6rem;">博客目标：</text><strong id="typed3"></strong>
-
+    <text style="font-size:1.6rem;">博客目标：</text>
+    <strong>简洁、高效</strong>
 </div>
-<script data-pjax="">
-  try {
-    var typed3 = new Typed("#typed3", {
-    strings: ['简洁、高效'],//字符串 ['我想说：我','我想说：爱','我想说：你']
-    startDelay: 10,//开始的延迟
-    typeSpeed: 200,//打字速度
-    backSpeed: 100,//回退速度
-    loop: true,//是否循环
-    showCursor: true,//显示游标
-    smartBackspace: true, //默认true
-    });
-  } catch (err) {
-  }
-</script>
 
 <p><br /></p>
+<div class="desItem"><span class="time">2024-04-06</span>优化<a href="/" target="_blank">首页</a>、<a href="/links" target="_blank">友链</a>、<a href="/login" target="_blank">登录</a>、<a href="/404" target="_blank">404</a>等页面</div>
+<div class="des">完善<a href="/protocol" target="_blank">协议</a>、博客通知、工具、搜索等</div>
 <div class="desItem"><span class="time">2024-03-21</span>修改<a href="/links" target="_blank">友链页面</a>，添加<a href="/friends" target="_blank">友链文章</a></div>
 <div class="desItem"><span class="time">2024-03-03</span>添加外链跳转<a href="https://google.com" target="_blank">中间页</a></div>
 <div class="desItem"><span class="time">2024-01-29</span>更换评论系统</div>
@@ -531,7 +517,7 @@
 
 function updateProportionElement(proportion) {
     const proportionElement = document.querySelector('.proportion');
-    proportionElement.textContent = '(' + proportion.toFixed(4) * 100 + '%' + ')'; // 显示为百分比，保留四位小数
+    proportionElement.textContent = '(已过去' + proportion.toFixed(4) * 100 + '%' + ')'; // 显示为百分比，保留四位小数
 }
 
     // 主程序
@@ -1174,7 +1160,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 255 + '天';
+  element.innerHTML = 8 + '年' + 256 + '天';
 
 }
 
@@ -1183,7 +1169,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3175 + '天';
+    element.innerHTML = 3176 + '天';
 }
 
 

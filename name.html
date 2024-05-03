@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3175天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3176天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 19:36:29 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-03 17:37:22 +0800">2024/05/03</p>
                                 </li>
                             </ul>
                     </div>
@@ -1887,7 +1887,7 @@ input::placeholder {
         
         
         
-        <p>总字数：86.4k</p>
+        <p>总字数：86.6k</p>
     </div>
     <!-- 博客标题 赋值 -->
     <script>
@@ -1957,7 +1957,7 @@ input::placeholder {
 
     var pagesItem = "";
 
-    for (var i = 2; i <= Math.round(pagesCount / 10); i++) {
+    for (var i = 2; i <= Math.ceil(pagesCount / 10); i++) {
         pagesItem += "<div>https://gorpeln.top/page/" + i + "</div>\n";
     }
     document.getElementById("pages").innerHTML = pagesItem;
@@ -2364,7 +2364,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 255 + '天';
+  element.innerHTML = 8 + '年' + 256 + '天';
 
 }
 
@@ -2373,7 +2373,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3175 + '天';
+    element.innerHTML = 3176 + '天';
 }
 
 

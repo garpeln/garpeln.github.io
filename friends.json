@@ -1,6 +1,16 @@
 {
   "friends": [
     [
+      "gorpeln的个人博客 - gorpeln",
+      "https://gorpeln.top/",
+      "https://gorpeln.top/favicon.ico"
+    ],
+    [
+      "王乐园个人博客",
+      "https://blogs.kongjz.com",
+      "https://blogs.kongjz.com/favicon.ico"
+    ],
+    [
       "会打篮球的程序猿",
       "http://www.lzhpo.com",
       "https://img.gorpeln.top/p/friend_tx.jpeg"
@@ -74,6 +84,11 @@
       "Jerry Zhou的博客",
       "https://blog.jerryz.com.cn",
       "https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg"
+    ],
+    [
+      "刘郎阁",
+      "https://yjvc.cn/",
+      "https://yjvc.cn/usr/uploads/logo.jpeg"
     ]
   ]
 }

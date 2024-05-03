@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3175天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3176天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-02 19:36:29 +0800">2024/05/02</p>
+                                    <p id="current-date" data-value="2024-05-03 17:37:22 +0800">2024/05/03</p>
                                 </li>
                             </ul>
                     </div>
@@ -404,6 +404,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom:1em;
 }
 
 .links-box {
@@ -412,7 +413,35 @@
     flex-wrap: wrap;
 }
 
-.link_item {
+.problem-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+        background: #fff;
+    padding: 2em 3em;
+    border-radius: 10px;
+}   
+
+.problemItem{
+        display: block;
+    width: 100%;
+    margin-bottom:1em;
+}
+
+.problemItemTitle{
+    font-weight:bold;
+    color:#333;
+}
+.problemItemDes{
+    color:#666;
+        font-weight:200;
+
+}
+.last-item {
+    margin-bottom: 0;
+}   
+
+.link_item,.link_item_no_jump {
     width: calc(50% - 1em);
     display: flex;
     align-items: center;
@@ -425,7 +454,7 @@
     background: #fafafa;
 }
 
-.link_item img {
+.link_item img,.link_item_no_jump img{
     width: 50px;
     height: 50px;
     margin-right: 10px;
@@ -496,19 +525,59 @@ blockquote:hover .copy-button {
     color: #999;
     text-decoration: underline;
     text-underline-offset: 4px;
-    font-weight:200;
-    text-decoration-thickness: from-font; /* 尝试从字体自身获取下划线粗细，但支持度有限 */
+    font-weight: 200;
+    text-decoration-thickness: from-font;
 }
+.all-icon-box{
+    margin-left: 1em;
+    padding-top: 1em;
+}
+table{
+    width:100%;
+    padding-bottom:2em;
+}
+
+.toggle {
+    margin-bottom: 20px;
+    font-size: 14px; 
+}   
+
+.toggle > .toggle-button {
+    padding: 6px 10px;
+    background: #f6f6f6;
+    color: #1f2d3d;
+    cursor: pointer;
+    margin-top: 1em;
+}
+}  
+
+.toggle > .toggle-content {
+
+}   
+
+.toggle-button::before {
+    content: "\25B6";
+    display: inline-block; 
+    margin-right: 5px; 
+    color: #333; 
+    transition: transform 0.3s;
+    font-size: 12px; 
+}
+
+/* 当 details 元素处于 open 状态时，改变图标方向 */
+details[open] .toggle-button::before {
+    content: "\25BC"; 
+}   
 
 
 @media (max-width: 767px) {
-    .link_item {
+    .link_item,.link_item_no_jump {
         width: 100%;
         margin-right: 0;
     }
 }
 </style>
-<div class="post" style="margin-bottom:10px;display:block;">
+<div class="post" style="display:block;">
     <div style="margin:0.5em;text-align:center;">
         <h3> 友链 & 留言</h3>
     </div>
@@ -518,7 +587,7 @@ blockquote:hover .copy-button {
     <ol>
         <li>有非免费独立域名</li>
         <li>需建站6个月以上，且至少有10篇原创内容</li>
-        <li>网站排版整洁，无广告</li>
+        <li>网站排版整洁，<b>无广告</b></li>
         <li>无违反相关法律法规的内容</li>
     </ol>
     <blockquote style="background: #F5F5F5;padding: 0 20px;">
@@ -530,254 +599,269 @@ blockquote:hover .copy-button {
         </ul>
         <button class="copy-button" onclick="copyToClipboard()">复制</button>
     </blockquote>
-    <div>更多图片尺寸　
-        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-64.png" target="_blank">64</a>　
-        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-128.png" target="_blank">128</a>　
-        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-256.png" target="_blank">256</a>　
-        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-382.png" target="_blank">382</a>　
-        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-512.png" target="_blank">512</a>　
-    </div>
-
     为了更便捷地追踪你的最新文章，我建议你考虑在博客上添加RSS订阅功能。
     <a href="/friends" class="underline-dashed" target="_blank">点击前往友链文章页面</a>
     <br />
-    <br />
+
+
+<details class="toggle">
+    <summary class="toggle-button" style="">更多博客图片尺寸</summary>
+    <div class="toggle-content">
+        <div class="all-icon-box">　
+            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-64.png" target="_blank">64 × 64</a>　
+            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-128.png" target="_blank">128 × 128</a>　
+            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-256.png" target="_blank">256 × 256</a>　
+            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-382.png" target="_blank">382 × 382</a>　
+            <a class="all-icon" href="https://gorpeln.top/assets/img/logo.png" target="_blank">382 × 382（默认）</a>　
+            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-512.png" target="_blank">512 × 512</a>　
+            <a class="all-icon" href="https://gorpeln.top/favicon.ico" target="_blank">ICO</a>　
+
+        </div>
+    </div>
+</details>
+
+
 </div>
-<div class="post" style="margin-bottom:10px;">
+<div class="post">
     <div class="links-title">友链列表</div>
     <section class="links-box">
         
         
-        <a class="link_item" href="/mysite" target="_blank">
-            <img src="/favicon.ico" alt="个人站点" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>个人站点</h3>
-                <p>趁年轻，做自己想做的！</p>
-            </div>
-        </a>
+            
         
         
-        
-        <a class="link_item" href="https://blogs.kongjz.com" target="_blank">
-            <img src="https://blogs.kongjz.com/favicon.ico" alt="王乐园个人博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>王乐园个人博客</h3>
-                <p>王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。</p>
-            </div>
-        </a>
+            
         
         
-        
-        <a class="link_item" href="http://www.lzhpo.com" target="_blank">
-            <img src="https://img.gorpeln.top/p/friend_tx.jpeg" alt="会打篮球的程序猿" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>会打篮球的程序猿</h3>
-                <p>Talk is cheap, show me the code.</p>
-            </div>
-        </a>
+            
         
         
-        
-        <a class="link_item" href="https://www.gmcllp.cn" target="_blank">
-            <img src="https://www.gmcllp.cn/favicon.ico" alt="关关和六六" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>关关和六六</h3>
-                <p>向世界分享我们的故事</p>
-            </div>
-        </a>
+            
         
         
-        
-        <a class="link_item" href="https://www.onyi.net" target="_blank">
-            <img src="https://i.niupic.com/images/2023/08/20/bBVR.jpg" alt="忆梦小站" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>忆梦小站</h3>
-                <p>微笑着挥手再见，但内心却深知，以后不会再相见。</p>
-            </div>
-        </a>
+            
         
         
+            <a class="link_item" href="https://gorpeln.top/" target="_blank">
         
-        <a class="link_item" href="https://ssshooter.com" target="_blank">
-            <img src="https://ssshooter.com/logo.png" alt="UsubeniFantasy" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>UsubeniFantasy</h3>
-                <p>Write like you're running out of time.</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://aizni.cn" target="_blank">
-            <img src="https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640" alt="文西小记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>文西小记</h3>
-                <p>简单传递美好</p>
-            </div>
-        </a>
+            
+                <img src="https://gorpeln.top/favicon.ico" alt="gorpeln的个人博客 - gorpeln" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>gorpeln的个人博客 - gorpeln</h3>
+                    <p>趁年轻，做自己想做的！</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://blogs.kongjz.com" target="_blank">
         
-        <a class="link_item" href="https://www.lp.fyi" target="_blank">
-            <img src="https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640" alt="皮皮赖's Blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>皮皮赖's Blog</h3>
-                <p>你我最后竟然也平凡到自命不凡</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://mianao.info" target="_blank">
-            <img src="https://mianao.info/img/icon.png" alt="不吐不快" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>不吐不快</h3>
-                <p>我心中的一团火是不会熄地</p>
-            </div>
-        </a>
+            
+                <img src="https://blogs.kongjz.com/favicon.ico" alt="王乐园个人博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>王乐园个人博客</h3>
+                    <p>王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="http://www.lzhpo.com" target="_blank">
         
-        <a class="link_item" href="https://blog.debuginn.com/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG" alt="Debug客栈" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>Debug客栈</h3>
-                <p>做一个爱分享的程序猿</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://blog.xsot.cn" target="_blank">
-            <img src="https://img.iirose.cn/blog/logo.webp" alt="星辰日记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>星辰日记</h3>
-                <p>我已很久不再成为我自己</p>
-            </div>
-        </a>
+            
+                <img src="https://img.gorpeln.top/p/friend_tx.jpeg" alt="会打篮球的程序猿" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>会打篮球的程序猿</h3>
+                    <p>Talk is cheap, show me the code.</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://www.gmcllp.cn" target="_blank">
         
-        <a class="link_item" href="https://hary.cc/" target="_blank">
-            <img src="https://hary.cc/ico.png" alt="Hary的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>Hary的博客</h3>
-                <p>这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://wanglin.blog" target="_blank">
-            <img src="https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg" alt="Highlight" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>Highlight</h3>
-                <p>记录生活点滴！</p>
-            </div>
-        </a>
+            
+                <img src="https://www.gmcllp.cn/favicon.ico" alt="关关和六六" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>关关和六六</h3>
+                    <p>向世界分享我们的故事</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://www.onyi.net" target="_blank">
         
-        <a class="link_item" href="https://www.yvii.cn" target="_blank">
-            <img src="https://www.yvii.cn/img/favicon.png" alt="乙未博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>乙未博客</h3>
-                <p>记录生活，分享与留存！</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://www.randwind.com/" target="_blank">
-            <img src="https://www.randwind.com/wp-content/uploads/2023/11/logo.png" alt="Randwind’s blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>Randwind’s blog</h3>
-                <p>做个自由自在的风。</p>
-            </div>
-        </a>
+            
+                <img src="https://i.niupic.com/images/2023/08/20/bBVR.jpg" alt="忆梦小站" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>忆梦小站</h3>
+                    <p>微笑着挥手再见，但内心却深知，以后不会再相见。</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://ssshooter.com" target="_blank">
         
-        <a class="link_item" href="https://www.iamdt.cn/" target="_blank">
-            <img src="https://img.iamdt.cn/2023/09/26/6512ccfe73f56.png" alt="冬天的小窝" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>冬天的小窝</h3>
-                <p>人生若只如初见，何事秋风悲画扇。</p>
-            </div>
-        </a>
-        
-        
-        
-        <a class="link_item" href="https://blog.jerryz.com.cn" target="_blank">
-            <img src="https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg" alt="Jerry Zhou的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>Jerry Zhou的博客</h3>
-                <p>永远相信美好的事情即将发生。</p>
-            </div>
-        </a>
+            
+                <img src="https://ssshooter.com/logo.png" alt="UsubeniFantasy" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>UsubeniFantasy</h3>
+                    <p>Write like you're running out of time.</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item_no_jump" href="https://aizni.cn" target="_blank">
         
-        <a class="link_item" href="https://yjvc.cn/" target="_blank">
-            <img src="https://yjvc.cn/usr/uploads/logo.jpeg" alt="刘郎阁" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>刘郎阁</h3>
-                <p>一个积极向上的生活探索者！</p>
-            </div>
-        </a>
-        
-        
-        
-        
+            
+                <img src="https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640" alt="文西小记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>文西小记</h3>
+                    <p>简单传递美好</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://www.lp.fyi" target="_blank">
+        
+            
+                <img src="https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640" alt="皮皮赖's Blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>皮皮赖's Blog</h3>
+                    <p>你我最后竟然也平凡到自命不凡</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://mianao.info" target="_blank">
+        
+            
+                <img src="https://mianao.info/img/icon.png" alt="不吐不快" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>不吐不快</h3>
+                    <p>我心中的一团火是不会熄地</p>
+                </div>
+                </a>
+            
         
         
+            <a class="link_item" href="https://blog.debuginn.com/" target="_blank">
         
+            
+                <img src="https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG" alt="Debug客栈" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>Debug客栈</h3>
+                    <p>做一个爱分享的程序猿</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://blog.xsot.cn" target="_blank">
+        
+            
+                <img src="https://img.iirose.cn/blog/logo.webp" alt="星辰日记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>星辰日记</h3>
+                    <p>我已很久不再成为我自己</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://hary.cc/" target="_blank">
+        
+            
+                <img src="https://hary.cc/ico.png" alt="Hary的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>Hary的博客</h3>
+                    <p>这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://wanglin.blog" target="_blank">
+        
+            
+                <img src="https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg" alt="Highlight" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>Highlight</h3>
+                    <p>记录生活点滴！</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://www.yvii.cn" target="_blank">
+        
+            
+                <img src="https://www.yvii.cn/img/favicon.png" alt="乙未博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>乙未博客</h3>
+                    <p>记录生活，分享与留存！</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://www.randwind.com/" target="_blank">
+        
+            
+                <img src="https://www.randwind.com/wp-content/uploads/2023/11/logo.png" alt="Randwind’s blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>Randwind’s blog</h3>
+                    <p>做个自由自在的风。</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://www.iamdt.cn/" target="_blank">
+        
+            
+                <img src="https://img.iamdt.cn/2023/09/26/6512ccfe73f56.png" alt="冬天的小窝" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>冬天的小窝</h3>
+                    <p>人生若只如初见，何事秋风悲画扇。</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item" href="https://blog.jerryz.com.cn" target="_blank">
+        
+            
+                <img src="https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg" alt="Jerry Zhou的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>Jerry Zhou的博客</h3>
+                    <p>永远相信美好的事情即将发生。</p>
+                </div>
+                </a>
+            
+        
+        
+            <a class="link_item_no_jump" href="https://yjvc.cn/" target="_blank">
+        
+            
+                <img src="https://yjvc.cn/usr/uploads/logo.jpeg" alt="刘郎阁" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
+                <div class="item-content">
+                    <h3>刘郎阁</h3>
+                    <p>一个积极向上的生活探索者！</p>
+                </div>
+                </a>
+            
         
     </section>
 </div>
-<div class="post" style="margin-bottom:10px;">
+<div class="post">
     <div class="links-title">博客组织</div>
     <section class="links-box">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         <a class="link_item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
@@ -829,9 +913,109 @@ blockquote:hover .copy-button {
         </a>
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </section>
 </div>
-<!-- 只有当满足条件（即状态为1或0的链接数量大于0）时才显示以下内容 -->
+<!-- 申请中... -->
+
+
+
+
+<!-- 申请中... -->
+
+
+
+
+
+
+<!-- 常见问题 -->
+<div class="problem-box"></div>
+<script>
+var problemArray = [
+  {
+    "title": "为什么我的友链没了？",
+    "des": "博主会不定期查看各个友链状态，如果你的博客异常后会被放到失联列表（如果你没看到说明没有人在失联列表），如果你已成功修复，留言即可恢复。如果你6个月仍没有恢复正常，就会被删除。"
+  },
+  {
+    "title": "为什么我的友链点击会进入安全跳转页面才能跳转？",
+    "des": "博主发现博主的博客在你的平台同样需要跳转安全跳转页面才能跳转，所以进行了同样操作，如需取消，请取消你平台的拦截后并留言。"
+  },
+  {
+    "title": "为什么友链文章页面没有我的相关文章？",
+    "des": "这说明你的博客的rss缺失或异常（支持feed订阅规则，如atom、rss等规则），自行修复后次日即可正常查看。"
+  },
+  {
+    "title": "还有其他问题？",
+    "des": "推荐通过邮件联系，一般当日即可回复。"
+  }
+];
+
+// 直接根据类名选择problem-box
+var problemBox = document.querySelector(".problem-box");
+
+// 遍历问题数组并创建HTML元素插入到指定的problem-box中
+for (var i = 0; i < problemArray.length; i++) {
+    var title = problemArray[i].title;
+    var des = problemArray[i].des;
+
+    var itemDiv = document.createElement("div");
+    itemDiv.className = "problemItem";
+
+    var titleP = document.createElement("p");
+    titleP.className = "problemItemTitle";
+    titleP.textContent = title;
+    itemDiv.appendChild(titleP);
+
+    var desP = document.createElement("p");
+    desP.className = "problemItemDes";
+    desP.textContent = des;
+    itemDiv.appendChild(desP);
+
+    problemBox.appendChild(itemDiv);
+}
+
+// 获取所有生成的.item元素
+var items = document.querySelectorAll('.problem-box .problemItem');
+
+// 为最后一个.item元素添加一个特定的类来移除底部外边距
+items[items.length - 1].classList.add('last-item');
+
+</script>   
 
 
 
@@ -1420,7 +1604,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 255 + '天';
+  element.innerHTML = 8 + '年' + 256 + '天';
 
 }
 
@@ -1429,7 +1613,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3175 + '天';
+    element.innerHTML = 3176 + '天';
 }
 
 
