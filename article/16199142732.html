@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3176天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3178天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-03 17:37:22 +0800">2024/05/03</p>
+                                    <p id="current-date" data-value="2024-05-05 15:00:23 +0800">2024/05/05</p>
                                 </li>
                             </ul>
                     </div>
@@ -835,32 +835,33 @@ textarea::placeholder {
     <footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
-        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
-            萌ICP备20240031号
-        </a> | 
-        <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
-            官码2024000022号
-        </a> | 
-        <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
-            MIIT备20240333号
-        </a>
-
-        <br/> 
-
-        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
-        <a href="http://beian.miit.gov.cn/" class="footer-item">
-            <img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
-        </a> | 
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
-            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
-        </a> | 
-        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
-            本网站由
-            <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
-        </a>
+        <div class="other-icp">
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
+                萌ICP备20240031号
+            </a> |
+            <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
+                官码2024000022号
+            </a> |
+            <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
+                MIIT备20240333号
+            </a>
+        </div>
+        <div class="post-margin">
+            ©2015-<text id="currentYear"></text> gorpeln 版权所有 |
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
+            </a> |
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
+            </a> |
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                本网站由
+                <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+        </div>
     </div>
 </footer>
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
@@ -880,7 +881,6 @@ textarea::placeholder {
 <script src="/search/js/cb-search.js"></script>
 <!-- 动态显示网站运行时间 -->
 <script language=javascript>
-
 const fullYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = fullYear;
 
@@ -921,17 +921,49 @@ function siteTime() {
 siteTime();
 </script>
 <script language=JavaScript>
-    function over(obj) {
-        obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+function over(obj) {
+    obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+}
+
+function out(obj) {
+
+}
+
+function clickHandler() {
+    // 跳转到指定的URL
+    window.location.href = '/article/15462756619';
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    function checkLinksOverflow() {
+        const otherIcpDiv = document.querySelector('.other-icp');
+        const links = otherIcpDiv.querySelectorAll('a');
+        let totalLinksWidth = 0;
+
+        // 计算所有链接的总宽度
+        links.forEach(function(link) {
+            totalLinksWidth += link.offsetWidth;
+        });
+
+        // 获取.other-icp的实际宽度
+        const divWidth = otherIcpDiv.offsetWidth;
+
+        // 如果链接总宽度超过.other-icp的宽度，则隐藏.other-icp
+        if (totalLinksWidth > divWidth) {
+            otherIcpDiv.style.display = 'none';
+        } else {
+            otherIcpDiv.style.display = 'block'; 
+        }
     }
 
-    function out(obj) {
+    // 页面加载时检查一次
+    checkLinksOverflow();
 
-    }
-    function clickHandler() {
-        // 跳转到指定的URL
-        window.location.href = '/article/15462756619';
-    }
+    // 监听窗口大小变化，动态检查是否需要隐藏
+    window.addEventListener('resize', checkLinksOverflow);
+});
+
+
 </script>
 <!-- 百度统计 -->
 <script>
@@ -986,7 +1018,8 @@ s.parentNode.insertBefore(el, s);
     text-align: center;
     font-size: 12px;
     cursor: pointer;
-    text-decoration: none; /* 隐藏默认的文本下划线 */
+    text-decoration: none;
+    /* 隐藏默认的文本下划线 */
     display: inline-block;
     position: relative;
 }
@@ -1003,13 +1036,16 @@ s.parentNode.insertBefore(el, s);
 }
 
 
-.footerImg{
+.footerImg {
     margin-top: -3px;
-    margin-right:  2px;
+    margin-right: 2px;
 }
-.footerDes,.footerDes a{
+
+.footerDes,
+.footerDes a {
     color: #666;
-    text-align: center; /* Center the text within the .footerDes div */
+    text-align: center;
+    /* Center the text within the .footerDes div */
     bottom: -0.25em;
     font-size: 12px;
 }
@@ -1019,19 +1055,21 @@ s.parentNode.insertBefore(el, s);
     animation: heartbeat 1s infinite;
 }
 
+.post-margin{
+}
 @keyframes heartbeat {
     0% {
         transform: scale(1.0);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1.0);
     }
 }
-
-
 </style>
 </body>
 <script>
@@ -1111,7 +1149,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 256 + '天';
+  element.innerHTML = 8 + '年' + 258 + '天';
 
 }
 
@@ -1120,7 +1158,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3176 + '天';
+    element.innerHTML = 3178 + '天';
 }
 
 

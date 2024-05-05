@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3176天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3178天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-03 17:37:22 +0800">2024/05/03</p>
+                                    <p id="current-date" data-value="2024-05-05 15:00:23 +0800">2024/05/05</p>
                                 </li>
                             </ul>
                     </div>
@@ -404,7 +404,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom:1em;
+    margin-bottom: 1em;
 }
 
 .links-box {
@@ -417,31 +417,34 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-        background: #fff;
+    background: #fff;
     padding: 2em 3em;
     border-radius: 10px;
-}   
+}
 
-.problemItem{
-        display: block;
+.problemItem {
+    display: block;
     width: 100%;
-    margin-bottom:1em;
+    margin-bottom: 1em;
 }
 
-.problemItemTitle{
-    font-weight:bold;
-    color:#333;
+.problemItemTitle {
+    font-weight: bold;
+    color: #333;
 }
-.problemItemDes{
-    color:#666;
-        font-weight:200;
+
+.problemItemDes {
+    color: #666;
+    font-weight: 200;
 
 }
+
 .last-item {
     margin-bottom: 0;
-}   
+}
 
-.link_item,.link_item_no_jump {
+.link_item,
+.link_item_no_jump {
     width: calc(50% - 1em);
     display: flex;
     align-items: center;
@@ -454,7 +457,8 @@
     background: #fafafa;
 }
 
-.link_item img,.link_item_no_jump img{
+.link_item img,
+.link_item_no_jump img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
@@ -527,51 +531,55 @@ blockquote:hover .copy-button {
     text-underline-offset: 4px;
     font-weight: 200;
     text-decoration-thickness: from-font;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.all-icon-box{
+
+.all-icon-box {
     margin-left: 1em;
     padding-top: 1em;
 }
-table{
-    width:100%;
-    padding-bottom:2em;
+
+table {
+    width: 100%;
+    padding-bottom: 2em;
 }
 
 .toggle {
     margin-bottom: 20px;
-    font-size: 14px; 
-}   
+    font-size: 14px;
+}
 
-.toggle > .toggle-button {
+.toggle>.toggle-button {
     padding: 6px 10px;
     background: #f6f6f6;
     color: #1f2d3d;
     cursor: pointer;
     margin-top: 1em;
 }
-}  
 
-.toggle > .toggle-content {
-
-}   
+.toggle>.toggle-content {}
 
 .toggle-button::before {
     content: "\25B6";
-    display: inline-block; 
-    margin-right: 5px; 
-    color: #333; 
+    display: inline-block;
+    margin-right: 5px;
+    color: #333;
     transition: transform 0.3s;
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 /* 当 details 元素处于 open 状态时，改变图标方向 */
 details[open] .toggle-button::before {
-    content: "\25BC"; 
-}   
+    content: "\25BC";
+}
 
 
 @media (max-width: 767px) {
-    .link_item,.link_item_no_jump {
+
+    .link_item,
+    .link_item_no_jump {
         width: 100%;
         margin-right: 0;
     }
@@ -602,261 +610,254 @@ details[open] .toggle-button::before {
     为了更便捷地追踪你的最新文章，我建议你考虑在博客上添加RSS订阅功能。
     <a href="/friends" class="underline-dashed" target="_blank">点击前往友链文章页面</a>
     <br />
-
-
-<details class="toggle">
-    <summary class="toggle-button" style="">更多博客图片尺寸</summary>
-    <div class="toggle-content">
-        <div class="all-icon-box">　
+    <details class="toggle">
+        <summary class="toggle-button" style="">更多博客图片尺寸</summary>
+        <div class="all-icon-box">
             <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-64.png" target="_blank">64 × 64</a>　
             <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-128.png" target="_blank">128 × 128</a>　
             <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-256.png" target="_blank">256 × 256</a>　
             <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-382.png" target="_blank">382 × 382</a>　
-            <a class="all-icon" href="https://gorpeln.top/assets/img/logo.png" target="_blank">382 × 382（默认）</a>　
             <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-512.png" target="_blank">512 × 512</a>　
             <a class="all-icon" href="https://gorpeln.top/favicon.ico" target="_blank">ICO</a>　
-
+            <a class="all-icon" href="https://gorpeln.top/assets/img/logo.png" target="_blank">382 × 382（默认）</a>　
         </div>
-    </div>
-</details>
-
-
+    </details>
 </div>
 <div class="post">
     <div class="links-title">友链列表</div>
     <section class="links-box">
         
         
+                
             
         
-        
+                
             
         
-        
+                
             
         
-        
+                
             
         
-        
+                
             
         
-        
-            <a class="link_item" href="https://gorpeln.top/" target="_blank">
-        
+        <a class="link_item" href="https://gorpeln.top/" target="_blank">
             
+                
                 <img src="https://gorpeln.top/favicon.ico" alt="gorpeln的个人博客 - gorpeln" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>gorpeln的个人博客 - gorpeln</h3>
                     <p>趁年轻，做自己想做的！</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://blogs.kongjz.com" target="_blank">
-        
+        <a class="link_item" href="https://blogs.kongjz.com" target="_blank">
             
+                
                 <img src="https://blogs.kongjz.com/favicon.ico" alt="王乐园个人博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>王乐园个人博客</h3>
                     <p>王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="http://www.lzhpo.com" target="_blank">
-        
+        <a class="link_item" href="http://www.lzhpo.com" target="_blank">
             
+                
                 <img src="https://img.gorpeln.top/p/friend_tx.jpeg" alt="会打篮球的程序猿" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>会打篮球的程序猿</h3>
                     <p>Talk is cheap, show me the code.</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.gmcllp.cn" target="_blank">
-        
+        <a class="link_item" href="https://www.gmcllp.cn" target="_blank">
             
+                
                 <img src="https://www.gmcllp.cn/favicon.ico" alt="关关和六六" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>关关和六六</h3>
                     <p>向世界分享我们的故事</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.onyi.net" target="_blank">
-        
+        <a class="link_item" href="https://www.onyi.net" target="_blank">
             
+                
                 <img src="https://i.niupic.com/images/2023/08/20/bBVR.jpg" alt="忆梦小站" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>忆梦小站</h3>
                     <p>微笑着挥手再见，但内心却深知，以后不会再相见。</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://ssshooter.com" target="_blank">
-        
+        <a class="link_item" href="https://ssshooter.com" target="_blank">
             
+                
                 <img src="https://ssshooter.com/logo.png" alt="UsubeniFantasy" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>UsubeniFantasy</h3>
                     <p>Write like you're running out of time.</p>
                 </div>
-                </a>
+            </a>
             
-        
+            
         
             <a class="link_item_no_jump" href="https://aizni.cn" target="_blank">
-        
-            
+                
+                
                 <img src="https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640" alt="文西小记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>文西小记</h3>
                     <p>简单传递美好</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.lp.fyi" target="_blank">
-        
+        <a class="link_item" href="https://www.lp.fyi" target="_blank">
             
+                
                 <img src="https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640" alt="皮皮赖's Blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>皮皮赖's Blog</h3>
                     <p>你我最后竟然也平凡到自命不凡</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://mianao.info" target="_blank">
-        
+        <a class="link_item" href="https://mianao.info" target="_blank">
             
+                
                 <img src="https://mianao.info/img/icon.png" alt="不吐不快" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>不吐不快</h3>
                     <p>我心中的一团火是不会熄地</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://blog.debuginn.com/" target="_blank">
-        
+        <a class="link_item" href="https://blog.debuginn.com/" target="_blank">
             
+                
                 <img src="https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG" alt="Debug客栈" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>Debug客栈</h3>
                     <p>做一个爱分享的程序猿</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://blog.xsot.cn" target="_blank">
-        
+        <a class="link_item" href="https://blog.xsot.cn" target="_blank">
             
+                
                 <img src="https://img.iirose.cn/blog/logo.webp" alt="星辰日记" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>星辰日记</h3>
                     <p>我已很久不再成为我自己</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://hary.cc/" target="_blank">
-        
+        <a class="link_item" href="https://hary.cc/" target="_blank">
             
+                
                 <img src="https://hary.cc/ico.png" alt="Hary的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>Hary的博客</h3>
                     <p>这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://wanglin.blog" target="_blank">
-        
+        <a class="link_item" href="https://wanglin.blog" target="_blank">
             
+                
                 <img src="https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg" alt="Highlight" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>Highlight</h3>
                     <p>记录生活点滴！</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.yvii.cn" target="_blank">
-        
+        <a class="link_item" href="https://www.yvii.cn" target="_blank">
             
+                
                 <img src="https://www.yvii.cn/img/favicon.png" alt="乙未博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>乙未博客</h3>
                     <p>记录生活，分享与留存！</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.randwind.com/" target="_blank">
-        
+        <a class="link_item" href="https://www.randwind.com/" target="_blank">
             
+                
                 <img src="https://www.randwind.com/wp-content/uploads/2023/11/logo.png" alt="Randwind’s blog" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>Randwind’s blog</h3>
                     <p>做个自由自在的风。</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://www.iamdt.cn/" target="_blank">
-        
+        <a class="link_item" href="https://www.iamdt.cn/" target="_blank">
             
+                
                 <img src="https://img.iamdt.cn/2023/09/26/6512ccfe73f56.png" alt="冬天的小窝" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>冬天的小窝</h3>
                     <p>人生若只如初见，何事秋风悲画扇。</p>
                 </div>
-                </a>
+            </a>
+            
             
         
-        
-            <a class="link_item" href="https://blog.jerryz.com.cn" target="_blank">
-        
+        <a class="link_item" href="https://blog.jerryz.com.cn" target="_blank">
             
+                
                 <img src="https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg" alt="Jerry Zhou的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>Jerry Zhou的博客</h3>
                     <p>永远相信美好的事情即将发生。</p>
                 </div>
-                </a>
+            </a>
             
-        
+            
         
             <a class="link_item_no_jump" href="https://yjvc.cn/" target="_blank">
-        
-            
+                
+                
                 <img src="https://yjvc.cn/usr/uploads/logo.jpeg" alt="刘郎阁" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 <div class="item-content">
                     <h3>刘郎阁</h3>
                     <p>一个积极向上的生活探索者！</p>
                 </div>
-                </a>
+            </a>
             
-        
+            
     </section>
 </div>
 <div class="post">
@@ -955,34 +956,29 @@ details[open] .toggle-button::before {
 
 
 
-
 <!-- 申请中... -->
-
-
-
 
 
 
 <!-- 常见问题 -->
 <div class="problem-box"></div>
 <script>
-var problemArray = [
-  {
-    "title": "为什么我的友链没了？",
-    "des": "博主会不定期查看各个友链状态，如果你的博客异常后会被放到失联列表（如果你没看到说明没有人在失联列表），如果你已成功修复，留言即可恢复。如果你6个月仍没有恢复正常，就会被删除。"
-  },
-  {
-    "title": "为什么我的友链点击会进入安全跳转页面才能跳转？",
-    "des": "博主发现博主的博客在你的平台同样需要跳转安全跳转页面才能跳转，所以进行了同样操作，如需取消，请取消你平台的拦截后并留言。"
-  },
-  {
-    "title": "为什么友链文章页面没有我的相关文章？",
-    "des": "这说明你的博客的rss缺失或异常（支持feed订阅规则，如atom、rss等规则），自行修复后次日即可正常查看。"
-  },
-  {
-    "title": "还有其他问题？",
-    "des": "推荐通过邮件联系，一般当日即可回复。"
-  }
+var problemArray = [{
+        "title": "为什么我的友链没了？",
+        "des": "博主会不定期查看各个友链状态，如果你的博客异常后会被放到失联列表（如果你没看到说明没有人在失联列表），如果你已成功修复，留言即可恢复。如果你6个月仍没有恢复正常，就会被删除。"
+    },
+    {
+        "title": "为什么我的友链点击会进入安全跳转页面才能跳转？",
+        "des": "博主发现博主的博客在你的平台同样需要跳转安全跳转页面才能跳转，所以进行了同样操作，如需取消，请取消你平台的拦截后并留言。"
+    },
+    {
+        "title": "为什么友链文章页面没有我的相关文章？",
+        "des": "这说明你的博客的rss缺失或异常（支持feed订阅规则，如atom、rss等规则），自行修复后次日即可正常查看。"
+    },
+    {
+        "title": "还有其他问题？",
+        "des": "推荐通过邮件联系，一般当日即可回复。"
+    }
 ];
 
 // 直接根据类名选择problem-box
@@ -1014,11 +1010,7 @@ var items = document.querySelectorAll('.problem-box .problemItem');
 
 // 为最后一个.item元素添加一个特定的类来移除底部外边距
 items[items.length - 1].classList.add('last-item');
-
-</script>   
-
-
-
+</script>
 <div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
@@ -1328,32 +1320,33 @@ function copyToClipboard() {
     <footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
-        <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
-            萌ICP备20240031号
-        </a> | 
-        <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
-            官码2024000022号
-        </a> | 
-        <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
-            <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
-            MIIT备20240333号
-        </a>
-
-        <br/> 
-
-        ©2015-<text id="currentYear"></text> gorpeln 版权所有 | 
-        <a href="http://beian.miit.gov.cn/" class="footer-item">
-            <img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
-        </a> | 
-        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
-            <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
-        </a> | 
-        <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
-            本网站由
-            <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
-        </a>
+        <div class="other-icp">
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
+                萌ICP备20240031号
+            </a> |
+            <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
+                官码2024000022号
+            </a> |
+            <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
+                <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
+                MIIT备20240333号
+            </a>
+        </div>
+        <div class="post-margin">
+            ©2015-<text id="currentYear"></text> gorpeln 版权所有 |
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="https://img.gorpeln.top/p/footer_beian.png" style="height: 16px;" class="footerImg" />京ICP备2021024484号-2
+            </a> |
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
+            </a> |
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                本网站由
+                <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+        </div>
     </div>
 </footer>
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
@@ -1373,7 +1366,6 @@ function copyToClipboard() {
 <script src="/search/js/cb-search.js"></script>
 <!-- 动态显示网站运行时间 -->
 <script language=javascript>
-
 const fullYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = fullYear;
 
@@ -1414,17 +1406,49 @@ function siteTime() {
 siteTime();
 </script>
 <script language=JavaScript>
-    function over(obj) {
-        obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+function over(obj) {
+    obj.innerHTML = "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+}
+
+function out(obj) {
+
+}
+
+function clickHandler() {
+    // 跳转到指定的URL
+    window.location.href = '/article/15462756619';
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    function checkLinksOverflow() {
+        const otherIcpDiv = document.querySelector('.other-icp');
+        const links = otherIcpDiv.querySelectorAll('a');
+        let totalLinksWidth = 0;
+
+        // 计算所有链接的总宽度
+        links.forEach(function(link) {
+            totalLinksWidth += link.offsetWidth;
+        });
+
+        // 获取.other-icp的实际宽度
+        const divWidth = otherIcpDiv.offsetWidth;
+
+        // 如果链接总宽度超过.other-icp的宽度，则隐藏.other-icp
+        if (totalLinksWidth > divWidth) {
+            otherIcpDiv.style.display = 'none';
+        } else {
+            otherIcpDiv.style.display = 'block'; 
+        }
     }
 
-    function out(obj) {
+    // 页面加载时检查一次
+    checkLinksOverflow();
 
-    }
-    function clickHandler() {
-        // 跳转到指定的URL
-        window.location.href = '/article/15462756619';
-    }
+    // 监听窗口大小变化，动态检查是否需要隐藏
+    window.addEventListener('resize', checkLinksOverflow);
+});
+
+
 </script>
 <!-- 百度统计 -->
 <script>
@@ -1479,7 +1503,8 @@ s.parentNode.insertBefore(el, s);
     text-align: center;
     font-size: 12px;
     cursor: pointer;
-    text-decoration: none; /* 隐藏默认的文本下划线 */
+    text-decoration: none;
+    /* 隐藏默认的文本下划线 */
     display: inline-block;
     position: relative;
 }
@@ -1496,13 +1521,16 @@ s.parentNode.insertBefore(el, s);
 }
 
 
-.footerImg{
+.footerImg {
     margin-top: -3px;
-    margin-right:  2px;
+    margin-right: 2px;
 }
-.footerDes,.footerDes a{
+
+.footerDes,
+.footerDes a {
     color: #666;
-    text-align: center; /* Center the text within the .footerDes div */
+    text-align: center;
+    /* Center the text within the .footerDes div */
     bottom: -0.25em;
     font-size: 12px;
 }
@@ -1512,19 +1540,21 @@ s.parentNode.insertBefore(el, s);
     animation: heartbeat 1s infinite;
 }
 
+.post-margin{
+}
 @keyframes heartbeat {
     0% {
         transform: scale(1.0);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1.0);
     }
 }
-
-
 </style>
 </body>
 <script>
@@ -1604,7 +1634,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 256 + '天';
+  element.innerHTML = 8 + '年' + 258 + '天';
 
 }
 
@@ -1613,7 +1643,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3176 + '天';
+    element.innerHTML = 3178 + '天';
 }
 
 
