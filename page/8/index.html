@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3183天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3186天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-10 15:42:53 +0800">2024/05/10</p>
+                                    <p id="current-date" data-value="2024-05-13 11:19:53 +0800">2024/05/13</p>
                                 </li>
                             </ul>
                     </div>
@@ -1524,6 +1524,7 @@
 .disable {
     color: #ccc;
     border: 0px solid #aaa;
+    pointer-events: none;
 }
 
 .totalCount{
@@ -1554,7 +1555,7 @@
                 
                 <a href="/page/6" class="btn-outline">6</a>
                 <a href="/page/7" class="btn-outline">7</a>
-                <a href="javascript:;" class="active btn-outline">8</a>
+                <a class="active btn-outline">8</a>
                 
                     <a href="/page/9" class="btn-outline">9</a>
                 
@@ -1574,7 +1575,7 @@
 
 
  <!-- 公告 -->
-<script src="../assets/js/warning.min.js"> </script>
+<script src="/assets/js/warning.min.js"> </script>
 <script>
 
 
@@ -1961,7 +1962,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 263 + '天';
+  element.innerHTML = 8 + '年' + 266 + '天';
 
 }
 
@@ -1970,7 +1971,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3183 + '天';
+    element.innerHTML = 3186 + '天';
 }
 
 

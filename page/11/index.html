@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3183天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3186天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-10 15:42:53 +0800">2024/05/10</p>
+                                    <p id="current-date" data-value="2024-05-13 11:19:53 +0800">2024/05/13</p>
                                 </li>
                             </ul>
                     </div>
@@ -1517,6 +1517,7 @@ TCP通讯是需要三次握手的，就神似这张截图，确保对方在线�
 .disable {
     color: #ccc;
     border: 0px solid #aaa;
+    pointer-events: none;
 }
 
 .totalCount{
@@ -1547,7 +1548,7 @@ TCP通讯是需要三次握手的，就神似这张截图，确保对方在线�
                 
                 <a href="/page/9" class="btn-outline">9</a>
                 <a href="/page/10" class="btn-outline">10</a>
-                <a href="javascript:;" class="active btn-outline">11</a>
+                <a class="active btn-outline">11</a>
                 
                     <a href="/page/12" class="btn-outline">12</a>
                 
@@ -1567,7 +1568,7 @@ TCP通讯是需要三次握手的，就神似这张截图，确保对方在线�
 
 
  <!-- 公告 -->
-<script src="../assets/js/warning.min.js"> </script>
+<script src="/assets/js/warning.min.js"> </script>
 <script>
 
 
@@ -1954,7 +1955,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 263 + '天';
+  element.innerHTML = 8 + '年' + 266 + '天';
 
 }
 
@@ -1963,7 +1964,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3183 + '天';
+    element.innerHTML = 3186 + '天';
 }
 
 

@@ -591,6 +591,7 @@ li.article a:hover,li.article a:focus{
 
 #cb-search-btn:hover .search-tip {
     display: block;
+    color:rgba(102, 102, 204, 0.4);
 }
 
 /**
@@ -666,11 +667,14 @@ li.article a:hover,li.article a:focus{
 }
 
 .friend-item:hover {
-    background: rgba(102, 102, 204, 0.3);
+    background: rgba(102, 102, 204, 0.15);
     border-radius: 8px;
     padding: 0 5px;
 }
 
+.friend-item:hover .friend-name{
+    color:#6666cc;
+}
 
 .friend-item .friend-name {
     color: #000000;
@@ -723,7 +727,7 @@ li.article a:hover,li.article a:focus{
 }
 
 .siteNav ul li:hover {
-    background: rgba(102, 102, 204, 0.3);
+    background: rgba(102, 102, 204, 0.15);
     border-radius: 8px;
     padding: 5px 5px;
 }
@@ -744,6 +748,11 @@ li.article a:hover,li.article a:focus{
 .siteNav ul li a:hover {
     color: #6666cc;
 }
+
+.siteNav ul li:hover a{
+    color: #6666cc;
+}
+
 
 .siteNav ul li a i {
 
@@ -838,11 +847,15 @@ li.article a:hover,li.article a:focus{
 
 
 .contact-item:hover {
-    background: rgba(102, 102, 204, 0.3);
+    background: rgba(102, 102, 204, 0.15);
     border-radius: 8px;
     padding: 0 5px;
+
 }
 
+.contact-item:hover .contact-name{
+        color:#6666cc;
+}
 
 .contact-item .contact-name {
     color: #000000;
@@ -1382,10 +1395,10 @@ a.profile_gavatar .circle {
     width: 30%;
     height: 100%;
     content: "";
-    background: -webkit-linear-gradient(left, rgba(220, 220, 220, 0) 0, rgba(220, 220, 220, .4) 50%, rgba(220, 220, 220, 0) 100%);
-    background: -o-linear-gradient(left, rgba(220, 220, 220, 0) 0, rgba(220, 220, 220, .4) 50%, rgba(220, 220, 220, 0) 100%);
-    background: -moz-linear-gradient(left, rgba(220, 220, 220, 0) 0, rgba(220, 220, 220, .4) 50%, rgba(220, 220, 220, 0) 100%);
-    background: linear-gradient(to right, rgba(220, 220, 220, 0) 0, rgba(220, 220, 220, .4) 50%, rgba(220, 220, 220, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
+    background: -o-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
+    background: linear-gradient(to right, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
     transform: skewX(-45deg);
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
@@ -1469,7 +1482,7 @@ div.gavatar a:hover {
 }
 
 .site-state-item:hover {
-    background: rgba(102, 102, 204, 0.3);
+    background: rgba(102, 102, 204, 0.15);
     border-radius: 8px;
 }
 
@@ -1513,8 +1526,8 @@ div.gavatar a:hover {
 }
 
 .rss-subscribe a:hover {
-    color: #fff;
-    background: rgba(102, 102, 204, 0.3);
+    color: #6666cc;
+    background: rgba(102, 102, 204, 0.15);
     text-decoration: none;
     padding: 2px 5px;
     border-radius: 6px;
@@ -1660,7 +1673,7 @@ div.gavatar a:hover {
 }
 
 .categoryNav ul li:hover {
-    background: rgba(102, 102, 204, 0.3);
+    background: rgba(102, 102, 204, 0.15);
     border-radius: 8px;
     padding: 5px 5px;
 }

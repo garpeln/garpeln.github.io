@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3183天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3186天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-10 15:42:53 +0800">2024/05/10</p>
+                                    <p id="current-date" data-value="2024-05-13 11:19:53 +0800">2024/05/13</p>
                                 </li>
                             </ul>
                     </div>
@@ -411,22 +411,22 @@
     <table style="margin-bottom: 0;width: 100%;">
         <tr>
             <td style="width:6em;">姓名：</td>
-            <td><a href="" style="color:#6666cc">Gorpeln Chen</a></td>
+            <td><a href="" class="contact-author">Gorpeln Chen</a></td>
         </tr>
         <tr>
             <td>QQ：</td>
             <td>
-                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=33964471&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" style="color:#6666cc" md-opjjpmhoiojifppkkcdabiobhakljdgm_doc">33964471</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=33964471&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" class="contact-author" md-opjjpmhoiojifppkkcdabiobhakljdgm_doc">33964471</a>
             </td>
         </tr>
         <tr>
             <td>Email：</td>
-            <td><a href="" style="color:#6666cc">help@gorpeln.top</a></td>
+            <td><a href="" class="contact-author">help@gorpeln.top</a></td>
         </tr>
         <tr>
             <td>公众号：</td>
             <td>
-                <a href="" style="color:#6666cc" onMouseOut="hideImg()" onmouseover="showImg()">gorpeln</a>
+                <a href="" class="contact-author" onMouseOut="hideImg()" onmouseover="showImg()">gorpeln</a>
                 <div id="wxImg" style="display:none;position:absolute;z-index: 999;">
                     <img src="">
                 </div>
@@ -434,7 +434,7 @@
         </tr>
         <tr>
             <td>简历：</td>
-            <td><a href="/login.html" style="color:#6666cc">个人简历（隐藏中...）</a></td>
+            <td><a href="/login.html" class="contact-author">个人简历（隐藏中...）</a></td>
         </tr>
     </table>
     <br>
@@ -896,6 +896,9 @@ table tr:nth-child(even) {
     font-size:0.8em;  
 }
 
+.contact-author{
+    color:#444;
+}
 </style></div>
                 </div>
             </div>
@@ -1229,7 +1232,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 263 + '天';
+  element.innerHTML = 8 + '年' + 266 + '天';
 
 }
 
@@ -1238,7 +1241,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3183 + '天';
+    element.innerHTML = 3186 + '天';
 }
 
 
