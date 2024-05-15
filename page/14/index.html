@@ -184,8 +184,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+                    <div style="display: none;">
+                        <audio id="miao" src="https://img.gorpeln.top/media/cat.mp3" preload="auto">Your browser does not support the audio element.</audio>
+                    </div>  
                     <div class="profile box-shadow center">
-                        <div class="overlay"></div>
+                        <div class="overlay" onmouseover="plaaaay('miao')"></div>
                         <div class="center gavatar">
                             <a href="/" class="profile_gavatar">
                                 <img class="circle" src="/assets/img/logo.png">
@@ -388,11 +391,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3186天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3188天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-13 11:19:53 +0800">2024/05/13</p>
+                                    <p id="current-date" data-value="2024-05-15 17:43:55 +0800">2024/05/15</p>
                                 </li>
                             </ul>
                     </div>
@@ -1957,7 +1960,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 266 + '天';
+  element.innerHTML = 8 + '年' + 268 + '天';
 
 }
 
@@ -1966,7 +1969,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3186 + '天';
+    element.innerHTML = 3188 + '天';
 }
 
 
@@ -2002,6 +2005,10 @@ function restoreContent(element) {
     } 
 
   </script>
-
+<script>
+var plaaaay = function(id) {
+    $('#' + id)[0].play();
+};
+</script>
 
 </html>
