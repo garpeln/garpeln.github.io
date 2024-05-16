@@ -395,7 +395,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-16 14:07:10 +0800">2024/05/16</p>
+                                    <p id="current-date" data-value="2024-05-16 14:35:40 +0800">2024/05/16</p>
                                 </li>
                             </ul>
                     </div>
@@ -1527,7 +1527,7 @@ async function showAsyncAlert() {
     if (window.location.href.indexOf("gorpeln.top") !== -1) {
         pushtobaidu();
     } else {
-        console.log(window.location.href + '非主域名，不进行推送。主域名为：https://gorpeln.top');
+        console.log(window.location.href + '\n非主域名，不进行推送。\n主域名为：https://gorpeln.top' + window.location.pathname);
     }
 
 }
