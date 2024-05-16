@@ -196,8 +196,16 @@
     async function login() {
         window.showLoadingSpinner(); // 使用全局函数显示加载提示
 
+
         const username = $("#username").val();
         const password = $("#password").val();
+
+        console.log(JSON.stringify({ username, password }));    
+console.log(JSON.stringify({ username, password }));    
+console.log(JSON.stringify({ username, password }));    
+
+
+
         const response = await fetch('https://api.202090.xyz/api/login', {
             method: 'POST',
             headers: {
