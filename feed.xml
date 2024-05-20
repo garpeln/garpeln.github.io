@@ -570,8 +570,8 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 	&lt;/script&gt;
 
 
-    &lt;a class=&quot;prev&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
-    &lt;a class=&quot;next&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
+    &lt;a class=&quot;prev safe-item-auto-load&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&amp;#10094;&lt;/a&gt;
+    &lt;a class=&quot;next safe-item-auto-load&quot; onclick=&quot;plusSlides(1)&quot;&gt;&amp;#10095;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;!-- 添加更多的缩略图 --&gt;
