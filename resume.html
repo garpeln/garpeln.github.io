@@ -18,12 +18,39 @@
     .hidden {
         display: none;
     }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid rgba(102, 102, 204, 0.4);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  overflow: visible; 
+}
+ .fa-cloud-download {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 32px;
+    bottom: -26px;
+
+}   
     </style>
 </head>
 
 <body style="padding-right: 0px;" id="mainContent" class="hidden">
+
     <div class="container">
         <div class="side">
+            <div class="triangle" onclick="downPDF()">
+                <i class="fal fa-cloud-download"></i>
+            </div>
+
             <div class="me">
                 <text style="color:#acacac;">更新于 2016-07-16</text>
                 <h1>陈冠鹏</h1>
@@ -234,14 +261,14 @@
         </div>
     </div>
     <script>
-    sessionStorage.setItem('pageLoaded', 'true');
+        sessionStorage.setItem('pageLoaded', 'true');
 
-    window.onload = function() {
-        fetchData();
-    }
-    window.addEventListener('beforeunload', function(event) {
-        logout();
-    });
+        window.onload = function() {
+            fetchData();
+        }
+        window.addEventListener('beforeunload', function(event) {
+            logout();
+        });
     </script>
     <script>
     async function fetchData() {
@@ -272,6 +299,12 @@
             console.error('Error fetching data:', error);
         }
     }
+    </script>
+
+    <script>
+        function downPDF() {
+              window.location.href = "/resume.pdf";
+        }
     </script>
 </body>
 

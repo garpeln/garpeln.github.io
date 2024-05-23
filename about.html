@@ -149,7 +149,7 @@
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
-                        <li><a href="/works"><i class="fab fa-git-square fa-fw"></i>项目</a></li>
+                        <li><a href="/mysite"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
                         <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
                         <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
                         <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
@@ -391,18 +391,92 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3193天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3196天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-20 19:26:06 +0800">2024/05/20</p>
+                                    <p id="current-date" data-value="2024-05-23 17:30:33 +0800">2024/05/23</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><script src="/assets/js/typed.min.js"></script>
+                    <div class="page-content" id="pjax"><style>
+h1::after {
+    transition: all .35s;
+    content: "";
+    position: absolute;
+    background: linear-gradient(#3c67bd8c 30%, #3c67bd 70%);
+    width: 1.5em;
+    left: 0;
+    box-shadow: 0 3px 3px rgba(32, 160, 255, .4);
+    height: 3px;
+    bottom: -8px;
+}
+
+h1::before {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    bottom: -7px;
+    position: absolute
+}
+
+h1 {
+    position: relative;
+    margin: 20px 0 32px;
+    font-size: 1.55em;
+}
+
+h1:hover::after {
+    width: 3em
+}
+
+.des {
+    text-indent: 2em;
+}
+
+.contactTitle {}
+
+.customCopyright {
+    margin: 2em;
+    background: #f8f8f8;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 0.9em;
+    color: #666666;
+    margin-bottom: 0.5em;
+}
+
+table tr:nth-child(even) {
+
+    background: #f8f8f8;
+
+}
+
+.box {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+.agreement{
+    margin-left:2em;
+}
+.agreement a{
+    font-size:0.8em;  
+}
+
+.contact-author{
+    color:#444;
+}
+</style>
+
+
+<script src="/assets/js/typed.min.js"></script>
 
 <div class="home" style="border-radius: 10px;">
     <h1 class="tag-name">关于我</h1>
@@ -831,78 +905,7 @@ function hideImg() {
   }
 </script>   
 
-<style>
-h1::after {
-    transition: all .35s;
-    content: "";
-    position: absolute;
-    background: linear-gradient(#3c67bd8c 30%, #3c67bd 70%);
-    width: 1.5em;
-    left: 0;
-    box-shadow: 0 3px 3px rgba(32, 160, 255, .4);
-    height: 3px;
-    bottom: -8px;
-}
-
-h1::before {
-    content: "";
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    bottom: -7px;
-    position: absolute
-}
-
-h1 {
-    position: relative;
-    margin: 20px 0 32px;
-    font-size: 1.55em;
-}
-
-h1:hover::after {
-    width: 3em
-}
-
-.des {
-    text-indent: 2em;
-}
-
-.contactTitle {}
-
-.customCopyright {
-    margin: 2em;
-    background: #f8f8f8;
-    padding: 1em;
-    border-radius: 10px;
-    font-size: 0.9em;
-    color: #666666;
-    margin-bottom: 0.5em;
-}
-
-table tr:nth-child(even) {
-
-    background: #f8f8f8;
-
-}
-
-.box {
-    background: #fff;
-    padding: 1em;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-
-}
-.agreement{
-    margin-left:2em;
-}
-.agreement a{
-    font-size:0.8em;  
-}
-
-.contact-author{
-    color:#444;
-}
-</style></div>
+</div>
                 </div>
             </div>
         </div>
@@ -1235,7 +1238,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 273 + '天';
+  element.innerHTML = 8 + '年' + 276 + '天';
 
 }
 
@@ -1244,7 +1247,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3193 + '天';
+    element.innerHTML = 3196 + '天';
 }
 
 
