@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>GitHub贡献者可获取 Stark 空投 | gorpeln的个人博客 - gorpeln</title>
+  <title>触发KVO的修改变量值方法 | gorpeln的个人博客 - gorpeln</title>
 
-  <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,GitHub,Stark,空投,STRK,欧易" />
-  <meta name="description" content="Starknet 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。">
+  <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,KVO,Observer,通知,监听,setValue" />
+  <meta name="description" content="```// Student.h@interface Student : NSObject">
 
   <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
   <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="/assets/css/warning.min.css" >
 
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="canonical" href="/article/17087779433">
+  <link rel="canonical" href="/article/15326844122">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
   <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -405,13 +405,13 @@
                     <div class="page-content" id="pjax"><div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">GitHub贡献者可获取 Stark 空投</h1>
+    <h1 class="post-title">触发KVO的修改变量值方法</h1>
   	<div class="info">
   	        时间：
-  	        <text style="padding-top: 0;">2024-02-24</text>&nbsp;&nbsp;&nbsp;&nbsp;
+  	        <text style="padding-top: 0;">2018-07-27</text>&nbsp;&nbsp;&nbsp;&nbsp;
   	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#教程福利" target="_blank">
-  	            教程福利
+  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+  	            iOS
   	        </a>
   	        &nbsp;&nbsp;&nbsp;&nbsp;
   	        标签：
@@ -419,23 +419,23 @@
   	        <span class="index-post-tag">
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#GitHub"  target="_blank">GitHub</a>
+  	                <a class="pjaxlink" href="/tags#KVO"  target="_blank">KVO</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#Stark"  target="_blank">Stark</a>
+  	                <a class="pjaxlink" href="/tags#Observer"  target="_blank">Observer</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#空投"  target="_blank">空投</a>
+  	                <a class="pjaxlink" href="/tags#通知"  target="_blank">通知</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#STRK"  target="_blank">STRK</a>
+  	                <a class="pjaxlink" href="/tags#监听"  target="_blank">监听</a>
   	                /
   	            
   	                
-  	                <a class="pjaxlink" href="/tags#欧易"  target="_blank">欧易</a>
+  	                <a class="pjaxlink" href="/tags#setValue"  target="_blank">setValue</a>
   	                
   	            
   	        </span>
@@ -444,57 +444,74 @@
   </header>
 
   <article class="post-content">
-    <p><code class="language-plaintext highlighter-rouge">Starknet</code> 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Student.h
+@interface Student : NSObject
 
-<p><img src="https://img.gorpeln.top/blog/20240224203223424.jpg!gorpeln" alt="20240224203223424" /></p>
+@property (nonatomic , assign) NSInteger score;
 
-<h3 id="领取条件">领取条件</h3>
+- (void)changeScore:(NSInteger)score;
 
-<blockquote>
-  <p>在 2023 年 11 月 15 日之前，您至少向全球星数排名前 5,000 位的版本库提交了三次内容。其中至少一次提交发生在 2018 年或之后。</p>
-</blockquote>
+@end
 
-<p>即使不符合条件也先不要气馁，可以试着查一下资格，因为这 5000 个仓库的范围比较迷，我甚至都不记得自己是给哪个仓库贡献达标的……</p>
 
-<p>打开 <a href="https://provisions.starknet.io">provisions.starknet.io</a>，点击 <code class="language-plaintext highlighter-rouge">Eligibility check only</code>，选择 GitHub，输入 GitHub 用户名，点击 Go，如果提示 <code class="language-plaintext highlighter-rouge">Congratulations</code>，那你就可以领到这笔钱了。</p>
+// Student.m
+#import "Student.h"
+@implementation Student
+// 改变成员变量的值
+- (void)changeScore:(NSInteger)score{
+    _score = score;
+}
 
-<p>接着点击 <code class="language-plaintext highlighter-rouge">Disconnect</code>，点 <code class="language-plaintext highlighter-rouge">Claim STRK</code>，按步骤下载浏览器插件（选哪个都可以，我选择的是 <code class="language-plaintext highlighter-rouge">Argent X</code>），创建一个钱包地址，在核验资格的步骤选择最后一个 GitHub，授权 GitHub 账号，然后这笔钱就到自己的钱包里了，不知道各位都领了多少，我领到了 <code class="language-plaintext highlighter-rouge">111.1</code>。大约 1~2 分钟检查钱包到账情况。</p>
+@end
+</code></pre></div></div>
 
-<h3 id="提现">提现</h3>
-<p>接下来提现到支付宝。由于我国的加密货币政策原因，提现一定要选择安全正规的大平台进行，提现的大致过程如下</p>
+<p>如上所示的Student类有个<code class="language-plaintext highlighter-rouge">score</code>属性，通过KVO添加观察者监听<code class="language-plaintext highlighter-rouge">score</code>属性后，可以通过下面3中方式来改变score的值，但只有通过<code class="language-plaintext highlighter-rouge">.语法</code>和<code class="language-plaintext highlighter-rouge">KVC</code>赋值这两种方式改变<code class="language-plaintext highlighter-rouge">score</code>的值时才会触发KVO。</p>
 
-<blockquote class="prompt-danger">
-  <p>提醒！ <br />
-此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！</p>
-</blockquote>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Student *stu = [[Student alloc] init];
+[stu addObserver:self forKeyPath:@"score" options:NSKeyValueObservingOptionNew context:NULL];
 
-<ol>
-  <li>申请交易所账号：我用的是 <a href="https://www.okx.com/cn">欧易</a></li>
-  <li>下载 APP 进行实名认证：有实名认证的交易所能更大程度确保资金来源安全</li>
-  <li>充币：币种选择 <code class="language-plaintext highlighter-rouge">STRK</code>，充至交易账户，打开钱包按步骤将币转入欧易提供的地址内，等待 5~10 分钟到账</li>
-  <li>卖出 <code class="language-plaintext highlighter-rouge">STRK</code> 获得 <code class="language-plaintext highlighter-rouge">USDT</code>：前往 STRK/USDT 的交易页面选择卖出，挂单，选市价委托（设置一个合理的限价也可以），数量 100%，等成交</li>
-  <li>提币：卖完到资产页面，把 <code class="language-plaintext highlighter-rouge">USDT</code> 余额从交易账户转到资金账户，点提币，C2C 交易，支付方式推荐选支付宝，选一个成交量比较高的靠谱的买家，填写支付宝账户并上传支付宝收款码，将 USDT 全部出售，1~20 分钟后即可到账，确认到账金额、付款方姓名正确后，回到交易所页面确认收款，交易完成</li>
-</ol>
+// 通过3中方式改变score
+// 方式一：点语法(也就是通过setter方法赋值)
+stu.core = 88;
 
-<blockquote class="prompt-danger">
-  <p>最后再次提醒！ <br />
-此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！</p>
-</blockquote>
+// 方式二：KVC赋值
+[stu setValue:@55 forKey:@"score"];
 
-<h3 id="结语">结语</h3>
-<p>感谢那些一直默默付出的贡献者们，这次空投给开源社区打了一剂振奋剂，也引来了不少别出心裁之人……
-还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。</p>
+// 方式三：直接更改成员变量的值（不会触发KVO）
+[stu changeScore:33];
+</code></pre></div></div>
+<p>如果想要第三种方式也能触发KVO的话就需要手动触发，也就是需要将<code class="language-plaintext highlighter-rouge">changeScore:</code>方法改成：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)changeScore:(NSInteger)score{
 
+    [self willChangeValueForKey:@"score"];
+    _score = score;
+    [self didChangeValueForKey:@"score"];
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//通过属性的点语法间接调用
+objc.name = @"";
+
+// 直接调用set方法
+[objc setName:@"Savings"];
+
+// 使用KVC的setValue:forKey:方法
+[objc setValue:@"Savings" forKey:@"name"];
+
+// 使用KVC的setValue:forKeyPath:方法
+[objc setValue:@"Savings" forKeyPath:@"account.name"];
+
+</code></pre></div></div>
 
   </article>
 
 </div>
 
   <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/17087779433">https://gorpeln.top/article/17087779433</a></div>
+		<div>本文链接：<a href="https://gorpeln.top/article/15326844122">https://gorpeln.top/article/15326844122</a></div>
     <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-03-19</div>
+      <div>最后编辑于：2024-05-23</div>
     
 </div>
 </div>
@@ -502,12 +519,12 @@
   <div class="prevandnext">
     	  
 	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/17094338798" title="外链跳转到中间页" style="color: #6666cc;font-size: 0.9em;"  target="_blank">外链跳转到中间页</a>
+	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15334663054" title="Github上的代码添加Cocoapods支持" style="color: #6666cc;font-size: 0.9em;"  target="_blank">Github上的代码添加Cocoapods支持</a>
 	    </div>
 	  
   	  
 	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/17049566482" title="部署友链朋友圈" style="color: #6666cc;font-size: 0.9em;"  target="_blank">部署友链朋友圈</a>
+	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15326844120" title="KVO用法总结" style="color: #6666cc;font-size: 0.9em;"  target="_blank">KVO用法总结</a>
 	    </div>
 	  
 	 
@@ -797,7 +814,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17087779433')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15326844122')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">
