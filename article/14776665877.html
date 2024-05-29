@@ -24,7 +24,7 @@
   <link rel="canonical" href="/article/14776665877">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
-  <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+  <script async src="https://umami.339336.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
   
 </head>
 
@@ -391,11 +391,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3196天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3202天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-23 18:30:57 +0800">2024/05/23</p>
+                                    <p id="current-date" data-value="2024-05-29 09:56:20 +0800">2024/05/29</p>
                                 </li>
                             </ul>
                     </div>
@@ -780,7 +780,7 @@ textarea::placeholder {
 
        init({
             el: '#waline',
-            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            serverURL: 'https://waline.339336.xyz', //https://waline.339336.xyz
             lang: 'zh-CN',
             pageview: true, // 浏览量统计
             comment: true, // 评论数统计
@@ -839,7 +839,75 @@ textarea::placeholder {
             </a>
         </div>
     </div>
-    <footer class="site-footer">
+    <style>
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.runTime {
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.runTime:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 4px;
+    left: 0;
+    border-bottom: 1px dashed #777;
+}
+
+
+.footerImg {
+    margin-top: -3px;
+    margin-right: 2px;
+}
+
+.footerDes,
+.footerDes a {
+    color: #666;
+    text-align: center;
+    bottom: -0.25em;
+    font-size: 12px;
+}
+
+#heartbeat {
+    color: red;
+    animation: heartbeat 1s infinite;
+}
+
+.post-margin{
+}
+
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+</style>
+
+<footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
         <div class="other-icp">
@@ -879,6 +947,9 @@ textarea::placeholder {
 <script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript" src="/assets/js/toc.js"></script>
 <script type="text/javascript" src="/assets/js/safe.js"></script>
+
+
+
 <!-- search -->
 <div class="cb-search-tool" id="cb-close-btn">
     <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
@@ -972,6 +1043,63 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 </script>
+<script type="text/javascript">
+// 定义一个函数用于在控制台打印站点信息
+function printSiteInfo() {
+    // 使用CSS样式美化输出的信息
+    const siteTitleStyle = "color:#6666cc;line-height:22px;font-size:12px;";
+    const baseurlStyle = "color:#6666cc;line-height:22px;font-size:12px;";
+    const emailStyle = "color:#6666cc;line-height:22px;font-size:12px;";
+    const descStyle = "color:#6666cc;line-height:22px;font-size:12px;";
+
+    // 打印博客信息
+    console.log("%c博客名称%c gorpeln的个人博客 - gorpeln ", "line-height:24px;", siteTitleStyle);
+    console.log("%c博客链接%c https://gorpeln.top ", "line-height:24px;", baseurlStyle);
+    console.log("%c联系方式%c help@gorpeln.top ", "line-height:24px;", emailStyle);
+    console.log("%c博主寄语%c 趁年轻，做自己想做的！ ", "line-height:24px;", descStyle);
+
+    // 计算并打印页面加载时间
+    if (window.console && window.console.log) {
+        const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
+        const formattedLoadTime = loadTime.toFixed(2) + 's';
+        console.log(
+            `%c页面加载消耗了%c: ${formattedLoadTime}`,
+            'font-weight: 400;line-height:22px;', 
+            ''
+        );
+
+        // 记录和打印用户访问信息
+        const accessKey = "access";
+        const hitKey = "hit";
+
+        // 初始化访问日期或获取已有日期
+        let accessDate = localStorage.getItem(accessKey)
+            ? new Date(parseInt(localStorage.getItem(accessKey)))
+            : new Date();
+        accessDate = `${accessDate.getFullYear()}年${accessDate.getMonth()+1}月${accessDate.getDate()}日`;
+
+        // 更新和记录访问次数
+        let hitCount = localStorage.getItem(hitKey) 
+            ? parseInt(localStorage.getItem(hitKey)) 
+            : 0;
+        hitCount++;
+        localStorage.setItem(hitKey, hitCount);
+
+        console.log(
+            `%c这是你自 %c${accessDate} %c以来第 %c${hitCount} %c次在本站打开控制台，你想知道什么秘密吗～～`,
+            "", // 默认样式
+            `color:#6666cc;font-weight:bolder;line-height:22px;`, // 高亮样式
+            "", // 默认样式
+            `color:#6666cc;font-weight:bolder;line-height:22px;`, // 高亮样式
+            "" // 默认样式
+        );
+    }
+}
+
+// 调用函数
+printSiteInfo();
+</script>
+
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];
@@ -1011,73 +1139,7 @@ s.parentNode.insertBefore(el, s);
 </script>
 
 
-<style>
-.site-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
-}
 
-.runTime {
-    color: #777;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    /* 隐藏默认的文本下划线 */
-    display: inline-block;
-    position: relative;
-}
-
-.runTime:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    /*background-color: #888;*/
-    bottom: 4px;
-    left: 0;
-    border-bottom: 1px dashed #777;
-}
-
-
-.footerImg {
-    margin-top: -3px;
-    margin-right: 2px;
-}
-
-.footerDes,
-.footerDes a {
-    color: #666;
-    text-align: center;
-    /* Center the text within the .footerDes div */
-    bottom: -0.25em;
-    font-size: 12px;
-}
-
-#heartbeat {
-    color: red;
-    animation: heartbeat 1s infinite;
-}
-
-.post-margin{
-}
-@keyframes heartbeat {
-    0% {
-        transform: scale(1.0);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
-}
-</style>
 </body>
 <script>
 function pushNew(path) {
@@ -1156,7 +1218,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 276 + '天';
+  element.innerHTML = 8 + '年' + 282 + '天';
 
 }
 
@@ -1165,7 +1227,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3196 + '天';
+    element.innerHTML = 3202 + '天';
 }
 
 
@@ -1225,7 +1287,7 @@ async function showAsyncAlert() {
     if (window.location.href.indexOf("gorpeln.top") !== -1) {
         pushtobaidu();
     } else {
-        console.log(window.location.href + '\n非主域名，不进行推送。\n主域名为：https://gorpeln.top' + window.location.pathname);
+        console.log('当前访问的域名为: ' + window.location.href + ' 非主域名，不进行推送。\n主域名为: https://gorpeln.top' + window.location.pathname);
     }
 
 }
@@ -1242,7 +1304,7 @@ async function pushtobaidu() {
     };
 
     try {
-        const response = await fetch('https://api.202090.xyz/api/push-to-baidu', {
+        const response = await fetch('https://api.339336.xyz/api/push-to-baidu', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
