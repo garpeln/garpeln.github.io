@@ -1,8 +1,13 @@
 {
   "friends": [
     [
+      "十年之约",
+      "https://www.foreverblog.cn",
+      "https://www.foreverblog.cn/favicon.ico"
+    ],
+    [
       "gorpeln的个人博客 - gorpeln",
-      "https://gorpeln.top/",
+      "https://gorpeln.top",
       "https://gorpeln.top/favicon.ico"
     ],
     [
@@ -47,7 +52,7 @@
     ],
     [
       "Debug客栈",
-      "https://blog.debuginn.com/",
+      "https://blog.debuginn.com",
       "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG"
     ],
     [
@@ -57,7 +62,7 @@
     ],
     [
       "Hary的博客",
-      "https://hary.cc/",
+      "https://hary.cc",
       "https://hary.cc/ico.png"
     ],
     [
@@ -71,13 +76,8 @@
       "https://www.yvii.cn/img/favicon.png"
     ],
     [
-      "Randwind’s blog",
-      "https://www.randwind.com/",
-      "https://www.randwind.com/wp-content/uploads/2023/11/logo.png"
-    ],
-    [
       "冬天的小窝",
-      "https://www.iamdt.cn/",
+      "https://www.iamdt.cn",
       "https://img.iamdt.cn/2023/09/26/6512ccfe73f56.png"
     ],
     [
@@ -87,12 +87,17 @@
     ],
     [
       "刘郎阁",
-      "https://yjvc.cn/",
+      "https://yjvc.cn",
       "https://yjvc.cn/usr/uploads/logo.jpeg"
     ],
     [
+      "Randwind’s blog",
+      "https://www.randwind.com",
+      "https://www.randwind.com/wp-content/uploads/2023/11/logo.png"
+    ],
+    [
       "無名小栈",
-      "https://blog.imsyy.top/",
+      "https://blog.imsyy.top",
       "https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png"
     ]
   ]

@@ -26,6 +26,22 @@
                 margin-top: 10px;
                 border-radius: 12px;
                 padding: 0;
+                /* 设置固定高度 */
+                height: 60%;
+                /* 您可以根据需要调整这个值 */
+                /* 启用滚动条，当内容溢出时 */
+                overflow-y: auto;
+                /* 仅在垂直方向上滚动 */
+                /* 可选：移除默认的滚动条样式，美化滚动条（此为Webkit内核浏览器，如Chrome和Safari） */
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+
+                /* IE and Edge */
+                &::-webkit-scrollbar {
+                    display: none;
+                    /* 隐藏滚动条 */
+                }
             }
 
             .cb-search-tool ul li {
@@ -109,6 +125,22 @@
                 border-radius: 12px;
                 padding: 0;
                 margin-left: 6%;
+                /* 设置固定高度 */
+                height: 60%;
+                /* 您可以根据需要调整这个值 */
+                /* 启用滚动条，当内容溢出时 */
+                overflow-y: auto;
+                /* 仅在垂直方向上滚动 */
+                /* 可选：移除默认的滚动条样式，美化滚动条（此为Webkit内核浏览器，如Chrome和Safari） */
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+
+                /* IE and Edge */
+                &::-webkit-scrollbar {
+                    display: none;
+                    /* 隐藏滚动条 */
+                }
             }
 
             .cb-search-tool ul li {

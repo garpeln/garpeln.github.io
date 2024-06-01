@@ -391,11 +391,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3202天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3205天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-05-29 09:56:20 +0800">2024/05/29</p>
+                                    <p id="current-date" data-value="2024-06-01 19:44:57 +0800">2024/06/01</p>
                                 </li>
                             </ul>
                     </div>
@@ -528,6 +528,18 @@
   <li>如果每天用，建议 Mac 不关机，使用睡眠模式；</li>
   <li>如果不常用，建议 Mac 关机。</li>
 </ul>
+
+<h3 id="15修改mac上某类文件的默认打开方式">15、修改Mac上某类文件的默认打开方式</h3>
+<p>比如<code class="language-plaintext highlighter-rouge">.txt</code>格式文件的默认打开方式为<code class="language-plaintext highlighter-rouge">文本编辑</code>，如果想修改默认打开方式为<code class="language-plaintext highlighter-rouge">Sublime Text</code>。</p>
+<ul>
+  <li>首先，确保 <code class="language-plaintext highlighter-rouge">Sublime Text</code> 已安装在你的Mac上。</li>
+  <li>找到任何一个 <code class="language-plaintext highlighter-rouge">.txt</code> 文件，右键点击它，然后选择“<code class="language-plaintext highlighter-rouge">显示简介</code>”。</li>
+  <li>在弹出的窗口中，找到并点击“<code class="language-plaintext highlighter-rouge">打开方式</code>”旁的下拉菜单，从中选择 <code class="language-plaintext highlighter-rouge">Sublime Text</code>，如果下拉菜单中没有<code class="language-plaintext highlighter-rouge">Sublime Text</code>，直接在“其他…”选项中浏览到 <code class="language-plaintext highlighter-rouge">Sublime Text</code> 的应用程序位置并选择它。</li>
+  <li>点击“<code class="language-plaintext highlighter-rouge">全部更改</code>”按钮。这会将所有 <code class="language-plaintext highlighter-rouge">.txt</code> 文件的默认打开方式更改为 <code class="language-plaintext highlighter-rouge">Sublime Text</code>。</li>
+</ul>
+
+<p>完成上述步骤后，Mac系统就会记住你的选择，之后所有 <code class="language-plaintext highlighter-rouge">.txt</code> 文件都会默认使用 <code class="language-plaintext highlighter-rouge">Sublime Text</code> 打开，包括新<strong>创建</strong>或<strong>下载</strong>的 <code class="language-plaintext highlighter-rouge">.txt</code> 文件，无需再手动更改每个文件的打开方式。   <br />
+如果你只想某个<code class="language-plaintext highlighter-rouge">.txt</code>的文件（如 1.txt）的打开方式修改，你不点击“<code class="language-plaintext highlighter-rouge">全部更改</code>”按钮即可。</p>
 
   </article>
 
@@ -1227,7 +1239,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 282 + '天';
+  element.innerHTML = 8 + '年' + 285 + '天';
 
 }
 
@@ -1236,7 +1248,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3202 + '天';
+    element.innerHTML = 3205 + '天';
 }
 
 
