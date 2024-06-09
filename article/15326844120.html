@@ -25,7 +25,7 @@
   <link rel="canonical" href="/article/15326844120">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
-  <script async src="https://umami.339336.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+  <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
   
 </head>
 
@@ -185,11 +185,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-                    <div style="display: none;">
-                        <audio id="miao" src="https://img.gorpeln.top/media/cat.mp3" preload="auto">Your browser does not support the audio element.</audio>
-                    </div>  
                     <div class="profile box-shadow center">
-                        <div class="overlay" onmouseover="plaaaay('miao')"></div>
+                        <div class="overlay"></div>
                         <div class="center gavatar">
                             <a href="/" class="profile_gavatar">
                                 <img class="circle" src="/assets/img/logo.png">
@@ -392,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3211天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3213天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-07 19:27:52 +0800">2024/06/07</p>
+                                    <p id="current-date" data-value="2024-06-09 17:36:00 +0800">2024/06/09</p>
                                 </li>
                             </ul>
                     </div>
@@ -941,7 +938,7 @@ textarea::placeholder {
 
        init({
             el: '#waline',
-            serverURL: 'https://waline.339336.xyz', //https://waline.339336.xyz
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
             lang: 'zh-CN',
             pageview: true, // 浏览量统计
             comment: true, // 评论数统计
@@ -1378,7 +1375,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 291 + '天';
+  element.innerHTML = 8 + '年' + 293 + '天';
 
 }
 
@@ -1387,7 +1384,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3211 + '天';
+    element.innerHTML = 3213 + '天';
 }
 
 
@@ -1423,12 +1420,19 @@ function restoreContent(element) {
     } 
 
   </script>
-<script>
-var plaaaay = function(id) {
-    $('#' + id)[0].play();
-};
-</script>
 
+<script>
+$(document).ready(function() {
+    $('.rss-subscribe').click(function(event) {
+        // 阻止事件冒泡，防止点击div时触发a标签的点击事件
+        event.stopPropagation();
+
+        // 播放音频
+        var audio = new Audio('https://img.gorpeln.top/media/cat.mp3');
+        audio.play();
+    });
+});
+</script>
 <script>
 // 模拟异步操作
 function asyncOperation() {
@@ -1464,7 +1468,7 @@ async function pushtobaidu() {
     };
 
     try {
-        const response = await fetch('https://api.339336.xyz/api/push-to-baidu', {
+        const response = await fetch('https://api.202090.xyz/api/push-to-baidu', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
