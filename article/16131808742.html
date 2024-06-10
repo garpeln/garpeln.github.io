@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
   <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
   <link rel="stylesheet" href="/assets/css/warning.min.css" >
-  <link rel="stylesheet" href="/search/css/cb-search.css">
+  <link rel="stylesheet" href="/assets/css/cb-search.css">
 
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="canonical" href="/article/16131808742">
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3213天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-09 20:12:11 +0800">2024/06/09</p>
+                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
                                 </li>
                             </ul>
                     </div>
@@ -1439,8 +1439,9 @@ textarea::placeholder {
 <div class="cb-search-tool" id="cb-close-btn">
     <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签">
 </div>
-<script src="/search/js/bootstrap3-typeahead.min.js"></script>
-<script src="/search/js/cb-search.js"></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
+
 <!-- 动态显示网站运行时间 -->
 <script language=javascript>
 const fullYear = new Date().getFullYear();
@@ -1702,7 +1703,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 293 + '天';
+  element.innerHTML = 8 + '年' + 294 + '天';
 
 }
 
@@ -1711,7 +1712,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3213 + '天';
+    element.innerHTML = 3214 + '天';
 }
 
 
