@@ -389,60 +389,71 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">MacOS：鼠标事件</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2022-04-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-  	            MacOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#鼠标"  target="_blank">鼠标</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#mouse"  target="_blank">mouse</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#mouseDown"  target="_blank">mouseDown</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSResponder"  target="_blank">NSResponder</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSEvent"  target="_blank">NSEvent</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h3 id="nsresponder">NSResponder</h3>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">MacOS：鼠标事件</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2022-04-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                MacOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#鼠标" target="_blank">鼠标</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#mouse" target="_blank">mouse</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#mouseDown" target="_blank">mouseDown</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#NSResponder" target="_blank">NSResponder</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#NSEvent" target="_blank">NSEvent</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="nsresponder">NSResponder</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 鼠标按下事件
 - (void)mouseDown:(NSEvent *)event;
 // 鼠标右键按下事件
@@ -493,34 +504,29 @@
 @property (readonly) unsigned short keyCode;
 </code></pre></div></div>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/16489790954">https://gorpeln.top/article/16489790954</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/16489790954" style="color:#666">https://gorpeln.top/article/16489790954</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/16489862954" title="MacOS：使用代码重启应用" style="color: #6666cc;font-size: 0.9em;"  target="_blank">MacOS：使用代码重启应用</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/16489168044" title="MacOS：NSTableView" style="color: #6666cc;font-size: 0.9em;"  target="_blank">MacOS：NSTableView</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/16489862954" title="MacOS：使用代码重启应用" class="custom-font" target="_blank">MacOS：使用代码重启应用</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/16489168044" title="MacOS：NSTableView" class="custom-font" target="_blank">MacOS：NSTableView</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -786,17 +792,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1191,7 +1187,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1200,7 +1196,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

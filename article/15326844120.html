@@ -389,60 +389,71 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">KVO用法总结</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2018-07-27</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-  	            iOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#KVO"  target="_blank">KVO</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Observer"  target="_blank">Observer</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#通知"  target="_blank">通知</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#监听"  target="_blank">监听</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#setValue"  target="_blank">setValue</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h3 id="一概述">一.概述：</h3>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">KVO用法总结</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2018-07-27</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                iOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#KVO" target="_blank">KVO</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#Observer" target="_blank">Observer</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#通知" target="_blank">通知</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#监听" target="_blank">监听</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#setValue" target="_blank">setValue</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="一概述">一.概述：</h3>
 <p>KVO全称Key-Value Observing，是苹果提供的一套事件通知机制。</p>
 
 <blockquote>
@@ -678,34 +689,29 @@ KVOTest[40935:3327447] new price: 49
 <p>3、同时派生类还重写了 class 方法以“欺骗”外部调用者它就是起初的那个类。然后系统将这个对象的 isa 指针指向这个新诞生的派生类，因此这个对象就成为该派生类的对象了，因而在该对象上对 setter 的调用就会调用重写的 setter，从而激活键值通知机制。此外，派生类还重写了 dealloc 方法来释放资源。</p>
 
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15326844120">https://gorpeln.top/article/15326844120</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15326844120" style="color:#666">https://gorpeln.top/article/15326844120</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15326844122" title="触发KVO的修改变量值方法" style="color: #6666cc;font-size: 0.9em;"  target="_blank">触发KVO的修改变量值方法</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15324985037" title="tomcat启动和关闭 MAC" style="color: #6666cc;font-size: 0.9em;"  target="_blank">tomcat启动和关闭 MAC</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15326844122" title="触发KVO的修改变量值方法" class="custom-font" target="_blank">触发KVO的修改变量值方法</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15324985037" title="tomcat启动和关闭 MAC" class="custom-font" target="_blank">tomcat启动和关闭 MAC</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -971,17 +977,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1376,7 +1372,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1385,7 +1381,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

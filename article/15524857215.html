@@ -389,56 +389,67 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">移动 APP 网络优化概述</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2019-03-13</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-  	            iOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#网络优化"  target="_blank">网络优化</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#AFNetworking"  target="_blank">AFNetworking</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#DNS解析"  target="_blank">DNS解析</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#keep-alive"  target="_blank">keep-alive</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <p>一般开发一个 APP，会直接调用系统提供的网络请求接口去服务端请求数据，再针对返回的数据进行一些处理，或者使用AFNetworking/OKHttp这样的网络库，管理好请求线程和队列，再自动做一些数据解析，就结束了。</p>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">移动 APP 网络优化概述</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2019-03-13</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                iOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#网络优化" target="_blank">网络优化</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#AFNetworking" target="_blank">AFNetworking</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#DNS解析" target="_blank">DNS解析</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#keep-alive" target="_blank">keep-alive</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p>一般开发一个 APP，会直接调用系统提供的网络请求接口去服务端请求数据，再针对返回的数据进行一些处理，或者使用AFNetworking/OKHttp这样的网络库，管理好请求线程和队列，再自动做一些数据解析，就结束了。</p>
 
 <p>但对于一些大型 APP，还会想针对网络的一些问题进行进一步优化，包括：</p>
 
@@ -559,34 +570,29 @@
 <h3 id="最后">最后</h3>
 <p>网络优化这个话题非常庞大，本文只是在学习过程中从优化思路上列举了目前业界常见的优化点，还有很多细节很多更深入的优化没涉及到，网络层实践开发经验不足，若有错误欢迎指出。</p>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15524857215">https://gorpeln.top/article/15524857215</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15524857215" style="color:#666">https://gorpeln.top/article/15524857215</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15526269575" title="iOS App 签名的原理" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS App 签名的原理</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15515973239" title="如何访问并修改一个类的私有属性？" style="color: #6666cc;font-size: 0.9em;"  target="_blank">如何访问并修改一个类的私有属性？</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15526269575" title="iOS App 签名的原理" class="custom-font" target="_blank">iOS App 签名的原理</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15515973239" title="如何访问并修改一个类的私有属性？" class="custom-font" target="_blank">如何访问并修改一个类的私有属性？</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -852,17 +858,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1257,7 +1253,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1266,7 +1262,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

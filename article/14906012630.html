@@ -389,68 +389,79 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">解析HTTP协议请求方法GET、HEAD、PUT、DELETE、POST、 OPTIONS</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2017-03-27</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
-  	            产品和运营
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#HTTP协议"  target="_blank">HTTP协议</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#GET"  target="_blank">GET</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#POST"  target="_blank">POST</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#PUT"  target="_blank">PUT</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Delete"  target="_blank">Delete</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#HEAD"  target="_blank">HEAD</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#OPTIONS"  target="_blank">OPTIONS</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <p><strong>标准Http协议支持六种请求方法，即：</strong> <code class="language-plaintext highlighter-rouge">GET</code> <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">PUT</code> <code class="language-plaintext highlighter-rouge">Delete</code> <code class="language-plaintext highlighter-rouge">HEAD</code> <code class="language-plaintext highlighter-rouge">OPTIONS</code></p>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">解析HTTP协议请求方法GET、HEAD、PUT、DELETE、POST、 OPTIONS</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2017-03-27</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
+                产品和运营
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#HTTP协议" target="_blank">HTTP协议</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#GET" target="_blank">GET</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#POST" target="_blank">POST</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#PUT" target="_blank">PUT</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#Delete" target="_blank">Delete</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#HEAD" target="_blank">HEAD</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#OPTIONS" target="_blank">OPTIONS</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p><strong>标准Http协议支持六种请求方法，即：</strong> <code class="language-plaintext highlighter-rouge">GET</code> <code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">PUT</code> <code class="language-plaintext highlighter-rouge">Delete</code> <code class="language-plaintext highlighter-rouge">HEAD</code> <code class="language-plaintext highlighter-rouge">OPTIONS</code></p>
 
 <p>　　但其实我们大部分情况下只用到了GET和POST。如果想设计一个符合RESTful规范的web应用程序，则这六种方法都会用到。不过即使暂时不想涉及REST，了解这六种方法的本质仍然是很有作用的。大家将会发现，原来web也是很简洁明了的。下面依次说明这六种方法。</p>
 
@@ -485,34 +496,29 @@
 <p>　　以上的六种方法，我们可以跟数据库的CRUD增删改查操作对应起来： CREATE ：PUT READ：GET UPDATE：POST DELETE：DELETE 这样一来就实现了HTTP和数据库操作（其实不光是数据库，任何数据如文件图表都是这样）的完美统一，这也是REST的精髓之一</p>
 
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/14906012630">https://gorpeln.top/article/14906012630</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/14906012630" style="color:#666">https://gorpeln.top/article/14906012630</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/14922464812" title="程序员眼中的用户" style="color: #6666cc;font-size: 0.9em;"  target="_blank">程序员眼中的用户</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/14903507538" title="iOS值传递" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS值传递</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/14922464812" title="程序员眼中的用户" class="custom-font" target="_blank">程序员眼中的用户</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/14903507538" title="iOS值传递" class="custom-font" target="_blank">iOS值传递</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -778,17 +784,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1183,7 +1179,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1192,7 +1188,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

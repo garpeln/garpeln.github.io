@@ -389,60 +389,71 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">GCD 应用场景</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2017-12-19</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-  	            iOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#GCD"  target="_blank">GCD</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#定时器"  target="_blank">定时器</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#线程"  target="_blank">线程</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#延时"  target="_blank">延时</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#耗时操作"  target="_blank">耗时操作</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h3 id="1耗时操作">1.耗时操作</h3>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">GCD 应用场景</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2017-12-19</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                iOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#定时器" target="_blank">定时器</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#线程" target="_blank">线程</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#延时" target="_blank">延时</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#耗时操作" target="_blank">耗时操作</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="1耗时操作">1.耗时操作</h3>
 <p>这是应用最广泛的场景，为了避免阻塞主线程，将耗时操作放在子线程处理，然后在主线程使用处理结果。</p>
 
 <h3 id="2延时执行">2.延时执行</h3>
@@ -491,34 +502,29 @@
 <h3 id="10线程安全">10.线程安全</h3>
 <p>你可以在资源读写时对其所在线程进行一些限制，而不必使用线程锁</p>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15136989613">https://gorpeln.top/article/15136989613</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15136989613" style="color:#666">https://gorpeln.top/article/15136989613</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15153005416" title="编程就像两性关系" style="color: #6666cc;font-size: 0.9em;"  target="_blank">编程就像两性关系</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15119562214" title="iOS页面流畅技巧" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS页面流畅技巧</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15153005416" title="编程就像两性关系" class="custom-font" target="_blank">编程就像两性关系</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15119562214" title="iOS页面流畅技巧" class="custom-font" target="_blank">iOS页面流畅技巧</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -784,17 +790,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1189,7 +1185,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1198,7 +1194,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

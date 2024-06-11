@@ -389,64 +389,75 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">扫码登录实现原理</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2018-03-21</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
-  	            产品和运营
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#扫码"  target="_blank">扫码</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#登录"  target="_blank">登录</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#二维码"  target="_blank">二维码</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#token"  target="_blank">token</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#redis"  target="_blank">redis</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#网页登录"  target="_blank">网页登录</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h4 id="1需求介绍">1、需求介绍</h4>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">扫码登录实现原理</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2018-03-21</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
+                产品和运营
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#扫码" target="_blank">扫码</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#登录" target="_blank">登录</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#二维码" target="_blank">二维码</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#token" target="_blank">token</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#redis" target="_blank">redis</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#网页登录" target="_blank">网页登录</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h4 id="1需求介绍">1、需求介绍</h4>
 
 <p>　　首先，介绍下什么是扫码登录。现在，大部分同学手机上都装有qq和淘宝，天猫等这一类的软件。而开发这些app的企业，都有他们相对应的网站。为了让用户在使用他们的网站时，登录更加方便和安全。这些企业提供了， 使用手机，扫一扫，就可以登录的服务。网页登录时的效果如下：</p>
 
@@ -477,34 +488,29 @@
 
 <p><img src="https://img.gorpeln.top/blog/20180321102358928.jpg!gorpeln" alt="20180321102358928" /></p>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15215990385">https://gorpeln.top/article/15215990385</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15215990385" style="color:#666">https://gorpeln.top/article/15215990385</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15226027614" title="架构师说" style="color: #6666cc;font-size: 0.9em;"  target="_blank">架构师说</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15209452183" title="UITextView 的使用" style="color: #6666cc;font-size: 0.9em;"  target="_blank">UITextView 的使用</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15226027614" title="架构师说" class="custom-font" target="_blank">架构师说</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15209452183" title="UITextView 的使用" class="custom-font" target="_blank">UITextView 的使用</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -770,17 +776,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1175,7 +1171,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1184,7 +1180,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

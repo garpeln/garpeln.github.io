@@ -389,56 +389,67 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2022-04-05</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-  	            MacOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSWindow"  target="_blank">NSWindow</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSWindowController"  target="_blank">NSWindowController</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSViewController"  target="_blank">NSViewController</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#NSView"  target="_blank">NSView</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h3 id="一nswindownswindowcontrollernsviewcontrollernsview-之间的关系">一、NSWindow、NSWindowController、NSViewController、NSView 之间的关系</h3>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2022-04-05</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                MacOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#NSWindow" target="_blank">NSWindow</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#NSWindowController" target="_blank">NSWindowController</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#NSViewController" target="_blank">NSViewController</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#NSView" target="_blank">NSView</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="一nswindownswindowcontrollernsviewcontrollernsview-之间的关系">一、NSWindow、NSWindowController、NSViewController、NSView 之间的关系</h3>
 
 <h4 id="1nswindowcontroller-管理-nswindow-之间的交互">1、NSWindowController 管理 NSWindow 之间的交互；</h4>
 <p><code class="language-plaintext highlighter-rouge">NSWindowController</code> 有一个属性为 window ，使用 <code class="language-plaintext highlighter-rouge">initWithWindow</code> 初始化时，可以设置自定义的 window 为自己的 window。</p>
@@ -722,34 +733,29 @@ NSView *view = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 300, 300)];
 }
 </code></pre></div></div>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/16491590954">https://gorpeln.top/article/16491590954</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/16491590954" style="color:#666">https://gorpeln.top/article/16491590954</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/16514594954" title="MacOS：NSButton" style="color: #6666cc;font-size: 0.9em;"  target="_blank">MacOS：NSButton</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/16489862954" title="MacOS：使用代码重启应用" style="color: #6666cc;font-size: 0.9em;"  target="_blank">MacOS：使用代码重启应用</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/16514594954" title="MacOS：NSButton" class="custom-font" target="_blank">MacOS：NSButton</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/16489862954" title="MacOS：使用代码重启应用" class="custom-font" target="_blank">MacOS：使用代码重启应用</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -1015,17 +1021,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1420,7 +1416,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1429,7 +1425,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

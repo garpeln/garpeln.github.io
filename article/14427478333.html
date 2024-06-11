@@ -389,60 +389,71 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">优化MySQL中的分页</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2015-09-20</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
-  	            其他
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#MySQL"  target="_blank">MySQL</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#分页"  target="_blank">分页</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#数据库"  target="_blank">数据库</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#ORDERBY"  target="_blank">ORDERBY</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#InnoDB"  target="_blank">InnoDB</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <blockquote>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">优化MySQL中的分页</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2015-09-20</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#MySQL" target="_blank">MySQL</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#分页" target="_blank">分页</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#数据库" target="_blank">数据库</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#ORDERBY" target="_blank">ORDERBY</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#InnoDB" target="_blank">InnoDB</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <blockquote>
   <p>一道面试的问题，当MySQL表中有数据量很大的时候如何做分页。当时只知道在数据量很大的时候可以分表，但不知道不分表时可以怎么做。</p>
 </blockquote>
 
@@ -589,34 +600,29 @@ LIMIT $perpage;
 
 <p>欢迎指正错误，欢迎一起讨论！！！</p>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/14427478333">https://gorpeln.top/article/14427478333</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/14427478333" style="color:#666">https://gorpeln.top/article/14427478333</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/14439563950" title="You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE)" style="color: #6666cc;font-size: 0.9em;"  target="_blank">You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE)</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/14411221175" title="web前端规范" style="color: #6666cc;font-size: 0.9em;"  target="_blank">web前端规范</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/14439563950" title="You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE)" class="custom-font" target="_blank">You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE)</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/14411221175" title="web前端规范" class="custom-font" target="_blank">web前端规范</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -882,17 +888,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1287,7 +1283,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1296,7 +1292,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

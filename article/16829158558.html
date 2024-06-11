@@ -389,60 +389,71 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">个人网站，零成本、低门槛创建专属数据分析工具：umami.is</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2023-05-01</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
-  	            个人博客
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#博客"  target="_blank">博客</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#网站"  target="_blank">网站</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#umami"  target="_blank">umami</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#数据分析"  target="_blank">数据分析</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Serverless"  target="_blank">Serverless</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <p><strong>Google Analytics</strong> 应该是当今互联网使用最广泛的网站流量分析服务。通过在网页中嵌入追踪代码，<code class="language-plaintext highlighter-rouge">Google Analytics</code> 能够帮我们收集网站的流量来源，同时自动分析跳出率、转化率等核心指标。但是对于大部分中小型站点而言，接入 <code class="language-plaintext highlighter-rouge">Google Analytics</code> 并不是最理想的选择，因为它太复杂了，同时国内访问也不太方便。</p>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">个人网站，零成本、低门槛创建专属数据分析工具：umami.is</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2023-05-01</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                个人博客
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#博客" target="_blank">博客</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#网站" target="_blank">网站</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#umami" target="_blank">umami</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#数据分析" target="_blank">数据分析</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#Serverless" target="_blank">Serverless</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p><strong>Google Analytics</strong> 应该是当今互联网使用最广泛的网站流量分析服务。通过在网页中嵌入追踪代码，<code class="language-plaintext highlighter-rouge">Google Analytics</code> 能够帮我们收集网站的流量来源，同时自动分析跳出率、转化率等核心指标。但是对于大部分中小型站点而言，接入 <code class="language-plaintext highlighter-rouge">Google Analytics</code> 并不是最理想的选择，因为它太复杂了，同时国内访问也不太方便。</p>
 
 <p><code class="language-plaintext highlighter-rouge">umami.is</code> 则可以看作是 <code class="language-plaintext highlighter-rouge">Google Analytics</code> 的精简版解决方案，它完全免费且开源，非常适合中小站点的网络流量统计分析。相对于复杂的 <code class="language-plaintext highlighter-rouge">Google Analytics</code>，<code class="language-plaintext highlighter-rouge">umami.is</code> 的界面也更加简洁，只关注于核心指标，并方便分享出去。</p>
 
@@ -511,34 +522,29 @@ A：据我所知，Vercel 使用了 Google Cloud 的云服务，距离大陆地�
 A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码仓库更新时，Vercel 会帮你自动部署上线最新版本的 umami。你可以不定期访问你 Fork 后的代码仓库，选中 Fetch upstream 从 umami 官方仓库同步最新的代码后即可自动升级。当然，你还可以从一开始直接部署官方仓库的代码，完全跟随官方版本迭代升级。</p>
 
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/16829158558">https://gorpeln.top/article/16829158558</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/16829158558" style="color:#666">https://gorpeln.top/article/16829158558</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/16874238349" title="用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子" style="color: #6666cc;font-size: 0.9em;"  target="_blank">用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/16827504397" title="全飞秒近视手术过程和恢复记录" style="color: #6666cc;font-size: 0.9em;"  target="_blank">全飞秒近视手术过程和恢复记录</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/16874238349" title="用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子" class="custom-font" target="_blank">用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/16827504397" title="全飞秒近视手术过程和恢复记录" class="custom-font" target="_blank">全飞秒近视手术过程和恢复记录</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -804,17 +810,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1209,7 +1205,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1218,7 +1214,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

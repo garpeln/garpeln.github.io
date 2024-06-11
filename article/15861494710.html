@@ -389,64 +389,75 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">iOS多线程：GCD (三)</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2020-04-06</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-  	            iOS
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#GCD"  target="_blank">GCD</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#多线程"  target="_blank">多线程</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Dispatch"  target="_blank">Dispatch</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#Queue"  target="_blank">Queue</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#dispatch_async"  target="_blank">dispatch_async</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#异步执行"  target="_blank">异步执行</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <p>什么是CGD呢？以下摘自苹果的官方说明。</p>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">iOS多线程：GCD (三)</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2020-04-06</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                iOS
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#Dispatch" target="_blank">Dispatch</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#Queue" target="_blank">Queue</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#dispatch_async" target="_blank">dispatch_async</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#异步执行" target="_blank">异步执行</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p>什么是CGD呢？以下摘自苹果的官方说明。</p>
 
 <p>  Grand Central Dispatch (GCD) 是异步执行任务的技术之一。应用程序中记述的线程管理用的代码是在系统级中实现的。开发者只需要定义想要执行的任务并追加到适当的Dispatch Queue中，GCD就能生成必要的线程并执行任务。<br />
   也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD。</p>
@@ -1386,34 +1397,29 @@ static int count = 0;
 <p><img src="https://img.gorpeln.top/blog/20200406130431551.png!gorpeln" alt="20200406130431551" /></p>
 
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15861494710">https://gorpeln.top/article/15861494710</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15861494710" style="color:#666">https://gorpeln.top/article/15861494710</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15862323579" title="iOS多线程：GCD的实际使用 (四)" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS多线程：GCD的实际使用 (四)</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15860813363" title="iOS多线程：NSThread (二)" style="color: #6666cc;font-size: 0.9em;"  target="_blank">iOS多线程：NSThread (二)</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15862323579" title="iOS多线程：GCD的实际使用 (四)" class="custom-font" target="_blank">iOS多线程：GCD的实际使用 (四)</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15860813363" title="iOS多线程：NSThread (二)" class="custom-font" target="_blank">iOS多线程：NSThread (二)</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -1679,17 +1685,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -2084,7 +2080,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -2093,7 +2089,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 

@@ -389,56 +389,67 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3214天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3215天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-10 16:48:07 +0800">2024/06/10</p>
+                                    <p id="current-date" data-value="2024-06-11 16:06:58 +0800">2024/06/11</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><div class="post">
+                    <div class="page-content" id="pjax"><style type="text/css">
+.tags-a {
+    color: #888 !important;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'serif';
+}
 
-  <header class="post-header">
-    <h1 class="post-title">基础篇 3：小程序架构及其实现机制</h1>
-  	<div class="info">
-  	        时间：
-  	        <text style="padding-top: 0;">2019-06-23</text>&nbsp;&nbsp;&nbsp;&nbsp;
-  	        分类：
-  	        <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
-  	            微信小程序
-  	        </a>
-  	        &nbsp;&nbsp;&nbsp;&nbsp;
-  	        标签：
-  	        
-  	        <span class="index-post-tag">
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#微信小程序"  target="_blank">微信小程序</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#HTML5"  target="_blank">HTML5</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#生命周期"  target="_blank">生命周期</a>
-  	                /
-  	            
-  	                
-  	                <a class="pjaxlink" href="/tags#数据驱动"  target="_blank">数据驱动</a>
-  	                
-  	            
-  	        </span>
-  	        
-  	</div>
-  </header>
-
-  <article class="post-content">
-    <h2 id="一小程序-vs-html5">一、小程序 VS HTML5</h2>
+.custom-font {
+    color: #666;
+    font-size: 0.9em;
+}
+</style>
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">基础篇 3：小程序架构及其实现机制</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;">2019-06-23</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            分类：
+            <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
+                微信小程序
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#微信小程序" target="_blank">微信小程序</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#HTML5" target="_blank">HTML5</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#生命周期" target="_blank">生命周期</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#数据驱动" target="_blank">数据驱动</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h2 id="一小程序-vs-html5">一、小程序 VS HTML5</h2>
 
 <p>小程序并不是 HTML5 应用，而是更偏向于传统的 CS 架构，它是基于<strong>数据驱动</strong>的模式，一切皆组件（视图组件）。下面是小程序与普通 Web App 的对比。</p>
 
@@ -556,34 +567,29 @@
 
 <p>本节重点介绍了小程序和普通的 HTML5 有什么区别，从小程序底层机制上来说明小程序是如何最终展现在 WebView 界面上的。本节涉及较多的源码和反编译技巧，对于初学者来说只需要了解微信小程序由逻辑层和视图层两个不同的线程进行交互而形成，而视图层是通过将 WXML 转换成 JS，最终由 JS 生成 HTML 片段放在 WebView 中显示的。</p>
 
-  </article>
-
+    </article>
 </div>
-
-  <div class="copyright">
-		<div>本文链接：<a href="https://gorpeln.top/article/15612663893">https://gorpeln.top/article/15612663893</a></div>
-    <div>如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+<div class="copyright">
+    <div class="custom-font">本文链接：<a href="/article/15612663893" style="color:#666">https://gorpeln.top/article/15612663893</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-      <div>最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-02-20</div>
     
 </div>
 </div>
-
-  <div class="prevandnext">
-    	  
-	    <div>
-	    <span>上一篇 ：</span><a href="https://gorpeln.top/article/15618778699" title="实战篇 ：电商小程序云开发实战" style="color: #6666cc;font-size: 0.9em;"  target="_blank">实战篇 ：电商小程序云开发实战</a>
-	    </div>
-	  
-  	  
-	    <div>
-	    <span>下一篇 ：</span><a href="https://gorpeln.top/article/15611722666" title="基础篇 2：小程序·云开发基础知识" style="color: #6666cc;font-size: 0.9em;"  target="_blank">基础篇 2：小程序·云开发基础知识</a>
-	    </div>
-	  
-	 
-  </div>
-  
-  <div class="livere">
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/article/15618778699" title="实战篇 ：电商小程序云开发实战" class="custom-font" target="_blank">实战篇 ：电商小程序云开发实战</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/15611722666" title="基础篇 2：小程序·云开发基础知识" class="custom-font" target="_blank">基础篇 2：小程序·云开发基础知识</a>
+    </div>
+    
+</div>
+<div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
@@ -849,17 +855,7 @@ textarea::placeholder {
 
     </script>
 </body>
-  </div>
-<style type="text/css">
-    .tags-a {
-        color:#888 !important;
-        font-size: 13px;
-        font-weight: 300;
-        font-family: 'serif';
-    }
-
-</style>
-</div>
+</div></div>
                 </div>
             </div>
         </div>
@@ -1254,7 +1250,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 294 + '天';
+  element.innerHTML = 8 + '年' + 295 + '天';
 
 }
 
@@ -1263,7 +1259,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3214 + '天';
+    element.innerHTML = 3215 + '天';
 }
 
 
