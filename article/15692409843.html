@@ -7,7 +7,7 @@
   <title>博客文章 - 简单加密 | gorpeln的个人博客 - gorpeln</title>
 
   <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,个人博客,加密,password,保密" />
-  <meta name="description" content="加密文章                                                                                                                                                         ...">
+  <meta name="description" content="这个加密安全性太低，不过可以封掉一部分读者。只需要查看一下NetWork，就可以看到对应页面的全部URL，之后有时间我再看看文本内容加密。">
 
   <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
   <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3217天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3219天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-13 18:55:08 +0800">2024/06/13</p>
+                                    <p id="current-date" data-value="2024-06-15 18:45:13 +0800">2024/06/15</p>
                                 </li>
                             </ul>
                     </div>
@@ -449,47 +449,25 @@
         </div>
     </header>
     <article class="post-content">
-        <p>加密文章</p>
-<html>
-<body>
-    <div>
-        <ul>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-        </ul>
-        <ul>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-        </ul>
-    </div>
-</body>
-</html>
-
-<p>这个加密安全性太低，不过可以封掉一部分读者。只需要查看一下NetWork，就可以看到对应页面的全部URL，之后有时间我再看看文本内容加密。</p>
+        <p>这个加密安全性太低，不过可以封掉一部分读者。只需要查看一下NetWork，就可以看到对应页面的全部URL，之后有时间我再看看文本内容加密。</p>
 
 <p>其实很简单, 从post的header里面进行参数设置</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>layout: post
-title: Jekyll 简单加密 (pwd=123456)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: 博客文章 - 简单加密 
 category: 个人博客
-tags: [个人博客,Jekyll,加密]
-password: 123456
+tags: [个人博客,加密,password,保密]
+password: gorpeln
+---
 </code></pre></div></div>
 
 <p>然后，添加script</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
     (function(){
-        if('123456'){
-            if (prompt('请输入密码') !== '123456'){
+        if('{#{ page.password }#}'){ // 删除#号
+            if (prompt('请输入密码') !== '{#{ page.password }#}'){// 删除#号
                 alert('密码错误');
                 window.close();
             }
@@ -500,9 +478,8 @@ password: 123456
 
 <script>
     (function(){
-        if('123456'){
-            if (prompt('请输入密码') !== '123456'){
-                alert('密码错误');
+        if('gorpeln'){
+            if (prompt('请输入密码') !== 'gorpeln'){
                 window.close();
                 window.history.go(-1);
 				history.back(-1);
@@ -1195,7 +1172,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 297 + '天';
+  element.innerHTML = 8 + '年' + 299 + '天';
 
 }
 
@@ -1204,7 +1181,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3217 + '天';
+    element.innerHTML = 3219 + '天';
 }
 
 
