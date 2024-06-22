@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>中医 | gorpeln的个人博客 - gorpeln</title>
+  <title>杂记五 | gorpeln的个人博客 - gorpeln</title>
 
   <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,其他" />
-  <meta name="description" content="">
+  <meta name="description" content="一、概述内存泄漏就是“程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果”。">
 
   <meta name="baidu-site-verification" content="codeva-6I1U8AoWwl" />
   <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/css/cb-search.css">
 
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="canonical" href="/article/1-9">
+  <link rel="canonical" href="/i/05">
   <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
 
   <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -182,7 +182,6 @@
 </script>
 
     <div class="content">
-        
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
@@ -207,8 +206,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">153</span>
-                                    <!-- <span class="site-state-item-count">173</span> -->
+                                    <span class="site-state-item-count">177</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -241,7 +239,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">153
+                                <span class="articleCount">177
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -268,7 +266,7 @@
                             
                             <li onclick="pushNew('/categories#其他')" class="categoryList">
                                 <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">25
+                                <a name="其他" style="" class="articleCount">29
                                 </a>
                             </li>
                             
@@ -377,11 +375,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >173</p>
+                                    <p >177</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>93.0k</p> 
+                                    <p>93.4k</p> 
 
                                 </li>
                                 <li>
@@ -391,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3222天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3226天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-06-18 18:16:34 +0800">2024/06/18</p>
+                                    <p id="current-date" data-value="2024-06-22 17:08:01 +0800">2024/06/22</p>
                                 </li>
                             </ul>
                     </div>
@@ -417,10 +415,10 @@
 </style>
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">中医</h1>
+        <h1 class="post-title">杂记五</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;">1970-01-01</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            <text style="padding-top: 0;">2015-02-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
             分类：
             <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
                 其他
@@ -439,27 +437,60 @@
         </div>
     </header>
     <article class="post-content">
-        
+        <h3 id="一概述">一、概述</h3>
+<p>内存泄漏就是“程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果”。</p>
+
+<h3 id="二常见的内存泄漏情况">二、常见的内存泄漏情况：</h3>
+<ul>
+  <li>多个对象间的相互强引用</li>
+  <li>NSTime的循环引用</li>
+  <li>block的循环引用</li>
+  <li>delegate的循环引用</li>
+  <li>通知的循环引用</li>
+  <li>WKWebView 造成的内存泄漏</li>
+</ul>
+
+<h3 id="三内存泄漏检测">三、内存泄漏检测</h3>
+<p>打开Xcode菜单栏中的<code class="language-plaintext highlighter-rouge">Product</code>选项中的<code class="language-plaintext highlighter-rouge">Profile</code>选项,也可以使用快捷键<code class="language-plaintext highlighter-rouge"> command + I</code></p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645873.jpeg!gorpeln" alt="20200202203645873" /></p>
+
+<p>然后在Instruments菜单中找到<code class="language-plaintext highlighter-rouge">Leaks</code>,如下图所示.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645874.jpeg!gorpeln" alt="20200202203645874" /></p>
+
+<p>打开<code class="language-plaintext highlighter-rouge">Leaks</code>工具之后,我们首先在左上角选择我们需要检测的程序,这里我们可以检测当前Mac上任意一个开启的程序,这里我们选择模拟器的Demo程序,如下所示.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645875.jpeg!gorpeln" alt="20200202203645875" /></p>
+
+<p>工具默认的是<code class="language-plaintext highlighter-rouge">Allocations</code>选项,然后我们需要选择Leaks选项,点击红色⭕️按钮,启动检测程序.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645876.jpeg!gorpeln" alt="20200202203645876" /></p>
+
+<p>然后我们运行完成之后,就会得到下面的页面,我们就可以通过页面的信息找到我们内存泄漏的具体位置了.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645877.jpeg!gorpeln" alt="20200202203645877" /></p>
+
 
     </article>
 </div>
 <div class="copyright">
-    <div class="custom-font">本文链接：<a href="/article/1-9" style="color:#666">https://gorpeln.top/article/1-9</a></div>
+    <div class="custom-font">本文链接：<a href="/i/05" style="color:#666">https://gorpeln.top/i/05</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-    <div class="custom-font">最后编辑于：2024-06-18</div>
+    <div class="custom-font">最后编辑于：2024-06-21</div>
     
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/14402966023" title="Hello World" class="custom-font" target="_blank">Hello World</a>
+        <span class="custom-font">上一篇 ：</span><a href="/i/04" title="杂记四" class="custom-font" target="_blank">杂记四</a>
     </div>
     
     
     <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/1-8" title="书法和绘画" class="custom-font" target="_blank">书法和绘画</a>
+        <span class="custom-font">下一篇 ：</span><a href="/i/06" title="杂记六" class="custom-font" target="_blank">杂记六</a>
     </div>
     
 </div>
@@ -737,7 +768,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/1-9')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/i/05')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">
@@ -1124,7 +1155,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 302 + '天';
+  element.innerHTML = 8 + '年' + 306 + '天';
 
 }
 
@@ -1133,7 +1164,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3222 + '天';
+    element.innerHTML = 3226 + '天';
 }
 
 
