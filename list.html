@@ -50,11 +50,23 @@
 
     @media screen and (max-width: 600px) {
         .title {
-            font-size: 20px;
+            /*font-size: 20px;*/
         }
 
         .list {
             margin: 1em 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tag-ul {
+            padding-left: 1em;
+        }
+
+        .categories-title {
+            padding-left: 0.5em;
+
         }
     }
     </style>
@@ -3816,7 +3828,7 @@
         
         
     </div>
-        <!-- 加密文章 -->
+    <!-- 加密文章 -->
     <div class="home">
         <div class="categories-title">加密文章</div>
         
@@ -4360,7 +4372,7 @@
         
         
         
-    </div>  
+    </div>
     <!-- 有参考的文章 -->
     <div class="home">
         <div class="categories-title">有参考链接</div>
@@ -4924,12 +4936,10 @@
         
         
     </div>
-
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <br />
+    <br />
+    <br />
+    <br />
 </body>
 
 </html>
