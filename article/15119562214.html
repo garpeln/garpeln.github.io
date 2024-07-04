@@ -206,7 +206,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">179</span>
+                                    <span class="site-state-item-count">181</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -239,7 +239,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">179
+                                <span class="articleCount">181
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -266,7 +266,7 @@
                             
                             <li onclick="pushNew('/categories#其他')" class="categoryList">
                                 <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">31
+                                <a name="其他" style="" class="articleCount">33
                                 </a>
                             </li>
                             
@@ -375,11 +375,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >179</p>
+                                    <p >181</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>94.1k</p> 
+                                    <p>94.3k</p> 
 
                                 </li>
                                 <li>
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3236天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3238天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-02 11:04:33 +0800">2024/07/02</p>
+                                    <p id="current-date" data-value="2024-07-04 18:27:38 +0800">2024/07/04</p>
                                 </li>
                             </ul>
                     </div>
@@ -402,7 +402,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
                     <div class="page-content" id="pjax"><style type="text/css">
 .tags-a {
-    color: #888 !important;
+    color: #888 ;
     font-size: 13px;
     font-weight: 300;
     font-family: 'serif';
@@ -412,6 +412,15 @@
     color: #666;
     font-size: 0.9em;
 }
+.articleLink {
+      color: #666;
+}
+
+.articleLink a:hover, .articleLink a:focus {
+    text-decoration: none;
+    color: #6f19e8;
+}   
+
 </style>
 <div class="post">
     <header class="post-header">
@@ -545,7 +554,7 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
     </article>
 </div>
 <div class="copyright">
-    <div class="custom-font">本文链接：<a href="/article/15119562214" style="color:#666">https://gorpeln.top/article/15119562214</a></div>
+    <div class="custom-font">本文链接：<a href="/article/15119562214" class='articleLink'>https://gorpeln.top/article/15119562214</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
     <div class="custom-font">最后编辑于：2024-02-20</div>
@@ -1225,7 +1234,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 316 + '天';
+  element.innerHTML = 8 + '年' + 318 + '天';
 
 }
 
@@ -1234,7 +1243,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3236 + '天';
+    element.innerHTML = 3238 + '天';
 }
 
 

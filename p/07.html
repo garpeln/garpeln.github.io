@@ -206,7 +206,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">179</span>
+                                    <span class="site-state-item-count">181</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -239,7 +239,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">179
+                                <span class="articleCount">181
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -266,7 +266,7 @@
                             
                             <li onclick="pushNew('/categories#其他')" class="categoryList">
                                 <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">31
+                                <a name="其他" style="" class="articleCount">33
                                 </a>
                             </li>
                             
@@ -375,11 +375,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >179</p>
+                                    <p >181</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>94.1k</p> 
+                                    <p>94.3k</p> 
 
                                 </li>
                                 <li>
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3236天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3238天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-02 11:04:33 +0800">2024/07/02</p>
+                                    <p id="current-date" data-value="2024-07-04 18:27:38 +0800">2024/07/04</p>
                                 </li>
                             </ul>
                     </div>
@@ -402,7 +402,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
                     <div class="page-content" id="pjax"><style type="text/css">
 .tags-a {
-    color: #888 !important;
+    color: #888 ;
     font-size: 13px;
     font-weight: 300;
     font-family: 'serif';
@@ -412,6 +412,15 @@
     color: #666;
     font-size: 0.9em;
 }
+.articleLink {
+      color: #666;
+}
+
+.articleLink a:hover, .articleLink a:focus {
+    text-decoration: none;
+    color: #6f19e8;
+}   
+
 </style>
 <div class="post">
     <header class="post-header">
@@ -559,7 +568,7 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
 <p>地球的自转自西向东，东边的地点比西边的地点先看到日出。<br />
 <code class="language-plaintext highlighter-rouge">地转偏向力</code>：地球表面的物体在沿着水平方向移动时，其运动方向会发生一定的偏转,在<strong>北半球向右偏转</strong>;在南半球向左偏转，如我国的河流自西向东流，长江入海口处沿着运动 的方向往右(南)偏。</p>
 <h4 id="公转">公转</h4>
-<p>越往北，楼间距要越大。因为太阳直射在南回归线到北回归线之间，我国大部分在北回归线以北，太阳直射角在北回归线时，北回归线附近的直射角为90°，越往北直射角越小，90°时太阳在头顶，影子短，角度越小，影子越长，所以越往北间距要越大，才能保证采光。</p>
+<p>越往北，楼间距要越大。因为太阳直射在南回归线到北回归线之间，我国大部分在北回归线以北，太阳<code class="language-plaintext highlighter-rouge">直射角</code>在北回归线时，北回归线附近的直射角为90°，越往北直射角越小，90°时太阳在头顶，影子短，角度越小，影子越长，所以越往北间距要越大，才能保证采光。</p>
 
 <h3 id="天体运行">天体运行</h3>
 
@@ -578,9 +587,10 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
 上上上西西:上弦月出现在上半月的上半夜的西边天空，月相朝西（开口朝东）      <br />
 下下下东东:下弦月出现在下半月的下半夜的东边天空，月相朝东（开口朝西）    <br />
 ) 上玄月，相当于右边亮，说明太阳在右边，太阳是东升西落，所有右边是西，即月相朝西，开口朝东   <br />
-( 下玄月，相当于左边亮，但是太阳还在右边，右边还是西，即月相朝东，开口朝西</p>
+( 下玄月，太阳的位置不会变，照亮的还是右半边，但是月亮是围绕地球公转的，下玄月时，地球运动到了上玄月的180度相对面，你看月亮也要翻转180度  <br />
+https://img.gorpeln.top/p/cs/yuexiang.png</p>
 
-<h4 id="日食月食">日食月食</h4>
+<h5 id="日食月食">日食月食</h5>
 <p>日食：就是看不到太阳，被月亮挡住了。分为日全食、日偏食、日环食。 <br />
 月食：就是看不到月亮了，被地球挡住了。分为月全食、月偏食。</p>
 
@@ -684,7 +694,7 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
   <li>四川盆地 天府之国</li>
 </ul>
 
-<h4 id="重要河流">重要河流</h4>
+<h4 id="河流">河流</h4>
 <ul>
   <li>长江 发源于青藏高原的唐古拉山，共流经我国 11 个省级行政区，最后从上海的崇明岛附近注入东海
     <ul>
@@ -709,8 +719,16 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
 <p>青海省的<strong>青海湖</strong>是我国面积最大的湖泊，也是最大的咸水湖</p>
 
 <h4 id="岛屿">岛屿</h4>
-<p>只记住对应最大的即可（第一个） <br />
-三大岛屿</p>
+<p>只记住对应最大的即可（第一个）</p>
+
+<p>半岛指陆地深入海洋的部分，三面环海，一面连着陆地</p>
+<ul>
+  <li>山东半岛</li>
+  <li>辽东半岛(辽宁)</li>
+  <li>雷州半岛(广东省南部，与海南岛隔海相望)</li>
+</ul>
+
+<p>三大岛屿</p>
 <ul>
   <li>台湾岛</li>
   <li>海南岛</li>
@@ -725,15 +743,8 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
   <li>南海诸岛</li>
 </ul>
 
-<p>半岛指陆地深入海洋的部分，三面环海，一面连着陆地</p>
-<ul>
-  <li>山东半岛</li>
-  <li>辽东半岛(辽宁)</li>
-  <li>雷州半岛(广东省南部，与海南岛隔海相望)</li>
-</ul>
-
 <h4 id="自然人文景观">自然人文景观</h4>
-<p>三山</p>
+<p>三山、五岳</p>
 <ul>
   <li>安徽黄山</li>
   <li>江西庐山</li>
@@ -764,6 +775,14 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
   <li>山西大同云冈石窟</li>
 </ul>
 
+<p>四大名园</p>
+<ul>
+  <li>北京的颐和园 (乾隆)</li>
+  <li>河北的承德避暑山庄 (康熙)</li>
+  <li>拙政园</li>
+  <li>留园</li>
+</ul>
+
 <p>六大古都</p>
 <ul>
   <li>西安 长安、镐京，中国历史上建都朝代最多、时间最长的城市之一</li>
@@ -772,14 +791,6 @@ https://img.gorpeln.top/p/cs/shiqu.jpeg</p>
   <li>开封 汴梁</li>
   <li>杭州 临安</li>
   <li>北京 燕京、北平</li>
-</ul>
-
-<p>四大名园</p>
-<ul>
-  <li>北京的颐和园</li>
-  <li>河北的承德避暑山庄</li>
-  <li>拙政园</li>
-  <li>留园</li>
 </ul>
 
 <h3 id="世界地理">世界地理</h3>
@@ -818,7 +829,7 @@ https://img.gorpeln.top/p/cs/map_04.jpg</p>
     </article>
 </div>
 <div class="copyright">
-    <div class="custom-font">本文链接：<a href="/p/07" style="color:#666">https://gorpeln.top/p/07</a></div>
+    <div class="custom-font">本文链接：<a href="/p/07" class='articleLink'>https://gorpeln.top/p/07</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
     <div class="custom-font">最后编辑于：2024-06-22</div>
@@ -1498,7 +1509,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 316 + '天';
+  element.innerHTML = 8 + '年' + 318 + '天';
 
 }
 
@@ -1507,7 +1518,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3236 + '天';
+    element.innerHTML = 3238 + '天';
 }
 
 
