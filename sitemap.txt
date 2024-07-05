@@ -183,7 +183,6 @@
         https://gorpeln.top/sitemap.xml
         https://gorpeln.top/tags
         https://gorpeln.top/terms
-        https://gorpeln.top/vercel.json
         https://gorpeln.top/vipAgreement
         https://gorpeln.top/works
         https://gorpeln.top/page/2/
