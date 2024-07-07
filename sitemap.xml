@@ -701,6 +701,10 @@
                 <priority>0.9</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/p</loc>
+                <priority>0.9</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/privacy-blog</loc>
                 <priority>0.9</priority>
             </url>
