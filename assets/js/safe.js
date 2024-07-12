@@ -32,7 +32,6 @@ window.addEventListener('load', (event) => {
             !target.href.includes('202090.xyz') &&
             !target.href.includes('lab.gorpeln.top') &&
             !target.href.includes('github.com') &&
-            !target.href.includes('apps.apple.com') &&
             target.hostname !== window.location.hostname) {
             e.preventDefault();
             let encodedUrl = btoa(target.href); // Base64 encode the URL
