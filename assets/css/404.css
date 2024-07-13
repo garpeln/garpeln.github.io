@@ -178,7 +178,7 @@ nav[data-state="open"] ul li:nth-child(4) {
   margin: 5px 0px;
 }
 .btn.green {
-  border: 4px solid var(--green);
+  border: 4px solid #37374c;
   color: var(--blue);
 }
 .btn.green:before {
@@ -188,14 +188,14 @@ nav[data-state="open"] ul li:nth-child(4) {
   top: 0;
   width: 0%;
   height: 100%;
-  background: var(--green);
+  background: #37374c;
   z-index: -1;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .btn.green:hover {
   color: var(--white);
-  background: var(--green);
+  background: #37374c;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
