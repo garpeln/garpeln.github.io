@@ -206,7 +206,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">183</span>
+                                    <span class="site-state-item-count">184</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -239,7 +239,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">183
+                                <span class="articleCount">184
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -266,7 +266,7 @@
                             
                             <li onclick="pushNew('/categories#其他')" class="categoryList">
                                 <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">35
+                                <a name="其他" style="" class="articleCount">36
                                 </a>
                             </li>
                             
@@ -375,7 +375,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >183</p>
+                                    <p >184</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3247天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3249天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-13 11:40:50 +0800">2024/07/13</p>
+                                    <p id="current-date" data-value="2024-07-15 11:29:24 +0800">2024/07/15</p>
                                 </li>
                             </ul>
                     </div>
@@ -412,7 +412,7 @@ a {
 <div class="home">
     <div class="page-tag">
         
-        <a class="pjaxlink" href="#其他" name="其他">其他　<span class="tag-count">(30)</span></a>
+        <a class="pjaxlink" href="#其他" name="其他">其他　<span class="tag-count">(31)</span></a>
         
         <a class="pjaxlink" href="#个人博客" name="个人博客">个人博客　<span class="tag-count">(14)</span></a>
         
@@ -1704,6 +1704,8 @@ a {
                 <a class="pjaxlink" href="/article/14404771043">Linux常用命令总结</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
               
             </li>
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
           
          <!-- 再次遍历tag的文章来生成列表项 -->
           
@@ -18203,20 +18205,6 @@ a {
 <footer class="site-footer">
     <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
     <div class="footerDes">
-        <div class="other-icp">
-            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
-                <!-- <img src="https://img.gorpeln.top/p/footer_mengbeian.png" style="height: 16px;" class="footerImg" /> -->
-                萌ICP备20240031号
-            </a> |
-            <a target="_blank" href="https://guan.ma/hao/2024000022/" title="官码2024000022号" class="footer-item">
-                <!-- <img src="https://img.gorpeln.top/p/footer_guanma.png" style="height: 15px;" class="footerImg" /> -->
-                官码2024000022号
-            </a> |
-            <a target="_blank" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" title="MIIT备20240333号" class="footer-item">
-                <!-- <img src="https://img.gorpeln.top/p/footer_miit.png" style="height: 14px;" class="footerImg" /> -->
-                MIIT备20240333号
-            </a>
-        </div>
         <div class="post-margin">
             ©2015-<text id="currentYear"></text> gorpeln 版权所有 |
             <a href="http://beian.miit.gov.cn/" class="footer-item">
@@ -18226,8 +18214,10 @@ a {
                 <img src="https://img.gorpeln.top/p/footer_gonganbeian.png" style="height: 16px;" class="footerImg" />京公网安备11011202004694号
             </a> |
             <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
-                本网站由
                 <img src="https://img.gorpeln.top/p/footer_youpaiyun.png" style="height: 22px;" class="footerImg" />提供CDN加速/云存储服务
+            </a> |
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
             </a>
         </div>
     </div>
@@ -18511,7 +18501,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 327 + '天';
+  element.innerHTML = 8 + '年' + 329 + '天';
 
 }
 
@@ -18520,7 +18510,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3247 + '天';
+    element.innerHTML = 3249 + '天';
 }
 
 

@@ -149,6 +149,8 @@ figure,
 /**
  * custom style
  */
+
+
 .center {
     text-align: center;
 }
@@ -2371,7 +2373,12 @@ div.contentAbstract img {
     border-radius: 0 8px 8px 0;
 }
 
-
+.color-gray{
+    color:#AAA !important;
+    background-color:transparent !important;
+    font-style:normal !important;
+    font-size: 14px !important;
+}
 
 
 .post-content img {
