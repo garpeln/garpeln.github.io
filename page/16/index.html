@@ -248,7 +248,7 @@
                                 </span>
                             </li>         
                             <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
-                            <li onclick="pushNew('/login')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                            <li onclick="pushNew('/resume')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
                                 <span class="articleCount">※
                                 </span>
                             </li>                            
@@ -379,7 +379,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>95.3k</p> 
+                                    <p>95.2k</p> 
 
                                 </li>
                                 <li>
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3249天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3252天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-15 11:29:24 +0800">2024/07/15</p>
+                                    <p id="current-date" data-value="2024-07-18 21:14:25 +0800">2024/07/18</p>
                                 </li>
                             </ul>
                     </div>
@@ -958,6 +958,7 @@ Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以�
 
 1. 标题
 使用#显示标题
+示例：
 # 这是一个一级标题
 ## 这是一个二级标题
 ### 这是一个三级标题
@@ -967,7 +968,7 @@ Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以�
   你也可以选择在行首加#号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。
 
 
-2. 斜体、粗...</div>
+2. ...</div>
                             
                         
         </div>
@@ -1269,36 +1270,6 @@ function clickHandler() {
     window.location.href = '/article/15462756619';
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-    function checkLinksOverflow() {
-        const otherIcpDiv = document.querySelector('.other-icp');
-        const links = otherIcpDiv.querySelectorAll('a');
-        let totalLinksWidth = 0;
-
-        // 计算所有链接的总宽度
-        links.forEach(function(link) {
-            totalLinksWidth += link.offsetWidth;
-        });
-
-        // 获取.other-icp的实际宽度
-        const divWidth = otherIcpDiv.offsetWidth;
-
-        // 如果链接总宽度超过.other-icp的宽度，则隐藏.other-icp
-        if (totalLinksWidth > divWidth) {
-            otherIcpDiv.style.display = 'none';
-        } else {
-            otherIcpDiv.style.display = 'block'; 
-        }
-    }
-
-    // 页面加载时检查一次
-    checkLinksOverflow();
-
-    // 监听窗口大小变化，动态检查是否需要隐藏
-    window.addEventListener('resize', checkLinksOverflow);
-});
-
-
 </script>
 <script type="text/javascript">
 // 定义一个函数用于在控制台打印站点信息
@@ -1362,11 +1333,12 @@ printSiteInfo();
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?97ba5540ec47cf065f1e2c7c57814156";
+  hm.src = "https://hm.baidu.com/hm.js?33e7992f9cdd005037626b02b3789a27";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
 
 <!-- 百度自动收录 -->
 <script>
@@ -1475,7 +1447,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 329 + '天';
+  element.innerHTML = 8 + '年' + 332 + '天';
 
 }
 
@@ -1484,7 +1456,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3249 + '天';
+    element.innerHTML = 3252 + '天';
 }
 
 

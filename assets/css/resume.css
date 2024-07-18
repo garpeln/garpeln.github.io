@@ -1,17 +1,35 @@
+@page {
+    /* 默认的页面样式 */
+    size: A4;
+    margin: 3cm 0;
+}
+
+@page :first {
+    /* 第一页的样式 */
+    margin-top: 0.5cm; 
+}
+
+
+
+body {
+    color: #37374b;
+
+}
 
 span {
     display: inline-block;
 }
 
-.label-value{
+.label-value {
     width: 70%;
     vertical-align: top;
 }
 
 .iconfont {
-    font-family:"iconfont" !important;
-    font-size:1.1em;font-style:normal;
-    color:inherit;
+    font-family: "iconfont" !important;
+    font-size: 1.1em;
+    font-style: normal;
+    color: inherit;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
@@ -24,10 +42,21 @@ span {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
-    font-weight: 500;
+h1,
+h2,
+h3,
+h5 {
+    font-weight: 400;
     color: #37374b;
     line-height: 1.5;
+}
+
+h4 {
+    font-weight: 400;
+
+    color: #37374b;
+    line-height: 1.5;
+    font-size: 20px;
 }
 
 .progress-list div {
@@ -35,7 +64,8 @@ h1, h2, h3, h4, h5 {
     margin-left: 200px;
 }
 
-.info-list, .progress-list{
+.info-list,
+.progress-list {
     list-style: none;
     padding-left: 0px;
     font-size: 16px;
@@ -50,9 +80,25 @@ h1, h2, h3, h4, h5 {
 
 .stack-list li {
     margin-bottom: 12px;
+    font-size: 20px;
+
 }
 
 .right-list li {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.baseinfo_container li {
+    font-size: 20px;
+    margin: 6px 0;
+}
+
+.experience-list li {
+    margin-bottom: 20px;
+}
+
+.work_des ul li {
     margin-bottom: 12px;
 }
 
@@ -66,8 +112,8 @@ hr {
 
 .info-unit {
     color: #666;
-    margin-bottom: 20px;
-	overflow:hidden;
+    margin-bottom: 1.8em;
+    overflow: hidden;
 }
 
 .remodal-img h3 {
@@ -91,7 +137,7 @@ hr {
 
 }
 
-.remodal-img button:hover{
+.remodal-img button:hover {
     float: right;
     background: #37374b;
 
@@ -104,8 +150,7 @@ body {
     zoom: 80%;
 }
 
-footer {
-}
+footer {}
 
 p {
     line-height: 1.5;
@@ -147,14 +192,14 @@ progress::-moz-progress-value {
     margin: 60px 0;
 }
 
-.weixin{
+.weixin {
     margin-top: 20px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: center;
 }
 
-.weixin img{
+.weixin img {
     width: 200px;
 }
 
@@ -165,15 +210,15 @@ progress::-moz-progress-value {
 
 .portrait {
     margin: 0 auto;
-    margin-top:20px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    background-image:url('/assets/img/logo.png');
+    background-image: url('/assets/img/logo.png');
     background-size: 120%;
-    background-position:center;
-    border-radius:50%;
-    border:5px solid #37374b;
-    width:160px;
-    height:160px;
+    background-position: center;
+    border-radius: 50%;
+    border: 5px solid #37374b;
+    width: 160px;
+    height: 160px;
 }
 
 
@@ -199,16 +244,15 @@ progress::-moz-progress-value {
 
 .main {
 
-    position: relative;;
-    margin-left: 360px;
+    position: relative;
     min-height: 100%;
-    padding: 20px;
+    padding: 5.0em 8em;
 
 }
 
-.info-header{
-    border-bottom:1px #37374c solid;
-    margin:0 0 10px 0;
+.info-header {
+    border-bottom: 1px #8d8d9f solid;
+    margin: 0 0 20px 0;
     padding-bottom: 5px;
 }
 
@@ -229,7 +273,7 @@ progress::-moz-progress-value {
 
 }
 
- .item-remove {
+.item-remove {
     position: absolute;
     right: 2px;
     margin-right: 2px;
@@ -238,11 +282,20 @@ progress::-moz-progress-value {
 
 }
 
-ul li{
+ul {
+    font-weight: 400;
+
+    color: #37374b;
+    line-height: 1.5;
+    font-size: 20px;
+
+}
+
+ul li {
     position: relative;
 }
 
- .experience-list .item-remove {
+.experience-list .item-remove {
     position: absolute;
     right: 2px;
     top: 0px;
@@ -252,7 +305,7 @@ ul li{
 
 }
 
- .stack-list .item-remove {
+.stack-list .item-remove {
     position: absolute;
     right: 2px;
     top: 0px;
@@ -262,4 +315,126 @@ ul li{
 
 }
 
+.item-link {
+    color: #37374b;
+    text-decoration: none;
 
+}
+
+.hidden {
+    display: none;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid rgba(102, 102, 204, 0.4);
+    border-bottom: 80px solid transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.downloadImg {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 22px;
+    position: absolute;
+    right: -70px;
+    top: 12px;
+
+}
+
+.qrcodeImg {
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px 1px #dfd6d6;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #9e9eaf;
+    border-radius: 10px;
+}
+
+
+.work_experience_title {
+    display: inline-block;
+}
+
+.work_experience_time {
+    display: inline-block;
+    color: #999;
+}
+
+.work_container {
+    display: flex;
+    color: #37374b;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.project_name_center {
+    display: flex;
+    align-items: center;
+}
+
+.work_title {
+    width: 100px;
+    margin: 5px 0;
+}
+
+.work_des {
+    width: calc(100% - 100px);
+    margin: 5px 0;
+
+}
+
+.baseinfo_container {
+    display: flex;
+    color: #37374b;
+    line-height: 1.5;
+    font-size: 20px;
+
+}
+
+.baseinfo_title {
+    width: 50%;
+    margin: 5px 0;
+}
+
+.baseinfo_des {
+    width: 50%;
+    margin: 5px 0;
+}
+
+.webTitle {
+    text-align: center;
+    margin-bottom: 1.0em;
+}
+
+.work_des ul {
+    list-style-type: none;
+    padding-left: 2px;
+}
+
+.list-style-type-no {
+    list-style-type: none;
+
+}
+
+.self_evaluation {
+    color: #37374b;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.resume_update_time{
+    position: fixed;
+    color: rgba(255, 255, 255, 0.6);
+    right: 2em;
+    bottom: 2em;
+}

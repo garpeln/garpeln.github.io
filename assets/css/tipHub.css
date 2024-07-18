@@ -1,0 +1,18 @@
+/* styles.css */
+
+.tip-hub {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tip-hub.visible {
+  opacity: 1;
+}

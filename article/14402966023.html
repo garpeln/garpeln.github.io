@@ -248,7 +248,7 @@
                                 </span>
                             </li>         
                             <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
-                            <li onclick="pushNew('/login')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                            <li onclick="pushNew('/resume')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
                                 <span class="articleCount">※
                                 </span>
                             </li>                            
@@ -379,7 +379,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>95.3k</p> 
+                                    <p>95.2k</p> 
 
                                 </li>
                                 <li>
@@ -389,11 +389,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3249天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3252天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-15 11:29:24 +0800">2024/07/15</p>
+                                    <p id="current-date" data-value="2024-07-18 21:14:25 +0800">2024/07/18</p>
                                 </li>
                             </ul>
                     </div>
@@ -464,10 +464,11 @@
     <article class="post-content">
         <h3 id="markdown">Markdown</h3>
 
-<p><code class="language-plaintext highlighter-rouge">Markdown</code> 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档。</p>
+<p><strong>Markdown</strong> 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档。</p>
 
 <h3 id="1-标题">1. 标题</h3>
-<p>使用#显示标题</p>
+<p>使用#显示标题<br />
+示例：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 这是一个一级标题
 ## 这是一个二级标题
 ### 这是一个三级标题
@@ -482,7 +483,7 @@
 <table>
   <thead>
     <tr>
-      <th>语法</th>
+      <th>语法/示例</th>
       <th>效果</th>
     </tr>
   </thead>
@@ -539,7 +540,7 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>语法</th>
+      <th>语法/示例</th>
       <th style="text-align: center">效果</th>
     </tr>
   </thead>
@@ -557,51 +558,13 @@
   </tbody>
 </table>
 
-<h4 id="图片链接">图片链接</h4>
-<p>因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ![alt](URL title)
-</code></pre></div></div>
-<p>alt和title即对应HTML中的alt和title属性（都可省略）：</p>
-<ul>
-  <li>alt表示图片显示失败时的替换文本</li>
-  <li>title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</li>
-  <li>后面添加[target]可以完成跳转</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>语法</th>
-      <th style="text-align: center">效果</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td><code class="language-plaintext highlighter-rouge">![](https://img.gorpeln.top/p/icon/gorpeln-64.png)</code></td>
-      <td style="text-align: center"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="" /></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td><code class="language-plaintext highlighter-rouge">![](https://gorpeln.top/assets/img/csdnLogo.png "csdn")[csdn]</code></td>
-      <td style="text-align: center"><a href="https://blog.csdn.net/chen_gp_x" title="gorpeln"><img src="https://gorpeln.top/assets/img/csdnLogo.png" alt="" title="csdn" /></a></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td><code class="language-plaintext highlighter-rouge">![github-logo][github]</code></td>
-      <td style="text-align: center"><a href="https://gorpeln.top"><img src="https://gorpeln.top/assets/img/githubLogo.png" alt="github-logo" /></a></td>
-    </tr>
-  </tbody>
-</table>
-
 <h4 id="锚点">锚点</h4>
 <p>其实呢，每一个标题都是一个锚点，和HTML的锚点（<code class="language-plaintext highlighter-rouge">#</code>）类似，比如我们</p>
 
 <table>
   <thead>
     <tr>
-      <th>语法</th>
+      <th>语法/示例</th>
       <th>效果</th>
     </tr>
   </thead>
@@ -651,29 +614,32 @@
 
 <h4 id="块引用">块引用</h4>
 <blockquote>
-  <p>此行显示块引用。</p>
+  <p>此行显示块引用，使用方法：&gt; + 空格</p>
 </blockquote>
 
 <h4 id="提示">提示</h4>
 <blockquote class="prompt-tip">
-  <p>显示<code class="language-plaintext highlighter-rouge">tip</code>类型提示符的示例。</p>
+  <p>显示<code class="language-plaintext highlighter-rouge">tip</code>类型提示符的示例。使用方法：块引用 + {: .prompt-tip }</p>
 </blockquote>
 
 <blockquote class="prompt-info">
-  <p>显示<code class="language-plaintext highlighter-rouge">info</code>类型提示符的示例。</p>
+  <p>显示<code class="language-plaintext highlighter-rouge">info</code>类型提示符的示例。使用方法：块引用 + {: .prompt-info }</p>
 </blockquote>
 
 <blockquote class="prompt-warning">
-  <p>显示<code class="language-plaintext highlighter-rouge">warning</code>类型提示符的示例。</p>
+  <p>显示<code class="language-plaintext highlighter-rouge">warning</code>类型提示符的示例。使用方法：块引用 + {: .prompt-warning }</p>
 </blockquote>
 
 <blockquote class="prompt-danger">
-  <p>显示<code class="language-plaintext highlighter-rouge">danger</code>类型提示符的示例。</p>
+  <p>显示<code class="language-plaintext highlighter-rouge">danger</code>类型提示符的示例。使用方法：块引用 + {: .prompt-danger }</p>
 </blockquote>
+
+<h4 id="弱化提示">弱化提示</h4>
+<p>在一段文字中，可以<em class="color-gray">弱化</em>某些文字内容。使用方法：斜体 + {:.color-gray}</p>
 
 <h3 id="5-列表">5. 列表</h3>
 <h4 id="无序列表">无序列表</h4>
-<p>使用 *，+，- 表示无序列表。
+<p>使用 *，+，- 表示无序列表。 <br />
 示例：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 无序列表项 
 - 无序列表项 
@@ -695,7 +661,7 @@
 
 <h4 id="有序列表">有序列表</h4>
 
-<p>就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。
+<p>就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。  <br />
 示例：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 有序列表项 
 2. 有序列表项 
@@ -709,6 +675,16 @@
 </ol>
 
 <h4 id="描述列表">描述列表</h4>
+<p>冒号后加一个空格。      <br />
+示例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>太阳  
+: 地球绕其轨道运行的恒星  
+
+月亮  
+: 地球的天然卫星，通过太阳的反射光可见  
+</code></pre></div></div>
+
+<p>效果：</p>
 
 <dl>
   <dt>太阳</dt>
@@ -718,7 +694,17 @@
 </dl>
 
 <h4 id="复选框列表">复选框列表</h4>
-<p>你可以使用这个功能来标注某个项目各项任务的完成情况。</p>
+<p>你可以使用这个功能来标注某个项目各项任务的完成情况。 <br />
+示例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] 需求分析
+- [x] 系统设计
+- [x] 详细设计
+- [ ] 编码
+- [ ] 测试
+- [ ] 交付
+</code></pre></div></div>
+
+<p>效果：</p>
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />需求分析</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />系统设计</li>
@@ -735,7 +721,7 @@
 | :------------ |:---------------:| -----:|
 </code></pre></div></div>
 
-<p>效果如下：</p>
+<p>效果：</p>
 
 <table>
   <thead>
@@ -772,7 +758,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <p>其语法与代码高亮类似，只是在三个反引号后面写diff，
 并且其内容中，以 <code class="language-plaintext highlighter-rouge">+</code>开头表示新增，<code class="language-plaintext highlighter-rouge">-</code>开头表示删除。</p>
 
-<p>效果如下：</p>
+<p>效果：</p>
 
 <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gi">+ 运筹帷幄之中，决胜千里之外
 </span><span class="gd">- 运筹帷幄之中，决胜千里之外
@@ -781,7 +767,61 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <h3 id="8-缩进">8. 缩进</h3>
 <p>　　把输入法由半角改为全角。 两次空格之后就能够有两个汉字的缩进。</p>
 
-<h3 id="9设置css">9.设置css</h3>
+<h3 id="9-图片">9. 图片</h3>
+<h4 id="图片链接">图片链接</h4>
+<p>因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ![alt](URL title)
+</code></pre></div></div>
+<p>alt和title即对应HTML中的alt和title属性（都可省略）：</p>
+<ul>
+  <li>alt表示图片显示失败时的替换文本</li>
+  <li>title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</li>
+  <li>后面添加[target]可以完成跳转</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>语法/示例</th>
+      <th style="text-align: center">效果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code class="language-plaintext highlighter-rouge">![](https://img.gorpeln.top/p/icon/gorpeln-64.png)</code></td>
+      <td style="text-align: center"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code class="language-plaintext highlighter-rouge">![](https://gorpeln.top/assets/img/csdnLogo.png "csdn")[csdn]</code></td>
+      <td style="text-align: center"><a href="https://blog.csdn.net/chen_gp_x" title="gorpeln"><img src="https://gorpeln.top/assets/img/csdnLogo.png" alt="" title="csdn" /></a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="language-plaintext highlighter-rouge">![github-logo][github]</code></td>
+      <td style="text-align: center"><a href="https://gorpeln.top"><img src="https://gorpeln.top/assets/img/githubLogo.png" alt="github-logo" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="图片位置">图片位置</h4>
+<p>使用方法：图片默认居中显示。</p>
+<pre><code class="language-图片居左">![图片居左](https://img.gorpeln.top/p/icon/gorpeln-128.png){:.img-left}
+</code></pre>
+<pre><code class="language-图片居中">![图片居中](https://img.gorpeln.top/p/icon/gorpeln-128.png)
+</code></pre>
+<pre><code class="language-图片居右">![图片居右](https://img.gorpeln.top/p/icon/gorpeln-128.png){:.img-right}
+</code></pre>
+
+<p><img src="https://img.gorpeln.top/p/icon/gorpeln-128.png" alt="图片居左" class="img-left" /></p>
+
+<p><img src="https://img.gorpeln.top/p/icon/gorpeln-128.png" alt="图片居中" /></p>
+
+<p><img src="https://img.gorpeln.top/p/icon/gorpeln-128.png" alt="图片居右" class="img-right" /></p>
+
+<h3 id="10设置css">10.设置css</h3>
 <div style="background:#E3FDE6;border: 1px #68CB67 solid;padding:10px;">
 <ul style="margin-bottom:0;">
 <li>进行Commits的用户没有被关联到你的Github帐号中。</li>
@@ -790,15 +830,26 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 </ul>
 </div>
 
-<p><br /></p>
-<div class="image-center ">
-	<img src="https://img.gorpeln.top/blog/20150823102322438.jpg!gorpeln" alt="" />
-</div>
-<p><br />
-<br /></p>
 <h3 id="end">END</h3>
-<p><br />
-<br /></p>
+<p>结束了，尾部有一个参考链接列表。<br />
+使用方法：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reference_links:
+    - https://gorpeln.top/work
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{删除% include reference.html links=page.reference_links %}
+</code></pre></div></div>
+
+<p><br /></p>
+<hr />
+
+<div style="color: #888888;font-weight: 300;font-size:12px;margin-top:10px;">参考链接：
+    <div>
+      
+        https://gorpeln.top/work
+        
+      
+    </div>
+</div>
 
 
     </article>
@@ -1266,36 +1317,6 @@ function clickHandler() {
     window.location.href = '/article/15462756619';
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-    function checkLinksOverflow() {
-        const otherIcpDiv = document.querySelector('.other-icp');
-        const links = otherIcpDiv.querySelectorAll('a');
-        let totalLinksWidth = 0;
-
-        // 计算所有链接的总宽度
-        links.forEach(function(link) {
-            totalLinksWidth += link.offsetWidth;
-        });
-
-        // 获取.other-icp的实际宽度
-        const divWidth = otherIcpDiv.offsetWidth;
-
-        // 如果链接总宽度超过.other-icp的宽度，则隐藏.other-icp
-        if (totalLinksWidth > divWidth) {
-            otherIcpDiv.style.display = 'none';
-        } else {
-            otherIcpDiv.style.display = 'block'; 
-        }
-    }
-
-    // 页面加载时检查一次
-    checkLinksOverflow();
-
-    // 监听窗口大小变化，动态检查是否需要隐藏
-    window.addEventListener('resize', checkLinksOverflow);
-});
-
-
 </script>
 <script type="text/javascript">
 // 定义一个函数用于在控制台打印站点信息
@@ -1359,11 +1380,12 @@ printSiteInfo();
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?97ba5540ec47cf065f1e2c7c57814156";
+  hm.src = "https://hm.baidu.com/hm.js?33e7992f9cdd005037626b02b3789a27";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
 
 <!-- 百度自动收录 -->
 <script>
@@ -1472,7 +1494,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 329 + '天';
+  element.innerHTML = 8 + '年' + 332 + '天';
 
 }
 
@@ -1481,7 +1503,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3249 + '天';
+    element.innerHTML = 3252 + '天';
 }
 
 
