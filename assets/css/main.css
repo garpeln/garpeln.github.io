@@ -2386,6 +2386,12 @@ div.contentAbstract img {
     font-style:normal !important;
     font-size: 14px !important;
 }
+.color-light-gray{
+    color:#F5F5F5 !important;
+    background-color:transparent !important;
+    font-style:normal !important;
+    font-size: 14px !important;
+}
 
 .img-left{
     display: inline !important; 
