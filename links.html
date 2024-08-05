@@ -378,7 +378,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>95.9k</p> 
+                                    <p>96.1k</p> 
 
                                 </li>
                                 <li>
@@ -388,18 +388,21 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3265天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3270天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-07-31 19:02:49 +0800">2024/07/31</p>
+                                    <p id="current-date" data-value="2024-08-05 19:04:10 +0800">2024/08/05</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><style>
+                    <div class="page-content" id="pjax">    <link rel="stylesheet" href="../assets/css/tipHub.css">    
+
+
+<style>
 .post {
     display: flex;
     flex-wrap: wrap;
@@ -587,6 +590,9 @@ details[open] .toggle-button::before {
     }
 }
 </style>
+
+
+
 <div class="post" style="display:block;">
     <div style="margin:0.5em;text-align:center;">
         <h3> 友链 & 留言</h3>
@@ -836,7 +842,7 @@ details[open] .toggle-button::before {
             
             
         
-        <a class="link_item" href="https://blog.jerryz.com.cn" target="_blank">
+        <a class="link_item" href="https://blog.jerryz.com.cn/" target="_blank">
             
                 
                 <img src="https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg" alt="Jerry Zhou的博客" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
@@ -1392,6 +1398,8 @@ textarea::placeholder {
     </script>
 </body>
 </div>
+<script src="../assets/js/tipHub.js"></script>
+
 <script>
 function copyToClipboard() {
     var copySource = document.getElementById('copy-source');
@@ -1406,13 +1414,16 @@ function copyToClipboard() {
         try {
             document.execCommand('copy');
             console.log('已复制到剪贴板');
+            TipHub.show('复制成功', 2000);
         } catch (e) {
             console.error('复制到剪贴板失败');
+            TipHub.show('复制失败', 2000);
         }
 
         selection.removeAllRanges();
     } else {
         console.error('未能找到要复制的内容区域');
+        TipHub.show('未能找到要复制的内容区域', 2000);
     }
 }
 </script>
@@ -1770,7 +1781,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 345 + '天';
+  element.innerHTML = 8 + '年' + 350 + '天';
 
 }
 
@@ -1779,7 +1790,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3265 + '天';
+    element.innerHTML = 3270 + '天';
 }
 
 
