@@ -205,7 +205,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">188</span>
+                                    <span class="site-state-item-count">189</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -238,7 +238,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">188
+                                <span class="articleCount">189
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -265,7 +265,7 @@
                             
                             <li onclick="pushNew('/categories#其他')" class="categoryList">
                                 <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">40
+                                <a name="其他" style="" class="articleCount">41
                                 </a>
                             </li>
                             
@@ -374,11 +374,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >188</p>
+                                    <p >189</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>96.9k</p> 
+                                    <p>97.6k</p> 
 
                                 </li>
                                 <li>
@@ -388,11 +388,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3277天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3280天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-08-12 10:57:22 +0800">2024/08/12</p>
+                                    <p id="current-date" data-value="2024-08-15 19:27:16 +0800">2024/08/15</p>
                                 </li>
                             </ul>
                     </div>
@@ -1048,7 +1048,7 @@ function siteTime() {
     minutes - 0-59之间的整数，做为date对象的分钟数
     seconds - 0-59之间的整数，做为date对象的秒数
     microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-    var t1 = Date.UTC(2015, 8, 23, 0, 0, 0)
+    var t1 = Date.UTC(2015, 8, 23, 9, 0, 0)
     var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
     var diff = t2 - t1
     var diffYears = Math.floor(diff / years)
@@ -1251,7 +1251,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 8 + '年' + 357 + '天';
+  element.innerHTML = 8 + '年' + 360 + '天';
 
 }
 
@@ -1260,7 +1260,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3277 + '天';
+    element.innerHTML = 3280 + '天';
 }
 
 
