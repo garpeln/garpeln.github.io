@@ -6,7 +6,7 @@
 
 @page :first {
     /* 第一页的样式 */
-    margin-top: 0.5cm; 
+    margin-top: 0.5cm;
 }
 
 
@@ -316,34 +316,28 @@ ul li {
 }
 
 .item-link {
+    text-decoration: none; /* 移除默认的下划线 */
+    position: relative; /* 为了添加伪元素 */
     color: #37374b;
-    text-decoration: none;
 
 }
+
+.item-link::after {
+    content: ""; /* 添加一个伪元素来模拟下划线 */
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* 调整下划线与文本的距离 */
+    width: 100%;
+    height: 1px; /* 下划线的高度 */
+    background-color: #888; /* 下划线的颜色 */
+}
+
 
 .hidden {
     display: none;
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 80px solid transparent;
-    border-right: 80px solid rgba(102, 102, 204, 0.4);
-    border-bottom: 80px solid transparent;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
 
-.downloadImg {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 22px;
-    position: absolute;
-    right: -70px;
-    top: 12px;
-
-}
 
 .qrcodeImg {
     border-radius: 16px;
@@ -432,9 +426,178 @@ progress[value]::-webkit-progress-value {
     font-size: 20px;
 }
 
-.resume_update_time{
+.resume_update_time {
     position: fixed;
     color: rgba(255, 255, 255, 0.6);
-    right: 2em;
+    right: 40px;
     bottom: 2em;
+    text-align: right;
+}
+
+.qrcode {
+    width: 60px;
+    height: 60px;
+    background: rgba(102, 102, 204, 0.4) url(/assets/img/blog_qrcode.png) no-repeat center center;
+    background-size: 60%;
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    border-radius: 10px;
+}
+
+.downPDF {
+    width: 60px;
+    height: 60px;
+    background: rgba(102, 102, 204, 0.4) url(/assets/img/blog_downpdf.png) no-repeat center center;
+    background-size: 60%;
+    position: fixed;
+    bottom: 160px;
+    right: 40px;
+    border-radius: 10px;
+}
+
+.qrcodeImg {
+    background: #E6E6FA;
+    position: fixed;
+    bottom: 80px;
+    right: 120px;
+    display: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.scan-text {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    /* 弹窗位于页面偏上5%的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 水平居中 */
+    border-radius: 16px;
+}
+
+.alert-title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.alert-content {
+    font-size: 1.4em;
+    margin: 20px 0 20px 0;
+    padding: 10px 20px;
+}
+
+/* 遮罩层样式 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* 按钮样式 */
+button {
+    margin: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background-color: #37374b;
+    border: none;
+    border-radius: 10px;
+    width: 140px;
+}
+
+button:hover {
+    background-color: #2e2e3d;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 调整字体大小 */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-size: 1.2em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .main {
+        padding: 1em;
+    }
+
+    .webTitle {
+        font-size: 1.5em;
+    }
+
+    .info-header {
+        margin-bottom: 1em;
+    }
+
+    .work_title {
+        width: 100px;
+    }
+
+    .work_des {
+        width: calc(100% - 100px);
+    }
+
+    .baseinfo_container {
+        /*font-size: 14px;*/
+    }
+
+    .baseinfo_title,
+    .baseinfo_des {
+        width: 50%;
+    }
 }

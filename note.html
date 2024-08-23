@@ -11,15 +11,15 @@
     <meta name="baidu-site-verification" content="6zevvv1ain" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="/assets/css/notes.css">
+    <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
 </head>
-
 <style>
-.btn {
+    .btn {
     z-index: 1;
     overflow: hidden;
     background: transparent;
     position: relative;
-    padding: 6px 20px;
+    padding: 0.5em;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1em;
@@ -30,11 +30,12 @@
     position: fixed;
     top: 0;
     right: 0;
+
 }
 
 .btn.green {
-    border: 1px solid #ADD8E6;
     color: #ADD8E6;
+    box-shadow: 1px 1px 2px #dfd6d6;
 }
 .bate_download{
     border-bottom:1px solid #999;
@@ -58,8 +59,8 @@
 }
 </style>
 
-<body id="m"> <a href="https://gorpeln.top"> <button class="btn
-green">H</button> </a>
+<body id="m">
+    <a href="/"> <button class="btn green"><i class="fas fa-home fa-fw"></i></button> </a>
     <div class="main">
         <div class="contains" name="sg">
             <div class="content margin">
@@ -108,18 +109,16 @@ green">H</button> </a>
     </div>
     <div class="footer">
         <p>©2021-<text id="currentYear"></text> gorpeln 版权所有&nbsp; | &nbsp;
-        <a style="color: #666" href="http://beian.miit.gov.cn/">京ICP备2021024484号-2</a>
-    </p>
+            <a style="color: #666" href="http://beian.miit.gov.cn/">京ICP备2021024484号-2</a>
+        </p>
     </div>
     <script type="text/javascript">
-        const fullYear = new Date().getFullYear();
-        document.getElementById("currentYear").textContent = fullYear;
-
+    const fullYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = fullYear;
     </script>
     <script type="text/javascript" src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script type="text/javascript" src="/assets/js/notes/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/assets/js/notes/ma6ca.js?v=202005271919"></script>
 </body>
-
 
 </html>

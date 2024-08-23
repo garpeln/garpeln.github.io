@@ -2393,6 +2393,10 @@ div.contentAbstract img {
     font-size: 14px !important;
 }
 
+.color-light-gray:hover{
+    color:#888 !important;
+}
+
 .img-left{
     display: inline !important; 
 }

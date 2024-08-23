@@ -12,16 +12,19 @@
     <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
     <script src="/assets/js/tipHub.js"></script>
     <link rel="stylesheet" href="/assets/css/tipHub.css">
-
     <style>
     </style>
 </head>
 
 <body style="padding-right: 0px;" id="mainContent" class="hidden">
-    <div class="triangle" onclick="downPDF()">
-        <i class="fas fa-cloud-download downloadImg"></i>
-    </div>
+    <!-- 简历更新时间 -->
     <div class="resume_update_time">更新于 2020-07-16　</div>
+    <!-- 下载PDF -->
+    <div class="downPDF" id="downPDF" onclick="downPDF()"></div>
+    <!-- 页面二维码 -->
+    <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/resume')"></div>
+    <div class="qrcodeImg" id="qrcode"></div>
+    <!-- 简历详情 -->
     <div class="container">
         <div class="main">
             <div class="info-unit right-list">
@@ -364,17 +367,103 @@
             </div>
         </div>
     </div>
-    <script>
-    var mainContent = document.getElementById('mainContent');
-    mainContent.classList.remove('hidden');
-                            TipHub.show('示例内容 仅做展示', 3000);
-
-    </script>
-    <script>
-    function downPDF() {
-        window.location.href = "/assets/pdfs/resume.pdf";
-    }
-    </script>
+    <!-- 添加模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h1 class="alert-title">温馨提示</h1>
+            <p class="alert-content">为保证简历阅读效果，请使用电脑端进行查看。</p>
+            <button id="downloadPdfButton">下载PDF</button>
+            <button id="cancelButton">取消</button>
+        </div>
+    </div>
+    <!-- 添加遮罩层 -->
+    <div id="overlay" class="overlay"></div>
 </body>
+<script>
+var mainContent = document.getElementById('mainContent');
+mainContent.classList.remove('hidden');
+</script>
+<script>
+function downPDF() {
+    window.location.href = "resume.pdf";
+}
+</script>
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+// 生成二维码
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width: 150,
+    height: 150
+});
+
+function createQrcode(url) {
+
+    qrcode.makeCode('https://gorpeln.top' + url);
+
+    var qrcodeImg = document.getElementById('qrcode');
+    if (qrcodeImg.style.display == 'block') {
+        qrcodeImg.style.display = 'none';
+        qrcode.clear();
+    } else {
+        qrcodeImg.style.display = 'block';
+    }
+}
+
+// 隐藏二维码
+function hiddenQRCode() {
+    var qrcodeImg = document.getElementById('qrcode');
+    if (qrcodeImg.style.display == 'block') {
+        qrcodeImg.style.display = 'none';
+        qrcode.clear();
+    }
+}
+</script>
+<script>
+// 获取DOM元素
+var modal = document.getElementById('modal');
+var overlay = document.getElementById('overlay');
+var cancelButton = document.getElementById('cancelButton');
+var downloadPdfButton = document.getElementById('downloadPdfButton');
+
+// 显示模态框和遮罩层
+function showModal() {
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// 隐藏模态框和遮罩层
+function closeModal() {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// 下载PDF
+function downloadPDF(event) {
+    event.preventDefault(); // 阻止默认的页面跳转行为
+    closeModal(); // 关闭模态框和遮罩层
+    window.location.href = "/resume.pdf"; // 跳转到PDF下载页面
+}
+
+// 初始化
+window.onload = function() {
+    // 如果屏幕宽度小于一定阈值，则显示模态框
+    if (window.innerWidth <= 768) {
+        showModal();
+    } else {
+
+        TipHub.show('示例内容 仅做展示', 3000);
+    }
+
+    // 取消按钮点击事件
+    cancelButton.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // 下载PDF按钮点击事件
+    downloadPdfButton.addEventListener('click', function(event) {
+        downloadPDF(event); // 传递事件对象
+    });
+};
+</script>
 
 </html>
