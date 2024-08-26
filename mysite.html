@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/mysite/xenon-components.css">
     <link rel="stylesheet" href="../assets/css/mysite/xenon-skins.css">
     <link rel="stylesheet" href="../assets/css/mysite/nav.css">
+    <link rel="stylesheet" href="../assets/css/mysite.css">
     <link rel="stylesheet" href="../assets/fontawesome-pro/css/all.css">
     <script src="../assets/js/mysite/jquery-1.11.1.min.js"></script>
     <meta property="og:type" content="article">
@@ -32,140 +33,7 @@
 <body class="page-body">
     <!-- skin-white -->
     <div class="page-container">
-        <style type="text/css">
-.skill_box img {
-    width: 3em;
-    height: 3em;
-    margin: 6px 2px;
-}
-
-.profile {
-    position: relative;
-    /*background: #fff;*/
-    margin: 2em;
-    padding: 1em 1em 0.5em 1em;
-    opacity: 1;
-    min-height: 20em;
-    /*height: 100%;*/
-    -moz-border-radius: 0 0 10px 10px;
-    -webkit-border-radius: 0 0 10px 10px;
-}
-
-/*.profile .overlay {
-    position: relative;
-    -moz-border-radius: 10px 10px 0 0;
-    -webkit-border-radius: 10px 10px 0 0;
-    height: 6.2em;
-    background: rgba(55, 55, 75, 0.96);
-    margin: -1em -1em -4em -1em;
-    overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-}*/
-
-.center {
-    text-align: center;
-}
-
-.profile .nickname {
-    margin-top: 0.5em;
-    border-bottom: 0.01em solid #37374c;
-    padding-bottom: 0.5em;
-    font-family: cursive;
-    font-size: 1.5em;
-    color: #37374c;
-}
-
-
-.profile_desc {
-    margin-top: 2em;
-    letter-spacing: 1px;
-    font-size: 0.85em;
-    line-height: 1.5em;
-    width: 100%;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
-    margin-bottom: 0.5em;
-    color: #37374c;
-}
-
-.profile_subdesc {
-    margin-top: 0.5em;
-    letter-spacing: 1px;
-    font-size: 0.85em;
-    line-height: 1.5em;
-    width: 100%;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
-    margin-bottom: 1.0em;
-    color: #aaa;
-}
-
-
-a.profile_gavatar {
-    position: relative;
-    width: 7em;
-    height: 7em;
-    margin: 0 auto;
-    overflow: hidden;
-    background: #fff;
-    /* border: 0.02em solid #37374c; */
-    box-shadow: 1px 1px 2px #dfd6d6;
-    -webkit-border-radius: 99em;
-    -moz-border-radius: 99em;
-    border-radius: 99em;
-    display: -webkit-box;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    -ms-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
-}
-
-
-a.profile_gavatar .circle {
-    opacity: 1;
-    height: 100%;
-    -webkit-border-radius: 99em;
-    -moz-border-radius: 99em;
-    border-radius: 99em;
-}
-
-
-.light-sweep {
-    position: absolute;
-    display: inline-block;
-    -webkit-animation: changeImg 3s ease 0s;
-    -o-animation: changeImg 3s ease 0s;
-    animation: changeImg 3s ease 0s;
-    top: 0;
-    width: 30%;
-    height: 100%;
-    content: "";
-    background: -webkit-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
-    background: -o-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
-    background: -moz-linear-gradient(left, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
-    background: linear-gradient(to right, rgba(236, 236, 236, 0) 0, rgba(236, 236, 236, .4) 50%, rgba(236, 236, 236, 0) 100%);
-    transform: skewX(-45deg);
-    animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count:
-        infinite;
-}
-
-
-
-@keyframes changeImg {
-    from {
-        left: -100%;
-    }
-
-    100% {
-        left: 150%;
-    }
-}
-</style>
-<div class="sidebar-menu toggle-others fixed">
+        <div class="sidebar-menu toggle-others fixed">
     <div class="sidebar-menu-inner">
         <div class="profile">
             <div class="overlay"></div>
@@ -203,12 +71,11 @@ a.profile_gavatar .circle {
 <div class="main-content">
     
     
-    <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="个人网站"></i>个人网站</h4>
+    <!-- <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="个人网站"></i>个人网站</h4> -->
     <div class="row">
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="gorpeln.top">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="/favicon.ico" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -218,13 +85,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">gorpeln.top</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/works', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="gorpeln.top/works">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/works.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -234,13 +99,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">gorpeln.top/works</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://drive.202090.xyz', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/drive">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/onedrive.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -250,13 +113,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/drive</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/note', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/note">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/gpnotes.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -266,13 +127,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/note</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://home.202090.xyz', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/home">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/home.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -282,13 +141,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/home</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://waline.202090.xyz/ui', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/waline">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/waline.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -298,13 +155,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/waline</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://umami.202090.xyz/share/oWC5HwUyPml1gkRI/gorpeln.top', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/umami">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/umami.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -314,13 +169,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/umami</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://status.202090.xyz', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="s.gorpeln.top/status">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/status.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -330,13 +183,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">s.gorpeln.top/status</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/friends', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="友链朋友圈-及时获取友链更新的文章">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/rss.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -346,13 +197,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">友链朋友圈-及时获取友链更新的文章</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://lab.gorpeln.top', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="在线工具">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/lab.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -362,13 +211,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">在线工具</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/nav', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收集5000+个网站">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/nav.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -378,13 +225,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">收集5000+个网站</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/resume', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="展现自我，赢得未来">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/rusume.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -394,13 +239,11 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">展现自我，赢得未来</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('/protocol', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="博客和时光本相关政策协议">
-                <!-- <div class="xe-comment-entry"> -->
                 <a class="xe-user-img">
                     <img src="https://img.gorpeln.top/p/mysite/document.png" class="img-circle" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
                 </a>
@@ -410,7 +253,6 @@ a.profile_gavatar .circle {
                     </a>
                     <p class="overflowClip_2">博客和时光本相关政策协议</p>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
         
@@ -419,7 +261,7 @@ a.profile_gavatar .circle {
     
     
     <br>
-    <iframe src="https://donate.202090.xyz" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #f9f9f9; position: absolute;bottom: 0;right: 0;" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://donate.202090.xyz" frameborder="0" scrolling="no" class="donate"></iframe>
 </div>
 <!-- 锚点平滑移动 -->
 <script type="text/javascript">

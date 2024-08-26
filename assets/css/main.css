@@ -38,7 +38,7 @@ table {
     min-width: 50%;
     max-width: 100%;
     overflow-x: auto;
-    display:block;
+    display: block;
 }
 
 table tr:nth-child(even) {
@@ -600,7 +600,7 @@ li.article a:hover,li.article a:focus{
 
 #cb-search-btn:hover .search-tip {
     display: block;
-    color:rgba(102, 102, 204, 0.4);
+    color: rgba(102, 102, 204, 0.4);
 }
 
 /**
@@ -681,8 +681,8 @@ li.article a:hover,li.article a:focus{
     padding: 0 5px;
 }
 
-.friend-item:hover .friend-name{
-    color:#6666cc;
+.friend-item:hover .friend-name {
+    color: #6666cc;
 }
 
 .friend-item .friend-name {
@@ -758,7 +758,7 @@ li.article a:hover,li.article a:focus{
     color: #6666cc;
 }
 
-.siteNav ul li:hover a{
+.siteNav ul li:hover a {
     color: #6666cc;
 }
 
@@ -862,8 +862,8 @@ li.article a:hover,li.article a:focus{
 
 }
 
-.contact-item:hover .contact-name{
-        color:#6666cc;
+.contact-item:hover .contact-name {
+    color: #6666cc;
 }
 
 .contact-item .contact-name {
@@ -1356,7 +1356,7 @@ a:focus {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
     height: 6.2em;
-    background: rgba(55, 55, 75,0.96);
+    background: rgba(55, 55, 75, 0.96);
     margin: -1em -1em -4em -1em;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
@@ -2380,32 +2380,33 @@ div.contentAbstract img {
     border-radius: 0 8px 8px 0;
 }
 
-.color-gray{
-    color:#AAA !important;
-    background-color:transparent !important;
-    font-style:normal !important;
-    font-size: 14px !important;
-}
-.color-light-gray{
-    color:#F5F5F5 !important;
-    background-color:transparent !important;
-    font-style:normal !important;
+.color-gray {
+    color: #AAA !important;
+    background-color: transparent !important;
+    font-style: normal !important;
     font-size: 14px !important;
 }
 
-.color-light-gray:hover{
-    color:#888 !important;
+.color-light-gray {
+    color: #F5F5F5 !important;
+    background-color: transparent !important;
+    font-style: normal !important;
+    font-size: 14px !important;
 }
 
-.img-left{
-    display: inline !important; 
+.color-light-gray:hover {
+    color: #888 !important;
 }
 
-.img-right{
-    margin:0  !important;
-     margin-left:auto !important;
-     margin-top:1em !important;
-     margin-bottom:1em !important;
+.img-left {
+    display: inline !important;
+}
+
+.img-right {
+    margin: 0 !important;
+    margin-left: auto !important;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
 }
 
 
@@ -2519,6 +2520,63 @@ div.contentAbstract img {
 }
 
 
+/* 双实线 */
+.hr-double {
+    border: 0;
+    border-top: 3px double #d0d0d5;
+}
+
+/* 斜纹分隔线 黑色 */
+.hr-twill {
+    border: 0;
+    padding: 3px;
+    background: repeating-linear-gradient(135deg, #a2a9b6 0px, #a2a9b6 1px, transparent 1px, transparent 6px);
+}
+
+/* 斜纹分隔线 彩色 现代浏览器only */
+.hr-twill-colorful {
+    border: 0;
+    padding: 3px;
+    background: linear-gradient(135deg, red, orange,green, blue, purple);
+    --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+}
+
+/* 带文字内容的分隔线 */
+.hr-solid-content {
+    color: #a2a9b6;
+    border: 0;
+    font-size: 12px;
+    padding: 1em 0;
+    position: relative;
+}
+
+/* 两端淡出 */
+.hr-fade-content {
+    color: #a2a9b6;
+    border: 0;
+    font-size: 12px;
+    padding: 1em 0;
+    position: relative;
+    overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, transparent, black, transparent);
+    mask-image: linear-gradient(to right, transparent, black, transparent);
+    
+}
+
+.hr-solid-content::before,.hr-fade-content::before {
+    content: attr(data-content);
+    position: absolute;
+    padding: 0 1ch;
+    line-height: 2px;
+    border: solid #d0d0d5;
+    border-width: 0 99vw;
+    width: fit-content;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 /*上一篇和下一篇*/
@@ -2869,4 +2927,5 @@ div.contentAbstract img {
     0% {
         opacity: 0;
         transform: translateX(-50px)
-    }
+    }}
+    
