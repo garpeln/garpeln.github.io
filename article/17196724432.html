@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>Label中某几个字符颜色大小不同 | gorpeln的个人博客 - gorpeln</title>
-    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,UIlabel,代码段,颜色,富文本,attributedText" />
-    <meta name="description" content="```Objective-C">
+    <title>双因素认证(2FA)实现原理 | gorpeln的个人博客 - gorpeln</title>
+    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,TOTP,MFA,多因子,二次验证,HOTP" />
+    <meta name="description" content="我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/14875801742">
+    <link rel="canonical" href="/article/17196724432">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- 样式表 -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
@@ -417,13 +417,13 @@
 </style>
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">Label中某几个字符颜色大小不同</h1>
+        <h1 class="post-title">双因素认证(2FA)实现原理</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;">2017-02-20</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            <text style="padding-top: 0;">2024-06-29</text>&nbsp;&nbsp;&nbsp;&nbsp;
             分类：
-            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                iOS
+            <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
+                产品和运营
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             标签：
@@ -431,23 +431,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#UIlabel" target="_blank">UIlabel</a>
+                <a class="pjaxlink" href="/tags#TOTP" target="_blank">TOTP</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#代码段" target="_blank">代码段</a>
+                <a class="pjaxlink" href="/tags#MFA" target="_blank">MFA</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#颜色" target="_blank">颜色</a>
+                <a class="pjaxlink" href="/tags#多因子" target="_blank">多因子</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#富文本" target="_blank">富文本</a>
+                <a class="pjaxlink" href="/tags#二次验证" target="_blank">二次验证</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#attributedText" target="_blank">attributedText</a>
+                <a class="pjaxlink" href="/tags#HOTP" target="_blank">HOTP</a>
                 
                 
             </span>
@@ -455,45 +455,135 @@
         </div>
     </header>
     <article class="post-content">
-        <pre><code class="language-Objective-C">
-UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(100, 10, 200, 100)];  
-int i=arc4random()%100;  
-NSString *str1=@"本期参与:";  
-NSString *str2=[NSString stringWithFormat:@"%d",i];  
-NSString *str3=@"人次";  
-NSString *contentStr=[NSString stringWithFormat:@"%@%@%@",str1,str2,str3];  
-NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:contentStr];  
-[str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5,str2.length )];  
-[str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:25] range:NSMakeRange(0, str2.length)];  
-label.attributedText = str;  
-[self.view addSubview:label];  
+        <p>我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。</p>
 
-</code></pre>
+<h3 id="多因子认证">多因子认证</h3>
 
-<h3 id="运行结果">运行结果</h3>
+<p>多因子认证（Multi-factor Authentication），简称<code class="language-plaintext highlighter-rouge">MFA</code>。在现代网络安全领域，多因子认证已成为保护用户账户安全的重要手段，它要求用户提供两个或更多独立的认证因子，例如：账号密码+短信验证码、账号密码+邮箱验证码、账号密码+TOTP验证码等，当然对于Gtihub要求的<code class="language-plaintext highlighter-rouge">2FA</code>，指的是Two-Factor Authentication双因子认证，与MFA的主要区别是认证因子的数量，从更广义的层面来看，2FA可以看作是MFA的一种特殊情况，即MFA的一个子集</p>
 
-<p><img src="https://img.gorpeln.top/blog/20170220164254276.png!gorpeln" alt="20170220164254276" /></p>
+<p>MFA的主要目的是增强安全性。相比于单一的用户名和密码认证，MFA增加了额外的验证方式，从而显著降低了账户被入侵的风险。即便攻击者获得了账号的用户名和密码，仍需要其他认证因子才能访问账户，极大地提高了账户的安全性</p>
+
+<p>常见的<strong>多因子认证</strong>方式有：</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">短信验证码</code>：这种验证方式非常广泛，在用户在登录时，系统会发送一个一次性验证码到用户的手机上，用户则需要在登录页面输入这个验证码来完成身份验证，这种认证方式的优点是简单方便，用户无需额外的设备或应用就能完成二次验证，缺点则主要是会产生短信费用，同时也可能会受到SIM卡交换攻击或短信拦截</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">邮件验证码</code>：系统发送一次性验证码到用户的电子邮箱，用户需要在登录页面输入该验证码完成验证，邮箱验证码使用也较为广泛，这种认证方式优点是易于实现和使用，用户无需额外设备，只要有邮箱即可，缺点则主要是邮件响应速度较慢，用户体验不佳，同时安全性较低，邮箱可能被黑客入侵</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">生物识别认证</code>：使用指纹、面部识别或声纹等生物特征进行身份验证，常用于高安全性需求场景，如解锁智能手机或访问敏感系统。这种认证方式优点是安全性极高，唯一性强、用户体验也好，快速便捷，缺点主要是设备要求高，需要设备支持指纹、面部解锁等，其次一些场景无法支持，例如WEB端，同时也有隐私问题需考虑</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">硬件令牌</code>：这种常见于财务系统，使用独立的硬件设备生成一次性密码或进行物理验证，用户将硬件令牌插入计算机或使用NFC读取器完成验证。优点是极高的安全性，同时也能防止网络攻击，因为它不依赖移动设备或互联网连接，缺点也比较明显，依赖硬件，成本比较高，使用不方便</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">基于时间的一次性密码</code>（TOTP）：基于时间生成的一次性密码，有标准的算法，通过标准算法来生成验证码，有许多免费的应用或小程序都能生成，用户需要输入应用生成的验证码来完成身份验证。这种认证方式的主要优点是安全性高，不依赖网络传输，多数MFA应用免费提供，缺点则主要是用户需要额外安装并配置应用</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">基于事件的一次性密码</code>（HOTP）：基于事件计数生成的一次性密码，类似于TOTP，但使用事件计数而非时间。适用于硬件令牌。这种认证方式的优点是不依赖时间同步，适用于硬件设备，缺点则主要是使用体验不如TOTP方便</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">推送通知</code>：通过认证应用发送推送通知到用户的设备，用户只需点击“批准”或“拒绝”即可完成身份验证，例如之前遇到过的Google账号认证，会发送消息到你登录Google账号的可信手机上，点击确定就能登录。这种认证方式的优点是：用户体验好，方便快捷、更加安全，防止中间人攻击，缺点则是需要互联网连接、依赖移动设备，也不是所有设备都支持</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">安全问题</code>：用户设置一系列安全问题，登录时需回答这些问题进行验证。这种认证方式的优点是实施简单，无需额外设备，缺点则主要是安全性较低，容易被猜测或社交工程攻击，长时间不使用还容易遗忘，例如我小时候申请的QQ号密保问题是：你的梦想是什么？现在已经完全想不起来答案了</p>
+  </li>
+</ol>
+
+<p>其中，基于时间的一次性密码<code class="language-plaintext highlighter-rouge">TOTP</code>是一种非常流行且标准化的多因子认证方式，尤其是在Web系统中，例如阿里云、腾讯云、Github、Google等诸多知名网站都支持TOTP多因子认证，另外一些应用较广的运维相关开源软件也都加入了对TOTP二次认证的支持，例如CODO、Jumpserver等，甚至出现了多因子认证约等于TOTP的现象</p>
+
+<h3 id="totp">TOTP</h3>
+
+<p><img src="https://img.gorpeln.top/blog/2fa.png!gorpeln" alt="2fa" /></p>
+
+<p><img src="https://img.gorpeln.top/blog/totp.png!gorpeln" alt="totp" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # T表示当前时间的unix时间戳，T0表示初始时间（一般为0，可省略）
+  # Period表示更新周期（一般为30秒）
+  # C表示基于时间生成的计数
+   C = (T - T0) / Period
+
+  # K：加密密码，作为HMAC密码算法输入，由于只有客户端和服务端共享，因此在不知道K的情况下，无法生成，保证安全性。
+  # C：计数器，客户端和服务端基于本地时间分别计算
+  # h：表示使用密码技术得到的一次密码（但是由于h长度较大，不适合作为验证码，因此需要进一步截取
+   h = HMAC(K, C)
+
+  # otp：一次密码，通过对h进行截取处理（这里的digit代表需要截取的位数，通常情况下为6）
+   otp = Trunc(h, digit)
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">TOTP</code>（Time-Based One-Time Password）算法使用的是基于时间的一次性密码，这是一种广泛应用于两步验证过程的算法。TOTP的工作原理可以概括如下：</p>
+
+<ol>
+  <li><strong>HMAC算法</strong>：TOTP是基于HMAC（Hash-Based Message Authentication Code）算法构建的，它结合了一个共享的秘密密钥和当前时间来生成一次性密码。</li>
+  <li><strong>共享密钥</strong>：在设置Google Authenticator时，用户的设备和验证服务器之间会共享一个密钥。这个密钥是安全存储的，并且对于每个账户是唯一的。</li>
+  <li><strong>时间作为参数</strong>：TOTP算法使用当前的时间作为变化因素。时间通常被分割成固定的时间片段（例如，每30秒一个片段）。</li>
+  <li><strong>生成一次性密码</strong>：
+    <ul>
+      <li>首先，当前时间被转换为一个计数器值，这通常是自Unix纪元（1970年1月1日）以来的30秒间隔数。</li>
+      <li>然后，使用HMAC算法结合这个计数器值和共享密钥来生成一个哈希值。</li>
+      <li>最后，从这个哈希值中提取一个较短的数字序列，通常是6到8位数，作为一次性密码。</li>
+    </ul>
+  </li>
+  <li><strong>验证一次性密码</strong>：当用户输入一次性密码时，验证服务器也会独立生成一个密码，使用相同的共享密钥和当前时间。如果两者匹配，验证成功。</li>
+</ol>
+
+<p>TOTP的优点：</p>
+<ul>
+  <li><strong>密码动态生成</strong>：由于密码是基于当前时间生成的，它每30秒就会变化一次，并且只能使用一次，这种机制有效防止了密码重用和暴力破解攻击，提高了账户的安全性</li>
+  <li><code class="language-plaintext highlighter-rouge">无需网络</code>：生成密码不依赖于网络连接，因为它基于时间和共享密钥，这增加了安全性和可用性</li>
+  <li><strong>成本低</strong>：相比硬件令牌等其他MFA方式，TOTP的成本更低，用户只需在手机上安装一个免费的应用程序即可实现多因子认证，而无需购买额外的硬件设备。对于企业而言，这降低了部署MFA的成本和复杂性</li>
+  <li><strong>标准化</strong>：TOTP遵循RFC 6238标准，确保了其跨平台的兼容性和一致性</li>
+</ul>
+
+<p><em class="color-gray">举一个不恰当但简单易懂的例子：首先使用手机扫描平台的二维码从服务器获取秘钥（假如为123456），那么TOTP客户端就可以根据秘钥和当前时间（假设为2024年09月12日16时48分15秒）生成一个6位的动态密码，时间截取日时分121648，123456×121648=15018175488直接截取后六位175488，那么48分的动态密码就是175488，同样的49分时，123456×121649=15018298944，得到动态密码为298944，这样当时间发生变化时每分钟都可以生成不一样的密码，同样的服务器也使用相同的方法根据秘钥和时间生成对应的密码，当你登录平台时手动输入TOTP客户端提供的动态密码给服务器，服务器会将结果与自己生成的密码比对，比对结果一致就可以正常登录了。当然这个例子只是帮助你理解TOTP，实际的商用环境下，加密方式肯定比我举例的这种方式复杂，需要考虑更多的因素，如果感兴趣可以去学习了解详细的TOTP算法。</em></p>
+
+<h3 id="totp客户端应用">TOTP客户端应用</h3>
+
+<p>TOTP的算法是公开的，所以生成TOTP验证码也较为简单，国内各大云厂商的APP或是一些小程序也都有提供虚拟MFA的功能，例如腾讯云助手小程序等等，知名的MFA应用主要有Google验证器（<code class="language-plaintext highlighter-rouge">Google Authenticator</code>）和微软验证器（Microsoft Authenticator）</p>
+
+<h3 id="开启2fa">开启2FA</h3>
+
+<p>以Github为例开启2FA。</p>
+<ul>
+  <li>Settings -&gt; Password &amp; authentication -&gt; Two-factor authentication -&gt; Authenticator app</li>
+  <li>生成绑定二维码</li>
+  <li>TOTP 应用/插件扫码绑定</li>
+  <li>登录账号后输入 TOTP 验证码</li>
+</ul>
+
+<h3 id="问题解答">问题解答</h3>
+<p><strong>1.时间T的值怎么选取？</strong>   <br />
+因为时间每时每刻都在变化，如果选择一个变化太快的T（例如从某一时间点开始的秒数），那么用户来不及输入密码。如果选择一个变化太慢的T（例如从某一时间点开始的小时数），那么第三方攻击者就有充足的时间去尝试所有可能的一次性密码（试想6位数字的一次性密码仅仅有10^6种组合），降低了密码的安全性。除此之外，变化太慢的T还会导致另一个问题。如果用户需要在短时间内两次登录账户，由于密码是一次性的不可重用，用户必须等到下一个一次性密码被生成时才能登录，这意味着最多需要等待59分59秒！这显然不可接受。综合以上考虑，Google选择了30秒作为时间片，T的数值为从Unix epoch（1970年1月1日 00:00:00）来经历的30秒的个数</p>
+
+<p><strong>2.不在同一间隔内如何处理？</strong> <br />
+由于网络延时、用户输入延迟等因素，可能当服务器端接收到一次性密码时，T的数值已经改变，这样就会导致服务器计算的一次性密码值与用户输入的不同，验证失败。解决这个问题个一个方法是，服务器计算当前时间片以及前面的n个时间片内的一次性密码值，只要其中有一个与用户输入的密码相同，则验证通过。当然，n不能太大，否则会降低安全性</p>
+
+<p>如果客户端和服务器的时钟有偏差，会造成与上面类似的问题，也就是客户端生成的密码和服务端生成的密码不一致。但是，如果服务器通过计算前n个时间片的密码并且成功验证之后，服务器就知道了客户端的时钟偏差。因此，下一次验证时，服务器就可以直接将偏差考虑在内进行计算，而不需要进行n次计算</p>
+
+<p><strong>3.如何保证安全？</strong>  <br />
+在扫描 GitHub 给的绑定二维码时，如果被别人拍照、截图、数据劫持，二维码中的秘钥就会泄露，或者Authenticator 应用存储的秘钥被泄露，手机丢失、Authenticator 服务器被攻击等导致秘钥泄露，别人拿到了秘钥之后按照 TOTP 算法生成验证码肯定是有效的，不过前提是对方知道了你的 GitHub 的账号和密码。</p>
+
+<p>所以，选择一款可靠的 Authenticator 应用很关键，建议使用大厂的应用或者开源应用，甚至自己开发一款 TOTP 验证码生成应用。</p>
 
 
     </article>
 </div>
 <div class="copyright">
-    <div class="custom-font">本文链接：<a href="/article/14875801742" class='articleLink'>https://gorpeln.top/article/14875801742</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17196724432" class='articleLink'>https://gorpeln.top/article/17196724432</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-    <div class="custom-font">最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-09-12</div>
     
 </div>
 </div>
 <div class="prevandnext">
     
-    <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/14873067700" title="开发编码规范建议" class="custom-font" target="_blank">开发编码规范建议</a>
-    </div>
-    
     
     <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/14882587810" title="数组操作：倒序、乱序" class="custom-font" target="_blank">数组操作：倒序、乱序</a>
+        <span class="custom-font">下一篇 ：</span><a href="" title="" class="custom-font" target="_blank"></a>
     </div>
     
 </div>
@@ -771,7 +861,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/14875801742')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17196724432')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">
