@@ -51,9 +51,9 @@
 
 &lt;h3 id=&quot;totp&quot;&gt;TOTP&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2fa.png!gorpeln&quot; alt=&quot;2fa&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240629224723401.png!gorpeln&quot; alt=&quot;2fa&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/totp.png!gorpeln&quot; alt=&quot;totp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240629224723402.png!gorpeln&quot; alt=&quot;totp&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # T表示当前时间的unix时间戳，T0表示初始时间（一般为0，可省略）
   # Period表示更新周期（一般为30秒）
