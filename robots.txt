@@ -1,4 +1,0 @@
-# robots.txt
-User-agent: *
-Allow: /
-Sitemap: https://gorpeln.top/sitemap.xml
