@@ -2801,6 +2801,10 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/all_links.json</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/apple-app-site-association</loc>
                 <priority>1.0</priority>
             </url>
