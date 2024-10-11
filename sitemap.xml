@@ -2801,6 +2801,10 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/agreement</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/all_links.json</loc>
                 <priority>1.0</priority>
             </url>
@@ -2862,10 +2866,6 @@
             </url>
             <url>
                 <loc>https://gorpeln.top/privacy</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/protocol</loc>
                 <priority>1.0</priority>
             </url>
             <url>

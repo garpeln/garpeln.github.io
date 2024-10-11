@@ -699,6 +699,7 @@
         https://gorpeln.top/CNAME
         https://gorpeln.top/about
         https://gorpeln.top/ads.txt
+        https://gorpeln.top/agreement
         https://gorpeln.top/all_links.json
         https://gorpeln.top/apple-app-site-association
         https://gorpeln.top/archives
@@ -715,7 +716,6 @@
         https://gorpeln.top/note
         https://gorpeln.top/privacy-blog
         https://gorpeln.top/privacy
-        https://gorpeln.top/protocol
         https://gorpeln.top/resume
         https://gorpeln.top/robots.txt
         https://gorpeln.top/sitemap.txt

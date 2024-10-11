@@ -28,9 +28,8 @@ window.addEventListener('load', (event) => {
         if (target && target.nodeName === 'A' &&
             !checkParent(target, excludedClasses) &&
             !target.href.includes('gorpeln.top') &&
-            !target.href.includes('gorpeln.eu.org') &&
+            !target.href.includes('apps.apple.com') &&
             !target.href.includes('202090.xyz') &&
-            !target.href.includes('lab.gorpeln.top') &&
             !target.href.includes('github.com') &&
             target.hostname !== window.location.hostname) {
             e.preventDefault();
@@ -40,3 +39,5 @@ window.addEventListener('load', (event) => {
         }
     });
 });
+
+
