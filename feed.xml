@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
-    <title>gorpeln's Blog</title>
+    <title>gorpeln的个人博客 - gorpeln</title>
     <link>https://gorpeln.top</link>
-    <description>gorpeln's Blog（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
+    <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
         <title>双因素认证(2FA)实现原理</title>
