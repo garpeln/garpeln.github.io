@@ -271,6 +271,7 @@ a.profile_gavatar .circle {
     position: absolute;
     bottom: 0;
     right: 0;
+    height:240px;
 }
 
 @media screen and (max-width:481px) {
