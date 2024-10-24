@@ -36,6 +36,7 @@
         position: fixed;
         bottom: 1em;
         left: 0;
+        display:none;
     }
 
     .menuNav * {
@@ -77,8 +78,10 @@
         text-align: center;
 
     }
-
-    .menuNav li a i{
+    .menuNav li div {
+        color: #fff;
+    }
+    .menuNav li a i,.menuNav li div i{
         margin-right: 0.5em;
     }
 
@@ -116,7 +119,7 @@
         .menuNav {
             display: block;
         }
-        .themeModel{
+/*        .themeModel{
             width: 20px;
             height: 20px;
             display: flex;
@@ -129,7 +132,7 @@
             margin-left: 10px;
                     background-color: rgba(0, 0, 0, 0.60);
 
-        }
+        }*/
     }
     </style>
     <script type="text/javascript">
@@ -152,7 +155,6 @@
     });
 
     </script>
-            <div class="themeModel" id="themeModel"></div>
             <ul class="menuNav">
                 <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
                     <ul class="sub-nav">
@@ -161,6 +163,7 @@
                         <li><a href="/mysite"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
                         <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
                         <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+                        <li><div id="themeModelOfmobile"><i class="fas fa-moon fa-fw"></i>黑夜</div></li>
                         <li><a href="https://www.travellings.cn/go.html"><i class="fas fa-subway fa-fw"></i>开往</a></li>
                         <li style="border-radius: 0 0 8px 8px;"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
                     </ul>
@@ -411,7 +414,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-10-24 18:22:07 +0800">2024/10/24</p>
+                                    <p id="current-date" data-value="2024-10-24 20:08:27 +0800">2024/10/24</p>
                                 </li>
                             </ul>
                     </div>
@@ -856,7 +859,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <!-- <div class="themeModel" id="themeModel"></div> -->
+        <div class="themeModel" id="themeModel"></div>
         <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/m/%E9%9F%A9%E7%BA%A2-%E6%9E%97%E4%BF%8A%E6%9D%B0-%E9%A3%9E%E4%BA%91%E4%B9%8B%E4%B8%8B')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">

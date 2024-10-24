@@ -255,7 +255,6 @@ progress::-moz-progress-value {
     margin: 0 auto;
     overflow: hidden;
     width: 1200px;
-    background-color: white;
 }
 
 .side {
@@ -636,6 +635,10 @@ ul{
     .baseinfo_des {
         width: 100%;
     }
+
+    .downPDF,.qrcode,.resume_update_time{
+        display:none;
+    }
 }
 
 
@@ -685,5 +688,8 @@ body.dark-mode .qrcodeImg {
     box-shadow: 1px 1px 2px #604d4d;
 }
 
-
+body.dark-mode .modal-content{
+    background-color: var(--background-color-dark);
+    color:var(--font-title-color-dark);
+}
 

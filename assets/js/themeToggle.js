@@ -7,19 +7,30 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add('dark-mode');
   }
 
-  // 获取主题切换按钮
+  // 获取桌面版主题切换按钮
   var themeToggleButton = document.getElementById('themeModel');
 
-  // 如果主题切换按钮存在，则添加点击事件监听器
+  // 获取移动版主题切换按钮
+  var themeOfMobileToggleButton = document.getElementById('themeModelOfmobile');
+
+  // 定义一个函数来切换主题
+  function toggleTheme() {
+    if (document.body.classList.contains('dark-mode')) {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+    } else {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled');
+    }
+  }
+
+  // 如果桌面版主题切换按钮存在，则添加点击事件监听器
   if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', function() {
-      if (document.body.classList.contains('dark-mode')) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-      } else {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-      }
-    });
+    themeToggleButton.addEventListener('click', toggleTheme);
+  }
+
+  // 如果移动版主题切换按钮存在，则添加点击事件监听器
+  if (themeOfMobileToggleButton) {
+    themeOfMobileToggleButton.addEventListener('click', toggleTheme);
   }
 });
