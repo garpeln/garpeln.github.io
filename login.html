@@ -3,164 +3,223 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>登录 | gorpeln's Blog</title>    
+    <title>登录 | gorpeln's Blog</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本" />
     <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！">
     <link rel="stylesheet" href="/assets/css/spin.css">
+    <style>
+    :root {
+
+        --background-color-light: #f2f5f6;
+        --background-color-dark: #3d3d3d;
+
+        --box-color-light: #ffffff;
+        --box-color-dark: #262626;
+
+        --subbox-color-light: #F5F7F8;
+        --subbox-color-dark: #2d2d2d;
+
+        --tiptag-color-light: #f0f0fa;
+        --tiptag-color-dark: #303033;
+
+
+        --font-title-color-light: #37374c;
+        --font-title-color-dark: #bfb9b1;
+
+        --font-des-color-light: #3d3d52;
+        --font-des-color-dark: #c5bfb7;
+
+        --font-light-dark-light: #aaaaaa;
+        --font-light-dark-dark: #5d5d5d;
+
+        --font-active-color-light: #6666cc;
+        --font-active-color-dark: #6666cc;
+    }
+
+    body {
+        background-color: var(--background-color-light);
+    }
+
+    body,
+    html {
+        user-select: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #f1f1f1;
+    }
+
+    .login-wrap {
+        display: table;
+        margin: 0 auto;
+        height: 100%
+    }
+
+    .login-wrap {
+        width: 360px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 999;
+        display: table;
+        height: 100%
+    }
+
+    .login-row {
+        vertical-align: middle;
+        display: table-cell
+    }
+
+    .login-wrap h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 15px;
+        background: #393d49;
+        font-size: 0;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .login-wrap h2 img {
+        position: relative;
+        top: 20px;
+        width: 100px;
+        border-radius: 50px;
+        border: 1px solid #eee;
+    }
+
+    .login .form {
+        margin-top: 20px;
+        margin-bottom: -20px;
+        clear: both
+    }
+
+    .login {
+        margin: 0;
+        padding: 20px 20px 25px;
+        background: #fff;
+        padding-top: 50px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .login a:hover {
+        text-decoration: none
+    }
+
+    #login-canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+
+    .login .btn {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 18px;
+        width: 100%;
+        height: 38px;
+        outline: 0;
+        border: 0;
+        margin-top: 20px;
+        border-radius: 2px;
+        background-color: #37374c;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 38px;
+        cursor: pointer;
+        border-radius: 6px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -webkit-appearance: none
+    }
+
+    .login .btn:hover {
+        color: #fff;
+        opacity: .8;
+        filter: alpha(opacity=80)
+    }
+
+    .login .tab-this {
+        color: #009688
+    }
+
+    .login .item {
+        clear: both;
+        margin-bottom: 15px
+    }
+
+    .login .item label {
+        margin: 0 24px;
+        font-size: 15px
+    }
+
+    .login .input {
+        height: 38px;
+        border-color: #e6e6e6;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 2px;
+        background-color: #fff;
+        line-height: 1.3;
+        display: block;
+        box-sizing: border-box;
+        padding-left: 10px;
+        width: 100%;
+        outline: 0;
+        font: 400 13.33px Arial;
+        border-radius: 4px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        -webkit-appearance: none
+    }
+
+    .login .input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 100px #fff inset
+    }
+
+    .login .input:hover {
+        border-color: #d2d2d2
+    }
+
+    /*适配黑夜模式*/
+    body.dark-mode {
+        background-color: var(--background-color-dark);
+    }
+
+    body.dark-mode .login {
+        background-color: var(--subbox-color-dark);
+    }
+
+    body.dark-mode .login .input {
+        background-color: var(--box-color-dark);
+        border-color:var(--background-color-dark);
+    }
+
+    body.dark-mode img {
+        filter: brightness(50%);
+    }
+    </style>
 </head>
 
 <body onkeydown="keyLogin()" oncontextmenu="self.event.returnValue=false" onselectstart="return false" id="loadingSpinner">
-    <style>
-        body,html {
-    user-select: none;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #f1f1f1;
-}
-
-.login-wrap {
-    display: table;
-    margin: 0 auto;
-    height: 100%
-}
-
-.login-wrap {
-    width: 360px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 999;
-    display: table;
-    height: 100%
-}
-
-.login-row {
-    vertical-align: middle;
-    display: table-cell
-}
-
-.login-wrap h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 15px;
-    background: #393d49;
-    font-size: 0;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-
-.login-wrap h2 img {
-    position: relative;
-    top: 20px;
-    width: 100px;
-    border-radius: 50px;
-    border: 1px solid #eee;
-}
-
-.login .form {
-    margin-top: 20px;
-    margin-bottom: -20px;
-    clear: both
-}
-
-.login {
-    margin: 0;
-    padding: 20px 20px 25px;
-    background: #fff;
-    padding-top: 50px;
-    border-radius: 0 0 10px 10px;
-}
-
-.login a:hover {
-    text-decoration: none
-}
-
-#login-canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0
-}
-
-.login .btn {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0 18px;
-    width: 100%;
-    height: 38px;
-    outline: 0;
-    border: 0;
-    margin-top: 20px;
-    border-radius: 2px;
-    background-color: #37374c;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 14px;
-    line-height: 38px;
-    cursor: pointer;
-    border-radius: 6px;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -webkit-appearance: none
-}
-
-.login .btn:hover {
-    color: #fff;
-    opacity: .8;
-    filter: alpha(opacity=80)
-}
-
-.login .tab-this {
-    color: #009688
-}
-
-.login .item {
-    clear: both;
-    margin-bottom: 15px
-}
-
-.login .item label {
-    margin: 0 24px;
-    font-size: 15px
-}
-
-.login .input {
-    height: 38px;
-    border-color: #e6e6e6;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    background-color: #fff;
-    line-height: 1.3;
-    display: block;
-    box-sizing: border-box;
-    padding-left: 10px;
-    width: 100%;
-    outline: 0;
-    font: 400 13.33px Arial;
-    border-radius: 4px;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-appearance: none
-}
-
-.login .input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 100px #fff inset
-}
-
-.login .input:hover {
-    border-color: #d2d2d2
-}
- </style>
+    <script>
+        (function() {
+        var darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
     <div class="login-wrap">
         <div class="login-row">
             <h2><img src="/assets/img/logo.png"></h2>
@@ -176,22 +235,22 @@
     <script type="module">
         import {Spinner} from '/assets/js/spin.js';
 
-    // 创建加载提示对象并暴露给全局作用域
-    window.spinner = new Spinner().spin();
-    window.spinnerOverlay = document.getElementById('loadingSpinner');
+        // 创建加载提示对象并暴露给全局作用域
+        window.spinner = new Spinner().spin();
+        window.spinnerOverlay = document.getElementById('loadingSpinner');
 
-    // 显示和隐藏加载提示的函数也暴露给全局作用域
-    window.showLoadingSpinner = function() {
-        window.spinnerOverlay.style.display = 'block';
-        window.spinnerOverlay.appendChild(window.spinner.el);
-    };
+        // 显示和隐藏加载提示的函数也暴露给全局作用域
+        window.showLoadingSpinner = function() {
+            window.spinnerOverlay.style.display = 'block';
+            window.spinnerOverlay.appendChild(window.spinner.el);
+        };
 
-    window.hideLoadingSpinner = function() {
-        window.spinnerOverlay.style.display = 'none';
-        window.spinnerOverlay.innerHTML = ''; // 清空加载提示的内容
-    };
-</script>
-    <!-- 登录逻辑的脚本保持为非模块脚本，这样可以访问上面定义的全局函数 -->
+        window.hideLoadingSpinner = function() {
+            window.spinnerOverlay.style.display = 'none';
+            window.spinnerOverlay.innerHTML = ''; // 清空加载提示的内容
+        };
+    </script>
+        <!-- 登录逻辑的脚本保持为非模块脚本，这样可以访问上面定义的全局函数 -->
     <script>
     async function login() {
         window.showLoadingSpinner(); // 使用全局函数显示加载提示
@@ -200,9 +259,9 @@
         const username = $("#username").val();
         const password = $("#password").val();
 
-        console.log(JSON.stringify({ username, password }));    
-console.log(JSON.stringify({ username, password }));    
-console.log(JSON.stringify({ username, password }));    
+        console.log(JSON.stringify({ username, password }));
+        console.log(JSON.stringify({ username, password }));
+        console.log(JSON.stringify({ username, password }));
 
 
 
@@ -303,5 +362,6 @@ console.log(JSON.stringify({ username, password }));
     };
     </script>
 </body>
+<script src="assets/js/themeToggle.js"></script>
 
 </html>

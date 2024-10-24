@@ -28,7 +28,7 @@
 
 function createLink(header) {
   var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
-  var link = "<a data-id='" + header.id.replace(/\s/g, "_") + "' style='display: inline-block;white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;list-style: none;color:#37374b;'" + "href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
+  var link = "<a data-id='" + header.id.replace(/\s/g, "_") + "' class=toc-normal " + "href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
   return link;
 }
 
@@ -37,7 +37,7 @@ function createLink(header) {
 function highlightOnScroll(scrollPosition) {
   var headers = $("#toc a");
 
-  headers.removeClass("active").css("color", "#37374b");
+  headers.removeClass("toc-active");
 
   var closestHeader = null;
   var closestDistance = Number.MAX_VALUE;
@@ -58,7 +58,7 @@ function highlightOnScroll(scrollPosition) {
   });
 
   if (closestHeader) {
-    $(closestHeader).addClass("active").css("color", "#6666cc");
+    $(closestHeader).addClass("toc-active");
   }
 }
 

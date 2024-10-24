@@ -47,7 +47,7 @@ function loadStatistical(sdata){
   article_num = sdata.article_num
   friends_num = sdata.friends_num
   var messageBoard =`
-  <div id="cf-state" class="cf-new-add">
+  <div id="cf-state" class="cf-article">
     <div class="cf-state-data">
       <div class="cf-data-friends" onclick="openToShow()">
         <span class="cf-label">订阅</span>
@@ -68,14 +68,14 @@ function loadStatistical(sdata){
   </div>
   `;
   var loadMoreBtn = `
-    <div id="cf-more" class="cf-new-add" onclick="loadNextArticle()"><i class="fas fa-angle-double-down"></i></div>
-    <div id="cf-footer" class="cf-new-add">
+    <div id="cf-more" class="cf-article" onclick="loadNextArticle()"><i class="fas fa-angle-double-down"></i></div>
+    <div id="cf-footer" class="cf-article">
      <span id="cf-version-up" onclick="checkVersion()"></span>
      <span class="cf-data-lastupdated">更新于：${sdata.last_updated_time}</span>
       Powered by <a target="_blank" href="https://github.com/Rock-Candy-Tea/hexo-circle-of-friends" target="_blank">FriendCircle</a>
     </div>
-    <div id="cf-overlay" class="cf-new-add" onclick="closeShow()"></div>
-    <div id="cf-overshow" class="cf-new-add"></div>
+    <div id="cf-overlay" class="cf-article" onclick="closeShow()"></div>
+    <div id="cf-overshow" class="cf-article"></div>
   `;
   if(container){
     container.insertAdjacentHTML('beforebegin', messageBoard);
@@ -111,7 +111,7 @@ function loadArticleItem(datalist,start,end){
     fetchNextArticle()
   }else{
     // 文章加载到底
-    document.getElementById('cf-more').outerHTML = `<div id="cf-more" class="cf-new-add" onclick="loadNoArticle()"><small>一切皆有尽头！</small></div>`
+    document.getElementById('cf-more').outerHTML = `<div id="cf-more" class="cf-article" onclick="loadNoArticle()"><small>一切皆有尽头！</small></div>`
   }
 }
 // 打印个人卡片 cf-overshow
@@ -155,7 +155,7 @@ function fetchNextArticle(){
         localStorage.setItem("nextArticle",JSON.stringify(nextArticle))
     })
   }else if(start = articleNum){
-      document.getElementById('cf-more').outerHTML = `<div id="cf-more" class="cf-new-add" onclick="loadNoArticle()"><small>一切皆有尽头！</small></div>`
+      document.getElementById('cf-more').outerHTML = `<div id="cf-more" class="cf-article" onclick="loadNoArticle()"><small>一切皆有尽头！</small></div>`
   }
 }
 // 显示下一页文章，从本地缓存 nextArticle 中获取
@@ -225,7 +225,7 @@ function changeEgg(){
   return;
   //有自定义json或api执行切换
   if(fdata.jsonurl || fdata.apiurl ){
-    document.querySelectorAll('.cf-new-add').forEach(el => el.remove());
+    document.querySelectorAll('.cf-article').forEach(el => el.remove());
     localStorage.removeItem("updatedArticleData")
     localStorage.removeItem("createdArticleData")
     localStorage.removeItem("nextArticle")
@@ -273,7 +273,7 @@ function FetchFriendCircle(sortNow,changeUrl){
 function changeSort(event){
   sortNow = event.currentTarget.dataset.sort
   localStorage.setItem("sortNow",sortNow)
-  document.querySelectorAll('.cf-new-add').forEach(el => el.remove());
+  document.querySelectorAll('.cf-article').forEach(el => el.remove());
   container.innerHTML = "";
   changeUrl = localStorage.getItem("urlNow")
   //console.log(changeUrl)

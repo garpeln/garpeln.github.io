@@ -1,3 +1,33 @@
+:root {
+
+    --background-color-light: #f2f5f6;
+    --background-color-dark: #3d3d3d;
+
+    --box-color-light:#ffffff;
+    --box-color-dark:#262626;
+
+    --subbox-color-light:#F5F7F8;
+    --subbox-color-dark:#2d2d2d;
+
+    --tiptag-color-light:#f0f0fa;
+    --tiptag-color-dark:#303033;
+
+
+    --font-title-color-light:#37374c;
+    --font-title-color-dark:#bfb9b1;
+
+    --font-des-color-light:#3d3d52;
+    --font-des-color-dark:#c5bfb7;
+
+    --font-light-dark-light:#aaaaaa;
+    --font-light-dark-dark:#5d5d5d;
+
+    --font-active-color-light:#6666cc;
+    --font-active-color-dark:#6666cc;
+}
+
+
+
 a,
 aside,
 body,
@@ -23,11 +53,9 @@ a {
 body {
     font-size: 15px;
     color: #4d4d4d;
-    font-family: Helvetica Neue, Microsoft Yahei
-}
+    font-family: Helvetica Neue, Microsoft Yahei;
+    background-color: var(--background-color-light);
 
-body {
-    background: #ffffff;
 }
 
 
@@ -371,3 +399,53 @@ a.profile_gavatar .circle {
         width: calc(22.5% - 2px);
     }
 }
+
+
+
+
+
+/*适配黑夜模式*/
+body.dark-mode {
+    background-color: var(--background-color-dark);
+}
+
+body.dark-mode img {
+    filter: brightness(50%); 
+}
+
+body.dark-mode .profile .nickname{
+    color: var(--font-title-color-dark);
+    border-bottom: 1px solid var(--font-light-dark-dark);
+}
+
+body.dark-mode .profile_desc{
+    color: var(--font-title-color-dark);
+}
+
+body.dark-mode .profile_subdesc {
+    color: #6c6c6c;
+}
+body.dark-mode .sidebar-menu.fixed .sidebar-menu-inner{
+    border-color:var(--font-light-dark-dark);   
+}
+
+body.dark-mode .xe-widget.xe-conversations{
+    background-color: var(--subbox-color-dark);
+    box-shadow: 1px 1px 2px #604d4d;
+}
+body.dark-mode .xe-comment a{
+    color: var(--font-title-color-dark);
+}
+body.dark-mode .xe-comment p{
+    color: #8d8d8d;
+}
+body.dark-mode .sidebar-menu .main-menu a{
+    border-bottom: 1px solid #474747;
+}
+
+
+
+
+
+
+

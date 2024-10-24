@@ -1,3 +1,31 @@
+:root {
+
+    --background-color-light: #f2f5f6;
+    --background-color-dark: #3d3d3d;
+
+    --box-color-light:#ffffff;
+    --box-color-dark:#262626;
+
+    --subbox-color-light:#F5F7F8;
+    --subbox-color-dark:#2d2d2d;
+
+    --tiptag-color-light:#f0f0fa;
+    --tiptag-color-dark:#303033;
+
+
+    --font-title-color-light:#37374c;
+    --font-title-color-dark:#bfb9b1;
+
+    --font-des-color-light:#3d3d52;
+    --font-des-color-dark:#c5bfb7;
+
+    --font-light-dark-light:#aaaaaa;
+    --font-light-dark-dark:#5d5d5d;
+
+    --font-active-color-light:#6666cc;
+    --font-active-color-dark:#6666cc;
+}
+
 @page {
     /* 默认的页面样式 */
     size: A4;
@@ -432,28 +460,32 @@ progress[value]::-webkit-progress-value {
     right: 40px;
     bottom: 2em;
     text-align: right;
+    z-index:99;
 }
 
 .qrcode {
     width: 60px;
     height: 60px;
-    background: rgba(102, 102, 204, 0.4) url(/assets/img/blog_qrcode.png) no-repeat center center;
+    background: var(--subbox-color-dark) url(/assets/img/blog_qrcode.png) no-repeat center center;
     background-size: 60%;
     position: fixed;
     bottom: 80px;
     right: 40px;
     border-radius: 10px;
+        z-index:99;
+
 }
 
 .downPDF {
     width: 60px;
     height: 60px;
-    background: rgba(102, 102, 204, 0.4) url(/assets/img/blog_downpdf.png) no-repeat center center;
+    background: var(--subbox-color-dark) url(/assets/img/blog_downpdf.png) no-repeat center center;
     background-size: 60%;
     position: fixed;
     bottom: 160px;
     right: 40px;
     border-radius: 10px;
+    z-index: 99;
 }
 
 .qrcodeImg {
@@ -464,6 +496,7 @@ progress[value]::-webkit-progress-value {
     display: none;
     padding: 15px;
     border-radius: 10px;
+    z-index:99;
 }
 
 .scan-text {
@@ -604,3 +637,53 @@ ul{
         width: 100%;
     }
 }
+
+
+
+
+/*适配黑夜模式*/
+body.dark-mode {
+    background-color: var(--background-color-dark);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: var(--font-title-color-dark);
+}
+
+body.dark-mode img {
+    filter: brightness(50%); 
+}
+
+body.dark-mode .info-header {
+    border-bottom: 1px #5d5d5d solid;
+}
+
+body.dark-mode .main{
+    background-color: var(--box-color-dark);
+}
+
+body.dark-mode .baseinfo_container{
+    color:var(--font-title-color-dark);
+}
+
+body.dark-mode .info-unit ul,
+body.dark-mode .work_container,
+body.dark-mode .item-link,
+body.dark-mode .self_evaluation{
+    color:var(--font-title-color-dark);
+}
+body.dark-mode .tip-hub{
+    background-color: #555571;
+}
+body.dark-mode .qrcodeImg {
+    background-color: #808080;
+    box-shadow: 1px 1px 2px #604d4d;
+}
+
+
+

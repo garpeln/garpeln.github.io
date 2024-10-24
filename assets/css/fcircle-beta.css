@@ -22,11 +22,11 @@ Last Modified time : 20220211 98:00 by https://immmmm.com
   --lmm-floorcolor: #454545;
 }
 /* 基本信息 */
-#cf-state {font-size:16px;border-radius:8px;box-shadow:none;max-width:810px;margin:auto;overflow:hidden;display:flex;flex-direction:row;flex-wrap:wrap;padding:8px 0;}
+#cf-state {font-size:16px;border-radius:8px;box-shadow:none;max-width:810px;overflow:hidden;display:flex;flex-direction:row;flex-wrap:wrap;padding:8px 0;}
 .cf-state-data {width:100%;display:flex;padding-top: 8px;}
 .cf-data-friends,.cf-data-active,.cf-data-article{height:60px;background:transparent;display:flex;flex-direction:column;width:33%;cursor:pointer;}
 .cf-label {font-size:16px;padding:0 3%;align-self:center;text-align:center;width:100%;height:30px;color:#333;}
-.cf-message{align-self:center;text-align:center;padding:0 3%;width:50%;font-size:20px;color:#666}
+.cf-message{align-self:center;text-align:center;padding:0 3%;width:50%;font-size:20px;color: #9d9d9d;font-weight: normal;}
 /* 排序按钮 */
 #cf-change{font-size:14px;display:block;padding:12px 0 4px;width:100%;text-align:center;}
 /* 更多按钮 */
@@ -48,8 +48,9 @@ Last Modified time : 20220211 98:00 by https://immmmm.com
 .cf-time-updated i.fas,.cf-time-created i.far{padding-right:8px;}
 .cf-article-time i:before {margin-right:5px;}
 /* 底部 */
-#cf-footer{margin:6rem 1% 2rem 0;text-align:right;font-size:13px;}
+#cf-footer{margin:6rem 1% 2rem 0;text-align:right;font-size:13px;background-color: transparent;}
 .cf-data-lastupdated{font-size:13px;text-align:right;display: block;}
+
 /* 个人文章列表层 */
 #cf-overlay,#cf-overshow{position:fixed;width:100%;height:100%;}
 #cf-overlay{top: 0;left:100%;background-color: rgba(255, 255, 255, 0.42);-webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);overflow-y:auto;pointer-events: all;transition: all 0.1s ease;z-index: 998;}

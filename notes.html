@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时光本-时间管理-待办事项-提醒软件</title>
+    <meta name="keywords" content="时光本、时间管理、待办事项、提醒软件、生日提醒、纪念日提醒、经期计算器、规律生活、记账软件、便签、日记、速记、通讯录备份">
+    <meta name="description" content="时光本是一款集“事件提醒、事项管理、快速记录、图文创作、记账”等功能于一体的多设备同步的智能APP。">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/assets/css/notes.css">
+</head>
+
+<body>
+    <script>
+    (function() {
+        var darkMode = localStorage.getItem('darkMode');
+
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
+    <div class="introduceInfo">
+        <div class="logo" id="logo">
+            <img src="../../assets/img/notes/logo.png" alt="">
+        </div>
+        <h2>时光本-日记本·笔记本·记事本·备忘录</h2>
+        <p class="in-des">时光本是一款专注效率与记录的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等。</p>
+        <a href="javascript:void(0);" class="in-download">立即下载</a>
+        <p class="in-bate-tip">iOS、macOS beta版, 限量内测中！<a class="in-bate-download">点击下载</a></p>
+        <p class="versionInfo" id="app_version">最新版本：-丨更新时间：-</p>
+    </div>
+    <div class="change-model">
+        <div onclick="changeCarousel('iPhone')" class="active">iPhone</div>
+        <div onclick="changeCarousel('Mac')">Mac</div>
+    </div>
+    <div class="carousel-container" id="carouselContainer">
+        <div id="carouseliPhone" class="carousel active">
+            <img src="../../assets/img/notes/xsp_01.png" alt="图片1">
+            <img src="../../assets/img/notes/xsp_02.png" alt="图片2">
+            <img src="../../assets/img/notes/xsp_03.png" alt="图片3">
+            <img src="../../assets/img/notes/xsp_04.png" alt="图片4">
+            <img src="../../assets/img/notes/xsp_05.png" alt="图片5">
+            <img src="../../assets/img/notes/xsp_06.png" alt="图片6">
+            <img src="../../assets/img/notes/xsp_07.png" alt="图片7">
+            <img src="../../assets/img/notes/xsp_08.png" alt="图片8">
+        </div>
+        <div id="carouselMac" class="carousel" style="display:none;">
+            <img src="../../assets/img/notes/mac_01.png" alt="图片1" style="width: 100%; height: auto;">
+            <img src="../../assets/img/notes/mac_02.png" alt="图片2" style="width: 100%; height: auto;">
+            <img src="../../assets/img/notes/mac_03.png" alt="图片3" style="width: 100%; height: auto;">
+        </div>
+    </div>
+    <hr class="page-hr">
+    <div class="des">
+        <h2 style="text-align:left;">应用描述</h2>
+        <p>记录美好生活，记录你！</p>
+        <p style="margin-top:20px;">时光本是一款专注效率与安全的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等。</p>
+        <p style="margin-top:20px;">[高效记录]</p>
+        <p>提供便签、清单、图片、纪念日、地址、链接、银行卡、名片等多种类型</p>
+        <p>[专注效率]</p>
+        <p>提供笔记紧急程度、分类，帮助你更好的归纳整理，提高效率</p>
+        <p>[安全可靠]</p>
+        <p>为保证数据安全，所有数据均采用本地存储，把数据归还给用户</p>
+        <p style="margin-top:20px;">怎么联系开发者？</p>
+        <p>如果有任何建议或问题，欢迎联系我：</p>
+        <p>邮箱：help@gor*eln.top</p>
+        <p>网站：gorpeln.top</p>
+    </div>
+    <hr class="page-hr">
+    <div class="des">
+        <h2 style="text-align:left;">应用包信息</h2>
+        <div class="detail-container">
+            <!-- 生成的item -->
+        </div>
+        <script>
+        const data = [
+            { "title": "发布日期", "des": "2020-01-22" },
+            { "title": "更新日期", "des": "-" },
+            { "title": "Bundle ID", "des": "com.gorpeln.notes" },
+            { "title": "版本", "des": "-" },
+            { "title": "大小", "des": "28.63M" },
+            { "title": "价格", "des": "免费" },
+            { "title": "分类", "des": "效率" },
+            { "title": "隐私政策", "des": "https://gorpeln.top/privacy" },
+            { "title": "支持网站", "des": "https://gorpeln.top" },
+            { "title": "兼容性", "des": "需要 iOS 10.0 或更高版本" },
+            { "title": "支持语言", "des": "简体中文,英语" },
+            { "title": "年龄评级", "des": "4+" },
+            { "title": "开发者", "des": "gorpeln" },
+            { "title": "版权信息", "des": "© gorpeln" }
+        ];
+
+        const container = document.querySelector('.detail-container');
+        data.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'item';
+
+            div.innerHTML = `
+            <p class="title">${item.title}</p>
+            <p class="des" ${item.title === "更新日期" ? 'id="update-time"' : item.title === "版本" ? 'id="app_version_info"' : ''}>${item.des}</p>`;
+            container.appendChild(div);
+        });
+        </script>
+    </div>
+    <script>
+    function changeCarousel(device) {
+        const carouseliPhone = document.getElementById('carouseliPhone');
+        const carouselMac = document.getElementById('carouselMac');
+        const iPhoneButton = document.querySelector('.change-model > div:nth-child(1)');
+        const MacButton = document.querySelector('.change-model > div:nth-child(2)');
+        const carouselContainer = document.getElementById('carouselContainer');
+
+        // 重置滚动位置
+        carouselContainer.scrollLeft = 0;
+
+        if (device === 'iPhone') {
+            carouseliPhone.style.display = 'block';
+            carouselMac.style.display = 'none';
+            iPhoneButton.classList.add('active');
+            MacButton.classList.remove('active');
+        } else if (device === 'Mac') {
+            carouseliPhone.style.display = 'none';
+            carouselMac.style.display = 'block';
+            iPhoneButton.classList.remove('active');
+            MacButton.classList.add('active');
+        }
+    }
+
+    changeCarousel('iPhone');
+    </script>
+    <div class="footer">
+        <p>©2021-<text id="currentYear"></text> gorpeln 版权所有&nbsp; | &nbsp;
+            <a href="http://beian.miit.gov.cn/">京ICP备2021024484号-2</a>
+        </p>
+    </div>
+    <script type="text/javascript">
+    const fullYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = fullYear;
+    </script>
+</body>
+
+<script>
+
+(function(_0x3ba529,_0x55f694){var _0x370895=_0x5cb8,_0x2a1a16=_0x3ba529();while(!![]){try{var _0x4fdd32=parseInt(_0x370895(0x1a6))/0x1*(parseInt(_0x370895(0x1a5))/0x2)+-parseInt(_0x370895(0x1be))/0x3+-parseInt(_0x370895(0x1d6))/0x4*(parseInt(_0x370895(0x1c3))/0x5)+parseInt(_0x370895(0x1dc))/0x6+parseInt(_0x370895(0x1b5))/0x7*(parseInt(_0x370895(0x1bf))/0x8)+parseInt(_0x370895(0x1c9))/0x9+-parseInt(_0x370895(0x1c5))/0xa;if(_0x4fdd32===_0x55f694)break;else _0x2a1a16['push'](_0x2a1a16['shift']());}catch(_0x3ce3a2){_0x2a1a16['push'](_0x2a1a16['shift']());}}}(_0x4742,0xe55eb),(function(){var _0x38a937=_0x5cb8,_0x5867b6=[_0x38a937(0x1b6),_0x38a937(0x1af),'blog.202090.xyz'],_0x4259eb=_0x38a937(0x1d7),_0x1189b6=document[_0x38a937(0x1ad)]['hostname']+(document[_0x38a937(0x1ad)]['port']?':'+document[_0x38a937(0x1ad)][_0x38a937(0x1d9)]:'');function _0x4246ce(_0xaf8ab2){var _0x572c3a=_0x38a937,_0x431def=document[_0x572c3a(0x1cd)](_0x572c3a(0x1a7));_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1a9)]=_0x572c3a(0x1d4),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1bb)]=_0x572c3a(0x1ca),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1ab)]='0',_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1b4)]=_0x572c3a(0x1c0),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1cc)]=_0x572c3a(0x1cf),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1c1)]=_0x572c3a(0x1c4),_0x431def[_0x572c3a(0x1b3)]['zIndex']=_0x572c3a(0x1aa),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1b2)]=_0x572c3a(0x1ae),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1d3)]=_0x572c3a(0x1ce),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1dd)]=_0x572c3a(0x1d1),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1c8)]='flex',_0x431def[_0x572c3a(0x1b3)]['justifyContent']='center',_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1b8)]=_0x572c3a(0x1d0),_0x431def[_0x572c3a(0x1b3)][_0x572c3a(0x1b1)]=_0x572c3a(0x1c6);var _0x242ad5=document[_0x572c3a(0x1cd)](_0x572c3a(0x1a7));_0x242ad5[_0x572c3a(0x1bd)]=_0xaf8ab2,_0x242ad5[_0x572c3a(0x1b3)][_0x572c3a(0x1ac)]=_0x572c3a(0x1d2),_0x242ad5[_0x572c3a(0x1b3)][_0x572c3a(0x1b7)]=_0x572c3a(0x1db),_0x242ad5[_0x572c3a(0x1b3)][_0x572c3a(0x1b0)]=_0x572c3a(0x1d5),_0x242ad5[_0x572c3a(0x1b3)][_0x572c3a(0x1ba)]='nowrap',_0x242ad5[_0x572c3a(0x1b3)][_0x572c3a(0x1b9)]=_0x572c3a(0x1c2);for(var _0x547dc5=0x0;_0x547dc5<0x64;_0x547dc5++){_0x431def[_0x572c3a(0x1c7)](_0x242ad5[_0x572c3a(0x1a8)](!![]));}document[_0x572c3a(0x1d8)]['appendChild'](_0x431def);}if(!_0x5867b6[_0x38a937(0x1cb)](_0x1189b6)){_0x4246ce(_0x5867b6[0x0]);var _0x107821=confirm(_0x38a937(0x1bc));_0x107821&&window['location'][_0x38a937(0x1da)](_0x4259eb);}}()));function _0x5cb8(_0x4b435f,_0x4726dc){var _0x4742b9=_0x4742();return _0x5cb8=function(_0x5cb888,_0x547854){_0x5cb888=_0x5cb888-0x1a5;var _0x5c9a01=_0x4742b9[_0x5cb888];return _0x5c9a01;},_0x5cb8(_0x4b435f,_0x4726dc);}function _0x4742(){var _0x5dbb30=['127.0.0.1:4000','transform','flexWrap','opacity','style','left','854eQBRIr','gorpeln.top','fontSize','alignItems','margin','whiteSpace','position','警告：您当前浏览的页面非官方页面，可能存在有害信息！建议您跳转至官方页面进行浏览！','innerText','3012399SrQWiE','87392dPGdgP','-5%','height','80px','42145Wocavi','100%','18840880nBzrtx','wrap','appendChild','display','12296601iWdJwU','fixed','includes','width','createElement','transparent','110%','center','hidden','black','background','none','rotate(-30deg)','188hWlGjI','https://gorpeln.top','body','port','replace','30px','5673570netnjD','overflow','22mvCPSO','52661MUZSva','div','cloneNode','pointerEvents','9999','top','color','location','0.1'];_0x4742=function(){return _0x5dbb30;};return _0x4742();}
+</script>
+<script src="assets/js/themeToggle.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/notes.js"></script>
+
+</html>

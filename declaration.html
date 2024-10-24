@@ -7,107 +7,19 @@
     <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本" />
     <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！">
     <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/agreement.css">
 </head>
 
-<style>
-/* 设置页面背景色和字体样式 */
-body {
-    /*background-color: #f8f8f8;*/
-    font-family: Arial, sans-serif;
-}
-
-/* 设置页面主要内容区域的样式 */
-#content-inner {
-    margin: 0 auto;
-    padding: 0 4% 2% 4%;
-    background-color: #fff;
-}
-
-/* 设置页面标题的样式 */
-.page-title {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* 设置段落和列表的样式 */
-p,
-ul,
-ol {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* 设置链接样式 */
-a {
-    color: #4311de;
-    text-decoration: none;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    /* 设置下划线与文字基线的距离为5px */
-
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* 设置标题样式 */
-h2,
-h3 {
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* 设置列表项样式 */
-ul,
-ol {
-    margin-left: 20px;
-}
-
-/* 设置图片的最大宽度 */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-u {
-    text-decoration: underline;
-    text-decoration-color: #4311de;
-    text-underline-offset: 5px;
-    /* 设置下划线距离 */
-    text-decoration-thickness: 1px;
-    /* 设置下划线高度 */
-
-}
-
-/* 设置版权声明部分的背景色和边框 */
-#article-container {
-    /*background-color: #f9f9f9;*/
-    padding: 20px 50px 50px 50px;
-    border-radius: 16px;
-}
-
-/* 设置引用部分的背景色和边框 */
-blockquote {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-left: 3px solid #007bff;
-    margin: 10px 0;
-}
-
-@media only screen and (max-width: 600px) {
-    #article-container {
-        padding: 10px;
-        border-radius: 0;
-
-    }
-}
-</style>    
-
 <body>
+    <script>
+    (function() {
+        var darkMode = localStorage.getItem('darkMode');
+
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
     <main class="layout hide-aside" id="content-inner">
         <div id="page">
             <div id="article-container">
@@ -124,6 +36,6 @@ blockquote {
         </div>
     </main>
 </body>
-
+<script src="assets/js/themeToggle.js"></script>
 
 </html>

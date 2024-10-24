@@ -1,166 +1,226 @@
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <title>安全提醒 | gorpeln's Blog</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本" />
-    <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！">
 
-    <style>
-    body {
-        font-family: 'Cascadia Code', 'Consolas', 'Microsoft YaHei', SimHei !important;
-        margin: 0;
-        padding: 0 30px;
-        background: #fff;
-        font-size: 12px
-    }
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <title>安全提醒 | gorpeln's Blog</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本" />
+        <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！">
+        <style>
+        :root {
 
-    a {
-        text-decoration: none;
-        cursor: pointer;
-        outline: 0
-    }
+            --background-color-light: #f2f5f6;
+            --background-color-dark: #3d3d3d;
 
-    a:hover {
-        text-decoration: underline
-    }
+            --box-color-light: #ffffff;
+            --box-color-dark: #262626;
 
-    a,
-    a:link,
-    a:visited {
-        color: #645f8a
-    }
+            --subbox-color-light: #F5F7F8;
+            --subbox-color-dark: #2d2d2d;
 
-    a.btn_blue {
-        display: inline-block;
-        padding: 6px 25px;
-        margin: 0;
-        font-size: 14px;
-        font-weight: 700;
-        text-align: center;
-        border-radius: 3px;
-        color: #fff !important;
-        background-color: #645f8a;
-        float: right;
-    }
-
-    .remind_block .remind_title {
-        margin-bottom: 10px;
-        padding-top: 3px;
-        font-weight: 700;
-        font-size: 20px;
-        font-family: "Microsoft YaHei", "lucida Grande", Verdana;
-        color: #6666cc;
-    }
-
-    .remind_block .remind_detail {
-        line-height: 1.5;
-        font-size: 16px;
-        color: #888888;
-        margin-bottom: 4em;
-    }
-
-    .container {
-        max-width: 640px;
-        margin: 0 auto;
-        padding-top: 10em;
-    }
-
-    .header {
-        margin-top: 2em;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3em;
-    }
-
-    .header img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .header h1 {
-        color: #716f7e;
-        padding-left: 10px;
-        margin: 0;
-    }
-
-    .content {
-        padding: 10px 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .c-container {
-        padding: 10px
-    }
-
-    .c-footer {
-        padding: 10px 15px;
-        overflow: hidden;
-        border-radius: 10px;
-        margin-bottom: 1em;
-    }
-
-    .c-footer-a2 {
-        float: right;
-        margin: 8px 0 0 15px;
-        margin-right: 2em;
-        color:#6666cc;
-    }
-
-    .safety-url {
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #dfdfdf;
-        word-wrap: break-word;
-        word-break: break-all
-    }
-
-    .footer {
-        margin-top: 18px;
-        text-align: center;
-        color: #a0a0a0;
-        font-size: 12px
-    }
-
-    .footer .dot {
-        margin: 0 .25em
-    }
+            --tiptag-color-light: #f0f0fa;
+            --tiptag-color-dark: #303033;
 
 
+            --font-title-color-light: #37374c;
+            --font-title-color-dark: #bfb9b1;
 
-.footerDes {
+            --font-des-color-light: #3d3d52;
+            --font-des-color-dark: #c5bfb7;
 
-    position: fixed;
-    bottom: 0.6em;
-    left: 0;
-    width: calc(100% - 1.6em);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8em;
-}
+            --font-light-dark-light: #aaaaaa;
+            --font-light-dark-dark: #5d5d5d;
 
-.footerDes,
-.footerDes a {
-    color: #666;
-    text-align: center;
-    font-size: 12px;
-}
-    </style>
-</head>
+            --font-active-color-light: #6666cc;
+            --font-active-color-dark: #6666cc;
+        }
+
+        body {
+            font-family: 'Cascadia Code', 'Consolas', 'Microsoft YaHei', SimHei !important;
+            margin: 0;
+            padding: 0 30px;
+            background: #fff;
+            font-size: 12px
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            outline: 0
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: #645f8a
+        }
+
+        a.btn_blue {
+            display: inline-block;
+            padding: 6px 25px;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 3px;
+            color: #fff !important;
+            background-color: #645f8a;
+            float: right;
+        }
+
+        .remind_block .remind_title {
+            margin-bottom: 10px;
+            padding-top: 3px;
+            font-weight: 700;
+            font-size: 20px;
+            font-family: "Microsoft YaHei", "lucida Grande", Verdana;
+            color: #6666cc;
+        }
+
+        .remind_block .remind_detail {
+            line-height: 1.5;
+            font-size: 16px;
+            color: #888888;
+            margin-bottom: 4em;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding-top: 10em;
+        }
+
+        .header {
+            margin-top: 2em;
+            display: flex;
+            align-items: center;
+            margin-bottom: 3em;
+        }
+
+        .header img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .header h1 {
+            color: #716f7e;
+            padding-left: 10px;
+            margin: 0;
+        }
+
+        .content {
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #37374c1a;
+        }
+
+        .c-container {
+            padding: 10px
+        }
+
+        .c-footer {
+            padding: 10px 15px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .c-footer-a2 {
+            float: right;
+            margin: 8px 0 0 15px;
+            margin-right: 2em;
+            color: #6666cc;
+        }
+
+        .safety-url {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dfdfdf;
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .footer {
+            margin-top: 18px;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 12px
+        }
+
+        .footer .dot {
+            margin: 0 .25em
+        }
+
+        .footerDes {
+
+            position: fixed;
+            bottom: 0.6em;
+            left: 0;
+            width: calc(100% - 1.6em);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em;
+        }
+
+        .footerDes,
+        .footerDes a {
+            color: #666;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /*适配黑夜模式*/
+        body.dark-mode {
+            background-color: var(--background-color-dark);
+        }
+
+        body.dark-mode img {
+            filter: brightness(50%);
+        }
+
+        body.dark-mode .header h1,
+        body.dark-mode .remind_block .remind_title {
+            color: var(--font-des-color-dark);
+        }
+
+        body.dark-mode .content {
+            box-shadow: 0 0 10px #6666cc4d;
+            background-color: var(--subbox-color-dark);
+        }
+
+        body.dark-mode .safety-url {
+            border-bottom: 1px solid var(--font-light-dark-dark);
+        }
+
+        body.dark-mode .c-footer-a2,
+        body.dark-mode .footerDes a {
+            color: var(--font-title-color-dark);
+        }
+        </style>
+    </head>
 
 <body>
+    <script>
+    (function() {
+        var darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
     <div class="container">
         <div class="header">
             <img src="/assets/img/logo.png">
@@ -175,31 +235,31 @@
                         </div>
                         <div class="remind_detail">
                             <div class="safety-url" id="tiaozhuan-link"></div>
-                            <span style="color:#CC0000;font-weight:800;">温馨提示:</span><br />该网页不属于『 gorpeln's Blog 』，我们无法确认该网页是否安全，它可能包含未知的安全隐患，请注意保护好个人信息！
+                            <span style="color:#CC0000;font-weight:800;">温馨提示:</span><br />
+                            <div style="margin-top:5px;">该网页不属于『 gorpeln's Blog 』，我们无法确认该网页是否安全，它可能包含未知的安全隐患，请注意保护好个人信息！</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="c-footer">
-                <a href="" rel="nofollow" class="btn_blue"  id='direct-link'>继续访问</a>
+                <a href="" rel="nofollow" class="btn_blue" id='direct-link'>继续访问</a>
                 <a class="c-footer-a2" href="https://gorpeln.top" rel="nofollow">返回主页</a>
             </div>
         </div>
     </div>
-
 </body>
-
-
-    <script>
+<script>
     const params = new URLSearchParams(window.location.search);
     const encodedTarget = params.get('target');
-    const target = atob(encodedTarget?encodedTarget:"aHR0cHM6Ly9nb3JwZWxuLnRvcA=="); 
+    const target = atob(encodedTarget ? encodedTarget : "aHR0cHM6Ly9nb3JwZWxuLnRvcA==");
 
     if (target) {
         document.getElementById('direct-link').href = target;
-        document.getElementById('tiaozhuan-link').textContent = '' + target;    
+        document.getElementById('tiaozhuan-link').textContent = '' + target;
     } else {
         console.error('未指定重定向目标。');
     }
 </script>
-</html> 
+<script src="../assets/js/themeToggle.js"></script>
+
+</html>

@@ -7,26 +7,21 @@
     <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本" />
     <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！">
+    <link rel="stylesheet" href="../assets/css/agreement.css">
 </head>
 
 <body>
-    <style type="text/css">
-    body {
-        background-color: #FFF;
-        display: flex;
-    }
-
-    p {
-        color: #333333;
-        font-family: "PingFangSC-Regular";
-    }
-        .box{
-        background:#fff;
-        padding:2% 4%;
-    }
-    </style>
     <div class="box">
-        <p style="text-align: right;margin: 0;font-size: 0.9em;color: #AAA;">生效日期：2020年01月22日</p>
+        <script>
+        (function() {
+            var darkMode = localStorage.getItem('darkMode');
+
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+        </script>
+        <p class="update-time">生效日期：2020年01月22日</p>
         <p>欢迎使用时光本！我们邀请您使用时光本服务，但是请注意，对您的邀请以您同意本服务条款为前提。请您务必审慎阅读、充分理解本服务条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的独立协议（于下文定义），并选择接受或不接受。限制、免责条款可能以加粗形式提示您注意。</p>
         <p><b>如果您未满18周岁，请在法定监护人的陪同下阅读本协议及其他相关协议，并特别注意关于未成年人的条款。</b></p>
         <h3>一．服务条款及适用对象</h3>
@@ -183,5 +178,6 @@
         <p>您和时光本之间的本服务条款和关系将受中华人民共和国法律管辖。</p>
         <p>如果具有管辖权的法院认为本服务条款的任何规定无效，各方仍然同意另行商定使得原条款所体现的各方意图得以实现的有效条款，且本服务条款的其他规定仍然具有充分效力及作用。</p>
     </div>
+    <script src="assets/js/themeToggle.js"></script>
 
 </html>

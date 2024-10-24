@@ -1,0 +1,176 @@
+    :root {
+
+        --background-color-light: #f2f5f6;
+        --background-color-dark: #3d3d3d;
+
+        --box-color-light: #ffffff;
+        --box-color-dark: #262626;
+
+        --subbox-color-light: #F5F7F8;
+        --subbox-color-dark: #2d2d2d;
+
+        --tiptag-color-light: #f0f0fa;
+        --tiptag-color-dark: #303033;
+
+
+        --font-title-color-light: #37374c;
+        --font-title-color-dark: #bfb9b1;
+
+        --font-des-color-light: #3d3d52;
+        --font-des-color-dark: #c5bfb7;
+
+        --font-light-dark-light: #aaaaaa;
+        --font-light-dark-dark: #5d5d5d;
+
+        --font-active-color-light: #6666cc;
+        --font-active-color-dark: #6666cc;
+    }
+
+    body {
+        background-color: #FFF;
+        display: flex;
+    }
+
+    p {
+        color: #333333;
+        font-family: "PingFangSC-Regular";
+    }
+
+    ul,
+    ol {
+        margin-left: 16px;
+    }
+
+    p,
+    ul,
+    ol {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .box {
+        padding: 2% 4%;
+    }
+
+    .update-time {
+        text-align: right;
+        margin: 0;
+        font-size: 0.9em;
+        color: #AAA;
+    }
+
+
+    /*blog 使用*/
+    /* 设置页面主要内容区域的样式 */
+    #content-inner {
+        margin: 0 auto;
+        padding: 0 4% 2% 4%;
+    }
+
+    /* 设置页面标题的样式 */
+    .page-title {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #article-container {
+        padding: 20px 50px 50px 50px;
+        border-radius: 16px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+
+        #article-container {
+            padding: 10px;
+            border-radius: 0;
+
+        }
+    }
+
+    /*协议列表*/
+    .agreement-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* 随意设置一个背景色 */
+        font-family: Arial, sans-serif;
+    }
+
+    .agreement-list-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .agreement-list-li {
+        background-color: var(--box-color-light);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 15em;
+    }
+
+
+    .agreement-list-li:hover {
+        background-color: #e0e0e0;
+    }
+
+    .agreement-list-a {
+        color: #333;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+    }
+
+    /*适配黑夜模式*/
+    body.dark-mode {
+        background-color: var(--background-color-dark);
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6,
+    body.dark-mode ul {
+        color: var(--font-title-color-dark);
+    }
+
+    body.dark-mode p {
+        color: var(--font-des-color-dark);
+    }
+
+    body.dark-mode b {
+        color: #cfcfcf;
+    }
+
+    body.dark-mode a {
+        color: var(--font-active-color-dark);
+    }
+
+    body.dark-mode .update-time {
+        color: var(--font-light-dark-dark);
+    }
+
+    body.dark-mode .agreement-list-li {
+        background-color: var(--box-color-dark);
+    }
+
+
+    body.dark-mode .agreement-list-a {
+        color: var(--font-title-color-dark);
+
+    }
