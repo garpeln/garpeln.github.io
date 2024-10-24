@@ -65,7 +65,7 @@
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.70);
+        background-color: rgba(0, 0, 0, 0.60);
         
     }
 
@@ -91,7 +91,7 @@
     bottom: 0;
     left: calc(2em - 40px);
     list-style: none;
-    /*background-color: rgba(0, 0, 0, 0.6);*/
+    /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
     }
 
@@ -116,6 +116,20 @@
         .menuNav {
             display: block;
         }
+        .themeModel{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 4em;
+            left: 0;
+            margin-left: 10px;
+                    background-color: rgba(0, 0, 0, 0.60);
+
+        }
     }
     </style>
     <script type="text/javascript">
@@ -138,6 +152,7 @@
     });
 
     </script>
+            <div class="themeModel" id="themeModel"></div>
             <ul class="menuNav">
                 <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
                     <ul class="sub-nav">
@@ -396,7 +411,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-10-24 17:59:54 +0800">2024/10/24</p>
+                                    <p id="current-date" data-value="2024-10-24 18:22:07 +0800">2024/10/24</p>
                                 </li>
                             </ul>
                     </div>
@@ -877,7 +892,7 @@ textarea::placeholder {
     
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="themeModel" id="themeModel"></div>
+        <!-- <div class="themeModel" id="themeModel"></div> -->
         <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/m/%E5%BC%A0%E7%B4%AB%E8%B1%AA-%E5%8F%AF%E4%B8%8D%E5%8F%AF%E4%BB%A5')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
