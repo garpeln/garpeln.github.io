@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>MacOS：NSButton | gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,NSButton,NSImageOnly,setAction,NSButtonConvenience" />
-    <meta name="description" content="一、创建1、常见创建代码```      (void)testBtn{    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];  btn.title = @”标题”;                                   // 按钮文字  btn.image = [NSI...">
+    <title>Follow 认证 | gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,其他" />
+    <meta name="description" content="This message is used to verify that this feed (feedId:73252521066438656) belongs to me (userId:75520668589921280). Join me in enjoying the next generation information browser https://follow.is.">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/16514594954">
+    <link rel="canonical" href="/article/17305184049">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- 样式表 -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
@@ -445,13 +445,13 @@
 </style>
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">MacOS：NSButton</h1>
+        <h1 class="post-title">Follow 认证</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;">2022-05-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            <text style="padding-top: 0;">2024-11-02</text>&nbsp;&nbsp;&nbsp;&nbsp;
             分类：
-            <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-                MacOS
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             标签：
@@ -459,19 +459,7 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#NSButton" target="_blank">NSButton</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#NSImageOnly" target="_blank">NSImageOnly</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#setAction" target="_blank">setAction</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#NSButtonConvenience" target="_blank">NSButtonConvenience</a>
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
                 
                 
             </span>
@@ -479,156 +467,24 @@
         </div>
     </header>
     <article class="post-content">
-        <h3 id="一创建">一、创建</h3>
-<h4 id="1常见创建代码">1、常见创建代码</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)testBtn{
-    
-    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];
-    btn.title = @"标题";                                   // 按钮文字
-    btn.image = [NSImage imageNamed:@"icon_norm"];                                   // 按钮图片
-    [btn setTarget:self];
-    [btn setAction:@selector(btnOnClick)];                              // 按钮触发的方法
-    btn.alternateTitle = @"选中";                             // 开启状态文字
-    btn.alternateImage = [NSImage imageNamed:@"icon_high"];                           // 开启状态图片
-    btn.state = 1;                                     // 按钮的状态
-    
-    btn.imagePosition = NSImageBelow;                     // 图文位置
-    btn.imageScaling = NSImageScaleNone;         // 设置图片缩放
-    btn.bordered = NO;                               // 按钮是否有边框
-    btn.transparent = NO;                            // 按钮是否透明
-    // 以下设置的快捷键为: Shift + Command + I (如果设置的和系统的冲突，则不会触发)
-    btn.keyEquivalent = @"I";                             // 快捷键
-    [btn setKeyEquivalentModifierMask:NSEventModifierFlagShift]; // 快捷键掩码
-    btn.highlighted = YES;                                 // 按钮是否为高亮
-
-    [self.window.contentView addSubview:btn];
-    
-}
-</code></pre></div></div>
-<h4 id="2nsbuttonconvenience-分类中的类创建方法">2、NSButtonConvenience 分类中的类创建方法</h4>
-<h5 id="21-buttonwithimage">2.1 buttonWithImage</h5>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NSButton *btn = [NSButton buttonWithImage:[NSImage imageNamed:@"pupu"] target:self action:@selector(btnOnClick:)];
-btn.frame = CGRectMake(100, 100, 200, 200);
-btn.wantsLayer = YES;
-</code></pre></div></div>
-<p><img src="https://img.gorpeln.top/blog/20220502104455110.png!gorpeln" alt="20220502104455110" /></p>
-
-<h5 id="22-buttonwithtitle">2.2 buttonWithTitle</h5>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NSButton *btn = [NSButton buttonWithTitle:@"123" image:[NSImage imageNamed:@"pupu"] target:self action:@selector(btnOnClick:)];
-btn.frame = CGRectMake(100, 100, 100, 400);
-btn.wantsLayer = YES;
-</code></pre></div></div>
-<p><img src="https://img.gorpeln.top/blog/20220502104455111.png!gorpeln" alt="20220502104455111" /></p>
-
-<h3 id="二修改imagetitle-的-rect">二、修改image/title 的 rect</h3>
-<p>NSButton 是创建子类继承自 NSButton，然后再子button 的.m 文件中重写 titleForRect 方法；
-在 cocoa 中，很多控件都需要通过重写cell 来修改内部的rect。如下：</p>
-
-<p>1、创建 NaviButtonCell 继承自 NSButtonCell，在 .m 文件中设置 rect：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-(NSRect)imageRectForBounds:(NSRect)rect{
-    return NSMakeRect(13, 10, 9, 9);
-}
-
--(NSRect)titleRectForBounds:(NSRect)rect{
-    return NSMakeRect(24, 0, rect.size.width - 24, rect.size.height);
-}
-</code></pre></div></div>
-<p>2、创建 NaviButton 继承自 NSButton，在 .m 中设置 cellClass:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@implementation NaviButton
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
-+(Class)cellClass{
-    return [NaviButtonCell class];
-}
-
-
-@end
-</code></pre></div></div>
-<h3 id="三实用-category">三、实用 category</h3>
-<h4 id="1一个简单地没有边框的按钮">1、一个简单地没有边框的按钮</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)msCommonSetting{
-    
-    [self msSetLayerColor:[NSColor clearColor]];
-    [self setBezelStyle:NSBezelStyleRoundRect];
-    self.bordered = NO;
-    self.imagePosition = NSImageLeft;
-}
-</code></pre></div></div>
-<h4 id="2纯图片按钮">2、纯图片按钮</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)msPureImageBtn:(NSImage *)image{
- 
-    [self msCommonSetting];
-    
-    [self setImage:image];
-    self.imageScaling = NSImageScaleNone;
-    self.imagePosition =  NSImageOnly;
-}
-</code></pre></div></div>
-
-<h4 id="3设置按钮文字颜色">3、设置按钮文字颜色</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)msSetButtonTitle:(NSString *)title color:(NSColor*)color{
-    
-        if(color ==nil) {
-            color = kColor_TextBlack;
-        }
-        NSFont *font = self.font;
-        NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:font,
-                               NSFontAttributeName,
-                               color,
-                               NSForegroundColorAttributeName,
-                               nil];
-        NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
-        [self setAttributedTitle:attributedString];
-    
-}
-</code></pre></div></div>
-<h4 id="4按钮文字居中">4、按钮文字居中</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//文字居中
-- (void)msSetButtonCenterTitle:(NSString *)title color:(NSColor*)color{
-    
-    if(color ==nil) {
-        color = kColor_TextBlack;
-    }
-    NSFont *font = self.font;
-    NSMutableParagraphStyle *centredStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [centredStyle setAlignment:NSCenterTextAlignment];
-  
-    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:centredStyle,NSParagraphStyleAttributeName,
-                           font,NSFontAttributeName,
-                           color,NSForegroundColorAttributeName,
-                           nil];
-    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:title attributes:attrs];
-    [self setAttributedTitle:attributedString];
-    
-}
-</code></pre></div></div>
+        <p>This message is used to verify that this feed (feedId:73252521066438656) belongs to me (userId:75520668589921280). Join me in enjoying the next generation information browser https://follow.is.</p>
 
     </article>
 </div>
 <div class="copyright">
-    <div class="custom-font">本文链接：<a href="/article/16514594954" class='articleLink'>https://gorpeln.top/article/16514594954</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17305184049" class='articleLink'>https://gorpeln.top/article/17305184049</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
     
-    <div class="custom-font">最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2024-11-03</div>
     
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/16491590954" title="MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建" class="custom-font" target="_blank">MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17196724432" title="双因素认证(2FA)实现原理" class="custom-font" target="_blank">双因素认证(2FA)实现原理</a>
     </div>
     
-    
-    <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/16516610954" title="MacOS：NSMenu" class="custom-font" target="_blank">MacOS：NSMenu</a>
-    </div>
     
 </div>
 <div class="livere">
@@ -906,7 +762,7 @@ textarea::placeholder {
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
         <div class="themeModel" id="themeModel"></div>
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/16514594954')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17305184049')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">

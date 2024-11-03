@@ -6,6 +6,15 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
+        <title>Follow 认证</title>
+        <link>https://gorpeln.top/article/17305184049</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17305184049</guid>
+        <pubDate>2024-11-02</pubDate>
+        <description>&lt;p&gt;This message is used to verify that this feed (feedId:73252521066438656) belongs to me (userId:75520668589921280). Join me in enjoying the next generation information browser https://follow.is.&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
         <title>双因素认证(2FA)实现原理</title>
         <link>https://gorpeln.top/article/17196724432</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17196724432</guid>
@@ -2023,118 +2032,6 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 &lt;h3 id=&quot;30中国环境保护分布图&quot;&gt;30、中国环境保护分布图&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931183.png!gorpeln&quot; alt=&quot;20230205165931183&quot; /&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>下载神器：Aria2搭建</title>
-        <link>https://gorpeln.top/article/16726547033</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16726547033</guid>
-        <pubDate>2023-01-02</pubDate>
-        <description>&lt;h3 id=&quot;aria2简介&quot;&gt;Aria2简介&lt;/h3&gt;
-
-&lt;p&gt;Aria2是一款同时支持多线程、P2P下载、BT下载的多功能下载工具。其速度，同样取决于网速和资源质量。但是一般情况，多线程下载，总是比普通浏览器下载、wget下载快很多，并且Aria2还支持远程传递下载。&lt;/p&gt;
-
-&lt;h3 id=&quot;为什么要用aria2&quot;&gt;为什么要用Aria2&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;传递下载&lt;/code&gt;&lt;br /&gt;
-其实，说传递下载有点不准确，其实就是RPC传递下载链接。如：你本地有资源，但是你要外出，你可以通过RPC，直接传递本地下载资源（响应头、下载链接）到服务器上的Aria2，达到“离线下载”的目的。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;稳定性&lt;/code&gt;&lt;br /&gt;
-使用浏览器下载，如果网络变更一次，那么可能就会直接下载失败。但是，如果使用Aria2下载，会自动等待网络重新连接，且对已经下载好的部分，支持断点续传。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;多线程&lt;/code&gt;&lt;br /&gt;
-Aria2作为一个多线程下载器，就不多说了。官方版本Aria2最大16线程下载普通资源。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;磁力&amp;amp;种子&lt;/code&gt;&lt;br /&gt;
-Aria2可以下载磁力链接（magnet）资源，以及种子资源（.torrent）。相对于多了一种下载路径。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;macos上搭建aria2&quot;&gt;macOS上搭建Aria2&lt;/h3&gt;
-&lt;h4 id=&quot;homebrew安装aria2&quot;&gt;Homebrew安装Aria2&lt;/h4&gt;
-&lt;p&gt;因为有brew，所以只需要同步Aria2文件到本地即可：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install aria2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823583.png!gorpeln&quot; alt=&quot;20230102181823583&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;配置aria2conf&quot;&gt;配置aria2.conf&lt;/h4&gt;
-&lt;p&gt;在终端输入：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 进入用户家目录
-cd ~
-# 创建Aria2的配置目录
-mkdir .aria2
-# 进入目录内
-cd .aria2
-# 获取当前终端绝对路径
-pwd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;获取终端当前地址，我的是：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Users/gorpeln/.aria2&lt;/code&gt;&lt;br /&gt;
-创建aria2.conf文件&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch aria2.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;打开这个文件并配置（你可以使用命令open ~/.aria2/aria2.conf打开或者直接用vim），然后写入Aria2的配置，你可以使用我的aria2配置：&lt;/p&gt;
-
-&lt;p&gt;下载:&lt;a href=&quot;https://gorpeln.lanzoul.com/iPUZN156hkfa&quot;&gt;https://gorpeln.lanzoul.com/iPUZN156hkfa&lt;/a&gt; 密码:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bys2&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;之后，&lt;strong&gt;更改其中内容&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;dir：通过Aria2下载的文件，存放地址（绝对路径）&lt;/li&gt;
-  &lt;li&gt;on-download-stop：指向配置文件内deleteAria2.sh&lt;/li&gt;
-  &lt;li&gt;on-download-complete：同样指向配置文件内deleteAria2.sh&lt;/li&gt;
-  &lt;li&gt;dht-file-path：指向配置文件内dht.dat&lt;/li&gt;
-  &lt;li&gt;dht-file-path6：同样指向配置文件内dht.dat&lt;/li&gt;
-  &lt;li&gt;rpc-secret：设置Aria2验证远程码&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;连接密码，后面连接需要使用&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823584.png!gorpeln&quot; alt=&quot;20230102181823584&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;你可以把&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dht.dat&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deleteAria2.sh&lt;/code&gt;移动到/Users/gorpeln/.aria2文件夹内，方便管理。&lt;br /&gt;
-macOS上.开头文件为隐藏文件，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command + shift + .&lt;/code&gt;可以显示隐藏隐藏文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;启动aria2服务&quot;&gt;启动Aria2服务&lt;/h4&gt;
-&lt;h5 id=&quot;1直接运行&quot;&gt;1.直接运行&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aria2c --conf-path=&quot;/Users/gorpeln/.aria2/aria2.conf&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这样，aria2服务就启动成功了。&lt;/p&gt;
-
-&lt;h5 id=&quot;2写入脚本运行&quot;&gt;2.写入脚本运行&lt;/h5&gt;
-&lt;p&gt;新建一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;文本文件.txt&lt;/code&gt;,加入&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria2c --conf-path=/Users/gorpeln/.aria2/aria2.conf
-&lt;/code&gt;，保存后，修改文件的后缀为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aria2.command&lt;/code&gt;,文件直接放在桌面，下次运行直接&lt;strong&gt;双击&lt;/strong&gt;文件即可。&lt;/p&gt;
-
-&lt;h3 id=&quot;aria2具体使用&quot;&gt;Aria2具体使用&lt;/h3&gt;
-&lt;h4 id=&quot;一本地使用aria2&quot;&gt;一、本地使用Aria2&lt;/h4&gt;
-&lt;h5 id=&quot;1启动aria2主服务&quot;&gt;1.启动Aria2主服务&lt;/h5&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;双击`aria2.command`  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h5 id=&quot;2配置ariang&quot;&gt;2.配置AriaNG&lt;/h5&gt;
-&lt;p&gt;下载AriaNG Native：&lt;a href=&quot;https://github.com/mayswind/AriaNg-Native/releases&quot;&gt;AriaNG&lt;/a&gt;，打开即可。&lt;/p&gt;
-
-&lt;h5 id=&quot;3正式下载文件&quot;&gt;3.正式下载文件&lt;/h5&gt;
-&lt;p&gt;只需要在AriaNG上，点击新建—将磁力链接/下载链接复制—立即下载即可开始下载。&lt;/p&gt;
-
-&lt;h4 id=&quot;二alist使用aria2&quot;&gt;二、alist使用Aria2&lt;/h4&gt;
-&lt;p&gt;首先进入系统后台后，点击其他，配置Aria2相关信息。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823585.png!gorpeln&quot; alt=&quot;20230102181823585&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后返回到alist前台。点击小齿轮填写aria2参数。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823586.png!gorpeln&quot; alt=&quot;20230102181823586&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;到处，在alist中，我们的aria2就配置完成了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230102181823587.png!gorpeln&quot; alt=&quot;20230102181823587&quot; /&gt;&lt;/p&gt;
-
 </description>
       </item>
     
