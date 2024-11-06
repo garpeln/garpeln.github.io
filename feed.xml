@@ -6,6 +6,175 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
+        <title>网站被恶意镜像 — 如何保护博客流量及预防</title>
+        <link>https://gorpeln.top/article/17245056864</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
+        <pubDate>2024-08-24</pubDate>
+        <description>&lt;h3 id=&quot;什么是网站镜像&quot;&gt;什么是网站镜像？&lt;/h3&gt;
+&lt;p&gt;网站镜像是指在互联网上出现一个与你的网站几乎一模一样的复制品，除了域名不同之外，其它所有内容都完全相同。这包括网站的布局、LOGO、版块结构等。&lt;/p&gt;
+
+&lt;p&gt;通常，网站被恶意镜像的情况主要有两种：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;完全镜像：这种情况是创建一个与您网站内容完全相同的站点，除了网址不同，其他一切都模仿您的设计和内容。&lt;/li&gt;
+  &lt;li&gt;内容抓取：这种情况常见于博彩网站，它们会恶意抓取您的网页内容，正常浏览时隐藏掉原有内容，显示的却是他们自己的广告。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126440.png!gorpeln&quot; alt=&quot;20240824212126440&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在上述例子中，明显属于第一种情况：对方镜像了我的网站布局和结构。这种行为属于灰色 SEO 和黑帽 SEO 手法，目的是为了借助我博客的权重和流量来提升他们自己网站的排名。 
+&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126441.png!gorpeln&quot; alt=&quot;20240824212126441&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;网站被镜像危害&quot;&gt;网站被镜像危害&lt;/h3&gt;
+&lt;p&gt;从搜索引擎来讲，会对搜索引擎抓取不利，影响原本网站的正常抓取和识别，可能会导致原网站权重丢失，也有可能带来一定的误伤，搜索引擎会对网站进行识别，如果发现是镜像站，会导致网站被搜索引擎屏蔽，将失去搜索引擎带来的流量（这对个人博客来说是致命的）。&lt;/p&gt;
+
+&lt;p&gt;对用户来讲，可能会被镜像网站欺骗，恶意广告插播或欺诈内容造成用户损失。&lt;/p&gt;
+
+&lt;h3 id=&quot;网站被镜像了怎么办&quot;&gt;网站被镜像了怎么办&lt;/h3&gt;
+&lt;h4 id=&quot;添加防镜像跳转代码&quot;&gt;添加防镜像跳转代码&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;zh&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&amp;gt;
+&amp;lt;title&amp;gt;not mirroring&amp;lt;/title&amp;gt;
+&amp;lt;style&amp;gt;
+    .alert-message {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 20px;
+        z-index: 10000;
+        opacity: 1;
+        transition: opacity 3s;
+        border-radius:16px;
+    }
+    .alert-message.fade-out {
+        opacity: 0;
+    }
+&amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;script&amp;gt;
+(function () {
+    // 定义合法域名列表并Base64编码
+    var validDomains = [&apos;Z29ycGVsbi50b3A=&apos;]; // gorpeln.top
+    var redirectUrl = &apos;aHR0cHM6Ly9nb3JwZWxuLnRvcA==&apos;; // https://gorpeln.top
+    var hostname = document.location.hostname + (document.location.port ? &apos;:&apos; + document.location.port : &apos;&apos;);
+
+    function createWatermark(text) {
+        var watermarkDiv = document.createElement(&apos;div&apos;);
+        watermarkDiv.style.pointerEvents = &apos;none&apos;;
+        watermarkDiv.style.position = &apos;fixed&apos;;
+        watermarkDiv.style.top = &apos;0&apos;;
+        watermarkDiv.style.left = &apos;-5%&apos;;
+        watermarkDiv.style.width = &apos;110%&apos;;
+        watermarkDiv.style.height = &apos;100%&apos;;
+        watermarkDiv.style.zIndex = &apos;9999&apos;;
+        watermarkDiv.style.opacity = &apos;0.1&apos;;
+        watermarkDiv.style.background = &apos;transparent&apos;;
+        watermarkDiv.style.overflow = &apos;hidden&apos;;
+        watermarkDiv.style.display = &apos;flex&apos;;
+        watermarkDiv.style.justifyContent = &apos;center&apos;;
+        watermarkDiv.style.alignItems = &apos;center&apos;;
+        watermarkDiv.style.flexWrap = &apos;wrap&apos;;
+
+        var watermarkText = document.createElement(&apos;div&apos;);
+        watermarkText.innerText = text;
+        watermarkText.style.color = &apos;black&apos;;
+        watermarkText.style.fontSize = &apos;30px&apos;;
+        watermarkText.style.transform = &apos;rotate(-30deg)&apos;;
+        watermarkText.style.whiteSpace = &apos;nowrap&apos;;
+        watermarkText.style.margin = &apos;80px&apos;;
+
+        for (var i = 0; i &amp;lt; 100; i++) {
+            watermarkDiv.appendChild(watermarkText.cloneNode(true));
+        }
+
+        document.body.appendChild(watermarkDiv);
+    }
+
+    function showAlertMessage(message) {
+        var alertMessage = document.createElement(&apos;div&apos;);
+        alertMessage.className = &apos;alert-message&apos;;
+        alertMessage.innerText = message;
+
+        document.body.appendChild(alertMessage);
+
+        // 3秒后添加fade-out类，使消息淡出
+        setTimeout(function() {
+            alertMessage.classList.add(&apos;fade-out&apos;);
+
+            // 再等1秒（总共4秒）后删除元素
+            setTimeout(function() {
+                if (alertMessage.parentNode) {
+                    alertMessage.parentNode.removeChild(alertMessage);
+                }
+            }, 200);
+        }, 3000);
+
+        // 5秒后跳转
+        setTimeout(function() {
+            window.location.replace(atob(redirectUrl));
+        }, 5000);
+    }
+
+    // 检查当前域名是否在合法域名列表中
+    if (!validDomains.includes(btoa(hostname))) {
+        createWatermark(atob(validDomains[0])); // 使用合法域名列表中的第一个元素 
+        showAlertMessage(&quot;警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！&quot;);
+    }
+})();
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;代码目的&quot;&gt;代码目的&lt;/h4&gt;
+&lt;p&gt;这个代码的目的是，利用对方会无脑反代一切内容的机制，在所有页面内都插入检测 JS 代码，在网友访问时，检测当前域名是否为所设定自己博客的域名，如果不是所设定的博客域名则在网站背景中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;嵌入带域名水印&lt;/code&gt;并使用 confirm() 打断页面渲染，并弹出&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;弹窗警示&lt;/code&gt;用户&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自动跳转回源站&lt;/code&gt;。
+并且使用 JavaScript 动态插入水印 div 并不设置 id，class 等标识，防止对方通过u正则表达式匹配删除特定 div 元素。&lt;/p&gt;
+
+&lt;h4 id=&quot;代码升级&quot;&gt;代码升级&lt;/h4&gt;
+&lt;p&gt;因为 JavaScript 仍然是以明文方式暴露在 HTML 中，有正则表达式匹配风险，所以如果对方使用正则表达式破坏水印 JavaScript，则会导致水印无法正常显示。反制方法也很简单：使用 JavaScript 混淆。&lt;/p&gt;
+
+&lt;p&gt;这里推荐一个 GitHub 上一个项目：https://github.com/javascript-obfuscator/javascript-obfuscator，该项目可以对 JavaScript 进行混淆，官方也提供了一个在线工具：https://obfuscator.io/#code&lt;/p&gt;
+
+&lt;p&gt;我们可以借此对水印部分的 JavaScript 进行混淆，防止对水印 JavaScript 部分进行正则表达式匹配破坏，上面代码经过中等级混淆后如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+    function _0x1068(_0x433a30,_0x2adee4){var _0x389e01=_0x389e();return _0x1068=function(_0x1068ac,_0x24a963){_0x1068ac=_0x1068ac-0xab;var _0x17e23c=_0x389e01[_0x1068ac];return _0x17e23c;},_0x1068(_0x433a30,_0x2adee4);}function _0x389e(){var _0x36c252=[&apos;pointerEvents&apos;,&apos;alert-message&apos;,&apos;5595876vqlyeY&apos;,&apos;div&apos;,&apos;MTI3LjAuMC4xOjQwMDA=&apos;,&apos;flexWrap&apos;,&apos;cloneNode&apos;,&apos;Z29ycGVsbi50b3A=&apos;,&apos;createElement&apos;,&apos;0.1&apos;,&apos;264uportz&apos;,&apos;2801woJOLE&apos;,&apos;fade-out&apos;,&apos;port&apos;,&apos;警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！&apos;,&apos;9999&apos;,&apos;justifyContent&apos;,&apos;className&apos;,&apos;overflow&apos;,&apos;location&apos;,&apos;30px&apos;,&apos;-5%&apos;,&apos;center&apos;,&apos;position&apos;,&apos;add&apos;,&apos;80px&apos;,&apos;hostname&apos;,&apos;311760HhmOPi&apos;,&apos;width&apos;,&apos;7382256FQRZjX&apos;,&apos;color&apos;,&apos;Ym9nLjIwMjA5MC54eXo=&apos;,&apos;display&apos;,&apos;none&apos;,&apos;700175FzcIDl&apos;,&apos;zIndex&apos;,&apos;innerText&apos;,&apos;whiteSpace&apos;,&apos;2598232BSgzsr&apos;,&apos;left&apos;,&apos;rotate(-30deg)&apos;,&apos;1907685SOngHa&apos;,&apos;appendChild&apos;,&apos;alignItems&apos;,&apos;nowrap&apos;,&apos;opacity&apos;,&apos;style&apos;,&apos;100%&apos;,&apos;wrap&apos;,&apos;classList&apos;,&apos;549MSvmkI&apos;,&apos;black&apos;,&apos;aHR0cHM6Ly9nb3JwZWxuLnRvcA==&apos;];_0x389e=function(){return _0x36c252;};return _0x389e();}(function(_0x1e1f2a,_0x48547a){var _0x47fe11=_0x1068,_0x462e40=_0x1e1f2a();while(!![]){try{var _0x4c2db8=-parseInt(_0x47fe11(0xab))/0x1*(parseInt(_0x47fe11(0xdf))/0x2)+parseInt(_0x47fe11(0xc9))/0x3+parseInt(_0x47fe11(0xc6))/0x4+parseInt(_0x47fe11(0xc2))/0x5+parseInt(_0x47fe11(0xd7))/0x6+parseInt(_0x47fe11(0xbd))/0x7+parseInt(_0x47fe11(0xbb))/0x8*(-parseInt(_0x47fe11(0xd2))/0x9);if(_0x4c2db8===_0x48547a)break;else _0x462e40[&apos;push&apos;](_0x462e40[&apos;shift&apos;]());}catch(_0x2db891){_0x462e40[&apos;push&apos;](_0x462e40[&apos;shift&apos;]());}}}(_0x389e,0xa28f0),(function(){var _0x335123=_0x1068,_0x3ced32=[_0x335123(0xdc),_0x335123(0xd9),_0x335123(0xbf)],_0x214548=_0x335123(0xd4),_0x590056=document[&apos;location&apos;][_0x335123(0xba)]+(document[_0x335123(0xb3)][&apos;port&apos;]?&apos;:&apos;+document[_0x335123(0xb3)][_0x335123(0xad)]:&apos;&apos;);function _0x5452cf(_0x174053){var _0x4ea663=_0x335123,_0xa07c2d=document[_0x4ea663(0xdd)](_0x4ea663(0xd8));_0xa07c2d[&apos;style&apos;][_0x4ea663(0xd5)]=_0x4ea663(0xc1),_0xa07c2d[_0x4ea663(0xce)][_0x4ea663(0xb7)]=&apos;fixed&apos;,_0xa07c2d[_0x4ea663(0xce)][&apos;top&apos;]=&apos;0&apos;,_0xa07c2d[_0x4ea663(0xce)][_0x4ea663(0xc7)]=_0x4ea663(0xb5),_0xa07c2d[&apos;style&apos;][_0x4ea663(0xbc)]=&apos;110%&apos;,_0xa07c2d[_0x4ea663(0xce)][&apos;height&apos;]=_0x4ea663(0xcf),_0xa07c2d[&apos;style&apos;][_0x4ea663(0xc3)]=_0x4ea663(0xaf),_0xa07c2d[&apos;style&apos;][_0x4ea663(0xcd)]=_0x4ea663(0xde),_0xa07c2d[_0x4ea663(0xce)][&apos;background&apos;]=&apos;transparent&apos;,_0xa07c2d[_0x4ea663(0xce)][_0x4ea663(0xb2)]=&apos;hidden&apos;,_0xa07c2d[&apos;style&apos;][_0x4ea663(0xc0)]=&apos;flex&apos;,_0xa07c2d[_0x4ea663(0xce)][_0x4ea663(0xb0)]=_0x4ea663(0xb6),_0xa07c2d[&apos;style&apos;][_0x4ea663(0xcb)]=_0x4ea663(0xb6),_0xa07c2d[_0x4ea663(0xce)][_0x4ea663(0xda)]=_0x4ea663(0xd0);var _0x50ec9a=document[_0x4ea663(0xdd)](&apos;div&apos;);_0x50ec9a[_0x4ea663(0xc4)]=_0x174053,_0x50ec9a[_0x4ea663(0xce)][_0x4ea663(0xbe)]=_0x4ea663(0xd3),_0x50ec9a[_0x4ea663(0xce)][&apos;fontSize&apos;]=_0x4ea663(0xb4),_0x50ec9a[_0x4ea663(0xce)][&apos;transform&apos;]=_0x4ea663(0xc8),_0x50ec9a[_0x4ea663(0xce)][_0x4ea663(0xc5)]=_0x4ea663(0xcc),_0x50ec9a[_0x4ea663(0xce)][&apos;margin&apos;]=_0x4ea663(0xb9);for(var _0x3b78ca=0x0;_0x3b78ca&amp;lt;0x64;_0x3b78ca++){_0xa07c2d[_0x4ea663(0xca)](_0x50ec9a[_0x4ea663(0xdb)](!![]));}document[&apos;body&apos;][&apos;appendChild&apos;](_0xa07c2d);}function _0x3c5c28(_0x34370c){var _0x488852=_0x335123,_0x3370ec=document[&apos;createElement&apos;](_0x488852(0xd8));_0x3370ec[_0x488852(0xb1)]=_0x488852(0xd6),_0x3370ec[&apos;innerText&apos;]=_0x34370c,document[&apos;body&apos;][_0x488852(0xca)](_0x3370ec),setTimeout(function(){var _0x249af3=_0x488852;_0x3370ec[_0x249af3(0xd1)][_0x249af3(0xb8)](_0x249af3(0xac)),setTimeout(function(){_0x3370ec[&apos;parentNode&apos;]&amp;amp;&amp;amp;_0x3370ec[&apos;parentNode&apos;][&apos;removeChild&apos;](_0x3370ec);},0xc8);},0xbb8),setTimeout(function(){window[&apos;location&apos;][&apos;replace&apos;](atob(_0x214548));},0x1388);}!_0x3ced32[&apos;includes&apos;](btoa(_0x590056))&amp;amp;&amp;amp;(_0x5452cf(atob(_0x3ced32[0x0])),_0x3c5c28(_0x335123(0xae)));}()));
+    &amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;效果示意&quot;&gt;效果示意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126442.png!gorpeln&quot; alt=&quot;20240824212126442&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;其他方法&quot;&gt;其他方法&lt;/h3&gt;
+&lt;p&gt;1、向 google、域名注册商 、域名解析商举报&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;cloudflare 举报：https://abuse.cloudflare.com/dmca&lt;/li&gt;
+  &lt;li&gt;google 举报：https://support.google.com/legal/answer/3110420?visit_id=638624243885343005-291301472&amp;amp;rd=1&lt;/li&gt;
+  &lt;li&gt;阿里云举报：https://report.aliyun.com/form/phishingForm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2、设置 IP 黑名单&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;进入自己的服务器设置或者是虚拟主机管理，找到防火墙有的叫黑名单，把对方的 IP 地址添加进行，屏蔽访问和请求自己网站服务器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3、向谷歌申请移除镜像站的搜索结果&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;因为它会原样照搬反代网页，那其实你可以通过HTML 标记验证方式在 Google Search Console 里把他的反代域名也认证到你自己名下，然后在Google Search Console 向谷歌申请移除搜索结果，嘿嘿😋&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      </item>
+    
+      <item>
         <title>Follow - 订阅一切</title>
         <link>https://gorpeln.top/article/17202356559</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17202356559</guid>
@@ -1888,196 +2057,6 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 &lt;p&gt;这里也可以分为通用的和特定场景下的。通用的比如停车场推荐，营业时间、地点介绍信息，附近美食推荐、酒店推荐等等；特定场景下的比如火车站、景点内会有人流量统计，游玩时会有行程推荐、攻略推荐等等。&lt;/p&gt;
 
 &lt;p&gt;所以除了加大力度研发自己的硬性技术，增加自己的核心竞争力，也可以将相关的内容和服务做到更优秀，让用户在使用产品的时候不能能够满足能用心理还能让用户产生好用，想用的心理。&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>30张高清地图全面解读中国地理</title>
-        <link>https://gorpeln.top/article/16755875711</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16755875711</guid>
-        <pubDate>2023-02-05</pubDate>
-        <description>&lt;h3 id=&quot;1中国政区地图&quot;&gt;1、中国政区地图&lt;/h3&gt;
-&lt;p&gt;中国行政区划由省级行政区、地级行政区、县级行政区、乡级行政区组成。&lt;/p&gt;
-
-&lt;p&gt;省级行政区：23个省、5个自治区、4个直辖市、2个特别行政区，共34个省级行政区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931151.png!gorpeln&quot; alt=&quot;20230205165931151&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2中国地形图&quot;&gt;2、中国地形图&lt;/h3&gt;
-&lt;p&gt;中国地形地势西高东低，呈阶梯状分布；地形多种多样，山区面积广大。&lt;/p&gt;
-
-&lt;p&gt;地势西高东低，向海洋倾斜，一方面有利于海洋上湿润气流深入内地，形成降水；另一方面使许多大河滚滚东流，沟通了东西交通，方便了沿海和内地的经济联系。河流自西向东，逐级下降，河流落差大，水能蕴藏丰富。&lt;/p&gt;
-
-&lt;p&gt;在中国辽阔大地上，有雄伟的高原、起伏的山岭、广阔的平原、低缓的丘陵，还有四周群山环抱、中间低平的大小盆地。多种多样的地形为因地制宜，发展农、林、牧、副提供有利条件。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931152.png!gorpeln&quot; alt=&quot;20230205165931152&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3中国地势三级阶梯示意图&quot;&gt;3、中国地势三级阶梯示意图&lt;/h3&gt;
-&lt;p&gt;我国地势西高东低，呈三级阶梯状逐级下降，阶梯状分布特点，使我国大多数河流为自西向东。&lt;/p&gt;
-
-&lt;p&gt;阶梯第一级主要分布在青藏高原附近，海拔在4000米以上。&lt;/p&gt;
-
-&lt;p&gt;阶梯第二级主要分布在我国主要高原，如内蒙古高原，黄土高原，云贵高原，海拔1-2千米。&lt;/p&gt;
-
-&lt;p&gt;阶梯第三级主要分布在我国主要平原，海拔500米以下。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931153.png!gorpeln&quot; alt=&quot;20230205165931153&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;4中国地理分区图&quot;&gt;4、中国地理分区图&lt;/h3&gt;
-&lt;p&gt;中国四大区域：西北地区、北方地区、南方地区、青藏地区四大地形区域。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931154.png!gorpeln&quot; alt=&quot;20230205165931154&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931155.png!gorpeln&quot; alt=&quot;20230205165931155&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;5中国三大自然区内部差异&quot;&gt;5、中国三大自然区内部差异&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931156.png!gorpeln&quot; alt=&quot;20230205165931156&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;6中国重要自然地理界线&quot;&gt;6、中国重要自然地理界线&lt;/h3&gt;
-&lt;p&gt;中国一、二级阶梯界线是昆仑山、阿尔金山、祁连山、横断山脉；二、三级阶梯界线为大兴安岭、太行山、巫山、雪峰山。季风区与非季风区界线是大兴安岭、阴山、贺兰山、巴颜喀拉山、冈底斯山，该线西北为非季风区，东南为季风区。&lt;/p&gt;
-
-&lt;p&gt;秦岭——淮河一线是一条我国重要地理分界线，包括南北方分界线，800mm等降水量，湿润区与半湿润区界线，旱作水田分界线，亚热带与暖温带分界线，1月平均气温0°C等温线等。400mm等降水量线还为半湿润半干旱、农耕畜牧、暖温带中温带、森林草原、黄土高原与内蒙古高原分界线。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931157.png!gorpeln&quot; alt=&quot;20230205165931157&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;7中国气候类型分布图&quot;&gt;7、中国气候类型分布图&lt;/h3&gt;
-&lt;p&gt;中国幅员辽阔，跨纬度较广，距海远近差距较大，加之地势高低不同，地貌类型及山脉走向多样，因而气温、降水的组合差别很大，形成了各地多种多样的气候。从气候类型上看，东部属季风气候，西北部属温带大陆性干旱气候，青藏高原属高寒气候。&lt;/p&gt;
-
-&lt;p&gt;中国的气候具有夏季高温多雨、冬季寒冷少雨、高温期与多雨期一致的季风气候特征。中国受冬、夏季风交替影响的地区广，是世界上季风最典型、季风气候最显著的地区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931158.png!gorpeln&quot; alt=&quot;20230205165931158&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;8中国干湿分区图&quot;&gt;8、中国干湿分区图&lt;/h3&gt;
-&lt;p&gt;我国干湿地区主要根据年降水量分布。主要分布如下：&lt;/p&gt;
-
-&lt;p&gt;800mm年等降水量线：以秦岭-淮河为界，以南为湿润区，以北为半湿润区；&lt;/p&gt;
-
-&lt;p&gt;400mm年等降水量线：以大兴安岭-长城为界，向西南，经青藏高原到冈底斯山，划分半湿润区和半干旱区；&lt;/p&gt;
-
-&lt;p&gt;200mm年等降水量线：以内蒙古中部——贺兰山——祁连山经青藏高原为界，划分半干旱区和干旱区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931159.png!gorpeln&quot; alt=&quot;20230205165931159&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931160.png!gorpeln&quot; alt=&quot;20230205165931160&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;9中国年降水量分布图&quot;&gt;9、中国年降水量分布图&lt;/h3&gt;
-&lt;p&gt;中国年降水量空间分布的规律是：从东南沿海向西北内陆递减。中国降水主要是由夏季东南季风带来，东南季风为中国带来太平洋水汽，使得东南沿海地区成为中国年降水量最为丰富地区。西北地区由于深居内陆，距海遥远，成为中国年降水量最少地区。&lt;/p&gt;
-
-&lt;p&gt;从中国年降水量分布图可看出：800毫米等降水量线大致在淮河北—秦岭—青藏高原东南边缘一线；400毫米等降水量线大致在大兴安岭—张家口—兰州—拉萨—喜马拉雅山东南端一线。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931161.png!gorpeln&quot; alt=&quot;20230205165931161&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931162.png!gorpeln&quot; alt=&quot;20230205165931162&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;10中国东部锋面雨带的移动&quot;&gt;10、中国东部锋面雨带的移动&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931163.png!gorpeln&quot; alt=&quot;20230205165931163&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;11中国七月气温分布图&quot;&gt;11、中国七月气温分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931164.png!gorpeln&quot; alt=&quot;20230205165931164&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;12中国一月平均气温分布图&quot;&gt;12、中国一月平均气温分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931165.png!gorpeln&quot; alt=&quot;20230205165931165&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;13中国水系分布图&quot;&gt;13、中国水系分布图&lt;/h3&gt;
-&lt;p&gt;中国是世界上河流最多的国家之一，有许多源远流长的大江大河，河湖地区分布不均，内外流区域兼备。中国外流区与内流区界线大致是：北段大体沿着大兴安岭—阴山—贺兰山—祁连山（东部）一线，南段沿着巴颜喀拉山—冈底斯山一线，这条线东南部是外流区，约占全国总面积2/3，河流水量占全国河流总水量95%以上。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931166.webp!gorpeln&quot; alt=&quot;20230205165931166&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;14中国自然植被分布图&quot;&gt;14、中国自然植被分布图&lt;/h3&gt;
-&lt;p&gt;我国疆域辽阔，植被类型十分丰富。主要划分为8种：针叶林、针阔混交林、温带草原区、温带荒漠区、温带落叶阔叶林区、亚热带常绿阔叶林区、热带季雨林/雨林区、青藏高原高寒植被区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931167.png!gorpeln&quot; alt=&quot;20230205165931167&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;15中国土地资源分布图&quot;&gt;15、中国土地资源分布图&lt;/h3&gt;
-&lt;p&gt;中国土地资源有四个基本特点：绝对数量大，人均占有少；类型复杂多样，耕地比重小；利用情况复杂，生产力地区差异明显；地区分布不均，保护和开发问题突出。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931168.png!gorpeln&quot; alt=&quot;20230205165931168&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;16中国水资源分布图&quot;&gt;16、中国水资源分布图&lt;/h3&gt;
-&lt;p&gt;河流和湖泊是中国主要的淡水资源。中国水资源的分布情况是南多北少，而耕地的分布却是南少北多。水、土资源配合欠佳的状况，进一步加剧了中国北方地区缺水的程度。中国人均径流量为2200立方米，是世界人均径流量的24.7%。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931169.png!gorpeln&quot; alt=&quot;20230205165931169&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;17中国海洋资源分布图&quot;&gt;17、中国海洋资源分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931170.png!gorpeln&quot; alt=&quot;20230205165931170&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;18中国矿产资源分布图&quot;&gt;18、中国矿产资源分布图&lt;/h3&gt;
-&lt;p&gt;中国幅员广大，地质条件多样，矿产资源丰富，已探明储量的有157种。其中钨、锑、稀土、钼、钒和钛等的探明储量居世界首位。煤、铁、铅锌、铜、银、汞、锡、镍、磷灰石、石棉等的储量均居世界前列。中国矿产资源分布的主要特点是，地区分布不均匀。如铁主要分布于辽宁、冀东和川西，西北很少；煤主要分布在华北、西北、东北和西南区，其中山西、内蒙古、新疆等省区最集中，而东南沿海各省则很少。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931171.png!gorpeln&quot; alt=&quot;20230205165931171&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;19中国主要非能源矿产分布图&quot;&gt;19、中国主要非能源矿产分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931172.png!gorpeln&quot; alt=&quot;20230205165931172&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;20中国新能源分布图&quot;&gt;20、中国新能源分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931173.png!gorpeln&quot; alt=&quot;20230205165931173&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;21中国主要火山地震分布图&quot;&gt;21、中国主要火山地震分布图&lt;/h3&gt;
-&lt;p&gt;我国地处全球两大地震带之间，是一个多地震国家。地震带主要分布在：东南—台湾和福建沿海一带，华北—太行山沿线和京津唐渤地区，西南—青藏高原、云南和四川西部，西北—新疆和陕甘宁部分地区。&lt;/p&gt;
-
-&lt;p&gt;中国的火山，约660座，其中绝大部分是死火山。活火山和休眠火山主要分布在台湾省、昆仑山区、黑龙江省、长白山和云南腾冲等地。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931174.png!gorpeln&quot; alt=&quot;20230205165931174&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;22中国水灾分布图&quot;&gt;22、中国水灾分布图&lt;/h3&gt;
-&lt;p&gt;我国洪涝灾害总体呈现出夏多冬少、东多西少，沿海多、内陆少，平原湖区多、高原山地少等分布特点。我国洪涝灾害的高发区集中在广西东南部、广东沿海、海南、浙江沿海以及浙赣皖交界处、辽宁、四川的局部地区。我国受暴雨洪水威胁的主要地区分布在长江、黄河、淮河、海河、珠江、松花江、辽河等7大江河下游和东南沿海地区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931175.png!gorpeln&quot; alt=&quot;20230205165931175&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;23中国旱灾分布图&quot;&gt;23、中国旱灾分布图&lt;/h3&gt;
-&lt;p&gt;我国是世界上主要的干旱国家之一，干旱区的面积约为280万平方公里，半干旱和半湿润易旱区的面积约为213万平方公里，主要分布在昆仑山——秦岭——淮河一线以北，所以干旱是西北区最主要的气候特征和自然灾害。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931176.png!gorpeln&quot; alt=&quot;20230205165931176&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;24中国沙尘暴灾害分布图&quot;&gt;24、中国沙尘暴灾害分布图&lt;/h3&gt;
-&lt;p&gt;我国的沙尘暴主要发生在北方地区，其中南疆盆地、青海西南部、西藏西部及内蒙古中西部和甘肃中北部是沙尘暴的多发区。春季是中国沙尘暴多发季节，4月最多，占全年的22.7%。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931177.png!gorpeln&quot; alt=&quot;20230205165931177&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;25中国泥石流滑坡崩塌灾害分布&quot;&gt;25、中国泥石流、滑坡崩塌灾害分布&lt;/h3&gt;
-&lt;p&gt;我国泥石流、滑坡等地质灾害主要分布在我国的中西部，以西南地区最为集中，主要的地形区有云贵高原等。我国西南部地区高原、山区地形起伏较大，加上降雨量相对较多而且集中，雨水侵蚀增加了滑坡的下滑力，形成不稳定的区域，因而滑坡和泥石流灾害频发。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931178.png!gorpeln&quot; alt=&quot;20230205165931178&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;26中国气象灾害分布图&quot;&gt;26、中国气象灾害分布图&lt;/h3&gt;
-&lt;p&gt;中国地域辽阔，东部处于东亚季风区，而西部地处内陆，天气气候复杂，是世界上受气象灾害影响是严重的国家之一。我国的气象灾害主要特点：&lt;/p&gt;
-
-&lt;p&gt;普遍性。从时间和空间分布上看，每年都有灾，无处没有灾，旱、涝灾害最为频繁。&lt;/p&gt;
-
-&lt;p&gt;区域性。总体看来，北方旱多，南方涝多。旱区主要分布在黄淮海地区及黄土高原，洪涝主要发生在珠江、长江中下游地区及淮河流域等地。&lt;/p&gt;
-
-&lt;p&gt;季节性。春季往往南涝北旱，盛夏往往南旱北涝。&lt;/p&gt;
-
-&lt;p&gt;持续性。同一种灾害常连季出现。如华北常出现春夏连旱或伏秋连旱，长江中下游易出现伏秋连旱，华南常会冬春连旱。&lt;/p&gt;
-
-&lt;p&gt;交替性。不同的气象灾害常交替出现，如旱、涝交替出现。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931179.png!gorpeln&quot; alt=&quot;20230205165931179&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;27中国主要民族分布图&quot;&gt;27、中国主要民族分布图&lt;/h3&gt;
-&lt;p&gt;中国自古以来是一个多民族国家。汉族人口比重最大，约占全国人口总数91.51%；其它55个民族总人口偏少，约占全国总人口8.49%，故称其为少数民族。&lt;/p&gt;
-
-&lt;p&gt;中国各民族分布的特点是：大杂居、小聚居、相互交错居住。中国少数民族人口虽少，但分布很广，主要分布在内蒙古、新疆、宁夏、广西、西藏、云南、贵州、青海、四川、甘肃、黑龙江、辽宁、吉林、湖南、湖北、海南、台湾等省、自治区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931180.png!gorpeln&quot; alt=&quot;20230205165931180&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;28中国旅游资源分布图&quot;&gt;28、中国旅游资源分布图&lt;/h3&gt;
-&lt;p&gt;中国自然旅游资源，以名山秀水、山水风光最为重要。如五岳名山（东岳泰山、西岳华山、北岳恒山、南岳衡山、中岳嵩山），四大佛教名山（五台山、九华山、普陀山、峨眉山）和景色奇绝的黄山、庐山、石林等；桂林山水、长江三峡等；杭州西湖美景、无锡太湖风光、海南三亚的天涯海角、云南的大理、丽江、西双版纳和台湾日月潭湖光山色等，都是闻名的旅游胜地。&lt;/p&gt;
-
-&lt;p&gt;人文旅游景观有有八大古都（西安、洛阳、安阳、南京、开封、杭州、北京、郑州）、万里长城、京杭大运河、北京故宫和皇家陵园，西安秦始皇兵马俑，南京明孝陵、中山陵，苏州园林建筑，承德避暑山庄，洛阳龙门石窟，敦煌石窟壁画等，都举世闻名。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931181.png!gorpeln&quot; alt=&quot;20230205165931181&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;29中国世界遗产分布图&quot;&gt;29、中国世界遗产分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931182.png!gorpeln&quot; alt=&quot;20230205165931182&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;30中国环境保护分布图&quot;&gt;30、中国环境保护分布图&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230205165931183.png!gorpeln&quot; alt=&quot;20230205165931183&quot; /&gt;&lt;/p&gt;
 </description>
       </item>
     
