@@ -154,9 +154,9 @@
 &lt;h3 id=&quot;其他方法&quot;&gt;其他方法&lt;/h3&gt;
 &lt;p&gt;1、向 google、域名注册商 、域名解析商举报&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;cloudflare 举报：https://abuse.cloudflare.com/dmca&lt;/li&gt;
-  &lt;li&gt;google 举报：https://support.google.com/legal/answer/3110420?visit_id=638624243885343005-291301472&amp;amp;rd=1&lt;/li&gt;
-  &lt;li&gt;阿里云举报：https://report.aliyun.com/form/phishingForm&lt;/li&gt;
+  &lt;li&gt;cloudflare 举报：&lt;em class=&quot;color-gray&quot;&gt;https://abuse.cloudflare.com/dmca&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;google 举报：&lt;em class=&quot;color-gray&quot;&gt;https://support.google.com/legal/answer/3110420?visit_id=638624243885343005-291301472&amp;amp;rd=1&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;阿里云举报：&lt;em class=&quot;color-gray&quot;&gt;https://report.aliyun.com/form/phishingForm&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;2、设置 IP 黑名单&lt;/p&gt;
