@@ -2644,11 +2644,11 @@ div.contentAbstract img {
 
 @media (max-width: 992px) {
     .copyright {
-        padding: 1em 1.5em;
+        padding: 1em 2em;
     }
 
        .prevandnext {
-        padding: 1em 1.5em;
+        padding: 1em 2em;
     }
 }
 
