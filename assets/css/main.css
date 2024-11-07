@@ -625,8 +625,8 @@ li.article a:hover,li.article a:focus{
         padding: 1em 1.5em;
     }
 
-    .home {
-        homeTwo: 1em 1.5em;
+    .homeTwo {
+        padding: 1em 1.5em;
     }
 }
 
@@ -2641,6 +2641,17 @@ div.contentAbstract img {
     font-size: 0.9em;
     color: #666;
 }
+
+@media (max-width: 992px) {
+    .copyright {
+        padding: 1em 1.5em;
+    }
+
+       .prevandnext {
+        padding: 1em 1.5em;
+    }
+}
+
 
 /*.copyright a {
     color: #6666cc;
