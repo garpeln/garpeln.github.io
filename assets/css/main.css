@@ -976,7 +976,6 @@ a {
     color: #6666cc;
     text-decoration: none;
     word-break: break-all;
-    word-wrap: break-word;
 }
 
 a:hover,
@@ -2428,6 +2427,7 @@ div.contentAbstract img {
     background-color: transparent !important;
     font-style: normal !important;
     font-size: 14px !important;
+    word-wrap: break-word;
 }
 
 .color-light-gray {
@@ -2435,6 +2435,7 @@ div.contentAbstract img {
     background-color: transparent !important;
     font-style: normal !important;
     font-size: 14px !important;
+    word-wrap: break-word;
 }
 
 .color-light-gray:hover {
