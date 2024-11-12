@@ -6,6 +6,301 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
+        <title>定期自动备份又拍云存储</title>
+        <link>https://gorpeln.top/article/17280983368</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
+        <pubDate>2024-10-05</pubDate>
+        <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;数据无价，备份无忧。&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;将其他平台数据备份到不同平台的好处：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;增强数据安全性&lt;/strong&gt;：通过定期备份到GitHub，即使又拍云服务出现问题，你的数据仍然安全。这为你的数据提供了额外的一层保护，尤其是使用&lt;strong&gt;国内免费服务&lt;/strong&gt;的用户。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;便于版本管理&lt;/strong&gt;：GitHub支持Git版本控制系统，这意味着你可以轻松追踪数据的变化历史，这对于需要保存多个版本的数据集或文档非常有用。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;自动化操作&lt;/strong&gt;：使用GitHub Actions，你可以设置自动化的工作流来定期执行备份脚本。这不仅减少了手动操作的需求，还降低了人为错误的风险。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;成本效益&lt;/strong&gt;：对于小规模项目或个人开发者来说，使用GitHub作为备份存储可能比租用额外的云存储空间更经济。特别是当使用GitHub的免费层级时。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;易于访问和分享&lt;/strong&gt;：GitHub上的数据可以通过简单的链接分享给他人，这对于公开数据集或开源项目尤其有益。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;预览&quot;&gt;预览&lt;/h3&gt;
+&lt;p&gt;又拍云目录：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856740.png!gorpeln&quot; alt=&quot;20241005111856740&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;github目录：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856741.png!gorpeln&quot; alt=&quot;20241005111856741&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;操作示例&quot;&gt;操作示例&lt;/h3&gt;
+&lt;h4 id=&quot;1-新增-workflow-yml-文件&quot;&gt;1. 新增 Workflow YML 文件&lt;/h4&gt;
+&lt;p&gt;upyun_images_sync/.github/workflows/sync-images.yml&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: Sync Images from UpYun to GitHub
+
+on:
+  schedule:
+    - cron: &apos;0 0 * * 3&apos;  # 每周三凌晨 0 点运行
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  sync-images:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: &apos;3.x&apos;
+
+    - name: Install dependencies
+      run: |
+        pip install gitpython
+
+    - name: Run sync script
+      env:
+        UPYUN_FTP_HOST: $
+        UPYUN_FTP_USER: $
+        UPYUN_FTP_PASSWORD: $
+        UPYUN_FTP_PATH: $
+        LOCAL_DOWNLOAD_PATH: ./tmp
+        REPO_PATH: ./repo
+        GH_TOKEN: $
+        REPO_OWNER: $
+        REPO_NAME: $
+        BRANCH_NAME: $
+      run: |
+        python3 sync_images.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-新建-python-同步脚本&quot;&gt;2. 新建 Python 同步脚本&lt;/h4&gt;
+&lt;p&gt;upyun_images_sync/sync_images.py&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#!/usr/bin/env python3
+# -*- coding: UTF-8 -*-
+
+import os
+from ftplib import FTP
+import git
+import shutil
+
+class MyFTP:
+    def __init__(self, host, port=21):
+        self.host = host
+        self.port = port
+        self.ftp = FTP()
+        self.ftp.encoding = &apos;utf8&apos;
+        self.file_list = []
+
+    def login(self, username, password):
+        try:
+            self.ftp.connect(self.host, self.port)
+            self.ftp.login(username, password)
+            print(f&quot;成功登录到 {self.host}&quot;)
+            print(f&quot;当前工作目录: {self.ftp.pwd()}&quot;)
+        except Exception as err:
+            print(f&quot;FTP 连接或登录失败，错误描述为：{err}&quot;)
+            sys.exit(1)
+
+    def download_file(self, local_file, remote_file):
+        if os.path.exists(local_file):
+            print(f&quot;{local_file} 已存在，跳过下载&quot;)
+            return
+        try:
+            print(f&quot;下载文件 {remote_file} 到 {local_file}&quot;)
+            buf_size = 1024
+            with open(local_file, &apos;wb&apos;) as file_handler:
+                self.ftp.retrbinary(f&apos;RETR {remote_file}&apos;, file_handler.write, buf_size)
+        except Exception as err:
+            print(f&quot;下载文件出错，出现异常：{err}&quot;)
+
+    def download_file_tree(self, local_path, remote_path):
+        try:
+            print(f&quot;尝试切换到远程目录: {remote_path}&quot;)
+            self.ftp.cwd(remote_path)
+            print(f&quot;成功切换到远程目录: {remote_path}&quot;)
+        except Exception as err:
+            print(f&quot;远程目录 {remote_path} 不存在，继续... 具体错误描述为：{err}&quot;)
+            return
+
+        if not os.path.isdir(local_path):
+            os.makedirs(local_path)
+            print(f&quot;创建本地目录 {local_path}&quot;)
+
+        print(f&quot;当前工作目录: {self.ftp.pwd()}&quot;)
+
+        # 列出目录内容
+        remote_files = self.ftp.nlst()
+        print(f&quot;远程目录内容: {remote_files}&quot;)
+
+        for remote_file in remote_files:
+            local = os.path.join(local_path, remote_file)
+            if remote_file in [&apos;.&apos;, &apos;..&apos;]:
+                continue
+            try:
+                self.ftp.cwd(remote_file)
+                print(f&quot;下载目录：{remote_file}&quot;)
+                self.download_file_tree(local, os.path.join(remote_path, remote_file))
+                self.ftp.cwd(&quot;..&quot;)
+            except Exception:
+                print(f&quot;下载文件：{remote_file}&quot;)
+                self.download_file(local, os.path.join(remote_path, remote_file))
+
+    def close(self):
+        print(&quot;FTP退出&quot;)
+        self.ftp.quit()
+
+def sync_to_github(repo_path, branch_name):
+    if os.path.exists(repo_path):
+        shutil.rmtree(repo_path)
+    os.makedirs(repo_path)
+
+    repo_url = f&quot;https://{GH_TOKEN}@github.com/{REPO_OWNER}/{REPO_NAME}.git&quot;
+    print(f&quot;克隆仓库: {repo_url}&quot;)
+    try:
+        repo = git.Repo.clone_from(repo_url, repo_path, branch=branch_name)
+        print(f&quot;克隆仓库到 {repo_path}&quot;)
+    except git.exc.GitCommandError as e:
+        print(f&quot;克隆仓库失败: {e}&quot;)
+        return
+
+    images_dir = os.path.join(repo_path, &apos;images&apos;)
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
+
+    shutil.copytree(LOCAL_DOWNLOAD_PATH, images_dir, dirs_exist_ok=True)
+    print(f&quot;复制文件到 {images_dir}&quot;)
+
+    repo.git.add(all=True)
+    if repo.is_dirty():
+        repo.index.commit(&quot;Sync images from UpYun&quot;)
+        origin = repo.remote(name=&apos;origin&apos;)
+        origin.push()
+        print(&quot;推送更改到 GitHub 仓库&quot;)
+    else:
+        print(&quot;没有更改需要提交&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    # 从环境变量中读取配置
+    UPYUN_FTP_HOST = os.getenv(&apos;UPYUN_FTP_HOST&apos;)
+    UPYUN_FTP_USER = os.getenv(&apos;UPYUN_FTP_USER&apos;)
+    UPYUN_FTP_PASSWORD = os.getenv(&apos;UPYUN_FTP_PASSWORD&apos;)
+    UPYUN_FTP_PATH = os.getenv(&apos;UPYUN_FTP_PATH&apos;, &apos;/&apos;)
+    LOCAL_DOWNLOAD_PATH = os.getenv(&apos;LOCAL_DOWNLOAD_PATH&apos;, &apos;./tmp&apos;)
+    REPO_PATH = os.getenv(&apos;REPO_PATH&apos;, &apos;./repo&apos;)
+    GH_TOKEN = os.getenv(&apos;GH_TOKEN&apos;)
+    REPO_OWNER = os.getenv(&apos;REPO_OWNER&apos;)
+    REPO_NAME = os.getenv(&apos;REPO_NAME&apos;)
+    BRANCH_NAME = os.getenv(&apos;BRANCH_NAME&apos;, &apos;master&apos;)
+
+    # 创建 FTP 对象
+    my_ftp = MyFTP(UPYUN_FTP_HOST)
+    # 登录 FTP 服务器
+    my_ftp.login(UPYUN_FTP_USER, UPYUN_FTP_PASSWORD)
+    
+    # 下载目录
+    my_ftp.download_file_tree(LOCAL_DOWNLOAD_PATH, UPYUN_FTP_PATH)
+    
+    # 关闭 FTP 连接
+    my_ftp.close()
+
+    # 同步到 GitHub
+    sync_to_github(REPO_PATH, BRANCH_NAME)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3-授予-workflow-读写权限&quot;&gt;3. 授予 Workflow 读写权限&lt;/h4&gt;
+&lt;p&gt;将本地的项目提交到github，然后设置Workflow 读写权限&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856742.png!gorpeln&quot; alt=&quot;20241005111856742&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-新增-secrets-变量&quot;&gt;4. 新增 Secrets 变量&lt;/h4&gt;
+&lt;p&gt;在github上设置Secrets 变量&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856743.png!gorpeln&quot; alt=&quot;20241005111856743&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;序号&lt;/th&gt;
+      &lt;th&gt;变量名&lt;/th&gt;
+      &lt;th&gt;释义&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;UPYUN_FTP_HOST&lt;/td&gt;
+      &lt;td&gt;又拍云 FTP 主机地址&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;UPYUN_FTP_USER&lt;/td&gt;
+      &lt;td&gt;又拍云 FTP 用户名&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;UPYUN_FTP_PASSWORD&lt;/td&gt;
+      &lt;td&gt;又拍云 FTP 密码&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;UPYUN_FTP_PATH&lt;/td&gt;
+      &lt;td&gt;又拍云 FTP 路径&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;GH_TOKEN&lt;/td&gt;
+      &lt;td&gt;GitHub 个人访问令牌&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;REPO_OWNER&lt;/td&gt;
+      &lt;td&gt;仓库所有者&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;REPO_NAME&lt;/td&gt;
+      &lt;td&gt;仓库名称&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;BRANCH_NAME&lt;/td&gt;
+      &lt;td&gt;分支名称（默认为 master）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;变量详解：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_HOST&lt;/code&gt;：参考&lt;a href=&quot;https://help.upyun.com/2015/12/28/%25e5%25a6%2582%25e4%25bd%2595%25e4%25bd%25bf%25e7%2594%25a8-ftp%25e3%2580%2581api-%25e4%25b8%258a%25e4%25bc%25a0%25e6%2596%2587%25e4%25bb%25b6/&quot;&gt;又拍云文档&lt;/a&gt;，直接使用&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;v0.ftp.upyun.com&lt;/code&gt;就行了&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_USER&lt;/code&gt;：格式为 &lt;strong&gt;operator/bucket&lt;/strong&gt;，在又拍云 - 云存储 - 选择对应的bucket点击配置 - 存储管理 - 操作员授权 - 自己添加操作用户名和密码，假设你的又拍云云储存bucket的名称为upai-img，自定义的用户名为user，密码为123456，则UPYUN_FTP_USER就是 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;user/upai-img&lt;/code&gt;，如果你看不懂我说的，参考&lt;a href=&quot;https://techs.upyun.com/videos/cdnpage/creating_storage.html&quot;&gt; 又拍云视频教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_PASSWORD&lt;/code&gt;：就是上面你自己设置的 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;123456&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856744.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_PATH&lt;/code&gt;：直接使用 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;/&lt;/code&gt; （根目录）就行了&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;：选择github的 Settings - 点击右侧列表最下面的 Developer Settings - Personal access tokens - tokens (classic) - Generated new token (classic)，Note名字可以随意，Expiration时间选择 no Expiration,下面权限全选了，点击Generated token 就生成了想要的token，记得保存，他只显示一次，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;abc_123456789pUS123454321WmJkE987654321&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856745.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPO_OWNER&lt;/code&gt;：就是你的github的用户名，我在github给这个项目创建仓库为https://github.com/gorpeln/upyun_images_sync，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPO_NAME&lt;/code&gt;：仓库链接后面的就是仓库名，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;upyun_images_sync&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856746.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BRANCH_NAME&lt;/code&gt;：项目分支名，一般为master/main，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>博客常见问题</title>
+        <link>https://gorpeln.top/article/17265361548</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17265361548</guid>
+        <pubDate>2024-09-17</pubDate>
+        <description>
+&lt;div id=&quot;blog-problem&quot;&gt;
+    &lt;p id=&quot;blog-problem-title&quot;&gt;博客目标？&lt;/p&gt;
+    &lt;p id=&quot;blog-problem-des&quot;&gt;简洁、高效&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;blog-problem&quot;&gt;
+    &lt;p id=&quot;blog-problem-title&quot;&gt;其他问题？&lt;/p&gt;
+    &lt;p id=&quot;blog-problem-des&quot;&gt;还在整理中...&lt;/p&gt;
+&lt;/div&gt;
+</description>
+      </item>
+    
+      <item>
         <title>网站被恶意镜像 — 如何保护博客流量及预防</title>
         <link>https://gorpeln.top/article/17245056864</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
@@ -1469,592 +1764,6 @@ A：据我所知，Vercel 使用了 Google Cloud 的云服务，距离大陆地�
 &lt;p&gt;&lt;strong&gt;Q：umami 后续如何升级？&lt;/strong&gt; &lt;br /&gt;
 A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码仓库更新时，Vercel 会帮你自动部署上线最新版本的 umami。你可以不定期访问你 Fork 后的代码仓库，选中 Fetch upstream 从 umami 官方仓库同步最新的代码后即可自动升级。当然，你还可以从一开始直接部署官方仓库的代码，完全跟随官方版本迭代升级。&lt;/p&gt;
 
-</description>
-      </item>
-    
-      <item>
-        <title>全飞秒近视手术过程和恢复记录</title>
-        <link>https://gorpeln.top/article/16827504397</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16827504397</guid>
-        <pubDate>2023-04-29</pubDate>
-        <description>&lt;p&gt;4 月中旬做了一个&lt;strong&gt;全飞秒&lt;/strong&gt;近视手术，在这里记录一下当天、术后的感受，希望可以给到好奇的同学一些参考。&lt;/p&gt;
-
-&lt;h3 id=&quot;手术当天&quot;&gt;手术当天&lt;/h3&gt;
-&lt;p&gt;长话短说，实际手术过程 2 分钟搞定。&lt;/p&gt;
-
-&lt;p&gt;3 月份突发奇想不戴眼镜是不是很爽，然后就去检查了下适合做什么的，好多台机器验了下眼睛，最后发了 2 瓶眼药水在术前 3 天开始滴。&lt;/p&gt;
-
-&lt;p&gt;到了做的那天，先去交钱，验光，然后排队等到叫，换上手术服，不能带手机，眼睛等外部东西，先洗眼睛 10mim，不停用药水去冲，挺酸爽。然后给脸部用酒精全消毒，接着坐到手术室门口等叫号。&lt;/p&gt;
-
-&lt;p&gt;叫到号后，会先在眼睛里面滴麻药眼药水，然后就扶进去了，躺到机器上，一只眼睛一只眼睛做，过程就是盯着绿灯看 20s，然后告诉你非常棒，最后一边几秒钟用镊子夹出切割体，最后用机器观察了下，没问题直接出手术室。&lt;/p&gt;
-
-&lt;p&gt;出来以后，出来后眼睛不疼，不过开始流泪了，手里拿着眼药水，分别每 5 分钟累计滴 4 次，这个过程开始时候是那种想哭流泪的感觉，然后是又困又想哭那种感觉，最后是很困眼睛有点儿酸胀感觉。慢慢发现看远处东西相比戴眼镜时候要有 50%效果了，不过基本有一种朦胧美，近处的东西基本看不清，老花眼感觉，药水滴完以后，医生检查下，没有问题就回家了，说是明天会逐步恢复。&lt;/p&gt;
-
-&lt;p&gt;回家路上，发现所有灯光都有一层蒙雾感，好比多了一个下雨过后背景感觉，同样很困，到家以后躺着又不想睡觉了，但是也不想也看不清手机，听了一小时老郭的济公传，笑哈哈，就出门吃饭了。&lt;/p&gt;
-
-&lt;p&gt;回到家，发现手机看得清了，不过边框全部加了一层雾化美，今天晚 10 点前睡觉，期待明天起床世界光明，Hello World！&lt;/p&gt;
-
-&lt;h3 id=&quot;手术后第一天&quot;&gt;手术后第一天&lt;/h3&gt;
-&lt;p&gt;昨晚睡得早，早上7 点就醒了，眯眯眼开了个小灯发现房间里面东西全部都清楚了，甚至远处书柜的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JavaScript 权威指南&lt;/code&gt;这本书名都看清了，很神奇，有一种瞎子复明的神奇感觉。&lt;/p&gt;
-
-&lt;p&gt;立马起床拉开窗帘，看到远处一人斜挎着黑色背包勾着腰边走路边看手机，环卫工人带着黄色帽子穿着橙色衣服在扫街，对面小河边一人戴着淡黄色帽子白色上衣黑色裤子白色鞋子在跑步，应该以前戴眼镜也看得到这种，不过没有怎么 Care 就过去了，早上远处视力应该恢复到术前水平了，但是近处看手机还有强自发光物体文字还是有一圈淡淡的光晕，不习惯但挺好看。&lt;/p&gt;
-
-&lt;p&gt;上午开车去进行了第一天复查，后面一周一月三月半年都需要去复查下，可以给这个时间给大伙同步状态，到了医院检查了下视力，居然双眼 1.0，不敢想象摘了眼镜我居然可以看到这么小的 E，然后医生检查下，说恢复得不错，给安排了下接下来一周要滴的眼药水，一共 3 瓶，累积 4 到 6 次的，然后就离开了。&lt;/p&gt;
-
-&lt;p&gt;注意事项是白天外出需要带墨镜，在室内无所谓，但是我想着防止揉眼睛昨天给买了一个护目镜，戴着还挺舒服，睡觉也可以戴着，从医院出来，想着也不想看手机，就去了散散步，外面热但是很凉快有风，11 点出去，走了 4 公里样子然后找了山顶一个咖啡厅坐了坐，看了看书，今天看纸质书以及不发光的 Kindle 感觉和之前戴眼镜没啥区别了，看手机文字发光由于有光晕也没怎么看，晚上回家，发现路上红绿灯还是有些光晕，不过比昨天弱很多了，应该几天后会正常。&lt;/p&gt;
-
-&lt;p&gt;第一天大概就这样了，不过有一个事情很麻烦，就是眼睛 7 天不能碰水，只能找理发店帮忙洗头发，其他的除了眼药水还挺舒服，和正常没啥区别了。明天应该可以正常上班，不过不能久看电脑和敲代码，请个假在家办公也行。&lt;/p&gt;
-
-&lt;h3 id=&quot;手术后第一周&quot;&gt;手术后第一周&lt;/h3&gt;
-&lt;p&gt;今天去做了术后一周复查，双眼1.2说是恢复挺好，整体视力是和手术前戴眼镜差不多了，不过还是不能久看电脑屏幕，需要时不时歇一歇才能缓解，此外看红绿灯还有一点光晕，不过都属于正常情况，一个月后预计会正常。&lt;/p&gt;
-
-&lt;p&gt;这周第一天休假了，在家处理简单事情，打开电脑那一刻一种凹面镜感觉，不太能适应，同时不能久看，带上墨镜舒服很多，不过有些滑稽，这天除去发光体不适应，其他的都正常。&lt;/p&gt;
-
-&lt;p&gt;第二天正常上班，也即手术后第三天，特地将电脑手机系统都调大一个度，上午基本能适应，下午眼睛还是不能久看，加上办公室灯光反光屏幕更加干扰，还好下午有几个技术方案评审，给过去了。防止明天继续不适应，特地jd买了以前开车防眩光夜视镜，隔天早上就到了。&lt;/p&gt;
-
-&lt;p&gt;后面3天上班，加上夜视镜的过滤强光，以及视觉能力本身逐步的恢复，到周五的时候终于差不多满足之前上班时候戴眼镜状态了，不过会刻意不过度用眼，看久了电脑还是会眼睛累，特地也问了下之前做过朋友，属于正常情况，继续等恢复。&lt;/p&gt;
-
-&lt;p&gt;关于青年人的眼睛近视，其实正常用眼在你成年后，近视度数基本上不会太涨，和医生交流说大部分度数变坏都是晚上用手机刷剧打游戏，特别是熄灯后忘记时间，平时看电脑办公属于长距离不会太伤害眼睛的。&lt;/p&gt;
-
-&lt;p&gt;这个恢复过程，有三个东西帮助很大。&lt;br /&gt;
-第一个必须是&lt;strong&gt;夜视镜&lt;/strong&gt;，超级推荐开车朋友搞一个，白天可以过滤强阳光，看到的树叶都是加了滤镜那种舒服，晚上可以过滤对方刺眼车光，对于杭州这种光污染比较严重的城市，简直是神器。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039121.jpg!gorpeln&quot; alt=&quot;20230429144039121&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第二个是一个叫做海露的&lt;strong&gt;滴眼液&lt;/strong&gt;，其实一共有开3个滴眼液，另外两个用于消炎的，海露这个用于缓解疲劳和干眼的，滴着挺舒服的，戴眼镜或者隐形的朋友可以试试，不过需要找到适合自己情况的种类。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039122.jpg!gorpeln&quot; alt=&quot;20230429144039122&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第三个就是&lt;strong&gt;墨镜&lt;/strong&gt;了，将之前的近视墨镜换成了平视的镜片，白天强光或者外出必备，之前戴眼镜时去眼镜店配了一个近视墨镜（其实有数据淘宝更便宜），在外面太阳场景玩远比带着普通眼镜要舒服太多了。&lt;/p&gt;
-
-&lt;p&gt;基本就是这样的体验，最近还想着养成一个晚11点前睡觉习惯，看能坚持多久。&lt;/p&gt;
-
-&lt;h3 id=&quot;手术后第一个月&quot;&gt;手术后第一个月&lt;/h3&gt;
-&lt;p&gt;全飞秒近视手术后的第 40 天记录，上周末有去医院进行术后复查，将我的一个月视觉感受记录于此。&lt;/p&gt;
-
-&lt;p&gt;整体状态，视力检查两只眼睛 1.2，当前看远处风景，近处电脑均恢复到之前戴眼镜的效果，较上次一周后的明显区别是「眼睛看久了电脑也不累了，外出假如不是大太阳，不带墨镜也习惯了」，不过有 2 ～ 3 次早上起床眼睛感觉还是有点儿干涩，之前一周左右是眼睛看久了屏幕会花需要休息，外出需戴墨镜。&lt;/p&gt;
-
-&lt;p&gt;这个月还是每天 4 次的滴眼药水，海露和丽爱思，用于眼睛保湿防干涩，后面就只需滴海露，海露滴完蛮舒服，以后应该也会常备着代替日常眼药水。&lt;/p&gt;
-
-&lt;p&gt;不过视力好了也有一个担心，由于没有啥不适，敲代码会容易和之前一样上瘾，一天 9 小时都对着电脑有恃无恐，后面这一块需注意，每小时通过手表提醒休息下，需要克制。&lt;/p&gt;
-
-&lt;p&gt;不戴眼镜的生活还是蛮爽的，身体好比少了一个外部设备的轻松感，不过半年内还不能游泳，等待下次来更新半年后感受。&lt;/p&gt;
-
-&lt;h3 id=&quot;答好友疑问&quot;&gt;答好友疑问&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;为什么要做手术？&lt;/strong&gt;  &lt;br /&gt;
-其实我是属于比较喜欢尝试的人，同时当时设备了解到已经很先进了，加上医生也牛逼，后面想去玩玩冲浪已经刺激运动戴眼镜真不方便，已经戴了 10 年眼镜了，觉得还年轻，不想老了遗憾而已。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;是否可以推荐医院和医生？&lt;/strong&gt;    &lt;br /&gt;
-抱歉这种属于有风险的事情，平安还好，出事了就麻烦了，很建议想做的去医院检查下，医生会有专业建议能不能做，以及用什么方案，同时并不是越贵越好，而是越适合自己的越好，当前每种方案技术其实很先进了。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;你不怕后遗症吗？&lt;/strong&gt;   &lt;br /&gt;
-后遗症我在文章后面会贴一下，一般是干眼症啥的，不过滴眼药水可以慢慢缓解变好，同时我不是太在乎短期问题，更在乎长期不戴眼镜的体验，同时肯定是有后遗症的，只不过带来的好处会大于问题风险以及钱的成本。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;马化腾不做我不做？&lt;/strong&gt;    &lt;br /&gt;
-其实眼科手术并不是想做就做，还取决于年龄、角膜厚度、眼睛本身的健康状态很多因素决定，会有一个比较全面的术前检查。此外其实近视手术定义上并不是治病的那种手术，居然被定义成“医美类型”，好比整容一样，并不是所有的整容医生都会自己去整一下一样。&lt;/p&gt;
-
-&lt;h3 id=&quot;万事需谨慎&quot;&gt;万事需谨慎&lt;/h3&gt;
-&lt;p&gt;有类似诉求同学，可以小红书或者 YouTube 先了解一波来做功课，这里我找到几张图用于分析手术对比，优缺点，后遗症，注意事项，贴到下面，不过万事须谨慎，这东西还是有极低概率的风险。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039123.jpg!gorpeln&quot; alt=&quot;20230429144039123&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039124.jpg!gorpeln&quot; alt=&quot;20230429144039124&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039125.jpg!gorpeln&quot; alt=&quot;20230429144039125&quot; /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230429144039126.jpg!gorpeln&quot; alt=&quot;20230429144039126&quot; /&gt;&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>高德地图产品使用体验报告</title>
-        <link>https://gorpeln.top/article/16786112870</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16786112870</guid>
-        <pubDate>2023-03-12</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;编辑导语：导航类软件，已经成为了我们生活中必不可少的一大工具，能够解决我们对陌生环境的一些痛点。本文以高德地图为例，分享了该软件的使用感受，总结了高德地图的用户体验感，一起来看看。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;一产品概况&quot;&gt;一、产品概况&lt;/h3&gt;
-&lt;h4 id=&quot;1-体验环境&quot;&gt;1. 体验环境&lt;/h4&gt;
-&lt;p&gt;产品体验：高德地图&lt;/p&gt;
-
-&lt;p&gt;软件版本：11.13.0.2925&lt;/p&gt;
-
-&lt;p&gt;手机系统：MIUI 12.5.10&lt;/p&gt;
-
-&lt;p&gt;体验人：gorpeln&lt;/p&gt;
-
-&lt;h4 id=&quot;2-产品概况&quot;&gt;2. 产品概况&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Slogan&lt;/em&gt;&lt;/strong&gt;：「导航专业，数据准确」&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;产品介绍&lt;/em&gt;&lt;/strong&gt;：是一款高德软件有限公司旗下的一款地图导航类APP。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;官方介绍&lt;/em&gt;&lt;/strong&gt;：高德地图(Amap) 是一款免费的地图导航产品，由电子地图、导航和LBS服务解决方案提供商高德软件(纳斯达克:Amap)提供。高德地图数据覆盖中国大陆及香港澳门，遍及337个地级2857个县级以上行政区划单位；导航支持GPS、基站、网络等多种方式。可自动生成“最短”“最快”“最省钱”等多种路线规划以供选择，可根据实时路况选择最优公交/驾车出行路线。&lt;/p&gt;
-
-&lt;h4 id=&quot;3-产品发展历程&quot;&gt;3. 产品发展历程&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（1）第一阶段：艰辛探索和技术积累（2002年——2004年）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;高德的创业团队从20世纪90年代起就已开始涉足GPS领域的工作，2002年7月，高德软件有限公司成立后，高德的研发团队经过艰辛探索，根据当时国家基础地图数据的特点，历经半年的时间，终于开发完成一套具有自主知识产权的数据采集工具和编辑处理平台。&lt;/p&gt;
-
-&lt;p&gt;技术的探索和创新给高德带来了商业契机。2002年8月，高德与爱信AW、富士Ten等公司合资成立北京艾迪菲导航科技有限公司，开始致力于车载导航电子地图销售市场的开拓。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2002年7月，高德软件有限公司成立。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2002年8月，高德与爱信AW、富士Ten等公司合资成立“北京艾迪菲导航科技有限公司”。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2003年1月，高德开发完成具有自主知识产权的数据采集工具和编辑处理平台。&lt;/p&gt;
-
-&lt;p&gt;2004年6月，高德成为全国第一家获得导航电子地图甲级测绘资质的民营企业，并通过ISO9001认证。获得甲级测绘资质后，高德开始大规模采集数据，逐步构建了一个优质的数据库。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2004年6月，高德成为国家甲级测绘资质单位并成为全国第一家获得导航电子地图甲级测绘资质的民营企业。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（2）第二阶段：发展壮大和引领行业（2005年——2009年）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;高德获得导航电子地图甲级测绘资质后，在进行导航电子地图数据库内容和导航引擎研发、积累的同时，致力于探索和创新商业模式，为客户提供一体化解决方案，拓展业务领域。&lt;/p&gt;
-
-&lt;p&gt;高德领先的核心技术和创新的商业模式使高德的产品服务在汽车导航应用、无线互联网位置服务应用、政府和企业应用三大业务领域取得优异的成绩，也确立了高德在中国导航产业的领先地位。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2005年8月，高德收购中国领先的基础地图服务提供商北京图盟科技有限公司。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2005年8月，高德开始向宝马、本田等车型提供导航电子地图。并为新浪和Google等网站提供本地搜索服务。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2007年5月，高德全资收购厦门纳维特科技有限公司。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2007年10月，完成西藏数据采集作业，标志着高德完成覆盖全国的实景数据采集。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2009年1月，高德成为2010年上海世博会导航地图及应用服务项目独家赞助商。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（3）第三阶段：成功上市，全力转型（2010年——2014年）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;2010年7月1日，高德在美国纳斯达克全球精选市场成功上市，股票代码为AMAP，实现了公司发展新的历史性跨越。&lt;/p&gt;
-
-&lt;p&gt;【大事记】2010年7月1日，高德控股有限公司（AutoNaviHoldingsLimited）在美国纳斯达克全球精选市场成功上市，股票代码为AMAP。&lt;/p&gt;
-
-&lt;p&gt;2010年9月，高德获得国家测绘局颁发的《互联网地图服务甲级测绘资质》，这是高德继获得导航电子地图甲级测绘资质、航空摄影甲级测绘资质后的第三个甲级测绘资质。10月，高德荣登2010德勤高科技、高成长中国50强。&lt;/p&gt;
-
-&lt;p&gt;【大事记】高德荣登2010德勤高科技、高成长中国50强。&lt;/p&gt;
-
-&lt;p&gt;世博会期间，所有世博会指定导航终端设备里都装载了高德地图，不论是城际间，还是世博园区内，游客们都能充分感受高德地图在道路导航、实时交通、路线规划等方面的便利，为所有参展方和参观者营造难忘的世博体验。&lt;/p&gt;
-
-&lt;p&gt;高德也由此获得由中国地理信息系统协会颁发的“上海世博会GIS服务特殊贡献单位”奖。&lt;/p&gt;
-
-&lt;p&gt;2012年9月，高德成为苹果在中国的地图服务提供商，并于9月24日正式上线服务。这大大的加快了高德在整个移动互联网领域前进的步伐，在整个产业界引起了巨大的轰动。&lt;/p&gt;
-
-&lt;p&gt;当月，高德公司荣获中国卫星导航定位协会颁发的“中国卫星导航与位置服务行业2012最具价值品牌”，高德地图凭借其出色的产品性能和用户体验，荣获2012中国互联网大会“最佳实践”奖。2014年02月，阿里以11亿美元现金完购高德。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（4）第四阶段：阿里全资收购高德（2014年4月至今）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;2014年4月，高德正式与阿里巴巴集团达成并购协议。阿里将以每股普通股5.25美元或每股美国存托股份(ADS)21.00美元的收购对价收购高德其余72%的股份。&lt;/p&gt;
-
-&lt;p&gt;高德公司的经营范围是电子出版物批发、网上销售；增值电信业务中的信息服务业务；第二类增值电信业务中的呼叫中心业务；测绘服务；设计、制作、代理、发布广告；货物进出口、技术进出口、代理进出口；销售计算机软硬件及外围设备；技术开发、技术转让、技术咨询、技术服务等。&lt;/p&gt;
-
-&lt;h3 id=&quot;二市场分析&quot;&gt;二、市场分析&lt;/h3&gt;
-&lt;h4 id=&quot;1-中国手机地图发展现状&quot;&gt;1. 中国手机地图发展现状&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447681.png!gorpeln&quot; alt=&quot;图2-1 2015-2020年中国手机地图用户规模及预测&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;根据艾媒网数据显示，中国手机地图的用户规模可以看出来，使用手机地图的人数规模不断上涨，从2015年到2016年的增长速度最快，有9.8% 的增长速度，这一年与高德地图、百度地图上线后功能的完善有很大关系，后期因为手机地图市场逐渐饱和，用户增长也不是那么明显，但是使用手机地图的人数依然上涨，趋势依然明显，根据艾媒网数据预测预计2022年使用手机地图的用户有望超过8.5亿人。&lt;/p&gt;
-
-&lt;p&gt;小结：手机地图的用户数量从2015年的6.05亿增长到2020年的7.68亿，增长了近30%，预计到2022年末增长率可达40%，近些年逐渐速度放缓，这种现象同很多互联网产品一样，前期市场处于蓝海领域，地图导航技术不够专业，相应的服务不够完善，增长空间大，而后期在产品定位用户需求不断精准，地图定位、导航、大数据等专业技术不断发展，致使产品用户数量在不断增加，而后期市场趋于饱和，增速逐渐减缓。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447682.jpeg!gorpeln&quot; alt=&quot;图2-2 2020 Q3季度中国手机地图APP活跃量&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;从数据来看中国高德地图和百度地图占据的用户数量是最多的，而腾讯地图和搜狗地图占据的用户数量明显是没有高德和百度的用户数量大。&lt;/p&gt;
-
-&lt;p&gt;而数据背后真实的原因在于高德地图依托阿里系内部资源合作和AI技术支持，连接饿了么口碑为用户提供本地生活服务功能，不断完善功能产品，提高地理信息精确度，在市场竞争中占据有利地位，综合品牌竞争力行业内属于领先地位。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447683.jpg!gorpeln&quot; alt=&quot;图2-3 主要手机地图用户认知度&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2019年第三季度主要手机地图产品用户认知方面，高德地图依托阿里系生活服务、移动出行资源和车载导航的普及，用户认知度排名第一，为88.3%，百度地图作为百度旗下重要产品，在语音智能，无人驾驶等领域具有重要地位，用户认知度紧随其后为86.7%。&lt;/p&gt;
-
-&lt;p&gt;总结：通过分析中国手机地图市场现状可以发现，高德地图的使用情况和市场占有率都是最好的，原因在于高德地图在驾车、公交、步行、骑行、打车甚至是火车导航等功能方面不断完善，特别是准确的公交地铁信息，以及驾车时候的智能语音系统提醒限速、摄像头、红绿灯等一系列的功能的不断完善，用户的使用产品的体验在不断增强，用户数量在逐步积累增加。&lt;/p&gt;
-
-&lt;p&gt;发展预测：随着大数据、区块链等技术的发展，人们越来越多的使用地理地图，和基于地理位置相关的服务，并且在中国地图应用活动用户数已接近8亿，且增速减缓，中国地图应用行业步入成熟期。&lt;/p&gt;
-
-&lt;p&gt;用户使用手机地图的需求主要在两大方面：一方面，未来手机地图场景化应用在面向在线旅行、移动出行的需求越来越大，另一方面，针对无人驾驶，车联网等新型产品也成为地图行业提供增量空间，因此后期中国手机地图的发展方向将会在完善的生态体系，人工智能方向不断发展。&lt;/p&gt;
-
-&lt;h4 id=&quot;2-行业宏观环境分析pest&quot;&gt;2. 行业宏观环境分析（PEST）&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（1）【P】政治环境&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;2017年7月1日起正式施行《中华人民共和国 测给法》，加强对互联网地图服务的监管 严格了用于测纶的无人机准人制度。促进了 地理信息成果的共享和应用：&lt;/p&gt;
-
-&lt;p&gt;2018年发改者及地方政府发、多项法规，为 自动驾驶保驾护航。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（2）【E】经济环境&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;我国旅游业、移动出行、生活服务等型快的調 费市场为手机地图提供增量空间；我国汽车保有最逐年增长，带动了地图企业车 載导航硬件设备市场的发展；我国布局车联网，为手机地图行业需来新的增涨空间。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（3）【S】社会环境&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;我国城市公共交通拥堵现象严重，地图企业 与交通部门合作。推出“交通大脑”，缓解交通紧张状态我国消费升级，旅游成为居民的日常消费。使用手机地图查询量点信息成为眼游常态；中国提出了“中国制造2025”，具体到汽车 领城，无人驾驶。新能源汽车等新型慢式生机物物。手机地国赋前汽车导航，提供两藏度服务。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（4）【T】技术环境&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用户参与地理信息收集，并将地照POI数据更新及交通路况等信息上传至平台；我国地理测绘技术的进步、北斗卫星导航系统的完善，大大提高手机地图信息的准确性和全面性：人工智能、VR技术的发展，提高了地离信息的准确度。&lt;/p&gt;
-
-&lt;p&gt;总结：从中国手机地图的行业宏观环境分析来看，中国手机地图的发展前景还是不错的，从政治和社会环境来看，针对紧张的交通用户的环境，搭建起手机地图导航的管理体系是非常有必要的，现在的技术手段和经济环境来看，大力研发技术所能投入的资本是不断增加的，不论是国家还是企业都在这方面投入的资本都很大。&lt;/p&gt;
-
-&lt;h4 id=&quot;3-商业模式&quot;&gt;3. 商业模式&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（1）对于与地图相关商家的增值服务&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;高德地图通过实时交通路况、在线导航和第三方生活服务资源整合等增值服务，致力于打造以位置为纽带整合诸多第三方信息及商务服务, 占领更多的智能终端，将各类生活服务、电子商务融合其中，最终一站式解决用户在移动生活中的种种需求，发展出海量用户。借助庞大的用户规模与活跃的客户群吸引商家，形成资金回流，其中主要有以下三种方式：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;为本地生活服务商家提供基于位置服务，获取服务费用&lt;/strong&gt;  &lt;br /&gt;
-  高德公司提供数据以按期收取服务费或授权费并且根据订单的完成数量收取一定利润分成，以获得稳定现金流。比如高德在地图版块也增添了“出租车”业务，与滴滴打车、快的打车同时合作，获得服务费用及分成。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;通过搜索项目获得广告费用&lt;/strong&gt;   &lt;br /&gt;
-  首先，高德地图效仿百度搜索引擎的商业模式，采用关键词搜索竞价排名的方式，使竞价高的商家获得更多关注并收取费用。另外，高德地图在手机某些项目中划出一部分作为广告区域，由商家竞价获得投放权以获得服务费。最后，高德地图建立大数据库对搜索数据进行深度挖掘，为商家进行广告定点投放、精准市场营销提供数据支持，获得相应咨询费。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;面向地图标示点商家的增值服务&lt;/strong&gt;  &lt;br /&gt;
-在大用户基数下为商家提供不同层次的特殊标示服务，打开某地区地图时，该商家将会有突出的展示，依据地图展示层次收取相应费用，将为商家获得更多关注。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;（2）手机预装软件和与运营商合作客户端下载软件&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;公司与三星、摩托罗拉等众多手机终端厂商合作，为其提供手机预装导航数据和软件。为了使手机消费者使用更便利，手机厂商会有选择的预装部分优秀的软件，于是就必然要向软件提供商支付一定的授权费用，但是随着免费软件的普及，该份额在逐渐减少。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（3）流量变现&lt;/strong&gt; &lt;br /&gt;
-依据互联网的特性，免费的产品还是会占据主流，取得更多的市场份额，创造更大的用户规模，最后通过流量变现实现盈利模式。高德将会与手机运营商展开流量经营方面的合作，包括定向流量和流量奖励，通过获得流量费用分成形成利润。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（4）互联网位置服务&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;作为中国市场上为数不多的具有三甲测绘资质的民用企业，高德地图将处理好的测绘数据或基于位置的定位导航技术提供给其他与位置相结合的企业。比如大家所熟知的高德与苹果中国地图的合作，以及此前高德与新浪、阿里巴巴、腾讯、京东在基础地图方面的合作，向赶集网、搜房网等12万家网站和第三方开发者提供地图API服务。同时获取更多GPS信息反馈，完善基础地图数据。&lt;/p&gt;
-
-&lt;h4 id=&quot;4-营销方式&quot;&gt;4. 营销方式&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（1）线上营销&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;建立专业的公司网站，对公司的主要业务进行详细清晰地介绍，提供免费的网络地图并提供免费下载软件的渠道。在网站内开设专业技术讨论交流区，为对基于位置技术等互联网技术达人提供交流平台，通过注册的方式，增强其影响力，加强顾客粘性。另外，设置意见反馈区，及时与消费者沟通，了解产品的提升空间，提高产品竞争力。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“有声有色”的独特的产品代言形式，提升品牌形象。2013年签约超高的人气和影响力和敬业精神兼具的“全民女神”林志玲做品牌代言人，不仅有平面代言，林志玲的女神娃娃音也被植入地图、导航全过程，推出了国内地图导航领域内的首款明星真人语音导航。听觉体验作为地图导航重要的一环，女神音在为用户提供功能性服务的同时，更能为用户的生活增添乐趣。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;线上贴片广告等有针对性的投放广告。在著名的门户网站、视频网站投放短小精悍的广告，提高品牌的影响力。比如2013年上旬，高德地图推出了一组名为“高德地图哪都熟”的主题广告，将高德地图整合的诸多生活服务巧妙的展示在受众面前。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;借助微博、微信等社交互动平台进行推广，并借此第一时间了解公众的需求与建议。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;（2）线下营销&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;电影营销：结合《乔布斯传》国内首映，高德地图借用宣传优势，以苹果独家在华地图服务商的身份展开粉丝营销。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;与草莓音乐节达成战略合作，在音乐节活动现场，高德诸多结合驾驶情景与音乐的展示，让参会的年轻人感受高德带来的便利，提升高德在年轻人中的品牌效应。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;高德也在结合自身产品进行O2O营销，发挥其本地化生活服务入口的作用，通过团购、优惠券、酒店预订等与电商合作进行推广。尤其是与阿里的跨界营销更为紧密，比如双十一购物盛宴的导航辅助，消费者可借助高德地图发现线下打折商铺的具体位置，与阿里等电商合作也有助于提升知名度。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;基于用户角度和自身优势的主题广告，包括投放在公交车、出租车等交通工具上，指引用户去往终点；投放在地铁站中，提示“前方即将换乘”等。另外还有结合具体位置的广告巷战和定制服务，针对各地活跃人群的需求，结合高德地图功能，提供找代驾、打车、避堵等实用功能信息。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;启动高德LBS应用大赛，向广大IT从业者及开发爱好者而举办的产品开发大赛，一方面推广其云到端的全套LBS解决方案，另一方面为公司的发展储备人才。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;（3）打造良好的企业形象&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;以“开放、包容、合作、创新”作为企业文化，以“知你所在，寻你所需，移动生活尽在掌握”作为企业使命，内部设立良好的激励机制，调动内部人员的积极性。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;良好的危机公关能力。2013年中央电视台315晚会上，央视称，高德地图的位置共享服务会收集用户账号和密码，并以明文的方式传给高德的服务器。面对央视质疑，高德第一份声明就先向用户致歉，并在微博上表示，晚会曝光两年前的旧版本早已第一时间被修复，用户的隐私问题一定会得到高德保护。在负面评论还没有形成之际，高德已就央视曝光的问题对民众给予回应和释疑，用面对负面不逃避、以正面回应换取社会正面理解的态度，展现出了一个成熟企业应对得宜、诚恳有担当的企业形象。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;积极承担社会责任。2013年雅安地震时期，高德向雅安捐助150万元，包括100万元现金和价值约50万元的高德导航应用。并从自身平台优势出发、结合位置推出了高德地图“雅安寻人救助平台”。为抗震救灾不遗余力的高德地图被誉为“用地图承载爱”，用情感和用户互动，展示出了充满正能量的企业形象与态度，赢来了收获与肯定。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;三用户分析&quot;&gt;三、用户分析&lt;/h3&gt;
-&lt;h4 id=&quot;1-用户规模&quot;&gt;1. 用户规模&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447684.png!gorpeln&quot; alt=&quot;20230312165447684&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;根据阿里巴巴《2021年财政年度报告》的数据显示，高德地图的日均活跃用户数如今稳定在1亿左右，并逐步由一个导航工具，走向路途中指引方向的跨场景、多功能的生活服务平台。此外，根据QuestMoblie的数据显示，&lt;/p&gt;
-
-&lt;p&gt;2021年6月，高德地图的月活跃用户规模达到6.3亿左右，较2020年同期的5.3亿上升了1亿左右，增速为18.9%;在此当中，有68.8%的新安装用户来自于百度地图，有17.5%的新安装用户来自于腾讯地图。&lt;/p&gt;
-
-&lt;p&gt;而百度的月活跃人数略微落后，根据百度的年报数据显示，2020年百度地图的月活跃人数为3.16亿人。&lt;/p&gt;
-
-&lt;p&gt;总结：高德的用户规模已经占据中国手机地图类APP行业内的龙头，并且地图在出行方式上覆盖全，运营型功能最多，在被调研者中的评价普遍较高，使用时长也较久，说明高德地图的用户体验和黏性较高&lt;/p&gt;
-
-&lt;h4 id=&quot;2-用户标签&quot;&gt;2. 用户标签&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447685.png!gorpeln&quot; alt=&quot;20230312165447685&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;从性别来看&lt;/strong&gt;：  &lt;br /&gt;
-男性比例占据六成，女性群体只占据四成。&lt;/p&gt;
-
-    &lt;p&gt;数据原因原因如下：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;男性群体做司机的数量相比较女生来说较多，因此需求更高。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;男性针对地理方向感相比女生来说更强一些，因此使用地图导航也会跟更多。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;平时日常生活出行大部分比例是男性开车，男性对导航的需求就更大。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;从年龄分布来看&lt;/strong&gt;：  &lt;br /&gt;
-其中超过四成的用户是24岁一下的年轻人，三成的用户是24-30岁的人群，普遍来看年轻群体是高德的主要使用群体。&lt;/p&gt;
-
-    &lt;p&gt;数据原因如下：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;这一类群体属于刚步入社会，对于出行、旅行、自驾游等需求很大，因此会频繁的使用地图导航软件；&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;这类群体的用户生活状态不是特别文档，流动性较强，因此对于地域的熟悉度没有那么高，因此对于地图导航需求很大；&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;针对30岁左右的用户，他们这对打车的需求很大，因此这一部分的用户也是地图导航的主要使用者。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;从经济收入来看&lt;/strong&gt;：  &lt;br /&gt;
-消费水平看，导航软件的使用用户消费水平都是中等消费水平的用户10K一下收入群体占据高德地图80%。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;总结：整体来看，高德的用户大都还是年轻群体，属于Z时代的用户居多，这一类用户针对出行，旅行，驾车等需求较大，男性群体对于位置导航的掌控也是居多，这也一方面说明了高德再提供附加功能上面可以根据据这一类用户进行精准推送给，深挖用户需求，从而完善产品。&lt;/p&gt;
-
-&lt;h4 id=&quot;3-核心用户&quot;&gt;3. 核心用户&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1、车主&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;车主在城市经常遇到交通拥堵，在陌生的地方不熟悉路线、找不到加油站、停车场等情况的时候，这个时候就需要手机地图提供实时路况、地图规划、周边加油站停车场搜索等各种导航功能。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2、大众用户&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用户对于公交地铁，打车服务、地点搜索，路线规划、景区信息等需求不断增加，因此对于手机地图的使用也逐渐成为常态化。&lt;/p&gt;
-
-&lt;h4 id=&quot;4-用户场景&quot;&gt;4. 用户场景&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;①场景一：大学生&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;基本属性：男，20岁&lt;/p&gt;
-
-&lt;p&gt;用户行为：周末喜欢外出游玩&lt;/p&gt;
-
-&lt;p&gt;用户特征：大学生，喜欢去不一样的地方游玩&lt;/p&gt;
-
-&lt;p&gt;使用场景：小明是一个在校大学生，初次来到大城市上学，对身边的环境很是好奇，对周围的景区也特别感兴趣，但是自己又不知道怎么去，找不到地方，这个时候，同学小军，给他推荐了高德地图，高德地图可以直接查找自己想找的位置，然后规划路线，根据不同的出项方式规划时间，定位数据非常准确，小明很快就根据位置信息找到了自己想去的景区，然后愉快的玩耍。&lt;/p&gt;
-
-&lt;p&gt;需求：公交查询，到站提醒，周边搜索，室内地图，打车服务，景点搜索。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;②场景二：司机&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;基本属性：男，35岁&lt;/p&gt;
-
-&lt;p&gt;用户行为：日常开网约车&lt;/p&gt;
-
-&lt;p&gt;用户特征：网约车司机，长期开车&lt;/p&gt;
-
-&lt;p&gt;使用场景：罗师傅是一个网约车司机，日常就是在各个网约车平台接单，日常担心接乘客和送乘客时间过长问题，因此就需要时刻规划路线，并且对于上下班这种高峰期往往把握不好那条路可以避开高峰路段问题，因此很是需要可以提前知道路况，恰巧有一天发现同事在使用高德地图，发现高德地图可以看到道路拥挤状况以及最短时间路程规划，于是罗师傅开始使用高德地图，每次都以最短时间接到客户，并且送单时间也很快，于是罗师傅变成了高德的核心用户。&lt;/p&gt;
-
-&lt;p&gt;需求：路线规划，拥挤提醒，红绿灯提醒，加油站寻找，速度提醒，摄像头提醒。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;③场景三：旅行者&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;基本属性：男，26岁&lt;/p&gt;
-
-&lt;p&gt;用户行为：异地旅行&lt;/p&gt;
-
-&lt;p&gt;用户特征：喜欢在不同地方旅行&lt;/p&gt;
-
-&lt;p&gt;使用场景：小天是一个忠实旅游爱好者，喜欢在不同的城市旅游，但是自己的经济花销有限，因此他每次都要规划好自己的行程，包括坐公交的费用，他偶然在一次旅行时候发现高德地图不仅针对公交路线十分明确，他还可以实时的更新自己的位置，还剩几站路，此次下次换乘提醒，步行距离导航等等，十分详细这对小天异地旅行来说简直不要太完美，因此小天很快就成为了高德地图的忠实用户。&lt;/p&gt;
-
-&lt;p&gt;需求：地点搜索，路线规划，酒店、餐饮预定、实时路况，实时公交。&lt;/p&gt;
-
-&lt;p&gt;总结：从用户在使用高德地图不同的场景中可以看出来，高德地图是针对对于出行，旅行，驾车等有需求的人提供的导航功能，有这一类需求的用户大多是年轻群体，他们的消费理念是属于年轻化，有活力的消费群体，给他们提供导航服务就应该十分有效率，高德在这一块做的还是非常高效。&lt;/p&gt;
-
-&lt;h4 id=&quot;5-用户痛点&quot;&gt;5. 用户痛点&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1、道路不熟悉，找不到路（主要针对道路陌生用户）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;现在交通路线越来越便利，用户出行需求变大，但是由于道路交通复杂，用户来到一个陌生地区，不知道自己应该如何到达自己的目的地，因此很需要手机地图来提供目的地查找，路线规划等详情信息。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2、道路交通拥挤，躲避不开（主要针对高峰期出行用户）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;主要针对的是司机，开车上下班的上班族，此类用户在面对出行高峰期的时候，常常遇到道路拥挤，堵车的情况，由于无法提前知道路况，所以经常在路上耽误较长时间，因此用户对于道路拥挤的情况想要一个手机地图产品去解决这样一个痛点。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3、找不到加油站停车场等建筑（针对场景多变，道路不熟悉）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;对于自驾出行对于路况不清楚的情况，常常会出现找不到加油站和停车场这些场所而带来很大不便，所以手机地图对于一些标志性的场景都会进行一个明显的标注，手机地图可以很好的解决用户的这类痛点。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4、找到地点之后，想要快速打车（想要快速打车）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;地图给用户带来最大的便捷就是可以快速定位目的地，但是有很多地图应用查到目的地之后，还需要找另外一个软件进行重新定位打车，有时候会出现定位出现偏差的情况，因此手机地图直接可以连接打车服务，定位之后可以一键叫车，对于用户来说很是方便。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5、公交车老是等不到，不知道时间（想要公交路线规划的用户）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;交通发达导致用户出行方式变得多样化，很多用户习惯于公交地铁出行，面对不熟悉的场景的时候，往往需要导航来帮助规划路线，此时在站台知道下一班车到哪了，还有多久到，就产生很大的需求。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;6、找不到周边景区、美食（喜欢景区游玩的用户）&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;外出游玩的用户越来越多，对于景区、美食的需求越来越大，并且用户想要在地点打卡，但是找不到地方的用户非常多，对于精准的景区地点，以及游玩攻略，路线规划等需求就越来越大，地图就可以通过精准定位来很好的解决用户的这类痛点。&lt;/p&gt;
-
-&lt;p&gt;总结：用户对于使用手机地图的场景越来越多，需求也越来越大，地图需要不断的完善产品的定位、导航、场景信息等大数据以及功能的完善来解决用户在不同场景下的痛点，并且在这基础上去不断的通过加强互联网+导航，以及人工智能导航的新技术的提升，在满足用户能用的基础上，让用户对自己的产品产生更多的好感，让更多的用户认为手机地图好用是非常重要的。&lt;/p&gt;
-
-&lt;h3 id=&quot;四产品分析&quot;&gt;四、产品分析&lt;/h3&gt;
-&lt;h4 id=&quot;1-战略层分析&quot;&gt;1. 战略层分析&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447686.png!gorpeln&quot; alt=&quot;20230312165447686&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;描述：从产品定位角度来看三者。高德地图借助人工智能技术，进一步深化“互联网+出行”，拓展出行内容；深化“出行+”，全力打造出行生态。百度地图，也是高度应用AI人工智能技术，深化发展服务产品。再看腾讯地图，围绕海量数据和精准导航开展其功能，增加街景地图，特色语音导航（如王者荣耀语音包）等特色功能吸引年轻用户群，同时还逐步探索出行服务内容。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;从战略层角度来看手机地图行业未来发展趋势：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;人工智能+地图&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;随着人工智能、大数据、AR等技 术不断应用于手机地图领域，出 现了无人驾驶、语音导航等技术, 未来，人工智能不再局限于基础 服务，智能服务成为新的发展方 向，通过后台分析为用户提供符 合用户偏好的定制化服务。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;场景化应用&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;我国地理测绘、卫星导航等技术 的进步，以及用户UGC撞集地理 信息，手机地圈的准确性和全面 性大大提升，基于真实地理位置 的手机地图产品基础功能同质化 严重，场景化服务将成为手机地 围 圈平台差异化竞争的关键。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;自动驾驶&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;人工智能技术和国家政策红利。 推动自动驾驶爆发式增长。在此 背景下，地图行业布局高精地图 领域，将地理数据精度提高至分 米级，实时为汽车精确导航&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;区块链&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;数字货币带来区块链项目爆发式增长，其开源技术以及共建共享的核心思想，为手机地图带来新发展，以去中心化模式采集实时地理信息，区块链的去中心化，不可篡改等特性，可以从技术层面保护用户隐私。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;总结：从手机地图的战略层来看，高德地图是占据这强硬的技术支持，以及国家政策的帮助，为政府提供辅助决策和支持服务，这样给高德进行了一个很好的赋能，高德地图借助人工智能技术，进一步深化“互联网+出行”，拓展出行内容；深化“出行+”，全力打造出行生态；以后手机的地图的发展趋势应该是更加完善的场景化的应用，加上现在国家致力发展新能源汽车行业，包括自动驾驶等一些技术，高德地图应该在这些方面再去深入研究发展。&lt;/p&gt;
-
-&lt;h4 id=&quot;2-结构层分析&quot;&gt;2. 结构层分析&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447687.png!gorpeln&quot; alt=&quot;20230312165447687&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;结构图描述：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;从一级标题来看：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;首页&lt;/code&gt;界面的内容是用户最关心的核心功能：当前位置、路线、去公司、下班、今日温度，这些基础功能是最基本，也是最贴近用户需求的。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;附近&lt;/code&gt;界面的内容主要是包含了基于用户当前位置，周边的一些生活服务，这一点就很人性化；具体来看：饭店、饮品店、娱乐休闲；这些选项，方便在用户确认位置后的第一时间，能够快速直达点击自己所需要的服务。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;我的&lt;/code&gt;界面，相当于为用户进行了私人化定制，可以根据自己的日常操作，收藏常用地点，常用路线，了解历史形成信息；一方面方便用户统计过去以往行程、另一方面方便用户管理自己私人专属内容。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;从二级标题来看：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;首页界面含有“唤醒小德”这一选项，通过语音唤醒，增加了软件的方便性、智能性；附近界面含有“消费券”等活动接口，间接达到了引流，引导客户消费到指定商家的目的。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;我的&lt;/code&gt;界面含有：点亮城市、打卡地点等一些列“成就”属性内容，为一款地图软件增加了“主人”精神，确实能够达到让客户更有成就这一目的；除此以外，服务项：打车、酒店、景点门票等系列选项，能够一键式实现用户群体的游玩、旅行需要，很是方便；“组队出行“这款功能更是方便了，团队自驾的小伙伴，能够实时查看对方车辆的位置信息。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：高德地图通过“首页”tab将出行相关的工具/功能前置在首页，首页信息全，出行相关功能在首页展开，低频需求在更多工具中可展开，支持首页展示功能/工具的自定义，主次分明，把核心功能放在首要位置，减少用户流失。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：内容多，因此操作就较为复杂，百度地图和腾讯地图均将详细工具功能折叠在二级页面，首页简单明了，希望高德地图可以对页面布局以及功能的使用方面再去优化一下。&lt;/p&gt;
-
-&lt;p&gt;总结：分析高德的结构层可以看出来，高德在首页界面的内容是用户最关心的核心功能：当前位置、路线、去公司、下班、今日温度，这些基础功能是最基本，也是最贴近用户需求的。而二级界面“唤醒小德”“消费券”等接口也在不断增加用户停留使用时长，增加用户粘性都有很好的效果。&lt;/p&gt;
-
-&lt;h4 id=&quot;3-产品体验分析&quot;&gt;3. 产品体验分析&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;（1）步行导航功能体验&lt;/strong&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447688.png!gorpeln&quot; alt=&quot;20230312165447688&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;页面描述&lt;/strong&gt;：进入app，地图以上北下南方式展现，用户的图标由一“圆形”和“指南标”串联组成，“指南标”会随着人的朝向而实时转动，这一设计方便人确定了此时此刻的方位朝向，方便下一步的路线导航；搜索地址后，会出现搜索地址的位置信息，之后点击路线即可进入导航界面，导航界面有刷新定位和时间，距离显示，再点击导航，便开始以第一视角的导航，周围的建筑以立体的形式展现，箭头也是随着手机方向进行改变。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：首先进入APP，系统给会自动根据GPS给自己定位，首先是地图显示用户所处的位置，以及周边的建筑和建筑名称，下面有一个搜索栏，用户可以填入自己想要知道的位置，填写完位置之后，进行搜索，若搜索成功则会跳转到该位置界面，再点击路线，高德则会对用户当前的位置与目的地的位置进行路线规划，此时会显示路线、距离、时长等，用户点击开始导航，然后就会跳转到详细导航界面，到达目的地时，软件自动结束导航。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：操作便捷快速，位置信息十分准确，路线规划也十分准确，预估时长精准无误，界面干净，用户操作起来没有明显障碍。搜索页面展示历史搜索记录，用户可选择历史记录搜索目的地，减少步长，提升用户体验；&lt;/p&gt;
-
-&lt;p&gt;搜索页上方有类别选项（如美食、酒店等），点击后跳转至相应列表，可筛选和自定义排序，用于行为明确但目标模糊的场景（如明确要吃饭，但对去哪家餐厅吃不明确。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：当无历史记录（被清空或新用户未产生搜索记录）或历史记录过少时，搜索框下方为空。&lt;/p&gt;
-
-&lt;p&gt;优化建议：搜索框下方为空时可展示附近推荐地点、热门地点、用户设定内容（如家/公司）等，帮助用户更快完成目标地址查找。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（2）公交地铁导航功能&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230312165447689.png!gorpeln&quot; alt=&quot;20230312165447689&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;：用户进入APP，定位自己位置之后，用户再搜索栏中搜索目的地，然后选择公交地铁的出行方式出行，平台根据出行时间的长短进行排序，并且也会考虑出行费用，然后进行一个推荐序列供用户选则，用户点击选中的路线之后会跳转到详细路线里面，此时会出现用户到目的地的路线规划，以及到站台的步行路线导航，还有途经的每一站，怕错过的乘客还可以选择下车提醒，到达目的地之后导航会自动关闭。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：从定位来看，用户和目的地的位置十分准确，不存在导航错误的情况；从路线规划上来看，数据详细，其中步行导航的时间和坐车时间都是详细的展示给用户，用户可以灵活的安排自己的时间；从人性化角度来看，怕用户找不到上车点于是加上了步行导航，怕用户做过车站，于是加了下车提醒按钮。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：针对特定的时间，比如上下班的高峰期，以及节假日等路上堵车的时候，公交车的速度会明显降低，所以用户不能明确的知道自己需要多久到达目的地的，因此应该尽可能去推荐用户使用地铁出行方式，如果没有地铁可以提前对用户进行提醒。&lt;/p&gt;
-
-&lt;p&gt;优化建议：根据路况以及人流量，进行深度计算用户所需时间，给用户提供更加准确的路线规划。&lt;/p&gt;
-
-&lt;p&gt;总结：以上两个功能可以看得出来高德地图的导航功能，能够较好地满足驾车出行要求，路况实时更新，时间预估准确。高德可以考虑增加一些细节优化，丰富地图内容，更改车主菜单选项、提高出行方案的合理性，在用户体验上更好。&lt;/p&gt;
-
-&lt;h3 id=&quot;五总结&quot;&gt;五、总结&lt;/h3&gt;
-&lt;h4 id=&quot;1-swot分析&quot;&gt;1. SWOT分析&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;【S】优势&lt;/p&gt;
-
-    &lt;p&gt;拥有强大的后援支持，专业的测绘团队，软件研发和产品化的能力强优质的电子地图数据库，完备的生产链，产品多样化十年专业地图服务，经验丰富&lt;/p&gt;
-
-    &lt;p&gt;高德是全国唯一拥有航空摄影测绘产能的导航地图供应商。公司综合了高精度的航空摄 影采集，车辆采集、步行采集等多种数据采集手段，保障了地图数据的全面性、精确性 和深入性。高德的地图覆盖范围和PDL 数据在国内处于领先地位。其09版地图数据中全国道路里程数达到235万公里,兴趣点多达1250万个,一项数值位列全国第一高德的优势在于，卓越的地图表现力为了满足不断提升的导航和位置服务需求，高德在地图表现力方面进行了持续的大规模 投入。业界领先的市街图、实景路口扩大图、3D地标和城市等，将显若提升用户的使用体验。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;【W】劣势&lt;/p&gt;
-
-    &lt;p&gt;地图相对标准化，区分度小，资源整合程度较低，相比较携程美团，在本地生活这一块的业务具有明显差异。&lt;/p&gt;
-
-    &lt;p&gt;商场内导航不准确、难用；实时公交覆盖不全；酒店预订需跳转到APP，且价格更新不及时；分叉路口等场景提醒不及时；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;【O】机遇&lt;/p&gt;
-
-    &lt;p&gt;消费者对地图的刚性需求，商户对位置相关的需要增强，阿里的资金技术信息支持，中国汽车导航的装配率较低。&lt;/p&gt;
-
-    &lt;p&gt;以出行交通为核心功能的应用，同样具备丰富的延伸空间，包括生活服务、共享出行、电商、O2O等诸多行业均可衍生出对地图服务的密集需求，如此前北京针对部分严重拥堵路段，实施的疏导交通拥堵类app便是基于地图类功能模块以及拥堵大数据进行开发生成的。&lt;/p&gt;
-
-    &lt;p&gt;目前，地图功能在app中应用十分广泛，摩拜、美团、携程等各种生活服务类app，均需调用百度、高德等地图API模块，并加以优化来满足自身的业务需求;这也是当下API的优势所在，随着API经济的崛起，越来越多的第三方服务商将自己的核心服务向外界开放，这也使得企业在规划移动产品时，能够将更多的精力放在产品本身。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;【T】威胁&lt;/p&gt;
-
-    &lt;p&gt;与同质企业竞争十分激烈，传统导航产品的盗版问题。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;2-总结&quot;&gt;2. 总结&lt;/h4&gt;
-&lt;p&gt;高德地图致力于成为用户“出行”的首选APP。从各种交通方式的导航、延伸到出行过程中的具体问题的解决，如限行、电子眼的提醒、打车、公交乘车码等，丰富用户出行场景。&lt;/p&gt;
-
-&lt;p&gt;另外还具备酒店、美食等附近地点的查找和推荐，进一步解决用户只有需求（如吃饭）无明确地点场景下的出行问题。满足各年龄段不同用户的不同出行需求，也因此成为了用户活跃量最大的地图app。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;将地图类的APP分两条主线来看：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;导航&lt;/p&gt;
-
-    &lt;p&gt;地图类产品最核心的功能就是导航，帮助用户从一点尽可能快地、安全地到达另一点。这也是用户最基本地需求。地图类产品其实都在基于现实生活中最真实的交通出行需求做产品设计，比如包含尽可能多的出行方式，为用户提供最智能优化的出行方案。同时，这其中也在围绕导航做一些个性化的功能。比如导航设置时提供多样化的选择，满足用户听觉和视觉的双重用户体验。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;相关的内容和服务&lt;/p&gt;
-
-    &lt;p&gt;这也是地图类产品基于位置所做的功能，根据用户输入的目的地，挖掘具体场景下的需求。比如用户导航的目的地可能是家和公司，这是最基本的日常通勤场景；周末时候的休闲娱乐，可能去KTV、游乐园；周末附近的自驾游场景；长途旅游场景；日常的购物场景等等。基于这些不同的场景，可以为用户提供相关的内容和服务。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这里也可以分为通用的和特定场景下的。通用的比如停车场推荐，营业时间、地点介绍信息，附近美食推荐、酒店推荐等等；特定场景下的比如火车站、景点内会有人流量统计，游玩时会有行程推荐、攻略推荐等等。&lt;/p&gt;
-
-&lt;p&gt;所以除了加大力度研发自己的硬性技术，增加自己的核心竞争力，也可以将相关的内容和服务做到更优秀，让用户在使用产品的时候不能能够满足能用心理还能让用户产生好用，想用的心理。&lt;/p&gt;
 </description>
       </item>
     

@@ -2081,6 +2081,7 @@ div.gavatar a:hover {
 }
 
 
+
 .page-heading {
     font-size: 20px;
 }
@@ -2364,8 +2365,6 @@ div.contentAbstract img {
 }
 
 .post-content p {
-    /*color: #333333;*/
-    /*text-indent:2em;*/
     margin: 0.75em 0.2em;
     word-break: break-all;
     color: #4d4d4d;
@@ -2473,6 +2472,26 @@ div.contentAbstract img {
     display: table-cell;
 
 }
+
+#blog-problem{
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    background: var(--background-color-light);
+    padding: 0.5em 1em;
+    border-radius: 16px;
+}
+
+#blog-problem-title{
+    font-weight: bold;
+    color: #333;
+}
+
+#blog-problem-des{
+    font-weight: 200;
+    color: #666;
+}
+
 
 /* 一些自定义的微小改动 */
 .footer-heading {
@@ -3240,7 +3259,17 @@ body.dark-mode .color-light-gray{
 body.dark-mode .color-light-gray:hover {
     color: var(--font-des-color-dark) !important;
 }
+body.dark-mode #blog-problem{
+    background: var(--background-color-dark);
+}
 
+body.dark-mode #blog-problem-title{
+    color: var(--font-title-color-dark);
+}
+
+body.dark-mode #blog-problem-des{
+    color: #a8a095;
+}
 
 
 /*

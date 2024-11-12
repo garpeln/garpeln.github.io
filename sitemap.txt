@@ -1,4 +1,6 @@
 
+        https://gorpeln.top/article/17280983368
+        https://gorpeln.top/article/17265361548
         https://gorpeln.top/article/17245056864
         https://gorpeln.top/article/17202356559
         https://gorpeln.top/article/17196724432
@@ -712,10 +714,20 @@
         https://gorpeln.top/friends
         https://gorpeln.top/friends.json
         https://gorpeln.top/go-wild
+        https://gorpeln.top/help/agreements
+        https://gorpeln.top/help/app/privacy
+        https://gorpeln.top/help/app/service
+        https://gorpeln.top/help/app/vip
+        https://gorpeln.top/help/blog/copyright
+        https://gorpeln.top/help/blog/declaration
+        https://gorpeln.top/help/blog/privacy
         https://gorpeln.top/links
         https://gorpeln.top/mysite
         https://gorpeln.top/nav
         https://gorpeln.top/notes
+        https://gorpeln.top/other/ads.txt
+        https://gorpeln.top/other/all_links.json
+        https://gorpeln.top/other/friends.json
         https://gorpeln.top/privacy-blog
         https://gorpeln.top/privacy
         https://gorpeln.top/resume

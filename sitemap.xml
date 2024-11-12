@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
             <url>
+                <loc>https://gorpeln.top/article/17280983368</loc>
+                <priority>0.8</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/article/17265361548</loc>
+                <priority>0.8</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/article/17245056864</loc>
                 <priority>0.8</priority>
             </url>
@@ -2853,6 +2861,34 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/help/agreements</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/app/privacy</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/app/service</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/app/vip</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/blog/copyright</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/blog/declaration</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/help/blog/privacy</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/links</loc>
                 <priority>1.0</priority>
             </url>
@@ -2866,6 +2902,18 @@
             </url>
             <url>
                 <loc>https://gorpeln.top/notes</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/other/ads.txt</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/other/all_links.json</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>https://gorpeln.top/other/friends.json</loc>
                 <priority>1.0</priority>
             </url>
             <url>
