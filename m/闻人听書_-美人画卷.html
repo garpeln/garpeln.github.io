@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
+    <link rel="stylesheet" href="/assets/css/waline.css">
+
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
     <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
@@ -400,7 +402,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>171.9k</p> 
+                                    <p>171.7k</p> 
 
                                 </li>
                                 <li>
@@ -414,7 +416,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-11-12 16:46:36 +0800">2024/11/12</p>
+                                    <p id="current-date" data-value="2024-11-12 17:42:02 +0800">2024/11/12</p>
                                 </li>
                             </ul>
                     </div>
@@ -604,187 +606,6 @@
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
 <!-- https://unpkg.com/@waline/client@3.1.3/dist/waline.js -->
-<head>
-    <link href='/assets/css/waline.css' rel='stylesheet' />
-</head>
-
-<style>
-
-.wl-comment {
-    position: relative;
-    display: flex;
-    margin-bottom: 0.75em;
-}
-
-.wl-panel {
-    position: relative;
-    flex-shrink: 1;
-    width: 100%;
-    margin: 0.5em;
-    border: var(--waline-border);
-    border-radius: 1.2em;
-    background: var(--waline-bgcolor);
-    box-shadow: var(--waline-box-shadow);
-}
-
-.wl-header {
-    display: flex;
-    overflow: hidden;
-    padding: 0 10px;
-    border-bottom: 0 dashed #fff;
-}
-
-.wl-header-item {
-    display: flex;
-    flex: 1;
-}
-
-.wl-header label {
-    display: none;
-}
-
-.wl-header input {
-    border-bottom: 1px #dedede dashed;
-    padding: 15px 10px;
-    max-width: 100%;
-    font-size: 1.3em;
-    box-sizing: border-box;
-}
-
-.wl-header input:focus {
-    border-bottom-color: #eb5055;
-    background: rgba(0, 0, 0, 0);
-    ;
-}
-
-.wl-editor {
-    background-image: url('/assets/img/gorpeln_waline_bg.gif');
-    background-size: 24%;
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) calc(100% - 10px);
-    background-color: rgba(255, 255, 255, 0);
-    min-height: 12em;
-    margin: 0;
-    border-radius: 0;
-    margin: 15px 20px;
-    font-size: 1.4em;
-    width: calc(100% - 40px);
-    transition: background-position 0.25s ease;
-}
-
-.wl-editor:focus {
-    background: #fff;
-    background-position: calc(100% - 10px) calc(100% - 10px);
-}
-
-.wl-info .wl-text-number {
-    color: var(--waline-info-color);
-    font-size: 1.0em;
-}
-
-.wl-btn {
-    display: inline-block;
-    vertical-align: middle;
-    /* padding: 1em 2em;*/
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0);
-    color: var(--waline-color);
-    font-weight: 400;
-    font-size: 1.3em;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    user-select: none;
-    transition-duration: .4s;
-    touch-action: manipulation;
-}
-
-.wl-btn.primary {
-    margin-right: 10px;
-}
-
-.wl-footer {
-    margin-bottom: 20px;
-}
-
-.wl-count {
-    font-size: 1.5em;
-    padding-left: 5px;
-}
-
-.wl-sort li {
-    font-size: 1.25em;
-}
-
-.wl-empty {
-    font-size: 1.4em;
-}
-
-.wl-power {
-    font-size: 1.1em;
-}
-
-.wl-card .wl-head .wl-nick{
-    font-size: 1.4em;
-}
-
-.wl-card .wl-time {
-    font-size: 1.2em;
-}
-
-.wl-card .wl-meta>span{
-    font-size: 1.0em;
-}
-
-.wl-card .wl-content{
-    font-size: 1.4em;
-}
-
-.wl-like>span{
-    font-size: 1.4em;
-}
-
-.wl-meta-head{
-    margin-bottom: 10px;
-}
-
-label[for="wl-image-upload"].wl-action {
-    display: none;
-}
-
-textarea::placeholder {
-    color: #dcdcdc;
-}
-
-.wl-cards .wl-user img{
-    width: 4em;
-    height: 4em;
-    box-shadow: 1px 1px 1px #dfd6d6;
-}
-
-.wl-card .wl-quote .wl-user img{
-    width: 3em;
-    height: 3em;
-    box-shadow: 1px 1px 1px #dfd6d6;
-}
-
-@media (max-width: 580px) {
-    .wl-header {
-        display: block;
-    }
-    .wl-header .wl-header-item {
-        border-bottom: 0 dashed #fff;
-    }
-    .wl-editor {
-        background-size: 40%;
-        min-height: 10em;
-    }
-    .wl-card .wl-meta>span{
-        font-size: 0.9em;
-    }
-}
-
-</style>
 
 <body>
     <div id="waline"></div>
