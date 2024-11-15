@@ -150,7 +150,7 @@
      display: inline-block;
      border-radius: 16px;
      margin-left: 20px;
-    transition: opacity 0.3s ease-in-out;
+     transition: opacity 0.3s ease-in-out;
  }
 
  .carousel img:first-child {
@@ -186,7 +186,7 @@
  .detail-container {
      display: flex;
      flex-wrap: wrap;
-     gap: 20px;
+     gap: 1.2em;
  }
 
  .item {
@@ -233,6 +233,99 @@
      border: none;
  }
 
+
+
+ .change-model-records div {
+     display: inline-block;
+
+     padding: 10px 20px;
+     cursor: pointer;
+     color: #3d3d3d;
+     background-color: #dae3ed;
+     border-radius: 20px;
+     transition: background-color 0.3s;
+     margin-right: 10px;
+
+ }
+
+ .change-model-records div.active {
+     background-color: #4ba0ff;
+     color: white;
+ }
+
+ .timeline {
+     position: relative;
+     padding-left: 60px;
+     list-style: none;
+     padding-top: 2em;
+     font-size: 16px;
+ }
+
+ .timeline::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 44px;
+     width: 2px;
+     background-color: #ddd;
+ }
+
+ .timeline-item {
+     position: relative;
+     margin-bottom: 50px;
+     list-style: none;
+ }
+
+ .timeline-item::after {
+     content: '';
+     position: absolute;
+     left: -19px;
+     top: 8px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background-color: #4ba0ff;
+ }
+
+ .timeline-content {
+     padding-left: 20px;
+     color: #858c92;
+
+ }
+
+
+ .timeline-version {}
+
+ .timeline-date {
+     font-family: heiti;
+     margin-top: 10px;
+ }
+
+ .timeline-changes {
+     margin-top: 10px;
+     list-style: none;
+     padding-left: 0;
+ }
+
+ .timeline-changes li {
+     margin-bottom: 5px;
+ }
+
+ .records_title {
+     color: #6b6868;
+     font-weight: bold;
+
+ }
+ @media only screen and (max-width: 768px) {
+    .timeline::before {
+        left: 14px;
+    }
+    .timeline {
+        padding-left: 30px;
+        font-size: 14px;
+    }
+ }
  /* 在原有CSS基础上添加 */
  @media only screen and (max-width: 768px) {
      body {
@@ -391,17 +484,28 @@
  }
 
  body.dark-mode .in-download,
- body.dark-mode .change-model div.active {
+ body.dark-mode .change-model div.active,
+ body.dark-mode .change-model-records div.active,
+ body.dark-mode .timeline-item::after
+  {
      background-color: #4680c1;
-
  }
 
- body.dark-mode .change-model div {
+ body.dark-mode .change-model div,
+ body.dark-mode .change-model-records div,
+ {
      background-color: #858c94;
-
-
  }
 
  body.dark-mode .item .title {
      color: var(--font-title-color-dark);
+ }
+
+
+ body.dark-mode .records_title{
+    color: #bac7d1;
+ }
+
+ body.dark-mode .timeline-content{
+    color: #919aa1;
  }

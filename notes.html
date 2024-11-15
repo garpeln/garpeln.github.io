@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="/assets/css/notes.css">
 </head>
+<style>
+</style>
 
 <body>
     <script>
@@ -31,6 +33,7 @@
         <p class="in-bate-tip">iOS、macOS beta版, 限量内测中！<a class="in-bate-download">点击下载</a></p>
         <p class="versionInfo" id="app_version">最新版本：-丨更新时间：-</p>
     </div>
+    <!-- 应用图片 -->
     <div class="change-model">
         <div onclick="changeCarousel('iPhone')" class="active">iPhone</div>
         <div onclick="changeCarousel('Mac')">Mac</div>
@@ -51,58 +54,6 @@
             <img src="../../assets/img/notes/mac_02.png" alt="图片2" style="width: 100%; height: auto;">
             <img src="../../assets/img/notes/mac_03.png" alt="图片3" style="width: 100%; height: auto;">
         </div>
-    </div>
-    <hr class="page-hr">
-    <div class="des">
-        <h2 style="text-align:left;">应用描述</h2>
-        <p>记录美好生活，记录你！</p>
-        <p style="margin-top:20px;">时光本是一款专注效率与安全的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等。</p>
-        <p style="margin-top:20px;">[高效记录]</p>
-        <p>提供便签、清单、图片、纪念日、地址、链接、银行卡、名片等多种类型</p>
-        <p>[专注效率]</p>
-        <p>提供笔记紧急程度、分类，帮助你更好的归纳整理，提高效率</p>
-        <p>[安全可靠]</p>
-        <p>为保证数据安全，所有数据均采用本地存储，把数据归还给用户</p>
-        <p style="margin-top:20px;">怎么联系开发者？</p>
-        <p>如果有任何建议或问题，欢迎联系我：</p>
-        <p>邮箱：help@gor*eln.top</p>
-        <p>网站：gorpeln.top</p>
-    </div>
-    <hr class="page-hr">
-    <div class="des">
-        <h2 style="text-align:left;">应用包信息</h2>
-        <div class="detail-container">
-            <!-- 生成的item -->
-        </div>
-        <script>
-        const data = [
-            { "title": "发布日期", "des": "2020-01-22" },
-            { "title": "更新日期", "des": "-" },
-            { "title": "Bundle ID", "des": "com.gorpeln.notes" },
-            { "title": "版本", "des": "-" },
-            { "title": "大小", "des": "28.63M" },
-            { "title": "价格", "des": "免费" },
-            { "title": "分类", "des": "效率" },
-            { "title": "隐私政策", "des": "https://gorpeln.top/privacy" },
-            { "title": "支持网站", "des": "https://gorpeln.top" },
-            { "title": "兼容性", "des": "需要 iOS 10.0 或更高版本" },
-            { "title": "支持语言", "des": "简体中文,英语" },
-            { "title": "年龄评级", "des": "4+" },
-            { "title": "开发者", "des": "gorpeln" },
-            { "title": "版权信息", "des": "© gorpeln" }
-        ];
-
-        const container = document.querySelector('.detail-container');
-        data.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'item';
-
-            div.innerHTML = `
-            <p class="title">${item.title}</p>
-            <p class="des" ${item.title === "更新日期" ? 'id="update-time"' : item.title === "版本" ? 'id="app_version_info"' : ''}>${item.des}</p>`;
-            container.appendChild(div);
-        });
-        </script>
     </div>
     <script>
     function changeCarousel(device) {
@@ -130,6 +81,1139 @@
 
     changeCarousel('iPhone');
     </script>
+    <!-- 应用描述 -->
+    <hr class="page-hr">
+    <div class="des">
+        <h2 style="text-align:left;">应用描述</h2>
+        
+        
+        
+        
+        <p >
+            记录美好生活，记录你！
+        </p>
+        
+        
+        
+        <p style="margin-top:20px;" >
+            时光本是一款专注效率与安全的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等。
+        </p>
+        
+        
+        
+        <p style="margin-top:20px;" >
+            [高效记录]
+        </p>
+        
+        
+        
+        <p >
+            提供便签、清单、图片、纪念日、地址、链接、银行卡、名片等多种类型
+        </p>
+        
+        
+        
+        <p style="margin-top:20px;" >
+            [专注效率]
+        </p>
+        
+        
+        
+        <p >
+            提供笔记紧急程度、分类，帮助你更好的归纳整理，提高效率
+        </p>
+        
+        
+        
+        <p style="margin-top:20px;" >
+            [安全可靠]
+        </p>
+        
+        
+        
+        <p >
+            为保证数据安全，所有数据均采用本地存储，把数据归还给用户
+        </p>
+        
+        
+        
+        <p style="margin-top:20px;" >
+            怎么联系开发者？
+        </p>
+        
+        
+        
+        <p >
+            如果有任何建议或问题，欢迎联系我：
+        </p>
+        
+        
+        
+        <p >
+            邮箱：help@gor*eln.top
+        </p>
+        
+        
+        
+        <p >
+            网站：gorpeln.top
+        </p>
+        
+    </div>
+    <!-- 应用包信息 -->
+    <hr class="page-hr">
+    <div class="des">
+        <h2 style="text-align:left;">应用包信息</h2>
+        <div class="detail-container">
+            
+            <div class="item">
+                <p class="title">发布日期</p>
+                <p class="des" >
+                    2020-01-22
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">更新日期</p>
+                <p class="des" id="update-time" >
+                    -
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">Bundle ID</p>
+                <p class="des" >
+                    com.gorpeln.notes
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">版本</p>
+                <p class="des" id="app_version_info" >
+                    -
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">大小</p>
+                <p class="des" >
+                    28.63M
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">价格</p>
+                <p class="des" >
+                    免费
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">分类</p>
+                <p class="des" >
+                    效率
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">隐私政策</p>
+                <p class="des" >
+                    https://gorpeln.top/help/app/privacy
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">支持网站</p>
+                <p class="des" >
+                    https://gorpeln.top
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">兼容性</p>
+                <p class="des" >
+                    需要 iOS 10.0 或更高版本
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">支持语言</p>
+                <p class="des" >
+                    简体中文, 英语
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">年龄评级</p>
+                <p class="des" >
+                    4+
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">开发者</p>
+                <p class="des" >
+                    gorpeln
+                </p>
+            </div>
+            
+            <div class="item">
+                <p class="title">版权信息</p>
+                <p class="des" >
+                    © gorpeln
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 更新记录 -->
+    <hr class="page-hr">
+    <div class="des">
+        <h2 style="text-align:left;">更新记录</h2>
+        <div class="change-model-records">
+            <div onclick="changeCarouselOfRecords('iPhone')" class="active">iPhone</div>
+            <div onclick="changeCarouselOfRecords('Mac')">Mac</div>
+        </div>
+        <div id="iphone-records" class="timeline" style="display:block;">
+            <ul>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.1.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-11-14</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】吾飘零半生,只恨未逢明主,公若不弃,吾愿拜为义父</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.9</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-06-11</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】这只猫的粘人程度就像我穿了二十多天的袜子</li>
+                            
+                            <li>【提示】为什么每次更新日志都是显示的修复了已知bug？首先，采用泛化的描述有助于维护软件的安全性，具体说明每一个漏洞或问题可能无意中泄露软件的安全弱点，给未更新的用户带来风险。其次，简化的表述可以减少用户焦虑，详尽列出所有修复的bug可能会让用户感觉之前的版本充满问题，从而影响产品的信任度。最后，简洁表述的广泛适用性，很多小的修正和优化可能不值得单独列出，或者数量太多难以一一列举，对于用户而言，他们可能并不关心具体的编程错误或技术细节，而是更在意应用是否更好用了。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.8</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-04-19</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】请用一句话证明你没有看到这句话</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.7</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-02-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】我大抵是大抵了，横竖睡不着，窗外的狗在狂叫，我犹豫了一下，也跟着叫了…</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-10-12</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】我不是这方面的专家，但我还是想发表一下我的观点。在我仔细看过你的问题之后思考了半天，最后决定不叙述我的观点了，因为我也不知道怎么回答。正如我开头说的，我也不是这方面的专家。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.5</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-09-30</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】你当了我的逃兵，却做了别人的盖世英雄</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-07-25</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】无</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.3</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-01-24</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】你说你四大皆空，却紧闭双眼，要是你睁开眼睛看看我，我不相信你两眼空空。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.2</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-12-04</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】人如果没有梦想，那跟无忧无虑有什么区别呢？</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>2.0.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-08-23</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】版本号增加了</li>
+                            
+                            <li>【寄语】你们怎么这么忙？把活都丢给老板干啊，他创业还是你创业[狗头]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.9</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-08-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】本宝宝暂时还没想到个性签名</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.8</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-07-04</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】我忘词了[尬笑]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.7</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-21</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】Mac版本上线了</li>
+                            
+                            <li>【寄语】她逃，他追，他们插翅难飞</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-15</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】Mac版本上线了</li>
+                            
+                            <li>【寄语】冰箱里有块肉，拿起来又放下，你猜怎么着？诶～一手油[看]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.5</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-05-01</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】我是一只长期吃狗粮的猫，在知识的海洋中狗刨，喵~</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-04-17</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【优化】优化了更新说明中写了也没人看的部分，主要是字数不够了</li>
+                            
+                            <li>【寄语】抛弃世俗的偏见，我相信你也行[捂脸]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.3</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-12-11</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【优化】此处省略100个字</li>
+                            
+                            <li>【寄语】我没有，也不曾拥有</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.2</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-10-25</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【优化】关于我们，就是捎带手做的</li>
+                            
+                            <li>【寄语】我上次无语还是在上次</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-08-08</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】事已至此，先吃饭吧！</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.9.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-05-02</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【新增】添加福利社模块，不同惊喜等你体验</li>
+                            
+                            <li>【新增】添加意见反馈，和开发者零距离交流</li>
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】你没有对象，应该攒了不少钱吧？</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.9</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-04-11</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【新增】完善密码箱</li>
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】[图片已被删除]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.8</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-03-08</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】哈库拉玛塔塔</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.7</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2021-01-14</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【新增】经过紧张的开发，本次为你带来了0项新功能</li>
+                            
+                            <li>【修复】节日节气展示及详情</li>
+                            
+                            <li>【修复】解决了一些已知的bug，具体的不想细说</li>
+                            
+                            <li>【寄语】山有木兮木有枝，心悦君兮君不知</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-12-31</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【新增】添加了新的笔记类型 - 节日节气</li>
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】有空一起看日出吧，我的意思是，和你！</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.5</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-12-16</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-12-12</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.3</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-11-17</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>解决了一些已知bug，激动的我站了起来了！</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.2</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-10-27</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-10-08</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.8.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-10-02</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>添加密码列表</li>
+                            
+                            <li>适配iOS 14</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.7.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-09-19</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>新功能即将上线...</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.7.3</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-08-28</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>优化忘记密码、添加使用说明</li>
+                            
+                            <li>优化自动备份</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.7.2</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-08-15</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>优化安全锁：数字密码、图案密码、指纹、面部</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.7.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-07-30</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.7.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-07-09</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>添加扫一扫</li>
+                            
+                            <li>添加新的笔记类型：日子</li>
+                            
+                            <li>添加备份、还原</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.6.7</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-06-27</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.6.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-06-01</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.6.5</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-05-21</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>添加提醒</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.6.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-05-17</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>功能完善</li>
+                            
+                            <li>修复一直问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.6.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-05-01</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>优化搜索</li>
+                            
+                            <li>添加置顶</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.5.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-04-25</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>优化业务逻辑</li>
+                            
+                            <li>完善编辑功能、添加分类等</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.2.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-03-30</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>添加新的笔记类型：账户、名片、银行卡</li>
+                            
+                            <li>添加密码锁</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.8</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-03-19</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>功能完善</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-08-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】右键删除</li>
+                            
+                            <li>【寄语】见女朋友的路上...连风都是甜的[比心]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-22</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>功能完善</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.0.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-02-29</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>功能完善</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.0.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2020-01-29</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>完善待办、日程</li>
+                            
+                            <li>修复已知问题</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.0.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-14</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>暂无更新日志数据</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div id="mac-records" class="timeline" style="display:none;">
+            <ul>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.2.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-11-14</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】吃得苦中苦，伺候人上人</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.8</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-06-11</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】你有点自我感动了</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.7</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-04-19</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】跳出三贷外，不在五险中</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.6</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2024-02-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】『吃得苦中苦，方为人上人』如果吃苦越多就越上等，那么世界首富应该是一头驴。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.5</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-10-03</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】我已穷的揭不开锅，你却说你没按时吃燕窝</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.4</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-07-26</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】无</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.3</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2023-01-24</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】有人恋爱，有人出轨，有人年头寡到年尾。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.2</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-12-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【寄语】以前陪我看月亮的时候,叫人家小甜甜; 现在新人胜旧人,叫人家牛夫人。</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.1</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-08-05</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】右键删除</li>
+                            
+                            <li>【寄语】见女朋友的路上...连风都是甜的[比心]</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.1.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-22</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>【修复】解决了一些已知的bug</li>
+                            
+                            <li>【新增】完善了笔记、密码的添加</li>
+                            
+                            <li>【寄语】时光、因懂得而美好，岁月、因感恩而厚重，生活、因知足而温暖</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-version"><text class="records_title">版本: </text>1.0.0</div>
+                        <div class="timeline-date"><text class="records_title">更新日期: </text>2022-06-14</div>
+                        <div class="timeline-changes"><text class="records_title">更新日志: </text></div>
+                        <ul class="timeline-changes">
+                            
+                            <li>暂无更新日志数据</li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <script>
+    function changeCarouselOfRecords(platform) {
+        const iphoneRecords = document.getElementById('iphone-records');
+        const macRecords = document.getElementById('mac-records');
+        const buttons = document.querySelectorAll('.change-model-records div');
+
+        if (platform === 'iPhone') {
+            iphoneRecords.style.display = 'block';
+            macRecords.style.display = 'none';
+            buttons[0].classList.add('active');
+            buttons[1].classList.remove('active');
+        } else if (platform === 'Mac') {
+            iphoneRecords.style.display = 'none';
+            macRecords.style.display = 'block';
+            buttons[0].classList.remove('active');
+            buttons[1].classList.add('active');
+        }
+    }
+    </script>
+    <!-- footer -->
     <div class="footer">
         <p>©2021-<text id="currentYear"></text> gorpeln 版权所有&nbsp; | &nbsp;
             <a href="http://beian.miit.gov.cn/">京ICP备2021024484号-2</a>

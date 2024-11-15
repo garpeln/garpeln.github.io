@@ -255,6 +255,7 @@ progress::-moz-progress-value {
     margin: 0 auto;
     overflow: hidden;
     width: 1200px;
+    background-color:white;
 }
 
 .side {

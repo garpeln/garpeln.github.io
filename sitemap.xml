@@ -2813,18 +2813,6 @@
                 <priority>1.0</priority>
             </url>
             <url>
-                <loc>https://gorpeln.top/ads.txt</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/agreement</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/all_links.json</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
                 <loc>https://gorpeln.top/apple-app-site-association</loc>
                 <priority>1.0</priority>
             </url>
@@ -2837,23 +2825,11 @@
                 <priority>1.0</priority>
             </url>
             <url>
-                <loc>https://gorpeln.top/copyright</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/declaration</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
                 <loc>https://gorpeln.top/feed.xml</loc>
                 <priority>1.0</priority>
             </url>
             <url>
                 <loc>https://gorpeln.top/friends</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/friends.json</loc>
                 <priority>1.0</priority>
             </url>
             <url>
@@ -2905,23 +2881,7 @@
                 <priority>1.0</priority>
             </url>
             <url>
-                <loc>https://gorpeln.top/other/ads.txt</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/other/all_links.json</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
                 <loc>https://gorpeln.top/other/friends.json</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/privacy-blog</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/privacy</loc>
                 <priority>1.0</priority>
             </url>
             <url>
@@ -2942,14 +2902,6 @@
             </url>
             <url>
                 <loc>https://gorpeln.top/tags</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/terms</loc>
-                <priority>1.0</priority>
-            </url>
-            <url>
-                <loc>https://gorpeln.top/vipAgreement</loc>
                 <priority>1.0</priority>
             </url>
             <url>

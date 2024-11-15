@@ -702,17 +702,11 @@
         https://gorpeln.top/404
         https://gorpeln.top/CNAME
         https://gorpeln.top/about
-        https://gorpeln.top/ads.txt
-        https://gorpeln.top/agreement
-        https://gorpeln.top/all_links.json
         https://gorpeln.top/apple-app-site-association
         https://gorpeln.top/archives
         https://gorpeln.top/categories
-        https://gorpeln.top/copyright
-        https://gorpeln.top/declaration
         https://gorpeln.top/feed.xml
         https://gorpeln.top/friends
-        https://gorpeln.top/friends.json
         https://gorpeln.top/go-wild
         https://gorpeln.top/help/agreements
         https://gorpeln.top/help/app/privacy
@@ -725,18 +719,12 @@
         https://gorpeln.top/mysite
         https://gorpeln.top/nav
         https://gorpeln.top/notes
-        https://gorpeln.top/other/ads.txt
-        https://gorpeln.top/other/all_links.json
         https://gorpeln.top/other/friends.json
-        https://gorpeln.top/privacy-blog
-        https://gorpeln.top/privacy
         https://gorpeln.top/resume
         https://gorpeln.top/robots.txt
         https://gorpeln.top/sitemap.txt
         https://gorpeln.top/sitemap.xml
         https://gorpeln.top/tags
-        https://gorpeln.top/terms
-        https://gorpeln.top/vipAgreement
         https://gorpeln.top/works
         https://gorpeln.top/page/2/
         https://gorpeln.top/page/3/
