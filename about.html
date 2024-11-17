@@ -402,7 +402,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>171.0k</p> 
+                                    <p>170.9k</p> 
 
                                 </li>
                                 <li>
@@ -416,7 +416,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-11-17 10:32:20 +0800">2024/11/17</p>
+                                    <p id="current-date" data-value="2024-11-17 18:59:13 +0800">2024/11/17</p>
                                 </li>
                             </ul>
                     </div>
@@ -425,86 +425,92 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
                     <div class="page-content" id="pjax"><style>
     h1::after {
-    transition: all .35s;
-    content: "";
-    position: absolute;
-    background: linear-gradient(#3c67bd8c 30%, #3c67bd 70%);
-    width: 1.5em;
-    left: 0;
-    box-shadow: 0 3px 3px rgba(32, 160, 255, .4);
-    height: 3px;
-    bottom: -8px;
-}
+        transition: all .35s;
+        content: "";
+        position: absolute;
+        background: linear-gradient(#3c67bd8c 30%, #3c67bd 70%);
+        width: 1.5em;
+        left: 0;
+        box-shadow: 0 3px 3px rgba(32, 160, 255, .4);
+        height: 3px;
+        bottom: -8px;
+    }
 
-h1::before {
-    content: "";
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    bottom: -7px;
-    position: absolute
-}
+    h1::before {
+        content: "";
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        bottom: -7px;
+        position: absolute
+    }
 
-h1 {
-    position: relative;
-    margin: 20px 0 32px;
-    font-size: 1.55em;
-}
+    h1 {
+        position: relative;
+        margin: 20px 0 32px;
+        font-size: 1.55em;
+    }
 
-h1:hover::after {
-    width: 3em
-}
+    h1:hover::after {
+        width: 3em
+    }
 
-.des {
-    /*text-indent: 2em;*/
-}
+    .des {
+        /*text-indent: 2em;*/
+    }
 
-.contactTitle {}
+    .contactTitle {}
 
-.customCopyright {
-    margin-top: 2em;
-    background: #f8f8f8;
-    padding: 1em;
-    border-radius: 10px;
-    font-size: 0.9em;
-    color: #666666;
-    margin-bottom: 0.5em;
-}
+    .customCopyright {
+        margin-top: 2em;
+        background: #f8f8f8;
+        padding: 1em;
+        border-radius: 10px;
+        font-size: 0.9em;
+        color: #666666;
+        margin-bottom: 0.5em;
+    }
 
 
-.box {
-    background: #fff;
-    padding: 1em;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
+    .box {
+        background: #fff;
+        padding: 1em;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
 
-}
-.agreement{
-    /*margin-left:2em;*/
-}
-.agreement a{
-    font-size:0.8em;  
-}
+    }
 
-.contact-author{
-    color:#444;
-}
-.about-copyright-focus{
-    color: #333;
-}
-.contact-tip{
-    font-size:12px;
-    margin-top:10px;
-    color:#7d7d7d;
-}
-</style>
-<script src="/assets/js/typed.min.js"></script>
+    .agreement {
+        /*margin-left:2em;*/
+    }
+
+    .agreement a {
+        font-size: 0.8em;
+    }
+
+    .contact-author {
+        color: #444;
+    }
+
+    .about-copyright-focus {
+        color: #333;
+    }
+
+    .contact-tip {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #7d7d7d;
+    }
+</style>    
+
 <div class="home" style="border-radius: 10px;">
+    <!-- 关于我 -->
     <h1 class="tag-name">关于我</h1>
     <p class="des">
         一个涉猎广泛且致力于成为一名架构师的狂热的iOS程序猿，充满新奇的想法并正在付诸于实际，幻想着有一天能升职加薪，当上总经理，出任CEO，迎娶白富美，走上人生巅峰！
     </p>
     <br>
+    <!-- 联系方式 -->
     <h1 class="tag-name">联系方式</h1>
     <table style="margin-bottom: 0;width: 100%;display:table;">
         <tr>
@@ -535,27 +541,28 @@ h1:hover::after {
             <td><a href="/resume" class="contact-author">个人简历</a></td>
         </tr>
     </table>
-    <div class='contact-tip'>
-        为减少干扰，博主建议通过<strong>邮件联系</strong>。通常情况下，我会在一天内回复。如有不便，敬请谅解！（Tip：邮件地址有隐藏）
-    </div>
     <br>
+
+    <!-- 开发技能 -->
     <h1 class="tag-name">开发技能</h1>
     <div class="skills">
-        <div id="mainSkill" style="height:400px">
+        <div id="mainSkill" style="height:400px;width:100%;">
         </div>
     </div>
     <br>
+    <!-- 关于博客 -->
     <h1 class="tag-name">关于博客</h1>
     <p class="des">
         写博客的目的是坚持做一件属于自己的事情，提高自己的表述能力，提供持续学习的动力，积累更多的知识，记录成长，找到一些志同道合的朋友，讨论反思，追寻到一些意想不到的东西，也是更好的提升自己。
     </p>
     <p style="margin-top: 1em;"><a href="/article/15462756619" style="color: #6666cc;font-size: 16px;" target="_blank">博客成长记录......</a></p>
     <br>
+    <!-- 人生格言 -->
     <h1 class="tag-name">人生格言</h1>
-    <!-- <p class="des" id="slogan">趁年轻，做自己想做的！</p> -->
     <text class="des" id="slogan" style=""></text>
     <p class="des">There is no best, only better!</p>
-    <br>
+    <br>  
+    <!-- 特别声明 -->
     <h1 class="tag-name">特别声明</h1>
     <div class="customCopyright">
         如有任何知识产权、版权问题或理论错误，还请指正。
@@ -565,8 +572,9 @@ h1:hover::after {
         <a href="/help/blog/privacy" target="_blank">隐私协议</a>
         <a href="/help/blog/copyright" target="_blank">版权协议</a>
         <a href="/help/blog/declaration" target="_blank">免责声明</a>
-    </div>
+    </div>  
 </div>
+
 <div class="livere">
     <!-- page、post、about、links、works -->
 <!-- waline.js、waline.js.map、waline.css、waline.css.map -->
@@ -653,72 +661,10 @@ h1:hover::after {
     </script>
 </body>
 </div>
+
+
 <script type="text/javascript" src="/assets/js/echarts.min.js"></script>
-<script type="text/javascript">
-// 基于准备好的dom，初始化echarts实例
-var myChart = echarts.init(document.getElementById('mainSkill'));
-
-// 指定图表的配置项和数据
-option = {
-    title: {
-        text: 'IT技能属性表',
-        subtext: 'gorpeln',
-        x: 'center'
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'left',
-        data: ['iOS', 'MacOS', '小程序', '前端', 'Linux', 'Android', '修电脑']
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            magicType: {
-                show: true,
-                type: ['pie', 'funnel'],
-                option: {
-                    funnel: {
-                        x: '25%',
-                        width: '50%',
-                        funnelAlign: 'left',
-                        max: 1548
-                    }
-                }
-            },
-            restore: { show: true },
-            saveAsImage: { show: true }
-        }
-    },
-    calculable: true,
-    series: [{
-        name: 'IT技能',
-        type: 'pie',
-        radius: '55%',
-        center: ['50%', '60%'],
-        data: [
-            { value: 24, name: 'iOS' },
-            { value: 22, name: 'MacOS' },
-            { value: 20, name: '小程序' },
-            { value: 28, name: '前端' },
-            { value: 8, name: 'Linux' },
-            { value: 7, name: 'Android' },
-            { value: 1, name: '修电脑' }
-        ]
-    }],
-    color: ['#4B4B96', '#FF733A', '#9370DB', '#00FFFF', '#00D937', '#FF69B4', '#000000']
-
-};
-
-
-// 使用刚指定的配置项和数据显示图表。
-myChart.setOption(option);
-</script>
+<script src="/assets/js/typed.min.js"></script> 
 <script type="text/javascript">
 function showImg() {
     document.getElementById("wxImg").style.display = 'block';
@@ -740,7 +686,48 @@ try {
         smartBackspace: true, //默认true
     });
 } catch (err) {}
-</script></div>
+</script>
+
+
+<script>
+var myChart = echarts.init(document.getElementById('mainSkill'));
+
+option = {
+    title: {
+        text: 'IT技能属性表',
+        subtext: '个人技能',
+        x: 'center'
+    },
+    legend: {
+        top: 'bottom'
+    },
+    series: [{
+        name: 'IT技能',
+        type: 'pie',
+        radius: '50%',
+        center: ['50%', '50%'],
+        data: [
+            { value: 24, name: 'iOS' },
+            { value: 22, name: 'MacOS' },
+            { value: 20, name: '小程序' },
+            { value: 28, name: '前端' },
+            { value: 8, name: 'Linux' },
+            { value: 7, name: 'Android' },
+            { value: 1, name: '修电脑' }
+        ]
+    }],
+    color: ['#4B4B96', '#FF733A', '#9370DB', '#00FFFF', '#00D937', '#FF69B4', '#000000']
+};
+
+myChart.setOption(option);
+
+
+window.addEventListener('resize', function () {
+    myChart.resize();
+});
+
+</script>
+</div>
                 </div>
             </div>
         </div>

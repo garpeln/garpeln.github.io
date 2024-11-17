@@ -759,7 +759,7 @@ iziToast.show({
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;&quot;&gt;参考链接：
+&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
     &lt;div&gt;
       
         https://www.yvii.cn/archives/1980.html
@@ -938,7 +938,7 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;&quot;&gt;参考链接：
+&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
     &lt;div&gt;
       
         https://koobai.com/zhongjiantiaozhuan
@@ -1068,7 +1068,7 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;&quot;&gt;参考链接：
+&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
     &lt;div&gt;
       
         https://blog.stevenw.cc/archives/BMn51E3Y
