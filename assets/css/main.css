@@ -947,7 +947,7 @@ ul,
 ol li {
     /*list-style-type: decimal;*/
     /*overflow: scroll;*/
-
+    word-wrap: break-word;
 }
 
 li>ul,
