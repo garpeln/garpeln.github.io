@@ -432,9 +432,10 @@ h1.tag-name {
 
 .tag-ul .time {
     font-family: "heiti SC";
-    margin-right: 1em;
+    /*margin-right: 1em;*/
     flex-shrink: 0;
     opacity: 0.5;
+    width: 12ch;
 }
 
 /*
