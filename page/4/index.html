@@ -412,11 +412,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3377天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3380天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-11-20 19:21:48 +0800">2024/11/20</p>
+                                    <p id="current-date" data-value="2024-11-23 19:00:54 +0800">2024/11/23</p>
                                 </li>
                             </ul>
                     </div>
@@ -444,6 +444,7 @@
     text-align: center;
 }
 </style>
+<link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
 <div>
     <!-- 置顶文章 -->
     
@@ -2624,6 +2625,59 @@ async function fetchData() {
     }
 }
 </script>
+<!-- 春节灯笼 -->
+<div style="display:none;" id="lanterns">
+    <div class="deng-box">
+        <div class="deng">
+            <div class="xian"></div>
+            <div class="deng-a">
+                <div class="deng-b">
+                    <div class="deng-t">快乐</div>
+                </div>
+            </div>
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+        </div>
+    </div>
+    <div class="deng-box1">
+        <div class="deng">
+            <div class="xian"></div>
+            <div class="deng-a">
+                <div class="deng-b">
+                    <div class="deng-t">春节</div>
+                </div>
+            </div>
+            <div class="shui shui-a">
+                <div class="shui-c"></div>
+                <div class="shui-b"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 获取当前日期
+    var currentDate = new Date();
+    
+    // 定义开始日期和结束日期
+    var startDate = new Date('2025-01-22');//腊月廿三
+    var endDate = new Date('2025-02-12');//正月十五
+
+    // 获取 div 元素
+    var specialDiv = document.getElementById('lanterns');
+
+    // 检查当前日期是否在指定的日期范围内
+    if (currentDate >= startDate && currentDate <= endDate) {
+        // 如果在范围内，则显示 div
+        specialDiv.style.display = 'block';
+    } else {
+        // 否则，隐藏 div
+        specialDiv.style.display = 'none';
+    }
+});
+</script>
 
 </html></div>
                 </div>
@@ -3022,7 +3076,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 92 + '天';
+  element.innerHTML = 9 + '年' + 95 + '天';
 
 }
 
@@ -3031,7 +3085,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3377 + '天';
+    element.innerHTML = 3380 + '天';
 }
 
 
