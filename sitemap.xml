@@ -2885,7 +2885,7 @@
                 <priority>1.0</priority>
             </url>
             <url>
-                <loc>https://gorpeln.top/other/friends.json</loc>
+                <loc>https://gorpeln.top/other/rss_friends.json</loc>
                 <priority>1.0</priority>
             </url>
             <url>

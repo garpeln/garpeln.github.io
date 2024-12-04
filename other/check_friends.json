@@ -2,200 +2,204 @@
   "link_list": [
     {
       "name": "十年之约",
-      "link": "https://www.foreverblog.cn/blog/577.html",
       "avatar": "https://www.foreverblog.cn/favicon.ico",
       "descr": "一个人的寂寞，一群人的狂欢。",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://www.foreverblog.cn/blog/577.html"
     },
     {
       "name": "开往",
-      "link": "https://www.travellings.cn/go.html",
       "avatar": "/assets/img/travelling-dark.png",
       "descr": "友链接力",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://list.travellings.cn/"
     },
     {
       "name": "个站商店",
-      "link": "https://storeweb.cn/site/o/2006",
       "avatar": "https://upload.storeweb.cn/image/logo.png",
       "descr": "一个精致的，带社交元素的个人网站发布平台，博客收录网站",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://storeweb.cn/site/o/2006"
     },
     {
       "name": "博友圈",
-      "link": "https://www.boyouquan.com/blogs/gorpeln.top",
       "avatar": "https://www.boyouquan.com/assets/images/sites/logo/logo-small.png",
       "descr": "博客人的朋友圈，博客收录与文章 RSS 聚合网站。",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://www.boyouquan.com/blogs/gorpeln.top"
     },
     {
       "name": "BlogFinder",
-      "link": "https://bf.zzxworld.com/s/1187",
       "avatar": "https://bf.zzxworld.com/images/favicon.png",
       "descr": "每个博客都是一座宝藏！",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://bf.zzxworld.com/s/1187"
     },
     {
       "name": "萌ICP备",
-      "link": "https://icp.gov.moe/?keyword=20240031",
       "avatar": "https://icp.gov.moe/favicon.ico",
       "descr": "萌友网站联萌！",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://icp.gov.moe/?keyword=20240031"
     },
     {
       "name": "官码",
-      "link": "https://guan.ma/hao/2024000022/",
       "avatar": "https://style.wmou.com/images/guanma.png",
       "descr": "这个博主很懒，什么话也没有留下！",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://guan.ma/hao/2024000022/"
     },
     {
       "name": "MIIT",
-      "link": "https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top",
       "avatar": "https://beian.miit.cn.com/logo.png",
       "descr": "这个博主很懒，什么话也没有留下！",
-      "siteshot": ""
+      "status": 2,
+      "siteshot": "",
+      "link": "https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top"
     },
     {
-      "name": "个人博客",
-      "link": "https://gorpeln.top/",
+      "name": "gorpeln的个人博客",
       "avatar": "https://gorpeln.top/favicon.ico",
       "descr": "趁年轻，做自己想做的！",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://gorpeln.top/links"
     },
     {
       "name": "王乐园个人博客",
-      "link": "https://blogs.kongjz.com/",
       "avatar": "https://blogs.kongjz.com/favicon.ico",
       "descr": "王乐园的个人博客，记录我的青春时光，在这青春岁月里留下这美好一刻的草根站长。",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://blogs.kongjz.com/friend"
     },
     {
       "name": "会打篮球的程序猿",
-      "link": "http://www.lzhpo.com/",
       "avatar": "http://cdn.lzhpo.com/tx.jpg",
       "descr": "Talk is cheap, show me the code.",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "http://www.lzhpo.com/links"
     },
     {
       "name": "UsubeniFantasy",
-      "link": "https://ssshooter.com/",
       "avatar": "https://ssshooter.com/logo.png",
       "descr": "Write like you're running out of time.",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://ssshooter.com/links"
     },
     {
       "name": "文西小记",
-      "link": "https://aizni.cn/",
       "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1685001992&s=640",
       "descr": "简单传递美好",
-      "siteshot": ""
+      "status": 4,
+      "siteshot": "",
+      "link": "https://aizni.cn/links.html"
     },
     {
       "name": "皮皮赖's Blog",
-      "link": "https://www.lp.fyi/",
       "avatar": "https://q1.qlogo.cn/g?b=qq&nk=369994633&s=640",
       "descr": "你我最后竟然也平凡到自命不凡",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.lp.fyi//link.html"
     },
     {
       "name": "忆梦小站",
-      "link": "https://www.onyi.net/",
       "avatar": "https://i.niupic.com/images/2023/08/20/bBVR.jpg",
       "descr": "微笑着挥手再见，但内心却深知，以后不会再相见。",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.onyi.net/friends.html"
     },
     {
       "name": "关关和六六",
-      "link": "https://www.gmcllp.cn/",
       "avatar": "https://www.gmcllp.cn/favicon.ico",
       "descr": "向世界分享我们的故事",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.gmcllp.cn/links.html"
     },
     {
       "name": "不吐不快",
-      "link": "https://mianao.info/",
       "avatar": "https://mianao.info/img/icon.png",
       "descr": "我心中的一团火是不会熄地",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://mianao.info/link"
     },
     {
       "name": "Debug客栈",
-      "link": "https://blog.debuginn.com/",
       "avatar": "https://cdn.jsdelivr.net/gh/debuginn/image@main/img/202302182238057.JPG",
       "descr": "做一个爱分享的程序猿",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://blog.debuginn.com/links"
     },
     {
       "name": "星辰日记",
-      "link": "https://blog.xsot.cn/",
       "avatar": "https://img.iirose.cn/blog/logo.webp",
       "descr": "我已很久不再成为我自己",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://blog.xsot.cn/link"
     },
     {
       "name": "Hary的博客",
-      "link": "https://hary.cc/",
       "avatar": "https://hary.cc/ico.png",
       "descr": "这是我在网络上的一个在线记事本，记录一些个人生活片段，以及搭建网站和工具使用的经验分享。",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://hary.cc/links.html"
     },
     {
       "name": "Highlight",
-      "link": "https://wanglin.blog/",
       "avatar": "https://image-1309076403.cos.ap-beijing.myqcloud.com/typecho5059c83219745250bda9c94ed48c02ce_1.jpg",
       "descr": "记录生活点滴！",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://wanglin.blog/index.php/200.html"
     },
     {
       "name": "乙未博客",
-      "link": "https://www.yvii.cn/",
       "avatar": "https://www.yvii.cn/img/favicon.png",
       "descr": "记录生活，分享与留存！",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.yvii.cn/links.html"
     },
     {
       "name": "冬天的小窝",
-      "link": "https://www.iamdt.cn/",
       "avatar": "https://img.iamdt.cn/2023/09/26/6512ccfe73f56.png",
       "descr": "人生若只如初见，何事秋风悲画扇。",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.iamdt.cn/friends"
     },
     {
       "name": "Jerry Zhou的博客",
-      "link": "https://blog.jerryz.com.cn/",
       "avatar": "https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg",
       "descr": "永远相信美好的事情即将发生。",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://blog.jerryz.com.cn/link"
     },
     {
       "name": "逐暗者的麦田",
-      "link": "https://www.iasuna.com/",
       "avatar": "https://pic.shellingford.cn/i/me/logo.jpg",
       "descr": "一位Java攻城狮的个人博客，主要分享编程、建站、动漫、趣闻和生活内容",
-      "siteshot": ""
-    },
-    {
-      "name": "刘郎阁",
-      "link": "https://yjvc.cn/",
-      "avatar": "https://yjvc.cn/usr/uploads/logo.jpeg",
-      "descr": "一个积极向上的生活探索者！",
-      "siteshot": ""
-    },
-    {
-      "name": "Randwind’s blog",
-      "link": "https://www.randwind.com/",
-      "avatar": "https://www.randwind.com/wp-content/uploads/2023/11/logo.png",
-      "descr": "做个自由自在的风。",
-      "siteshot": ""
-    },
-    {
-      "name": "無名小栈",
-      "link": "https://blog.imsyy.top/",
-      "avatar": "https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png",
-      "descr": "分享技术与科技生活",
-      "siteshot": ""
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.iasuna.com/link"
     }
   ],
-  "length": 28
+  "length": 25
 }
