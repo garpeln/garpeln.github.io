@@ -1246,6 +1246,7 @@ a:focus {
     background: rgba(0, 0, 0, 0.35) url(/assets/img/top_button.png) no-repeat center center;
     background-size: 60%;
     border-radius: 10px;
+    box-shadow: 0 0 4px 1px rgba(102, 102, 204, 0.5);
 
     /*       width: 0.8em;
     height: 0.8em;
@@ -1265,6 +1266,7 @@ a:focus {
     bottom: 140px;
     right: 12px;
     border-radius: 10px;
+    box-shadow: 0 0 4px 1px rgba(102, 102, 204, 0.5);
 }
 
 .qrcode {
@@ -1276,6 +1278,7 @@ a:focus {
     bottom: 90px;
     right: 12px;
     border-radius: 10px;
+    box-shadow: 0 0 4px 1px rgba(102, 102, 204, 0.5);
 }
 
 .qrcodeImg {
