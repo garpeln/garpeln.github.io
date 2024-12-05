@@ -6,6 +6,49 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       <item>
+        <title>Mac软件站点</title>
+        <link>https://gorpeln.top/article/17280983369</link>
+        <guid isPermaLink="true">https://gorpeln.top/article/17280983369</guid>
+        <pubDate>2024-10-05</pubDate>
+        <description>&lt;h3 id=&quot;mac软件站点&quot;&gt;Mac软件站点&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.macwk.cn/&quot;&gt;MacWk.cn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://macwk.com.cn/&quot;&gt;MacWk.com.cn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://appstorrent.ru/programs/&quot;&gt;appstorrent&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://macbang.net/&quot;&gt;Mac帮&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digit77.com/&quot;&gt;Digit77&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imacapp.cn/&quot;&gt;iMacApp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.inpandora.com/&quot;&gt;潘多拉盒子&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://xclient.info/&quot;&gt;Xclient&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://haxmac.cc/&quot;&gt;HaxMac&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://maczz.net/&quot;&gt;元婴MAC软件站&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.macbl.com/&quot;&gt;马可波罗&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://osx.cx/&quot;&gt;黑苹果社区&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://macapp.org.cn/&quot;&gt;MacApp分享频道&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mac.filehorse.com/&quot;&gt;FileHorse&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bear20.com/&quot;&gt;小熊下载站&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mac8k.com/&quot;&gt;Mac8k&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cmacked.com/&quot;&gt;Cmacked&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chengdongds.top/&quot;&gt;该大哥网站没名字&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;开源软件&quot;&gt;开源软件&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jgraph/drawio&quot;&gt;Draw.io/画图工具&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/yang991178/fluent-reader&quot;&gt;Fluent Reader/RSS阅读&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/oldj/SwitchHosts&quot;&gt;Switch hosts quickly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/dteoh/SlowQuitApps&quot;&gt;Slow Quit Apps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/GoogleChromeLabs/squoosh&quot;&gt;Squoosh/图片压缩&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/noah-nuebling/mac-mouse-fix/&quot;&gt;Mac Mouse/鼠标增强工具&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zhangyu1818/appicon-forge&quot;&gt;Diy 应用图标&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      </item>
+    
+      <item>
         <title>定期自动备份又拍云存储</title>
         <link>https://gorpeln.top/article/17280983368</link>
         <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
@@ -1714,82 +1757,6 @@ git clone git@gorpelnTwo:gorpeln-two/repo.git
 
 &lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
 &lt;p&gt;Substats 是我借助 Serverless 技术构建的一个 Cloudflare Worker，直接部署在 Cloudflare 全球 CDN 节点上，访问速度非常的快。因此，如果你使用 Substats 和 Shields.io 来制作「小牌子」，生成 SVG 所消耗的时间的占比较大的部分应该是和原服务 API 沟通的时间（比如 NewsBlur 就特别慢）。&lt;/p&gt;
-
-</description>
-      </item>
-    
-      <item>
-        <title>个人网站，零成本、低门槛创建专属数据分析工具：umami.is</title>
-        <link>https://gorpeln.top/article/16829158558</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16829158558</guid>
-        <pubDate>2023-05-01</pubDate>
-        <description>&lt;p&gt;&lt;strong&gt;Google Analytics&lt;/strong&gt; 应该是当今互联网使用最广泛的网站流量分析服务。通过在网页中嵌入追踪代码，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 能够帮我们收集网站的流量来源，同时自动分析跳出率、转化率等核心指标。但是对于大部分中小型站点而言，接入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 并不是最理想的选择，因为它太复杂了，同时国内访问也不太方便。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami.is&lt;/code&gt; 则可以看作是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt; 的精简版解决方案，它完全免费且开源，非常适合中小站点的网络流量统计分析。相对于复杂的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami.is&lt;/code&gt; 的界面也更加简洁，只关注于核心指标，并方便分享出去。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735961.png!gorpeln&quot; alt=&quot;20230501123735961&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;前期准备&quot;&gt;前期准备&lt;/h3&gt;
-&lt;p&gt;你需要完成以下 3 个步骤：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;访问 &lt;a href=&quot;https://github.com/umami-software/umami&quot;&gt;umami.is 代码仓库&lt;/a&gt;，点击右上方 Fork 到自己的帐号。&lt;/li&gt;
-  &lt;li&gt;访问 &lt;a href=&quot;https://vercel.com/dashboard&quot;&gt;Vercel注册&lt;/a&gt;页面，点击使用 GitHub 登录到 Vercel。&lt;/li&gt;
-  &lt;li&gt;访问 &lt;a href=&quot;https://supabase.com/dashboard/projects&quot;&gt;Supabase注册&lt;/a&gt; 页面，点击使用 GitHub 登录到 Supabase。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;1在supabase创建数据库&quot;&gt;1、在Supabase创建数据库&lt;/h3&gt;
-&lt;p&gt;我们需要先在 Supabase 的主界面中找到 New Project 按钮创建一个新的数据库。名字可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami&lt;/code&gt;，然后设置一个自己记得住的数据库密码（一会要用）。下方的 Region 区域选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Northeast Asia（Tokyo）&lt;/code&gt;东京区域。Supabase 本身使用了 AWS 云服务，东京区域在大陆地区的访问速度还是比较理想的。等待数据库建立，需要几分钟的时间。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735962.png!gorpeln&quot; alt=&quot;20230501123735962&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;建立之后，点击左下方的 Project Settings，选择 Database，找到 Connection string 中的 URL 一栏，&lt;strong&gt;复制内容，并将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[YOUR-PASSWORD]&lt;/code&gt;替换为上一步生成的密码&lt;/strong&gt;。
-Supabase 平台的操作就结束了。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735963.png!gorpeln&quot; alt=&quot;20230501123735963&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2在-vercel-部署-umami&quot;&gt;2、在 Vercel 部署 Umami&lt;/h3&gt;
-&lt;p&gt;登录&lt;a href=&quot;https://vercel.com/dashboard&quot;&gt;Vercel&lt;/a&gt; 之后，点击右上角 Add New Project，并导入事先 Fork 的项目仓库。创建项目的页面中，会自动加载你 GitHub 帐号下方的代码仓库。还记得准备步骤 Fork 的 umami.is 仓库吗？选中即可。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735964.png!gorpeln&quot; alt=&quot;20230501123735964&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在 Configure Project 中需要设置两个环境变量（&lt;strong&gt;Environment Variables&lt;/strong&gt;）。
-分别添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATABASE_URL&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HASH_SALT&lt;/code&gt;。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATABASE_URL&lt;/code&gt;：是上一步在 Subabase 复制的 URL，记得替换自己的 Password；&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HASH_SALT&lt;/code&gt;：它的值可以是任意随机英文字符串，比如我使用了我的用户名 HUHUHANG，你也可以自定义其他随机字符串&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;最后点击 Deploy，等待两分钟。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735965.png!gorpeln&quot; alt=&quot;20230501123735965&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3测试和设置&quot;&gt;3、测试和设置&lt;/h3&gt;
-&lt;p&gt;至此，主要步骤已经顺利完成，你需要做的只是耐心等待项目部署完毕。完成之后，Vercel 会自动跳转到项目主页，并随机分配一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;域名&lt;/code&gt;（需要科学上网，可以绑定自己的域名）。点击 &lt;strong&gt;Visit&lt;/strong&gt; 访问项目，umami 默认的后台登录的用户名是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt;，密码是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umami&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h4 id=&quot;1自定义域名&quot;&gt;1）自定义域名&lt;/h4&gt;
-&lt;p&gt;首先是设置一个独立域名，当然前提条件是你有自己的域名，没有的话可以到任意域名服务商（阿里云、腾讯云等）购买。当然你也可以一直使用 Vercel 自动分配的域名（Vercel 自动分配的域名需要科学上网）。&lt;/p&gt;
-
-&lt;h4 id=&quot;2重设-umami-密码并绑定站点&quot;&gt;2）重设 umami 密码并绑定站点&lt;/h4&gt;
-&lt;p&gt;不要忘记到 umami 后台重设默认的管理员密码。同时，你可以新建站点并获取到数据追踪代码嵌入到你的站点中。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20230501123735966.png!gorpeln&quot; alt=&quot;20230501123735966&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这里非常推荐开启「&lt;strong&gt;启用共享链接&lt;/strong&gt;」的选项，这是 umami 的一大特色，可以方便分享你的站点访问数据。同时当你自己查看时，可以免登录。你可以 &lt;a href=&quot;https://umami.202090.xyz/share/oWC5HwUyPml1gkRI/gorpeln.top&quot;&gt;访问我的示例分享页面&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：如果需要删除网站，先将语言切换至 English，中文状态无法删除。&lt;/p&gt;
-
-&lt;h3 id=&quot;4常见问题和小结&quot;&gt;4、常见问题和小结&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Q：Vercel 和 Supabase 是免费的吗？我能用多久？&lt;/strong&gt; &lt;br /&gt;
-A：目前 Vercel 的个人帐号完全免费，企业帐号才需要付费。Supabase 的免费数据库存在 500 MB 的限制，对于中小站点这个容量理论上够用很多年了。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Q：umami 的访问速度如何？&lt;/strong&gt;  &lt;br /&gt;
-A：据我所知，Vercel 使用了 Google Cloud 的云服务，距离大陆地区最近的节点在台湾省和香港特别行政区，访问速度还算理想。而 Supabase 使用了 AWS 云服务，一开始我们创建的数据库就选择了离大陆地区最近的东京数据中心。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Q：umami 后续如何升级？&lt;/strong&gt; &lt;br /&gt;
-A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码仓库更新时，Vercel 会帮你自动部署上线最新版本的 umami。你可以不定期访问你 Fork 后的代码仓库，选中 Fetch upstream 从 umami 官方仓库同步最新的代码后即可自动升级。当然，你还可以从一开始直接部署官方仓库的代码，完全跟随官方版本迭代升级。&lt;/p&gt;
 
 </description>
       </item>

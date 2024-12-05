@@ -184,6 +184,14 @@
     </script>
 </head>
 <body>
+
+
+<!--  添加丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="../assets/js/ribbon.min.js"></script>
+<canvas width="2064" height="1688" style="opacity: 0.3; position: fixed; top: 0px; left: 0px; z-index: -2; width: 100%; height: 100%; pointer-events: none;"></canvas>
+
+
+
 <script>
   $(document).ready(function() {
     $("#toc").toc({
@@ -229,7 +237,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">747</span>
+                                    <span class="site-state-item-count">748</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -241,7 +249,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">655</span>
+                                    <span class="site-state-item-count">657</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -258,11 +266,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">655
+                                <span class="articleCount">657
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">747
+                                <span class="articleCount">748
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -295,7 +303,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">23
+                                <a name="个人博客" style="" class="articleCount">24
                                 </a>
                             </li>
                             
@@ -398,11 +406,11 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >747</p>
+                                    <p >748</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>170.9k</p> 
+                                    <p>171.0k</p> 
 
                                 </li>
                                 <li>
@@ -416,7 +424,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-05 10:58:31 +0800">2024/12/05</p>
+                                    <p id="current-date" data-value="2024-12-05 17:57:47 +0800">2024/12/05</p>
                                 </li>
                             </ul>
                     </div>
@@ -677,7 +685,7 @@ a {
         
         <a class="pjaxlink" href="#权限" name="权限">权限　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#Mac" name="Mac">Mac　<span class="tag-count">(2)</span></a>
+        <a class="pjaxlink" href="#Mac" name="Mac">Mac　<span class="tag-count">(3)</span></a>
         
         <a class="pjaxlink" href="#快捷键" name="快捷键">快捷键　<span class="tag-count">(1)</span></a>
         
@@ -1744,6 +1752,10 @@ a {
         <a class="pjaxlink" href="#又拍云" name="又拍云">又拍云　<span class="tag-count">(1)</span></a>
         
         <a class="pjaxlink" href="#action" name="action">action　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#软件" name="软件">软件　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#开源" name="开源">开源　<span class="tag-count">(1)</span></a>
         
     </div>
     <div class="clear"></div>
@@ -6551,12 +6563,16 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="Mac" name="Mac">
       <h1 class="tag-name">Mac</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -19817,6 +19833,18 @@ a {
         
       </ul>
     </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
   
 
 </div>
