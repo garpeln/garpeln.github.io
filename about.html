@@ -185,13 +185,6 @@
 </head>
 <body>
 
-
-<!--  添加丝带背景 -->
-<script size="150" alpha="0.3" zindex="-2" src="../assets/js/ribbon.min.js"></script>
-<canvas width="2064" height="1688" style="opacity: 0.3; position: fixed; top: 0px; left: 0px; z-index: -2; width: 100%; height: 100%; pointer-events: none;"></canvas>
-
-
-
 <script>
   $(document).ready(function() {
     $("#toc").toc({
@@ -420,11 +413,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3392天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3393天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-05 17:57:47 +0800">2024/12/05</p>
+                                    <p id="current-date" data-value="2024-12-06 17:43:25 +0800">2024/12/06</p>
                                 </li>
                             </ul>
                     </div>
@@ -715,16 +708,17 @@ option = {
         radius: '50%',
         center: ['50%', '50%'],
         data: [
-            { value: 24, name: 'iOS' },
-            { value: 22, name: 'MacOS' },
-            { value: 20, name: '小程序' },
-            { value: 28, name: '前端' },
+            { value: 26, name: 'iOS' },
+            { value: 21, name: 'MacOS' },
+            { value: 16, name: '小程序' },
+            { value: 12, name: '前端' },
+            { value: 9, name: 'Python' },
             { value: 8, name: 'Linux' },
             { value: 7, name: 'Android' },
             { value: 1, name: '修电脑' }
         ]
     }],
-    color: ['#4B4B96', '#FF733A', '#9370DB', '#00FFFF', '#00D937', '#FF69B4', '#000000']
+    color: ['#5872C0', '#9ED27E', '#9165AF', '#F1C669', '#5AA078', '#DE6F69', '#84BFDB', '#666666']
 };
 
 myChart.setOption(option);
@@ -848,6 +842,10 @@ window.addEventListener('resize', function () {
 <script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript" src="/assets/js/toc.js"></script>
 <script type="text/javascript" src="/assets/js/safe.js"></script>
+<!--  樱花背景 -->
+<script type="text/javascript" src="/assets/js/sakura.js"></script>
+<!--  丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
 
 
 
@@ -1132,7 +1130,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 107 + '天';
+  element.innerHTML = 9 + '年' + 108 + '天';
 
 }
 
@@ -1141,7 +1139,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3392 + '天';
+    element.innerHTML = 3393 + '天';
 }
 
 
