@@ -413,11 +413,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3393天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3395天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-06 17:43:25 +0800">2024/12/06</p>
+                                    <p id="current-date" data-value="2024-12-08 17:20:10 +0800">2024/12/08</p>
                                 </li>
                             </ul>
                     </div>
@@ -688,7 +688,17 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     padding: 0.5em;
     margin-bottom: 0.5em;
 }
-
+.site-footer:before {
+    content: "";
+    position: absolute;
+    background-image: url(../assets/img/logo.svg);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    margin-top: -5%;
+    right:10%;
+}
 .runTime {
     color: #777;
     text-align: center;
@@ -729,6 +739,11 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 }
 
 .post-margin{
+}
+@media (max-width: 992px) {
+    .site-footer:before {
+        display:none;
+    }
 }
 
 
@@ -1063,7 +1078,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 108 + '天';
+  element.innerHTML = 9 + '年' + 110 + '天';
 
 }
 
@@ -1072,7 +1087,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3393 + '天';
+    element.innerHTML = 3395 + '天';
 }
 
 
