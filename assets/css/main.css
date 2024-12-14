@@ -1389,7 +1389,7 @@ a:focus {
     background: rgba(55, 55, 75, 0.96);
     margin: -1em -1em -4em -1em;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
 }
 
 
