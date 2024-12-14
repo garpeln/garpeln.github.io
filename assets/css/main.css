@@ -1505,13 +1505,14 @@ div.gavatar a:hover {
     line-height: 1.4;
     white-space: nowrap;
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 1.4em;
     width: 100%;
 }
 
 .site-state-item {
     display: inline-block;
     width: 30%;
+    padding: 4px 0;
 }
 
 .site-state-item:nth-child(2) {
@@ -1542,6 +1543,15 @@ div.gavatar a:hover {
     display: block;
     text-align: center;
     margin-top: 0.1em;
+}
+
+.site-state-item.site-state-posts:hover .site-state-item-count,
+.site-state-item.site-state-posts:hover .site-state-item-name,
+.site-state-item.site-state-categories:hover .site-state-item-count,
+.site-state-item.site-state-categories:hover .site-state-item-name,
+.site-state-item.site-state-tags:hover .site-state-item-count,
+.site-state-item.site-state-tags:hover .site-state-item-name{
+    color: rgba(102, 102, 204, 1.0);
 }
 
 .rss-subscribe {
