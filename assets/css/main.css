@@ -1629,6 +1629,27 @@ div.gavatar a:hover {
     font-family: 'heiti SC';
 }
 
+/* 滚动条整体部分 */
+.customCatalog::-webkit-scrollbar {
+    width: 7px; 
+}
+
+/*.customCatalog::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.customCatalog::-webkit-scrollbar-thumb {
+    background: #dedede; 
+    border-radius: 2.5px; 
+}
+
+.customCatalog::-webkit-scrollbar-track:hover {
+    background: #efefef; 
+}
+.customCatalog::-webkit-scrollbar-thumb:hover {
+    background: #cdcdcd; 
+}
+*/
 .customCatalog.fixed {
     position: fixed;
     top: 0;
@@ -1648,6 +1669,9 @@ div.gavatar a:hover {
 
 .toc-active{
     color:var(--font-active-color-dark);
+    background: var(--background-color-light);
+    border-radius: 6px;
+    padding: 0 8px;
 }
 
 
@@ -3197,7 +3221,9 @@ body.dark-mode .toc-normal{
 
 body.dark-mode .toc-active{
     color:var(--font-active-color-dark);
+    background:var(--background-color-dark);
 }
+
 
 
 /*

@@ -203,6 +203,7 @@
       highlightOffset: 100
     });
   });
+    $('#toc').css('display', 'block');
 </script>
 
     <div class="content">
@@ -393,7 +394,6 @@
                             
                         </div>
                     </div>
-                    
                     <div class="siteInfoNav" id="siteInfoNav">
                         <div class="navTitle">网站资讯</div>
                         <ul>
@@ -413,11 +413,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3404天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3405天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-17 17:15:41 +0800">2024/12/17</p>
+                                    <p id="current-date" data-value="2024-12-18 17:16:49 +0800">2024/12/18</p>
                                 </li>
                             </ul>
                     </div>
@@ -1357,6 +1357,7 @@ s.parentNode.insertBefore(el, s);
 
 
 </body>
+<!-- li添加跳转 -->
 <script>
 function pushNew(path) {
     if (path == '/') {
@@ -1366,36 +1367,65 @@ function pushNew(path) {
     }
 }
 </script>
+<!-- 目录 -->
 <script>
-    function menuFixed(id, otherId) {
-        var obj = document.getElementById(id);
-        var _getHeight = obj.offsetTop;
+$(document).ready(function() {
+    function setupFixedMenu(tocId, referenceId) {
+        var toc = $('#' + tocId);
+        var reference = $('#' + referenceId);
+        var originalTop = toc.offset().top;
+        var isFixed = false;
 
-        window.onscroll = function() {
-            changePos(id, _getHeight, otherId);
+        function updateTocPosition() {
+            var scrollTop = $(window).scrollTop();
+            var shouldFix = scrollTop >= originalTop;
+
+            if (shouldFix !== isFixed) {
+                isFixed = shouldFix;
+                toc.css({
+                    position: isFixed ? 'fixed' : 'relative',
+                    top: isFixed ? '0' : '', // Adjust this value as needed
+                    width: reference.outerWidth() + 'px'
+                });
+            }
+
+            // Ensure TOC scrolls to keep the active item in view
+            scrollTocToActiveItem();
         }
+
+        function scrollTocToActiveItem() {
+            var activeItem = toc.find('.toc-active');
+            if (activeItem.length > 0) {
+                var activeTop = activeItem.position().top;
+                var tocHeight = toc.innerHeight();
+                var scrollPos = toc.scrollTop();
+
+                // Check if active item is not in view
+                if (activeTop < 0 || activeTop + activeItem.outerHeight() > tocHeight) {
+                    // Scroll TOC to bring active item into view
+                    toc.animate({ scrollTop: scrollPos + activeTop - (tocHeight / 2) }, 300);
+                }
+            }
+        }
+
+        $(window).on('scroll', function() {
+            requestAnimationFrame(updateTocPosition);
+        });
+
+        $(window).on('resize', function() {
+            if (isFixed) {
+                toc.css('width', reference.outerWidth() + 'px');
+            }
+        });
+
+        // Ensure correct state on page load
+        updateTocPosition();
     }
 
-    function changePos(id, height, otherId) {
-        var obj = document.getElementById(id);
-        var friendlinkObj = document.getElementById(otherId);
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (scrollTop < height) {
-            obj.style.position = 'relative';
-        } else {
-            obj.style.position = 'fixed';
-        }        
-        obj.style.width = friendlinkObj.offsetWidth + 'px';
-
-    }
-
-    $(document).ready(function() {
-        menuFixed('toc', 'siteInfoNav');
-    });
-
+    setupFixedMenu('toc', 'siteInfoNav');
+});
 </script>
-
+<!-- 二维码 -->
 <script type="text/javascript" src="/assets/js/qrcode.js"></script>
 <script>
     // 生成二维码
@@ -1434,7 +1464,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 119 + '天';
+  element.innerHTML = 9 + '年' + 120 + '天';
 
 }
 
@@ -1443,15 +1473,11 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3404 + '天';
+    element.innerHTML = 3405 + '天';
 }
-
-
-
-
-
 </script>
 
+<!-- 日期计算 -->
  <script>
 
      var value = document.getElementById("current-date").getAttribute("data-value");
@@ -1480,6 +1506,7 @@ function restoreContent(element) {
 
   </script>
 
+<!-- rss 添加声音 -->
 <script>
 $(document).ready(function() {
     $('.rss-subscribe').click(function(event) {
@@ -1492,6 +1519,8 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- 提交百度 -->
 <script>
 // 模拟异步操作
 function asyncOperation() {
