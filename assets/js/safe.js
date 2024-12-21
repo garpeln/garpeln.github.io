@@ -16,7 +16,7 @@ var excludedClasses = [
     'footer-item',          // footer
     'cf-article-title',     // 友链文章
     'search-btn',           // 搜索按钮
-    'safe-item-auto-load'   // 其他 博客记录、work的点赞留言、/article/16990919984
+    'safe-item-auto-load'   // 其他 博客记录、work的点赞留言、/article/16990919984、手机端menu开往
 ]; 
 
 window.addEventListener('load', (event) => {

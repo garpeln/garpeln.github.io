@@ -2365,9 +2365,10 @@ div.contentAbstract img {
     margin-bottom: 2em;
     border-left: 6px solid;
     margin-left: -3em;
-/*    padding-left: calc(3em - 6px);
-*/    color: var(--font-title-color-light);
+    color: var(--font-title-color-light);
     padding:10px calc(2.4em - 6px);
+    padding-right: 0;
+
 }
 
 
