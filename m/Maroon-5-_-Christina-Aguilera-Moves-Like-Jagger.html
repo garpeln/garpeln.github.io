@@ -417,7 +417,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-21 15:07:54 +0800">2024/12/21</p>
+                                    <p id="current-date" data-value="2024-12-21 15:45:05 +0800">2024/12/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -1139,14 +1139,21 @@ $(document).ready(function() {
             }
         }
 
+        function handleViewportChange() {
+            // Delay the execution to ensure the DOM is fully updated
+            setTimeout(function() {
+                originalTop = toc.offset().top; // Recalculate original top position
+                updateTocPosition(); // Update TOC position immediately
+            }, 0);
+        }
+
+        // Listen for window resize and orientation change events
         $(window).on('scroll', function() {
             requestAnimationFrame(updateTocPosition);
         });
 
-        $(window).on('resize', function() {
-            if (isFixed) {
-                toc.css('width', reference.outerWidth() + 'px');
-            }
+        $(window).on('resize orientationchange', function() {
+            handleViewportChange();
         });
 
         // Ensure correct state on page load
