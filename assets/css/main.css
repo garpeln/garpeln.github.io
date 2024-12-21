@@ -89,10 +89,13 @@ img {
 .container {
     width: 100%;
     height: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .row {
     height: 100%;
+    margin:0;
 }
 
 .timebadge {
@@ -254,19 +257,20 @@ figure,
 
 .post-header .info {
     display: flex;
-    padding-left: 0;
+    /*padding-left: 0;
     padding-right: 7px;
     line-height: 25px;
-    min-height: 25px;
+    min-height: 25px;*/
     font-size: 13px;
     color: #888;
-    margin-top: 10px;
-    margin-bottom: 10px;
+/*    margin-top: 2px;
+    margin-bottom: 2px;*/
     font-weight: 300;
     font-family: 'serif';
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top:10px;
 }
 
 .post-header .info p {
@@ -2361,8 +2365,9 @@ div.contentAbstract img {
     margin-bottom: 2em;
     border-left: 6px solid;
     margin-left: -3em;
-    padding-left: calc(3em - 6px);
-    color: var(--font-title-color-light);
+/*    padding-left: calc(3em - 6px);
+*/    color: var(--font-title-color-light);
+    padding:10px calc(2.4em - 6px);
 }
 
 
@@ -2372,12 +2377,15 @@ div.contentAbstract img {
         margin-left: -1.5em;
         padding-left: 1.5em;
     }
+    .post-header .info {
+    margin-top:4px;
+}
 }
 
 
 .post-title {
     font-size: 2em;
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     letter-spacing: -1px;
     line-height: 1;
 }
