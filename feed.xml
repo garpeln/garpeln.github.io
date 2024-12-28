@@ -5,55 +5,15 @@
     <link>https://gorpeln.top</link>
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
-      <item>
-        <title>Mac软件站点</title>
-        <link>https://gorpeln.top/article/17280983369</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17280983369</guid>
-        <pubDate>2024-10-05</pubDate>
-        <description>&lt;h3 id=&quot;mac软件站点&quot;&gt;Mac软件站点&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.macwk.cn/&quot;&gt;MacWk.cn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://macwk.com.cn/&quot;&gt;MacWk.com.cn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://appstorrent.ru/programs/&quot;&gt;appstorrent&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://macbang.net/&quot;&gt;Mac帮&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.digit77.com/&quot;&gt;Digit77&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.imacapp.cn/&quot;&gt;iMacApp&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.inpandora.com/&quot;&gt;潘多拉盒子&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://xclient.info/&quot;&gt;Xclient&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://haxmac.cc/&quot;&gt;HaxMac&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://maczz.net/&quot;&gt;元婴MAC软件站&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.macbl.com/&quot;&gt;马可波罗&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://osx.cx/&quot;&gt;黑苹果社区&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://macapp.org.cn/&quot;&gt;MacApp分享频道&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mac.filehorse.com/&quot;&gt;FileHorse&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.bear20.com/&quot;&gt;小熊下载站&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.mac8k.com/&quot;&gt;Mac8k&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cmacked.com/&quot;&gt;Cmacked&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chengdongds.top/&quot;&gt;该大哥网站没名字&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;开源软件&quot;&gt;开源软件&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jgraph/drawio&quot;&gt;Draw.io/画图工具&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/yang991178/fluent-reader&quot;&gt;Fluent Reader/RSS阅读&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/oldj/SwitchHosts&quot;&gt;Switch hosts quickly&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/dteoh/SlowQuitApps&quot;&gt;Slow Quit Apps&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/GoogleChromeLabs/squoosh&quot;&gt;Squoosh/图片压缩&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/noah-nuebling/mac-mouse-fix/&quot;&gt;Mac Mouse/鼠标增强工具&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/zhangyu1818/appicon-forge&quot;&gt;Diy 应用图标&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-      </item>
+      
     
-      <item>
-        <title>定期自动备份又拍云存储</title>
-        <link>https://gorpeln.top/article/17280983368</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
-        <pubDate>2024-10-05</pubDate>
-        <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+      
+        <item>
+          <title>定期自动备份又拍云存储</title>
+          <link>https://gorpeln.top/article/17280983368</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
+          <pubDate>Sat, 05 Oct 2024 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;数据无价，备份无忧。&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;将其他平台数据备份到不同平台的好处：&lt;/p&gt;
@@ -323,14 +283,16 @@ if __name__ == &quot;__main__&quot;:
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BRANCH_NAME&lt;/code&gt;：项目分支名，一般为master/main，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;master&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>博客常见问题</title>
-        <link>https://gorpeln.top/article/17265361548</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17265361548</guid>
-        <pubDate>2024-09-17</pubDate>
-        <description>
+      
+        <item>
+          <title>博客常见问题</title>
+          <link>https://gorpeln.top/article/17265361548</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17265361548</guid>
+          <pubDate>Tue, 17 Sep 2024 00:00:00 +0800</pubDate>
+          <description>
 &lt;div id=&quot;blog-problem&quot;&gt;
     &lt;p id=&quot;blog-problem-title&quot;&gt;博客目标？&lt;/p&gt;
     &lt;p id=&quot;blog-problem-des&quot;&gt;简洁、高效&lt;/p&gt;
@@ -366,14 +328,16 @@ if __name__ == &quot;__main__&quot;:
     &lt;p id=&quot;blog-problem-des&quot;&gt;正在整理中...&lt;/p&gt;
 &lt;/div&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>防止网站被恶意镜像</title>
-        <link>https://gorpeln.top/article/17245056864</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
-        <pubDate>2024-08-24</pubDate>
-        <description>&lt;h3 id=&quot;什么是网站镜像&quot;&gt;什么是网站镜像？&lt;/h3&gt;
+      
+        <item>
+          <title>防止网站被恶意镜像</title>
+          <link>https://gorpeln.top/article/17245056864</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
+          <pubDate>Sat, 24 Aug 2024 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;什么是网站镜像&quot;&gt;什么是网站镜像？&lt;/h3&gt;
 &lt;p&gt;网站镜像是指在互联网上出现一个与你的网站几乎一模一样的复制品，除了域名不同之外，其它所有内容都完全相同。这包括网站的布局、LOGO、版块结构等。&lt;/p&gt;
 
 &lt;p&gt;通常，网站被恶意镜像的情况主要有两种：&lt;/p&gt;
@@ -533,14 +497,16 @@ if __name__ == &quot;__main__&quot;:
 &lt;/ul&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>Follow - 订阅一切</title>
-        <link>https://gorpeln.top/article/17202356559</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17202356559</guid>
-        <pubDate>2024-07-06</pubDate>
-        <description>&lt;h3 id=&quot;follow是什么&quot;&gt;Follow是什么？&lt;/h3&gt;
+      
+        <item>
+          <title>Follow - 订阅一切</title>
+          <link>https://gorpeln.top/article/17202356559</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17202356559</guid>
+          <pubDate>Sat, 06 Jul 2024 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;follow是什么&quot;&gt;Follow是什么？&lt;/h3&gt;
 &lt;p&gt;Follow 是一款面向未来的信息浏览器，致力于将各种信息源整合在一个平台上，让用户便捷地获取和管理资讯。无论是传统的 RSS 订阅、社交媒体账号、博客、播客，还是实时通知，Follow 都能帮您一站式浏览。界面简洁，操作迅速，为用户提供现代化的阅读体验。&lt;/p&gt;
 
 &lt;p&gt;Follow的&lt;strong&gt;slogan&lt;/strong&gt;是：Next generation information browser&lt;/p&gt;
@@ -588,14 +554,16 @@ if __name__ == &quot;__main__&quot;:
 &lt;p&gt;其他top订阅可以访问github开源项目&lt;a href=&quot;https://github.com/weekend-project-space/top-rss-list&quot;&gt;top-rss-list&lt;/a&gt;&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>双因素认证(2FA)实现原理</title>
-        <link>https://gorpeln.top/article/17196724432</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17196724432</guid>
-        <pubDate>2024-06-29</pubDate>
-        <description>&lt;p&gt;我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。&lt;/p&gt;
+      
+        <item>
+          <title>双因素认证(2FA)实现原理</title>
+          <link>https://gorpeln.top/article/17196724432</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17196724432</guid>
+          <pubDate>Sat, 29 Jun 2024 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。&lt;/p&gt;
 
 &lt;h3 id=&quot;多因子认证&quot;&gt;多因子认证&lt;/h3&gt;
 
@@ -709,14 +677,16 @@ if __name__ == &quot;__main__&quot;:
 &lt;p&gt;所以，选择一款可靠的 Authenticator 应用很关键，建议使用大厂的应用或者开源应用，甚至自己开发一款 TOTP 验证码生成应用。&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>衣服的洗涤保养说明</title>
-        <link>https://gorpeln.top/article/17146497169</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17146497169</guid>
-        <pubDate>2024-05-02</pubDate>
-        <description>&lt;p&gt;你认真读过衣服上的洗衣符号嘛？&lt;/p&gt;
+      
+        <item>
+          <title>衣服的洗涤保养说明</title>
+          <link>https://gorpeln.top/article/17146497169</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17146497169</guid>
+          <pubDate>Thu, 02 May 2024 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;你认真读过衣服上的洗衣符号嘛？&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142831.png!gorpeln&quot; alt=&quot;20240502170142831&quot; /&gt;&lt;/p&gt;
 
@@ -758,14 +728,16 @@ if __name__ == &quot;__main__&quot;:
 &lt;p&gt;最高30度，常规洗涤程序，不可漂白，悬挂晾干，熨烫熨斗底板最高温度110℃，不可干洗&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>倒计时关闭的JS 公告</title>
-        <link>https://gorpeln.top/article/17123887436</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17123887436</guid>
-        <pubDate>2024-04-06</pubDate>
-        <description>&lt;p&gt;这是一个简洁高效的公告通知系统，它能够帮助您在个人博客中迅速传达重要更新、临时公告或其他关键信息给每一位访问者，确保他们能及时获取最新的站点动态。&lt;/p&gt;
+      
+        <item>
+          <title>倒计时关闭的JS 公告</title>
+          <link>https://gorpeln.top/article/17123887436</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17123887436</guid>
+          <pubDate>Sat, 06 Apr 2024 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;这是一个简洁高效的公告通知系统，它能够帮助您在个人博客中迅速传达重要更新、临时公告或其他关键信息给每一位访问者，确保他们能及时获取最新的站点动态。&lt;/p&gt;
 
 &lt;p&gt;随着网络世界的日新月异，与读者保持有效沟通成为提升用户体验的关键环节之一。为了更好地服务于广大读者朋友，我在博客中集成了一套美观且功能齐全的公告通知模块。这套模块不仅具备直观醒目的视觉设计，还能灵活地调整样式、内容和显示时长，以满足各种场景需求。&lt;/p&gt;
 
@@ -812,14 +784,16 @@ iziToast.show({
 &lt;/div&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>App更新总提醒缺少出口合规证明</title>
-        <link>https://gorpeln.top/article/17113627324</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17113627324</guid>
-        <pubDate>2024-03-25</pubDate>
-        <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+      
+        <item>
+          <title>App更新总提醒缺少出口合规证明</title>
+          <link>https://gorpeln.top/article/17113627324</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17113627324</guid>
+          <pubDate>Mon, 25 Mar 2024 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
 &lt;p&gt;每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212921.png!gorpeln&quot; alt=&quot;20240325183212921&quot; /&gt;&lt;/p&gt;
@@ -835,14 +809,16 @@ iziToast.show({
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212923.png!gorpeln&quot; alt=&quot;20240325183212923&quot; /&gt;&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>外链跳转到中间页</title>
-        <link>https://gorpeln.top/article/17094338798</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17094338798</guid>
-        <pubDate>2024-03-03</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240303104439913.png!gorpeln&quot; alt=&quot;20240303104439913&quot; /&gt;&lt;/p&gt;
+      
+        <item>
+          <title>外链跳转到中间页</title>
+          <link>https://gorpeln.top/article/17094338798</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17094338798</guid>
+          <pubDate>Sun, 03 Mar 2024 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240303104439913.png!gorpeln&quot; alt=&quot;20240303104439913&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 &lt;p&gt;网络安全的问题这些年越来越被关注，所以各大平台网站例如微博、微信、QQ、网易等，都在这几年为自家的网络产品添加了一个安全跳转的中台页面，甚至微博对于跳转链接必须是企业认证才能进入微博的安全白名单，可以说是把安全做到了&lt;del&gt;&lt;strong&gt;极致&lt;/strong&gt;&lt;/del&gt;。&lt;/p&gt;
@@ -991,14 +967,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;/div&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>GitHub贡献者可获取 Stark 空投</title>
-        <link>https://gorpeln.top/article/17087779433</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17087779433</guid>
-        <pubDate>2024-02-24</pubDate>
-        <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Starknet&lt;/code&gt; 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。&lt;/p&gt;
+      
+        <item>
+          <title>GitHub贡献者可获取 Stark 空投</title>
+          <link>https://gorpeln.top/article/17087779433</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17087779433</guid>
+          <pubDate>Sat, 24 Feb 2024 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Starknet&lt;/code&gt; 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240224203223424.jpg!gorpeln&quot; alt=&quot;20240224203223424&quot; /&gt;&lt;/p&gt;
 
@@ -1040,14 +1018,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>部署友链朋友圈</title>
-        <link>https://gorpeln.top/article/17049566482</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17049566482</guid>
-        <pubDate>2024-01-11</pubDate>
-        <description>&lt;h3 id=&quot;在线预览&quot;&gt;在线预览：&lt;/h3&gt;
+      
+        <item>
+          <title>部署友链朋友圈</title>
+          <link>https://gorpeln.top/article/17049566482</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17049566482</guid>
+          <pubDate>Thu, 11 Jan 2024 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;在线预览&quot;&gt;在线预览：&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;/friends&quot;&gt;https://gorpeln.top/friends&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;github部署爬虫&quot;&gt;Github部署爬虫&lt;/h3&gt;
@@ -1126,14 +1106,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;/div&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>2023 年度总结</title>
-        <link>https://gorpeln.top/article/17040105944</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17040105944</guid>
-        <pubDate>2023-12-31</pubDate>
-        <description>&lt;p style=&quot;display:none&quot;&gt;在辞旧迎新之际，回首2023年，我感慨万千。岁月如梭，光阴荏苒，每一天都是一段珍贵的时光，我努力在工作与生活的交错中寻找平衡，不断追求进步与成长。工作上，我面对各种挑战，不断突破自我，努力为团队和公司做出更大的贡献；生活中，我珍惜每一个温暖的瞬间，注重身心健康，与家人朋友共享美好时光。&lt;/p&gt;
+      
+        <item>
+          <title>2023 年度总结</title>
+          <link>https://gorpeln.top/article/17040105944</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17040105944</guid>
+          <pubDate>Sun, 31 Dec 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p style=&quot;display:none&quot;&gt;在辞旧迎新之际，回首2023年，我感慨万千。岁月如梭，光阴荏苒，每一天都是一段珍贵的时光，我努力在工作与生活的交错中寻找平衡，不断追求进步与成长。工作上，我面对各种挑战，不断突破自我，努力为团队和公司做出更大的贡献；生活中，我珍惜每一个温暖的瞬间，注重身心健康，与家人朋友共享美好时光。&lt;/p&gt;
 
 &lt;p style=&quot;display:none&quot;&gt;在未来的道路上，我愿继续前行，怀揣着对生活的热爱和对未来的期许，不断探索前进，追逐梦想。感恩过去一年的所有经历和收获，期待着新的一年带来更多的挑战与机遇，也希望能与您一同分享成长的喜悦与收获。&lt;/p&gt;
 
@@ -1147,14 +1129,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;img src=&quot;https://img.gorpeln.top/blog/20231231161634713.png!gorpeln&quot; alt=&quot;20231231161634713&quot; /&gt;&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>博客黑夜模式：Dark Reader 插件</title>
-        <link>https://gorpeln.top/article/17016025546</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/17016025546</guid>
-        <pubDate>2023-12-03</pubDate>
-        <description>&lt;p&gt;亲爱的读者，现在你可以更加自由地调整我们的博客浏览模式了！如果你喜欢在夜晚或低光环境下浏览，我们建议你使用 &lt;strong&gt;Chrome&lt;/strong&gt; 浏览器，并安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dark Reader&lt;/code&gt; 插件。这个插件简单易用，适用于各类网站，包括我们的博客。启用黑夜模式，不仅有助于减轻眼睛的疲劳，还能提供更加舒适的阅读环境。安装 Dark Reader 插件只需几步简单操作，快来尝试吧，让博客在黑夜中焕发新光彩！&lt;/p&gt;
+      
+        <item>
+          <title>博客黑夜模式：Dark Reader 插件</title>
+          <link>https://gorpeln.top/article/17016025546</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17016025546</guid>
+          <pubDate>Sun, 03 Dec 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;亲爱的读者，现在你可以更加自由地调整我们的博客浏览模式了！如果你喜欢在夜晚或低光环境下浏览，我们建议你使用 &lt;strong&gt;Chrome&lt;/strong&gt; 浏览器，并安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dark Reader&lt;/code&gt; 插件。这个插件简单易用，适用于各类网站，包括我们的博客。启用黑夜模式，不仅有助于减轻眼睛的疲劳，还能提供更加舒适的阅读环境。安装 Dark Reader 插件只需几步简单操作，快来尝试吧，让博客在黑夜中焕发新光彩！&lt;/p&gt;
 
 &lt;h3 id=&quot;dark-reader-简介&quot;&gt;Dark Reader 简介&lt;/h3&gt;
 
@@ -1196,14 +1180,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234546.png!gorpeln&quot; alt=&quot;20231203192234546&quot; /&gt;
 &lt;img src=&quot;https://img.gorpeln.top/blog/20231203192234547.png!gorpeln&quot; alt=&quot;20231203192234547&quot; /&gt;&lt;/p&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>个性二维码合集</title>
-        <link>https://gorpeln.top/article/16990919984</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16990919984</guid>
-        <pubDate>2023-11-04</pubDate>
-        <description>&lt;p&gt;探索个性二维码，每个都是数字艺术的小宝藏。这些小图案背后蕴含着独特的故事。扫一扫，用手机开启一场别样的冒险，发现属于你的精彩故事。或许，在其中的某一张，你将找到属于自己的独特之旅。数字艺术的魅力，从这些个性十足的二维码开始。让它们为你的日常生活注入新奇，感受创意的奇妙。快来和我一同探索这个数字世界的神秘角落吧！&lt;/p&gt;
+      
+        <item>
+          <title>个性二维码合集</title>
+          <link>https://gorpeln.top/article/16990919984</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16990919984</guid>
+          <pubDate>Sat, 04 Nov 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;探索个性二维码，每个都是数字艺术的小宝藏。这些小图案背后蕴含着独特的故事。扫一扫，用手机开启一场别样的冒险，发现属于你的精彩故事。或许，在其中的某一张，你将找到属于自己的独特之旅。数字艺术的魅力，从这些个性十足的二维码开始。让它们为你的日常生活注入新奇，感受创意的奇妙。快来和我一同探索这个数字世界的神秘角落吧！&lt;/p&gt;
 
 &lt;html lang=&quot;zh&quot;&gt;
 &lt;head&gt;
@@ -1344,14 +1330,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;/body&gt;
 &lt;/html&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>Sublime Text 常用插件</title>
-        <link>https://gorpeln.top/article/16962230954</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16962230954</guid>
-        <pubDate>2023-10-02</pubDate>
-        <description>&lt;h4 id=&quot;一package-control无法使用解决办法&quot;&gt;一、Package Control无法使用解决办法&lt;/h4&gt;
+      
+        <item>
+          <title>Sublime Text 常用插件</title>
+          <link>https://gorpeln.top/article/16962230954</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16962230954</guid>
+          <pubDate>Mon, 02 Oct 2023 00:00:00 +0800</pubDate>
+          <description>&lt;h4 id=&quot;一package-control无法使用解决办法&quot;&gt;一、Package Control无法使用解决办法&lt;/h4&gt;
 
 &lt;p&gt;最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。&lt;/p&gt;
 
@@ -1393,14 +1381,16 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveReload&lt;/code&gt; 调试网页实时自动更新&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>博客评论时一键填写自己的信息</title>
-        <link>https://gorpeln.top/article/16959932733</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16959932733</guid>
-        <pubDate>2023-09-29</pubDate>
-        <description>&lt;p&gt;使用浏览器书签实现博客网站留言评论时&lt;strong&gt;一键填写昵称/邮箱/网址&lt;/strong&gt;&lt;/p&gt;
+      
+        <item>
+          <title>博客评论时一键填写自己的信息</title>
+          <link>https://gorpeln.top/article/16959932733</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16959932733</guid>
+          <pubDate>Fri, 29 Sep 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;使用浏览器书签实现博客网站留言评论时&lt;strong&gt;一键填写昵称/邮箱/网址&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;具体的使用方法：&lt;/strong&gt;&lt;/p&gt;
 
@@ -1451,14 +1441,16 @@ function() {
 } ()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>8周年：博海泛舟，共赴时光之旅</title>
-        <link>https://gorpeln.top/article/16927632006</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16927632006</guid>
-        <pubDate>2023-08-23</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg!gorpeln&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
+      
+        <item>
+          <title>8周年：博海泛舟，共赴时光之旅</title>
+          <link>https://gorpeln.top/article/16927632006</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16927632006</guid>
+          <pubDate>Wed, 23 Aug 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg!gorpeln&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　在这片浩瀚无垠的数字海洋中，每一滴浪花都承载着思想的重量，每一缕风都传递着智慧的低语。今日，我以笔为篙，轻划过时间的河面，与诸君共庆，这不平凡的博客八周年纪念。八年，于历史长河不过是短暂一瞬，于个人，则是无数次心灵触碰与智慧火花的璀璨绽放。&lt;/p&gt;
 
@@ -1476,14 +1468,16 @@ function() {
 　　
 　　&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000261.jpg!gorpeln&quot; alt=&quot;20200823120000261&quot; /&gt;&lt;/p&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>同一台电脑上使用多个GitHub账号</title>
-        <link>https://gorpeln.top/article/16895899334</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16895899334</guid>
-        <pubDate>2023-07-17</pubDate>
-        <description>&lt;h3 id=&quot;使用需求&quot;&gt;使用需求&lt;/h3&gt;
+      
+        <item>
+          <title>同一台电脑上使用多个GitHub账号</title>
+          <link>https://gorpeln.top/article/16895899334</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16895899334</guid>
+          <pubDate>Mon, 17 Jul 2023 00:00:00 +0800</pubDate>
+          <description>&lt;h3 id=&quot;使用需求&quot;&gt;使用需求&lt;/h3&gt;
 
 &lt;blockquote class=&quot;prompt-info&quot;&gt;
   &lt;p&gt;通常情况下，我们会有两个 github 账号：一个是公司的，另一个是私人的。由于 github 是使用 SSH key 的 fingerprint (对应的公钥id_rsa_pub)来判定你是哪个账户，而不是通过用户名，如果是在多台电脑上使用一个账号，可以为该账号添加多个 SSH key，如果是一台电脑使用多个账号，则分别生成多个 SSH key 添加到对应的账户即可。所以本文要实现的是公号和私号在 git 上同时使用，两者互不干扰。&lt;/p&gt;
@@ -1567,14 +1561,16 @@ git clone git@gorpelnTwo:gorpeln-two/repo.git
 
 &lt;p&gt;如果你使用第三方图形工具操作，如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sourcetree&lt;/code&gt;,进行操作时，记得不要忘了&lt;strong&gt;远程仓库地址&lt;/strong&gt;的修改。&lt;/p&gt;
 </description>
-      </item>
+        </item>
+      
     
-      <item>
-        <title>用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</title>
-        <link>https://gorpeln.top/article/16874238349</link>
-        <guid isPermaLink="true">https://gorpeln.top/article/16874238349</guid>
-        <pubDate>2023-06-22</pubDate>
-        <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln&quot; alt=&quot;20230622165034171&quot; /&gt;&lt;/p&gt;
+      
+        <item>
+          <title>用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</title>
+          <link>https://gorpeln.top/article/16874238349</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/16874238349</guid>
+          <pubDate>Thu, 22 Jun 2023 00:00:00 +0800</pubDate>
+          <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln&quot; alt=&quot;20230622165034171&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;如果你浏览过一些 GitHub 的开源项目，你一定见过很多 README 文档中都会出现的五颜六色、各式各样的「小牌子」。&lt;/p&gt;
 
@@ -1759,7 +1755,8 @@ git clone git@gorpelnTwo:gorpeln-two/repo.git
 &lt;p&gt;Substats 是我借助 Serverless 技术构建的一个 Cloudflare Worker，直接部署在 Cloudflare 全球 CDN 节点上，访问速度非常的快。因此，如果你使用 Substats 和 Shields.io 来制作「小牌子」，生成 SVG 所消耗的时间的占比较大的部分应该是和原服务 API 沟通的时间（比如 NewsBlur 就特别慢）。&lt;/p&gt;
 
 </description>
-      </item>
+        </item>
+      
     
   </channel>
 </rss>
