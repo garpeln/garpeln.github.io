@@ -231,7 +231,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">748</span>
+                                    <span class="site-state-item-count">749</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -243,7 +243,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">657</span>
+                                    <span class="site-state-item-count">659</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -260,11 +260,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">657
+                                <span class="articleCount">659
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">748
+                                <span class="articleCount">749
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -297,7 +297,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">24
+                                <a name="个人博客" style="" class="articleCount">25
                                 </a>
                             </li>
                             
@@ -399,7 +399,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >748</p>
+                                    <p >749</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -413,11 +413,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3416天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3418天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2024-12-29 17:13:42 +0800">2024/12/29</p>
+                                    <p id="current-date" data-value="2024-12-31 16:35:32 +0800">2024/12/31</p>
                                 </li>
                             </ul>
                     </div>
@@ -630,6 +630,12 @@ input::placeholder {
             <!-- <a class="noFormatList" href="/tool-list" target="_blank">不带格式</a> -->
         </div>
         <div class="articleTitle display-none" id="articleTitle">
+            
+            
+            <div>
+                &lt;span style="color:#e0e0e0;"&gt;2024-11-08&lt;/span&gt;　[友链自动监测](https://gorpeln.top/article/17310530239)
+            </div>
+            
             
             
             
@@ -3355,6 +3361,12 @@ input::placeholder {
     <div class="box box-margin-top center heiti" id="allLinks">
         
         
+        <div class="alllink-item-box">
+            <a href="/article/17310530239">https://gorpeln.top/article/17310530239</a>
+        </div>
+        
+        
+        
         
         
         
@@ -6072,7 +6084,7 @@ input::placeholder {
         
         
         
-        <div id="pages" data-parameter="748"></div>
+        <div id="pages" data-parameter="749"></div>
         <div id="otherPages" class="heiti"></div>
     </div>
     <!-- 总字数 -->
@@ -6080,7 +6092,7 @@ input::placeholder {
         
         
         
-        <p>总字数：397166</p>
+        <p>总字数：396887</p>
     </div> -->
 
     <script>
@@ -6148,7 +6160,7 @@ input::placeholder {
     var pages = document.getElementById('pages');
     var pagesCount = pages.getAttribute('data-parameter');
     ;
-    var postscount = 158;
+    var postscount = 159;
     var pagesItem = "";
 
     for (var i = 2; i <= Math.ceil(postscount / 10); i++) {
@@ -6299,6 +6311,7 @@ input::placeholder {
     z-index: 1;
     margin-top: -5%;
     right:10%;
+    opacity:0.32;
 }
 .runTime {
     color: #777;
@@ -6716,7 +6729,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 131 + '天';
+  element.innerHTML = 9 + '年' + 133 + '天';
 
 }
 
@@ -6725,7 +6738,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3416 + '天';
+    element.innerHTML = 3418 + '天';
 }
 </script>
 

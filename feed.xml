@@ -6,6 +6,41 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个为记录生活里的点滴、分享技术成长、资源共享的个人优秀博客！趁年轻，做自己想做的！</description>
     
       
+        <item>
+          <title>友链自动监测</title>
+          <link>https://gorpeln.top/article/17310530239</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17310530239</guid>
+          <pubDate>2024-11-08</pubDate>
+          <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;p&gt;管理友链时采取手动点击检验的方式，随着时间的推移，友链数量逐渐增加，这一做法显然已不再高效。于是就需要写了一项类似API的功能，输出所有友链数据的可达性。&lt;/p&gt;
+
+&lt;h3 id=&quot;功能概览&quot;&gt;功能概览&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;github action自动定时检测友链状态，结果输出到page分支下的result.json。&lt;/li&gt;
+  &lt;li&gt;友链状态展示页面，可以部署到zeabur或者vercel，加速api访问速度。&lt;/li&gt;
+  &lt;li&gt;为确保兼容性，实现了两种检测方案：
+    &lt;ul&gt;
+      &lt;li&gt;非兼容：使用格式文件动态读取友链内容，实现功能，友链列表自动实时性更新。&lt;/li&gt;
+      &lt;li&gt;兼容：使用TXT存储所有友链信息，兼容性好，适合所有站点，但是添加友链后可能需要手动更新文件。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;API访问数据，api包含数据包括可达链接、不可达链接、可达链接数目、不可达链接数目、更新时间戳，其中链接中包含站点名称和地址，便于前端部署。&lt;/li&gt;
+  &lt;li&gt;测试脚本使用python，使用Request包的get和head两种检测方式检测，尽可能减少误判概率。&lt;/li&gt;
+  &lt;li&gt;前端采用本地缓存，减少api调用次数，缓存半个小时刷新，不影响实时性。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;预览&quot;&gt;预览&lt;/h3&gt;
+&lt;p&gt;博客中预览：&lt;a href=&quot;https://friends.202090.xyz/&quot;&gt;https://friends.gorpeln.top/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241108160343641.png!gorpeln&quot; alt=&quot;20241108160343641&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
+&lt;p&gt;友链相关的&lt;a href=&quot;/links#problem&quot;&gt;常见问题&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
     
       
         <item>
@@ -742,7 +777,8 @@ if __name__ == &quot;__main__&quot;:
 &lt;p&gt;随着网络世界的日新月异，与读者保持有效沟通成为提升用户体验的关键环节之一。为了更好地服务于广大读者朋友，我在博客中集成了一套美观且功能齐全的公告通知模块。这套模块不仅具备直观醒目的视觉设计，还能灵活地调整样式、内容和显示时长，以满足各种场景需求。&lt;/p&gt;
 
 &lt;h3 id=&quot;源码下载&quot;&gt;源码下载&lt;/h3&gt;
-&lt;p&gt;文件下载：&lt;a href=&quot;https://gorpeln.lanzoul.com/ivzv21wpf0ti&quot;&gt;https://gorpeln.lanzoul.com/ivzv21wpf0ti&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文件下载：&lt;a href=&quot;https://github.com/gorpeln/noticeAlert&quot;&gt;https://github.com/gorpeln/noticeAlert&lt;/a&gt;  &lt;br /&gt;
+其他下载地址：&lt;a href=&quot;https://gorpeln.lanzoul.com/ivzv21wpf0ti&quot;&gt;https://gorpeln.lanzoul.com/ivzv21wpf0ti&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
 &lt;p&gt;放入要显示的页面 &lt;br /&gt;
@@ -1560,200 +1596,6 @@ git clone git@gorpelnTwo:gorpeln-two/repo.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;如果你使用第三方图形工具操作，如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sourcetree&lt;/code&gt;,进行操作时，记得不要忘了&lt;strong&gt;远程仓库地址&lt;/strong&gt;的修改。&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>用 Substats 和 Shields.io 为你的个人主页定制动态数据小牌子</title>
-          <link>https://gorpeln.top/article/16874238349</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/16874238349</guid>
-          <pubDate>2023-06-22</pubDate>
-          <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln&quot; alt=&quot;20230622165034171&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果你浏览过一些 GitHub 的开源项目，你一定见过很多 README 文档中都会出现的五颜六色、各式各样的「小牌子」。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034172.png!gorpeln&quot; alt=&quot;20230622165034172&quot; /&gt;
-最初，这些「小牌子」的主要作用是为了显示「某个 GitHub 项目」的「某种状态」，比如项目的编译是否成功、文档是否更新至最新、软件的下载数量有多少……不过，从原理的角度来说，这些「小牌子」都是通过我们给「牌子渲染服务器」提供一些数据后，服务器返回给我们一个 SVG 格式的图片来工作的。我们将返回的 SVG 图片嵌入到 GitHub 的 README 文档或其他网页里面，就完成了一个「小牌子」的制作。&lt;/p&gt;
-
-&lt;p&gt;因此，我们不仅可以将这些「小牌子」用在 GitHub 里，如果你拥有自己的「个人主页」、「博客」或其他展示个人资料的地方，只要你可以控制网页的 HTML，能自己向其中插入一些自定义代码，你就可以借助于「小牌子服务器」来自制一些好看又能实时更新的「个人资料展示牌」、「订阅地址标识牌」等等。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034173.png!gorpeln&quot; alt=&quot;20230622165034173&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;shieldsio-的基本用法&quot;&gt;Shields.io 的基本用法&lt;/h3&gt;
-
-&lt;h4 id=&quot;简单定制静态小牌子&quot;&gt;简单定制静态小牌子&lt;/h4&gt;
-&lt;p&gt;Shields.io 就是一个我们开头提到的「牌子渲染服务」。事实上，GitHub 上面大部分「小牌子」都是用 Shields.io 来渲染的。我们可以借助于 Shields.io 服务定制一些个性化的「小牌子」。一个最简单的例子就是：&lt;a href=&quot;https://img.shields.io/badge/%E9%A3%8E%E6%9C%AA%E6%AD%A2-gorpeln-da282a&quot;&gt;https://img.shields.io/badge/风未止-gorpeln-da282a&lt;/a&gt;，这一请求可以渲染得到如下效果的小牌子。&lt;/p&gt;
-
-&lt;p&gt;可以发现，简单定制小牌子非常方便，最最基础的语法规则就是：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034174.png!gorpeln&quot; alt=&quot;20230622165034174&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/{左半部分标签}-{右半部分标签}-{右半部分颜色}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;另外，在 Shields.io 的官网上面有非常方便的「小牌子生成器」，我们可以直接用它来构造一个「小牌子」，只需要按照下图的样子：填入左半边标签、填入右半边标签，再定义右半边的颜色，点击 Make Badge 即可生成。其中，右半边的颜色我们可以用官方提供的几种预设颜色名称（下方 Colors）或者我们自己提供十六进制颜色代码都可以。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034175.png!gorpeln&quot; alt=&quot;20230622165034175&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我们按照上面的方法构造一个链接，就制作完成我们的小牌子啦！这样得到的链接是一个 SVG 图片链接，我们可以直接用插入图片的语法规则加到我们的 Markdown 文本文件中或 HTML 里面。&lt;/p&gt;
-
-&lt;h4 id=&quot;动态实时更新的小牌子&quot;&gt;动态实时更新的小牌子&lt;/h4&gt;
-&lt;p&gt;事实上，我们前面生成的小牌子都是静态的小牌子：其中的文本内容是固定不变的，仅能用于做一个好看的标识。而事实上，Shields.io 生成的小牌子完全支持动态数据显示，比如粉丝、关注者数量、RSS 订阅者数量……&lt;/p&gt;
-
-&lt;p&gt;如果我们想要显示一些动态变化的数据，那么我们就需要一个受支持的数据接口，这样我们的「Shields.io 小牌子生成服务器」就会先行从这一数据接口请求相应的动态数据，并按照请求的结果将数据渲染成不同的「小牌子」。（具体的语法请继续向下阅读）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034176.png!gorpeln&quot; alt=&quot;20230622165034176&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;但是，虽然 Shields.io 服务 API 的功能非常完善，能够支持许多第三方 API 节点的数据服务，但是有一些服务：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;API 接口返回复杂，无法直接用 Shields.io 简单处理&lt;/li&gt;
-  &lt;li&gt;API 访问缓慢、不稳定，经常出现超时或无法访问的情况&lt;/li&gt;
-  &lt;li&gt;访问一些数据需要进行认证，直接访问会返回 403 无权限&lt;/li&gt;
-  &lt;li&gt;直接不对外公开 API 接口，没有面向开发者的开放平台，无法直接请求数据&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;当我们想要显示这些平台的关注者数量、粉丝数量时，往往就力不从心了。因此，我使用 Serverless 技术实现了「Substats: Subscriber Statistics」—— 一个专注提供多个服务、平台、网站的粉丝、关注、订阅数量的 API 中转站，用来专门处理这些单靠 Shields.io 不方便直接处理的疑难杂症。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Substats 项目开源在：GitHub - &lt;a href=&quot;https://github.com/spencerwooo/Substats&quot;&gt;spencerwooo/Substats&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Substats 的 API 地址位于：Home - &lt;a href=&quot;https://api.spencerwoo.com/substats/&quot;&gt;Substats API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;另外，关于如何调用 Substats API，我还撰写了比较详细的文档：&lt;a href=&quot;https://substats.spencerwoo.com/&quot;&gt;Substats Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;下面我来简单介绍一下如何利用 Substats 配合 Shields.io 定制小牌子 ( •̀ ω •́ )✧&lt;/p&gt;
-
-&lt;h3 id=&quot;用-substats-配合-shieldsio-制作动态小牌子&quot;&gt;用 Substats 配合 Shields.io 制作动态小牌子&lt;/h3&gt;
-
-&lt;h4 id=&quot;通过-substats-api-获取我们期望的数据&quot;&gt;通过 Substats API 获取我们期望的数据&lt;/h4&gt;
-
-&lt;p&gt;为了更好的配合 Shields.io 服务，我特意将 Substats 的 API 设计成简单拼接 URL 即可进行数据请求。Substats API 的语法非常简单，我们只需要关注并提供如下的两个字段即可进行请求：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;目标服务名称 source：你所想要请求的服务、网站和平台名（比如：gorpeln、weibo……）&lt;/li&gt;
-  &lt;li&gt;请求数据标签 queryKey：在这一服务中查询的关注数据对应的标签或名称（比如我的用户名 gorpeln）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这样，我们就可以用这样的语法来拼接一个 URL（注意第一个字符是 ?，其他用 &amp;amp; 拼接）：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source={目标服务名称}&amp;amp;queryKey={请求数据标签}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;利用这样的语法，我们就可以进行数据请求啦。继续上面图示中的例子，比如我想要制作一个实时显示我自己的gorpeln的github关注数量的小牌子，我拼接成的 URL 即为：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=github&amp;amp;queryKey=gorpeln
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;非常方便！这一 URL 会给我们返回类似下面的 JSON 结果：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;status&quot;: 200,
-  &quot;data&quot;: {
-    &quot;totalSubs&quot;: 999,
-    &quot;subsInEachSource&quot;: {
-      &quot;github&quot;: 999
-    },
-    &quot;failedSources&quot;: {}
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;我们可以这样理解返回的 JSON 数据：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;status&lt;/code&gt; 是请求是否成功，成功即为 200（表示 HTTP OK）&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; 就是请求返回的数据（其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;totalSubs&lt;/code&gt; 表示总关注数量，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subsInEachSource&lt;/code&gt; 表示每个服务请求到的粉丝数据，最后 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;failedSources&lt;/code&gt; 表示请求失败的数据源。）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;可以看到我们所需要的字段即为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$.data.totalSubs&lt;/code&gt;，也就是 999 —— 我的github总关注人数。接下来，我们只需要告诉 Shields.io：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;我们请求的 URL 地址&lt;/li&gt;
-  &lt;li&gt;返回数据中所要的字段&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;这两个参数，即可成功制作一个动态小牌子。&lt;/p&gt;
-
-&lt;h4 id=&quot;用-shieldsio-制作最终动态小牌子&quot;&gt;用 Shields.io 制作最终动态小牌子&lt;/h4&gt;
-
-&lt;p&gt;我们继续借助 Shields.io 官网上面提供的「小牌子生成器」，这次我们稍微向下滚动，找到 Dynamic 版本「小牌子生成器」，并按照这样的规则依次操作：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;数据类型 data type 选择：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;标签 label 填入：小牌子左侧的标签，比如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github关注&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;API 地址 data url 填入：我们刚刚的 API URL：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://api.spencerwoo.com/substats/?source=github&amp;amp;queryKey=gorpeln&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;请求字段 query 填入：我们 Substats API 数据中的这一字段：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$.data.totalSubs&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;标签颜色 color 填入：一个十六进制的颜色代码，比如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;da282a&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;……（余下的两个参数：前缀 prefix 和后缀 suffix，可以根据自己的需要自行定义）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;这样，我们就借助 Shields.io 构造出来一个自定义的动态 SVG 小牌子（由于我们的请求中包含有 URL 中非法的字符，因此下面这个是 URL 编码之后的 SVG 小牌子地址）：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/dynamic/json?color=da282a&amp;amp;label=github%E5%85%B3%E6%B3%A8&amp;amp;query=%24.data.totalSubs&amp;amp;url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dgorpeln
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20230622165034177.png!gorpeln&quot; alt=&quot;20230622165034177&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;其他-substats-api-的功能和语法规则&quot;&gt;其他 Substats API 的功能和语法规则&lt;/h3&gt;
-&lt;p&gt;另外，Substats API 还可以串联多个不同的数据源和它们对应的请求参数。比如，我同时请求酷安、网易云音乐、GitHub 三个平台上面的关注，即可这样构造请求（多个 source 和 queryKey 组合按照顺序进行请求即可，顺序在请求过程中不会丢失）：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=coolapk&amp;amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;amp;source=neteaseMusic&amp;amp;queryKey=339332&amp;amp;source=github&amp;amp;queryKey=gorpeln
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;可以看到，上面的 URL 里，我直接串联了多个 source 和 queryKey 的请求组合，同时请求。这样我们就可以得到这三个平台上面关注者数量的总和 totalSubs，以及每个平台各自的关注者数量 subsInEachSource：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;status&quot;: 200,
-  &quot;data&quot;: {
-    &quot;totalSubs&quot;: 1312,
-    &quot;subsInEachSource&quot;: {
-      &quot;coolapk&quot;: 638,
-      &quot;neteaseMusic&quot;: 361,
-      &quot;github&quot;: 313
-    },
-    &quot;failedSources&quot;: {}
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;那么，我们就可以直接用 Shields.io 构造一个如下的 SVG 小牌子：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://img.shields.io/badge/dynamic/json?color=0084ff&amp;amp;label=%E9%85%B7%E5%AE%89|%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90|GitHub&amp;amp;query=$.data.totalSubs&amp;amp;url=https://api.spencerwoo.com/substats/?source=coolapk&amp;amp;queryKey=%E5%94%90%E7%8E%89%E5%B0%8F%E7%8B%97&amp;amp;source=neteaseMusic&amp;amp;queryKey=339332&amp;amp;source=github&amp;amp;queryKey=gorpeln
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;这样我们就可以直接得到三个平台总关注数量的一个「小牌子」&lt;/p&gt;
-
-&lt;p&gt;同时，如果你想同时请求多个平台，但是平台中请求的数据标签名称是一样的，比如我们同时请求 Feedly 和 NewsBlur 两个 RSS 订阅服务里我自己的 RSS 链接 &lt;a href=&quot;https://gorpeln.top/feed.xml&quot;&gt;https://gorpeln.top/feed.xml&lt;/a&gt; 的订阅数量，那么我们可以：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;直接用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; 将 feedly 和 newsblur 直接连接，传递给 source 作为参数&lt;/li&gt;
-  &lt;li&gt;并将 RSS 链接传递给 queryKey 作为参数&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;从而构造这样的请求：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://api.spencerwoo.com/substats/?source=feedly|newsblur&amp;amp;queryKey=https://gorpeln.top/feed.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这样，我们就可以直接得到两个平台同一个 RSS 源的总订阅数量：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;status&quot;: 200,
-  &quot;data&quot;: {
-    &quot;totalSubs&quot;: 17,
-    &quot;subsInEachSource&quot;: {
-      &quot;feedly&quot;: 14,
-      &quot;newsblur&quot;: 3
-    },
-    &quot;failedSources&quot;: {}
-  }
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;从而制作表示 RSS 链接总订阅人数的「小牌子」：&lt;/p&gt;
-
-&lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
-&lt;p&gt;Substats 是我借助 Serverless 技术构建的一个 Cloudflare Worker，直接部署在 Cloudflare 全球 CDN 节点上，访问速度非常的快。因此，如果你使用 Substats 和 Shields.io 来制作「小牌子」，生成 SVG 所消耗的时间的占比较大的部分应该是和原服务 API 沟通的时间（比如 NewsBlur 就特别慢）。&lt;/p&gt;
-
 </description>
         </item>
       

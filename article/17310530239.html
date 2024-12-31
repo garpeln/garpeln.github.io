@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>音阙诗听 _ 王梓钰   惊蛰 | gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,其他" />
-    <meta name="description" content="﻿[00:00.00]作词 : 假寐">
+    <title>友链自动监测 | gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gpchen,iOS,blog,gorpeln的个人博客,风未止,个人博客,陈冠鹏,时光本,友链,状态,python,github,action" />
+    <meta name="description" content="前言管理友链时采取手动点击检验的方式，随着时间的推移，友链数量逐渐增加，这一做法显然已不再高效。于是就需要写了一项类似API的功能，输出所有友链数据的可达性。">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E7%8E%8B%E6%A2%93%E9%92%B0-%E6%83%8A%E8%9B%B0">
+    <link rel="canonical" href="/article/17310530239">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- 样式表 -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
@@ -448,13 +448,13 @@
 </style>
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">音阙诗听 _ 王梓钰   惊蛰</h1>
+        <h1 class="post-title">友链自动监测</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;">2014-08-14</text>&nbsp;&nbsp;&nbsp;&nbsp;
+            <text style="padding-top: 0;">2024-11-08</text>&nbsp;&nbsp;&nbsp;&nbsp;
             分类：
-            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
-                其他
+            <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                个人博客
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             标签：
@@ -462,7 +462,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
+                <a class="pjaxlink" href="/tags#友链" target="_blank">友链</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#状态" target="_blank">状态</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#python" target="_blank">python</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#github" target="_blank">github</a>
+                /
+                
+                
+                <a class="pjaxlink" href="/tags#action" target="_blank">action</a>
                 
                 
             </span>
@@ -470,114 +486,48 @@
         </div>
     </header>
     <article class="post-content">
-        <p>﻿[00:00.00]作词 : 假寐</p>
+        <h3 id="前言">前言</h3>
+<p>管理友链时采取手动点击检验的方式，随着时间的推移，友链数量逐渐增加，这一做法显然已不再高效。于是就需要写了一项类似API的功能，输出所有友链数据的可达性。</p>
 
-<p>[00:01.00]作曲 : 殇小谨</p>
+<h3 id="功能概览">功能概览</h3>
+<ol>
+  <li>github action自动定时检测友链状态，结果输出到page分支下的result.json。</li>
+  <li>友链状态展示页面，可以部署到zeabur或者vercel，加速api访问速度。</li>
+  <li>为确保兼容性，实现了两种检测方案：
+    <ul>
+      <li>非兼容：使用格式文件动态读取友链内容，实现功能，友链列表自动实时性更新。</li>
+      <li>兼容：使用TXT存储所有友链信息，兼容性好，适合所有站点，但是添加友链后可能需要手动更新文件。</li>
+    </ul>
+  </li>
+  <li>API访问数据，api包含数据包括可达链接、不可达链接、可达链接数目、不可达链接数目、更新时间戳，其中链接中包含站点名称和地址，便于前端部署。</li>
+  <li>测试脚本使用python，使用Request包的get和head两种检测方式检测，尽可能减少误判概率。</li>
+  <li>前端采用本地缓存，减少api调用次数，缓存半个小时刷新，不影响实时性。</li>
+</ol>
 
-<p>[00:03.74]编曲：Morri3on(喬凡三)</p>
+<h3 id="预览">预览</h3>
+<p>博客中预览：<a href="https://friends.202090.xyz/">https://friends.gorpeln.top/</a></p>
 
-<p>[00:17.12]盈十里煌绸交错</p>
+<p><img src="https://img.gorpeln.top/blog/20241108160343641.png!gorpeln" alt="20241108160343641" /></p>
 
-<p>[00:19.94]他俯身低进了酒色</p>
-
-<p>[00:24.98]半生恩仇一刀落</p>
-
-<p>[00:28.10]沾了因果许多</p>
-
-<p>[00:32.84]江湖俗名称佛称魔</p>
-
-<p>[00:36.14]英雄事了都落魄（也凡人一个）</p>
-
-<p>[00:40.70]庙堂老弱高枕山河</p>
-
-<p>[00:44.06]贵胄看不破 病灶添火</p>
-
-<p>[00:48.26]谁提了剑嫁衣勾破</p>
-
-<p>[00:52.04]披身贫贱夜色 把杀机淹没</p>
-
-<p>[00:56.00]滴血也足红了笔墨</p>
-
-<p>[00:59.96]风起时不由我 应天生命薄</p>
-
-<p>[01:03.92]云上春至啼声惊蛰</p>
-
-<p>[01:07.76]寸心生死忧过 争是非善恶</p>
-
-<p>[01:11.72]尚算不得一等侠客</p>
-
-<p>[01:15.68]不过今日是我 要分个清浊</p>
-
-<p>[02:07.49]盈十里煌绸交错</p>
-
-<p>[02:10.19]他俯身低进了酒色</p>
-
-<p>[02:14.77]半生恩仇一刀落</p>
-
-<p>[02:18.15]沾了因果许多</p>
-
-<p>[02:22.59]江湖俗名称佛称魔</p>
-
-<p>[02:26.11]英雄事了都落魄（也凡人一个）</p>
-
-<p>[02:30.90]庙堂老弱高枕山河</p>
-
-<p>[02:34.10]贵胄看不破 病灶添火</p>
-
-<p>[02:38.48]谁提了剑嫁衣勾破</p>
-
-<p>[02:42.25]披身贫贱夜色 把杀机淹没</p>
-
-<p>[02:46.17]滴血也足红了笔墨</p>
-
-<p>[02:50.08]风起时不由我 应天生命薄</p>
-
-<p>[02:54.05]云上春至啼声惊蛰</p>
-
-<p>[02:57.97]寸心生死忧过 争是非善恶</p>
-
-<p>[03:01.83]尚算不得一等侠客</p>
-
-<p>[03:05.80]不过今日是我 要分个清浊</p>
-
-<p>[03:06.12]古筝：图生</p>
-
-<p>[03:06.32]封面设计：睢亦</p>
-
-<p>[03:06.74]制作人：殇小谨</p>
-
-<p>[03:07.12]混音：殇小谨</p>
-
-<p>[03:07.78]混音室：Hot Music Studio</p>
-
-<p>[03:08.14]民乐录音师：李文婷</p>
-
-<p>[03:08.70]民乐录音室：Holyaria Music Studio</p>
-
-<p>[03:09.66]监制：李俊羽</p>
-
-<p>[03:10.68]出品：音阙诗听</p>
+<h3 id="其他">其他</h3>
+<p>友链相关的<a href="/links#problem">常见问题</a></p>
 
     </article>
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2024-10-24</div>
+    <div class="custom-font">最后编辑于：2024-12-31</div>
     
-    <div class="custom-font">本文链接：<a href="/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E7%8E%8B%E6%A2%93%E9%92%B0-%E6%83%8A%E8%9B%B0" class='articleLink'>https://gorpeln.top/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E7%8E%8B%E6%A2%93%E9%92%B0-%E6%83%8A%E8%9B%B0</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17310530239" class='articleLink'>https://gorpeln.top/article/17310530239</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E6%9D%8E%E4%BD%B3%E6%80%9D-The-Star" title="音阙诗听 _ 李佳思   the star" class="custom-font" target="_blank">音阙诗听 _ 李佳思   the star</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17280983369" title="Mac软件站点" class="custom-font" target="_blank">Mac软件站点</a>
     </div>
     
-    
-    <div>
-        <span class="custom-font">下一篇 ：</span><a href="/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E8%B5%B5%E6%96%B9%E5%A9%A7-%E8%8A%92%E7%A7%8D" title="音阙诗听 _ 赵方婧   芒种" class="custom-font" target="_blank">音阙诗听 _ 赵方婧   芒种</a>
-    </div>
     
 </div>
 <div class="livere">
@@ -674,7 +624,7 @@
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
         <div class="themeModel" id="themeModel"></div>
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/m/%E9%9F%B3%E9%98%99%E8%AF%97%E5%90%AC-_-%E7%8E%8B%E6%A2%93%E9%92%B0-%E6%83%8A%E8%9B%B0')"></div>
+        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17310530239')"></div>
         <div class="qrcodeImg" id="qrcode"></div>
         <div id="backtotop">
             <a href="#">
