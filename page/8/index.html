@@ -413,11 +413,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3426天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3427天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-01-08 16:45:23 +0800">2025/01/08</p>
+                                    <p id="current-date" data-value="2025-01-09 17:03:02 +0800">2025/01/09</p>
                                 </li>
                             </ul>
                     </div>
@@ -2658,6 +2658,7 @@ async function fetchData() {
         </div>
     </div>
 </div>
+<!-- 春节灯笼 -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // 获取当前日期
@@ -2681,6 +2682,40 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- 快捷键 -->
+<script>
+// 创建一个映射，用于存储按键与目标URL之间的关系
+const keyToUrlMap = {
+    'p': '/p',
+    't': '/tool',
+};
+
+// 定义双击的时间阈值（毫秒）
+const DOUBLE_CLICK_THRESHOLD = 300;
+
+// 存储上一次按键的时间戳和按键标识符
+let lastKeyPress = {};
+
+document.addEventListener('keydown', function(event) {
+    const keyPressed = event.key.toLowerCase();
+
+    // 检查是否是映射中存在的按键
+    if (keyPressed in keyToUrlMap) {
+        const now = new Date().getTime();
+        const previousTime = lastKeyPress[keyPressed] || 0;
+        const timeDifference = now - previousTime;
+
+        // 如果时间差小于阈值，则认为是双击
+        if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+            // 导航到对应的URL
+            window.location.href = keyToUrlMap[keyPressed];
+        } else {
+            // 更新为当前按键时间和标识符
+            lastKeyPress[keyPressed] = now;
+        }
+    }
+});
+</script>
 </html></div>
                 </div>
             </div>
@@ -3135,7 +3170,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 141 + '天';
+  element.innerHTML = 9 + '年' + 142 + '天';
 
 }
 
@@ -3144,7 +3179,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3426 + '天';
+    element.innerHTML = 3427 + '天';
 }
 </script>
 
