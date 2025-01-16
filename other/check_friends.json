@@ -17,6 +17,14 @@
       "link": "https://list.travellings.cn/"
     },
     {
+      "name": "中文博客",
+      "avatar": "https://zhblogs.ohyee.cc/logo.png",
+      "descr": "中文博客列表导航项目",
+      "status": 2,
+      "siteshot": "",
+      "link": "https://zhblogs.ohyee.cc/?tab=blog_list&page=1&tags=&search=gorpeln"
+    },
+    {
       "name": "个站商店",
       "avatar": "https://upload.storeweb.cn/image/logo.png",
       "descr": "一个精致的，带社交元素的个人网站发布平台，博客收录网站",
@@ -201,5 +209,5 @@
       "link": "https://www.iasuna.com/link"
     }
   ],
-  "length": 25
+  "length": 26
 }
