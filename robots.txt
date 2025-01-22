@@ -1,4 +1,9 @@
 # robots.txt
 User-agent: *
 Allow: /
+Disallow: /tool
+Disallow: /login
+Disallow: /tools/links
+Disallow: /tools/list
+Disallow: /tools/name
 Sitemap: https://gorpeln.top/sitemap.xml

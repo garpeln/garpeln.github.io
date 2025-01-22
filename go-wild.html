@@ -2,215 +2,223 @@
 <html lang="zh-CN">
 
 <head>
+    <!-- 公共head -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+	<title>安全提醒 | gorpeln's Blog</title>
+	<meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享" />
+	<meta name="description" content="这里是『 gorpeln's Blog 』的安全提醒页面，是博主为读者筑牢的安全防线，页面清晰醒目地提醒您注意网络安全风险，以简洁明了的语言告知陌生链接可能潜藏的恶意软件、钓鱼欺诈等隐患。同时，提供详细的安全访问建议，引导您谨慎抉择，避免因误点链接遭受信息泄露、设备受损等不良后果，全方位守护您的上网安全，让读者在网络世界安心遨游。">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="canonical" href="/go-wild">
+	<link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+	<!-- Open Graph -->
+	<meta name="author" content="gorpeln - 陈冠鹏">
+	<meta property="og:title" content="安全提醒 | gorpeln's Blog">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/go-wild">
+	<meta property="og:description" content="这里是『 gorpeln's Blog 』的安全提醒页面，是博主为读者筑牢的安全防线，页面清晰醒目地提醒您注意网络安全风险，以简洁明了的语言告知陌生链接可能潜藏的恶意软件、钓鱼欺诈等隐患。同时，提供详细的安全访问建议，引导您谨慎抉择，避免因误点链接遭受信息泄露、设备受损等不良后果，全方位守护您的上网安全，让读者在网络世界安心遨游。">
+	<meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+	<meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-        <title>安全提醒 | gorpeln's Blog</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享" />
-        <meta name="description" content="gorpeln的个人博客（https://gorpeln.top/）是一个追求简洁、高效，专注记录生活点滴、分享技术成长、共享实用资源的个人优秀博客！趁年轻，做自己想做的！欢迎你来这里交流互动，一起探索精彩世界，开启知识与心灵的非凡旅程。">
-        <style>
-        :root {
+	<!-- 私有head -->
+    <style>
+    :root {
 
-            --background-color-light: #f2f5f6;
-            --background-color-dark: #3d3d3d;
+        --background-color-light: #f2f5f6;
+        --background-color-dark: #3d3d3d;
 
-            --box-color-light: #ffffff;
-            --box-color-dark: #262626;
+        --box-color-light: #ffffff;
+        --box-color-dark: #262626;
 
-            --subbox-color-light: #F5F7F8;
-            --subbox-color-dark: #2d2d2d;
+        --subbox-color-light: #F5F7F8;
+        --subbox-color-dark: #2d2d2d;
 
-            --tiptag-color-light: #f0f0fa;
-            --tiptag-color-dark: #303033;
+        --tiptag-color-light: #f0f0fa;
+        --tiptag-color-dark: #303033;
 
 
-            --font-title-color-light: #37374c;
-            --font-title-color-dark: #bfb9b1;
+        --font-title-color-light: #37374c;
+        --font-title-color-dark: #bfb9b1;
 
-            --font-des-color-light: #3d3d52;
-            --font-des-color-dark: #c5bfb7;
+        --font-des-color-light: #3d3d52;
+        --font-des-color-dark: #c5bfb7;
 
-            --font-light-dark-light: #aaaaaa;
-            --font-light-dark-dark: #5d5d5d;
+        --font-light-dark-light: #aaaaaa;
+        --font-light-dark-dark: #5d5d5d;
 
-            --font-active-color-light: #6666cc;
-            --font-active-color-dark: #6666cc;
-        }
+        --font-active-color-light: #6666cc;
+        --font-active-color-dark: #6666cc;
+    }
 
-        body {
-            font-family: 'Cascadia Code', 'Consolas', 'Microsoft YaHei', SimHei !important;
-            margin: 0;
-            padding: 0 30px;
-            background: #fff;
-            font-size: 12px
-        }
+    body {
+        font-family: 'Cascadia Code', 'Consolas', 'Microsoft YaHei', SimHei !important;
+        margin: 0;
+        padding: 0 30px;
+        background: #fff;
+        font-size: 12px
+    }
 
-        a {
-            text-decoration: none;
-            cursor: pointer;
-            outline: 0
-        }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        outline: 0
+    }
 
-        a:hover {
-            text-decoration: underline
-        }
+    a:hover {
+        text-decoration: underline
+    }
 
-        a,
-        a:link,
-        a:visited {
-            color: #645f8a
-        }
+    a,
+    a:link,
+    a:visited {
+        color: #645f8a
+    }
 
-        a.btn_blue {
-            display: inline-block;
-            padding: 6px 25px;
-            margin: 0;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-            border-radius: 3px;
-            color: #fff !important;
-            background-color: #645f8a;
-            float: right;
-        }
+    a.btn_blue {
+        display: inline-block;
+        padding: 6px 25px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 3px;
+        color: #fff !important;
+        background-color: #645f8a;
+        float: right;
+    }
 
-        .remind_block .remind_title {
-            margin-bottom: 10px;
-            padding-top: 3px;
-            font-weight: 700;
-            font-size: 20px;
-            font-family: "Microsoft YaHei", "lucida Grande", Verdana;
-            color: #6666cc;
-        }
+    .remind_block .remind_title {
+        margin-bottom: 10px;
+        padding-top: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        font-family: "Microsoft YaHei", "lucida Grande", Verdana;
+        color: #6666cc;
+    }
 
-        .remind_block .remind_detail {
-            line-height: 1.5;
-            font-size: 16px;
-            color: #888888;
-            margin-bottom: 4em;
-        }
+    .remind_block .remind_detail {
+        line-height: 1.5;
+        font-size: 16px;
+        color: #888888;
+        margin-bottom: 4em;
+    }
 
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding-top: 10em;
-        }
+    .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding-top: 10em;
+    }
 
-        .header {
-            margin-top: 2em;
-            display: flex;
-            align-items: center;
-            margin-bottom: 3em;
-        }
+    .header {
+        margin-top: 2em;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3em;
+    }
 
-        .header img {
-            width: 30px;
-            height: 30px;
-        }
+    .header img {
+        width: 30px;
+        height: 30px;
+    }
 
-        .header h1 {
-            color: #716f7e;
-            padding-left: 10px;
-            margin: 0;
-        }
+    .header h1 {
+        color: #716f7e;
+        padding-left: 10px;
+        margin: 0;
+    }
 
-        .content {
-            padding: 10px 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #37374c1a;
-        }
+    .content {
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #37374c1a;
+    }
 
-        .c-container {
-            padding: 10px
-        }
+    .c-container {
+        padding: 10px
+    }
 
-        .c-footer {
-            padding: 10px 15px;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 1em;
-        }
+    .c-footer {
+        padding: 10px 15px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 1em;
+    }
 
-        .c-footer-a2 {
-            float: right;
-            margin: 8px 0 0 15px;
-            margin-right: 2em;
-            color: #6666cc;
-        }
+    .c-footer-a2 {
+        float: right;
+        margin: 8px 0 0 15px;
+        margin-right: 2em;
+        color: #6666cc;
+    }
 
-        .safety-url {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #dfdfdf;
-            word-wrap: break-word;
-            word-break: break-all
-        }
+    .safety-url {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dfdfdf;
+        word-wrap: break-word;
+        word-break: break-all
+    }
 
-        .footer {
-            margin-top: 18px;
-            text-align: center;
-            color: #a0a0a0;
-            font-size: 12px
-        }
+    .footer {
+        margin-top: 18px;
+        text-align: center;
+        color: #a0a0a0;
+        font-size: 12px
+    }
 
-        .footer .dot {
-            margin: 0 .25em
-        }
+    .footer .dot {
+        margin: 0 .25em
+    }
 
-        .footerDes {
+    .footerDes {
 
-            position: fixed;
-            bottom: 0.6em;
-            left: 0;
-            width: calc(100% - 1.6em);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0.8em;
-        }
+        position: fixed;
+        bottom: 0.6em;
+        left: 0;
+        width: calc(100% - 1.6em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8em;
+    }
 
-        .footerDes,
-        .footerDes a {
-            color: #666;
-            text-align: center;
-            font-size: 12px;
-        }
+    .footerDes,
+    .footerDes a {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+    }
 
-        /*适配黑夜模式*/
-        body.dark-mode {
-            background-color: var(--background-color-dark);
-        }
+    /*适配黑夜模式*/
+    body.dark-mode {
+        background-color: var(--background-color-dark);
+    }
 
-        body.dark-mode img {
-            filter: brightness(50%);
-        }
+    body.dark-mode img {
+        filter: brightness(50%);
+    }
 
-        body.dark-mode .header h1,
-        body.dark-mode .remind_block .remind_title {
-            color: var(--font-des-color-dark);
-        }
+    body.dark-mode .header h1,
+    body.dark-mode .remind_block .remind_title {
+        color: var(--font-des-color-dark);
+    }
 
-        body.dark-mode .content {
-            box-shadow: 0 0 10px #6666cc4d;
-            background-color: var(--subbox-color-dark);
-        }
+    body.dark-mode .content {
+        box-shadow: 0 0 10px #6666cc4d;
+        background-color: var(--subbox-color-dark);
+    }
 
-        body.dark-mode .safety-url {
-            border-bottom: 1px solid var(--font-light-dark-dark);
-        }
+    body.dark-mode .safety-url {
+        border-bottom: 1px solid var(--font-light-dark-dark);
+    }
 
-        body.dark-mode .c-footer-a2,
-        body.dark-mode .footerDes a {
-            color: var(--font-title-color-dark);
-        }
-        </style>
-    </head>
+    body.dark-mode .c-footer-a2,
+    body.dark-mode .footerDes a {
+        color: var(--font-title-color-dark);
+    }
+    </style>
+</head>
 
 <body>
     <script>
@@ -249,30 +257,24 @@
     </div>
 </body>
 <script>
-    const params = new URLSearchParams(window.location.search);
-    const encodedTarget = params.get('target');
-    const target = atob(encodedTarget ? encodedTarget : "aHR0cHM6Ly9nb3JwZWxuLnRvcA==");
+const params = new URLSearchParams(window.location.search);
+const encodedTarget = params.get('target');
+const target = atob(encodedTarget ? encodedTarget : "aHR0cHM6Ly9nb3JwZWxuLnRvcA==");
 
-    if (target) {
-        document.getElementById('direct-link').href = target;
-        document.getElementById('tiaozhuan-link').textContent = '' + target;
-    } else {
-        console.error('未指定重定向目标。');
-    }
+if (target) {
+    document.getElementById('direct-link').href = target;
+    document.getElementById('tiaozhuan-link').textContent = '' + target;
+} else {
+    console.error('未指定重定向目标。');
+}
 </script>
 <script src="../assets/js/themeToggle.js"></script>
-
 <!-- google ads -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2615791794700346"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2615791794700346" crossorigin="anonymous"></script>
 <!-- ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2615791794700346"
-     data-ad-slot="7586073525"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2615791794700346" data-ad-slot="7586073525" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 </html>
