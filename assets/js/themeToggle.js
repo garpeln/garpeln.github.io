@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // 获取桌面版主题切换按钮
     var themeToggleButton = document.getElementById('themeModel');
 
+    // 获取移动版主题切换按钮
+    var themeOfMobileToggleButton = document.getElementById('themeModelOfmobile');
 
     // 定义一个函数来切换主题
     function toggleTheme() {
@@ -37,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
-
+    // 如果移动版主题切换按钮存在，则添加点击事件监听器
+    if (themeOfMobileToggleButton) {
+        themeOfMobileToggleButton.addEventListener('click', toggleTheme);
+    }
 
 });
