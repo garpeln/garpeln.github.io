@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
     <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
 
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
@@ -75,7 +76,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">749</span>
+                                    <span class="site-state-item-count">750</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +88,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">659</span>
+                                    <span class="site-state-item-count">663</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -104,11 +105,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">659
+                                <span class="articleCount">663
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">749
+                                <span class="articleCount">750
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -141,7 +142,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">25
+                                <a name="个人博客" style="" class="articleCount">26
                                 </a>
                             </li>
                             
@@ -238,16 +239,49 @@
                             
                         </div>
                     </div>
+                    <div class="countdownNav" id="countdownNav">
+                        <div class="card-widget card-countdown">
+                            <div class="item-headline"><i></i><span></span></div>
+                            <div class="item-content">
+                                <div class="cd-count-left">
+                                    <span class="cd-text">距离</span>
+                                    <span class="cd-name" id="eventName">节日</span>
+                                    <span class="cd-time" id="daysUntil">000</span>
+                                    <span class="cd-date" id="eventDate">2015-08-23</span>
+                                </div>
+                                <div id="countRight" class="cd-count-right">
+                                    <div id="countRight" class="cd-count-right">
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">今日</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本周</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本月</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本年</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="siteInfoNav" id="siteInfoNav">
                         <div class="navTitle">网站资讯</div>
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >749</p>
+                                    <p >750</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>171.4k</p> 
+                                    <p>172.2k</p> 
 
                                 </li>
                                 <li>
@@ -257,11 +291,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3446天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3448天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-01-28 16:28:43 +0800">2025/01/28</p>
+                                    <p id="current-date" data-value="2025-01-30 16:46:33 +0800">2025/01/30</p>
                                 </li>
                             </ul>
                     </div>
@@ -1124,7 +1158,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 161 + '天';
+  element.innerHTML = 9 + '年' + 163 + '天';
 
 }
 
@@ -1133,7 +1167,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3446 + '天';
+    element.innerHTML = 3448 + '天';
 }
 </script>
 
@@ -1254,5 +1288,6 @@ async function pushtobaidu() {
     $('#toc').css('display', 'block');
 </script>
 <script src="../assets/js/themeToggle.js"></script>
+<script src="../assets/js/countdown.js"></script>
 
 </html>

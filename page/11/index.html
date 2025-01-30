@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
     <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
 
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
@@ -75,7 +76,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">749</span>
+                                    <span class="site-state-item-count">750</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +88,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">659</span>
+                                    <span class="site-state-item-count">663</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -104,11 +105,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">659
+                                <span class="articleCount">663
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">749
+                                <span class="articleCount">750
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -141,7 +142,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">25
+                                <a name="个人博客" style="" class="articleCount">26
                                 </a>
                             </li>
                             
@@ -238,16 +239,49 @@
                             
                         </div>
                     </div>
+                    <div class="countdownNav" id="countdownNav">
+                        <div class="card-widget card-countdown">
+                            <div class="item-headline"><i></i><span></span></div>
+                            <div class="item-content">
+                                <div class="cd-count-left">
+                                    <span class="cd-text">距离</span>
+                                    <span class="cd-name" id="eventName">节日</span>
+                                    <span class="cd-time" id="daysUntil">000</span>
+                                    <span class="cd-date" id="eventDate">2015-08-23</span>
+                                </div>
+                                <div id="countRight" class="cd-count-right">
+                                    <div id="countRight" class="cd-count-right">
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">今日</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本周</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本月</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                        <div class="cd-count-item">
+                                            <div class="cd-item-name">本年</div>
+                                            <div class="cd-item-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="siteInfoNav" id="siteInfoNav">
                         <div class="navTitle">网站资讯</div>
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >749</p>
+                                    <p >750</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>171.4k</p> 
+                                    <p>172.2k</p> 
 
                                 </li>
                                 <li>
@@ -257,20 +291,21 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3446天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3448天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-01-28 16:28:43 +0800">2025/01/28</p>
+                                    <p id="current-date" data-value="2025-01-30 16:46:33 +0800">2025/01/30</p>
                                 </li>
                             </ul>
                     </div>
                     <div id="toc" class="customCatalog"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
-<div>
+                    <div class="page-content" id="pjax"><div>
     <!-- 置顶文章 -->
+    
+    
     
     
     
@@ -1779,6 +1814,58 @@
     <div class="postbox">
         <div class="allpost">
             <div class="title">
+                <a class="pjaxlink" href="/article/15429884147" target="_blank">云开发 与 WePY</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2018-11-23</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
+                    微信小程序
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#微信小程序" target="_blank">微信小程序</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#云开发" target="_blank">云开发</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#WePY" target="_blank">WePY</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">一、Why WePY
+
+首先，先分享一下为什么要选择 WePY ？
+
+在项目开始进行选型的时候，我可选的底层框架有 WePy、MPVue、Taro、`MinUI，这些框架都是工程化做得很好的框架，可以帮助小程序项目长期进行维护。其中，Taro 因为采用的是我所不熟悉的 React ，所以从一开始就被排除。MPVue 我看了以后，它更多是给 Web 开发者提供小程序转化工具，而不是给小程序开发...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15429884147" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
                 <a class="pjaxlink" href="/article/15421638259" target="_blank">电脑病毒竟然被当宠物养！</a>
             </div>
             <hr>
@@ -2283,61 +2370,6 @@ Automator 能做什么？
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15359479766" target="_blank">终端制作带密码的压缩包 Mac</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2018-09-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-                    MacOS
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#zip" target="_blank">zip</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#终端" target="_blank">终端</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#MAC" target="_blank">MAC</a>
-                            
-                    
-                     
-                    
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">刚在网上闲逛看到的，记录一下，以备不时之需 ^_^！
-1. 只压缩单个文件
-zip -e yourZipFileName.zip yourSourceFile
-
-
-  例：zip -e /Users/chen/Desktop/test.zip /Users/chen/Desktop/test.txt
-
-
-2. 压缩文件夹
-zip -e -r yourZipFileName.zip yourS...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15359479766" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <style>
 .box_paginator {
@@ -2453,6 +2485,7 @@ async function fetchData() {
     }
 }
 </script>
+
 <!-- 春节灯笼 -->
 <div style="display:none;" id="lanterns">
     <div class="deng-box">
@@ -3102,7 +3135,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 161 + '天';
+  element.innerHTML = 9 + '年' + 163 + '天';
 
 }
 
@@ -3111,7 +3144,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3446 + '天';
+    element.innerHTML = 3448 + '天';
 }
 </script>
 
@@ -3232,5 +3265,6 @@ async function pushtobaidu() {
     $('#toc').css('display', 'block');
 </script>
 <script src="../assets/js/themeToggle.js"></script>
+<script src="../assets/js/countdown.js"></script>
 
 </html>

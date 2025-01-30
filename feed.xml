@@ -7,6 +7,367 @@
     
       
         <item>
+          <title>博客新添的宝藏小功能</title>
+          <link>https://gorpeln.top/article/17347655378</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17347655378</guid>
+          <pubDate>2024-12-21</pubDate>
+          <description>&lt;h3 id=&quot;1-侧栏倒计时&quot;&gt;1. 侧栏倒计时&lt;/h3&gt;
+&lt;p&gt;不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;  &lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857321.png!gorpeln&quot; alt=&quot;20241221151857321&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt; &lt;br /&gt;
+1、 countdown.html&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;countdownNav&quot; id=&quot;countdownNav&quot;&amp;gt;
+    &amp;lt;div class=&quot;card-widget card-countdown&quot;&amp;gt;
+        &amp;lt;div class=&quot;item-headline&quot;&amp;gt;&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;item-content&quot;&amp;gt;
+            &amp;lt;div class=&quot;cd-count-left&quot;&amp;gt;
+                &amp;lt;span class=&quot;cd-text&quot;&amp;gt;距离&amp;lt;/span&amp;gt;
+                &amp;lt;span class=&quot;cd-name&quot; id=&quot;eventName&quot;&amp;gt;节日&amp;lt;/span&amp;gt;
+                &amp;lt;span class=&quot;cd-time&quot; id=&quot;daysUntil&quot;&amp;gt;000&amp;lt;/span&amp;gt;
+                &amp;lt;span class=&quot;cd-date&quot; id=&quot;eventDate&quot;&amp;gt;2015-08-23&amp;lt;/span&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
+                &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;今日&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本周&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本月&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本年&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2、 countdown.js&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const CountdownTimer = (() =&amp;gt; {
+    const config = {
+        targetDate: &quot;2025-10-01&quot;,
+        targetName: &quot;国庆&quot;,
+        units: {
+            day: { text: &quot;今日&quot;, unit: &quot;小时&quot; },
+            week: { text: &quot;本周&quot;, unit: &quot;天&quot; },
+            month: { text: &quot;本月&quot;, unit: &quot;天&quot; },
+            year: { text: &quot;本年&quot;, unit: &quot;天&quot; }
+        }
+    };
+
+    const calculators = {
+        day: () =&amp;gt; {
+            const hours = new Date().getHours();
+            return {
+                remaining: 24 - hours,
+                percentage: (hours / 24) * 100
+            };
+        },
+        week: () =&amp;gt; {
+            const day = new Date().getDay();
+            const passed = day === 0 ? 6 : day - 1;
+            return {
+                remaining: 6 - passed,
+                percentage: ((passed + 1) / 7) * 100
+            };
+        },
+        month: () =&amp;gt; {
+            const now = new Date();
+            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            const passed = now.getDate() - 1;
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        },
+        year: () =&amp;gt; {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 1);
+            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
+            const passed = Math.floor((now - start) / 86400000);
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        }
+    };
+
+    function updateCountdown() {
+        const elements = [&apos;eventName&apos;, &apos;eventDate&apos;, &apos;daysUntil&apos;, &apos;countRight&apos;]
+           .map(id =&amp;gt; document.getElementById(id));
+
+        if (elements.some(el =&amp;gt; !el)) return;
+
+        const [eventName, eventDate, daysUntil, countRight] = elements;
+        const now = new Date();
+        const target = new Date(config.targetDate);
+
+        eventName.textContent = config.targetName;
+        eventDate.textContent = config.targetDate;
+        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
+
+        countRight.innerHTML = Object.entries(config.units)
+           .map(([key, { text, unit }]) =&amp;gt; {
+                const { remaining, percentage } = calculators[key]();
+                return `
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;${text}&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;
+                            &amp;lt;div class=&quot;cd-progress-bar&quot; style=&quot;width: ${percentage}%; opacity: ${percentage}&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                            &amp;lt;span class=&quot;cd-percentage ${percentage &amp;gt;= 46 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;${percentage.toFixed(2)}%&amp;lt;/span&amp;gt;
+                            &amp;lt;span class=&quot;cd-remaining ${percentage &amp;gt;= 60 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;
+                                &amp;lt;span class=&quot;cd-tip&quot;&amp;gt;还剩&amp;lt;/span&amp;gt;${remaining}&amp;lt;span class=&quot;cd-tip&quot;&amp;gt;${unit}&amp;lt;/span&amp;gt;
+                            &amp;lt;/span&amp;gt;
+                        &amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                `;
+            }).join(&apos;&apos;);
+    }
+
+    let timer;
+    const start = () =&amp;gt; {
+        updateCountdown();
+        timer = setInterval(updateCountdown, 600000);
+    };
+
+    [&apos;pjax:complete&apos;, &apos;DOMContentLoaded&apos;].forEach(event =&amp;gt; document.addEventListener(event, start));
+    document.addEventListener(&apos;pjax:send&apos;, () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer));
+
+    return { start, stop: () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer) };
+})();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3、 style.css&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/*倒计时*/
+.countdownNav {
+    margin-top: 1em;
+    background-color: var(--box-color-light);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.card-countdown {
+    margin: 0.75em 1.5em;
+}
+
+.card-countdown .item-content {
+    display: flex;
+}
+
+.cd-count-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.8rem;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+}
+
+.cd-count-left .cd-text {
+    font-size: 14px;
+}
+
+.cd-count-left .cd-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cd-count-left .cd-time {
+    font-size: 30px;
+    font-weight: bold;
+    color: #dad9e6;
+}
+
+.cd-count-left .cd-date {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.cd-count-left::after {
+    content: &quot;&quot;;
+    position: absolute;
+    right: -0.8rem;
+    width: 2px;
+    height: 80%;
+    background-color: #dad9e6;
+    opacity: 0.5;
+}
+
+.cd-count-right {
+    flex: 1;
+    margin-left: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cd-count-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+}
+
+.cd-item-name {
+    font-size: 14px;
+    margin-right: 0.8rem;
+    white-space: nowrap;
+}
+
+.cd-item-progress {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--background-color-light);
+    overflow: hidden;
+}
+
+.cd-progress-bar {
+    height: 100%;
+    border-radius: 8px;
+    background-color: #dad9e6;
+}
+
+.cd-percentage,
+.cd-remaining {
+    position: absolute;
+    font-size: 12px;
+    margin: 0 6px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cd-many {
+    color: #fff;
+}
+
+.cd-remaining {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.card-countdown .item-content:hover .cd-remaining {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.card-countdown .item-content:hover .cd-percentage {
+    transform: translateX(-10px);
+    opacity: 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-彩带樱花背景&quot;&gt;2. 彩带、樱花背景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;   &lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857322.png!gorpeln&quot; alt=&quot;20241221151857322&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!--  樱花背景 --&amp;gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/sakura.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!--  丝带背景 --&amp;gt;
+&amp;lt;script size=&quot;150&quot; alpha=&quot;0.3&quot; zindex=&quot;-2&quot; src=&quot;/assets/js/ribbon.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;注意：将文件下载到自己博客使用  &lt;br /&gt;
+https://gorpeln.top/assets/js/sakura.js  &lt;br /&gt;
+https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-春节灯笼&quot;&gt;3. 春节灯笼&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;   &lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857323.png!gorpeln&quot; alt=&quot;20241221151857323&quot; /&gt;
+&lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/deng.css&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;注意：将文件下载到自己博客使用  &lt;br /&gt;
+https://gorpeln.top/assets/css/deng.css&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;html代码&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- 春节灯笼 --&amp;gt;
+&amp;lt;div style=&quot;display:none;&quot; id=&quot;lanterns&quot;&amp;gt;
+    &amp;lt;div class=&quot;deng-box&quot;&amp;gt;
+        &amp;lt;div class=&quot;deng&quot;&amp;gt;
+            &amp;lt;div class=&quot;xian&quot;&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;deng-a&quot;&amp;gt;
+                &amp;lt;div class=&quot;deng-b&quot;&amp;gt;
+                    &amp;lt;div class=&quot;deng-t&quot;&amp;gt;快乐&amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;shui shui-a&quot;&amp;gt;
+                &amp;lt;div class=&quot;shui-c&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;shui-b&quot;&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;deng-box1&quot;&amp;gt;
+        &amp;lt;div class=&quot;deng&quot;&amp;gt;
+            &amp;lt;div class=&quot;xian&quot;&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;deng-a&quot;&amp;gt;
+                &amp;lt;div class=&quot;deng-b&quot;&amp;gt;
+                    &amp;lt;div class=&quot;deng-t&quot;&amp;gt;新春&amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class=&quot;shui shui-a&quot;&amp;gt;
+                &amp;lt;div class=&quot;shui-c&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                &amp;lt;div class=&quot;shui-b&quot;&amp;gt;&amp;lt;/div&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- 春节灯笼 --&amp;gt;
+&amp;lt;script&amp;gt;
+document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+    // 获取当前日期
+    var currentDate = new Date();
+    
+    // 定义开始日期和结束日期
+    var startDate = new Date(&apos;2025-01-22&apos;);//腊月廿三
+    var endDate = new Date(&apos;2025-02-12&apos;);//正月十五
+
+    // 获取 div 元素
+    var specialDiv = document.getElementById(&apos;lanterns&apos;);
+
+    // 检查当前日期是否在指定的日期范围内
+    if (currentDate &amp;gt;= startDate &amp;amp;&amp;amp; currentDate &amp;lt;= endDate) {
+        // 如果在范围内，则显示 div
+        specialDiv.style.display = &apos;block&apos;;
+    } else {
+        // 否则，隐藏 div
+        specialDiv.style.display = &apos;none&apos;;
+    }
+});
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-其他&quot;&gt;4、 其他&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;点击 RSS ，会有猫叫声&lt;/li&gt;
+  &lt;li&gt;头像的闪动光效&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>友链自动监测</title>
           <link>https://gorpeln.top/article/17310530239</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17310530239</guid>
@@ -1503,99 +1864,6 @@ function() {
 &lt;p&gt;　　最后，再次感谢您的陪伴与支持，愿我们的心灵之舟，永远向着光明与智慧的彼岸航行。
 　　
 　　&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000261.jpg!gorpeln&quot; alt=&quot;20200823120000261&quot; /&gt;&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>同一台电脑上使用多个GitHub账号</title>
-          <link>https://gorpeln.top/article/16895899334</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/16895899334</guid>
-          <pubDate>2023-07-17</pubDate>
-          <description>&lt;h3 id=&quot;使用需求&quot;&gt;使用需求&lt;/h3&gt;
-
-&lt;blockquote class=&quot;prompt-info&quot;&gt;
-  &lt;p&gt;通常情况下，我们会有两个 github 账号：一个是公司的，另一个是私人的。由于 github 是使用 SSH key 的 fingerprint (对应的公钥id_rsa_pub)来判定你是哪个账户，而不是通过用户名，如果是在多台电脑上使用一个账号，可以为该账号添加多个 SSH key，如果是一台电脑使用多个账号，则分别生成多个 SSH key 添加到对应的账户即可。所以本文要实现的是公号和私号在 git 上同时使用，两者互不干扰。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;步骤一生成多个-ssh-key&quot;&gt;步骤一：生成多个 SSH key&lt;/h3&gt;
-&lt;p&gt;为了举例方便，这里使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;one&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;two&lt;/code&gt; 两个账户。
-使用cd ~/.ssh切换工作目录，然后使用如下命令生成两个钥匙，中间一路回车。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen -t rsa -f ~/.ssh/id_rsa_one -C &quot;one@xxx.com&quot;
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_two -C &quot;two@xxx.com&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;这样会在~/.ssh目录下生成四个文件：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id_rsa.one      //账号 one 的私钥
-id_rsa.one.pub  //账号 one 的公钥
-id_rsa.two
-id_rsa.two.pub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;步骤二创建配置文件-config&quot;&gt;步骤二：创建配置文件 config&lt;/h3&gt;
-&lt;p&gt;在 ~/.ssh目录下新建 config 文件，令不同 Host 实际映射到同一 HostName，但密钥文件不同。根据自己情况修改&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-two&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accountTwo-name&lt;/code&gt;的值。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# --- 第一个账号 ---
-Host account-one    # 如：gorpeln
-	HostName github.com
-	User account-name  # 如：gorpeln
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa_one
-	UseKeychain yes
-	AddKeysToAgent yes
-# ----------------------------
-
-# --- 第二个账号 ---
-Host account-two    # 如：gorpelnTwo
-	HostName github.com
-	User accountTwo-name  # 如：gorpelnTwo
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa_two
-	UseKeychain yes
-	AddKeysToAgent yes
-# ----------------------------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;步骤三添加-ssh-key-及-测试&quot;&gt;步骤三：添加 SSH key 及 测试&lt;/h3&gt;
-&lt;p&gt;分别登陆两个 github 账号，在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; —&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SSH and GPG keys&lt;/code&gt; 中，点击 “new SSH key”，把 “id_rsa.one.pub” 和 “id_rsa.two.pub”这两个公钥的内容分别添加到相应的账号中。
-为了确认我们可以通过 SSH 连接 github，可通过输入下面命令来验证&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 验证账号一
-ssh -T git@gorpeln 
-# 验证账号二
-ssh -T git@gorpelnTwo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果看到下面信息，就说明连接正常。&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hi gorpeln! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;步骤四用户名和邮箱配置&quot;&gt;步骤四：用户名和邮箱配置&lt;/h3&gt;
-&lt;p&gt;在第二步创建配置文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt;时，可以直接将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;设置为你的主账号（账号一）名字，如我的GitHub账户名为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;，你可以了通过&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/gorpeln&lt;/code&gt;访问到我，则直接将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-one&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;account-name&lt;/code&gt;设置为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;，则对于使用主账号（账号一）操作的git仓库，正常&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;即可，不需要其他额外的操作。全局的用户名和邮箱可以直接配置为主账号（账号一）。&lt;/p&gt;
-
-&lt;p&gt;对于次账号（账号二）管理的项目则需要单独配置相应的账号和邮箱。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 设置局部 用户名/邮箱 配置
-git config user.name &quot;xxxx&quot;
-git config user.email &quot;xxxx@xx.com&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;步骤五使用-git&quot;&gt;步骤五：使用 git&lt;/h3&gt;
-&lt;p&gt;git 的使用一般是从其他仓库直接 clone 或本地新建，注意配置用户名和邮箱。&lt;/p&gt;
-
-&lt;p&gt;如果你步骤四：用户名和邮箱配置为主账号（账号一），那么该账号操作和配置第二个账号前的操作完全相同，没有任何变化，正常操作即可。&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 远程仓库地址为：git@github.com:gorpeln/repo.git
-git clone git@github.com:gorpeln/repo.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;次账号（账号二 ）操作项目&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 远程仓库地址为：git@github.com:gorpeln-two/repo.git
-git clone git@gorpelnTwo:gorpeln-two/repo.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果你使用第三方图形工具操作，如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sourcetree&lt;/code&gt;,进行操作时，记得不要忘了&lt;strong&gt;远程仓库地址&lt;/strong&gt;的修改。&lt;/p&gt;
 </description>
         </item>
       
