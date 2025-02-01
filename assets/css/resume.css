@@ -460,7 +460,7 @@ progress[value]::-webkit-progress-value {
     right: 40px;
     bottom: 2em;
     text-align: right;
-    z-index:99;
+    /*z-index:99;*/
 }
 
 .qrcode {
@@ -472,11 +472,24 @@ progress[value]::-webkit-progress-value {
     bottom: 80px;
     right: 40px;
     border-radius: 10px;
-        z-index:99;
+        /*z-index:99;*/
 
 }
 
-.downPDF {
+.printPDF {
+    width: 60px;
+    height: 60px;
+    background: var(--subbox-color-dark) url(/assets/img/blog_printPDF.png) no-repeat center center;
+    background-size: 60%;
+    position: fixed;
+    bottom: 240px;
+    right: 40px;
+    border-radius: 10px;
+    /*z-index: 99;*/
+
+}
+
+.downloadPDF {
     width: 60px;
     height: 60px;
     background: var(--subbox-color-dark) url(/assets/img/blog_downpdf.png) no-repeat center center;
@@ -485,7 +498,8 @@ progress[value]::-webkit-progress-value {
     bottom: 160px;
     right: 40px;
     border-radius: 10px;
-    z-index: 99;
+    /*z-index: 99;*/
+    
 }
 
 .qrcodeImg {

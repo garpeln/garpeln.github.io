@@ -291,11 +291,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3448天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3450天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-01-30 16:46:33 +0800">2025/01/30</p>
+                                    <p id="current-date" data-value="2025-02-01 16:38:55 +0800">2025/02/01</p>
                                 </li>
                             </ul>
                     </div>
@@ -624,7 +624,7 @@ if __name__ == "__main__":
 
 <p>变量详解：</p>
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_HOST</code>：参考<a href="https://help.upyun.com/2015/12/28/%25e5%25a6%2582%25e4%25bd%2595%25e4%25bd%25bf%25e7%2594%25a8-ftp%25e3%2580%2581api-%25e4%25b8%258a%25e4%25bc%25a0%25e6%2596%2587%25e4%25bb%25b6/">又拍云文档</a>，直接使用<code class="language-plaintext color-gray highlighter-rouge">v0.ftp.upyun.com</code>就行了</li>
+  <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_HOST</code>：参考<a href="https://help.upyun.com/2015/12/28/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-ftp%e3%80%81api-%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6/">又拍云文档</a>，直接使用<code class="language-plaintext color-gray highlighter-rouge">v0.ftp.upyun.com</code>就行了</li>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_USER</code>：格式为 <strong>operator/bucket</strong>，在又拍云 - 云存储 - 选择对应的bucket点击配置 - 存储管理 - 操作员授权 - 自己添加操作用户名和密码，假设你的又拍云云储存bucket的名称为upai-img，自定义的用户名为user，密码为123456，则UPYUN_FTP_USER就是 <code class="language-plaintext color-gray highlighter-rouge">user/upai-img</code>，如果你看不懂我说的，参考<a href="https://techs.upyun.com/videos/cdnpage/creating_storage.html"> 又拍云视频教程</a></li>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_PASSWORD</code>：就是上面你自己设置的 <code class="language-plaintext color-gray highlighter-rouge">123456</code>，<a href="https://img.gorpeln.top/blog/20241005111856744.png!gorpeln">图片示例</a></li>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_PATH</code>：直接使用 <code class="language-plaintext color-gray highlighter-rouge">/</code> （根目录）就行了</li>
@@ -1295,7 +1295,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 163 + '天';
+  element.innerHTML = 9 + '年' + 165 + '天';
 
 }
 
@@ -1304,7 +1304,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3448 + '天';
+    element.innerHTML = 3450 + '天';
 }
 </script>
 
