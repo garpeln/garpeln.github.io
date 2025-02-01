@@ -43,7 +43,7 @@
     <!-- 打印PDF -->
     <div class="printPDF" id="printPDF" onclick="window.print()"></div>
     <!-- 下载PDF -->
-    <div class="downloadPDF" id="downloadPdfButton"></div>
+    <div class="downloadPDF" id="downloadPdfButtonOfPC"></div>
     <!-- 页面二维码 -->
     <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/resume')"></div>
     <div class="qrcodeImg" id="qrcode"></div>
@@ -442,16 +442,13 @@ var modal = document.getElementById('modal');
 var overlay = document.getElementById('overlay');
 var cancelButton = document.getElementById('cancelButton');
 var downloadPdfButton = document.getElementById('downloadPdfButton');
+var downloadPdfButtonOfPC = document.getElementById('downloadPdfButtonOfPC');
+
 
 // 显示模态框和遮罩层
 function showModal() {
     modal.style.display = 'block';
     overlay.style.display = 'block';
-}
-function downloadPDF(event) {
-    event.preventDefault(); // 阻止默认的页面跳转行为
-    closeModal(); // 关闭模态框和遮罩层
-    window.open('/resume.pdf', '_blank'); // 在新窗口打开PDF
 }
 
 // 隐藏模态框和遮罩层
@@ -480,7 +477,12 @@ window.onload = function() {
 
     // 下载PDF按钮点击事件
     downloadPdfButton.addEventListener('click', function(event) {
-        downloadPDF(event); // 传递事件对象
+        event.preventDefault(); // 阻止默认的页面跳转行为
+        closeModal(); // 关闭模态框和遮罩层
+        window.location.href = "/resume.pdf"; // 跳转到PDF下载页面
+    });
+    downloadPdfButtonOfPC.addEventListener('click', function(event) {
+        window.open('/resume.pdf', '_blank'); // 在新窗口打开PDF
     });
 };
 </script>
