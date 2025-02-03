@@ -1,7 +1,16 @@
 const CountdownTimer = (() => {
     const config = {
-        targetDate: "2025-10-01",
-        targetName: "国庆",
+        events: [
+            { targetDate: "2025-04-04", targetName: "清明节" },
+            { targetDate: "2025-05-01", targetName: "劳动节" },
+            { targetDate: "2025-05-31", targetName: "端午节" },
+            { targetDate: "2025-10-01", targetName: "国庆节" },    
+            { targetDate: "2026-02-17", targetName: "春节" },            
+            { targetDate: "2027-02-06", targetName: "春节" },            
+            { targetDate: "2028-01-26", targetName: "春节" },            
+            { targetDate: "2029-02-13", targetName: "春节" },            
+            { targetDate: "2030-02-03", targetName: "春节" }           
+        ],
         units: {
             day: { text: "今日", unit: "小时" },
             week: { text: "本周", unit: "天" },
@@ -47,6 +56,17 @@ const CountdownTimer = (() => {
         }
     };
 
+    function getNextEvent() {
+        const now = new Date();
+        for (let i = 0; i < config.events.length; i++) {
+            const eventDate = new Date(config.events[i].targetDate);
+            if (eventDate > now) {
+                return config.events[i];
+            }
+        }
+        return config.events[config.events.length - 1];
+    }
+
     function updateCountdown() {
         const elements = ['eventName', 'eventDate', 'daysUntil', 'countRight']
            .map(id => document.getElementById(id));
@@ -55,10 +75,11 @@ const CountdownTimer = (() => {
 
         const [eventName, eventDate, daysUntil, countRight] = elements;
         const now = new Date();
-        const target = new Date(config.targetDate);
+        const nextEvent = getNextEvent();
+        const target = new Date(nextEvent.targetDate);
 
-        eventName.textContent = config.targetName;
-        eventDate.textContent = config.targetDate;
+        eventName.textContent = nextEvent.targetName;
+        eventDate.textContent = nextEvent.targetDate;
         daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
 
         countRight.innerHTML = Object.entries(config.units)

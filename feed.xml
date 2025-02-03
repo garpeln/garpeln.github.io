@@ -53,7 +53,7 @@
     &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2、 countdown.js&lt;/p&gt;
+&lt;p&gt;2、 countdown-1.js&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const CountdownTimer = (() =&amp;gt; {
     const config = {
         targetDate: &quot;2025-10-01&quot;,
@@ -148,6 +148,118 @@
 })();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;优化后代码，实现倒计时包含多个时间，自动识别最近的期望时间，如果现在时间超过了所有的期望时间，就以最后一个期望时间为准。两个js二选一即可。   &lt;br /&gt;
+ countdown-2.js&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const CountdownTimer = (() =&amp;gt; {
+    const config = {
+        events: [
+            { targetDate: &quot;2025-04-04&quot;, targetName: &quot;清明节&quot; },
+            { targetDate: &quot;2025-05-01&quot;, targetName: &quot;劳动节&quot; },
+            { targetDate: &quot;2025-05-31&quot;, targetName: &quot;端午节&quot; },
+            { targetDate: &quot;2025-10-01&quot;, targetName: &quot;国庆节&quot; },    
+            { targetDate: &quot;2026-02-17&quot;, targetName: &quot;春节&quot; }            
+        ],
+        units: {
+            day: { text: &quot;今日&quot;, unit: &quot;小时&quot; },
+            week: { text: &quot;本周&quot;, unit: &quot;天&quot; },
+            month: { text: &quot;本月&quot;, unit: &quot;天&quot; },
+            year: { text: &quot;本年&quot;, unit: &quot;天&quot; }
+        }
+    };
+
+    const calculators = {
+        day: () =&amp;gt; {
+            const hours = new Date().getHours();
+            return {
+                remaining: 24 - hours,
+                percentage: (hours / 24) * 100
+            };
+        },
+        week: () =&amp;gt; {
+            const day = new Date().getDay();
+            const passed = day === 0 ? 6 : day - 1;
+            return {
+                remaining: 6 - passed,
+                percentage: ((passed + 1) / 7) * 100
+            };
+        },
+        month: () =&amp;gt; {
+            const now = new Date();
+            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            const passed = now.getDate() - 1;
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        },
+        year: () =&amp;gt; {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 1);
+            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
+            const passed = Math.floor((now - start) / 86400000);
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        }
+    };
+
+    function getNextEvent() {
+        const now = new Date();
+        for (let i = 0; i &amp;lt; config.events.length; i++) {
+            const eventDate = new Date(config.events[i].targetDate);
+            if (eventDate &amp;gt; now) {
+                return config.events[i];
+            }
+        }
+        return config.events[config.events.length - 1];
+    }
+
+    function updateCountdown() {
+        const elements = [&apos;eventName&apos;, &apos;eventDate&apos;, &apos;daysUntil&apos;, &apos;countRight&apos;]
+           .map(id =&amp;gt; document.getElementById(id));
+
+        if (elements.some(el =&amp;gt; !el)) return;
+
+        const [eventName, eventDate, daysUntil, countRight] = elements;
+        const now = new Date();
+        const nextEvent = getNextEvent();
+        const target = new Date(nextEvent.targetDate);
+
+        eventName.textContent = nextEvent.targetName;
+        eventDate.textContent = nextEvent.targetDate;
+        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
+
+        countRight.innerHTML = Object.entries(config.units)
+           .map(([key, { text, unit }]) =&amp;gt; {
+                const { remaining, percentage } = calculators[key]();
+                return `
+                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;${text}&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;
+                            &amp;lt;div class=&quot;cd-progress-bar&quot; style=&quot;width: ${percentage}%; opacity: ${percentage}&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                            &amp;lt;span class=&quot;cd-percentage ${percentage &amp;gt;= 46 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;${percentage.toFixed(2)}%&amp;lt;/span&amp;gt;
+                            &amp;lt;span class=&quot;cd-remaining ${percentage &amp;gt;= 60 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;
+                                &amp;lt;span class=&quot;cd-tip&quot;&amp;gt;还剩&amp;lt;/span&amp;gt;${remaining}&amp;lt;span class=&quot;cd-tip&quot;&amp;gt;${unit}&amp;lt;/span&amp;gt;
+                            &amp;lt;/span&amp;gt;
+                        &amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                `;
+            }).join(&apos;&apos;);
+    }
+
+    let timer;
+    const start = () =&amp;gt; {
+        updateCountdown();
+        timer = setInterval(updateCountdown, 600000);
+    };
+
+    [&apos;pjax:complete&apos;, &apos;DOMContentLoaded&apos;].forEach(event =&amp;gt; document.addEventListener(event, start));
+    document.addEventListener(&apos;pjax:send&apos;, () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer));
+
+    return { start, stop: () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer) };
+})();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;3、 style.css&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/*倒计时*/
 .countdownNav {

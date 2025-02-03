@@ -246,7 +246,7 @@
                                 <div class="cd-count-left">
                                     <span class="cd-text">距离</span>
                                     <span class="cd-name" id="eventName">节日</span>
-                                    <span class="cd-time" id="daysUntil">000</span>
+                                    <span class="cd-time" id="daysUntil">00</span>
                                     <span class="cd-date" id="eventDate">2015-08-23</span>
                                 </div>
                                 <div id="countRight" class="cd-count-right">
@@ -281,7 +281,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>172.2k</p> 
+                                    <p>172.7k</p> 
 
                                 </li>
                                 <li>
@@ -291,11 +291,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3450天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3452天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-01 16:49:02 +0800">2025/02/01</p>
+                                    <p id="current-date" data-value="2025-02-03 15:39:17 +0800">2025/02/03</p>
                                 </li>
                             </ul>
                     </div>
@@ -406,7 +406,7 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div></div>
-<p>2、 countdown.js</p>
+<p>2、 countdown-1.js</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CountdownTimer = (() =&gt; {
     const config = {
         targetDate: "2025-10-01",
@@ -501,6 +501,118 @@
 })();
 </code></pre></div></div>
 
+<p>优化后代码，实现倒计时包含多个时间，自动识别最近的期望时间，如果现在时间超过了所有的期望时间，就以最后一个期望时间为准。两个js二选一即可。   <br />
+ countdown-2.js</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CountdownTimer = (() =&gt; {
+    const config = {
+        events: [
+            { targetDate: "2025-04-04", targetName: "清明节" },
+            { targetDate: "2025-05-01", targetName: "劳动节" },
+            { targetDate: "2025-05-31", targetName: "端午节" },
+            { targetDate: "2025-10-01", targetName: "国庆节" },    
+            { targetDate: "2026-02-17", targetName: "春节" }            
+        ],
+        units: {
+            day: { text: "今日", unit: "小时" },
+            week: { text: "本周", unit: "天" },
+            month: { text: "本月", unit: "天" },
+            year: { text: "本年", unit: "天" }
+        }
+    };
+
+    const calculators = {
+        day: () =&gt; {
+            const hours = new Date().getHours();
+            return {
+                remaining: 24 - hours,
+                percentage: (hours / 24) * 100
+            };
+        },
+        week: () =&gt; {
+            const day = new Date().getDay();
+            const passed = day === 0 ? 6 : day - 1;
+            return {
+                remaining: 6 - passed,
+                percentage: ((passed + 1) / 7) * 100
+            };
+        },
+        month: () =&gt; {
+            const now = new Date();
+            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            const passed = now.getDate() - 1;
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        },
+        year: () =&gt; {
+            const now = new Date();
+            const start = new Date(now.getFullYear(), 0, 1);
+            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
+            const passed = Math.floor((now - start) / 86400000);
+            return {
+                remaining: total - passed,
+                percentage: (passed / total) * 100
+            };
+        }
+    };
+
+    function getNextEvent() {
+        const now = new Date();
+        for (let i = 0; i &lt; config.events.length; i++) {
+            const eventDate = new Date(config.events[i].targetDate);
+            if (eventDate &gt; now) {
+                return config.events[i];
+            }
+        }
+        return config.events[config.events.length - 1];
+    }
+
+    function updateCountdown() {
+        const elements = ['eventName', 'eventDate', 'daysUntil', 'countRight']
+           .map(id =&gt; document.getElementById(id));
+
+        if (elements.some(el =&gt; !el)) return;
+
+        const [eventName, eventDate, daysUntil, countRight] = elements;
+        const now = new Date();
+        const nextEvent = getNextEvent();
+        const target = new Date(nextEvent.targetDate);
+
+        eventName.textContent = nextEvent.targetName;
+        eventDate.textContent = nextEvent.targetDate;
+        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
+
+        countRight.innerHTML = Object.entries(config.units)
+           .map(([key, { text, unit }]) =&gt; {
+                const { remaining, percentage } = calculators[key]();
+                return `
+                    &lt;div class="cd-count-item"&gt;
+                        &lt;div class="cd-item-name"&gt;${text}&lt;/div&gt;
+                        &lt;div class="cd-item-progress"&gt;
+                            &lt;div class="cd-progress-bar" style="width: ${percentage}%; opacity: ${percentage}"&gt;&lt;/div&gt;
+                            &lt;span class="cd-percentage ${percentage &gt;= 46 ? 'cd-many' : ''}"&gt;${percentage.toFixed(2)}%&lt;/span&gt;
+                            &lt;span class="cd-remaining ${percentage &gt;= 60 ? 'cd-many' : ''}"&gt;
+                                &lt;span class="cd-tip"&gt;还剩&lt;/span&gt;${remaining}&lt;span class="cd-tip"&gt;${unit}&lt;/span&gt;
+                            &lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                `;
+            }).join('');
+    }
+
+    let timer;
+    const start = () =&gt; {
+        updateCountdown();
+        timer = setInterval(updateCountdown, 600000);
+    };
+
+    ['pjax:complete', 'DOMContentLoaded'].forEach(event =&gt; document.addEventListener(event, start));
+    document.addEventListener('pjax:send', () =&gt; timer &amp;&amp; clearInterval(timer));
+
+    return { start, stop: () =&gt; timer &amp;&amp; clearInterval(timer) };
+})();
+</code></pre></div></div>
 <p>3、 style.css</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*倒计时*/
 .countdownNav {
@@ -1373,7 +1485,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 165 + '天';
+  element.innerHTML = 9 + '年' + 167 + '天';
 
 }
 
@@ -1382,7 +1494,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3450 + '天';
+    element.innerHTML = 3452 + '天';
 }
 </script>
 
