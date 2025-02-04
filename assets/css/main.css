@@ -488,11 +488,12 @@ h1.tag-name {
 
 .cd-count-left .cd-text {
     font-size: 14px;
+    opacity: 0.5;
 }
 
 .cd-count-left .cd-name {
-    font-weight: bold;
     font-size: 18px;
+    color:#505050;
 }
 
 .cd-count-left .cd-time {
@@ -503,7 +504,7 @@ h1.tag-name {
 
 .cd-count-left .cd-date {
     font-size: 12px;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .cd-count-left::after {
