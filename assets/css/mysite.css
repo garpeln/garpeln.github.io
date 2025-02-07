@@ -179,10 +179,10 @@ body {
 .profile {
     position: relative;
     /*background: #fff;*/
-    margin: 2em;
+    margin: 2em 2em 0 2em;
     padding: 1em 1em 0.5em 1em;
     opacity: 1;
-    min-height: 20em;
+    /*min-height: 20em;*/
     /*height: 100%;*/
     -moz-border-radius: 0 0 10px 10px;
     -webkit-border-radius: 0 0 10px 10px;
@@ -195,7 +195,7 @@ body {
 
 .profile .nickname {
     margin-top: 0.5em;
-    border-bottom: 0.01em solid #37374c;
+    border-bottom: 0.01em solid #b2b2c5;
     padding-bottom: 0.5em;
     font-family: cursive;
     font-size: 1.5em;

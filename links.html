@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
     <link rel="stylesheet" href="/assets/css/waline.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
 
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
     <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
     <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
     <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
-    <meta name="sogou_site_verification" content="kYC42vft3H" />
 
     <!-- 分析追踪 -->
     <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -95,6 +94,10 @@
                         </div>
                         <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
                         </div>
+                    </div>
+                    <div class="siteNav" style="display:none;">
+                        <div class="noticeTitle"><i class="fas fa-bullhorn fa-shake"></i> 公告</div>
+                        <div class="noticeDetail">欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！</div>
                     </div>
                     <div class="siteNav">
                         <div class="navTitle">博客导航</div>
@@ -281,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>172.7k</p> 
+                                    <p>172.8k</p> 
 
                                 </li>
                                 <li>
@@ -291,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3453天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3456天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-04 17:20:11 +0800">2025/02/04</p>
+                                    <p id="current-date" data-value="2025-02-07 21:11:17 +0800">2025/02/07</p>
                                 </li>
                             </ul>
                     </div>
@@ -463,34 +466,6 @@ table {
     padding-bottom: 2em;
 }
 
-.toggle {
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.toggle>.toggle-button {
-    padding: 6px 10px;
-    background: #f6f6f6;
-    color: #1f2d3d;
-    cursor: pointer;
-    margin-top: 1em;
-}
-
-.toggle>.toggle-content {}
-
-.toggle-button::before {
-    content: "\25B6";
-    display: inline-block;
-    margin-right: 5px;
-    color: #333;
-    transition: transform 0.3s;
-    font-size: 12px;
-}
-
-details[open] .toggle-button::before {
-    content: "\25BC";
-}
-
 
 @media (max-width: 767px) {
 
@@ -528,20 +503,25 @@ details[open] .toggle-button::before {
         </ul>
         <button class="copy-button" onclick="copyToClipboard()">复制</button>
     </blockquote>
+
     <details class="toggle">
-        <summary class="toggle-button" style="">更多博客图片尺寸</summary>
-        <div class="all-icon-box">
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-64.png" target="_blank">64 × 64</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-128.png" target="_blank">128 × 128</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-256.png" target="_blank">256 × 256</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-382.png" target="_blank">300 × 300</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-512.png" target="_blank">512 × 512</a>　
-            <a class="all-icon" href="https://gorpeln.top/favicon.ico" target="_blank">ICO</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-300.webp" target="_blank">WEBP</a>　
-            <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-long.png" target="_blank">长LOGO</a>　
-            <a class="all-icon" href="https://gorpeln.top/assets/img/logo.png" target="_blank">300 × 300（默认）</a>　
-        </div>
-    </details>
+  <summary class="toggle-button">更多博客图片尺寸</summary>
+  <div class="box-detail">
+    
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-64.png" target="_blank">64 × 64</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-128.png" target="_blank">128 × 128</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-256.png" target="_blank">256 × 256</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-382.png" target="_blank">300 × 300</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-512.png" target="_blank">512 × 512</a>　
+        <a class="all-icon" href="https://gorpeln.top/favicon.ico" target="_blank">ICO</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-300.webp" target="_blank">WEBP</a>　
+        <a class="all-icon" href="https://img.gorpeln.top/p/icon/gorpeln-long.png" target="_blank">长LOGO</a>　
+        <a class="all-icon" href="https://gorpeln.top/assets/img/logo.png" target="_blank">300 × 300（默认）</a>　
+    
+  </div>
+</details>
+
+
     为了方便大家及时获取你的最新文章，建议你考虑在博客上添加RSS订阅功能。
     <a href="/friends" class="underline-dashed" target="_blank">点击前往友链文章页面</a>
     <br />
@@ -1241,18 +1221,7 @@ function copyToClipboard() {
     padding: 0.5em 15px;
     margin-bottom: 0.5em;
 }
-.site-footer:before {
-    content: "";
-    position: absolute;
-    background-image: url(../assets/img/logo_seal.png);
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    z-index: 1;
-    margin-top: -5%;
-    right:10%;
-    opacity:0.32;
-}
+
 .runTime {
     color: #777;
     text-align: center;
@@ -1294,12 +1263,6 @@ function copyToClipboard() {
 
 .post-margin{
 }
-@media (max-width: 992px) {
-    .site-footer:before {
-        display:none;
-    }
-}
-
 
 @keyframes heartbeat {
     0% {
@@ -1630,7 +1593,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 168 + '天';
+  element.innerHTML = 9 + '年' + 171 + '天';
 
 }
 
@@ -1639,7 +1602,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3453 + '天';
+    element.innerHTML = 3456 + '天';
 }
 </script>
 
@@ -1759,7 +1722,7 @@ async function pushtobaidu() {
   });
     $('#toc').css('display', 'block');
 </script>
-<script src="../assets/js/themeToggle.js"></script>
-<script src="../assets/js/countdown.js"></script>
+<script src="/assets/js/themeToggle.js"></script>
+<script src="/assets/js/countdown.js"></script>
 
 </html>

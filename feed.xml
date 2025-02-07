@@ -813,7 +813,7 @@ if __name__ == &quot;__main__&quot;:
 
 &lt;div id=&quot;blog-problem&quot;&gt;
     &lt;p id=&quot;blog-problem-title&quot;&gt;评论加载不出来？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;博客已开启CDN，整体访问速度较快。&lt;br /&gt;但博客评论、公告、实验室等功能采用不同域名访问，可能存在无法访问的情况。&lt;br /&gt;如果可能，请科学上网。或者多次刷新加载（5-6次），就可以正常展示&lt;/p&gt;
+    &lt;p id=&quot;blog-problem-des&quot;&gt;博客已开启CDN，整体访问速度较快。&lt;br /&gt;但博客评论、公告、实验室等功能采用不同域名访问，可能存在无法访问的情况。&lt;br /&gt;如果可能，请科学上网，或者多次刷新加载（5-6次），就可以正常展示&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;blog-problem&quot;&gt;
@@ -1280,18 +1280,6 @@ iziToast.show({
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240406153223632.png!gorpeln&quot; alt=&quot;20240406153223632&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
-    &lt;div&gt;
-      
-        https://www.yvii.cn/archives/1980.html
-        
-      
-    &lt;/div&gt;
-&lt;/div&gt;
-
 </description>
         </item>
       
@@ -1463,18 +1451,6 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;h3 id=&quot;结语&quot;&gt;结语&lt;/h3&gt;
 &lt;p&gt;对于浏览体验来说，多了一步跳转，总归是不好，但为了愉快的玩耍博客，稳妥一点更佳。如果觉得跳转中间页很烦人，浏览器可以装个 &lt;a href=&quot;https://chromewebstore.google.com/detail/skip-redirect/jaoafjdoijdconemdmodhbfpianehlon&quot;&gt;Skip Redirect&lt;/a&gt; 插件，告别所有网站的中间页跳转，直接抵达目标地址。&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
-    &lt;div&gt;
-      
-        https://koobai.com/zhongjiantiaozhuan
-        
-      
-    &lt;/div&gt;
-&lt;/div&gt;
-
 </description>
         </item>
       
@@ -1596,23 +1572,6 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &amp;lt;/script&amp;gt;
 &amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://fastly.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;div style=&quot;color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;&quot;&gt;参考链接：
-    &lt;div&gt;
-      
-        https://blog.stevenw.cc/archives/BMn51E3Y
-        
-          &lt;br /&gt;
-        
-      
-        https://immmmm.com/hi-friends-circle
-        
-      
-    &lt;/div&gt;
-&lt;/div&gt;
 
 </description>
         </item>

@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
     <link rel="stylesheet" href="/assets/css/waline.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
 
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
     <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
     <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
     <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
-    <meta name="sogou_site_verification" content="kYC42vft3H" />
 
     <!-- 分析追踪 -->
     <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -95,6 +94,10 @@
                         </div>
                         <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
                         </div>
+                    </div>
+                    <div class="siteNav" style="display:none;">
+                        <div class="noticeTitle"><i class="fas fa-bullhorn fa-shake"></i> 公告</div>
+                        <div class="noticeDetail">欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！</div>
                     </div>
                     <div class="siteNav">
                         <div class="navTitle">博客导航</div>
@@ -281,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>172.7k</p> 
+                                    <p>172.8k</p> 
 
                                 </li>
                                 <li>
@@ -291,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3453天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3456天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-04 17:20:11 +0800">2025/02/04</p>
+                                    <p id="current-date" data-value="2025-02-07 21:11:17 +0800">2025/02/07</p>
                                 </li>
                             </ul>
                     </div>
@@ -510,6 +513,8 @@
 
 <p>[04:32.23]</p>
 
+
+        
     </article>
 </div>
 <div class="copyright">
@@ -782,18 +787,7 @@
     padding: 0.5em 15px;
     margin-bottom: 0.5em;
 }
-.site-footer:before {
-    content: "";
-    position: absolute;
-    background-image: url(../assets/img/logo_seal.png);
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    z-index: 1;
-    margin-top: -5%;
-    right:10%;
-    opacity:0.32;
-}
+
 .runTime {
     color: #777;
     text-align: center;
@@ -835,12 +829,6 @@
 
 .post-margin{
 }
-@media (max-width: 992px) {
-    .site-footer:before {
-        display:none;
-    }
-}
-
 
 @keyframes heartbeat {
     0% {
@@ -1171,7 +1159,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 168 + '天';
+  element.innerHTML = 9 + '年' + 171 + '天';
 
 }
 
@@ -1180,7 +1168,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3453 + '天';
+    element.innerHTML = 3456 + '天';
 }
 </script>
 
@@ -1300,7 +1288,7 @@ async function pushtobaidu() {
   });
     $('#toc').css('display', 'block');
 </script>
-<script src="../assets/js/themeToggle.js"></script>
-<script src="../assets/js/countdown.js"></script>
+<script src="/assets/js/themeToggle.js"></script>
+<script src="/assets/js/countdown.js"></script>
 
 </html>

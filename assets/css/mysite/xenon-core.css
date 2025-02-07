@@ -819,7 +819,7 @@ body {
     margin: 20px auto
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .boxed-container .page-container {
         margin: 0
     }
@@ -875,7 +875,7 @@ body {
     box-shadow: 0 1px 0 rgba(0, 1, 1, .08), inset 0 1px 0 #ededed
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .page-container .main-content .page-title {
         padding: 15px 0
     }
@@ -901,7 +901,7 @@ body {
     font-size: 27px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .page-container .main-content .page-title .title-env .title {
         font-size: 23px
     }
@@ -940,7 +940,7 @@ body {
     margin-top: 8px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .page-container .main-content .page-title .breadcrumb-env .breadcrumb {
         margin-top: 4px
     }
@@ -999,7 +999,7 @@ body {
     list-style: none
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .sidebar-menu .main-menu {
         margin-top: 10px;
         margin-bottom: 10px
@@ -1093,7 +1093,7 @@ body {
     position: relative
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .sidebar-menu .main-menu ul li.is-hidden {
         left: -20px;
         zoom: 1;
@@ -1240,7 +1240,7 @@ body {
     right: 0
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .sidebar-menu.collapsed {
         width: 80px;
         z-index: 10;
@@ -1456,7 +1456,7 @@ body {
     color: #2c2e2f
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .navbar.horizontal-menu .navbar-inner .navbar-nav {
         list-style: none;
         padding: 0;
@@ -1864,7 +1864,7 @@ body {
     transform: rotate(90deg)!important
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .navbar.horizontal-menu.navbar-minimal {
         height: 55px
     }
@@ -1874,7 +1874,7 @@ body {
     margin-top: 55px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .navbar.horizontal-menu.navbar-minimal.navbar-fixed-top+.page-container {
         margin-top: 0
     }
@@ -1888,7 +1888,7 @@ body {
     top: 55px
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .navbar.horizontal-menu.navbar-minimal .navbar-inner .navbar-brand {
         height: 55px
     }
@@ -1910,7 +1910,7 @@ body {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .navbar.horizontal-menu {
         background: #2c2e2f;
         color: #fff;
@@ -2200,14 +2200,14 @@ body {
     }
 }
 
-@media screen and (max-width:768px) and screen and (max-width:768px) {
+@media screen and (max-width:1024px) and screen and (max-width:1024px) {
     .navbar.horizontal-menu .navbar-inner .navbar-nav {
         margin-top: 10px;
         margin-bottom: 10px
     }
 }
 
-@media screen and (max-width:768px) and screen and (min-width:768px) {
+@media screen and (max-width:1024px) and screen and (min-width:1024px) {
     .navbar.horizontal-menu .navbar-inner .navbar-nav ul li.is-hidden {
         left: -20px;
         zoom: 1;
@@ -3518,7 +3518,7 @@ body.chat-open #chat {
     right: 310px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .chat-open .footer-sticked-chat {
         right: 30px
     }
@@ -3529,13 +3529,13 @@ body.chat-open #chat {
     right: auto
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat.mobile-is-visible .chat-conversations {
         display: block!important
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat {
         left: 0;
         right: 0
@@ -3550,7 +3550,7 @@ body.chat-open #chat {
     position: relative
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations {
         padding: 15px 30px;
         background: #fff;
@@ -3566,7 +3566,7 @@ body.chat-open #chat {
     margin: 0
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li {
         float: none;
         width: 100%
@@ -3591,7 +3591,7 @@ body.chat-open #chat {
     max-width: 100%
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li .chat-user {
         width: 100%
     }
@@ -3765,7 +3765,7 @@ body.chat-open #chat {
     width: 250px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.open>a {
         width: 100%
     }
@@ -3803,7 +3803,7 @@ body.chat-open #chat {
     transition: none
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.browse-more>a {
         background-color: #f4f4f4
     }
@@ -3828,7 +3828,7 @@ body.chat-open #chat {
     left: auto
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.browse-more .other-conversations-list {
         position: relative;
         width: 100%;
@@ -3841,7 +3841,7 @@ body.chat-open #chat {
     text-align: right
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.browse-more .other-conversations-list li {
         text-align: left
     }
@@ -3866,7 +3866,7 @@ body.chat-open #chat {
     opacity: 0
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.browse-more .other-conversations-list li a span {
         float: right;
         left: 0
@@ -3889,7 +3889,7 @@ body.chat-open #chat {
     border-top: 1px solid rgba(228, 228, 228, .15)
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .footer-sticked-chat .chat-conversations>li.browse-more:hover>a {
         border-top: 0;
         top: 1px
@@ -3904,7 +3904,7 @@ body.chat-open #chat {
     margin-left: 10px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .chat-conversations>li+li {
         margin-left: 0;
         margin-top: 5px
@@ -3930,7 +3930,7 @@ body.chat-open #chat {
     font-size: 14px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .footer-sticked-chat .mobile-chat-toggle {
         display: block
     }
@@ -3948,7 +3948,7 @@ body.chat-open #chat {
     transform: translate(-25%, -25%)
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .page-container {
         display: block
     }
@@ -4632,7 +4632,7 @@ body.chat-open #chat {
     max-width: 100%
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     body.chat-open .settings-pane {
         left: -340px
     }
@@ -4654,7 +4654,7 @@ body.chat-open #chat {
     transform-origin: center bottom
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .settings-pane {
         padding: 30px
     }
@@ -4665,7 +4665,7 @@ body.chat-open #chat {
     padding: 50px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .settings-pane .settings-pane-inner {
         padding: 0
     }
@@ -4730,7 +4730,7 @@ body.chat-open #chat {
     border-collapse: collapse
 }
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (min-width:1024px) and (max-width:992px) {
     .settings-pane .user-info {
         width: auto;
         margin: 0 auto;
@@ -4738,7 +4738,7 @@ body.chat-open #chat {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .settings-pane .user-info {
         width: auto;
         margin: 0 auto;
@@ -7857,7 +7857,7 @@ address {
     display: block!important
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .vspacer {
         display: none
     }
@@ -8550,7 +8550,7 @@ img.img-corona {
     color: #2c2e2f
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .highlights .entry-description h3 {
         font-size: 19px;
         margin-bottom: 15px
@@ -8579,7 +8579,7 @@ img.img-corona {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .highlights .entry-img,
     .highlights .entry-description {
         float: none;
@@ -8599,19 +8599,19 @@ img.img-corona {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .text-left-sm {
         text-align: left
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .text-center-sm {
         text-align: center
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .text-right-sm {
         text-align: right
     }
@@ -8623,7 +8623,7 @@ img.img-corona {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .pull-right-sm {
         float: right
     }
@@ -9082,14 +9082,14 @@ pre {
     margin-bottom: 20px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .page-body .jumbotron {
         padding-left: 0;
         padding-right: 0
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1024px) {
     .page-body .jumbotron {
         padding-top: 15px;
         padding-bottom: 48px

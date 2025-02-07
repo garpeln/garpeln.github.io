@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="/assets/css/warning.min.css">
     <link rel="stylesheet" href="/assets/css/cb-search.css">
     <link rel="stylesheet" href="/assets/css/waline.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/deng.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
 
     <!-- 站点验证 -->
     <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
     <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
     <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
     <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
-    <meta name="sogou_site_verification" content="kYC42vft3H" />
 
     <!-- 分析追踪 -->
     <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
@@ -95,6 +94,10 @@
                         </div>
                         <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
                         </div>
+                    </div>
+                    <div class="siteNav" style="display:none;">
+                        <div class="noticeTitle"><i class="fas fa-bullhorn fa-shake"></i> 公告</div>
+                        <div class="noticeDetail">欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！</div>
                     </div>
                     <div class="siteNav">
                         <div class="navTitle">博客导航</div>
@@ -281,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>172.7k</p> 
+                                    <p>172.8k</p> 
 
                                 </li>
                                 <li>
@@ -291,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3453天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3456天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-04 17:20:11 +0800">2025/02/04</p>
+                                    <p id="current-date" data-value="2025-02-07 21:11:17 +0800">2025/02/07</p>
                                 </li>
                             </ul>
                     </div>
@@ -484,6 +487,12 @@
 
 <p>不过要注意，标题中的英文字母都被转化为<strong>小写字母</strong>了。</p>
 
+<h4 id="参考链接">参考链接</h4>
+<p>使用方法：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reference_links:
+    - https://gorpeln.top/works
+</code></pre></div></div>
+
 <h3 id="4-代码块高亮">4. 代码块、高亮</h3>
 <ul>
   <li>在连续几行的文本开头加入1个Tab或者4个空格。</li>
@@ -538,7 +547,27 @@
 
 <h4 id="弱化提示">弱化提示</h4>
 <p>在一段文字中，可以<em class="color-gray">弱化</em>某些文字内容。使用方法：斜体 + {:.color-gray}   <br />
-在一段文字中，可以<em class="color-light-gray">弱化(隐藏)</em>某些文字内容。使用方法：斜体 + {:.color-light-gray}</p>
+在一段文字中，可以<em class="color-light-gray">弱化(隐藏)</em>某些文字内容。使用方法：斜体 + {:.color-light-gray}  <br />
+在一段文字中，可以<em class="blur">高斯模糊</em>某些文字内容。使用方法：斜体 + {:.blur}</p>
+
+<h4 id="内容折叠">内容折叠</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% detail 更多博客图片尺寸 %}
+    &lt;p&gt;文字示例内容&lt;/p&gt;
+    &lt;img src="https://img.gorpeln.top/blog/20190101010101187.png!gorpeln" alt=""&gt;        
+{% enddetail %}
+
+</code></pre></div></div>
+<p>示例效果：</p>
+<details class="toggle">
+  <summary class="toggle-button">更多博客图片尺寸</summary>
+  <div class="box-detail">
+    
+    <p>文字示例内容</p>
+    <img src="https://img.gorpeln.top/blog/20190101010101187.png" alt="" />        
+
+  </div>
+</details>
 
 <h3 id="5-列表">5. 列表</h3>
 <h4 id="无序列表">无序列表</h4>
@@ -768,27 +797,27 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 </div>
 
 <h3 id="end">END</h3>
-<p>结束了，尾部有一个参考链接列表。<br />
-使用方法：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reference_links:
-    - https://gorpeln.top/work
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{删除% include reference.html links=page.reference_links %}
+<p>在 {删除% raw %} 和 {删除% endraw %} 之间的内容会被原样输出，不会进行标签转换</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{删除% raw %}
+...
+{删除% endraw %}
 </code></pre></div></div>
 
-<p><br /></p>
-<hr />
 
+
+        
+            <br/>
+<br/>
+<hr/>
 <div style="color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;">参考链接：
     <div>
       
-        https://gorpeln.top/work
+        https://gorpeln.top/works
         
       
     </div>
 </div>
-
-
+        
     </article>
 </div>
 <div class="copyright">
@@ -1061,18 +1090,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
     padding: 0.5em 15px;
     margin-bottom: 0.5em;
 }
-.site-footer:before {
-    content: "";
-    position: absolute;
-    background-image: url(../assets/img/logo_seal.png);
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    z-index: 1;
-    margin-top: -5%;
-    right:10%;
-    opacity:0.32;
-}
+
 .runTime {
     color: #777;
     text-align: center;
@@ -1114,12 +1132,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 
 .post-margin{
 }
-@media (max-width: 992px) {
-    .site-footer:before {
-        display:none;
-    }
-}
-
 
 @keyframes heartbeat {
     0% {
@@ -1450,7 +1462,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 168 + '天';
+  element.innerHTML = 9 + '年' + 171 + '天';
 
 }
 
@@ -1459,7 +1471,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3453 + '天';
+    element.innerHTML = 3456 + '天';
 }
 </script>
 
@@ -1579,7 +1591,7 @@ async function pushtobaidu() {
   });
     $('#toc').css('display', 'block');
 </script>
-<script src="../assets/js/themeToggle.js"></script>
-<script src="../assets/js/countdown.js"></script>
+<script src="/assets/js/themeToggle.js"></script>
+<script src="/assets/js/countdown.js"></script>
 
 </html>

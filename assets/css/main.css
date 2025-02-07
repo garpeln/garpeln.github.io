@@ -146,7 +146,6 @@ img {
     color: red;
     /* 这里可以设置您想要的红色 */
 }
-
 /**
  * Basic styling
  */
@@ -511,10 +510,11 @@ h1.tag-name {
     content: "";
     position: absolute;
     right: -0.8rem;
-    width: 2px;
+    /*width: 2px;*/
     height: 80%;
-    background-color: #dad9e6;
+    /*background-color: #dad9e6;*/
     opacity: 0.5;
+    border: 1px #dad9e6 dashed;
 }
 
 .cd-count-right {
@@ -1020,6 +1020,67 @@ li.article a:hover,li.article a:focus{
     font-size: 14px;
 }
 
+/*公告 start*/
+.noticeTitle{
+    padding: 0.75em 2em;
+    color: var(--font-title-color-light);
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px 10px 0 0;
+}
+.noticeTitle i{
+    color:red;
+}
+.fa-shake {
+    animation-name: fa-shake;
+    animation-duration: 1.5s; /* 添加动画持续时间 */
+    animation-iteration-count: infinite; /* 让动画无限循环 */
+}
+.noticeDetail{    
+    border-top: 1px dashed rgba(55, 55, 76, 0.5);
+    margin: 0 1.5em;
+    padding: 1em 0;
+}
+@keyframes fa-shake {
+    0% {
+        transform: rotate(-15deg)
+    }
+
+    4% {
+        transform: rotate(15deg)
+    }
+
+    8%,24% {
+        transform: rotate(-18deg)
+    }
+
+    12%,28% {
+        transform: rotate(18deg)
+    }
+
+    16% {
+        transform: rotate(-22deg)
+    }
+
+    20% {
+        transform: rotate(22deg)
+    }
+
+    32% {
+        transform: rotate(-12deg)
+    }
+
+    36% {
+        transform: rotate(12deg)
+    }
+
+    40%,to {
+        transform: rotate(0deg)
+    }
+}
+/*公告 end*/
+
 /*联系方式*/
 .contactNav {
     margin-top: 1em;
@@ -1346,12 +1407,45 @@ a:focus {
     }
 }
 
+/*内容折叠 start*/
+.toggle {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
 
+.toggle>.toggle-button {
+    padding: 6px 10px;
+    background: #f6f6f6;
+    color: #1f2d3d;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.toggle>.toggle-content {}
+
+.toggle-button::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 5px;
+    color: #333;
+    transition: transform 0.3s;
+    font-size: 12px;
+}
+
+details[open] .toggle-button::before {
+    content: "\25BC";
+}
+
+.box-detail {
+    background: #fafafa;
+    padding: 0.5em 1em 0.5em 1em;
+}
 
 .navbar-toggle {
     position: fixed;
     right: 0.5em;
 }
+/*内容折叠 end*/
 
 .navbar-default {
     /*background-image: url(/assets/img/bg5.png);*/
@@ -2638,6 +2732,7 @@ div.contentAbstract img {
     border-radius: 0 8px 8px 0;
 }
 
+/*自定义css*/
 .color-gray {
     color: #AAA !important;
     background-color: transparent !important;
@@ -2656,6 +2751,17 @@ div.contentAbstract img {
 
 .color-light-gray:hover {
     color: #888 !important;
+}
+
+.blur {
+    filter: blur(5px);
+    transition: filter 0.3s;
+    font-style: normal !important;
+}
+
+.blur:hover {
+    filter: none;
+    font-style: normal !important;
 }
 
 .img-left {
@@ -3324,31 +3430,38 @@ aside1
 body.dark-mode .aside1 .profile,
 body.dark-mode .siteNav,
 body.dark-mode .categoryNav,
- body.dark-mode .contactNav,
- body.dark-mode .friendlinkNav,
- body.dark-mode .siteInfoNav,
- body.dark-mode .countdownNav
- {
+body.dark-mode .contactNav,
+body.dark-mode .friendlinkNav,
+body.dark-mode .siteInfoNav,
+body.dark-mode .countdownNav{
     background-color: var(--box-color-dark);
 }
 
 body.dark-mode .siteNav .navTitle,
+body.dark-mode .noticeTitle,
 body.dark-mode .categoryNav .categoryNavTitle,
 body.dark-mode .contactNav .contactNavTitle,
 body.dark-mode .friendlinkNavTitle,
 body.dark-mode .siteInfoNav .navTitle {
-        color: var(--font-title-color-dark);
+    color: var(--font-title-color-dark);
 }
 
 body.dark-mode .siteNav ul li a,
 body.dark-mode .categoryNav ul li a{
-        color: var(--font-title-color-dark);
+    color: var(--font-title-color-dark);
 }
-
+body.dark-mode .siteNav ul,
+body.dark-mode .categoryNav ul,
+body.dark-mode .contactNav .contact-container,
+body.dark-mode .friendlinkNav .friend-container,
+body.dark-mode .siteInfoNav ul,
+body.dark-mode .noticeDetail{
+    border-top: 1px dashed rgba(145, 145, 176, 0.5);
+}
 body.dark-mode .contact-item .contact-name,
 body.dark-mode .friend-item .friend-name,
 body.dark-mode .siteInfoNav ul li p {
-        color: var(--font-title-color-dark);
+    color: var(--font-title-color-dark);
 }
 body.dark-mode .articleCount{
     background-color: var(--tiptag-color-dark);
@@ -3366,8 +3479,12 @@ body.dark-mode .cd-item-progress {
 body.dark-mode .cd-progress-bar {
     background-color: #6f6f77;
 }
-
-
+body.dark-mode .cd-count-left::after{
+    border: 1px #7a7795 dashed;
+}
+body.dark-mode .noticeDetail{
+    color: var(--font-des-color-dark);
+}
 /*
 pagination
 */
@@ -3582,9 +3699,16 @@ body.dark-mode .htmlTitle {
 /*
 links
 */
-body.dark-mode .toggle > .toggle-button {
-    background-color: var(--box-color-dark);
+
+body.dark-mode .toggle>.toggle-button {
+    background-color: var(--subbox-color-dark);
     color:var(--font-title-color-dark);
+}
+body.dark-mode .toggle-button::before{
+    color:var(--font-title-color-dark);
+}
+body.dark-mode .box-detail{
+    background-color:#303132;
 }
 body.dark-mode blockquote {
     background-color: var(--subbox-color-dark);
