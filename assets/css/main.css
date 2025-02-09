@@ -1445,6 +1445,26 @@ details[open] .toggle-button::before {
     position: fixed;
     right: 0.5em;
 }
+/* 重置展开指示器样式 */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .toggle - button::before {
+        /* 重新确认样式，确保显示正常 */
+        content: "\25B6";
+        display: inline - block;
+        margin-right: 5px;
+        color: #333;
+        transition: transform 0.3s;
+        font-size: 12px;
+    }
+    details[open].toggle-button::before {
+        content: "\25BC";
+    }
+}
+
 /*内容折叠 end*/
 
 .navbar-default {
