@@ -57,14 +57,6 @@
       "link": "https://icp.gov.moe/?keyword=20240031"
     },
     {
-      "name": "官码",
-      "avatar": "https://style.wmou.com/images/guanma.png",
-      "descr": "这个博主很懒，什么话也没有留下！",
-      "status": 2,
-      "siteshot": "",
-      "link": "https://guan.ma/hao/2024000022/"
-    },
-    {
       "name": "MIIT",
       "avatar": "https://beian.miit.cn.com/logo.png",
       "descr": "这个博主很懒，什么话也没有留下！",
@@ -209,5 +201,5 @@
       "link": "https://www.iasuna.com/link"
     }
   ],
-  "length": 26
+  "length": 25
 }

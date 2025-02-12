@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>友情链接 | gorpeln's Blog</title>
+    <title>友情链接 - gorpeln's Blog</title>
     <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享" />
     <meta name="description" content="这里是『 gorpeln's Blog 』的友情链接页面，介绍了友链申请规则，展示友链列表，并解答常见友链问题，同时展示友链最新文章和友链运行状态等。旨在方便博主与其他站长交流合作，促进资源共享与友好互动。">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -294,15 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3458天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3461天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-09 15:28:27 +0800">2025/02/09</p>
-                                </li>
-                                <li>
-                                    <p>版本号</p>
-                                    <p>4.1.35</p>
+                                    <p id="current-date" data-value="2025-02-12 10:56:16 +0800">2025/02/12</p>
                                 </li>
                             </ul>
                     </div>
@@ -405,12 +401,14 @@
     font-size: 1.8em;
     margin: 0.4em 0 0.9em 0;
 }
+.links-func-li{
+    padding:1px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.links-func-a {
 
-.underline-dashed {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
-    /* 设置下划线与文字之间的间距 */
 }
 
 blockquote {
@@ -499,11 +497,11 @@ table {
         <li>无违反相关法律法规的内容</li>
     </ol>
     <blockquote>
-        <ul style="margin-left: 0;list-style: none;padding: 10px 0;" id="copy-source">
-            <li>网站名称　　gorpeln的个人博客 - gorpeln</li>
-            <li>网站地址　　https://gorpeln.top</li>
-            <li>网站图标　　https://gorpeln.top/favicon.ico</li>
-            <li>网站描述　　趁年轻，做自己想做的！</li>
+        <ul style="margin-left: 0;list-style: none;padding: 10px 0;margin-top:5px;" id="copy-source">
+            <li class="links-func-li">网站名称　　gorpeln的个人博客 - gorpeln</li>
+            <li class="links-func-li">网站地址　　https://gorpeln.top</li>
+            <li class="links-func-li">网站图标　　https://gorpeln.top/favicon.ico</li>
+            <li class="links-func-li">网站描述　　趁年轻，做自己想做的！</li>
         </ul>
         <button class="copy-button" onclick="copyToClipboard()">复制</button>
     </blockquote>
@@ -526,19 +524,20 @@ table {
 </details>
 
 
-    为了方便大家及时获取你的最新文章，建议你考虑在博客上添加RSS订阅功能。
-    <a href="/friends" class="underline-dashed" target="_blank">点击前往友链文章页面</a>
-    <br />
-    每两天自动监测一次友链状态。
-    <a href="https://friends.202090.xyz/" class="underline-dashed" target="_blank">点击查看友链运行状态</a>
+    <div style="font-weight:300;">
+        需要友链博客支持feed订阅规则才能抓取到最新文章。
+        <a href="/friends" class="links-func-a" target="_blank">点击前往友链文章页面</a>
+        <br />
+        每天自动监测友链状态，可以查看状态及访问速度等信息。
+        <a href="https://friends.202090.xyz/" class="links-func-a" target="_blank">点击查看友链运行状态</a> 
+    </div>
+
+    
 </div>
 <div class="post">
     <div class="links-title">友链列表</div>
     <section class="links-box">
         
-        
-                
-            
         
                 
             
@@ -770,6 +769,9 @@ table {
         
                 
             
+        
+                
+            
     </section>
 </div>
 <div class="post">
@@ -847,16 +849,6 @@ table {
         
         
         
-        <a class="link_item" href="https://guan.ma/hao/2024000022/" target="_blank">
-            <img src="https://style.wmou.com/images/guanma.png" alt="官码" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
-            <div class="item-content">
-                <h3>官码</h3>
-                <p>这个博主很懒，什么话也没有留下！</p>
-            </div>
-        </a>
-        
-        
-        
         <a class="link_item" href="https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top" target="_blank">
             <img src="https://beian.miit.cn.com/logo.png" alt="MIIT" loading="lazy" onerror="this.src='https://img.gorpeln.top/pwd/undefined.png'">
             <div class="item-content">
@@ -864,6 +856,8 @@ table {
                 <p>这个博主很懒，什么话也没有留下！</p>
             </div>
         </a>
+        
+        
         
         
         
@@ -912,6 +906,84 @@ table {
 
 
 
+<div class="post">
+    <div class="links-title">失联列表</div>
+    <section class="links-box" style="padding-bottom:1em;">
+        <table>
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>原因</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <tr>
+                    <td>官码</td>
+                    <td>网站无法访问</td>
+                    <td>2025-02-10</td>
+                </tr>
+                
+                
+                
+                
+            </tbody>
+        </table>
+    </section>
+</div>
+
 <!-- 常见问题 -->
 <div class="problem-box" id="problem">
     <!-- 使用Liquid模板语言遍历 links 部分 -->
@@ -939,6 +1011,16 @@ table {
     <div class="problemItem">
         <p class="problemItemTitle">为什么我的友链头像为『占位图片』？为什么监测到我的友链状态为异常？</p>
         <p class="problemItemDes">你的博客存在异常（博客无法正常访问或者博客无法在某些地区访问等），不过放心，自动监测异常不会取消你的友联展示，博主会手动核验确实无法正常访问后才会放入失联列表。</p>
+    </div>
+    
+    <div class="problemItem">
+        <p class="problemItemTitle">如何查看友情链接的最新文章？</p>
+        <p class="problemItemDes"><a href='/friends' target='_blank'>点击前往友链文章页面</a>，该功能需要友链博客支持feed订阅规则，如atom、rss等。</p>
+    </div>
+    
+    <div class="problemItem">
+        <p class="problemItemTitle">如何查看友链博客状态？</p>
+        <p class="problemItemDes"><a href='https://friends.202090.xyz/' target='_blank'>点击查看友链运行状态</a>。</p>
     </div>
     
     <div class="problemItem last-item">
@@ -1299,7 +1381,8 @@ function copyToClipboard() {
             </a> ·
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
-            </a>
+            </a> ·
+            <span>4.1.36</span>
         </div>
     </div>
 </footer>
@@ -1597,7 +1680,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 173 + '天';
+  element.innerHTML = 9 + '年' + 176 + '天';
 
 }
 
@@ -1606,7 +1689,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3458 + '天';
+    element.innerHTML = 3461 + '天';
 }
 </script>
 
