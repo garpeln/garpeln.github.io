@@ -10,7 +10,13 @@
           <title>博客新添的宝藏小功能</title>
           <link>https://gorpeln.top/article/17347655378</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17347655378</guid>
-          <pubDate>2024-12-21</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 21 Dec 2024 15:18:57 +0800</pubDate>
           <description>&lt;h3 id=&quot;1-侧栏倒计时&quot;&gt;1. 侧栏倒计时&lt;/h3&gt;
 &lt;p&gt;不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。&lt;/p&gt;
 
@@ -483,7 +489,13 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
           <title>友链自动监测</title>
           <link>https://gorpeln.top/article/17310530239</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17310530239</guid>
-          <pubDate>2024-11-08</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Fri, 08 Nov 2024 16:03:43 +0800</pubDate>
           <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 &lt;p&gt;管理友链时采取手动点击检验的方式，随着时间的推移，友链数量逐渐增加，这一做法显然已不再高效。于是就需要写了一项类似API的功能，输出所有友链数据的可达性。&lt;/p&gt;
 
@@ -520,7 +532,13 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
           <title>定期自动备份又拍云存储</title>
           <link>https://gorpeln.top/article/17280983368</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
-          <pubDate>2024-10-05</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 05 Oct 2024 11:18:56 +0800</pubDate>
           <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;数据无价，备份无忧。&lt;/code&gt;&lt;/p&gt;
 
@@ -799,7 +817,13 @@ if __name__ == &quot;__main__&quot;:
           <title>博客常见问题</title>
           <link>https://gorpeln.top/article/17265361548</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17265361548</guid>
-          <pubDate>2024-09-17</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Tue, 17 Sep 2024 09:22:34 +0800</pubDate>
           <description>
 &lt;div id=&quot;blog-problem&quot;&gt;
     &lt;p id=&quot;blog-problem-title&quot;&gt;博客目标？&lt;/p&gt;
@@ -844,7 +868,13 @@ if __name__ == &quot;__main__&quot;:
           <title>防止网站被恶意镜像</title>
           <link>https://gorpeln.top/article/17245056864</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
-          <pubDate>2024-08-24</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 24 Aug 2024 21:21:26 +0800</pubDate>
           <description>&lt;h3 id=&quot;什么是网站镜像&quot;&gt;什么是网站镜像？&lt;/h3&gt;
 &lt;p&gt;网站镜像是指在互联网上出现一个与你的网站几乎一模一样的复制品，除了域名不同之外，其它所有内容都完全相同。这包括网站的布局、LOGO、版块结构等。&lt;/p&gt;
 
@@ -1013,7 +1043,13 @@ if __name__ == &quot;__main__&quot;:
           <title>Follow - 订阅一切</title>
           <link>https://gorpeln.top/article/17202356559</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17202356559</guid>
-          <pubDate>2024-07-06</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 06 Jul 2024 11:14:15 +0800</pubDate>
           <description>&lt;h3 id=&quot;follow是什么&quot;&gt;Follow是什么？&lt;/h3&gt;
 &lt;p&gt;Follow 是一款面向未来的信息浏览器，致力于将各种信息源整合在一个平台上，让用户便捷地获取和管理资讯。无论是传统的 RSS 订阅、社交媒体账号、博客、播客，还是实时通知，Follow 都能帮您一站式浏览。界面简洁，操作迅速，为用户提供现代化的阅读体验。&lt;/p&gt;
 
@@ -1070,7 +1106,13 @@ if __name__ == &quot;__main__&quot;:
           <title>双因素认证(2FA)实现原理</title>
           <link>https://gorpeln.top/article/17196724432</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17196724432</guid>
-          <pubDate>2024-06-29</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 29 Jun 2024 22:47:23 +0800</pubDate>
           <description>&lt;p&gt;我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。&lt;/p&gt;
 
 &lt;h3 id=&quot;多因子认证&quot;&gt;多因子认证&lt;/h3&gt;
@@ -1193,7 +1235,13 @@ if __name__ == &quot;__main__&quot;:
           <title>衣服的洗涤保养说明</title>
           <link>https://gorpeln.top/article/17146497169</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17146497169</guid>
-          <pubDate>2024-05-02</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Thu, 02 May 2024 19:35:16 +0800</pubDate>
           <description>&lt;p&gt;你认真读过衣服上的洗衣符号嘛？&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142831.png!gorpeln&quot; alt=&quot;20240502170142831&quot; /&gt;&lt;/p&gt;
@@ -1244,7 +1292,13 @@ if __name__ == &quot;__main__&quot;:
           <title>倒计时关闭的JS 公告</title>
           <link>https://gorpeln.top/article/17123887436</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17123887436</guid>
-          <pubDate>2024-04-06</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 06 Apr 2024 15:32:23 +0800</pubDate>
           <description>&lt;p&gt;这是一个简洁高效的公告通知系统，它能够帮助您在个人博客中迅速传达重要更新、临时公告或其他关键信息给每一位访问者，确保他们能及时获取最新的站点动态。&lt;/p&gt;
 
 &lt;p&gt;随着网络世界的日新月异，与读者保持有效沟通成为提升用户体验的关键环节之一。为了更好地服务于广大读者朋友，我在博客中集成了一套美观且功能齐全的公告通知模块。这套模块不仅具备直观醒目的视觉设计，还能灵活地调整样式、内容和显示时长，以满足各种场景需求。&lt;/p&gt;
@@ -1289,7 +1343,13 @@ iziToast.show({
           <title>App更新总提醒缺少出口合规证明</title>
           <link>https://gorpeln.top/article/17113627324</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17113627324</guid>
-          <pubDate>2024-03-25</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Mon, 25 Mar 2024 18:32:12 +0800</pubDate>
           <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
 &lt;p&gt;每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。&lt;/p&gt;
 
@@ -1314,7 +1374,13 @@ iziToast.show({
           <title>外链跳转到中间页</title>
           <link>https://gorpeln.top/article/17094338798</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17094338798</guid>
-          <pubDate>2024-03-03</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 03 Mar 2024 10:44:39 +0800</pubDate>
           <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240303104439913.png!gorpeln&quot; alt=&quot;20240303104439913&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
@@ -1460,7 +1526,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>GitHub贡献者可获取 Stark 空投</title>
           <link>https://gorpeln.top/article/17087779433</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17087779433</guid>
-          <pubDate>2024-02-24</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 24 Feb 2024 20:32:23 +0800</pubDate>
           <description>&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Starknet&lt;/code&gt; 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240224203223424.jpg!gorpeln&quot; alt=&quot;20240224203223424&quot; /&gt;&lt;/p&gt;
@@ -1511,7 +1583,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>部署友链朋友圈</title>
           <link>https://gorpeln.top/article/17049566482</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17049566482</guid>
-          <pubDate>2024-01-11</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Thu, 11 Jan 2024 15:04:08 +0800</pubDate>
           <description>&lt;h3 id=&quot;在线预览&quot;&gt;在线预览：&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;/friends&quot;&gt;https://gorpeln.top/friends&lt;/a&gt;&lt;/p&gt;
 
@@ -1582,7 +1660,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>2023 年度总结</title>
           <link>https://gorpeln.top/article/17040105944</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17040105944</guid>
-          <pubDate>2023-12-31</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 31 Dec 2023 16:16:34 +0800</pubDate>
           <description>&lt;p style=&quot;display:none&quot;&gt;在辞旧迎新之际，回首2023年，我感慨万千。岁月如梭，光阴荏苒，每一天都是一段珍贵的时光，我努力在工作与生活的交错中寻找平衡，不断追求进步与成长。工作上，我面对各种挑战，不断突破自我，努力为团队和公司做出更大的贡献；生活中，我珍惜每一个温暖的瞬间，注重身心健康，与家人朋友共享美好时光。&lt;/p&gt;
 
 &lt;p style=&quot;display:none&quot;&gt;在未来的道路上，我愿继续前行，怀揣着对生活的热爱和对未来的期许，不断探索前进，追逐梦想。感恩过去一年的所有经历和收获，期待着新的一年带来更多的挑战与机遇，也希望能与您一同分享成长的喜悦与收获。&lt;/p&gt;
@@ -1605,7 +1689,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>博客黑夜模式：Dark Reader 插件</title>
           <link>https://gorpeln.top/article/17016025546</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17016025546</guid>
-          <pubDate>2023-12-03</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 03 Dec 2023 19:22:34 +0800</pubDate>
           <description>&lt;p&gt;亲爱的读者，现在你可以更加自由地调整我们的博客浏览模式了！如果你喜欢在夜晚或低光环境下浏览，我们建议你使用 &lt;strong&gt;Chrome&lt;/strong&gt; 浏览器，并安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dark Reader&lt;/code&gt; 插件。这个插件简单易用，适用于各类网站，包括我们的博客。启用黑夜模式，不仅有助于减轻眼睛的疲劳，还能提供更加舒适的阅读环境。安装 Dark Reader 插件只需几步简单操作，快来尝试吧，让博客在黑夜中焕发新光彩！&lt;/p&gt;
 
 &lt;h3 id=&quot;dark-reader-简介&quot;&gt;Dark Reader 简介&lt;/h3&gt;
@@ -1656,7 +1746,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>个性二维码合集</title>
           <link>https://gorpeln.top/article/16990919984</link>
           <guid isPermaLink="true">https://gorpeln.top/article/16990919984</guid>
-          <pubDate>2023-11-04</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 04 Nov 2023 17:59:58 +0800</pubDate>
           <description>&lt;p&gt;探索个性二维码，每个都是数字艺术的小宝藏。这些小图案背后蕴含着独特的故事。扫一扫，用手机开启一场别样的冒险，发现属于你的精彩故事。或许，在其中的某一张，你将找到属于自己的独特之旅。数字艺术的魅力，从这些个性十足的二维码开始。让它们为你的日常生活注入新奇，感受创意的奇妙。快来和我一同探索这个数字世界的神秘角落吧！&lt;/p&gt;
 
 &lt;html lang=&quot;zh&quot;&gt;
@@ -1806,7 +1902,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>Sublime Text 常用插件</title>
           <link>https://gorpeln.top/article/16962230954</link>
           <guid isPermaLink="true">https://gorpeln.top/article/16962230954</guid>
-          <pubDate>2023-10-02</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Mon, 02 Oct 2023 13:04:55 +0800</pubDate>
           <description>&lt;h4 id=&quot;一package-control无法使用解决办法&quot;&gt;一、Package Control无法使用解决办法&lt;/h4&gt;
 
 &lt;p&gt;最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。&lt;/p&gt;
@@ -1857,7 +1959,13 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
           <title>博客评论时一键填写自己的信息</title>
           <link>https://gorpeln.top/article/16959932733</link>
           <guid isPermaLink="true">https://gorpeln.top/article/16959932733</guid>
-          <pubDate>2023-09-29</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Fri, 29 Sep 2023 21:14:33 +0800</pubDate>
           <description>&lt;p&gt;使用浏览器书签实现博客网站留言评论时&lt;strong&gt;一键填写昵称/邮箱/网址&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;具体的使用方法：&lt;/strong&gt;&lt;/p&gt;
@@ -1917,7 +2025,13 @@ function() {
           <title>8周年：博海泛舟，共赴时光之旅</title>
           <link>https://gorpeln.top/article/16927632006</link>
           <guid isPermaLink="true">https://gorpeln.top/article/16927632006</guid>
-          <pubDate>2023-08-23</pubDate>
+          
+          
+          
+          
+          
+          
+          <pubDate>Wed, 23 Aug 2023 12:00:00 +0800</pubDate>
           <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg!gorpeln&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　在这片浩瀚无垠的数字海洋中，每一滴浪花都承载着思想的重量，每一缕风都传递着智慧的低语。今日，我以笔为篙，轻划过时间的河面，与诸君共庆，这不平凡的博客八周年纪念。八年，于历史长河不过是短暂一瞬，于个人，则是无数次心灵触碰与智慧火花的璀璨绽放。&lt;/p&gt;
