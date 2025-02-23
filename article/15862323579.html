@@ -294,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3469天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3472天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-20 11:09:37 +0800">2025/02/20</p>
+                                    <p id="current-date" data-value="2025-02-23 11:20:15 +0800">2025/02/23</p>
                                 </li>
                             </ul>
                     </div>
@@ -639,6 +639,32 @@ dispatch_resume(queue);  //恢复队列queue
       };
 
     </script>
+</div>
+
+<div class="livere">
+    <!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<script type="text/javascript" src="/assets/js/md5.min.js"></script>
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: 'Ov23liC2CuQOOTNYgtHi',
+        clientSecret: '1a73f54963ee9193f6f28b53dd7ca5554530894d',
+        repo: 'Gitalk',
+        owner: 'gorpeln',
+        admin: ['gorpeln'],
+        id: md5(location.pathname),
+
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
+
+
+
 </div></div>
                 </div>
             </div>
@@ -884,7 +910,7 @@ dispatch_resume(queue);  //恢复队列queue
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.40</span>
+            <span>4.1.41</span>
         </div>
     </div>
 </footer>
@@ -975,7 +1001,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.40", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.41", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1145,7 +1171,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 184 + '天';
+  element.innerHTML = 9 + '年' + 187 + '天';
 
 }
 
@@ -1154,7 +1180,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3469 + '天';
+    element.innerHTML = 3472 + '天';
 }
 </script>
 

@@ -65,6 +65,14 @@
       "link": "https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top"
     },
     {
+      "name": "BlogsClub",
+      "avatar": "https://www.blogsclub.org/usr/themes/default/favicon.png",
+      "descr": " 博客俱乐部",
+      "status": 2,
+      "siteshot": "",
+      "link": "https://www.blogsclub.org/blog/184.html"
+    },
+    {
       "name": "gorpeln的个人博客",
       "avatar": "https://gorpeln.top/favicon.ico",
       "descr": "趁年轻，做自己想做的！",
@@ -201,5 +209,5 @@
       "link": "https://www.iasuna.com/link"
     }
   ],
-  "length": 25
+  "length": 26
 }
