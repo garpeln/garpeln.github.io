@@ -73,6 +73,14 @@
       "link": "https://www.blogsclub.org/blog/184.html"
     },
     {
+      "name": "博客星球",
+      "avatar": "https://www.blogplanet.cn/img/bkxq.png",
+      "descr": " 每一个博客都是一个独立星球！",
+      "status": 2,
+      "siteshot": "",
+      "link": "https://www.blogplanet.cn/"
+    },
+    {
       "name": "gorpeln的个人博客",
       "avatar": "https://gorpeln.top/favicon.ico",
       "descr": "趁年轻，做自己想做的！",
@@ -209,5 +217,5 @@
       "link": "https://www.iasuna.com/link"
     }
   ],
-  "length": 26
+  "length": 27
 }
