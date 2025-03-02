@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>博客新添的宝藏小功能 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,倒计时,彩带,樱花,灯笼,魔改" />
-    <meta name="description" content="1. 侧栏倒计时不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。">
+    <title>节日倒计时与时间进度条 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,倒计时,时间,进度条,博客侧栏,魔改" />
+    <meta name="description" content="不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。">
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="canonical" href="/article/17347655378">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln - 陈冠鹏">
-    <meta property="og:title" content="博客新添的宝藏小功能 | gorpeln's Blog">
+    <meta property="og:title" content="节日倒计时与时间进度条 | gorpeln's Blog">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/article/17347655378">
-    <meta property="og:description" content="1. 侧栏倒计时不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。">
+    <meta property="og:description" content="不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">751</span>
+                                    <span class="site-state-item-count">753</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">663</span>
+                                    <span class="site-state-item-count">668</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,11 +108,11 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/tags')"><a><i class="fas fa-tag fa-fw"></i>标签</a>
-                                <span class="articleCount">663
+                                <span class="articleCount">668
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">751
+                                <span class="articleCount">753
                                 </span>
                             </li>
                             <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -145,7 +145,7 @@
                             
                             <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                                 <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">26
+                                <a name="个人博客" style="" class="articleCount">28
                                 </a>
                             </li>
                             
@@ -280,7 +280,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >751</p>
+                                    <p >753</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -294,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3477天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3479天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-02-28 20:12:36 +0800">2025/02/28</p>
+                                    <p id="current-date" data-value="2025-03-02 21:10:39 +0800">2025/03/02</p>
                                 </li>
                             </ul>
                     </div>
@@ -329,7 +329,7 @@
 </style>
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">博客新添的宝藏小功能</h1>
+        <h1 class="post-title">节日倒计时与时间进度条</h1>
         <div class="info">
             时间：
             <text style="padding-top: 0;">2024-12-21</text>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -347,15 +347,15 @@
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#彩带" target="_blank">彩带</a>
+                <a class="pjaxlink" href="/tags#时间" target="_blank">时间</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#樱花" target="_blank">樱花</a>
+                <a class="pjaxlink" href="/tags#进度条" target="_blank">进度条</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#灯笼" target="_blank">灯笼</a>
+                <a class="pjaxlink" href="/tags#博客侧栏" target="_blank">博客侧栏</a>
                 /
                 
                 
@@ -367,8 +367,7 @@
         </div>
     </header>
     <article class="post-content">
-        <h3 id="1-侧栏倒计时">1. 侧栏倒计时</h3>
-<p>不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。</p>
+        <p>不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。</p>
 
 <p><strong>效果</strong>  <br />
 <img src="https://img.gorpeln.top/blog/20241221151857321.png!gorpeln" alt="20241221151857321" /></p>
@@ -741,95 +740,6 @@
     opacity: 0;
 }
 </code></pre></div></div>
-<h3 id="2-彩带樱花背景">2. 彩带、樱花背景</h3>
-<p><strong>效果</strong>   <br />
-<img src="https://img.gorpeln.top/blog/20241221151857322.png!gorpeln" alt="20241221151857322" /></p>
-
-<p><strong>方法</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--  樱花背景 --&gt;
-&lt;script type="text/javascript" src="/assets/js/sakura.js"&gt;&lt;/script&gt;
-&lt;!--  丝带背景 --&gt;
-&lt;script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"&gt;&lt;/script&gt;
-</code></pre></div></div>
-<blockquote>
-  <p>注意：将文件下载到自己博客使用  <br />
-https://gorpeln.top/assets/js/sakura.js  <br />
-https://gorpeln.top/assets/js/ribbon.min.js</p>
-</blockquote>
-
-<h3 id="3-春节灯笼">3. 春节灯笼</h3>
-<p><strong>效果</strong>   <br />
-<img src="https://img.gorpeln.top/blog/20241221151857323.png!gorpeln" alt="20241221151857323" />
-<strong>方法</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" type="text/css" href="../assets/css/deng.css"&gt;
-</code></pre></div></div>
-<blockquote>
-  <p>注意：将文件下载到自己博客使用  <br />
-https://gorpeln.top/assets/css/deng.css</p>
-</blockquote>
-
-<p>html代码</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- 春节灯笼 --&gt;
-&lt;div style="display:none;" id="lanterns"&gt;
-    &lt;div class="deng-box"&gt;
-        &lt;div class="deng"&gt;
-            &lt;div class="xian"&gt;&lt;/div&gt;
-            &lt;div class="deng-a"&gt;
-                &lt;div class="deng-b"&gt;
-                    &lt;div class="deng-t"&gt;快乐&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="shui shui-a"&gt;
-                &lt;div class="shui-c"&gt;&lt;/div&gt;
-                &lt;div class="shui-b"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="deng-box1"&gt;
-        &lt;div class="deng"&gt;
-            &lt;div class="xian"&gt;&lt;/div&gt;
-            &lt;div class="deng-a"&gt;
-                &lt;div class="deng-b"&gt;
-                    &lt;div class="deng-t"&gt;新春&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="shui shui-a"&gt;
-                &lt;div class="shui-c"&gt;&lt;/div&gt;
-                &lt;div class="shui-b"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- 春节灯笼 --&gt;
-&lt;script&gt;
-document.addEventListener("DOMContentLoaded", function() {
-    // 获取当前日期
-    var currentDate = new Date();
-    
-    // 定义开始日期和结束日期
-    var startDate = new Date('2025-01-22');//腊月廿三
-    var endDate = new Date('2025-02-12');//正月十五
-
-    // 获取 div 元素
-    var specialDiv = document.getElementById('lanterns');
-
-    // 检查当前日期是否在指定的日期范围内
-    if (currentDate &gt;= startDate &amp;&amp; currentDate &lt;= endDate) {
-        // 如果在范围内，则显示 div
-        specialDiv.style.display = 'block';
-    } else {
-        // 否则，隐藏 div
-        specialDiv.style.display = 'none';
-    }
-});
-&lt;/script&gt;
-</code></pre></div></div>
-
-<h3 id="4-其他">4、 其他</h3>
-<ol>
-  <li>点击 RSS ，会有猫叫声</li>
-  <li>头像的闪动光效</li>
-</ol>
 
 
         
@@ -849,6 +759,10 @@ document.addEventListener("DOMContentLoaded", function() {
         <span class="custom-font">上一篇 ：</span><a href="/article/17310530239" title="友链自动监测" class="custom-font" target="_blank">友链自动监测</a>
     </div>
     
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/17347663476" title="彩带、樱花背景" class="custom-font" target="_blank">彩带、樱花背景</a>
+    </div>
     
 </div>
 <div class="livere">
@@ -908,6 +822,8 @@ document.addEventListener("DOMContentLoaded", function() {
             copyright: true, // 是否显示页脚版权信息
             login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
             locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
         });
 
 
@@ -1176,7 +1092,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.45</span>
+            <span>4.1.46</span>
         </div>
     </div>
 </footer>
@@ -1253,6 +1169,7 @@ function clickHandler() {
     window.location.href = '/article/15462756619';
 }
 </script>
+<!-- 控制台输出 -->
 <script>
 var HoldLog = console.log;
 console.log = function() {};
@@ -1267,7 +1184,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.45", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.46", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1281,6 +1198,7 @@ queueMicrotask(() => {
     setTimeout(console.warn.bind(console, "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...", "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;", ""));
 });
 </script>
+<!-- 网站分析 -->
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];
@@ -1318,10 +1236,18 @@ var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(el, s);
 })(window)
 </script>
+<!-- 防镜像 -->
 
 <script>
    function _0xc9fd(){var _0x3d2991=['50jGMMZM','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','body','pointerEvents','left','flex','transparent','div','5FHdLoq','center','display','d3d3LmdvcnBlbG4udG9w','YmxvZy4yMDIwOTAueHl6','location','whiteSpace','MTI3LjAuMC4xOjQwMDA=','fade-out','-5%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','344561jxFMmT','port','rotate(-30deg)','543918qGggNE','alert-message','5276623LOkjPi','parentNode','9yWbZrO','30px','6pDDWhy','110%','591100FNHdtY','createElement','classList','width','appendChild','nowrap','removeChild','wrap','cloneNode','replace','11181WAtrgw','overflow','730408FPdjNO','9999','justifyContent','0.1','className','includes','top','Z29ycGVsbi50b3A=','position','190832JwJWWj','style','100%','none','innerText','black','background'];_0xc9fd=function(){return _0x3d2991;};return _0xc9fd();}function _0x42f1(_0x4447fa,_0x2c7b30){var _0xc9fd71=_0xc9fd();return _0x42f1=function(_0x42f174,_0x2b35b8){_0x42f174=_0x42f174-0x14b;var _0x41f217=_0xc9fd71[_0x42f174];return _0x41f217;},_0x42f1(_0x4447fa,_0x2c7b30);}(function(_0x500ebb,_0x50650){var _0x5735d6=_0x42f1,_0x17e190=_0x500ebb();while(!![]){try{var _0x3deb7e=parseInt(_0x5735d6(0x161))/0x1*(-parseInt(_0x5735d6(0x173))/0x2)+-parseInt(_0x5735d6(0x14f))/0x3+parseInt(_0x5735d6(0x16c))/0x4*(-parseInt(_0x5735d6(0x17b))/0x5)+parseInt(_0x5735d6(0x155))/0x6*(parseInt(_0x5735d6(0x14c))/0x7)+parseInt(_0x5735d6(0x163))/0x8+parseInt(_0x5735d6(0x153))/0x9*(parseInt(_0x5735d6(0x157))/0xa)+parseInt(_0x5735d6(0x151))/0xb;if(_0x3deb7e===_0x50650)break;else _0x17e190['push'](_0x17e190['shift']());}catch(_0x553e0f){_0x17e190['push'](_0x17e190['shift']());}}}(_0xc9fd,0x29b24),(function(){var _0x1f3646=_0x42f1,_0x1b394d=[_0x1f3646(0x16a),_0x1f3646(0x17e),_0x1f3646(0x182),_0x1f3646(0x17f)],_0x3eafee=_0x1f3646(0x14b),_0x44859d=document[_0x1f3646(0x180)]['hostname']+(document[_0x1f3646(0x180)][_0x1f3646(0x14d)]?':'+document[_0x1f3646(0x180)][_0x1f3646(0x14d)]:'');function _0x460230(_0x422c98){var _0x269094=_0x1f3646,_0x2947f3=document[_0x269094(0x158)](_0x269094(0x17a));_0x2947f3[_0x269094(0x16d)][_0x269094(0x176)]=_0x269094(0x16f),_0x2947f3[_0x269094(0x16d)][_0x269094(0x16b)]='fixed',_0x2947f3[_0x269094(0x16d)][_0x269094(0x169)]='0',_0x2947f3[_0x269094(0x16d)][_0x269094(0x177)]=_0x269094(0x184),_0x2947f3[_0x269094(0x16d)][_0x269094(0x15a)]=_0x269094(0x156),_0x2947f3[_0x269094(0x16d)]['height']=_0x269094(0x16e),_0x2947f3['style']['zIndex']=_0x269094(0x164),_0x2947f3[_0x269094(0x16d)]['opacity']=_0x269094(0x166),_0x2947f3[_0x269094(0x16d)][_0x269094(0x172)]=_0x269094(0x179),_0x2947f3[_0x269094(0x16d)][_0x269094(0x162)]='hidden',_0x2947f3[_0x269094(0x16d)][_0x269094(0x17d)]=_0x269094(0x178),_0x2947f3[_0x269094(0x16d)][_0x269094(0x165)]=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['alignItems']=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['flexWrap']=_0x269094(0x15e);var _0x13d91f=document[_0x269094(0x158)](_0x269094(0x17a));_0x13d91f[_0x269094(0x170)]=_0x422c98,_0x13d91f[_0x269094(0x16d)]['color']=_0x269094(0x171),_0x13d91f[_0x269094(0x16d)]['fontSize']=_0x269094(0x154),_0x13d91f[_0x269094(0x16d)]['transform']=_0x269094(0x14e),_0x13d91f['style'][_0x269094(0x181)]=_0x269094(0x15c),_0x13d91f[_0x269094(0x16d)]['margin']='80px';for(var _0x5f9f5b=0x0;_0x5f9f5b<0x64;_0x5f9f5b++){_0x2947f3[_0x269094(0x15b)](_0x13d91f[_0x269094(0x15f)](!![]));}document['body'][_0x269094(0x15b)](_0x2947f3);}function _0x344112(_0x368c57){var _0x295f4f=_0x1f3646,_0x3df2d9=document[_0x295f4f(0x158)]('div');_0x3df2d9[_0x295f4f(0x167)]=_0x295f4f(0x150),_0x3df2d9[_0x295f4f(0x170)]=_0x368c57,document[_0x295f4f(0x175)][_0x295f4f(0x15b)](_0x3df2d9),setTimeout(function(){var _0x432788=_0x295f4f;_0x3df2d9[_0x432788(0x159)]['add'](_0x432788(0x183)),setTimeout(function(){var _0x67fe25=_0x432788;_0x3df2d9[_0x67fe25(0x152)]&&_0x3df2d9[_0x67fe25(0x152)][_0x67fe25(0x15d)](_0x3df2d9);},0xc8);},0xbb8),setTimeout(function(){var _0x55060f=_0x295f4f;window[_0x55060f(0x180)][_0x55060f(0x160)](atob(_0x3eafee));},0x1388);}!_0x1b394d[_0x1f3646(0x168)](btoa(_0x44859d))&&(_0x460230(atob(_0x1b394d[0x0])),_0x344112(_0x1f3646(0x174)));}()));
 </script>
+
+
+
+
+
+
+
 </body>
 <!-- li添加跳转 -->
 <script>
@@ -1437,7 +1363,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 192 + '天';
+  element.innerHTML = 9 + '年' + 194 + '天';
 
 }
 
@@ -1446,7 +1372,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3477 + '天';
+    element.innerHTML = 3479 + '天';
 }
 </script>
 
