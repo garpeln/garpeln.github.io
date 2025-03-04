@@ -720,6 +720,7 @@
         https://gorpeln.top/help/blog/declaration
         https://gorpeln.top/help/blog/privacy
         https://gorpeln.top/links
+        https://gorpeln.top/mynav
         https://gorpeln.top/mysite
         https://gorpeln.top/nav
         https://gorpeln.top/notes

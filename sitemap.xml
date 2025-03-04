@@ -2885,6 +2885,10 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/mynav</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/mysite</loc>
                 <priority>1.0</priority>
             </url>
