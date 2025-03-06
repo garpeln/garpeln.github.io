@@ -866,7 +866,7 @@ if __name__ == &quot;__main__&quot;:
 
 &lt;div id=&quot;blog-problem&quot;&gt;
     &lt;p id=&quot;blog-problem-title&quot;&gt;评论加载不出来？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;博客已开启CDN，整体访问速度较快。&lt;br /&gt;但博客评论、公告、实验室等功能采用不同域名访问，可能存在无法访问的情况。&lt;br /&gt;如果可能，请科学上网，或者多次刷新加载（5-6次），就可以正常展示&lt;/p&gt;
+    &lt;p id=&quot;blog-problem-des&quot;&gt;博客已开启CDN，整体访问速度较快。&lt;br /&gt;但博客评论、公告、实验室等功能采用不同域名访问，可能存在无法访问的情况。&lt;br /&gt;如果可以，请科学上网，或者多次刷新加载（5-6次），就可以正常展示&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;blog-problem&quot;&gt;
