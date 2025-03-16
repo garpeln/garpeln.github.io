@@ -201,7 +201,6 @@ body {
     overflow-y: hidden;
     border: 0xp none #f9f9f9;
     position: absolute;
-    bottom: 0;
     right: 0;
     height:240px;
 }
