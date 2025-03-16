@@ -115,7 +115,7 @@
                                 <span class="articleCount">753
                                 </span>
                             </li>
-                            <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+                            <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
                             <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
                                 <span class="articleCount">4
                                 </span>
@@ -284,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>173.6k</p> 
+                                    <p>172.3k</p> 
 
                                 </li>
                                 <li>
@@ -294,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3488天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3493天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-11 11:11:34 +0800">2025/03/11</p>
+                                    <p id="current-date" data-value="2025-03-16 17:04:38 +0800">2025/03/16</p>
                                 </li>
                             </ul>
                     </div>
@@ -1859,7 +1859,8 @@ onShareAppMessage: function () {
         title: '正在生成中...',
         icon: 'none'
       })
-      var ...</div>
+      var index = 0; //计数循环
+  ...</div>
                             
                         
         </div>
@@ -1921,7 +1922,8 @@ onShareAppMessage: function () {
 
 
 3.相关概念
-稳定：如果a原本在b前面，而a=b，...</div>
+稳定：如果a原本在b前面，而a=b，排序之后a仍然在b的前面。
+不稳定：如果...</div>
                             
                         
         </div>
@@ -1989,7 +1991,7 @@ GPAPIManager.h
 
 
 #if HOST_TYPE == 0
-#define kIsProductio...</div>
+#define kIsProduction       @"0" // 0 开发...</div>
                             
                         
         </div>
@@ -2045,7 +2047,7 @@ GPAPIManager.h
 
 主轴与交叉轴
 在介绍各个属性之前，需要先明确一个坐标轴
-水平方向的是主轴（mai...</div>
+水平方向的是主轴（main axis），垂直方向的是交叉轴（cr...</div>
                             
                         
         </div>
@@ -2096,7 +2098,7 @@ GPAPIManager.h
                             <div class="contentAbstract">一、背景
 随着各业务流量红利逐渐见顶，如何在有限的流量下，提升流量给用户带来的体验，对流量进行精细化运营，进而提升转化效率，成为各业务的重要课题。
 
-蚂蚁数字金融线包含了 保险/理财/信用/借贷 等业务，经过多年建设，形成了多样的金融资产/场景服务/权益/内容等多维度的产品去服务用户，而这些产品分发给用户时，决定曝转率的大体上以产品推荐是否精准，以及产品以什么样的UI表述方式进行展示决定。在...</div>
+蚂蚁数字金融线包含了 保险/理财/信用/借贷 等业务，经过多年建设，形成了多样的金融资产/场景服务/权益/内容等多维度的产品去服务用户，而这些产品分发给用户时，决定曝转率的大体上以产品推荐是否精准，以及产品以什么样的UI表述方式进行展示决定。在产品推荐上，算法已经逐步覆盖，给业务带来...</div>
                             
                         
         </div>
@@ -2156,7 +2158,11 @@ GPAPIManager.h
 最近看到很多应用都采用了一种新的模式—本机号码一键登录 ，这种模式对于用户来说，只需要确认下手机号码是否正确，点击确认登陆即可，即需要操作传统模式的最后一步，方便快捷，抖音、淘宝等应用均已经接入。
 
 
-那么本机号码一键登录的原理是什么呢？下面我们...</div>
+那么本机号码一键登录的原理是什么呢？下面我们来聊一聊。
+
+二、实现原理
+
+目前三大运...</div>
                             
                         
         </div>
@@ -2211,7 +2217,8 @@ GPAPIManager.h
 
 
 
-...</div>
+
+五年前，从最初使用开放模板搭建博客开始...</div>
                             
                         
         </div>
@@ -2267,7 +2274,7 @@ GPAPIManager.h
 
 2. 安全性与便捷性的妥协
 
-现在人几乎人手一台...</div>
+现在人几乎人手一台手机，甚至还有人有两台手机或者三台手机。...</div>
                             
                         
         </div>
@@ -2320,7 +2327,10 @@ GPAPIManager.h
 顾名思义，开发同学开发时使用的环境，每位开发同学在自己的dev分支上干活，提测前或者开发到一定程度，各位同学会合并代码，进行联调。
 
 2、测试环境
-也就是我们测试同学干活的环境啦，一般会由测试同学自己来部署，然后在此环境进行测试。bug修复后，需要发版更新测试环境来回归bug。...</div>
+也就是我们测试同学干活的环境啦，一般会由测试同学自己来部署，然后在此环境进行测试。bug修复后，需要发版更新测试环境来回归bug。
+
+3、回归环境
+回归bug的环境，其实...</div>
                             
                         
         </div>
@@ -2390,7 +2400,7 @@ GPAPIManager.h
 前段时间看了几个开源项目，发现他们保持线程同步的方式各不相同，有@synchronized、NSLock、dispatch_semaphore、NSCondition、pthread_mutex、OSSpinLock。后来网上查了一下，发现他们的实现机制各不相同，性能也各不一样。下面我们先分别介绍每个加锁方式的使用，在使用一个案例来对他们进行性能对比。
 
 二、非线程安全
-举例说明：...</div>
+举例说明：两个火车票销售窗口 共同销售车站总共的5...</div>
                             
                         
         </div>
@@ -2851,7 +2861,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.49</span>
+            <span>4.1.50</span>
         </div>
     </div>
 </footer>
@@ -2943,7 +2953,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.49", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.50", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -3122,7 +3132,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 203 + '天';
+  element.innerHTML = 9 + '年' + 208 + '天';
 
 }
 
@@ -3131,7 +3141,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3488 + '天';
+    element.innerHTML = 3493 + '天';
 }
 </script>
 

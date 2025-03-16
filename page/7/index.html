@@ -115,7 +115,7 @@
                                 <span class="articleCount">753
                                 </span>
                             </li>
-                            <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+                            <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
                             <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
                                 <span class="articleCount">4
                                 </span>
@@ -284,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>173.6k</p> 
+                                    <p>172.3k</p> 
 
                                 </li>
                                 <li>
@@ -294,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3488天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3493天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-11 11:11:34 +0800">2025/03/11</p>
+                                    <p id="current-date" data-value="2025-03-16 17:04:38 +0800">2025/03/16</p>
                                 </li>
                             </ul>
                     </div>
@@ -1856,7 +1856,10 @@
                             <div class="contentAbstract">1. NSOperation、NSOperationQueue 简介
 NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决方案。实际上 NSOperation、NSOperationQueue 是基于 GCD 更高一层的封装，完全面向对象。但是比 GCD 更简单易用、代码可读性也更高。
 
-为什么要使用 NSOperation、NSOperationQue...</div>
+为什么要使用 NSOperation、NSOperationQueue？
+
+
+  可添加完成的代码块，在操...</div>
                             
                         
         </div>
@@ -1916,7 +1919,7 @@ dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY
 dispatch_async(globalQueue, ^{
     // 一个异步的任务，例如网络请求，耗时的文件操作等等
     ...
-    dispatch_a...</div>
+    dispatch_async(dispatch_get_ma...</div>
                             
                         
         </div>
@@ -1967,7 +1970,7 @@ dispatch_async(globalQueue, ^{
                             <div class="contentAbstract">什么是CGD呢？以下摘自苹果的官方说明。
 
   Grand Central Dispatch (GCD) 是异步执行任务的技术之一。应用程序中记述的线程管理用的代码是在系统级中实现的。开发者只需要定义想要执行的任务并追加到适当的Dispatch Queue中，GCD就能生成必要的线程并执行任务。
-  也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD...</div>
+  也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD...</div>
                             
                         
         </div>
@@ -2023,7 +2026,7 @@ dispatch_async(globalQueue, ^{
 
 
 // 1. 创建线程
-NSThread *thread = [[NSThr...</div>
+NSThread *thread = [[NSThread alloc] initWithT...</div>
                             
                         
         </div>
@@ -2079,7 +2082,7 @@ NSThread *thread = [[NSThr...</div>
 二、 线程
 
   程序执行流的最小单元，线程是进程中的一个实体.
- ...</div>
+  一个进程要想执行任务，必须至少有一条线...</div>
                             
                         
         </div>
@@ -2133,7 +2136,7 @@ NSThread *thread = [[NSThr...</div>
 
 
 
-2016年的暑假，为了给家里省钱，我决定放弃考研，投入求职大军。我的小理想，是成为一个内容创作者，但海投了上百份简历，最终只收到一个面试邀请。那天夜里，我...</div>
+2016年的暑假，为了给家里省钱，我决定放弃考研，投入求职大军。我的小理想，是成为一个内容创作者，但海投了上百份简历，最终只收到一个面试邀请。那天夜里，我急忙从村里坐火车赶往北京面试，意外顺利地...</div>
                             
                         
         </div>
@@ -2190,7 +2193,7 @@ NSThread *thread = [[NSThr...</div>
                             <div class="contentAbstract">一、明确优惠券活动的目的及意义
 　　优惠券随处可见，基本你知道的行业，都有优惠券的存在，通过发放优惠券，让用户在下单的时候抵扣一定的费用，达到促销的目的。优惠券另一个用处就是合理的提高客单价，从而提高产品的销售利润。
 
-　　但很多人都不把优惠券当回事，觉得发出去没多少人会使用。但凡抱着这种想法的人，都不是好运营，首先要明白优惠券并不是交易工具，而是一种运营策略。对活动来说，优惠券是订单转化和...</div>
+　　但很多人都不把优惠券当回事，觉得发出去没多少人会使用。但凡抱着这种想法的人，都不是好运营，首先要明白优惠券并不是交易工具，而是一种运营策略。对活动来说，优惠券是订单转化和拉升客单价的有力工具对品牌来说，优惠券是...</div>
                             
                         
         </div>
@@ -2257,7 +2260,9 @@ NSThread *thread = [[NSThr...</div>
   
 
 
-二...</div>
+二、影响ASO的主要因素
+
+  应用名称；...</div>
                             
                         
         </div>
@@ -2310,7 +2315,7 @@ NSThread *thread = [[NSThr...</div>
 
 
   Schema： 常用在于一个应用跳转到另一个应用内部，属于应用间的跳转。当然ios9以下，网页可以通过schema://跳转到App内部。但是这种方式跳转比较生硬，在每次跳转的时候都会弹框询问。如果iPhone中如果没有安装则会直接弹出错误提示。
-  Universal Links（通用链接）： ...</div>
+  Universal Links（通用链接）： 常用于https链接来打开APP（手机中...</div>
                             
                         
         </div>
@@ -2364,7 +2369,8 @@ https://www.becmd.com/
 http://www.z-sms.com/
 https://www.yinsiduanxin.com/
 https://www.materialtools.com/
-http...</div>
+https://yunduanxin.net/
+...</div>
                             
                         
         </div>
@@ -2825,7 +2831,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.49</span>
+            <span>4.1.50</span>
         </div>
     </div>
 </footer>
@@ -2917,7 +2923,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.49", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.50", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -3096,7 +3102,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 203 + '天';
+  element.innerHTML = 9 + '年' + 208 + '天';
 
 }
 
@@ -3105,7 +3111,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3488 + '天';
+    element.innerHTML = 3493 + '天';
 }
 </script>
 

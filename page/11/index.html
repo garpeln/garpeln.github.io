@@ -115,7 +115,7 @@
                                 <span class="articleCount">753
                                 </span>
                             </li>
-                            <li onclick="pushNew('/mysite')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+                            <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
                             <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
                                 <span class="articleCount">4
                                 </span>
@@ -284,7 +284,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>173.6k</p> 
+                                    <p>172.3k</p> 
 
                                 </li>
                                 <li>
@@ -294,11 +294,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3488天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3493天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-11 11:11:34 +0800">2025/03/11</p>
+                                    <p id="current-date" data-value="2025-03-16 17:04:38 +0800">2025/03/16</p>
                                 </li>
                             </ul>
                     </div>
@@ -1861,6 +1861,11 @@
 
 
 
+    2025-03-16
+    分离 全站导航
+
+
+
     2025-01-18
     代码层级整体优化 4.0
 
@@ -1886,7 +1891,7 @@
 
 
 
-    2024-04-06...</div>
+    ...</div>
                             
                         
         </div>
@@ -1991,7 +1996,7 @@
 
 首先，先分享一下为什么要选择 WePY ？
 
-在项目开始进行选型的时候，我可选的底层框架有 WePy、MPVue、Taro、`MinUI，这些框架都是工程化做得很好的框架，可以帮助小程序项目长期进行维护。其中，Taro 因为采用的是我所不熟悉的 React ，所以从一开始就被排除。MPVue 我看了以后，它更多是给 Web 开发者提供小程序转化工具，而不是给小程序开发...</div>
+在项目开始进行选型的时候，我可选的底层框架有 WePy、MPVue、Taro、`MinUI，这些框架都是工程化做得很好的框架，可以帮助小程序项目长期进行维护。其中，Taro 因为采用的是我所不熟悉的 React ，所以从一开始就被排除。MPVue 我看了以后，它更多是给 Web 开发者提供小程序转化工具，而不是给小程序开发者提供类 Vue 工具，所以，也被我排除...</div>
                             
                         
         </div>
@@ -2041,7 +2046,7 @@
                              
                             <div class="contentAbstract">1、可爱的病毒
 
-我以前中过一个病毒，在我电脑桌面左侧会多了一个可爱的卡通妹子，在那里吃饭睡觉玩耍，她肚子饿了就去吃掉最靠近她的图标，所以我每天都要准备一堆复制出来的快捷方式让她吃。她有时候无聊的时候会抖动你的屏幕，你如果不哄她玩，她就一直抖你的窗口。最气人的是，如果你玩电脑太晚了，她就会自动关机。看小字好像是说不要吵她睡觉……… 这玩意任务管理器上是看不到的，杀毒很多次了都没用，开机启动项...</div>
+我以前中过一个病毒，在我电脑桌面左侧会多了一个可爱的卡通妹子，在那里吃饭睡觉玩耍，她肚子饿了就去吃掉最靠近她的图标，所以我每天都要准备一堆复制出来的快捷方式让她吃。她有时候无聊的时候会抖动你的屏幕，你如果不哄她玩，她就一直抖你的窗口。最气人的是，如果你玩电脑太晚了，她就会自动关机。看小字好像是说不要吵她睡觉……… 这玩意任务管理器上是看不到的，杀毒很多次了都没用，开机启动项目也发现不了。所以一直就让她闹腾下去了。...</div>
                             
                         
         </div>
@@ -2103,7 +2108,7 @@
 参数说明：
 
   Application name： 应用名称，随意 
-Homepage ...</div>
+Homepage URL： 网站URL，对应自己博客地址 ...</div>
                             
                         
         </div>
@@ -2163,7 +2168,7 @@ Homepage ...</div>
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	...</div>
+	url = https://Gorpel...</div>
                             
                         
         </div>
@@ -2219,7 +2224,9 @@ Homepage ...</div>
 # 对每一个分支/标签，只拉取其最新的 3 层提交
 git clone --depth 3
 
-优...</div>
+优点：不变更历史
+
+缺点：将一个现有的 f...</div>
                             
                         
         </div>
@@ -2279,7 +2286,8 @@ git log --pretty=oneline
 
 假设查到历史版本的id是 ： 662095637a8e9320e83761341e594b143524049e
 
-2....</div>
+2. 恢复到历史版本
+git reset -...</div>
                             
                         
         </div>
@@ -2333,7 +2341,7 @@ git log --pretty=oneline
 
 正常 A -&gt; B -&gt; C 都是通过 wx.navigateTo 跳转的，所以 wx.navigateBack 只能返回上一界面，如果要返回到A 界面就会出现 C -&gt; B -&gt; A 的效果。
 
-如果想实现 A -&gt; B -&gt; C 当 C 点击返回时， 实现直接 C -&gt;...</div>
+如果想实现 A -&gt; B -&gt; C 当 C 点击返回时， 实现直接 C -&gt; A 这种效果， 就只能A -&gt; ...</div>
                             
                         
         </div>
@@ -2385,7 +2393,7 @@ git log --pretty=oneline
 
 Automator 能做什么？
 1.重新指定一组照片的尺寸大小
-如果你有大量图片需要调整大小，比如调整为原来大小的一半，如果没有Automator，你可能会用Mac的Preview软件来一张...</div>
+如果你有大量图片需要调整大小，比如调整为原来大小的一半，如果没有Automator，你可能会用Mac的Preview软件来一张一张的去修改。但是现在学会了Automa...</div>
                             
                         
         </div>
@@ -2846,7 +2854,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.49</span>
+            <span>4.1.50</span>
         </div>
     </div>
 </footer>
@@ -2938,7 +2946,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.49", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.50", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -3117,7 +3125,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 203 + '天';
+  element.innerHTML = 9 + '年' + 208 + '天';
 
 }
 
@@ -3126,7 +3134,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3488 + '天';
+    element.innerHTML = 3493 + '天';
 }
 </script>
 
