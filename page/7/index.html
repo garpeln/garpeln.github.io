@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -730,7 +730,83 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15931534585" target="_blank">iOS多线程：线程安全 常见锁 (六)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2020-06-26</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#常见锁" target="_blank">常见锁</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">一、前言
+前段时间看了几个开源项目，发现他们保持线程同步的方式各不相同，有@synchronized、NSLock、dispatch_semaphore、NSCondition、pthread_mutex、OSSpinLock。后来网上查了一下，发现他们的实现机制各不相同，性能也各不一样。下面我们先分别介绍每个加锁方式的使用，在使用一个案例来对他们进行性能对比。
+
+二、非线程安全
+举例说明：两个火车票销售窗口 共同销售车站总共的50张车票。看代码你最明白。
+
+/**
+ * 非线程安全
+ *...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15931534585" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -773,7 +849,8 @@ NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决�
 为什么要使用 NSOperation、NSOperationQueue？
 
 
-  可添加完成的代码块，在操...</div>
+  可添加完成的代码块，在操作完成后执行。
+  添加操作之间的依赖关系，方便的控制执行顺...</div>
                             
                         
         </div>
@@ -833,7 +910,8 @@ dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY
 dispatch_async(globalQueue, ^{
     // 一个异步的任务，例如网络请求，耗时的文件操作等等
     ...
-    dispatch_async(dispatch_get_ma...</div>
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // UI刷新...</div>
                             
                         
         </div>
@@ -884,7 +962,10 @@ dispatch_async(globalQueue, ^{
                             <div class="contentAbstract">什么是CGD呢？以下摘自苹果的官方说明。
 
   Grand Central Dispatch (GCD) 是异步执行任务的技术之一。应用程序中记述的线程管理用的代码是在系统级中实现的。开发者只需要定义想要执行的任务并追加到适当的Dispatch Queue中，GCD就能生成必要的线程并执行任务。
-  也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD...</div>
+  也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD。
+
+1、 GCD的队列和任务
+GCD中有两个核心的概念：任...</div>
                             
                         
         </div>
@@ -940,7 +1021,7 @@ dispatch_async(globalQueue, ^{
 
 
 // 1. 创建线程
-NSThread *thread = [[NSThread alloc] initWithT...</div>
+NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...</div>
                             
                         
         </div>
@@ -996,7 +1077,7 @@ NSThread *thread = [[NSThread alloc] initWithT...</div>
 二、 线程
 
   程序执行流的最小单元，线程是进程中的一个实体.
-  一个进程要想执行任务，必须至少有一条线...</div>
+  一个进程要想执行任务，必须至少有一条线程。应用程序启动的时候，系统会默认开启一条线程，也就是主线程...</div>
                             
                         
         </div>
@@ -1050,7 +1131,7 @@ NSThread *thread = [[NSThread alloc] initWithT...</div>
 
 
 
-2016年的暑假，为了给家里省钱，我决定放弃考研，投入求职大军。我的小理想，是成为一个内容创作者，但海投了上百份简历，最终只收到一个面试邀请。那天夜里，我急忙从村里坐火车赶往北京面试，意外顺利地...</div>
+2016年的暑假，为了给家里省钱，我决定放弃考研，投入求职大军。我的小理想，是成为一个内容创作者，但海投了上百份简历，最终只收到一个面试邀请。那天夜里，我急忙从村里坐火车赶往北京面试，意外顺利地拿到了offer。那是国内一线艺人的工作室，坐落在国贸核心区...</div>
                             
                         
         </div>
@@ -1107,7 +1188,11 @@ NSThread *thread = [[NSThread alloc] initWithT...</div>
                             <div class="contentAbstract">一、明确优惠券活动的目的及意义
 　　优惠券随处可见，基本你知道的行业，都有优惠券的存在，通过发放优惠券，让用户在下单的时候抵扣一定的费用，达到促销的目的。优惠券另一个用处就是合理的提高客单价，从而提高产品的销售利润。
 
-　　但很多人都不把优惠券当回事，觉得发出去没多少人会使用。但凡抱着这种想法的人，都不是好运营，首先要明白优惠券并不是交易工具，而是一种运营策略。对活动来说，优惠券是订单转化和拉升客单价的有力工具对品牌来说，优惠券是...</div>
+　　但很多人都不把优惠券当回事，觉得发出去没多少人会使用。但凡抱着这种想法的人，都不是好运营，首先要明白优惠券并不是交易工具，而是一种运营策略。对活动来说，优惠券是订单转化和拉升客单价的有力工具对品牌来说，优惠券是用户维护乃至用户召回的重要手段。
+
+举个栗子来说：
+
+  假...</div>
                             
                         
         </div>
@@ -1176,7 +1261,11 @@ NSThread *thread = [[NSThread alloc] initWithT...</div>
 
 二、影响ASO的主要因素
 
-  应用名称；...</div>
+  应用名称；
+  关键字标签；
+  应用描述；
+  应用icon；
+  ...</div>
                             
                         
         </div>
@@ -1229,67 +1318,12 @@ NSThread *thread = [[NSThread alloc] initWithT...</div>
 
 
   Schema： 常用在于一个应用跳转到另一个应用内部，属于应用间的跳转。当然ios9以下，网页可以通过schema://跳转到App内部。但是这种方式跳转比较生硬，在每次跳转的时候都会弹框询问。如果iPhone中如果没有安装则会直接弹出错误提示。
-  Universal Links（通用链接）： 常用于https链接来打开APP（手机中...</div>
+  Universal Links（通用链接）： 常用于https链接来打开APP（手机中已经安装此APP），或者跳转到https链接（手机中没有安装...</div>
                             
                         
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15788283058" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15786589400" target="_blank">临时邮箱 和 短信接码平台</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2020-01-10</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
-                    其他
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#临时邮箱" target="_blank">临时邮箱</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#短信" target="_blank">短信</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#手机号" target="_blank">手机号</a>
-                             </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">临时邮箱
-
-https://temp-mail.org/zh/
-https://bccto.me/
-
-国内免费临时手机号
-
-https://www.pdflibr.com/
-https://www.becmd.com/
-http://www.z-sms.com/
-https://www.yinsiduanxin.com/
-https://www.materialtools.com/
-https://yunduanxin.net/
-...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15786589400" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1526,7 +1560,7 @@ document.addEventListener('keydown', function(event) {
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -1541,24 +1575,24 @@ document.addEventListener('keydown', function(event) {
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -1584,7 +1618,7 @@ document.addEventListener('keydown', function(event) {
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -1611,21 +1645,15 @@ document.addEventListener('keydown', function(event) {
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -1647,8 +1675,25 @@ document.addEventListener('keydown', function(event) {
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -1745,7 +1790,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -1837,7 +1882,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1913,6 +1958,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -2450,7 +2497,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -2459,7 +2506,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 

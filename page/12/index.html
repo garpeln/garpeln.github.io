@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -730,7 +730,61 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15385436862" target="_blank">Automator的使用 MAC</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2018-10-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                    MacOS
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#Automator" target="_blank">Automator</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#机器人" target="_blank">机器人</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#自动化" target="_blank">自动化</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">使用Mac的童鞋都会发现里面有个类似机器人的工具Automator，使用Automator创造出的工作流可能会花费一些时间需要你去创建和调试，但是却能在接下来的工作学习中节省你不少时间，十分物超所值。
+
+Automator 能做什么？
+1.重新指定一组照片的尺寸大小
+如果你有大量图片需要调整大小，比如调整为原来大小的一半，如果没有Automator，你可能会用Mac的Preview软件来一张一张的去修改。但是现在学会了Automator，就让这个小机器人来大幅度节省你的时间吧，让它来自动的...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15385436862" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -780,7 +834,13 @@
     "openapi": [
       "wxacode.getUnlimited"
     ]
-  ...</div>
+  }
+}
+
+二、编写云函数
+
+//index.js
+// 云调...</div>
                             
                         
         </div>
@@ -838,7 +898,9 @@
 307—临时跳转。被请求的资源在临时从不同的URL响应请求；  
 400—错误请求；  
 402—需要付款。该状态码是为了将来可能的需求而预留的，用于一些数字货币或者是微支付；  
-403—禁止访问。服务器已经理解请求，但是拒绝执行...</div>
+403—禁止访问。服务器已经理解请求，但是拒绝执行它；  
+404—找不到对象。请求失败，资源不存在；  
+4...</div>
                             
                         
         </div>
@@ -895,7 +957,8 @@ zip -e yourZipFileName.zip yourSourceFile
 2. 压缩文件夹
 zip -e -r yourZipFileName.zip yourSourceFileDir
 
-3. 一行行...</div>
+3. 一行行命令搞定
+zip -r -P yourPassword yo...</div>
                             
                         
         </div>
@@ -961,7 +1024,8 @@ zip -e -r yourZipFileName.zip yourSourceFileDir
   常见问题汇总
 
 
-...</div>
+1、代码上传Github
+首先我们打开github.com，...</div>
                             
                         
         </div>
@@ -1021,7 +1085,8 @@ zip -e -r yourZipFileName.zip yourSourceFileDir
 #import "Student.h"
 @implementation Student
 // 改变成员变量的值
-- (void)c...</div>
+- (void)changeScore:(NSInteger)score{
+ ...</div>
                             
                         
         </div>
@@ -1079,7 +1144,7 @@ KVO全称Key-Value Observing，是苹果提供的一套事件通知机制。
 
   （1）注册Observer；   
 （2）接收通知。  
-（3）当观察者不需要监听时，可以调用removeObserver:for...</div>
+（3）当观察者不需要监听时，可以调用removeObserver:forKeyPath:方法将KVO移除。建议在dealloc方法里...</div>
                             
                         
         </div>
@@ -1181,7 +1246,7 @@ sh ./shutdown.sh
 
 前一段时间，时常有一个读者问我在吗，看见留言时过去了十分钟，我回复说在的，五分钟后她回复在干吗？，我问有什么事？，过了几分钟她又说没事，随便聊聊。
 
-让人愉悦的聊天或者说会聊天...</div>
+让人愉悦的聊天或者说会聊天，不一定你得幽默风趣，通晓各种典故轶事，有啥说啥，别抛下在吗...</div>
                             
                         
         </div>
@@ -1239,69 +1304,12 @@ TCP通讯是需要三次握手的，就神似这张截图，确保对方在线�
 
 如图TCP有三次握手 相当于客户端问服务器 你在吗？ 服务器告诉客户端 在的，什么事？ 客户端才把事情告诉服务端。
 
-而UDP通讯不一样，UDP通讯只需要知道对方的端口和地址，不管对方在线与否，直接发送出去。所...</div>
+而UDP通讯不一样，UDP通讯只需要知道对方的端口和地址，不管对方在线与否，直接发送出去。所以TCP稳定性较高，但效率低，而UDP通讯相反，效率较高，但...</div>
                             
                         
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15288536422" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15261978139" target="_blank">编程十里，不如你</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2018-05-13</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
-                    程序人生
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#程序人生" target="_blank">程序人生</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#开心一刻" target="_blank">开心一刻</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#段子" target="_blank">段子</a>
-                            
-                    
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">遥记七载前尘里，朝朝起舞在闻鸡。  
-寒窗苦读五千日，无谓旰食又宵衣。
-常叹双亲辛劳苦，学富五车累何惜。 
-命途波澜起二度，百万同台争高低。
-汗流浃背心忐忑，唯恐临考遇宕机。 
-有幸求学进江理，辞别湖广入江西。
-军训完毕见教授，始信至此上大一。
-
-初识编程坠云雾，雾里看花亦着迷。
-程序惊艳贪吃蛇，项目驱动五子棋。 
-白日尽归实验室，夜来关门入微机。
-三周入门C语言，月旬画虎会画皮。 
-西校沉沦度一年，入驻本部未偷闲。
-听过网络基础...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15261978139" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1538,7 +1546,7 @@ document.addEventListener('keydown', function(event) {
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -1553,24 +1561,24 @@ document.addEventListener('keydown', function(event) {
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -1596,7 +1604,7 @@ document.addEventListener('keydown', function(event) {
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -1623,21 +1631,15 @@ document.addEventListener('keydown', function(event) {
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -1659,8 +1661,25 @@ document.addEventListener('keydown', function(event) {
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -1757,7 +1776,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -1849,7 +1868,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1925,6 +1944,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -2462,7 +2483,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -2471,7 +2492,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 

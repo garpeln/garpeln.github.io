@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -564,7 +564,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -579,24 +579,24 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -622,7 +622,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -649,21 +649,15 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -685,8 +679,25 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -783,7 +794,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -875,7 +886,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -951,6 +962,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -1488,7 +1501,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -1497,7 +1510,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 

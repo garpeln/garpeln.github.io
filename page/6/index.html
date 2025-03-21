@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -730,7 +730,59 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16131808742" target="_blank">JS与OC交互</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2021-02-13</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#UIWebView" target="_blank">UIWebView</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#WKWebView" target="_blank">WKWebView</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#WebViewJavascriptBridge" target="_blank">WebViewJavascriptBridge</a>
+                            
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">1、UIWebView JS 与 OC 交互
+UIWebView 在 iOS12 中已经被废弃，同时WKWebView在iOS8中已经出现。所以无特殊情况的话，我们一般应该也是用不到前者了！
+UIWebView 相比于 WKWebView 的使用上会简单很多。
+
+UIWebView 初始化：
+-(void)loadUIWebViewWithName:(NSString *)name{
+    self.webView = [[UIWebView alloc] initWithFrame:s...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16131808742" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -774,7 +826,7 @@ onShareAppMessage: function () {
         icon: 'none'
       })
       var index = 0; //计数循环
-  ...</div>
+      var recursiveFunc = functi...</div>
                             
                         
         </div>
@@ -837,7 +889,7 @@ onShareAppMessage: function () {
 
 3.相关概念
 稳定：如果a原本在b前面，而a=b，排序之后a仍然在b的前面。
-不稳定：如果...</div>
+不稳定：如果a原本在b的前面，而a=b，排序之后 a 可能会出现在 b ...</div>
                             
                         
         </div>
@@ -905,7 +957,9 @@ GPAPIManager.h
 
 
 #if HOST_TYPE == 0
-#define kIsProduction       @"0" // 0 开发...</div>
+#define kIsProduction       @"0" // 0 开发环境 1生产环境 可以用于极光推送等
+
+#elif HOST...</div>
                             
                         
         </div>
@@ -961,7 +1015,10 @@ GPAPIManager.h
 
 主轴与交叉轴
 在介绍各个属性之前，需要先明确一个坐标轴
-水平方向的是主轴（main axis），垂直方向的是交叉轴（cr...</div>
+水平方向的是主轴（main axis），垂直方向的是交叉轴（cross axis）。下图为默认情况下。
+
+
+项目是在主轴上排...</div>
                             
                         
         </div>
@@ -1012,7 +1069,7 @@ GPAPIManager.h
                             <div class="contentAbstract">一、背景
 随着各业务流量红利逐渐见顶，如何在有限的流量下，提升流量给用户带来的体验，对流量进行精细化运营，进而提升转化效率，成为各业务的重要课题。
 
-蚂蚁数字金融线包含了 保险/理财/信用/借贷 等业务，经过多年建设，形成了多样的金融资产/场景服务/权益/内容等多维度的产品去服务用户，而这些产品分发给用户时，决定曝转率的大体上以产品推荐是否精准，以及产品以什么样的UI表述方式进行展示决定。在产品推荐上，算法已经逐步覆盖，给业务带来...</div>
+蚂蚁数字金融线包含了 保险/理财/信用/借贷 等业务，经过多年建设，形成了多样的金融资产/场景服务/权益/内容等多维度的产品去服务用户，而这些产品分发给用户时，决定曝转率的大体上以产品推荐是否精准，以及产品以什么样的UI表述方式进行展示决定。在产品推荐上，算法已经逐步覆盖，给业务带来很大的效果提升，在产品推荐算法优化到一定程度后，提升的投入产...</div>
                             
                         
         </div>
@@ -1076,7 +1133,7 @@ GPAPIManager.h
 
 二、实现原理
 
-目前三大运...</div>
+目前三大运营商均有介绍和接入文档，原理和流程基本相同，本文从中国移动提...</div>
                             
                         
         </div>
@@ -1132,7 +1189,8 @@ GPAPIManager.h
 
 
 
-五年前，从最初使用开放模板搭建博客开始...</div>
+五年前，从最初使用开放模板搭建博客开始…… 
+到后来，GitHub pages，Coding pa...</div>
                             
                         
         </div>
@@ -1188,7 +1246,7 @@ GPAPIManager.h
 
 2. 安全性与便捷性的妥协
 
-现在人几乎人手一台手机，甚至还有人有两台手机或者三台手机。...</div>
+现在人几乎人手一台手机，甚至还有人有两台手机或者三台手机。手机号+密码+验证码的方式登录，能从一定程度上保护账号安全性...</div>
                             
                         
         </div>
@@ -1244,82 +1302,14 @@ GPAPIManager.h
 也就是我们测试同学干活的环境啦，一般会由测试同学自己来部署，然后在此环境进行测试。bug修复后，需要发版更新测试环境来回归bug。
 
 3、回归环境
-回归bug的环境，其实...</div>
+回归bug的环境，其实就是我们的测试环境，在测试环境上测试、回归验证bug。
+
+4...</div>
                             
                         
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15932337513" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15931534585" target="_blank">iOS多线程：线程安全 常见锁 (六)</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2020-06-26</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#常见锁" target="_blank">常见锁</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、前言
-前段时间看了几个开源项目，发现他们保持线程同步的方式各不相同，有@synchronized、NSLock、dispatch_semaphore、NSCondition、pthread_mutex、OSSpinLock。后来网上查了一下，发现他们的实现机制各不相同，性能也各不一样。下面我们先分别介绍每个加锁方式的使用，在使用一个案例来对他们进行性能对比。
-
-二、非线程安全
-举例说明：两个火车票销售窗口 共同销售车站总共的5...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15931534585" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1556,7 +1546,7 @@ document.addEventListener('keydown', function(event) {
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -1571,24 +1561,24 @@ document.addEventListener('keydown', function(event) {
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -1614,7 +1604,7 @@ document.addEventListener('keydown', function(event) {
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -1641,21 +1631,15 @@ document.addEventListener('keydown', function(event) {
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -1677,8 +1661,25 @@ document.addEventListener('keydown', function(event) {
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -1775,7 +1776,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -1867,7 +1868,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1943,6 +1944,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -2480,7 +2483,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -2489,7 +2492,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 

@@ -56,7 +56,7 @@ button {
 ul {
   list-style-type: none;
   -webkit-padding-start: 35px;
-          padding-inline-start: 35px;
+  padding-inline-start: 35px;
 }
 
 svg {

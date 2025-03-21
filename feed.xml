@@ -7,6 +7,258 @@
     
       
         <item>
+          <title>Mac应用发布错误：ITMS-91109</title>
+          <link>https://gorpeln.top/article/17372028582</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17372028582</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 18 Jan 2025 20:20:58 +0800</pubDate>
+          <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+&lt;p&gt;今天进行 时光本 macOS端 更新的时候，上传安装包到 App Store Connect 成功后，但是在 App Store Connect 一直无法看到相应的构架包，查看邮件后发现了一个警告邮件：Action needed: The uploaded build for 时光本-日记本·笔记本·记事本·备忘录 has one or more issues.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;App Store Connect&lt;/p&gt;
+
+  &lt;p&gt;Hello,&lt;/p&gt;
+
+  &lt;p&gt;We noticed one or more issues with a recent delivery for the following app:&lt;/p&gt;
+
+  &lt;p&gt;时光本-日记本·笔记本·记事本·备忘录
+Version 1.2.9
+Build 129
+Please correct the following issues and upload a new binary to App Store Connect.&lt;/p&gt;
+
+  &lt;p&gt;ITMS-91109: Invalid package contents - The package contains one or more files with the com.apple.quarantine extended file attribute, such as “com.gorpeln.xxx.pkg/Payload/GPNotesForMac.app/Contents/Resources/zh-Hans.lproj/Main.strings”. This attribute isn’t permitted in macOS apps distributed on TestFlight or the App Store. Please remove the attribute from all files within your app and upload again.&lt;/p&gt;
+
+  &lt;p&gt;Apple Developer Relations&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在网上查找这个错误提示表明，提交到 App Store 的 macOS 应用程序包中包含一个或多个带有com.apple.quarantine扩展文件属性的文件，比如com.gorpeln.xxx.pkg/Payload/GPNotesForMac.app/Contents/Resources/zh-Hans.lproj/Main.strings，而这种属性是不被允许的。&lt;/p&gt;
+
+&lt;p&gt;com.apple.quarantine属性是 macOS 的一个安全特性，用于标记从不受信任的来源获取的文件，例如通过互联网下载或 AirDrop 接收的文件，以防止潜在的恶意软件。要解决这个问题，需要移除应用程序中所有文件的 com.apple.quarantine 属性。&lt;/p&gt;
+
+&lt;p&gt;看到网上的结果后知道是安装包中某些文件被添加了com.apple.quarantine 属性，具体可能导致相关错误的原因也很多：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;下载来源的影响&lt;/li&gt;
+  &lt;li&gt;Xcode 构建过程问题&lt;/li&gt;
+  &lt;li&gt;系统安全机制&lt;/li&gt;
+  &lt;li&gt;第三方软件干扰&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;但是具体怎么被添加的就不得而知了，于是就进行了漫长的排查解决过程，最后结果让自己很无奈。&lt;/p&gt;
+
+&lt;h3 id=&quot;解决思路&quot;&gt;解决思路&lt;/h3&gt;
+&lt;h4 id=&quot;步骤一-解压安装包&quot;&gt;步骤一： 解压安装包&lt;/h4&gt;
+&lt;p&gt;首先导出安装包，按照提示路径，找到对应文件，使用 xattr 查找该文件是否有 com.apple.quarantine ，查找结果显示的确有，并且有标记是keka解压软件，因为我是用的keka进行的安装包解压，想着keka的标记应该是该流程添加，并不是原来 com.apple.quarantine 属性添加的直接原因，于是就尝试其他方法解决该问题。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤二更新-xcode&quot;&gt;步骤二：更新 Xcode&lt;/h4&gt;
+&lt;p&gt;为什么要更新 Xcode 呢，因为在提交 macOS 版本前先提交了 iOS 版本，iOS 版本提交后，提交成功页面显示有警告内容，提示马上要强制使用 Xcode 16 进行开发发布了，所以就想着是不是当前 Xcode 版本太低了导致的呢，于是就进行了更新操作，经过漫长的下载安装，问题依然存在，使用新的 Mac 用户也不行，只能想其他方法了。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤三操作导出的安装包&quot;&gt;步骤三：操作导出的安装包&lt;/h4&gt;
+&lt;p&gt;Xcode 更新不行，想着提示有具体的安装包错误内容路径，就操作删除相关内容的 com.apple.quarantine 属性，网上也有相应的操作流程&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xattr -rd com.apple.quarantine /path/to/YourApp.app&lt;/code&gt;，操作后继续提交，还是不行，还是同样的错误。&lt;/p&gt;
+
+&lt;p&gt;分析这个步骤只是进行简单的安装包操作，没有对安装包里面的内容遍历操作，于是想着进行一下遍历删除操作，但是该操作又无法直接遍历安装包内部内容，于是就进行相应的解压，遍历删除相关属性，操作还算顺利，并且重新打包上传，上传直接就报错了，提示证书问题，确实重新打包没有使用证书，重新查找资料，配置相关重新打包证书，完成打包成功上传，但是苹果接着发来邮件提示证书还是有问题。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hello,&lt;/p&gt;
+
+  &lt;p&gt;We noticed one or more issues with a recent delivery for the following app:&lt;/p&gt;
+
+  &lt;p&gt;时光本-日记本·笔记本·记事本·备忘录
+Version 1.3.4
+Build 134
+Please correct the following issues and upload a new binary to App Store Connect.&lt;/p&gt;
+
+  &lt;p&gt;ITMS-90237: The product archive package’s signature is invalid. Ensure that it is signed with your ‘3rd Party Mac Developer Installer’ certificate.&lt;/p&gt;
+
+  &lt;p&gt;Apple Developer Relations&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;查找 ITMS-90237 问题的解决方法，正确配置相关证书后依然不行，感觉这个方法不太靠谱，虽然能够成功删除 com.apple.quarantine 属性，但是重新将解压的安装包打包十分复杂，想着还是换个方法。&lt;/p&gt;
+
+&lt;p&gt;该步骤相关操作代码：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import os
+import subprocess
+import shutil
+
+
+def remove_quarantine_attribute(pkg_path):
+    extract_dir = os.path.expanduser(&apos;~/Desktop/unpacked_pkg&apos;)
+    if os.path.exists(extract_dir):
+        try:
+            shutil.rmtree(extract_dir)
+            print(f&quot;已删除现有的 {extract_dir} 目录。&quot;)
+        except Exception as e:
+            print(f&quot;删除 {extract_dir} 目录时出错: {e}&quot;)
+            return
+
+    try:
+        os.makedirs(extract_dir)
+        print(f&quot;成功创建 {extract_dir} 目录。&quot;)
+    except Exception as e:
+        print(f&quot;创建 {extract_dir} 目录时出错: {e}&quot;)
+        return
+
+    try:
+        # 尝试使用 xar 解压
+        print(&quot;尝试使用 xar 解压 pkg 文件...&quot;)
+        result = subprocess.run([&apos;xar&apos;, &apos;-xf&apos;, pkg_path, &apos;-C&apos;, extract_dir], capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f&quot;使用 xar 解压失败: {result.stderr}&quot;)
+            return
+        else:
+            print(&quot;使用 xar 解压成功。&quot;)
+
+        # 打印解压后的目录内容，便于检查
+        print(f&quot;解压后的目录 {extract_dir} 内容:&quot;)
+        for item in os.listdir(extract_dir):
+            print(item)
+
+        pkg_inner_dir = os.path.join(extract_dir, &apos;com.gorpeln.xxx.pkg&apos;)
+        payload_path = os.path.join(pkg_inner_dir, &apos;Payload&apos;)
+        if os.path.exists(pkg_inner_dir) and os.path.exists(payload_path):
+            # 进入 Payload 所在目录并进行进一步处理
+            os.chdir(pkg_inner_dir)
+            try:
+                # 执行 cat Payload | gunzip -dc | cpio -i 操作
+                print(&quot;正在对 Payload 进行进一步解压...&quot;)
+                command = &apos;cat Payload | gunzip -dc | cpio -i&apos;
+                result = subprocess.run(command, shell=True, capture_output=True, text=True, timeout=60)
+                if result.returncode == 0:
+                    print(&quot;Payload 进一步解压成功。&quot;)
+                else:
+                    print(f&quot;对 Payload 进一步解压时出错: {result.stderr}&quot;)
+            except subprocess.TimeoutExpired:
+                print(&quot;对 Payload 进一步解压时超时，请检查 Payload 文件是否正常。&quot;)
+            except subprocess.CalledProcessError as e:
+                print(f&quot;对 Payload 进一步解压时出错: {e.stderr}&quot;)
+            finally:
+                # 切换回上级目录
+                os.chdir(&apos;..&apos;)
+
+        # 遍历所有文件并移除属性
+        for root, dirs, files in os.walk(extract_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                try:
+                    subprocess.run([&apos;xattr&apos;, &apos;-d&apos;, &apos;com.apple.quarantine&apos;, file_path], check=True)
+                    print(f&quot;成功移除 {file_path} 的 com.apple.quarantine 属性。&quot;)
+                except subprocess.CalledProcessError:
+                    # 如果文件没有该属性，忽略错误
+                    pass
+
+        # 找到 .app 文件
+        app_path = None
+        payload_extracted_dir = os.path.join(pkg_inner_dir)
+        for item in os.listdir(payload_extracted_dir):
+            if item.endswith(&apos;.app&apos;):
+                app_path = os.path.join(payload_extracted_dir, item)
+                break
+
+        if app_path is None:
+            print(&quot;未找到有效的 .app 应用程序包。&quot;)
+            return
+
+        # 签名 .app 包内的所有文件
+        certificate_name_app = &quot;3rd Party Mac Developer Application: xxxxxxxx (xxxxxxxxx)&quot;
+        find_command = f&apos;find &quot;{app_path}&quot; -type f -exec codesign --force --deep --sign &quot;{certificate_name_app}&quot;  \;&apos;
+        subprocess.run(find_command, shell=True)
+
+        # 签名 .app 包本身
+        codesign_command = f&apos;codesign --force --deep --sign &quot;{certificate_name_app}&quot; &quot;{app_path}&quot;&apos;
+        subprocess.run(codesign_command, shell=True)
+
+        # 重新打包成 pkg 文件
+        new_pkg_path = pkg_path.replace(&apos;.pkg&apos;, &apos;_cleaned.pkg&apos;)
+        install_path = &apos;/Applications&apos;
+        certificate_name_installer = &quot;3rd Party Mac Developer Installer: xxxxxxxx (xxxxxxxxx)&quot;
+        productbuild_command = [
+            &apos;productbuild&apos;,
+            &apos;--component&apos;, app_path, install_path,
+            &apos;--sign&apos;, certificate_name_installer,
+            new_pkg_path
+        ]
+        result = subprocess.run(productbuild_command, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f&quot;重新打包并签名 pkg 文件时出错：{result.stderr}&quot;)
+        else:
+            print(f&quot;处理完成，新的签名 pkg 文件已生成: {new_pkg_path}&quot;)
+
+    except Exception as e:
+        print(f&quot;处理过程中出现错误: {e}&quot;)
+    finally:
+        if os.path.exists(extract_dir):
+            try:
+                shutil.rmtree(extract_dir)
+                print(f&quot;已成功删除临时目录 {extract_dir}。&quot;)
+            except Exception as e:
+                print(f&quot;删除临时目录 {extract_dir} 时出错: {e}&quot;)
+
+
+# 使用示例
+pkg_path = &apos;/Users/gorpeln/Desktop/123/GPNotesForMac.pkg&apos;
+remove_quarantine_attribute(pkg_path)
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;步骤四删除-mac-破解软件&quot;&gt;步骤四：删除 Mac 破解软件&lt;/h4&gt;
+&lt;p&gt;怀疑是电脑上安装的某些破解软件导致的，于是进行删除操作，包括删除了keka解压软件，再次尝试打包，问题依然没有解决。想想上个版本到现在电脑上也没有新安装什么应用，应该不是这个原因，只能想其他方法。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤五删除代码中的相关文件&quot;&gt;步骤五：删除代码中的相关文件&lt;/h4&gt;
+&lt;p&gt;尝试直接删除提示有问题的文件，该文件在项目中是语言适配文件，做本地化处理的，删除后虽然对应用体验有一定的影响，但是也没有好的办法，只能先删了提交后再慢慢看具体问题了。删除后提交，居然又发邮件提错误了。。。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;App Store Connect&lt;/p&gt;
+
+  &lt;p&gt;Hello,&lt;/p&gt;
+
+  &lt;p&gt;We noticed one or more issues with a recent delivery for the following app:&lt;/p&gt;
+
+  &lt;p&gt;时光本-日记本·笔记本·记事本·备忘录
+Version 1.3.8
+Build 138
+Please correct the following issues and upload a new binary to App Store Connect.&lt;/p&gt;
+
+  &lt;p&gt;ITMS-91109: Invalid package contents - The package contains one or more files with the com.apple.quarantine extended file attribute, such as “com.gorpeln.xxx.pkg/Payload/GPNotesForMac.app/Contents/Resources/MLHudAlertInfo.png”. This attribute isn’t permitted in macOS apps distributed on TestFlight or the App Store. Please remove the attribute from all files within your app and upload again.&lt;/p&gt;
+
+  &lt;p&gt;Apple Developer Relations&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;看到这个错误后心凉半截，删除了一个文件，但是同样错误又显示了一个新的文件，肯定不能再删除了，因为还不知道到底有多少文件被标记了 com.apple.quarantine 属性，其中被标记的还可能是核心代码，删除后影响项目运行的。并且标记的这个文件应该是一个第三方库文件，想着应该是第三方库有问题，输入搜索后没有发现对应文件，猜想可能是pod导入导致的错误。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤五固定和更新第三方库&quot;&gt;步骤五：固定和更新第三方库&lt;/h4&gt;
+&lt;p&gt;查看 Podfile 文件中第三方库都没有固定版本，想着可能是第三方库更新到新版本后出现了相关问题，于是就设置了所有库的对应版本并进行更新，提交上传，问题依旧。迷茫了，不知道该怎么办了。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤六降级-xcode-版本&quot;&gt;步骤六：降级 Xcode 版本&lt;/h4&gt;
+&lt;p&gt;脑子一昏，想着是不是 Xcode 版本高的问题，用比较旧的版本会不会好呢，于是就下载安装了。显而易见，并不会。因为在app上个版本到现在我除了这次升级，并没有操作 Xcode 版本，正常不会是 Xcode 版本问题的。&lt;/p&gt;
+
+&lt;h4 id=&quot;步骤七删除源码中的相关属性&quot;&gt;步骤七：删除源码中的相关属性&lt;/h4&gt;
+&lt;p&gt;不知不觉，这个问题搞了一天了。没想法了，想着还是直接删除提示的对应文件吧，再次搜索提示的MLHudAlertInfo.png，居然看到了这个相关文件，进入查看具体内容，查找在Finder中的内容，确实存在MLHudAlertInfo.png文件。那这就好办了呀，直接查看这个文件是否包含 com.apple.quarantine 属性就行了呀，使用 xattr 查看后，的确存在，&lt;em class=&quot;color-gray&quot;&gt;我感觉有点无语&lt;/em&gt;，基本确认是源码问题，直接使用 xattr 遍历删除项目文件夹下所有文件，重新提交上传，问题完美解决了。&lt;/p&gt;
+
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+&lt;p&gt;具体该问题是怎么导致的呢？&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;静下来想想，无轮提示的 Main.strings 还是 MLHudAlertInfo.png，都是最近甚至多个版本都没有修改过，甚至 MLHudAlert 是导入后只使用，完全没有修改过的，再根据过程中提示到的 keka 解压软件标记，我推测大概率文件相关 com.apple.quarantine 的属性在相关文件下载后使用 keka 解压的时候就已经被标记了，跟随项目多个版本，但由于苹果官方最近收紧对 com.apple.quarantine 属性的检测导致构架包一直无法通过。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;总结这次问题，为什么耗费了这么长时间呢？&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;macOS 软件开发较少，可参考的资料也较少，只能自己摸索&lt;/li&gt;
+  &lt;li&gt;解决问题思路问题：一直想的是前面的版本没问题，这次不行，应该是这次上次到这次提交之间修改某些文件导致的，没想到被苹果背刺了。&lt;/li&gt;
+  &lt;li&gt;第一次查找MLHudAlertInfo时，可能是因为手动输入错误导致没有成功搜索到相关文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最后，如果感兴趣可以去查看使用一下【时光本】应用，是一款专注效率与记录的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>春节灯笼</title>
           <link>https://gorpeln.top/article/17347677826</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17347677826</guid>
@@ -1922,63 +2174,6 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 
 &lt;/body&gt;
 &lt;/html&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Sublime Text 常用插件</title>
-          <link>https://gorpeln.top/article/16962230954</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/16962230954</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Mon, 02 Oct 2023 13:04:55 +0800</pubDate>
-          <description>&lt;h4 id=&quot;一package-control无法使用解决办法&quot;&gt;一、Package Control无法使用解决办法&lt;/h4&gt;
-
-&lt;p&gt;最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。&lt;/p&gt;
-
-&lt;p&gt;解决方法：&lt;/p&gt;
-
-&lt;p&gt;下载：&lt;a href=&quot;https://github.com/wbond/package_control/releases&quot;&gt;PackageControl&lt;/a&gt; （https://github.com/wbond/package_control/releases）&lt;/p&gt;
-
-&lt;p&gt;之后得到一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package.Control.sublime.package&lt;/code&gt;文件，将文件重命名为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control.sublime-package&lt;/code&gt;&lt;br /&gt;
-随后将这个文件放置到插件安装目录的（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Installed Packages&lt;/code&gt;）目录下，路径为：&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Users/用户名/Library/Application Support/Sublime Text/Installed Packages
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;二package-control使用方法&quot;&gt;二、Package Control使用方法&lt;/h4&gt;
-
-&lt;p&gt;为插件管理包，通过快捷键 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Shift + P&lt;/code&gt;
-打开，之后可以很方便的浏览、安装和卸载 Sublime Text 中的插件。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;插件安装：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;install&lt;/code&gt; &lt;br /&gt;
-  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: Install Package&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;插件列表：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list&lt;/code&gt; &lt;br /&gt;
-  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: List Packages&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;插件删除：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remove&lt;/code&gt; &lt;br /&gt;
-  后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Package Control: Remove Packages&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;三常用插件&quot;&gt;三、常用插件：&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ChineseLocalization&lt;/code&gt; 汉化包&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorHelper&lt;/code&gt; 显示所选颜色值的颜色&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML-CSS-JS Prettify&lt;/code&gt; 一款集成了格式化（美化）html、css、js三种文件类型的插件&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Auto Close HTML Tags&lt;/code&gt; 写HTML代码时，自动补全闭合标签&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BracketHighlighter&lt;/code&gt; 代码匹配，可以匹配括号，引号等符号内的范围&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alignment&lt;/code&gt; 使多行代码中的等号对齐&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AutoFileName&lt;/code&gt; 快捷输入文件名&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SublimeCodeInte&lt;/code&gt; 代码提示、补全&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SublimeLinter&lt;/code&gt; 代码检查的功能&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View In Browser&lt;/code&gt; Sublime Text 保存后网页自动同步更新&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveReload&lt;/code&gt; 调试网页实时自动更新&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
       

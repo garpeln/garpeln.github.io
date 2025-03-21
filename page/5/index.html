@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -730,7 +730,65 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16489790954" target="_blank">MacOS：鼠标事件</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2022-04-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                    MacOS
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#鼠标" target="_blank">鼠标</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#mouse" target="_blank">mouse</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#mouseDown" target="_blank">mouseDown</a>
+                            
+                    
+                     
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">NSResponder
+// 鼠标按下事件
+- (void)mouseDown:(NSEvent *)event;
+// 鼠标右键按下事件
+- (void)rightMouseDown:(NSEvent *)event;
+// 鼠标抬起事件
+- (void)mouseUp:(NSEvent *)event;
+// 鼠标右键抬起事件
+- (void)rightMouseUp:(NSEvent *)event;
+// 鼠标移动事件
+- (void)mouseMoved:(NSEvent *)e...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16489790954" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -778,7 +836,8 @@ NSTableView中常用的属性和方法
 - (nullable instancetype)initWithCoder:(NSCoder *)coder;
 
 //设置代理
-@property (nullable, weak) id &lt;NSTableViewDataSource&...</div>
+@property (nullable, weak) id &lt;NSTableViewDataSource&gt; dataSource;
+@property (nul...</div>
                             
                         
         </div>
@@ -840,7 +899,12 @@ NSTableView中常用的属性和方法
 
 
 
-5、下载完成后，会提示手机上已经存在该a...</div>
+5、下载完成后，会提示手机上已经存在该app，此时，停留到当前弹框状态
+
+
+
+6、此时打开路径：
+~...</div>
                             
                         
         </div>
@@ -894,7 +958,11 @@ https://gorpeln.lanzoul.com/i4SKK0290one，直接下载解压即可。
 2、创建云函数
 1）先用微信登陆腾讯云（如果没有账号，请自行注册、实名认证），然后打开https://console.cloud.tencent.com/scf/list-create?rid=1&amp;ns=default。
 
-新建一个函数，名字随意起，运行方式为空白函数，运行环境选择Python3.6...</div>
+新建一个函数，名字随意起，运行方式为空白函数，运行环境选择Python3.6，函数代码上传第一步下载解压的文件夹。
+
+
+
+2）进入下一步...</div>
                             
                         
         </div>
@@ -952,7 +1020,8 @@ CSDN
 
   优点
     
-      SEO做得好，无论是百度还...</div>
+      SEO做得好，无论是百度还是google（尤其是百度）在搜索问题的时候排名靠前
+   ...</div>
                             
                         
         </div>
@@ -1002,7 +1071,9 @@ CSDN
 软件钱包即此前体验的“数字人民币”钱包，主要以手机App形式为主；
 硬件钱包则是指基于“芯片”存在的钱包，比如智能卡、手机eSE等。
 
-其实，离线支付功能并不新鲜，微信和支付宝早已经实现了，这样使得我们在一些场景实现了“先享后付”功能。这种离线支付付款方可以离线，而收款方必须在线，实现原理是将离线的付款信息传到平台服务器端进...</div>
+其实，离线支付功能并不新鲜，微信和支付宝早已经实现了，这样使得我们在一些场景实现了“先享后付”功能。这种离线支付付款方可以离线，而收款方必须在线，实现原理是将离线的付款信息传到平台服务器端进行校验后完成交易，实质是一种单离线支付。
+
+那么，数字人民币...</div>
                             
                         
         </div>
@@ -1061,7 +1132,7 @@ SDWebImage提供一个UIImageView的类别以支持加载来自互联网的远�
 SDImageCache类提供一个管理缓存的单例类。
 SDImageCache *imageCache = [SDImageCache sharedImageCache]
 
-查找和缓存图片时以URL作为ke...</div>
+查找和缓存图片时以URL作为key。(先查找内存，如果内存不存在该图片，再查找硬盘；查找硬盘...</div>
                             
                         
         </div>
@@ -1112,7 +1183,8 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
 构成部分，每个自定义组件由四个代码文件组成：
 ①json文件 用于于放置一些最基本的组件配置
 ②wxml 文件 组件模版
-③wxss 文件 组件的样式，只在组件内部节点上生效...</div>
+③wxss 文件 组件的样式，只在组件内部节点上生效（这个文件是可选的）
+④js 文件 组件的 JS 代码，承载...</div>
                             
                         
         </div>
@@ -1166,7 +1238,7 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
 
 事件绑定
 事件绑定的写法同组件的属性，以 key、value 的形式  
-①key 以bind或catch开头，然后跟上事件的类型，如bindtap、catchtap等。自基础库版本 1.5.0 起，在非原生组件中，bind和catch后可以紧跟一个冒号...</div>
+①key 以bind或catch开头，然后跟上事件的类型，如bindtap、catchtap等。自基础库版本 1.5.0 起，在非原生组件中，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchst...</div>
                             
                         
         </div>
@@ -1219,62 +1291,14 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
 
 
 1、自定义手势优先级
-自定义多手势冲突。例如我们设置的单次点击、双击和多指点击手势，需要设置优先识别双击手势，识别失败后再识别单击...</div>
+自定义多手势冲突。例如我们设置的单次点击、双击和多指点击手势，需要设置优先识别双击手势，识别失败后再识别单击手势；
+ //单指单击
+    UITapGestureRe...</div>
                             
                         
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/16132790510" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/16131808742" target="_blank">JS与OC交互</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2021-02-13</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#UIWebView" target="_blank">UIWebView</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#WKWebView" target="_blank">WKWebView</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#WebViewJavascriptBridge" target="_blank">WebViewJavascriptBridge</a>
-                            
-                    
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">1、UIWebView JS 与 OC 交互
-UIWebView 在 iOS12 中已经被废弃，同时WKWebView在iOS8中已经出现。所以无特殊情况的话，我们一般应该也是用不到前者了！
-UIWebView 相比于 WKWebView 的使用上会简单很多。
-
-UIWebView 初始化：
--(void)loadUIWebViewWithName:(NSString *)name{
-    self.webView = [[UI...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/16131808742" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1511,7 +1535,7 @@ document.addEventListener('keydown', function(event) {
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -1526,24 +1550,24 @@ document.addEventListener('keydown', function(event) {
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -1569,7 +1593,7 @@ document.addEventListener('keydown', function(event) {
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -1596,21 +1620,15 @@ document.addEventListener('keydown', function(event) {
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -1632,8 +1650,25 @@ document.addEventListener('keydown', function(event) {
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -1730,7 +1765,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -1822,7 +1857,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1898,6 +1933,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -2435,7 +2472,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -2444,7 +2481,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 

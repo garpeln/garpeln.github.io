@@ -75,7 +75,7 @@
                         <div class="site-state">
                             <div class="site-state-item site-state-posts">
                                 <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">212</span>
+                                    <span class="site-state-item-count">213</span>
                                     <span class="site-state-item-name">归档</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">668</span>
+                                    <span class="site-state-item-count">669</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 </span>
                             </li>
                             <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">212
+                                <span class="articleCount">213
                                 </span>
                             </li>
                             <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
@@ -165,7 +165,7 @@
                             
                             <li onclick="pushNew('/categories#MacOS')" class="categoryList">
                                 <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">21
+                                <a name="MacOS" style="" class="articleCount">22
                                 </a>
                             </li>
                             
@@ -276,7 +276,7 @@
                         <ul>
                                 <li>
                                     <p >文章数目</p>
-                                    <p >212</p>
+                                    <p >213</p>
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3495天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-18 09:48:16 +0800">2025/03/18</p>
+                                    <p id="current-date" data-value="2025-03-21 21:23:04 +0800">2025/03/21</p>
                                 </li>
                             </ul>
                     </div>
@@ -730,7 +730,68 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15632033519" target="_blank">文章置顶功能的实现 - Jekyll x Liquid</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2019-07-15</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                    个人博客
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#个人博客" target="_blank">个人博客</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#Jekyll" target="_blank">Jekyll</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#文章置顶" target="_blank">文章置顶</a>
+                            
+                    
+                      </span>  </div> 
+                         
+                             
+                            <div class="contentAbstract">基础版
+其实很简单, 从post的header里面进行参数设置
+
+layout: post
+title: Jekyll x Liquid: 文章置顶功能的实现
+category: 个人博客
+tags: [个人博客,Jekyll,文章置顶,gorpeln]
+description: 
+top: true
+
+
+然后liquid进行判断(*号换成%)
+
+{* for post in site.posts *}
+    {* if post.top != true *}
+        {* co...</div>
+                            
+                        
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15632033519" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -774,7 +835,8 @@
 
   开发模式：更符合现有 MVVM 框架的开发模式，类 Vue，节省上手成本
   组件化开发：支持组件嵌套、循环、组建通信等
-  npm 包管理：...</div>
+  npm 包管理：处理了 npm 包依赖问题
+  ES Next：语法更现代，...</div>
                             
                         
         </div>
@@ -874,7 +936,8 @@
 
 学习记录：
 
- ...</div>
+  扩展篇 ：开发框架及前景
+  实战篇 ：电商小程序云开发实...</div>
                             
                         
         </div>
@@ -923,7 +986,7 @@
 小程序并不是 HTML5 应用，而是更偏向于传统的 CS 架构，它是基于数据驱动的模式，一切皆组件（视图组件）。下面是小程序与普通 Web App 的对比。
 
 
-  普通 HTML5 都是执行在浏览器的宿主环境，浏览器提供 window、document 等 BOM 对象，但小程序没有 window、document，它更像是一个类似 Node.js 的宿主环境；因此在小程序内不能使用 docume...</div>
+  普通 HTML5 都是执行在浏览器的宿主环境，浏览器提供 window、document 等 BOM 对象，但小程序没有 window、document，它更像是一个类似 Node.js 的宿主环境；因此在小程序内不能使用 document.querySelector 这类 DOM 选择器，也不...</div>
                             
                         
         </div>
@@ -981,7 +1044,7 @@
   小程序·云开发 是微信团队联合腾讯云团队推出的一套小程序开发解决方案。小程序·云开发为开发者提供完整的云端流程，弱化后端和运维概念，开发者无需购买和管理底层计算资源，包括服务器、数据库、静态存储，只需使用平台提供的简易 API 进行核心业务等开发，实现快速上线和迭代，把握业务发展的黄金时期。
 
 
-简单来说，小程序开发中用到的服务器、数据库和静态资源管理，都可以托管到「小程序·云开发」上，小程序开发者只需要关注业务功能实现，而...</div>
+简单来说，小程序开发中用到的服务器、数据库和静态资源管理，都可以托管到「小程序·云开发」上，小程序开发者只需要关注业务功能实现，而不需要关心服务器运维等带来的问题。小程序开发主要用到的是前端...</div>
                             
                         
         </div>
@@ -1043,7 +1106,7 @@
 
 2.安装开发者工具
 
-小程序有自己的开发者工具，...</div>
+小程序有自己的开发者工具，可以编写代码，实时查看页面和功能效果，还能在开发者工具中进行...</div>
                             
                         
         </div>
@@ -1092,7 +1155,8 @@
 小程序是有别于传统 Web App、HTML5、原生 App 以及微信公众号的一种新的应用形式，由微信团队于 2017 年 1 月对外发布的，经过近两年的发展，小程序越来越成熟，小程序研发也越来越受到重视。什么是小程序？用张小龙自己的话来说：
 
 
-  小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太...</div>
+  小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太多应用的问题。应用将无处不在，随时可用，但又无须安装卸载。
+...</div>
                             
                         
         </div>
@@ -1144,7 +1208,9 @@
 程序员：
 我今天要买一斤苹果。
 
-因为我只喜欢红富士苹果，所以我只买...</div>
+因为我只喜欢红富士苹果，所以我只买红富士苹果。
+我能接受的最高价格是 10 元 / 斤。
+正常...</div>
                             
                         
         </div>
@@ -1197,7 +1263,7 @@
 
 赢游戏小技巧
 　　刚开始玩的时候觉得很难赢，静下心来仔细想想，算法肯定是按照离边界的最短距离路线来移动小猫，这么一来甚至可以给小猫挖坑，游戏难度瞬间就下来了~。 
-　　一开始算法应该是随机选一个方向，为了更容易赢，我们可以落子在 四边中最少子的，最边缘的那部分。接着看小猫移动方向，然后在小猫前进方向的最...</div>
+　　一开始算法应该是随机选一个方向，为了更容易赢，我们可以落子在 四边中最少子的，最边缘的那部分。接着看小猫移动方向，然后在小猫前进方向的最边缘，能有多远离离多远落子，注意别把它的活路堵死，留一个出个...</div>
                             
                         
         </div>
@@ -1255,66 +1321,15 @@
 设定总金额为10元，有N个人随机领取：  
   
 N=1 
-则红包...</div>
+则红包金额=X元； 
+  
+N=2 
+为保证第二个红包可以正常发出...</div>
                             
                         
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15575387722" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15573877312" target="_blank">抽奖 - 算法</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2019-05-09</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
-                    产品和运营
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#抽奖" target="_blank">抽奖</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#算法" target="_blank">算法</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#中奖" target="_blank">中奖</a>
-                            
-                    
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">目标
-
-  奖品尽量在活动期间被平均分布（不要在活动一开始就被抽完）
-  大奖尽量在后面才被抽中
-  奖品尽量不要有剩余
-  每个奖品可以设置抽中概率
-
-
-对于最后一点，因为活动前并不知道参加活动人数，所以设置的概率反而影响了前面几点。如果概率大了可能活动一开始就被抽完，如果太小参与人数不多可能到活动结束之后奖品还余了一半。
-
-其实平均分布才是最关键的。满足了这个条件之后可以根据奖品的数量或概率让奖品在活动时间内靠前或者靠后被抽中...</div>
-                            
-                        
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15573877312" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1551,7 +1566,7 @@ document.addEventListener('keydown', function(event) {
 
     .menuNav {
         position: fixed;
-        bottom: 1em;
+        bottom: 2em;
         left: 0;
         display:none;
     }
@@ -1566,24 +1581,24 @@ document.addEventListener('keydown', function(event) {
     }
 
     .menuBtn{
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 2px;
+        border-radius: 8px;
     }
 
     .menuNav {
         list-style: none;
         display: none;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menuNav li {
         float: left;
         border-top: 1px solid #aaa;
-        background-color: rgba(0, 0, 0, 0.60);
+        background-color: rgba(50, 50, 50, 0.75);
         
     }
 
@@ -1609,7 +1624,7 @@ document.addEventListener('keydown', function(event) {
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 40px);
+    left: calc(2em - 25px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -1636,21 +1651,15 @@ document.addEventListener('keydown', function(event) {
         .menuNav {
             display: block;
         }
-/*        .themeModel{
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 3px;
-            position: fixed;
-            bottom: 4em;
-            left: 0;
-            margin-left: 10px;
-                    background-color: rgba(0, 0, 0, 0.60);
-
-        }*/
     }
+
+    /*适配黑夜模式*/
+    body.dark-mode .menuNav{
+        background-color: var(--background-color-dark);
+        border-radius: 8px;
+    }
+
+
     </style>
     <script type="text/javascript">
 
@@ -1672,8 +1681,25 @@ document.addEventListener('keydown', function(event) {
     });
 
     </script>
+
+    <script>
+    let timer;
+
+    window.addEventListener('scroll', function () {
+        const homeButton = document.querySelector('.menuNav');
+        // 清除之前的定时器
+        clearTimeout(timer);
+        // 滚动时隐藏按钮
+        homeButton.classList.add('hidden');
+
+        timer = setTimeout(() => {
+            // 停止滚动 500 毫秒后显示按钮
+            homeButton.classList.remove('hidden');
+        }, 200);
+    });
+    </script> 
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;border-radius: 3px;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 10px;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -1770,7 +1796,7 @@ document.addEventListener('keydown', function(event) {
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.53</span>
+            <span>4.1.54</span>
         </div>
     </div>
 </footer>
@@ -1862,7 +1888,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.53", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.54", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1938,6 +1964,8 @@ function pushNew(path) {
 }
 
         const postUrls = [
+            
+                "/article/17372028582",
             
                 "/article/17347677826",
             
@@ -2475,7 +2503,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 210 + '天';
+  element.innerHTML = 9 + '年' + 213 + '天';
 
 }
 
@@ -2484,7 +2512,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3495 + '天';
+    element.innerHTML = 3498 + '天';
 }
 </script>
 
