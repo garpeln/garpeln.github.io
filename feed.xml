@@ -165,7 +165,7 @@ def remove_quarantine_attribute(pkg_path):
 
         # 签名 .app 包内的所有文件
         certificate_name_app = &quot;3rd Party Mac Developer Application: xxxxxxxx (xxxxxxxxx)&quot;
-        find_command = f&apos;find &quot;{app_path}&quot; -type f -exec codesign --force --deep --sign &quot;{certificate_name_app}&quot;  \;&apos;
+        find_command = f&apos;find &quot;{app_path}&quot; -type f -exec codesign --force --deep --sign &quot;{certificate_name_app}&quot; \{\{\}} \;&apos;
         subprocess.run(find_command, shell=True)
 
         # 签名 .app 包本身
