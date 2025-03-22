@@ -87,7 +87,7 @@
                             </div>
                             <div class="site-state-item site-state-tags">
                                 <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">669</span>
+                                    <span class="site-state-item-count">671</span>
                                     <span class="site-state-item-name">标签</span>
                                 </a>
                             </div>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3498天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3499天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-21 21:32:55 +0800">2025/03/21</p>
+                                    <p id="current-date" data-value="2025-03-22 20:08:11 +0800">2025/03/22</p>
                                 </li>
                             </ul>
                     </div>
@@ -579,8 +579,8 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     }
 
     .menuBtn{
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -622,7 +622,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     .menuNav li .sub-nav {
      position: absolute;
     bottom: 0;
-    left: calc(2em - 25px);
+    left: calc(2em - 30px);
     list-style: none;
     /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
@@ -644,6 +644,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         padding: 0;
         display: inline-block;
     }
+
 
     @media (max-width: 678px) {
         .menuNav {
@@ -680,24 +681,21 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 
     </script>
 
-    <script>
+  <!--   <script>
     let timer;
 
     window.addEventListener('scroll', function () {
         const homeButton = document.querySelector('.menuNav');
-        // 清除之前的定时器
         clearTimeout(timer);
-        // 滚动时隐藏按钮
         homeButton.classList.add('hidden');
 
         timer = setTimeout(() => {
-            // 停止滚动 500 毫秒后显示按钮
             homeButton.classList.remove('hidden');
-        }, 200);
+        }, 500);
     });
-    </script> 
+    </script>  -->
             <ul class="menuNav">
-                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 16px;font-weight: 400;"></i>
+                <li class="menuBtn" style="border-top: 0 solid #aaa;"><i class="fas fa-stream fa-fw" style="color: white;font-size: 14px;font-weight: 400;"></i>
                     <ul class="sub-nav">
                         <li style="border-radius: 8px 8px 0 0;"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
                         <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
@@ -794,7 +792,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
             <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
                 萌ICP备20240031号
             </a> ·
-            <span>4.1.55</span>
+            <span>4.1.56</span>
         </div>
     </div>
 </footer>
@@ -886,7 +884,7 @@ queueMicrotask(() => {
     setTimeout(Log.bind(console, "%c博客链接%c https://gorpeln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c联系方式%c help@gor*eln.top", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
     setTimeout(Log.bind(console, "%c博主寄语%c 趁年轻，做自己想做的！", "line-height:24px;", "color:#6666cc;line-height:22px;font-size:12px;"));
-    setTimeout(Log.bind(console, "%c版本号 %c V4.1.55", "", "color:#6666cc;line-height:22px;font-size:12px;"));
+    setTimeout(Log.bind(console, "%c版本号 %c V4.1.56", "", "color:#6666cc;line-height:22px;font-size:12px;"));
 
     const loadTime = (Math.round(performance.now() * 100) / 100) / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + 's';
@@ -1501,7 +1499,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 213 + '天';
+  element.innerHTML = 9 + '年' + 214 + '天';
 
 }
 
@@ -1510,7 +1508,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3498 + '天';
+    element.innerHTML = 3499 + '天';
 }
 </script>
 
