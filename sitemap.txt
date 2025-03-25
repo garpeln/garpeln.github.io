@@ -186,7 +186,6 @@
         https://gorpeln.top/other/rss_friends.json
         https://gorpeln.top/resume
         https://gorpeln.top/robots.txt
-        https://gorpeln.top/sitemap-no.xml
         https://gorpeln.top/sitemap.txt
         https://gorpeln.top/sitemap.xml
         https://gorpeln.top/tags
