@@ -294,7 +294,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-26 18:07:39 +0800">2025/03/26</p>
+                                    <p id="current-date" data-value="2025-03-26 18:19:51 +0800">2025/03/26</p>
                                 </li>
                             </ul>
                     </div>
@@ -678,9 +678,9 @@ password: gorpeln
         window.requestAnimationFrame(scrollStep);
       }
 
-      const menuNav = document.querySelector(".menuNav");
-      if (menuNav) {
-        menuNav.addEventListener("touchstart", function (event) {
+      const menuBtn = document.querySelector(".menuBtn");
+      if (menuBtn) {
+        menuBtn.addEventListener("touchstart", function (event) {
           const now = Date.now();
           const isDoubleClick = now - lastTouchTime < DOUBLE_CLICK_THRESHOLD;
 
@@ -690,9 +690,10 @@ password: gorpeln
             handleScroll();
           } else {
             // 设置一个计时器来处理单击
+            clearTimeout(clickTimer); // 清除可能存在的定时器
             clickTimer = setTimeout(() => {
               // 如果在DOUBLE_CLICK_THRESHOLD时间内没有发生第二次点击，则认为是单击
-              const submenu = menuNav.querySelector("ul");
+              const submenu = menuBtn.querySelector("ul");
               if (submenu) {
                 submenu.style.display === "none"
                   ? (submenu.style.display = "block")
@@ -704,10 +705,7 @@ password: gorpeln
           lastTouchTime = now; // 更新最后一次触摸时间
         });
 
-        // 清除单击计时器，用于检测双击
-        menuNav.addEventListener("touchend", function () {
-          clearTimeout(clickTimer); // 若在DOUBLE_CLICK_THRESHOLD内再次触发，清除单击计时器
-        });
+        // 不需要额外的touchend监听器，因为通过clearTimeout已解决了冲突问题
       }
     });
   </script>
@@ -870,7 +868,7 @@ password: gorpeln
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.61</span>
+      <span>4.1.62</span>
     </div>
   </div>
 </footer>
@@ -1033,7 +1031,7 @@ password: gorpeln
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.61",
+        "%c版本号 %c V4.1.62",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
