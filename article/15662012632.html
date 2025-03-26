@@ -294,7 +294,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-26 17:38:54 +0800">2025/03/26</p>
+                                    <p id="current-date" data-value="2025-03-26 17:54:49 +0800">2025/03/26</p>
                                 </li>
                             </ul>
                     </div>
@@ -669,17 +669,24 @@
       border-radius: 8px;
     }
   </style>
-  <script>
+  <script type="text/javascript">
     $(function () {
+      let clickTimer;
       let isDoubleClick = false;
+
       // 点击菜单项时显示/隐藏子菜单
-      $(".menuNav>li").click(function (event) {
+      $(".menuNav>li").on("touchstart", function (event) {
         if (isDoubleClick) {
           isDoubleClick = false;
           return;
         }
-        var submenu = $(this).children("ul");
-        submenu.slideToggle(300);
+
+        clickTimer = setTimeout(() => {
+          if (!isDoubleClick) {
+            var submenu = $(this).children("ul");
+            submenu.slideToggle(300);
+          }
+        }, 300);
       });
 
       // 点击页面其他区域时隐藏子菜单
@@ -731,7 +738,8 @@
         menuNav.addEventListener("touchstart", function (event) {
           const now = Date.now();
           if (now - lastTouchTime < DOUBLE_CLICK_THRESHOLD) {
-            window.isDoubleClick = true;
+            clearTimeout(window.clickTimer);
+            isDoubleClick = true;
             handleScroll();
           }
           lastTouchTime = now;
@@ -898,7 +906,7 @@
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.59</span>
+      <span>4.1.60</span>
     </div>
   </div>
 </footer>
@@ -1061,7 +1069,7 @@
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.59",
+        "%c版本号 %c V4.1.60",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
