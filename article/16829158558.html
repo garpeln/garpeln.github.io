@@ -294,7 +294,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-26 18:19:51 +0800">2025/03/26</p>
+                                    <p id="current-date" data-value="2025-03-26 18:33:54 +0800">2025/03/26</p>
                                 </li>
                             </ul>
                     </div>
@@ -683,9 +683,6 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
       // 定义双击的时间阈值
       const DOUBLE_CLICK_THRESHOLD = 300;
 
-      let lastTouchTime = 0; // 记录上次触摸时间
-      let clickTimer; // 单击计时器
-
       function handleScroll() {
         const isNearBottom =
           window.scrollY + window.innerHeight >=
@@ -711,34 +708,16 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         window.requestAnimationFrame(scrollStep);
       }
 
-      const menuBtn = document.querySelector(".menuBtn");
-      if (menuBtn) {
-        menuBtn.addEventListener("touchstart", function (event) {
+      const menuNav = document.querySelector(".menuNav");
+      if (menuNav) {
+        let lastTouchTime = 0;
+        menuNav.addEventListener("touchstart", function (event) {
           const now = Date.now();
-          const isDoubleClick = now - lastTouchTime < DOUBLE_CLICK_THRESHOLD;
-
-          if (isDoubleClick) {
-            // 双击时触发滚动逻辑
-            event.preventDefault(); // 阻止默认行为
+          if (now - lastTouchTime < DOUBLE_CLICK_THRESHOLD) {
             handleScroll();
-          } else {
-            // 设置一个计时器来处理单击
-            clearTimeout(clickTimer); // 清除可能存在的定时器
-            clickTimer = setTimeout(() => {
-              // 如果在DOUBLE_CLICK_THRESHOLD时间内没有发生第二次点击，则认为是单击
-              const submenu = menuBtn.querySelector("ul");
-              if (submenu) {
-                submenu.style.display === "none"
-                  ? (submenu.style.display = "block")
-                  : (submenu.style.display = "none");
-              }
-            }, DOUBLE_CLICK_THRESHOLD);
           }
-
-          lastTouchTime = now; // 更新最后一次触摸时间
+          lastTouchTime = now;
         });
-
-        // 不需要额外的touchend监听器，因为通过clearTimeout已解决了冲突问题
       }
     });
   </script>
@@ -901,7 +880,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.62</span>
+      <span>4.1.63</span>
     </div>
   </div>
 </footer>
@@ -1064,7 +1043,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.62",
+        "%c版本号 %c V4.1.63",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
