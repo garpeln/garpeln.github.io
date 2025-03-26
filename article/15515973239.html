@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3502天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3503天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-25 18:28:18 +0800">2025/03/25</p>
+                                    <p id="current-date" data-value="2025-03-26 17:38:54 +0800">2025/03/26</p>
                                 </li>
                             </ul>
                     </div>
@@ -679,10 +679,15 @@ priviteView = &lt;UIView: 0x7fd4bfa079f0; frame = (0 0; 375 667); autoresize = W
       border-radius: 8px;
     }
   </style>
-  <script type="text/javascript">
+  <script>
     $(function () {
+      let isDoubleClick = false;
       // 点击菜单项时显示/隐藏子菜单
-      $(".menuNav>li").click(function () {
+      $(".menuNav>li").click(function (event) {
+        if (isDoubleClick) {
+          isDoubleClick = false;
+          return;
+        }
         var submenu = $(this).children("ul");
         submenu.slideToggle(300);
       });
@@ -736,6 +741,7 @@ priviteView = &lt;UIView: 0x7fd4bfa079f0; frame = (0 0; 375 667); autoresize = W
         menuNav.addEventListener("touchstart", function (event) {
           const now = Date.now();
           if (now - lastTouchTime < DOUBLE_CLICK_THRESHOLD) {
+            window.isDoubleClick = true;
             handleScroll();
           }
           lastTouchTime = now;
@@ -902,7 +908,7 @@ priviteView = &lt;UIView: 0x7fd4bfa079f0; frame = (0 0; 375 667); autoresize = W
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.58</span>
+      <span>4.1.59</span>
     </div>
   </div>
 </footer>
@@ -1065,7 +1071,7 @@ priviteView = &lt;UIView: 0x7fd4bfa079f0; frame = (0 0; 375 667); autoresize = W
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.58",
+        "%c版本号 %c V4.1.59",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -1784,7 +1790,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 217 + '天';
+  element.innerHTML = 9 + '年' + 218 + '天';
 
 }
 
@@ -1793,7 +1799,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3502 + '天';
+    element.innerHTML = 3503 + '天';
 }
 </script>
 
