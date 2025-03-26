@@ -294,7 +294,7 @@
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-26 17:54:49 +0800">2025/03/26</p>
+                                    <p id="current-date" data-value="2025-03-26 18:07:39 +0800">2025/03/26</p>
                                 </li>
                             </ul>
                     </div>
@@ -659,22 +659,10 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
   </style>
   <script type="text/javascript">
     $(function () {
-      let clickTimer;
-      let isDoubleClick = false;
-
       // 点击菜单项时显示/隐藏子菜单
-      $(".menuNav>li").on("touchstart", function (event) {
-        if (isDoubleClick) {
-          isDoubleClick = false;
-          return;
-        }
-
-        clickTimer = setTimeout(() => {
-          if (!isDoubleClick) {
-            var submenu = $(this).children("ul");
-            submenu.slideToggle(300);
-          }
-        }, 300);
+      $(".menuNav>li").click(function () {
+        var submenu = $(this).children("ul");
+        submenu.slideToggle(300);
       });
 
       // 点击页面其他区域时隐藏子菜单
@@ -694,6 +682,9 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
       const SCROLL_DURATION = 500;
       // 定义双击的时间阈值
       const DOUBLE_CLICK_THRESHOLD = 300;
+
+      let lastTouchTime = 0; // 记录上次触摸时间
+      let clickTimer; // 单击计时器
 
       function handleScroll() {
         const isNearBottom =
@@ -722,15 +713,33 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
 
       const menuNav = document.querySelector(".menuNav");
       if (menuNav) {
-        let lastTouchTime = 0;
         menuNav.addEventListener("touchstart", function (event) {
           const now = Date.now();
-          if (now - lastTouchTime < DOUBLE_CLICK_THRESHOLD) {
-            clearTimeout(window.clickTimer);
-            isDoubleClick = true;
+          const isDoubleClick = now - lastTouchTime < DOUBLE_CLICK_THRESHOLD;
+
+          if (isDoubleClick) {
+            // 双击时触发滚动逻辑
+            event.preventDefault(); // 阻止默认行为
             handleScroll();
+          } else {
+            // 设置一个计时器来处理单击
+            clickTimer = setTimeout(() => {
+              // 如果在DOUBLE_CLICK_THRESHOLD时间内没有发生第二次点击，则认为是单击
+              const submenu = menuNav.querySelector("ul");
+              if (submenu) {
+                submenu.style.display === "none"
+                  ? (submenu.style.display = "block")
+                  : (submenu.style.display = "none");
+              }
+            }, DOUBLE_CLICK_THRESHOLD);
           }
-          lastTouchTime = now;
+
+          lastTouchTime = now; // 更新最后一次触摸时间
+        });
+
+        // 清除单击计时器，用于检测双击
+        menuNav.addEventListener("touchend", function () {
+          clearTimeout(clickTimer); // 若在DOUBLE_CLICK_THRESHOLD内再次触发，清除单击计时器
         });
       }
     });
@@ -894,7 +903,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.60</span>
+      <span>4.1.61</span>
     </div>
   </div>
 </footer>
@@ -1057,7 +1066,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.60",
+        "%c版本号 %c V4.1.61",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
