@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
@@ -40,268 +39,450 @@
     
 </head>
 
-<body>
+  <body>
     <script>
-        (function() {
-            var darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'enabled') {
-                document.body.classList.add('dark-mode');
-            }
-        })();
+      (function () {
+        var darkMode = localStorage.getItem("darkMode");
+        if (darkMode === "enabled") {
+          document.body.classList.add("dark-mode");
+        }
+      })();
     </script>
 
     <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-                    <div class="profile box-shadow center">
-                        <div class="overlay"></div>
-                        <div class="center gavatar">
-                            <a href="/" class="profile_gavatar">
-                                <img class="circle" src="/assets/img/logo.png">
-                                  <div class="light-sweep"></div>
-                            </a>
-                        </div>
-                        <div class="nickname">
-                            风未止
-                        </div>
-                        <div class="center profile_desc">
-                            趁年轻，做自己想做的！
-                        </div>
-                        <div class="center profile_subdesc">
-                            There is no best, only better!
-                            <br />
-                        </div>
-                        <div class="site-state">
-                            <div class="site-state-item site-state-posts">
-                                <a href="/archives" target="_blank">
-                                    <span class="site-state-item-count">213</span>
-                                    <span class="site-state-item-name">归档</span>
-                                </a>
-                            </div>
-                            <div class="site-state-item site-state-categories">
-                                <a href="/categories" target="_blank">
-                                    <span class="site-state-item-count">10</span>
-                                    <span class="site-state-item-name">分类</span>
-                                </a>
-                            </div>
-                            <div class="site-state-item site-state-tags">
-                                <a href="/tags" target="_blank">
-                                    <span class="site-state-item-count">671</span>
-                                    <span class="site-state-item-name">标签</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="rss-subscribe"><a target="_blank" href="/feed.xml"><i class="fas fa-rss" style="padding-right:5px;"></i>RSS</a>
-                        </div>
-                    </div>
-                    <div class="siteNav" style="display:none;">
-                        <div class="noticeTitle"><i class="fas fa-bullhorn fa-shake"></i> 公告</div>
-                        <div class="noticeDetail">欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！</div>
-                    </div>
-                    <div class="siteNav">
-                        <div class="navTitle">博客导航</div>
-                        <ul>
-                            <li onclick="pushNew('/')"><a><i class="fas fa-home fa-fw"></i>首页</a></li>
-                            <li onclick="pushNew('/categories')"><a><i class="fas fa-th fa-fw"></i>分类</a>
-                                <span class="articleCount">10
-                                </span>
-                            </li>
-                            <li onclick="pushNew('/archives')"><a><i class="fas fa-archive fa-fw"></i>归档</a>
-                                <span class="articleCount">213
-                                </span>
-                            </li>
-                            <li onclick="pushNew('/nav')"><a><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
-                            <li onclick="pushNew('/works')"><a><i class="fab fa-git-square fa-fw"></i>项目</a>
-                                <span class="articleCount">4
-                                </span>
-                            </li>         
-                            <li onclick="pushNew('/links')"><a><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>                           
-                            <li onclick="pushNew('/about')"><a><i class="fas fa-user fa-fw"></i>关于</a></li>
-                            <li onclick="pushNew('/resume')"><a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
-                                <span class="articleCount">※</span>
-                            </li> 
-                            <li onclick="pushRandom()"><a><i class="fas fa-random fa-fw"></i>随机</a></li>
-                            <li id="cb-search-btn"><a class="search-btn"><i class="fas fa-search fa-fw"></i>搜索</a>
-                                <span class="search-tip">双击 control
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categoryNav">
-                        <div class="categoryNavTitle">文章分类</div>
-                        <div>
-                        <ul>
-                            
-                            <li onclick="pushNew('/categories#其他')" class="categoryList">
-                                <a name="其他" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">其他</a>
-                                <a name="其他" style="" class="articleCount">53
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#个人博客')" class="categoryList">
-                                <a name="个人博客" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">个人博客</a>
-                                <a name="个人博客" style="" class="articleCount">28
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#web前端')" class="categoryList">
-                                <a name="web前端" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">web前端</a>
-                                <a name="web前端" style="" class="articleCount">5
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#iOS')" class="categoryList">
-                                <a name="iOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">iOS</a>
-                                <a name="iOS" style="" class="articleCount">44
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#程序人生')" class="categoryList">
-                                <a name="程序人生" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">程序人生</a>
-                                <a name="程序人生" style="" class="articleCount">22
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#MacOS')" class="categoryList">
-                                <a name="MacOS" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">MacOS</a>
-                                <a name="MacOS" style="" class="articleCount">22
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
-                                <a name="产品和运营" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">产品和运营</a>
-                                <a name="产品和运营" style="" class="articleCount">12
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#Git')" class="categoryList">
-                                <a name="Git" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">Git</a>
-                                <a name="Git" style="" class="articleCount">7
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
-                                <a name="微信小程序" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">微信小程序</a>
-                                <a name="微信小程序" style="" class="articleCount">14
-                                </a>
-                            </li>
-                            
-                            <li onclick="pushNew('/categories#教程福利')" class="categoryList">
-                                <a name="教程福利" style="display: inline-block;white-space: nowrap;width: calc(100% - 42px);overflow: hidden;text-overflow: ellipsis;">教程福利</a>
-                                <a name="教程福利" style="" class="articleCount">6
-                                </a>
-                            </li>
-                            
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="contactNav">
-                        <div class="contactNavTitle">个人档案</div>
-                        <div class="contact-container">
-                            <a class="contact-item" href="/assets/img/qqQRCode.jpg" target="_blank">
-                                <img src="/assets/img/qqLogo.png">
-                                <span class="contact-name">contact via email</span>
-                            </a>
-                            <a class="contact-item" href="/" target="_blank">
-                                <img src="/assets/img/gmailLogo.png">
-                                <span class="contact-name">help@gor*eln.top</span>
-                            </a>
-                            <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
-                                <img src="/assets/img/csdnLogo.png">
-                                <span class="contact-name">gorpeln.blog.csdn.net</span>
-                            </a>
-                            <a class="contact-item" href="/about" target="_blank">
-                                <img src="/assets/img/list_more.png">
-                                <span class="contact-name">更多...</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="friendlinkNav" id="friendlinkNav">
-                        <div class="friendlinkNavTitle">友情链接</div>
-                        <div class="friend-container">
-                            
-                            <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
-                                <img src="/assets/img/foreverblog.ico">
-                                <span class="friend-name">十年之约</span>
-                            </a>
-                            
-                            <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
-                                <img src="/assets/img/travelling-dark.png">
-                                <span class="friend-name">开往-友链接力</span>
-                            </a>
-                            
-                            <a class="friend-item" href="/links" target="_blank">
-                                <img src="/assets/img/list_more.png">
-                                <span class="friend-name">更多...</span>
-                            </a>
-                            
-                        </div>
-                    </div>
-                    <div class="countdownNav" id="countdownNav">
-                        <div class="card-widget card-countdown">
-                            <div class="item-headline"><i></i><span></span></div>
-                            <div class="item-content">
-                                <div class="cd-count-left">
-                                    <span class="cd-text">距离</span>
-                                    <span class="cd-name" id="eventName">节日</span>
-                                    <span class="cd-time" id="daysUntil">00</span>
-                                    <span class="cd-date" id="eventDate">2015-08-23</span>
-                                </div>
-                                <div id="countRight" class="cd-count-right">
-                                    <div id="countRight" class="cd-count-right">
-                                        <div class="cd-count-item">
-                                            <div class="cd-item-name">今日</div>
-                                            <div class="cd-item-progress"></div>
-                                        </div>
-                                        <div class="cd-count-item">
-                                            <div class="cd-item-name">本周</div>
-                                            <div class="cd-item-progress"></div>
-                                        </div>
-                                        <div class="cd-count-item">
-                                            <div class="cd-item-name">本月</div>
-                                            <div class="cd-item-progress"></div>
-                                        </div>
-                                        <div class="cd-count-item">
-                                            <div class="cd-item-name">本年</div>
-                                            <div class="cd-item-progress"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="siteInfoNav" id="siteInfoNav">
-                        <div class="navTitle">网站资讯</div>
-                        <ul>
-                                <li>
-                                    <p >文章数目</p>
-                                    <p >213</p>
-                                </li>
-                                <li>
-                                    <p>本站总字数</p>
-                                    <p>108.6k</p> 
-
-                                </li>
-                                <li>
-                                    <p>已运行时间</p>
-                                    
-                                    
-                                    
-                                    
-
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3506天</p>
-                                </li>
-                                <li>
-                                    <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-29 17:40:27 +0800">2025/03/29</p>
-                                </li>
-                            </ul>
-                    </div>
-                    <div id="toc" class="customCatalog"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+            <div class="profile box-shadow center">
+              <div class="overlay"></div>
+              <div class="center gavatar">
+                <a href="/" class="profile_gavatar">
+                  <img class="circle" src="/assets/img/logo.png" />
+                  <div class="light-sweep"></div>
+                </a>
+              </div>
+              <div class="nickname">风未止</div>
+              <div class="center profile_desc">趁年轻，做自己想做的！</div>
+              <div class="center profile_subdesc">
+                There is no best, only better!
+                <br />
+              </div>
+              <div class="site-state">
+                <div class="site-state-item site-state-posts">
+                  <a href="/archives" target="_blank">
+                    <span class="site-state-item-count"
+                      >213</span
+                    >
+                    <span class="site-state-item-name">归档</span>
+                  </a>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
-                    <div class="page-content" id="pjax"><style type="text/css">
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories" target="_blank">
+                    <span class="site-state-item-count"
+                      >10</span
+                    >
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags" target="_blank">
+                    <span class="site-state-item-count"
+                      >671</span
+                    >
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rss-subscribe">
+                <a target="_blank" href="/feed.xml"
+                  ><i class="fas fa-rss" style="padding-right: 5px"></i>RSS</a
+                >
+              </div>
+            </div>
+            <div class="siteNav" style="display: none">
+              <div class="noticeTitle">
+                <i class="fas fa-bullhorn fa-shake"></i> 公告
+              </div>
+              <div class="noticeDetail">
+                欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！
+              </div>
+            </div>
+            <div class="siteNav">
+              <div class="navTitle">博客导航</div>
+              <ul>
+                <li onclick="pushNew('/')">
+                  <a><i class="fas fa-home fa-fw"></i>首页</a>
+                </li>
+                <li onclick="pushNew('/categories')">
+                  <a><i class="fas fa-th fa-fw"></i>分类</a>
+                  <span class="articleCount">10 </span>
+                </li>
+                <li onclick="pushNew('/archives')">
+                  <a><i class="fas fa-archive fa-fw"></i>归档</a>
+                  <span class="articleCount">213 </span>
+                </li>
+                <li onclick="pushNew('/nav')">
+                  <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
+                </li>
+                <li onclick="pushNew('/works')">
+                  <a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                  <span class="articleCount">4 </span>
+                </li>
+                
+                <li onclick="pushNew('/links')">
+                  <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
+                  <span class="articleCount">29 </span>
+                </li>
+                <li onclick="pushNew('/about')">
+                  <a><i class="fas fa-user fa-fw"></i>关于</a>
+                </li>
+                <li onclick="pushNew('/resume')">
+                  <a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                  <span class="articleCount">※</span>
+                </li>
+                <li onclick="pushRandom()">
+                  <a><i class="fas fa-random fa-fw"></i>随机</a>
+                </li>
+                <li id="cb-search-btn">
+                  <a class="search-btn"
+                    ><i class="fas fa-search fa-fw"></i>搜索</a
+                  >
+                  <span class="search-tip">双击 control </span>
+                </li>
+              </ul>
+            </div>
+            <div class="categoryNav">
+              <div class="categoryNavTitle">文章分类</div>
+              <div>
+                <ul>
+                  
+                  <li
+                    onclick="pushNew('/categories#其他')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="其他"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >其他</a
+                    >
+                    <a name="其他" style="" class="articleCount"
+                      >53
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#个人博客')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="个人博客"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >个人博客</a
+                    >
+                    <a name="个人博客" style="" class="articleCount"
+                      >28
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#web前端')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="web前端"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >web前端</a
+                    >
+                    <a name="web前端" style="" class="articleCount"
+                      >5
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#iOS')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="iOS"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >iOS</a
+                    >
+                    <a name="iOS" style="" class="articleCount"
+                      >44
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#程序人生')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="程序人生"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >程序人生</a
+                    >
+                    <a name="程序人生" style="" class="articleCount"
+                      >22
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#MacOS')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="MacOS"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >MacOS</a
+                    >
+                    <a name="MacOS" style="" class="articleCount"
+                      >22
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#产品和运营')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="产品和运营"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >产品和运营</a
+                    >
+                    <a name="产品和运营" style="" class="articleCount"
+                      >12
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#Git')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="Git"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >Git</a
+                    >
+                    <a name="Git" style="" class="articleCount"
+                      >7
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#微信小程序')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="微信小程序"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >微信小程序</a
+                    >
+                    <a name="微信小程序" style="" class="articleCount"
+                      >14
+                    </a>
+                  </li>
+                  
+                  <li
+                    onclick="pushNew('/categories#教程福利')"
+                    class="categoryList"
+                  >
+                    <a
+                      name="教程福利"
+                      style="
+                        display: inline-block;
+                        white-space: nowrap;
+                        width: calc(100% - 42px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                      >教程福利</a
+                    >
+                    <a name="教程福利" style="" class="articleCount"
+                      >6
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="contactNav">
+              <div class="contactNavTitle">个人档案</div>
+              <div class="contact-container">
+                <a
+                  class="contact-item"
+                  href="/assets/img/qqQRCode.jpg"
+                  target="_blank"
+                >
+                  <img src="/assets/img/qqLogo.png" />
+                  <span class="contact-name">contact via email</span>
+                </a>
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/gmailLogo.png" />
+                  <span class="contact-name">help@gor*eln.top</span>
+                </a>
+                <a
+                  class="contact-item"
+                  href="https://gorpeln.blog.csdn.net"
+                  target="_blank"
+                >
+                  <img src="/assets/img/csdnLogo.png" />
+                  <span class="contact-name"
+                    >gorpeln.blog.csdn.net</span
+                  >
+                </a>
+                <a class="contact-item" href="/about" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="contact-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <div class="friendlinkNav" id="friendlinkNav">
+              <div class="friendlinkNavTitle">友情链接</div>
+              <div class="friend-container">
+                
+                <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
+                  <img src="/assets/img/foreverblog.ico" />
+                  <span class="friend-name">十年之约</span>
+                </a>
+                
+                <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                  <img src="/assets/img/travelling-dark.png" />
+                  <span class="friend-name">开往-友链接力</span>
+                </a>
+                
+                <a class="friend-item" href="/links" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="friend-name">更多...</span>
+                </a>
+                
+              </div>
+            </div>
+            <div class="countdownNav" id="countdownNav">
+              <div class="card-widget card-countdown">
+                <div class="item-headline"><i></i><span></span></div>
+                <div class="item-content">
+                  <div class="cd-count-left">
+                    <span class="cd-text">距离</span>
+                    <span class="cd-name" id="eventName">节日</span>
+                    <span class="cd-time" id="daysUntil">00</span>
+                    <span class="cd-date" id="eventDate"
+                      >2015-08-23</span
+                    >
+                  </div>
+                  <div id="countRight" class="cd-count-right">
+                    <div id="countRight" class="cd-count-right">
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">今日</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本周</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本月</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本年</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="siteInfoNav" id="siteInfoNav">
+              <div class="navTitle">网站资讯</div>
+              <ul>
+                <li>
+                  <p>文章数目</p>
+                  <p>213</p>
+                </li>
+                <li>
+                  <p>本站总字数</p>
+                  <p>108.6k</p>
+                </li>
+                <li>
+                  <p>已运行时间</p>
+                     
+
+                  <p
+                    onmouseover="changeContent(this)"
+                    onmouseout="restoreContent(this)"
+                  >
+                    3506天
+                  </p>
+                </li>
+                <li>
+                  <p>最近更新时间</p>
+                  <p id="current-date" data-value="2025-03-29 18:12:31 +0800">
+                    2025/03/29
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div id="toc" class="customCatalog"></div>
+          </div>
+          <div
+            class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2"
+            onclick="hiddenQRCode()"
+          >
+            <div class="page-content" id="pjax"><style type="text/css">
 .tags-a {
     color: #888 ;
     font-size: 13px;
@@ -490,21 +671,25 @@
     </script>
 </div>
 </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <!-- 二维码、顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
-        <div class="themeModel" id="themeModel"></div>
-        <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15288536422')"></div>
-        <div class="qrcodeImg" id="qrcode"></div>
-        <div id="backtotop">
-            <a href="#">
-                <div class="bttbg"></div>
-            </a>
-        </div>
+      <div class="themeModel" id="themeModel"></div>
+      <div
+        class="qrcode"
+        id="qrcodeBtn"
+        onclick="createQrcode('/article/15288536422')"
+      ></div>
+      <div class="qrcodeImg" id="qrcode"></div>
+      <div id="backtotop">
+        <a href="#">
+          <div class="bttbg"></div>
+        </a>
+      </div>
     </div>
     <header class="site-header">
   <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
@@ -713,8 +898,7 @@
     </li>
   </ul>
 </header>
-
-    <style>
+ <style>
   .site-footer {
     display: flex;
     flex-direction: column;
@@ -830,7 +1014,7 @@
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.66</span>
+      <span>4.1.67</span>
     </div>
   </div>
 </footer>
@@ -993,7 +1177,7 @@
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.66",
+        "%c版本号 %c V4.1.67",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -1160,576 +1344,583 @@ s.parentNode.insertBefore(el, s);
    function _0xc9fd(){var _0x3d2991=['50jGMMZM','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','body','pointerEvents','left','flex','transparent','div','5FHdLoq','center','display','d3d3LmdvcnBlbG4udG9w','YmxvZy4yMDIwOTAueHl6','location','whiteSpace','MTI3LjAuMC4xOjQwMDA=','fade-out','-5%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','344561jxFMmT','port','rotate(-30deg)','543918qGggNE','alert-message','5276623LOkjPi','parentNode','9yWbZrO','30px','6pDDWhy','110%','591100FNHdtY','createElement','classList','width','appendChild','nowrap','removeChild','wrap','cloneNode','replace','11181WAtrgw','overflow','730408FPdjNO','9999','justifyContent','0.1','className','includes','top','Z29ycGVsbi50b3A=','position','190832JwJWWj','style','100%','none','innerText','black','background'];_0xc9fd=function(){return _0x3d2991;};return _0xc9fd();}function _0x42f1(_0x4447fa,_0x2c7b30){var _0xc9fd71=_0xc9fd();return _0x42f1=function(_0x42f174,_0x2b35b8){_0x42f174=_0x42f174-0x14b;var _0x41f217=_0xc9fd71[_0x42f174];return _0x41f217;},_0x42f1(_0x4447fa,_0x2c7b30);}(function(_0x500ebb,_0x50650){var _0x5735d6=_0x42f1,_0x17e190=_0x500ebb();while(!![]){try{var _0x3deb7e=parseInt(_0x5735d6(0x161))/0x1*(-parseInt(_0x5735d6(0x173))/0x2)+-parseInt(_0x5735d6(0x14f))/0x3+parseInt(_0x5735d6(0x16c))/0x4*(-parseInt(_0x5735d6(0x17b))/0x5)+parseInt(_0x5735d6(0x155))/0x6*(parseInt(_0x5735d6(0x14c))/0x7)+parseInt(_0x5735d6(0x163))/0x8+parseInt(_0x5735d6(0x153))/0x9*(parseInt(_0x5735d6(0x157))/0xa)+parseInt(_0x5735d6(0x151))/0xb;if(_0x3deb7e===_0x50650)break;else _0x17e190['push'](_0x17e190['shift']());}catch(_0x553e0f){_0x17e190['push'](_0x17e190['shift']());}}}(_0xc9fd,0x29b24),(function(){var _0x1f3646=_0x42f1,_0x1b394d=[_0x1f3646(0x16a),_0x1f3646(0x17e),_0x1f3646(0x182),_0x1f3646(0x17f)],_0x3eafee=_0x1f3646(0x14b),_0x44859d=document[_0x1f3646(0x180)]['hostname']+(document[_0x1f3646(0x180)][_0x1f3646(0x14d)]?':'+document[_0x1f3646(0x180)][_0x1f3646(0x14d)]:'');function _0x460230(_0x422c98){var _0x269094=_0x1f3646,_0x2947f3=document[_0x269094(0x158)](_0x269094(0x17a));_0x2947f3[_0x269094(0x16d)][_0x269094(0x176)]=_0x269094(0x16f),_0x2947f3[_0x269094(0x16d)][_0x269094(0x16b)]='fixed',_0x2947f3[_0x269094(0x16d)][_0x269094(0x169)]='0',_0x2947f3[_0x269094(0x16d)][_0x269094(0x177)]=_0x269094(0x184),_0x2947f3[_0x269094(0x16d)][_0x269094(0x15a)]=_0x269094(0x156),_0x2947f3[_0x269094(0x16d)]['height']=_0x269094(0x16e),_0x2947f3['style']['zIndex']=_0x269094(0x164),_0x2947f3[_0x269094(0x16d)]['opacity']=_0x269094(0x166),_0x2947f3[_0x269094(0x16d)][_0x269094(0x172)]=_0x269094(0x179),_0x2947f3[_0x269094(0x16d)][_0x269094(0x162)]='hidden',_0x2947f3[_0x269094(0x16d)][_0x269094(0x17d)]=_0x269094(0x178),_0x2947f3[_0x269094(0x16d)][_0x269094(0x165)]=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['alignItems']=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['flexWrap']=_0x269094(0x15e);var _0x13d91f=document[_0x269094(0x158)](_0x269094(0x17a));_0x13d91f[_0x269094(0x170)]=_0x422c98,_0x13d91f[_0x269094(0x16d)]['color']=_0x269094(0x171),_0x13d91f[_0x269094(0x16d)]['fontSize']=_0x269094(0x154),_0x13d91f[_0x269094(0x16d)]['transform']=_0x269094(0x14e),_0x13d91f['style'][_0x269094(0x181)]=_0x269094(0x15c),_0x13d91f[_0x269094(0x16d)]['margin']='80px';for(var _0x5f9f5b=0x0;_0x5f9f5b<0x64;_0x5f9f5b++){_0x2947f3[_0x269094(0x15b)](_0x13d91f[_0x269094(0x15f)](!![]));}document['body'][_0x269094(0x15b)](_0x2947f3);}function _0x344112(_0x368c57){var _0x295f4f=_0x1f3646,_0x3df2d9=document[_0x295f4f(0x158)]('div');_0x3df2d9[_0x295f4f(0x167)]=_0x295f4f(0x150),_0x3df2d9[_0x295f4f(0x170)]=_0x368c57,document[_0x295f4f(0x175)][_0x295f4f(0x15b)](_0x3df2d9),setTimeout(function(){var _0x432788=_0x295f4f;_0x3df2d9[_0x432788(0x159)]['add'](_0x432788(0x183)),setTimeout(function(){var _0x67fe25=_0x432788;_0x3df2d9[_0x67fe25(0x152)]&&_0x3df2d9[_0x67fe25(0x152)][_0x67fe25(0x15d)](_0x3df2d9);},0xc8);},0xbb8),setTimeout(function(){var _0x55060f=_0x295f4f;window[_0x55060f(0x180)][_0x55060f(0x160)](atob(_0x3eafee));},0x1388);}!_0x1b394d[_0x1f3646(0x168)](btoa(_0x44859d))&&(_0x460230(atob(_0x1b394d[0x0])),_0x344112(_0x1f3646(0x174)));}()));
 </script>
 
-</body>
-<!-- li添加跳转 -->
-<script>
-function pushNew(path) {
-    if (path == '/') {
-        window.location.href = path;
-    } else {
-        window.open(path);
-    }
-}
-
-        const postUrls = [
-            
-                "/article/17372028582",
-            
-                "/article/17347677826",
-            
-                "/article/17347663476",
-            
-                "/article/17347655378",
-            
-                "/article/17310530239",
-            
-                "/article/17280983369",
-            
-                "/article/17280983368",
-            
-                "/article/17265361548",
-            
-                "/article/17245056864",
-            
-                "/article/17202356559",
-            
-                "/article/17196724432",
-            
-                "/article/17146497169",
-            
-                "/article/17123887436",
-            
-                "/article/17113627324",
-            
-                "/article/17094338798",
-            
-                "/article/17087779433",
-            
-                "/article/17049566482",
-            
-                "/article/17040105944",
-            
-                "/article/17016025546",
-            
-                "/article/16990919984",
-            
-                "/article/16962230954",
-            
-                "/article/16959932733",
-            
-                "/article/16927632006",
-            
-                "/article/16895899334",
-            
-                "/article/16874238349",
-            
-                "/article/16829158558",
-            
-                "/article/16827504397",
-            
-                "/article/16786112870",
-            
-                "/article/16755875711",
-            
-                "/article/16726547033",
-            
-                "/article/16718726252",
-            
-                "/article/16682372627",
-            
-                "/article/16651247353",
-            
-                "/article/16621400624",
-            
-                "/article/16610720911",
-            
-                "/article/16577323953",
-            
-                "/article/16542416251",
-            
-                "/article/16516610954",
-            
-                "/article/16514594954",
-            
-                "/article/16491590954",
-            
-                "/article/16489862954",
-            
-                "/article/16489790954",
-            
-                "/article/16489168044",
-            
-                "/article/16440529320",
-            
-                "/article/16410066714",
-            
-                "/article/16235525192",
-            
-                "/article/16202019892",
-            
-                "/article/16199142732",
-            
-                "/article/16175510629",
-            
-                "/article/16168523139",
-            
-                "/article/16132790510",
-            
-                "/article/16131808742",
-            
-                "/article/16096373020",
-            
-                "/article/16088892195",
-            
-                "/article/16043955947",
-            
-                "/article/16017022152",
-            
-                "/article/16005868715",
-            
-                "/article/15987505965",
-            
-                "/article/15981552003",
-            
-                "/article/15945227879",
-            
-                "/article/15942881574",
-            
-                "/article/15937625033",
-            
-                "/article/15932337513",
-            
-                "/article/15931534585",
-            
-                "/article/15884027619",
-            
-                "/article/15862323579",
-            
-                "/article/15861494710",
-            
-                "/article/15860813363",
-            
-                "/article/15854795957",
-            
-                "/article/15846874151",
-            
-                "/article/15821713417",
-            
-                "/article/15805392787",
-            
-                "/article/15788283058",
-            
-                "/article/15786589400",
-            
-                "/article/15778684175",
-            
-                "/article/15776115840",
-            
-                "/article/15733745781",
-            
-                "/article/15713829999",
-            
-                "/article/15713825459",
-            
-                "/article/15700906142",
-            
-                "/article/15692409843",
-            
-                "/article/15664680297",
-            
-                "/article/15662012632",
-            
-                "/article/15632033519",
-            
-                "/article/15623480718",
-            
-                "/article/15618778699",
-            
-                "/article/15612663893",
-            
-                "/article/15611722666",
-            
-                "/article/15605697133",
-            
-                "/article/15599710733",
-            
-                "/article/15589479418",
-            
-                "/article/15583474979",
-            
-                "/article/15575387722",
-            
-                "/article/15573877312",
-            
-                "/article/15549830140",
-            
-                "/article/15547100706",
-            
-                "/article/15526269575",
-            
-                "/article/15524857215",
-            
-                "/article/15515973239",
-            
-                "/article/15501213244",
-            
-                "/article/15500354146",
-            
-                "/article/15495225362",
-            
-                "/article/15493658365",
-            
-                "/article/15474431442",
-            
-                "/article/15462756619",
-            
-                "/article/15438182232",
-            
-                "/article/15429884147",
-            
-                "/article/15421638259",
-            
-                "/article/15419058710",
-            
-                "/article/15405204060",
-            
-                "/article/15394160033",
-            
-                "/article/15393512853",
-            
-                "/article/15389885669",
-            
-                "/article/15385436862",
-            
-                "/article/15368306590",
-            
-                "/article/15361983047",
-            
-                "/article/15359479766",
-            
-                "/article/15334663054",
-            
-                "/article/15326844122",
-            
-                "/article/15326844120",
-            
-                "/article/15324985037",
-            
-                "/article/15288656748",
-            
-                "/article/15288536422",
-            
-                "/article/15261978139",
-            
-                "/article/15228363519",
-            
-                "/article/15226027614",
-            
-                "/article/15215990385",
-            
-                "/article/15209452183",
-            
-                "/article/15204862561",
-            
-                "/article/15178011950",
-            
-                "/article/15166860457",
-            
-                "/article/15153005416",
-            
-                "/article/15136989613",
-            
-                "/article/15119562214",
-            
-                "/article/15115957926",
-            
-                "/article/15090326823",
-            
-                "/article/15077042074",
-            
-                "/article/15076490854",
-            
-                "/article/15064370822",
-            
-                "/article/15034734259",
-            
-                "/article/15006512926",
-            
-                "/article/14985344961",
-            
-                "/article/14973389134",
-            
-                "/article/14970863549",
-            
-                "/article/14968977690",
-            
-                "/article/14957851016",
-            
-                "/article/14922464812",
-            
-                "/article/14906012630",
-            
-                "/article/14903507538",
-            
-                "/article/14896376367",
-            
-                "/article/14882587810",
-            
-                "/article/14875801742",
-            
-                "/article/14873067700",
-            
-                "/article/14872573275",
-            
-                "/article/14863391315",
-            
-                "/article/14861973259",
-            
-                "/article/14776665877",
-            
-                "/article/14743559444",
-            
-                "/article/14696000759",
-            
-                "/article/14669248561",
-            
-                "/article/14457584631",
-            
-                "/article/14439563950",
-            
-                "/article/14427478333",
-            
-                "/article/14411221175",
-            
-                "/article/14404771043",
-            
-                "/article/14402966023",
-            
-                "/p/30",
-            
-                "/p/29",
-            
-                "/p/28",
-            
-                "/p/27",
-            
-                "/p/26",
-            
-                "/p/25",
-            
-                "/p/24",
-            
-                "/p/23",
-            
-                "/p/22",
-            
-                "/p/21",
-            
-                "/p/20",
-            
-                "/p/19",
-            
-                "/p/18",
-            
-                "/p/17",
-            
-                "/p/16",
-            
-                "/p/15",
-            
-                "/p/14",
-            
-                "/p/13",
-            
-                "/p/12",
-            
-                "/p/11",
-            
-                "/p/10",
-            
-                "/p/09",
-            
-                "/p/08",
-            
-                "/p/07",
-            
-                "/p/06",
-            
-                "/p/05",
-            
-                "/p/04",
-            
-                "/p/03",
-            
-                "/p/02",
-            
-                "/p/01",
-            
-                "/b/07",
-            
-                "/b/06",
-            
-                "/b/05",
-            
-                "/b/04",
-            
-                "/b/03",
-            
-                "/b/02",
-            
-                "/b/01",
-            
-                "/i/10",
-            
-                "/i/09",
-            
-                "/i/08",
-            
-                "/i/07",
-            
-                "/i/06",
-            
-                "/i/05",
-            
-                "/i/04",
-            
-                "/i/03",
-            
-                "/i/02",
-            
-                "/i/01",
-            
-        ];
-
-        function pushRandom() {
-            const randomIndex = Math.floor(Math.random() * postUrls.length);
-            const randomUrl = postUrls[randomIndex];
-            // window.location.href = randomUrl;
-            window.open(randomUrl);
+  </body>
+  <!-- li添加跳转 -->
+  <script>
+    function pushNew(path) {
+        if (path == '/') {
+            window.location.href = path;
+        } else {
+            window.open(path);
         }
-</script>
-<!-- 目录 -->
-<script>
-$(document).ready(function() {
-    function setupFixedMenu(tocId, referenceId) {
-        var toc = $('#' + tocId);
-        var reference = $('#' + referenceId);
+    }
+
+            const postUrls = [
+                
+                    "/article/17372028582",
+                
+                    "/article/17347677826",
+                
+                    "/article/17347663476",
+                
+                    "/article/17347655378",
+                
+                    "/article/17310530239",
+                
+                    "/article/17280983369",
+                
+                    "/article/17280983368",
+                
+                    "/article/17265361548",
+                
+                    "/article/17245056864",
+                
+                    "/article/17202356559",
+                
+                    "/article/17196724432",
+                
+                    "/article/17146497169",
+                
+                    "/article/17123887436",
+                
+                    "/article/17113627324",
+                
+                    "/article/17094338798",
+                
+                    "/article/17087779433",
+                
+                    "/article/17049566482",
+                
+                    "/article/17040105944",
+                
+                    "/article/17016025546",
+                
+                    "/article/16990919984",
+                
+                    "/article/16962230954",
+                
+                    "/article/16959932733",
+                
+                    "/article/16927632006",
+                
+                    "/article/16895899334",
+                
+                    "/article/16874238349",
+                
+                    "/article/16829158558",
+                
+                    "/article/16827504397",
+                
+                    "/article/16786112870",
+                
+                    "/article/16755875711",
+                
+                    "/article/16726547033",
+                
+                    "/article/16718726252",
+                
+                    "/article/16682372627",
+                
+                    "/article/16651247353",
+                
+                    "/article/16621400624",
+                
+                    "/article/16610720911",
+                
+                    "/article/16577323953",
+                
+                    "/article/16542416251",
+                
+                    "/article/16516610954",
+                
+                    "/article/16514594954",
+                
+                    "/article/16491590954",
+                
+                    "/article/16489862954",
+                
+                    "/article/16489790954",
+                
+                    "/article/16489168044",
+                
+                    "/article/16440529320",
+                
+                    "/article/16410066714",
+                
+                    "/article/16235525192",
+                
+                    "/article/16202019892",
+                
+                    "/article/16199142732",
+                
+                    "/article/16175510629",
+                
+                    "/article/16168523139",
+                
+                    "/article/16132790510",
+                
+                    "/article/16131808742",
+                
+                    "/article/16096373020",
+                
+                    "/article/16088892195",
+                
+                    "/article/16043955947",
+                
+                    "/article/16017022152",
+                
+                    "/article/16005868715",
+                
+                    "/article/15987505965",
+                
+                    "/article/15981552003",
+                
+                    "/article/15945227879",
+                
+                    "/article/15942881574",
+                
+                    "/article/15937625033",
+                
+                    "/article/15932337513",
+                
+                    "/article/15931534585",
+                
+                    "/article/15884027619",
+                
+                    "/article/15862323579",
+                
+                    "/article/15861494710",
+                
+                    "/article/15860813363",
+                
+                    "/article/15854795957",
+                
+                    "/article/15846874151",
+                
+                    "/article/15821713417",
+                
+                    "/article/15805392787",
+                
+                    "/article/15788283058",
+                
+                    "/article/15786589400",
+                
+                    "/article/15778684175",
+                
+                    "/article/15776115840",
+                
+                    "/article/15733745781",
+                
+                    "/article/15713829999",
+                
+                    "/article/15713825459",
+                
+                    "/article/15700906142",
+                
+                    "/article/15692409843",
+                
+                    "/article/15664680297",
+                
+                    "/article/15662012632",
+                
+                    "/article/15632033519",
+                
+                    "/article/15623480718",
+                
+                    "/article/15618778699",
+                
+                    "/article/15612663893",
+                
+                    "/article/15611722666",
+                
+                    "/article/15605697133",
+                
+                    "/article/15599710733",
+                
+                    "/article/15589479418",
+                
+                    "/article/15583474979",
+                
+                    "/article/15575387722",
+                
+                    "/article/15573877312",
+                
+                    "/article/15549830140",
+                
+                    "/article/15547100706",
+                
+                    "/article/15526269575",
+                
+                    "/article/15524857215",
+                
+                    "/article/15515973239",
+                
+                    "/article/15501213244",
+                
+                    "/article/15500354146",
+                
+                    "/article/15495225362",
+                
+                    "/article/15493658365",
+                
+                    "/article/15474431442",
+                
+                    "/article/15462756619",
+                
+                    "/article/15438182232",
+                
+                    "/article/15429884147",
+                
+                    "/article/15421638259",
+                
+                    "/article/15419058710",
+                
+                    "/article/15405204060",
+                
+                    "/article/15394160033",
+                
+                    "/article/15393512853",
+                
+                    "/article/15389885669",
+                
+                    "/article/15385436862",
+                
+                    "/article/15368306590",
+                
+                    "/article/15361983047",
+                
+                    "/article/15359479766",
+                
+                    "/article/15334663054",
+                
+                    "/article/15326844122",
+                
+                    "/article/15326844120",
+                
+                    "/article/15324985037",
+                
+                    "/article/15288656748",
+                
+                    "/article/15288536422",
+                
+                    "/article/15261978139",
+                
+                    "/article/15228363519",
+                
+                    "/article/15226027614",
+                
+                    "/article/15215990385",
+                
+                    "/article/15209452183",
+                
+                    "/article/15204862561",
+                
+                    "/article/15178011950",
+                
+                    "/article/15166860457",
+                
+                    "/article/15153005416",
+                
+                    "/article/15136989613",
+                
+                    "/article/15119562214",
+                
+                    "/article/15115957926",
+                
+                    "/article/15090326823",
+                
+                    "/article/15077042074",
+                
+                    "/article/15076490854",
+                
+                    "/article/15064370822",
+                
+                    "/article/15034734259",
+                
+                    "/article/15006512926",
+                
+                    "/article/14985344961",
+                
+                    "/article/14973389134",
+                
+                    "/article/14970863549",
+                
+                    "/article/14968977690",
+                
+                    "/article/14957851016",
+                
+                    "/article/14922464812",
+                
+                    "/article/14906012630",
+                
+                    "/article/14903507538",
+                
+                    "/article/14896376367",
+                
+                    "/article/14882587810",
+                
+                    "/article/14875801742",
+                
+                    "/article/14873067700",
+                
+                    "/article/14872573275",
+                
+                    "/article/14863391315",
+                
+                    "/article/14861973259",
+                
+                    "/article/14776665877",
+                
+                    "/article/14743559444",
+                
+                    "/article/14696000759",
+                
+                    "/article/14669248561",
+                
+                    "/article/14457584631",
+                
+                    "/article/14439563950",
+                
+                    "/article/14427478333",
+                
+                    "/article/14411221175",
+                
+                    "/article/14404771043",
+                
+                    "/article/14402966023",
+                
+                    "/p/30",
+                
+                    "/p/29",
+                
+                    "/p/28",
+                
+                    "/p/27",
+                
+                    "/p/26",
+                
+                    "/p/25",
+                
+                    "/p/24",
+                
+                    "/p/23",
+                
+                    "/p/22",
+                
+                    "/p/21",
+                
+                    "/p/20",
+                
+                    "/p/19",
+                
+                    "/p/18",
+                
+                    "/p/17",
+                
+                    "/p/16",
+                
+                    "/p/15",
+                
+                    "/p/14",
+                
+                    "/p/13",
+                
+                    "/p/12",
+                
+                    "/p/11",
+                
+                    "/p/10",
+                
+                    "/p/09",
+                
+                    "/p/08",
+                
+                    "/p/07",
+                
+                    "/p/06",
+                
+                    "/p/05",
+                
+                    "/p/04",
+                
+                    "/p/03",
+                
+                    "/p/02",
+                
+                    "/p/01",
+                
+                    "/b/07",
+                
+                    "/b/06",
+                
+                    "/b/05",
+                
+                    "/b/04",
+                
+                    "/b/03",
+                
+                    "/b/02",
+                
+                    "/b/01",
+                
+                    "/i/10",
+                
+                    "/i/09",
+                
+                    "/i/08",
+                
+                    "/i/07",
+                
+                    "/i/06",
+                
+                    "/i/05",
+                
+                    "/i/04",
+                
+                    "/i/03",
+                
+                    "/i/02",
+                
+                    "/i/01",
+                
+            ];
+
+            function pushRandom() {
+                const randomIndex = Math.floor(Math.random() * postUrls.length);
+                const randomUrl = postUrls[randomIndex];
+                // window.location.href = randomUrl;
+                window.open(randomUrl);
+            }
+  </script>
+  <!-- 目录 -->
+  <script>
+    $(document).ready(function () {
+      function setupFixedMenu(tocId, referenceId) {
+        var toc = $("#" + tocId);
+        var reference = $("#" + referenceId);
         var originalTop = toc.offset().top;
         var isFixed = false;
 
         function updateTocPosition() {
-            var scrollTop = $(window).scrollTop();
-            var shouldFix = scrollTop >= originalTop;
+          var scrollTop = $(window).scrollTop();
+          var shouldFix = scrollTop >= originalTop;
 
-            if (shouldFix !== isFixed) {
-                isFixed = shouldFix;
-                toc.css({
-                    position: isFixed ? 'fixed' : 'relative',
-                    top: isFixed ? '0' : '', // Adjust this value as needed
-                    width: reference.outerWidth() + 'px'
-                });
-            }
+          if (shouldFix !== isFixed) {
+            isFixed = shouldFix;
+            toc.css({
+              position: isFixed ? "fixed" : "relative",
+              top: isFixed ? "0" : "", // Adjust this value as needed
+              width: reference.outerWidth() + "px",
+            });
+          }
 
-            // Ensure TOC scrolls to keep the active item in view
-            scrollTocToActiveItem();
+          // Ensure TOC scrolls to keep the active item in view
+          scrollTocToActiveItem();
         }
 
         function scrollTocToActiveItem() {
-            var activeItem = toc.find('.toc-active');
-            if (activeItem.length > 0) {
-                var activeTop = activeItem.position().top;
-                var tocHeight = toc.innerHeight();
-                var scrollPos = toc.scrollTop();
+          var activeItem = toc.find(".toc-active");
+          if (activeItem.length > 0) {
+            var activeTop = activeItem.position().top;
+            var tocHeight = toc.innerHeight();
+            var scrollPos = toc.scrollTop();
 
-                // Check if active item is not in view
-                if (activeTop < 0 || activeTop + activeItem.outerHeight() > tocHeight) {
-                    // Scroll TOC to bring active item into view
-                    toc.animate({ scrollTop: scrollPos + activeTop - (tocHeight / 2) }, 300);
-                }
+            // Check if active item is not in view
+            if (
+              activeTop < 0 ||
+              activeTop + activeItem.outerHeight() > tocHeight
+            ) {
+              // Scroll TOC to bring active item into view
+              toc.animate(
+                { scrollTop: scrollPos + activeTop - tocHeight / 2 },
+                300,
+              );
             }
+          }
         }
 
         function handleViewportChange() {
-            // Delay the execution to ensure the DOM is fully updated
-            setTimeout(function() {
-                originalTop = toc.offset().top; // Recalculate original top position
-                updateTocPosition(); // Update TOC position immediately
-            }, 0);
+          // Delay the execution to ensure the DOM is fully updated
+          setTimeout(function () {
+            originalTop = toc.offset().top; // Recalculate original top position
+            updateTocPosition(); // Update TOC position immediately
+          }, 0);
         }
 
         // Listen for window resize and orientation change events
-        $(window).on('scroll', function() {
-            requestAnimationFrame(updateTocPosition);
+        $(window).on("scroll", function () {
+          requestAnimationFrame(updateTocPosition);
         });
 
-        $(window).on('resize orientationchange', function() {
-            handleViewportChange();
+        $(window).on("resize orientationchange", function () {
+          handleViewportChange();
         });
 
         // Ensure correct state on page load
         updateTocPosition();
-    }
+      }
 
-    setupFixedMenu('toc', 'siteInfoNav');
-});
-</script>
-<!-- 二维码 -->
-<script type="text/javascript" src="/assets/js/qrcode.js"></script>
-<script>
-    // 生成二维码
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width : 150,
-        height : 150
+      setupFixedMenu("toc", "siteInfoNav");
     });
-    function createQrcode(url) {
+  </script>
+  <!-- 二维码 -->
+  <script type="text/javascript" src="/assets/js/qrcode.js"></script>
+  <script>
+        // 生成二维码
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 150,
+            height : 150
+        });
+        function createQrcode(url) {
 
-        qrcode.makeCode('https://gorpeln.top' + url);
+            qrcode.makeCode('https://gorpeln.top' + url);
 
-        var qrcodeImg = document.getElementById('qrcode');
-        if (qrcodeImg.style.display == 'block') {
-            qrcodeImg.style.display = 'none';
-            qrcode.clear();
-        } else {
-            qrcodeImg.style.display = 'block';
+            var qrcodeImg = document.getElementById('qrcode');
+            if (qrcodeImg.style.display == 'block') {
+                qrcodeImg.style.display = 'none';
+                qrcode.clear();
+            } else {
+                qrcodeImg.style.display = 'block';
+            }
         }
+
+        // 隐藏二维码
+        function hiddenQRCode() {
+            var qrcodeImg = document.getElementById('qrcode');
+            if (qrcodeImg.style.display == 'block') {
+                qrcodeImg.style.display = 'none';
+                qrcode.clear();
+            }
+        }
+
+
+    function changeContent(element) {
+        
+        
+        
+
+        
+        
+
+      element.innerHTML = 9 + '年' + 221 + '天';
+
     }
 
-    // 隐藏二维码
-    function hiddenQRCode() {
-        var qrcodeImg = document.getElementById('qrcode');
-        if (qrcodeImg.style.display == 'block') {
-            qrcodeImg.style.display = 'none';
-            qrcode.clear();
-        }
+    function restoreContent(element) {
+        
+        
+        
+        
+        element.innerHTML = 3506 + '天';
     }
+  </script>
 
-
-function changeContent(element) {
-    
-    
-    
-
-    
-    
-
-  element.innerHTML = 9 + '年' + 221 + '天';
-
-}
-
-function restoreContent(element) {
-    
-    
-    
-    
-    element.innerHTML = 3506 + '天';
-}
-</script>
-
-<!-- 日期计算 -->
- <script>
-
-     var value = document.getElementById("current-date").getAttribute("data-value");
-     console.log(value); // 输出：hello
+  <!-- 日期计算 -->
+  <script>
+    var value = document
+      .getElementById("current-date")
+      .getAttribute("data-value");
+    console.log(value); // 输出：hello
     // 创建一个表示给定日期和时间的 Date 对象
     var givenDate = new Date(value);
 
@@ -1747,49 +1938,46 @@ function restoreContent(element) {
 
     // 比较给定日期和当前日期
     if (givenDate < previousDate) {
-   // 将日期显示在页面上
-        var dateElement = document.getElementById("current-date");
-        dateElement.textContent = year + "/" + month + "/" + day
-    } 
-
+      // 将日期显示在页面上
+      var dateElement = document.getElementById("current-date");
+      dateElement.textContent = year + "/" + month + "/" + day;
+    }
   </script>
 
-<!-- rss 添加声音 -->
-<script>
-$(document).ready(function() {
-    $('.rss-subscribe').click(function(event) {
+  <!-- rss 添加声音 -->
+  <script>
+    $(document).ready(function () {
+      $(".rss-subscribe").click(function (event) {
         // 阻止事件冒泡，防止点击div时触发a标签的点击事件
         event.stopPropagation();
 
         // 播放音频
-        var audio = new Audio('https://img.gorpeln.top/media/cat.mp3');
+        var audio = new Audio("https://img.gorpeln.top/media/cat.mp3");
         audio.play();
+      });
     });
-});
-</script>
+  </script>
 
-
-<script>
-  $(document).ready(function() {
-    $("#toc").toc({
-      noBackToTopLinks: true,
-      title: '',
-      minimumHeaders: 3,
-      headers: 'h1, h2, h3, h4, h5, h6',
-      listType: 'ul',// values: [ol|ul]
-      showEffect: 'slideDown',// values: [show|slideDown|fadeIn|none]
-      showSpeed: '0',// set to 0 to deactivate effect  | slow
-      classes: {
-        list: '',
-        item: ''
-      },
-      highlightOnScroll: true,
-      highlightOffset: 100
+  <script>
+    $(document).ready(function () {
+      $("#toc").toc({
+        noBackToTopLinks: true,
+        title: "",
+        minimumHeaders: 3,
+        headers: "h1, h2, h3, h4, h5, h6",
+        listType: "ul", // values: [ol|ul]
+        showEffect: "slideDown", // values: [show|slideDown|fadeIn|none]
+        showSpeed: "0", // set to 0 to deactivate effect  | slow
+        classes: {
+          list: "",
+          item: "",
+        },
+        highlightOnScroll: true,
+        highlightOffset: 100,
+      });
     });
-  });
-    $('#toc').css('display', 'block');
-</script>
-<script src="/assets/js/themeToggle.js"></script>
-<script src="/assets/js/countdown.js"></script>
-
+    $("#toc").css("display", "block");
+  </script>
+  <script src="/assets/js/themeToggle.js"></script>
+  <script src="/assets/js/countdown.js"></script>
 </html>
