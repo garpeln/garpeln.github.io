@@ -280,7 +280,7 @@
                                 </li>
                                 <li>
                                     <p>本站总字数</p>
-                                    <p>108.5k</p> 
+                                    <p>108.6k</p> 
 
                                 </li>
                                 <li>
@@ -290,11 +290,11 @@
                                     
                                     
 
-                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3503天</p>
+                                    <p onmouseover="changeContent(this)" onmouseout="restoreContent(this)">3506天</p>
                                 </li>
                                 <li>
                                     <p>最近更新时间</p>
-                                    <p id="current-date" data-value="2025-03-26 18:33:54 +0800">2025/03/26</p>
+                                    <p id="current-date" data-value="2025-03-29 17:20:00 +0800">2025/03/29</p>
                                 </li>
                             </ul>
                     </div>
@@ -766,22 +766,11 @@
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // 定义滚动距离底部的偏移量
-      const SCROLL_OFFSET = 500;
       // 定义滚动动画的持续时间
       const SCROLL_DURATION = 500;
-      // 定义双击的时间阈值
-      const DOUBLE_CLICK_THRESHOLD = 300;
 
-      function handleScroll() {
-        const isNearBottom =
-          window.scrollY + window.innerHeight >=
-          document.body.scrollHeight - SCROLL_OFFSET;
+      function scrollToPosition(end) {
         const start = window.scrollY;
-        const end = isNearBottom
-          ? 0
-          : document.body.scrollHeight - SCROLL_OFFSET;
-
         const startTime = performance.now();
 
         function scrollStep(timestamp) {
@@ -799,14 +788,24 @@
       }
 
       const menuNav = document.querySelector(".menuNav");
+      let startY = 0;
+
       if (menuNav) {
-        let lastTouchTime = 0;
         menuNav.addEventListener("touchstart", function (event) {
-          const now = Date.now();
-          if (now - lastTouchTime < DOUBLE_CLICK_THRESHOLD) {
-            handleScroll();
+          startY = event.touches[0].clientY;
+        });
+
+        menuNav.addEventListener("touchend", function (event) {
+          const endY = event.changedTouches[0].clientY;
+          const deltaY = endY - startY;
+
+          if (deltaY < 0) {
+            // 向上滑动
+            scrollToPosition(0);
+          } else if (deltaY > 0) {
+            // 向下滑动
+            scrollToPosition(document.body.scrollHeight);
           }
-          lastTouchTime = now;
         });
       }
     });
@@ -970,7 +969,7 @@
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.63</span>
+      <span>4.1.64</span>
     </div>
   </div>
 </footer>
@@ -1133,7 +1132,7 @@
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.63",
+        "%c版本号 %c V4.1.64",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -1852,7 +1851,7 @@ function changeContent(element) {
     
     
 
-  element.innerHTML = 9 + '年' + 218 + '天';
+  element.innerHTML = 9 + '年' + 221 + '天';
 
 }
 
@@ -1861,7 +1860,7 @@ function restoreContent(element) {
     
     
     
-    element.innerHTML = 3503 + '天';
+    element.innerHTML = 3506 + '天';
 }
 </script>
 
