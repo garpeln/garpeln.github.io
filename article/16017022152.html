@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >213</span
+                      >214</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">213 </span>
+                  <span class="articleCount">214 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -172,7 +172,7 @@
                       >其他</a
                     >
                     <a name="其他" style="" class="articleCount"
-                      >53
+                      >54
                     </a>
                   </li>
                   
@@ -451,11 +451,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>213</p>
+                  <p>214</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>108.6k</p>
+                  <p>108.9k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -465,13 +465,13 @@
                     onmouseover="changeContent(this)"
                     onmouseout="restoreContent(this)"
                   >
-                    3506天
+                    3515天
                   </p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-03-29 18:12:31 +0800">
-                    2025/03/29
+                  <p id="current-date" data-value="2025-04-07 21:48:40 +0800">
+                    2025/04/07
                   </p>
                 </li>
               </ul>
@@ -541,20 +541,20 @@
 
 <p>注意：<br />
 所有 View 默认都是 block浮动布局，所以如果要使用 flex 布局的话需要进行显式声明<br />
-<img src="https://img.gorpeln.top/blog/20201003131655391.png!gorpeln" alt="20201003131655391" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655391.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655391" /></p>
 
 <h3 id="容器与项目元素">容器与项目元素</h3>
 <p>日常开发中，采用flex布局的元素，一般简称为“容器”  <br />
 容器内的元素简称为“项目”或者“元素”  <br />
-<img src="https://img.gorpeln.top/blog/20201003131655392.png!gorpeln" alt="20201003131655392" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655392.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655392" /></p>
 
 <h3 id="主轴与交叉轴">主轴与交叉轴</h3>
 <p>在介绍各个属性之前，需要先明确一个坐标轴<br />
 水平方向的是主轴（main axis），垂直方向的是交叉轴（cross axis）。下图为默认情况下。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655393.png!gorpeln" alt="20201003131655393" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655393.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655393" /></p>
 
 <p>项目是在主轴上排列，排满后在交叉轴方向换行。需要注意的是，交叉轴垂直于主轴，它的方向取决于主轴方向。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655394.png!gorpeln" alt="20201003131655394" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655394.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655394" /></p>
 
 <h3 id="容器与项目元素-布局属性">容器与项目元素 布局属性</h3>
 <p><strong>容器属性</strong>：flex-flow、flex-direction、flex-wrap、justify-content、align-items、align-content<br />
@@ -602,7 +602,7 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
 <code class="language-plaintext highlighter-rouge">row-reverse</code>： row的反方向。主轴横向，项目排列方向为从右指向左。<br />
 <code class="language-plaintext highlighter-rouge">column</code>： 主轴纵向，项目排列方向从上指向下。<br />
 <code class="language-plaintext highlighter-rouge">column-reverse</code>： column的反方向。主轴纵向，项目排列方向从下指向上。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655395.png!gorpeln" alt="20201003131655395" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655395.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655395" /></p>
 
 <h4 id="2flex-wrap-属性">(2)flex-wrap 属性</h4>
 <p>设置是否允许项目多行排列，以及多行排列时换行的方向。</p>
@@ -611,7 +611,7 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
 <p><code class="language-plaintext highlighter-rouge">nowrap</code>（默认值）： 不换行。如果单行内容过多，则溢出容器。<br />
 <code class="language-plaintext highlighter-rouge">wrap</code>： 容器单行容不下所有项目时，换行排列。<br />
 <code class="language-plaintext highlighter-rouge">wrap-reverse</code>： 容器单行容不下所有项目时，换行排列。换行方向为wrap时的反方向。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655396.png!gorpeln" alt="20201003131655396" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655396.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655396" /></p>
 
 <h4 id="3justify-content-属性">(3)justify-content 属性</h4>
 <p>设置项目在主轴方向上对齐方式，以及分配项目之间及其周围多余的空间（通常对应于某一行项目排列）。</p>
@@ -623,7 +623,7 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
 <code class="language-plaintext highlighter-rouge">space-between</code>： 项目之间距离相等，但是，处在两端的项目与容器边靠紧。<br />
 <code class="language-plaintext highlighter-rouge">space-around</code>： 与space-between相似。但是，处在两端的项目与容器边距离为，项目之间距离的一半。<br />
 <code class="language-plaintext highlighter-rouge">space-evenly</code>： 项目在容器中等间距排列。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655397.png!gorpeln" alt="20201003131655397" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655397.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655397" /></p>
 
 <h4 id="4align-item-属性">(4)align-item 属性</h4>
 <p>设置项目在某一行中的对齐方式。</p>
@@ -634,7 +634,7 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
 <code class="language-plaintext highlighter-rouge">center</code>： 项目在行中居中对齐。<br />
 <code class="language-plaintext highlighter-rouge">flex-end</code>： 项目底部与行终点对齐。<br />
 <code class="language-plaintext highlighter-rouge">baseline</code>： 项目的第一行文字的基线对齐。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655398.png!gorpeln" alt="20201003131655398" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655398.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655398" /></p>
 
 <h4 id="5align-content-属性">(5)align-content 属性</h4>
 <p>项目在多行排列时，设置行在交叉轴方向上的对齐方式，以及分配行之间及其周围多余的空间。</p>
@@ -647,11 +647,11 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
 <code class="language-plaintext highlighter-rouge">space-between</code>： 行与行间距相等，首行离交叉轴起点和尾行离交叉轴终点距离为0。<br />
 <code class="language-plaintext highlighter-rouge">space-around</code>： 行与行间距相等，首行离交叉轴起点和尾行离交叉轴终点距离为行与行间间距的一半。<br />
 <code class="language-plaintext highlighter-rouge">space-evenly</code>： 行间间距、以及首行离交叉轴起点和尾行离交叉轴终点距离相等。<br />
-<img src="https://img.gorpeln.top/blog/20201003131655399.png!gorpeln" alt="20201003131655399" /></p>
+<img src="https://img.gorpeln.top/blog/20201003131655399.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655399" /></p>
 
-<p><img src="https://img.gorpeln.top/blog/20201003131655400.png!gorpeln" alt="20201003131655400" /></p>
+<p><img src="https://img.gorpeln.top/blog/20201003131655400.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655400" /></p>
 
-<p><img src="https://img.gorpeln.top/blog/20201003131655401.png!gorpeln" alt="20201003131655401" /></p>
+<p><img src="https://img.gorpeln.top/blog/20201003131655401.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655401" /></p>
 
 <h3 id="项目属性">项目属性</h3>
 <h4 id="1order-属性">(1)order 属性</h4>
@@ -660,7 +660,7 @@ align-self:auto（默认值） | flex-start | flex-end |center | baseline| stret
   order: 0（默认值） | &lt;integer&gt;
 }
 </code></pre></div></div>
-<p><img src="https://img.gorpeln.top/blog/20201003131655402.png!gorpeln" alt="20201003131655402" /></p>
+<p><img src="https://img.gorpeln.top/blog/20201003131655402.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655402" /></p>
 
 <h4 id="2flex-shrink-属性">(2)flex-shrink 属性</h4>
 <p>当项目在主轴方向上溢出时，通过设置项目收缩因子来压缩项目适应容器。属性值为项目的收缩因子，属性值取非负数。</p>
@@ -737,7 +737,7 @@ item3的最终宽度为：180 - 50 * 180 * 1 / 870 ≈ 169px<br />
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>align-self: auto（默认值） | flex-start | center | flex-end | baseline |stretch
 
 </code></pre></div></div>
-<p><img src="https://img.gorpeln.top/blog/20201003131655403.png!gorpeln" alt="20201003131655403" /></p>
+<p><img src="https://img.gorpeln.top/blog/20201003131655403.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20201003131655403" /></p>
 
 
         
@@ -1189,7 +1189,7 @@ item3的最终宽度为：180 - 50 * 180 * 1 / 870 ≈ 169px<br />
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.67</span>
+      <span>4.1.68</span>
     </div>
   </div>
 </footer>
@@ -1352,7 +1352,7 @@ item3的最终宽度为：180 - 50 * 180 * 1 / 870 ≈ 169px<br />
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.67",
+        "%c版本号 %c V4.1.68",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -1864,6 +1864,8 @@ s.parentNode.insertBefore(el, s);
                 
                     "/article/14402966023",
                 
+                    "/p/31",
+                
                     "/p/30",
                 
                     "/p/29",
@@ -2077,7 +2079,7 @@ s.parentNode.insertBefore(el, s);
         
         
 
-      element.innerHTML = 9 + '年' + 221 + '天';
+      element.innerHTML = 9 + '年' + 230 + '天';
 
     }
 
@@ -2086,7 +2088,7 @@ s.parentNode.insertBefore(el, s);
         
         
         
-        element.innerHTML = 3506 + '天';
+        element.innerHTML = 3515 + '天';
     }
   </script>
 

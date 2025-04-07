@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >213</span
+                      >214</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">213 </span>
+                  <span class="articleCount">214 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -172,7 +172,7 @@
                       >其他</a
                     >
                     <a name="其他" style="" class="articleCount"
-                      >53
+                      >54
                     </a>
                   </li>
                   
@@ -451,11 +451,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>213</p>
+                  <p>214</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>108.6k</p>
+                  <p>108.9k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -465,13 +465,13 @@
                     onmouseover="changeContent(this)"
                     onmouseout="restoreContent(this)"
                   >
-                    3506天
+                    3515天
                   </p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-03-29 18:12:31 +0800">
-                    2025/03/29
+                  <p id="current-date" data-value="2025-04-07 21:48:40 +0800">
+                    2025/04/07
                   </p>
                 </li>
               </ul>
@@ -555,10 +555,6 @@
 ## 这是一个二级标题
 ### 这是一个三级标题
 </code></pre></div></div>
-
-<blockquote>
-  <p>你也可以选择在行首加#号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。</p>
-</blockquote>
 
 <h3 id="2-斜体粗体删除线">2. 斜体、粗体、删除线</h3>
 
@@ -656,25 +652,29 @@
       <td><a href="#markdown">回到顶部</a></td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">[去到尾部](#end)</code></td>
-      <td><a href="#end">去到尾部</a></td>
+      <td><code class="language-plaintext highlighter-rouge">[去到尾部](#结束)</code></td>
+      <td><a href="#结束">去到尾部</a></td>
     </tr>
   </tbody>
 </table>
 
-<p>不过要注意，标题中的英文字母都被转化为<strong>小写字母</strong>了。</p>
+<blockquote>
+  <p>不过要注意，标题中的英文字母都被转化为<strong>小写字母</strong>了。</p>
+</blockquote>
 
 <h4 id="参考链接">参考链接</h4>
-<p>使用方法：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reference_links:
+<p>在<code class="language-plaintext highlighter-rouge">YAML</code>前置元数据块中添加 <code class="language-plaintext highlighter-rouge">reference_links</code> 内容</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title:  Hello World
+category: 个人博客
+reference_links:
     - https://gorpeln.top/works
+    - https://gorpeln.top
+---
 </code></pre></div></div>
 
 <h3 id="4-代码块高亮">4. 代码块、高亮</h3>
-<ul>
-  <li>在连续几行的文本开头加入1个Tab或者4个空格。</li>
-  <li>使用一对各三个的反引号</li>
-</ul>
+<p>使用一对各三个的反引号（```）</p>
 
 <h4 id="代码块">代码块</h4>
 <pre><code class="language-Objective-C">#import "ViewController.h"
@@ -694,7 +694,7 @@
 </code></pre>
 
 <h4 id="文字高亮">文字高亮</h4>
-<p>文字高亮功能能使行内部分文字高亮，使用一对反引号。
+<p>文字高亮功能能使行内部分文字高亮，使用一对反引号（`）。
 语法：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`linux` `iOS` `HTML5` `小程序` `php` `APIClound`
 </code></pre></div></div>
@@ -723,15 +723,15 @@
 </blockquote>
 
 <h4 id="弱化提示">弱化提示</h4>
-<p>在一段文字中，可以<em class="color-gray">弱化</em>某些文字内容。使用方法：斜体 + {:.color-gray}   <br />
-在一段文字中，可以<em class="color-light-gray">弱化(隐藏)</em>某些文字内容。使用方法：斜体 + {:.color-light-gray}  <br />
-在一段文字中，可以<em class="blur">高斯模糊</em>某些文字内容。使用方法：斜体 + {:.blur}</p>
+<p>在一段文字中，可以<em class="color-gray">弱化</em>某些文字内容。使用方法：*斜体* + {:.color-gray}   <br />
+在一段文字中，可以<em class="color-light-gray">弱化(隐藏)</em>某些文字内容。使用方法：*斜体* + {:.color-light-gray}  <br />
+在一段文字中，可以<em class="blur">高斯模糊</em>某些文字内容。使用方法：*斜体* + {:.blur}</p>
 
 <h4 id="内容折叠">内容折叠</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 {% detail 更多博客图片尺寸 %}
     &lt;p&gt;文字示例内容&lt;/p&gt;
-    &lt;img src="https://img.gorpeln.top/blog/20190101010101187.png!gorpeln" alt=""&gt;        
+    &lt;img src="https://img.gorpeln.top/blog/20190101010101187.png" alt=""&gt;        
 {% enddetail %}
 
 </code></pre></div></div>
@@ -741,7 +741,7 @@
   <div class="box-detail">
     
     <p>文字示例内容</p>
-    <img src="https://img.gorpeln.top/blog/20190101010101187.png" alt="" />        
+    <img src="https://img.gorpeln.top/blog/20190101010101187.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="" />        
 
   </div>
 </details>
@@ -769,7 +769,6 @@
 </ul>
 
 <h4 id="有序列表">有序列表</h4>
-
 <p>就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。  <br />
 示例：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 有序列表项 
@@ -881,11 +880,11 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <p>因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ![alt](URL title)
 </code></pre></div></div>
-<p>alt和title即对应HTML中的alt和title属性（都可省略）：</p>
+<p>alt和title即对应HTML中的alt和title属性 <em class="color-gray">(都可省略）</em>：</p>
 <ul>
   <li>alt表示图片显示失败时的替换文本</li>
-  <li>title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</li>
-  <li>后面添加[target]可以完成跳转</li>
+  <li>title表示鼠标悬停在图片时的显示文本 <em class="color-gray">(注意这里要加双引号）</em></li>
+  <li>后面添加(target)可以完成跳转</li>
 </ul>
 
 <table>
@@ -893,30 +892,34 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
     <tr>
       <th>#</th>
       <th>语法/示例</th>
+      <th style="text-align: left">备注</th>
       <th style="text-align: center">效果</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td><code class="language-plaintext highlighter-rouge">![](https://img.gorpeln.top/p/icon/gorpeln-64.png)</code></td>
-      <td style="text-align: center"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="" /></td>
+      <td><code class="language-plaintext highlighter-rouge">![alt](URL)</code></td>
+      <td style="text-align: left">仅显示图片</td>
+      <td style="text-align: center"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="gorpeln-logo" /></td>
     </tr>
     <tr>
       <td>2</td>
-      <td><code class="language-plaintext highlighter-rouge">![](https://gorpeln.top/assets/img/csdnLogo.png "csdn")[csdn]</code></td>
-      <td style="text-align: center"><a href="https://blog.csdn.net/chen_gp_x" title="gorpeln"><img src="https://gorpeln.top/assets/img/csdnLogo.png" alt="" title="csdn" /></a></td>
+      <td><code class="language-plaintext highlighter-rouge">![alt](URL "image-title")</code></td>
+      <td style="text-align: left">图片和标题</td>
+      <td style="text-align: center"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="gorpeln-logo" title="image-title" /></td>
     </tr>
     <tr>
       <td>3</td>
-      <td><code class="language-plaintext highlighter-rouge">![github-logo][github]</code></td>
-      <td style="text-align: center"><a href="https://gorpeln.top"><img src="https://gorpeln.top/assets/img/githubLogo.png" alt="github-logo" /></a></td>
+      <td><code class="language-plaintext highlighter-rouge">[![alt](URL "image-title")](target-url)</code></td>
+      <td style="text-align: left">图片和跳转</td>
+      <td style="text-align: center"><a href="https://gorpeln.top"><img src="https://img.gorpeln.top/p/icon/gorpeln-64.png" alt="gorpeln-logo" title="image-title" /></a></td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="图片位置">图片位置</h4>
-<p>使用方法：图片默认居中显示。</p>
+<p>图片默认居中显示。</p>
 <pre><code class="language-图片居左">![图片居左](https://img.gorpeln.top/p/icon/gorpeln-128.png){:.img-left}
 </code></pre>
 <pre><code class="language-图片居中">![图片居中](https://img.gorpeln.top/p/icon/gorpeln-128.png)
@@ -931,6 +934,21 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <p><img src="https://img.gorpeln.top/p/icon/gorpeln-128.png" alt="图片居右" class="img-right" /></p>
 
 <h3 id="10分割线">10.分割线</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 双实线
+&lt;hr class="hr-double"&gt;
+
+// 斜纹分隔线
+&lt;hr class="hr-twill"&gt;
+
+&lt;hr class="hr-twill-colorful"&gt;
+
+// 带文字内容的分隔线
+&lt;hr class="hr-solid-content" data-content="文字自适应，背景透明"&gt;
+
+&lt;hr class="hr-fade-content" data-content="分隔线"&gt;
+</code></pre></div></div>
+
+<p>效果：</p>
 <h4 id="双实线">双实线</h4>
 <hr class="hr-double" />
 
@@ -950,20 +968,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 
 <p>使用示例：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 双实线
-&lt;hr class="hr-double"&gt;
-
-// 斜纹分隔线
-&lt;hr class="hr-twill"&gt;
-
-&lt;hr class="hr-twill-colorful"&gt;
-
-// 带文字内容的分隔线
-&lt;hr class="hr-solid-content" data-content="文字自适应，背景透明"&gt;
-
-&lt;hr class="hr-fade-content" data-content="分隔线"&gt;
-</code></pre></div></div>
-
 <h3 id="11设置css">11.设置css</h3>
 <div class="post-green-background">
 <ul style="margin-bottom:0;">
@@ -973,7 +977,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 </ul>
 </div>
 
-<h3 id="end">END</h3>
+<h3 id="结束">结束</h3>
 <p>在 {删除% raw %} 和 {删除% endraw %} 之间的内容会被原样输出，不会进行标签转换</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{删除% raw %}
 ...
@@ -990,6 +994,11 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
     <div>
       
         https://gorpeln.top/works
+        
+          <br>
+        
+      
+        https://gorpeln.top
         
       
     </div>
@@ -1008,7 +1017,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/p/30" title="杂记" class="custom-font" target="_blank">杂记</a>
+        <span class="custom-font">上一篇 ：</span><a href="/p/31" title="杂记" class="custom-font" target="_blank">杂记</a>
     </div>
     
     
@@ -1443,7 +1452,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.67</span>
+      <span>4.1.68</span>
     </div>
   </div>
 </footer>
@@ -1606,7 +1615,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.67",
+        "%c版本号 %c V4.1.68",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -2118,6 +2127,8 @@ s.parentNode.insertBefore(el, s);
                 
                     "/article/14402966023",
                 
+                    "/p/31",
+                
                     "/p/30",
                 
                     "/p/29",
@@ -2331,7 +2342,7 @@ s.parentNode.insertBefore(el, s);
         
         
 
-      element.innerHTML = 9 + '年' + 221 + '天';
+      element.innerHTML = 9 + '年' + 230 + '天';
 
     }
 
@@ -2340,7 +2351,7 @@ s.parentNode.insertBefore(el, s);
         
         
         
-        element.innerHTML = 3506 + '天';
+        element.innerHTML = 3515 + '天';
     }
   </script>
 

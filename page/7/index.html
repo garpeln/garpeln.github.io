@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >213</span
+                      >214</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">213 </span>
+                  <span class="articleCount">214 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -172,7 +172,7 @@
                       >其他</a
                     >
                     <a name="其他" style="" class="articleCount"
-                      >53
+                      >54
                     </a>
                   </li>
                   
@@ -451,11 +451,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>213</p>
+                  <p>214</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>108.6k</p>
+                  <p>108.9k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -465,13 +465,13 @@
                     onmouseover="changeContent(this)"
                     onmouseout="restoreContent(this)"
                   >
-                    3506天
+                    3515天
                   </p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-03-29 18:12:31 +0800">
-                    2025/03/29
+                  <p id="current-date" data-value="2025-04-07 21:48:40 +0800">
+                    2025/04/07
                   </p>
                 </li>
               </ul>
@@ -484,6 +484,8 @@
           >
             <div class="page-content" id="pjax"><div>
     <!-- 置顶文章 -->
+    
+    
     
     
     
@@ -967,10 +969,8 @@
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、前言
+                      </span>  </div>  
+            <div class="contentAbstract">一、前言
 前段时间看了几个开源项目，发现他们保持线程同步的方式各不相同，有@synchronized、NSLock、dispatch_semaphore、NSCondition、pthread_mutex、OSSpinLock。后来网上查了一下，发现他们的实现机制各不相同，性能也各不一样。下面我们先分别介绍每个加锁方式的使用，在使用一个案例来对他们进行性能对比。
 
 二、非线程安全
@@ -979,8 +979,8 @@
 /**
  * 非线程安全
  *...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15931534585" class="readmore" target="_blank">阅读全文 》</a>
@@ -1021,10 +1021,8 @@
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">1. NSOperation、NSOperationQueue 简介
+                      </span>  </div>  
+            <div class="contentAbstract">1. NSOperation、NSOperationQueue 简介
 NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决方案。实际上 NSOperation、NSOperationQueue 是基于 GCD 更高一层的封装，完全面向对象。但是比 GCD 更简单易用、代码可读性也更高。
 
 为什么要使用 NSOperation、NSOperationQueue？
@@ -1032,8 +1030,8 @@ NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决�
 
   可添加完成的代码块，在操作完成后执行。
   添加操作之间的依赖关系，方便的控制执行顺...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15884027619" class="readmore" target="_blank">阅读全文 》</a>
@@ -1082,10 +1080,8 @@ NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决�
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">1、dispatch_async
+                      </span>  </div>  
+            <div class="contentAbstract">1、dispatch_async
 
 dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 dispatch_async(globalQueue, ^{
@@ -1093,8 +1089,8 @@ dispatch_async(globalQueue, ^{
     ...
     dispatch_async(dispatch_get_main_queue(), ^{
         // UI刷新...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15862323579" class="readmore" target="_blank">阅读全文 》</a>
@@ -1137,18 +1133,16 @@ dispatch_async(globalQueue, ^{
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">什么是CGD呢？以下摘自苹果的官方说明。
+                      </span>  </div>  
+            <div class="contentAbstract">什么是CGD呢？以下摘自苹果的官方说明。
 
   Grand Central Dispatch (GCD) 是异步执行任务的技术之一。应用程序中记述的线程管理用的代码是在系统级中实现的。开发者只需要定义想要执行的任务并追加到适当的Dispatch Queue中，GCD就能生成必要的线程并执行任务。
   也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD。
 
 1、 GCD的队列和任务
 GCD中有两个核心的概念：任...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15861494710" class="readmore" target="_blank">阅读全文 》</a>
@@ -1191,10 +1185,8 @@ GCD中有两个核心的概念：任...</div>
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">NSThread 是苹果官方提供的，简单易用，可以直接操作线程对象。不过也需要需要程序员自己管理线程的生命周期(主要是创建)，我们在开发的过程中偶尔使用 NSThread。比如我们会经常调用[NSThread currentThread]来显示当前的进程信息。
+                      </span>  </div>  
+            <div class="contentAbstract">NSThread 是苹果官方提供的，简单易用，可以直接操作线程对象。不过也需要需要程序员自己管理线程的生命周期(主要是创建)，我们在开发的过程中偶尔使用 NSThread。比如我们会经常调用[NSThread currentThread]来显示当前的进程信息。
 
 1. 创建、启动线程
 
@@ -1203,8 +1195,8 @@ GCD中有两个核心的概念：任...</div>
 
 // 1. 创建线程
 NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15860813363" class="readmore" target="_blank">阅读全文 》</a>
@@ -1245,10 +1237,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、 进程：
+                      </span>  </div>  
+            <div class="contentAbstract">一、 进程：
 
   进程是一个具有一定独立功能的程序关于某次数据集合的一次运行活动，它是操作系统分配资源的基本单元。
   进程是指在系统中正在运行的一个应用程序，就是一段程序的执行过程，我们可以理解为手机上的一个app。
@@ -1259,8 +1249,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
 
   程序执行流的最小单元，线程是进程中的一个实体.
   一个进程要想执行任务，必须至少有一条线程。应用程序启动的时候，系统会默认开启一条线程，也就是主线程...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15854795957" class="readmore" target="_blank">阅读全文 》</a>
@@ -1303,18 +1293,16 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">
+                      </span>  </div>  
+            <div class="contentAbstract">
 
 80后“蚁居”的新闻曾震撼社会，接着90后出现在一线城市群租房。拥挤、肮脏却价格低廉，群租房是部分年轻人进入大城市的第一站点。在北京最核心的国贸商圈，一群风华正茂的女孩，住进了一间24人的民宅，在这里，一个床位月租只要600元。
 
 
 
 2016年的暑假，为了给家里省钱，我决定放弃考研，投入求职大军。我的小理想，是成为一个内容创作者，但海投了上百份简历，最终只收到一个面试邀请。那天夜里，我急忙从村里坐火车赶往北京面试，意外顺利地拿到了offer。那是国内一线艺人的工作室，坐落在国贸核心区...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15846874151" class="readmore" target="_blank">阅读全文 》</a>
@@ -1363,10 +1351,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、明确优惠券活动的目的及意义
+                      </span>  </div>  
+            <div class="contentAbstract">一、明确优惠券活动的目的及意义
 　　优惠券随处可见，基本你知道的行业，都有优惠券的存在，通过发放优惠券，让用户在下单的时候抵扣一定的费用，达到促销的目的。优惠券另一个用处就是合理的提高客单价，从而提高产品的销售利润。
 
 　　但很多人都不把优惠券当回事，觉得发出去没多少人会使用。但凡抱着这种想法的人，都不是好运营，首先要明白优惠券并不是交易工具，而是一种运营策略。对活动来说，优惠券是订单转化和拉升客单价的有力工具对品牌来说，优惠券是用户维护乃至用户召回的重要手段。
@@ -1374,8 +1360,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
 举个栗子来说：
 
   假...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15821713417" class="readmore" target="_blank">阅读全文 》</a>
@@ -1422,10 +1408,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、了解苹果应用商店
+                      </span>  </div>  
+            <div class="contentAbstract">一、了解苹果应用商店
 应用商店的内容：精品推荐、排行榜、探索、搜索
 
 
@@ -1447,8 +1431,8 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
   应用描述；
   应用icon；
   ...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15805392787" class="readmore" target="_blank">阅读全文 》</a>
@@ -1491,17 +1475,15 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                     
                      
                     
-                      </span>  </div> 
-                         
-                             
-                            <div class="contentAbstract">一、前言
+                      </span>  </div>  
+            <div class="contentAbstract">一、前言
 项目中时常有这种需求, 是通过链接跳转到应用内部，现在iOS主流的方案有两个
 
 
   Schema： 常用在于一个应用跳转到另一个应用内部，属于应用间的跳转。当然ios9以下，网页可以通过schema://跳转到App内部。但是这种方式跳转比较生硬，在每次跳转的时候都会弹框询问。如果iPhone中如果没有安装则会直接弹出错误提示。
   Universal Links（通用链接）： 常用于https链接来打开APP（手机中已经安装此APP），或者跳转到https链接（手机中没有安装...</div>
-                            
-                        
+            
+            
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/15788283058" class="readmore" target="_blank">阅读全文 》</a>
@@ -1592,7 +1574,6 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
         
 </div>
 <h1 style="display:none;">gorpeln的个人博客 - gorpeln</h1>
-
 <!-- 公告 -->
 <script src="/assets/js/warning.min.js"> </script>
 <script>
@@ -1625,7 +1606,6 @@ async function fetchData() {
     }
 }
 </script>
-
 <!-- 春节灯笼 -->
 <div style="display:none;" id="lanterns">
     <div class="deng-box">
@@ -1679,9 +1659,7 @@ document.addEventListener("DOMContentLoaded", function() {
         specialDiv.style.display = 'none';
     }
 });
-</script>
-
-</div>
+</script></div>
           </div>
         </div>
       </div>
@@ -2025,7 +2003,7 @@ document.addEventListener("DOMContentLoaded", function() {
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.67</span>
+      <span>4.1.68</span>
     </div>
   </div>
 </footer>
@@ -2188,7 +2166,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.67",
+        "%c版本号 %c V4.1.68",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -2700,6 +2678,8 @@ s.parentNode.insertBefore(el, s);
                 
                     "/article/14402966023",
                 
+                    "/p/31",
+                
                     "/p/30",
                 
                     "/p/29",
@@ -2913,7 +2893,7 @@ s.parentNode.insertBefore(el, s);
         
         
 
-      element.innerHTML = 9 + '年' + 221 + '天';
+      element.innerHTML = 9 + '年' + 230 + '天';
 
     }
 
@@ -2922,7 +2902,7 @@ s.parentNode.insertBefore(el, s);
         
         
         
-        element.innerHTML = 3506 + '天';
+        element.innerHTML = 3515 + '天';
     }
   </script>
 
