@@ -2563,7 +2563,7 @@ div.gavatar a:hover {
 
     .postbox {
         border: 0;
-        border-top: 2.5px solid var(--font-title-color-light);
+        /*border-top: 2.5px solid var(--font-title-color-light);*/
         box-shadow: none;
         border-radius: 0;
     }
