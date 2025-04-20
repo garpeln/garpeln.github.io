@@ -1958,7 +1958,7 @@ div.gavatar a:hover {
     color:var(--font-active-color-dark);
     background: var(--background-color-light);
     border-radius: 6px;
-    padding: 0 8px;
+    /*padding: 0 8px;*/ 
 }
 
 
@@ -2566,6 +2566,7 @@ div.gavatar a:hover {
         /*border-top: 2.5px solid var(--font-title-color-light);*/
         box-shadow: none;
         border-radius: 0;
+        box-shadow: 1px 1px 4px #d3d3e9;
     }
 
     .content {
