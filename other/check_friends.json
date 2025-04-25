@@ -57,14 +57,6 @@
       "link": "https://icp.gov.moe/?keyword=20240031"
     },
     {
-      "name": "MIIT",
-      "avatar": "https://beian.miit.cn.com/logo.png",
-      "descr": "这个博主很懒，什么话也没有留下！",
-      "status": 2,
-      "siteshot": "",
-      "link": "https://beian.miit.cn.com/gov/search.php?domain=gorpeln.top"
-    },
-    {
       "name": "BlogsClub",
       "avatar": "https://www.blogsclub.org/usr/themes/default/favicon.png",
       "descr": " 博客俱乐部",
@@ -231,6 +223,14 @@
       "status": 3,
       "siteshot": "",
       "link": "https://linmohan.fun/link"
+    },
+    {
+      "name": "四分钟博客",
+      "avatar": "https://img.4min.top/blog/2024/11/25/7f00bdfbe5ac43388914340412e817bf.png",
+      "descr": "坚持努力，分享快乐",
+      "status": 3,
+      "siteshot": "",
+      "link": "https://www.4min.top/links"
     }
   ],
   "length": 29
