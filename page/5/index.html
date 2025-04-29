@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >216</span
+                      >217</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -87,7 +87,7 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
                     <span class="site-state-item-count"
-                      >671</span
+                      >676</span
                     >
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">216 </span>
+                  <span class="articleCount">217 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -131,7 +131,7 @@
                 
                 <li onclick="pushNew('/links')">
                   <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
-                  <span class="articleCount">29 </span>
+                  <span class="articleCount">28 </span>
                 </li>
                 <li onclick="pushNew('/about')">
                   <a><i class="fas fa-user fa-fw"></i>关于</a>
@@ -192,7 +192,7 @@
                       >个人博客</a
                     >
                     <a name="个人博客" style="" class="articleCount"
-                      >28
+                      >29
                     </a>
                   </li>
                   
@@ -451,11 +451,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>216</p>
+                  <p>217</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>109.0k</p>
+                  <p>110.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -465,13 +465,13 @@
                     onmouseover="changeContent(this)"
                     onmouseout="restoreContent(this)"
                   >
-                    3533天
+                    3537天
                   </p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-04-25 20:17:00 +0800">
-                    2025/04/25
+                  <p id="current-date" data-value="2025-04-29 17:46:11 +0800">
+                    2025/04/29
                   </p>
                 </li>
               </ul>
@@ -919,7 +919,61 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16489862954" target="_blank">MacOS：使用代码重启应用</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;">2022-04-03</text>&nbsp;&nbsp;&nbsp;&nbsp;
+                分类：
+                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                    MacOS
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#relaunch" target="_blank">relaunch</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSWorkspace" target="_blank">NSWorkspace</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSWorkspaceLaunchAsync" target="_blank">NSWorkspaceLaunchAsync</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">@interface AppDelegate : NSObject &lt;NSApplicationDelegate&gt;
+-(void)relaunchApp; //重启应用
+@end
+
+
+@interface AppDelegate ()
+@property (nonatomic, assign) BOOL              toRelaunch;   //重启应用
+@end
+
+@implementation AppDelegate  
+-(void)application...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16489862954" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1413,59 +1467,6 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
         </div>
         <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
             <a href="/article/16168523139" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/16132790510" target="_blank">手势冲突</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;">2021-02-14</text>&nbsp;&nbsp;&nbsp;&nbsp;
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#手势" target="_blank">手势</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#优先级" target="_blank">优先级</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#响应链" target="_blank">响应链</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">手势冲突主要的三种解决思路：
-
-
-  ①设置手势优先级 requireGestureRecognizerToFail:
-②阻止手势向事件传递链执行 cancelsTouchesInView、delaysTouchesBegan
-③实现协议方法 UIGestureRecognizerDelegate
-
-
-1、自定义手势优先级
-自定义多手势冲突。例如我们设置的单次点击、双击和多指点击手势，需要设置优先识别双击手势，识别失败后再识别单击手势；
- //单指单击
-    UITapGestureRe...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/16132790510" class="readmore" target="_blank">阅读全文 》</a>
         </div>
     </div>
     
@@ -1982,7 +1983,7 @@ document.addEventListener("DOMContentLoaded", function() {
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.72</span>
+      <span>4.1.73</span>
     </div>
   </div>
 </footer>
@@ -2145,7 +2146,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.72",
+        "%c版本号 %c V4.1.73",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -2268,6 +2269,18 @@ document.addEventListener("DOMContentLoaded", function() {
     window.requestAnimationFrame(scrollStep);
   }
 </script>
+
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+
 <!-- 网站分析 -->
 <!-- 百度统计 -->
 <script>
@@ -2324,6 +2337,8 @@ s.parentNode.insertBefore(el, s);
     }
 
             const postUrls = [
+                
+                    "/article/17384679236",
                 
                     "/article/17372028582",
                 
@@ -2876,7 +2891,7 @@ s.parentNode.insertBefore(el, s);
         
         
 
-      element.innerHTML = 9 + '年' + 248 + '天';
+      element.innerHTML = 9 + '年' + 252 + '天';
 
     }
 
@@ -2885,7 +2900,7 @@ s.parentNode.insertBefore(el, s);
         
         
         
-        element.innerHTML = 3533 + '天';
+        element.innerHTML = 3537 + '天';
     }
   </script>
 

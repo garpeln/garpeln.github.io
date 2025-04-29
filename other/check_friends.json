@@ -217,21 +217,13 @@
       "link": "https://liuqingwushui.top/links.html"
     },
     {
-      "name": "技研录",
-      "avatar": "https://linmohan.fun/img/favicon.png",
-      "descr": "代码重构世界，逻辑解构真理",
-      "status": 3,
-      "siteshot": "",
-      "link": "https://linmohan.fun/link"
-    },
-    {
       "name": "四分钟博客",
-      "avatar": "https://img.4min.top/blog/2024/11/25/7f00bdfbe5ac43388914340412e817bf.png",
+      "avatar": "https://www.4min.top/avatar.png",
       "descr": "坚持努力，分享快乐",
       "status": 3,
       "siteshot": "",
       "link": "https://www.4min.top/links"
     }
   ],
-  "length": 29
+  "length": 28
 }

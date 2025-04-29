@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >216</span
+                      >217</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -87,7 +87,7 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
                     <span class="site-state-item-count"
-                      >671</span
+                      >676</span
                     >
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">216 </span>
+                  <span class="articleCount">217 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -131,7 +131,7 @@
                 
                 <li onclick="pushNew('/links')">
                   <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
-                  <span class="articleCount">29 </span>
+                  <span class="articleCount">28 </span>
                 </li>
                 <li onclick="pushNew('/about')">
                   <a><i class="fas fa-user fa-fw"></i>关于</a>
@@ -192,7 +192,7 @@
                       >个人博客</a
                     >
                     <a name="个人博客" style="" class="articleCount"
-                      >28
+                      >29
                     </a>
                   </li>
                   
@@ -451,11 +451,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>216</p>
+                  <p>217</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>109.0k</p>
+                  <p>110.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -465,13 +465,13 @@
                     onmouseover="changeContent(this)"
                     onmouseout="restoreContent(this)"
                   >
-                    3533天
+                    3537天
                   </p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-04-25 20:17:00 +0800">
-                    2025/04/25
+                  <p id="current-date" data-value="2025-04-29 17:46:11 +0800">
+                    2025/04/29
                   </p>
                 </li>
               </ul>
@@ -1083,7 +1083,7 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
         萌ICP备20240031号
       </a>
       ·
-      <span>4.1.72</span>
+      <span>4.1.73</span>
     </div>
   </div>
 </footer>
@@ -1246,7 +1246,7 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
     setTimeout(
       Log.bind(
         console,
-        "%c版本号 %c V4.1.72",
+        "%c版本号 %c V4.1.73",
         "",
         "color:#6666cc;line-height:22px;font-size:12px;",
       ),
@@ -1369,6 +1369,18 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
     window.requestAnimationFrame(scrollStep);
   }
 </script>
+
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+
 <!-- 网站分析 -->
 <!-- 百度统计 -->
 <script>
@@ -1425,6 +1437,8 @@ s.parentNode.insertBefore(el, s);
     }
 
             const postUrls = [
+                
+                    "/article/17384679236",
                 
                     "/article/17372028582",
                 
@@ -1977,7 +1991,7 @@ s.parentNode.insertBefore(el, s);
         
         
 
-      element.innerHTML = 9 + '年' + 248 + '天';
+      element.innerHTML = 9 + '年' + 252 + '天';
 
     }
 
@@ -1986,7 +2000,7 @@ s.parentNode.insertBefore(el, s);
         
         
         
-        element.innerHTML = 3533 + '天';
+        element.innerHTML = 3537 + '天';
     }
   </script>
 
