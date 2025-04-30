@@ -2836,7 +2836,13 @@ div.contentAbstract img {
     font-weight: 200;
     color: #666;
 }
+.problems-detail-light{
+    color: #bcbcbc;
+}
 
+.problems-detail-strong{
+    color: #363636;
+}
 
 /* 一些自定义的微小改动 */
 .footer-heading {
