@@ -71,7 +71,7 @@
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
                     <span class="site-state-item-count"
-                      >217</span
+                      >218</span
                     >
                     <span class="site-state-item-name">归档</span>
                   </a>
@@ -119,7 +119,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">217 </span>
+                  <span class="articleCount">218 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -172,7 +172,7 @@
                       >其他</a
                     >
                     <a name="其他" style="" class="articleCount"
-                      >56
+                      >57
                     </a>
                   </li>
                   
@@ -413,15 +413,15 @@
             </div>
             <div class="countdownNav" id="countdownNav">
               <div class="card-widget card-countdown">
-                <div class="item-headline"><i></i><span></span></div>
                 <div class="item-content">
                   <div class="cd-count-left">
                     <span class="cd-text">距离</span>
                     <span class="cd-name" id="eventName">节日</span>
                     <span class="cd-time" id="daysUntil">00</span>
-                    <span class="cd-date" id="eventDate"
-                      >2015-08-23</span
-                    >
+                    <span class="cd-date" id="eventDate">
+                      
+                      1970-01-01
+                    </span>
                   </div>
                   <div id="countRight" class="cd-count-right">
                     <div id="countRight" class="cd-count-right">
@@ -451,7 +451,7 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>217</p>
+                  <p>218</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
@@ -459,19 +459,12 @@
                 </li>
                 <li>
                   <p>已运行时间</p>
-                     
-
-                  <p
-                    onmouseover="changeContent(this)"
-                    onmouseout="restoreContent(this)"
-                  >
-                    3538天
-                  </p>
+                  <p id="runtime">加载中...</p>
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-04-30 18:41:54 +0800">
-                    2025/04/30
+                  <p id="current-date" data-value="2025-05-01 21:09:30 +0800">
+                    2025/05/01
                   </p>
                 </li>
               </ul>
@@ -967,125 +960,31 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
     </li>
   </ul>
 </header>
- <style>
-  .site-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em 15px;
-    margin-bottom: 0.5em;
-  }
-
-  .runTime {
-    color: #777;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-  }
-
-  .runTime:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 4px;
-    left: 0;
-    border-bottom: 1px dashed #777;
-  }
-
-  .footerImg {
-    margin-top: -3px;
-    margin-right: 2px;
-  }
-
-  .footerDes,
-  .footerDes a {
-    color: #666;
-    text-align: center;
-    bottom: -0.25em;
-    font-size: 12px;
-  }
-
-  #heartbeat {
-    color: red;
-    animation: heartbeat 1s infinite;
-  }
-
-  .post-margin {
-  }
-
-  @keyframes heartbeat {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
-<footer class="site-footer">
-  <div
-    id="htmer_time"
-    class="runTime"
-    onmouseover="over(this)"
-    onmouseout="out(this)"
-    onclick="clickHandler(this)"
-  ></div>
-  <div class="footerDes">
-    <div class="post-margin">
-      ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
-      <a href="http://beian.miit.gov.cn/" class="footer-item">
-        <img
-          src="/assets/img/footer_beian.png"
-          style="height: 16px"
-          class="footerImg"
-        />京ICP备2021024484号-2
-      </a>
-      ·
-      <a
-        target="_blank"
-        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694"
-        class="footer-item"
-      >
-        <img
-          src="/assets/img/footer_gonganbeian.png"
-          style="height: 16px"
-          class="footerImg"
-        />京公网安备11011202004694号
-      </a>
-      ·
-      <a
-        target="_blank"
-        href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"
-        class="footer-item"
-      >
-        <img
-          src="/assets/img/footer_youpaiyun.png"
-          style="height: 22px"
-          class="footerImg"
-        />提供CDN加速/云存储服务
-      </a>
-      ·
-      <a
-        target="_blank"
-        href="https://icp.gov.moe/?keyword=20240031"
-        class="footer-item"
-      >
-        萌ICP备20240031号
-      </a>
-      ·
-      <span>4.9.74</span>
+ 
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)"></div>
+    <div class="footerDes">
+        <div class="post-margin">
+            ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="/assets/img/footer_beian.png" style="height: 16px" class="footerImg" />京ICP备2021024484号-2
+            </a>
+            ·
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="/assets/img/footer_gonganbeian.png" style="height: 16px" class="footerImg" />京公网安备11011202004694号
+            </a>
+            ·
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                <img src="/assets/img/footer_youpaiyun.png" style="height: 22px" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+            ·
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
+            </a>
+            ·
+            <span>4.9.75</span>
+        </div>
     </div>
-  </div>
 </footer>
 <script type="text/javascript" src="/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
@@ -1098,289 +997,268 @@ CRT的电子枪按照上图中的方式，从上到下一行行扫描扫描完�
 <!--  樱花背景 -->
 <script type="text/javascript" src="/assets/js/sakura.js"></script>
 <!--  丝带背景 -->
-<script
-  size="150"
-  alpha="0.3"
-  zindex="-2"
-  src="/assets/js/ribbon.min.js"
-></script>
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
 <!-- search -->
 <div class="cb-search-tool" id="cb-close-btn">
-  <input
-    type="text"
-    class="form-control cb-search-content"
-    id="cb-search-content"
-    style="position: fixed; top: 6em"
-    placeholder="文章标题 日期 标签"
-  />
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签" />
 </div>
-<script
-  type="text/javascript"
-  src="/assets/js/search/bootstrap3-typeahead.min.js"
-></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
 <script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
 <!-- 动态显示网站运行时间 -->
-<script language="javascript">
-  const fullYear = new Date().getFullYear();
-  document.getElementById("currentYear").textContent = fullYear;
+<script>
+// 页面加载时设置当前年份（可选）
+document.getElementById('currentYear') && (document.getElementById('currentYear').textContent = new Date().getFullYear());
 
-  function siteTime() {
-    window.setTimeout("siteTime()", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-    var today = new Date();
-    var todayYear = today.getFullYear();
-    var todayMonth = today.getMonth() + 1;
-    var todayDate = today.getDate();
-    var todayHour = today.getHours();
-    var todayMinute = today.getMinutes();
-    var todaySecond = today.getSeconds();
-    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) 
-    year - 作为date对象的年份，为4位年份值
-    month - 0-11之间的整数，做为date对象的月份 0为1月
-    day - 1-31之间的整数，做为date对象的天数
-    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-    minutes - 0-59之间的整数，做为date对象的分钟数
-    seconds - 0-59之间的整数，做为date对象的秒数
-    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-    var t1 = Date.UTC(2015, 8, 23, 9, 0, 0);
-    var t2 = Date.UTC(
-      todayYear,
-      todayMonth,
-      todayDate,
-      todayHour,
-      todayMinute,
-      todaySecond,
-    );
-    var diff = t2 - t1;
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor(diff / days - diffYears * 365);
-    var diffHours = Math.floor(
-      (diff - (diffYears * 365 + diffDays) * days) / hours,
-    );
-    var diffMinutes = Math.floor(
-      (diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-        minutes,
-    );
-    var diffSeconds = Math.floor(
-      (diff -
-        (diffYears * 365 + diffDays) * days -
-        diffHours * hours -
-        diffMinutes * minutes) /
-        seconds,
-    );
-    document.getElementById("htmer_time").innerHTML =
-      " 本站已安全运行：" +
-      diffYears +
-      " 年 " +
-      diffDays +
-      " 天 " +
-      diffHours +
-      " 时 " +
-      diffMinutes +
-      " 分 " +
-      diffSeconds +
-      " 秒&nbsp;&nbsp;<i class='fas fa-heartbeat' id='heartbeat'></i>";
-  }
-  siteTime();
+function siteTime(startDateStr) {
+    const now = new Date();
+
+    // 解析起始时间
+    const start = new Date(startDateStr);
+
+    // 检查是否是合法的时间格式
+    if (isNaN(start.getTime())) {
+        console.error("Invalid start date:", startDateStr);
+        document.getElementById('htmer_time').innerHTML = "时间计算出错，请检查配置。";
+        return;
+    }
+
+    // 计算年份差
+    let diffYears = now.getFullYear() - start.getFullYear();
+
+    // 构造今年对应的纪念日时间点（精确到小时/分/秒）
+    const anniversaryThisYear = new Date(start);
+    anniversaryThisYear.setFullYear(now.getFullYear());
+
+    // 如果还没到今年的纪念日时间点，则减去一年
+    if (now < anniversaryThisYear) {
+        diffYears--;
+    }
+
+    // 根据年份差确定要比较的起始周年时间
+    const anniversaryTargetYear = new Date(start);
+    anniversaryTargetYear.setFullYear(now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1));
+
+    // 计算周年之后的时间差（毫秒）
+    const timeDiff = now - anniversaryTargetYear;
+
+    // 时间单位（毫秒）
+    const daysInMs = 1000 * 60 * 60 * 24;
+    const hoursInMs = 1000 * 60 * 60;
+    const minutesInMs = 1000 * 60;
+
+    // 计算天、小时、分、秒
+    const diffDays = Math.floor(timeDiff / daysInMs);
+    const diffHours = Math.floor((timeDiff % daysInMs) / hoursInMs);
+    const diffMinutes = Math.floor((timeDiff % hoursInMs) / minutesInMs);
+    const diffSeconds = Math.floor((timeDiff % minutesInMs) / 1000);
+
+    // 更新页面内容
+    document.getElementById('htmer_time').innerHTML =
+        `本站已安全运行：${diffYears} 年 ${diffDays} 天 ${diffHours} 时 ${diffMinutes} 分 ${diffSeconds} 秒&nbsp;&nbsp;`;
+
+    // 每秒更新一次
+    setTimeout(() => siteTime(startDateStr), 1000);
+}
+
+const startDate = "2015-08-23 09:00:00 +0800"; 
+siteTime(startDate);
 </script>
 <script language="JavaScript">
-  function over(obj) {
-    obj.innerHTML =
-      "隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
-  }
+function over(obj) {
+    obj.innerHTML ="隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+}
 
-  function out(obj) {}
+function out(obj) {}
 
-  function clickHandler() {
+function clickHandler() {
     // 跳转到指定的URL
     window.location.href = "/article/15462756619";
-  }
+}
 </script>
 <!-- 控制台输出 -->
 <script>
-  var HoldLog = console.log;
-  console.log = function () {};
-  let nowDate = new Date();
-  queueMicrotask(() => {
-    const Log = function () {
-      HoldLog.apply(console, arguments);
+var HoldLog = console.log;
+console.log = function() {};
+let nowDate = new Date();
+queueMicrotask(() => {
+    const Log = function() {
+        HoldLog.apply(console, arguments);
     };
     console.log = Log;
 
     setTimeout(
-      Log.bind(
-        console,
-        "%c博客名称%c gorpeln的个人博客 - gorpeln",
-        "line-height:24px;",
-        "color:#6666cc;line-height:22px;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            "%c博客名称%c gorpeln的个人博客 - gorpeln",
+            "line-height:24px;",
+            "color:#6666cc;line-height:22px;font-size:12px;",
+        ),
     );
     setTimeout(
-      Log.bind(
-        console,
-        "%c博客链接%c https://gorpeln.top",
-        "line-height:24px;",
-        "color:#6666cc;line-height:22px;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            "%c博客链接%c https://gorpeln.top",
+            "line-height:24px;",
+            "color:#6666cc;line-height:22px;font-size:12px;",
+        ),
     );
     setTimeout(
-      Log.bind(
-        console,
-        "%c联系方式%c help@gor*eln.top",
-        "line-height:24px;",
-        "color:#6666cc;line-height:22px;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            "%c联系方式%c help@gor*eln.top",
+            "line-height:24px;",
+            "color:#6666cc;line-height:22px;font-size:12px;",
+        ),
     );
     setTimeout(
-      Log.bind(
-        console,
-        "%c博主寄语%c 趁年轻，做自己想做的！",
-        "line-height:24px;",
-        "color:#6666cc;line-height:22px;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            "%c博主寄语%c 趁年轻，做自己想做的！",
+            "line-height:24px;",
+            "color:#6666cc;line-height:22px;font-size:12px;",
+        ),
     );
     setTimeout(
-      Log.bind(
-        console,
-        "%c版本号 %c V4.9.74",
-        "",
-        "color:#6666cc;line-height:22px;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            "%c版本号 %c V4.9.75",
+            "",
+            "color:#6666cc;line-height:22px;font-size:12px;",
+        ),
     );
 
     const loadTime = Math.round(performance.now() * 100) / 100 / 1000;
     const formattedLoadTime = loadTime.toFixed(2) + "s";
     setTimeout(
-      Log.bind(
-        console,
-        `%c页面加载消耗了: %c${formattedLoadTime}`,
-        "",
-        "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
-      ),
+        Log.bind(
+            console,
+            `%c页面加载消耗了: %c${formattedLoadTime}`,
+            "",
+            "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+        ),
     );
 
     const hitKey = "hit";
-    let hitCount = localStorage.getItem(hitKey)
-      ? parseInt(localStorage.getItem(hitKey))
-      : 0;
+    let hitCount = localStorage.getItem(hitKey) ?
+        parseInt(localStorage.getItem(hitKey)) :
+        0;
     hitCount++;
     localStorage.setItem(hitKey, hitCount);
     setTimeout(
-      Log.bind(
-        console,
-        `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
-        "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
-        "",
-      ),
+        Log.bind(
+            console,
+            `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
+            "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+            "",
+        ),
     );
     setTimeout(
-      console.warn.bind(
-        console,
-        "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
-        "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
-        "",
-      ),
+        console.warn.bind(
+            console,
+            "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
+            "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
+            "",
+        ),
     );
-  });
+});
 </script>
-
 <!-- 自定义快捷键 -->
 <script>
-  // 定义滚动距离底部的偏移量
-  const SCROLL_OFFSET = 500;
-  // 定义滚动动画的持续时间
-  const SCROLL_DURATION = 500;
-  // 定义双击的时间阈值（毫秒）
-  const DOUBLE_CLICK_THRESHOLD = 300;
+// 定义滚动距离底部的偏移量
+const SCROLL_OFFSET = 500;
+// 定义滚动动画的持续时间
+const SCROLL_DURATION = 500;
+// 定义双击的时间阈值（毫秒）
+const DOUBLE_CLICK_THRESHOLD = 300;
 
-  // 创建一个映射，用于存储按键与目标操作之间的关系
-  const keyToActionMap = {
+// 创建一个映射，用于存储按键与目标操作之间的关系
+const keyToActionMap = {
     p: () => (window.location.href = "/p"),
     t: () => (window.location.href = "/tool"),
     ArrowDown: scrollToBottom,
     ArrowUp: scrollToTop,
-  };
+};
 
-  // 存储上一次按键的时间戳和按键标识符
-  let lastKeyPress = {};
+// 存储上一次按键的时间戳和按键标识符
+let lastKeyPress = {};
 
-  document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
     const keyPressed = event.key;
     const lowerCaseKey = keyPressed.toLowerCase();
-    const currentKey = keyToActionMap.hasOwnProperty(keyPressed)
-      ? keyPressed
-      : lowerCaseKey;
+    const currentKey = keyToActionMap.hasOwnProperty(keyPressed) ?
+        keyPressed :
+        lowerCaseKey;
 
     if (keyToActionMap.hasOwnProperty(currentKey)) {
-      const now = Date.now();
-      const previousTime = lastKeyPress[currentKey] || 0;
-      const timeDifference = now - previousTime;
+        const now = Date.now();
+        const previousTime = lastKeyPress[currentKey] || 0;
+        const timeDifference = now - previousTime;
 
-      if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
-        keyToActionMap[currentKey]();
-        lastKeyPress[currentKey] = 0;
-      } else {
-        lastKeyPress[currentKey] = now;
-      }
+        if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+            keyToActionMap[currentKey]();
+            lastKeyPress[currentKey] = 0;
+        } else {
+            lastKeyPress[currentKey] = now;
+        }
     }
-  });
+});
 
-  // 定义滚动到页面底部的函数
-  function scrollToBottom() {
+// 定义滚动到页面底部的函数
+function scrollToBottom() {
     const start = window.scrollY;
     const end = document.body.scrollHeight - SCROLL_OFFSET;
     const startTime = performance.now();
 
     function scrollStep(timestamp) {
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / SCROLL_DURATION, 1);
-      const currentScroll = start + (end - start) * progress;
-      window.scrollTo(0, currentScroll);
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+        const currentScroll = start + (end - start) * progress;
+        window.scrollTo(0, currentScroll);
 
-      if (progress < 1) {
-        window.requestAnimationFrame(scrollStep);
-      }
+        if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+        }
     }
 
     window.requestAnimationFrame(scrollStep);
-  }
+}
 
-  // 定义滚动到页面顶部的函数
-  function scrollToTop() {
+// 定义滚动到页面顶部的函数
+function scrollToTop() {
     const start = window.scrollY;
     const end = 0;
     const startTime = performance.now();
 
     function scrollStep(timestamp) {
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / SCROLL_DURATION, 1);
-      const currentScroll = start + (end - start) * progress;
-      window.scrollTo(0, currentScroll);
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+        const currentScroll = start + (end - start) * progress;
+        window.scrollTo(0, currentScroll);
 
-      if (progress < 1) {
-        window.requestAnimationFrame(scrollStep);
-      }
+        if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+        }
     }
 
     window.requestAnimationFrame(scrollStep);
-  }
+}
 </script>
-
 <!-- 渲染数学公式 -->
 <script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        }
-    };
+MathJax = {
+    tex: {
+        inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)']
+        ],
+        displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+        ]
+    }
+};
 </script>
 <script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
-
 <!-- 网站分析 -->
 <!-- 百度统计 -->
 <script>
@@ -1424,7 +1302,6 @@ s.parentNode.insertBefore(el, s);
 <script>
    function _0xc9fd(){var _0x3d2991=['50jGMMZM','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','body','pointerEvents','left','flex','transparent','div','5FHdLoq','center','display','d3d3LmdvcnBlbG4udG9w','YmxvZy4yMDIwOTAueHl6','location','whiteSpace','MTI3LjAuMC4xOjQwMDA=','fade-out','-5%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','344561jxFMmT','port','rotate(-30deg)','543918qGggNE','alert-message','5276623LOkjPi','parentNode','9yWbZrO','30px','6pDDWhy','110%','591100FNHdtY','createElement','classList','width','appendChild','nowrap','removeChild','wrap','cloneNode','replace','11181WAtrgw','overflow','730408FPdjNO','9999','justifyContent','0.1','className','includes','top','Z29ycGVsbi50b3A=','position','190832JwJWWj','style','100%','none','innerText','black','background'];_0xc9fd=function(){return _0x3d2991;};return _0xc9fd();}function _0x42f1(_0x4447fa,_0x2c7b30){var _0xc9fd71=_0xc9fd();return _0x42f1=function(_0x42f174,_0x2b35b8){_0x42f174=_0x42f174-0x14b;var _0x41f217=_0xc9fd71[_0x42f174];return _0x41f217;},_0x42f1(_0x4447fa,_0x2c7b30);}(function(_0x500ebb,_0x50650){var _0x5735d6=_0x42f1,_0x17e190=_0x500ebb();while(!![]){try{var _0x3deb7e=parseInt(_0x5735d6(0x161))/0x1*(-parseInt(_0x5735d6(0x173))/0x2)+-parseInt(_0x5735d6(0x14f))/0x3+parseInt(_0x5735d6(0x16c))/0x4*(-parseInt(_0x5735d6(0x17b))/0x5)+parseInt(_0x5735d6(0x155))/0x6*(parseInt(_0x5735d6(0x14c))/0x7)+parseInt(_0x5735d6(0x163))/0x8+parseInt(_0x5735d6(0x153))/0x9*(parseInt(_0x5735d6(0x157))/0xa)+parseInt(_0x5735d6(0x151))/0xb;if(_0x3deb7e===_0x50650)break;else _0x17e190['push'](_0x17e190['shift']());}catch(_0x553e0f){_0x17e190['push'](_0x17e190['shift']());}}}(_0xc9fd,0x29b24),(function(){var _0x1f3646=_0x42f1,_0x1b394d=[_0x1f3646(0x16a),_0x1f3646(0x17e),_0x1f3646(0x182),_0x1f3646(0x17f)],_0x3eafee=_0x1f3646(0x14b),_0x44859d=document[_0x1f3646(0x180)]['hostname']+(document[_0x1f3646(0x180)][_0x1f3646(0x14d)]?':'+document[_0x1f3646(0x180)][_0x1f3646(0x14d)]:'');function _0x460230(_0x422c98){var _0x269094=_0x1f3646,_0x2947f3=document[_0x269094(0x158)](_0x269094(0x17a));_0x2947f3[_0x269094(0x16d)][_0x269094(0x176)]=_0x269094(0x16f),_0x2947f3[_0x269094(0x16d)][_0x269094(0x16b)]='fixed',_0x2947f3[_0x269094(0x16d)][_0x269094(0x169)]='0',_0x2947f3[_0x269094(0x16d)][_0x269094(0x177)]=_0x269094(0x184),_0x2947f3[_0x269094(0x16d)][_0x269094(0x15a)]=_0x269094(0x156),_0x2947f3[_0x269094(0x16d)]['height']=_0x269094(0x16e),_0x2947f3['style']['zIndex']=_0x269094(0x164),_0x2947f3[_0x269094(0x16d)]['opacity']=_0x269094(0x166),_0x2947f3[_0x269094(0x16d)][_0x269094(0x172)]=_0x269094(0x179),_0x2947f3[_0x269094(0x16d)][_0x269094(0x162)]='hidden',_0x2947f3[_0x269094(0x16d)][_0x269094(0x17d)]=_0x269094(0x178),_0x2947f3[_0x269094(0x16d)][_0x269094(0x165)]=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['alignItems']=_0x269094(0x17c),_0x2947f3[_0x269094(0x16d)]['flexWrap']=_0x269094(0x15e);var _0x13d91f=document[_0x269094(0x158)](_0x269094(0x17a));_0x13d91f[_0x269094(0x170)]=_0x422c98,_0x13d91f[_0x269094(0x16d)]['color']=_0x269094(0x171),_0x13d91f[_0x269094(0x16d)]['fontSize']=_0x269094(0x154),_0x13d91f[_0x269094(0x16d)]['transform']=_0x269094(0x14e),_0x13d91f['style'][_0x269094(0x181)]=_0x269094(0x15c),_0x13d91f[_0x269094(0x16d)]['margin']='80px';for(var _0x5f9f5b=0x0;_0x5f9f5b<0x64;_0x5f9f5b++){_0x2947f3[_0x269094(0x15b)](_0x13d91f[_0x269094(0x15f)](!![]));}document['body'][_0x269094(0x15b)](_0x2947f3);}function _0x344112(_0x368c57){var _0x295f4f=_0x1f3646,_0x3df2d9=document[_0x295f4f(0x158)]('div');_0x3df2d9[_0x295f4f(0x167)]=_0x295f4f(0x150),_0x3df2d9[_0x295f4f(0x170)]=_0x368c57,document[_0x295f4f(0x175)][_0x295f4f(0x15b)](_0x3df2d9),setTimeout(function(){var _0x432788=_0x295f4f;_0x3df2d9[_0x432788(0x159)]['add'](_0x432788(0x183)),setTimeout(function(){var _0x67fe25=_0x432788;_0x3df2d9[_0x67fe25(0x152)]&&_0x3df2d9[_0x67fe25(0x152)][_0x67fe25(0x15d)](_0x3df2d9);},0xc8);},0xbb8),setTimeout(function(){var _0x55060f=_0x295f4f;window[_0x55060f(0x180)][_0x55060f(0x160)](atob(_0x3eafee));},0x1388);}!_0x1b394d[_0x1f3646(0x168)](btoa(_0x44859d))&&(_0x460230(atob(_0x1b394d[0x0])),_0x344112(_0x1f3646(0x174)));}()));
 </script>
-
   </body>
   <!-- li添加跳转 -->
   <script>
@@ -1834,6 +1711,8 @@ s.parentNode.insertBefore(el, s);
                 
                     "/p/01",
                 
+                    "/b/10",
+                
                     "/b/09",
                 
                     "/b/08",
@@ -1981,27 +1860,6 @@ s.parentNode.insertBefore(el, s);
                 qrcode.clear();
             }
         }
-
-
-    function changeContent(element) {
-        
-        
-        
-
-        
-        
-
-      element.innerHTML = 9 + '年' + 253 + '天';
-
-    }
-
-    function restoreContent(element) {
-        
-        
-        
-        
-        element.innerHTML = 3538 + '天';
-    }
   </script>
 
   <!-- 日期计算 -->
@@ -2067,6 +1925,65 @@ s.parentNode.insertBefore(el, s);
     });
     $("#toc").css("display", "block");
   </script>
+
+<script>
+  // 设置站点起始时间（ISO 格式），注意替换为你自己的时间
+  const startDateStr = "2015-08-23 09:00:00 +0800";
+
+  // 获取显示元素
+  const runtimeElement = document.getElementById("runtime");
+
+  function updateRuntime() {
+    const now = new Date();
+    const start = new Date(startDateStr);
+
+    if (isNaN(start.getTime())) {
+      runtimeElement.textContent = "Error";
+      return;
+    }
+
+    let fullYears = now.getFullYear() - start.getFullYear();
+
+    // 构造当前年的纪念日时间点
+    const anniversaryThisYear = new Date(start);
+    anniversaryThisYear.setFullYear(now.getFullYear());
+
+    if (now < anniversaryThisYear) {
+      fullYears--; // 如果还没到今年的纪念时间点，则减一年
+    }
+
+    // 构建实际应比较的起始时间
+    const targetAnniversary = new Date(start);
+    targetAnniversary.setFullYear(
+      now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1)
+    );
+
+    // 计算从 targetAnniversary 到 now 的毫秒差，并转成天数
+    const diffMs = now - targetAnniversary;
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    // 更新页面内容
+    runtimeElement.textContent = `${fullYears}年${days}天`;
+  }
+
+  // 初始化一次
+  updateRuntime();
+
+  // 每 24 小时更新一次（可选）
+  setTimeout(() => {
+    updateRuntime();
+    setInterval(updateRuntime, 24 * 60 * 60 * 1000); // 每天更新一次
+  }, getNextMidnight() - new Date());
+
+  // 辅助函数：获取今天午夜的时间戳
+  function getNextMidnight() {
+    const now = new Date();
+    const nextMidnight = new Date(now);
+    nextMidnight.setHours(24, 0, 0, 0);
+    return nextMidnight;
+  }
+</script>
+
   <script src="/assets/js/themeToggle.js"></script>
   <script src="/assets/js/countdown.js"></script>
 </html>

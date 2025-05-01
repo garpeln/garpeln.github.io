@@ -859,7 +859,7 @@ https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
                 &amp;lt;span class=&quot;cd-text&quot;&amp;gt;距离&amp;lt;/span&amp;gt;
                 &amp;lt;span class=&quot;cd-name&quot; id=&quot;eventName&quot;&amp;gt;节日&amp;lt;/span&amp;gt;
                 &amp;lt;span class=&quot;cd-time&quot; id=&quot;daysUntil&quot;&amp;gt;000&amp;lt;/span&amp;gt;
-                &amp;lt;span class=&quot;cd-date&quot; id=&quot;eventDate&quot;&amp;gt;2015-08-23&amp;lt;/span&amp;gt;
+                &amp;lt;span class=&quot;cd-date&quot; id=&quot;eventDate&quot;&amp;gt;&amp;lt;/span&amp;gt;
             &amp;lt;/div&amp;gt;
             &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
                 &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
@@ -1622,7 +1622,7 @@ if __name__ == &quot;__main__&quot;:
 document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
     const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
     elements.forEach(function(element) {
-        element.textContent = &apos;4.9.74&apos;;
+        element.textContent = &apos;4.9.75&apos;;
     });
 });       
 &lt;/script&gt;
