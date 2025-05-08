@@ -290,7 +290,39 @@ figure,
     text-decoration: none;
     color: #6f19e8;
 }
-
+/*
+    博客成长记录
+*/
+.record-desItem{
+    padding: 3px 0;
+    color:#000;
+    display: flex;
+    align-items: baseline;
+}
+.record-time{
+    min-width:100px;
+    display:inline-block;
+    color:#999;
+    margin-right: 20px;
+    font-family: "heiti SC";
+    flex-shrink: 0;
+    opacity: 0.5;
+}
+.record-des{
+    padding: 5px 0;
+    color:#000;
+}
+.record-light-color{
+    color:#999;
+}
+.record-post-content img{
+    margin-top:0;
+}
+.record-detail-img{
+    margin:10px 0;
+    border:1px #b9b9cd dashed;
+    border-radius:16px;
+}
 /*
     pagination
 */
@@ -3859,7 +3891,13 @@ body.dark-mode #blog-problem-des{
     color: #a8a095;
 }
 
-
+/* 博客成长记录文章 */
+body.dark-mode .page-content .post .post-content .desItem .time{
+    color:var(--font-des-color-dark);
+}
+body.dark-mode .page-content .post .post-content .desItem .des{
+    color:var(--font-des-color-dark);
+}
 /*
 waline
 */
@@ -4034,18 +4072,18 @@ body.dark-mode .cf-message{
 /*
 hello world
 */
-body.dark-mode .page-content .post .post-content .desItem .time{
-    color:var(--font-des-color-dark);
-}
-body.dark-mode .page-content .post .post-content .desItem .des{
-    color:var(--font-des-color-dark);
-}
+
 body.dark-mode .page-content .post .post-content .toggle .box-detail{
     background-color: var(--subbox-color-dark);
 }
 
-
-
+/*
+record
+*/
+body.dark-mode .record-time,
+body.dark-mode .record-des{
+    color:var(--font-des-color-dark);
+}
 
 
 

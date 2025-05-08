@@ -745,6 +745,10 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/record</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/resume</loc>
                 <priority>1.0</priority>
             </url>
