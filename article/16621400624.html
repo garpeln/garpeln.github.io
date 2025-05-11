@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-05-10 21:07:23 +0800">
-                    2025/05/10
+                  <p id="current-date" data-value="2025-05-11 18:34:33 +0800">
+                    2025/05/11
                   </p>
                 </li>
               </ul>
@@ -474,7 +474,30 @@ sudo chown root:wheel GoogleSoftwareUpdate
     
 </div>
 <div class="livere waline-box">
-    <div id="waline"></div>
+    <!-- <div id="waline"></div> -->
+    <!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<script type="text/javascript" src="/assets/js/md5.min.js"></script>
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: 'Ov23liC2CuQOOTNYgtHi',
+        clientSecret: '1a73f54963ee9193f6f28b53dd7ca5554530894d',
+        repo: 'Gitalk',
+        owner: 'gorpeln',
+        admin: ['gorpeln'],
+        id: md5(location.pathname),
+
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
+
+
+
 </div>
 </div>
           </div>
@@ -535,7 +558,7 @@ sudo chown root:wheel GoogleSoftwareUpdate
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.78</span>
+            <span>4.9.79</span>
         </div>
     </div>
 </footer>
@@ -678,7 +701,7 @@ sudo chown root:wheel GoogleSoftwareUpdate
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.78",
+                "%c版本号 %c V4.9.79",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -923,7 +946,7 @@ sudo chown root:wheel GoogleSoftwareUpdate
 
 
   <!-- waline 评论 -->
-  <!-- post、works、links、about -->
+  <!-- post、works、links、about、record -->
   <script type="module">
     // 中文默认
         const locale = {

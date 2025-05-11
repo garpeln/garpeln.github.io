@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-05-10 21:07:23 +0800">
-                    2025/05/10
+                  <p id="current-date" data-value="2025-05-11 18:34:33 +0800">
+                    2025/05/11
                   </p>
                 </li>
               </ul>
@@ -662,7 +662,31 @@
 </details>
 
 </div>
+<div class="livere waline-box">
+    <!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<script type="text/javascript" src="/assets/js/md5.min.js"></script>
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+    var gitalk = new Gitalk({
 
+    // gitalk的主要参数
+        clientID: 'Ov23liC2CuQOOTNYgtHi',
+        clientSecret: '1a73f54963ee9193f6f28b53dd7ca5554530894d',
+        repo: 'Gitalk',
+        owner: 'gorpeln',
+        admin: ['gorpeln'],
+        id: md5(location.pathname),
+
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
+
+
+
+</div>
 
   
 
@@ -728,7 +752,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.78</span>
+            <span>4.9.79</span>
         </div>
     </div>
 </footer>
@@ -871,7 +895,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.78",
+                "%c版本号 %c V4.9.79",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1114,6 +1138,87 @@
     });
 </script>
 
+
+  <!-- waline 评论 -->
+  <!-- post、works、links、about、record -->
+  <script type="module">
+    // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+        import { init } from '/assets/js/waline.js';
+
+       init({
+            el: '#waline',
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+</script>
 
 
 
