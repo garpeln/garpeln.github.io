@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">219</span>
+                    <span class="site-state-item-count">221</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">219 </span>
+                  <span class="articleCount">221 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -154,7 +154,7 @@
                   
                   <li onclick="pushNew('/categories#其他')" class="categoryList">
                     <a name="其他" class="default-categoryNav-name">其他</a>
-                    <a name="其他" style="" class="articleCount">57</a>
+                    <a name="其他" style="" class="articleCount">59</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
@@ -354,11 +354,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>219</p>
+                  <p>221</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>111.1k</p>
+                  <p>111.3k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-05-20 10:59:32 +0800">
-                    2025/05/20
+                  <p id="current-date" data-value="2025-05-24 17:56:15 +0800">
+                    2025/05/24
                   </p>
                 </li>
               </ul>
@@ -1019,7 +1019,6 @@ app.get('/api/test', (req, res, next) =&gt; {
         </div>
       </div>
     </div>
-
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
@@ -1073,7 +1072,7 @@ app.get('/api/test', (req, res, next) =&gt; {
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.82</span>
+            <span>4.9.83</span>
         </div>
     </div>
 </footer>
@@ -1216,7 +1215,7 @@ app.get('/api/test', (req, res, next) =&gt; {
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.82",
+                "%c版本号 %c V4.9.83",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -2324,6 +2323,10 @@ app.get('/api/test', (req, res, next) =&gt; {
          
        
          
+       
+         
+       
+         
       
   ];
 
@@ -2358,7 +2361,8 @@ app.get('/api/test', (req, res, next) =&gt; {
           const siteInfoNavStyle = window.getComputedStyle(siteInfoNav);
           const marginTop = parseInt(siteInfoNavStyle.marginTop, 10);
           const tocTop = siteInfoNav.offsetTop + siteInfoNav.offsetHeight;
-          if (scrollTop >= tocTop) {
+
+          if (scrollTop >= tocTop + marginTop*2 ) {
               toc.classList.add('fixed');
           } else {
               toc.classList.remove('fixed');
