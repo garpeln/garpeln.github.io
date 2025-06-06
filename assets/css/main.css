@@ -694,6 +694,63 @@ li.article a:hover,li.article a:focus{
 */
 
 
+/* 基础卡片样式 */
+.post-card {
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 15px 15px 15px 35px; /* 直接声明内边距 */
+  border-radius: 10px; /* 直接声明圆角 */
+  box-shadow: 6px 0 12px -5px rgba(0,0,0,0.1), -6px 0 12px -5px rgba(0,0,0,0.1); /* 直接声明阴影 */
+  transition: all 0.3s ease; /* 保留过渡效果 */
+}
+
+/* 主题样式变体 */
+.card-theme1 {
+  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.card-theme2 {
+  background: linear-gradient(220deg, #FF9A8B 0%, #FF99AC 100%);
+  color: #555555;
+  box-shadow: 6px 0 12px -5px rgba(255, 176, 172, 0.3), -6px 0 12px -5px rgba(255, 161, 174, 0.3);
+}
+
+.card-theme3 {
+  background: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  color: #555555;
+}
+
+.card-theme4 {
+  background: radial-gradient(circle 263px at 100.2% 3%, #0c558d 31.1%, #cdb55d 36.4%, #f4665a 50.9%, #c7cebb 60.7%, #f98c45 72.5%, #0c4974 72.6%);
+  color: #eeeeee;
+  box-shadow: 6px 0 12px -5px #0c558d, -6px 0 12px -5px rgba(10, 58, 93, 0.3);
+}
+
+.card-theme5 {
+  background: linear-gradient(102deg, #446e5c 17.4%, #6b9c78 49.3%, #9aa382 83.4%, #f7edbf 110.3%);
+  color: #eeeeee;
+  box-shadow: 6px 0 12px -5px #446e5c, -6px 0 12px -5px rgba(204, 212, 163, 0.3);
+}
+
+.card-theme6 {
+  background: radial-gradient(circle farthest-corner at -8.9% 51.2%, #ff7c00 0%, #ff7c00 15.9%, #ffa34d 15.9%, #ffa34d 24.4%, #131e25 24.5%, #131e25 66%);
+  color: #ffffff;
+  box-shadow: 6px 0 12px -5px rgba(253, 223, 234, 0.3), -6px 0 12px -5px rgba(215, 240, 243, 0.3);
+}
+
+.card-theme7 {
+  background: radial-gradient(circle farthest-corner at 10% 20%, #5f75e3 0%, #bcabd1 90%);
+  color: #ffffff;
+  box-shadow: 6px 0 12px -5px rgba(175, 160, 208, 0.3), -6px 0 12px -5px rgba(177, 161, 207, 0.1);
+}
+
+.card-theme8 {
+  background: radial-gradient(circle farthest-corner at 10% 20%, #000000 0%, #404040 90.2%);
+  color: #c7c7c7;
+  box-shadow: 6px 0 12px -5px #9bade1, -6px 0 12px -5px rgba(177, 161, 207, 0.1);
+}
+
+
 @media (max-width: 992px) {
 
     /*

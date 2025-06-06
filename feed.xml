@@ -7,6 +7,175 @@
     
       
         <item>
+          <title>使用Serv00部署在线工具箱</title>
+          <link>https://gorpeln.top/article/17460739947</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17460739947</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Thu, 01 May 2025 12:33:14 +0800</pubDate>
+          <description>&lt;h3 id=&quot;效果演示&quot;&gt;效果演示&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tool.202090.xyz/&quot;&gt;在线工具箱 演示网站&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在线工具箱：提供丰富的在线工具，如 JSON 格式化、美化、压缩、解析，Unix 时间戳转换，CSS 美化等多功能支持。&lt;/p&gt;
+
+&lt;h3 id=&quot;事前准备&quot;&gt;事前准备&lt;/h3&gt;
+
+&lt;p&gt;域名（ &lt;strong&gt;非必须&lt;/strong&gt;，你也可以使用免费域名）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.serv00.com/&quot;&gt;Serv00&lt;/a&gt; （ &lt;strong&gt;必须&lt;/strong&gt;，免费注册的，没有可以自行注册但是对IP环境和邮箱要求比较大，注册提示维护一般都是IP或者邮箱不太行，邮箱建议使用谷歌的。）&lt;/p&gt;
+
+&lt;h3 id=&quot;开始部署&quot;&gt;开始部署&lt;/h3&gt;
+
+&lt;p&gt;01、 登录你的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00&lt;/code&gt; 后，点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 添加你的域名我设置为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt; ，点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add&lt;/code&gt; 添加。看到这个提示 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Operation performed successfully&lt;/code&gt; 成功添加。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314111.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314111&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;02、 点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage SSL certificates&lt;/code&gt; 可以看到这个ip地址 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;128.204.223.xxx&lt;/code&gt; 然后去你的DNS解析平台绑定。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314112.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314112&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;03、 打开DNS解析平台解析。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314113.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314113&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;04、 这样设置完，你打开的设置的网站域名，可以看到这样的页面就是成功。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314114.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;05、 接下来正式开始打开 &lt;a href=&quot;https://github.com/gorpeln/tool&quot;&gt;tool&lt;/a&gt; 下载源码。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314115.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;06、 点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Details&lt;/code&gt; ，设置你网站的路径，如图所示，修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Open Basedir directories&lt;/code&gt; 中的内容，把下方代码中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00的名称&lt;/code&gt; 替换为你的登录用户名， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自己的域名&lt;/code&gt; 同理，修改完复制进去保存。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/home/serv00的名称/domains/自己的域名/public_html:/tmp:/usr/share:/usr/local/share:/dev:/tmp:/usr/share:/usr/local/share:/dev:/usr/home/serv00的名称/domains/自己的域名
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314116.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314116&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;07、 设置完毕，打开serv00 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File manager&lt;/code&gt;，上传从github下载的tool源文件压缩包&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314117.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314117&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;08、 进到你域名这个目录，上传你之前下载好的源码。右键压缩包如图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314118.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314118&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;09、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool-main&lt;/code&gt; 这个目录里面，全选除&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;外的所有文件&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314119.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314119&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;10、 选择解压到你域名的目录，只要你跟我图一样就没问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314120.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314120&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;11、 进到命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt; 目录，全选所有文件，右键解压到域名目录中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314121.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314121&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314122.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314122&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;12、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录，将命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.htaccess&lt;/code&gt; 的文件右键打开使用text方式编辑，你如果没有我图片上的text，就选 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;choose other&lt;/code&gt; 进行选择编辑方式拉到最下面就有了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314123.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314123&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;13、 将文件内容改为这个代码 然后保存。&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AddType application/x-httpd-php71 .php
+&amp;lt;IfModule mod_rewrite.c&amp;gt;
+  Options +FollowSymlinks -Multiviews
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+&amp;lt;/IfModule&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;14、 完成！打开你的网站就可以看到内容了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;15、 （可选项）通过访问 https://你的域名/admin，访问后台，进行相关配置修改。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314125.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314125&quot; /&gt;&lt;/p&gt;
+
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>自定义博客文章卡片</title>
+          <link>https://gorpeln.top/article/17456663587</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17456663587</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 26 Apr 2025 19:19:18 +0800</pubDate>
+          <description>&lt;h3 id=&quot;效果&quot;&gt;效果&lt;/h3&gt;
+&lt;p&gt;迷幻紫&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme1&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;西瓜红&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme2&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;天空之境&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme3&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;小宇宙&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme4&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;橄榄绿&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme5&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;小太阳&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme6&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;优雅紫&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme7&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;p&gt;深邃黑&lt;/p&gt;
+&lt;div class=&quot;post-card card-theme8&quot;&gt;在这里输入文本&lt;/div&gt;
+
+&lt;h3 id=&quot;代码&quot;&gt;代码&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;迷幻紫
+&amp;lt;div class=&quot;post-card card-theme1&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+   
+西瓜红
+&amp;lt;div class=&quot;post-card card-theme2&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+    
+天空之境
+&amp;lt;div class=&quot;post-card card-theme3&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+   
+小宇宙
+&amp;lt;div class=&quot;post-card card-theme4&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+    
+橄榄绿
+&amp;lt;div class=&quot;post-card card-theme5&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+    
+小太阳
+&amp;lt;div class=&quot;post-card card-theme6&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+    
+优雅紫
+&amp;lt;div class=&quot;post-card card-theme7&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+    
+深邃黑
+&amp;lt;div class=&quot;post-card card-theme8&quot;&amp;gt;在这里输入文本&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>个人博客可以尝试的 100 件事</title>
           <link>https://gorpeln.top/article/17426995265</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17426995265</guid>
@@ -1726,7 +1895,7 @@ if __name__ == &quot;__main__&quot;:
 document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
     const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
     elements.forEach(function(element) {
-        element.textContent = &apos;4.9.87&apos;;
+        element.textContent = &apos;4.9.88&apos;;
     });
 });       
 &lt;/script&gt;
@@ -2445,112 +2614,6 @@ window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
 &lt;h3 id=&quot;结语&quot;&gt;结语&lt;/h3&gt;
 &lt;p&gt;感谢那些一直默默付出的贡献者们，这次空投给开源社区打了一剂振奋剂，也引来了不少别出心裁之人……
 还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>部署友链朋友圈</title>
-          <link>https://gorpeln.top/article/17049566482</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17049566482</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Thu, 11 Jan 2024 15:04:08 +0800</pubDate>
-          <description>&lt;h3 id=&quot;在线预览&quot;&gt;在线预览：&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/friends&quot;&gt;https://gorpeln.top/friends&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;github部署爬虫&quot;&gt;Github部署爬虫&lt;/h3&gt;
-&lt;p&gt;官方文档：&lt;a href=&quot;https://fcircle-doc.yyyzyyyz.cn/&quot;&gt;https://fcircle-doc.yyyzyyyz.cn/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;首先，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Import&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fork&lt;/code&gt;此项目 &lt;a href=&quot;https://github.com/Rock-Candy-Tea/hexo-circle-of-friends&quot;&gt;https://github.com/Rock-Candy-Tea/hexo-circle-of-friends&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;编辑&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/hexo_circle_of_friend/fc_settings.yaml&lt;/code&gt;文件。根据注释，修改此处配置&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LINK: [
-     { link: &quot;https://gorpeln.top/links/&quot;, theme: &quot;commen2&quot; },  
-     # 友链页地址，修改为你的友链页地址以及相应的主题，若无相应主题，尝试commen1或commen2。
-     ...
-]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;针对还未适配主题或者有定制需求的用户，可以开启&lt;strong&gt;配置项友链&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SETTINGS_FRIENDS_LINKS: {
-    enable: true,
-    json_api: &quot;https://xxxx.com/xxx.json&quot;,
-    # json_api：通过json格式配置友链，详见：https://fcircle-doc.yyyzyyyz.cn/#/developmentdoc?id=配置项json友链
-    list: []
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后点击仓库的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;，添加4个变量。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_NAME&lt;/code&gt;(Github用户名)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_EMAIL&lt;/code&gt;(Github账户邮箱)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;(Github密钥，具有repo以及workflow权限)、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STORAGE_TYPE&lt;/code&gt;(数据库类型，填写sqlite)&lt;/p&gt;
-
-&lt;p&gt;完成后，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;General&lt;/code&gt;，勾选&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;permissions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow all actions and reusable workflows&lt;/code&gt;以及&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Workflow permissions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Read and write permissions&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;vercel部署api&quot;&gt;Vercel部署API&lt;/h3&gt;
-&lt;p&gt;新建项目，导入仓库，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Deploy&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;等自动部署完成后，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;–&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Environment Variables&lt;/code&gt;，添加4个变量，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_NAME&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_EMAIL&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;（同上），还需添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VERCEL_ACCESS_TOKEN&lt;/code&gt;(&lt;strong&gt;Vercel&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Settings&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Tokens&lt;/strong&gt;—&amp;gt;&lt;strong&gt;Create&lt;/strong&gt;)。&lt;/p&gt;
-
-&lt;h3 id=&quot;运行爬虫&quot;&gt;运行爬虫&lt;/h3&gt;
-&lt;p&gt;回到Github仓库，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update-friends-posts&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable workflow&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run workflow&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run workflow&lt;/code&gt;。爬虫会自动爬取文章，同时Vercel会自动重新部署。&lt;/p&gt;
-
-&lt;h3 id=&quot;绑定域名&quot;&gt;绑定域名&lt;/h3&gt;
-&lt;p&gt;vercel遭遇域名污染导致无法访问，友链朋友圈的vercel部署也会受到影响，可以通过解析到自定义域名来解决。&lt;/p&gt;
-
-&lt;p&gt;来到Vercel项目，点击&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;—&amp;gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Domains&lt;/code&gt;，根据提示输入域名并设置DNS即可。&lt;/p&gt;
-
-&lt;p&gt;在链接后加上&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/all&lt;/code&gt;获取全部文章&lt;/p&gt;
-
-&lt;h3 id=&quot;挂载前端代码&quot;&gt;挂载前端代码&lt;/h3&gt;
-&lt;p&gt;博客新建一个页面，放入以下代码： &lt;br /&gt;
-其中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apiurl&lt;/code&gt;就上在vercel上部署绑定的域名&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- 挂载友链朋友圈的容器 --&amp;gt;
-&amp;lt;div id=&quot;cf-container&quot;&amp;gt;与主机通讯中……&amp;lt;/div&amp;gt;
-&amp;lt;!-- 加样式和功能代码 --&amp;gt;
-&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://fastly.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css&quot;&amp;gt;
-&amp;lt;!-- 匹配自己的友链或加载后端数据 --&amp;gt;
-&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-  var fdataUser = {
-    //jsonurl: &apos;https://cdn.edui.fun/lmm.json&apos;,  //【推荐】json 匹配模式
-    apiurl: &apos;https://hexo-circle-of-friends-lmm214.vercel.app/&apos;,  //自部署api
-  }
-&amp;lt;/script&amp;gt;
-&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://fastly.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>2023 年度总结</title>
-          <link>https://gorpeln.top/article/17040105944</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17040105944</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sun, 31 Dec 2023 16:16:34 +0800</pubDate>
-          <description>&lt;p style=&quot;display:none&quot;&gt;在辞旧迎新之际，回首2023年，我感慨万千。岁月如梭，光阴荏苒，每一天都是一段珍贵的时光，我努力在工作与生活的交错中寻找平衡，不断追求进步与成长。工作上，我面对各种挑战，不断突破自我，努力为团队和公司做出更大的贡献；生活中，我珍惜每一个温暖的瞬间，注重身心健康，与家人朋友共享美好时光。&lt;/p&gt;
-
-&lt;p style=&quot;display:none&quot;&gt;在未来的道路上，我愿继续前行，怀揣着对生活的热爱和对未来的期许，不断探索前进，追逐梦想。感恩过去一年的所有经历和收获，期待着新的一年带来更多的挑战与机遇，也希望能与您一同分享成长的喜悦与收获。&lt;/p&gt;
-
-&lt;h3 id=&quot;文雅&quot;&gt;文雅&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;度过了一年平静而充实的生活，专注于内心的宁静与成长。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20231231161634712.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20231231161634712&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;通俗&quot;&gt;通俗&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;苟活着，一年啥也没干。&lt;/strong&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20231231161634713.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20231231161634713&quot; /&gt;&lt;/p&gt;
 
 </description>
         </item>

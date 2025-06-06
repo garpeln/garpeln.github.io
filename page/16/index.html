@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-count">223</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">679</span>
+                    <span class="site-state-item-count">687</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">221 </span>
+                  <span class="articleCount">223 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,12 +159,12 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">30</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
                     <a name="web前端" class="default-categoryNav-name">web前端</a>
-                    <a name="web前端" style="" class="articleCount">5</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
@@ -354,11 +354,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>221</p>
+                  <p>223</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>112.2k</p>
+                  <p>112.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-03 14:30:04 +0800">
-                    2025/06/03
+                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
+                    2025/06/06
                   </p>
                 </li>
               </ul>
@@ -824,7 +824,114 @@
     
     
     
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/14896376367" target="_blank">present,dismiss到任意控制器(二)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2017-03-16</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#present" target="_blank">present</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#dismiss" target="_blank">dismiss</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#代码段" target="_blank">代码段</a>
+                             </span>  </div>  
+            <div class="contentAbstract">
+  iOS开发中，在没有用到navigationController情况下，页面跳转多用present，但它并没有一个类似popToRootViewControllerAnimated的方法可以直接回到根控制器，下面给出三个方法：
+
+
+
+
+
+方法一：循环获取到最底层控制器，然后dismiss掉，直接返回到跟控制器
+
+
+- (void)logoutBtnOnClick    
+{    
+    UIViewController *vc = self.presentingViewContr...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/14896376367" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/14882587810" target="_blank">数组操作：倒序、乱序</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2017-02-28</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#NSArray" target="_blank">NSArray</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#倒序" target="_blank">倒序</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#乱序" target="_blank">乱序</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">倒序操作
+
+
+NSMutableArray *originalArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",nil];
+NSArray* reversedArray = [[originalArray reverseObjectEnumerator] allObjects];
+    
+NSLog(@"originalArray --- %@",originalArray);
+NSLog(@"revers...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/14882587810" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1260,113 +1367,6 @@ picImageView.backgroundColor = [UIColor greenColor];
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/14669248561" target="_blank">为什么不应该加班？</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2016-06-26</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
-                    程序人生
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#程序人生" target="_blank">程序人生</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#加班" target="_blank">加班</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#代码审核" target="_blank">代码审核</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">加班有好处也有坏处，下面我列举了一些，有些是众所周知的，有些是我的个人意见。
-
-一、坏处
-
-1、加班会产生新的bug
-　　人不可能长时间的集中精神，如果你的大脑没有休息好的话，注意力就会下降的很快。其实你在早上的时候休息的不错，注意力很集中的时候，你也可能会产生bug，那么在晚上10点继续工作的话，会产生什么样的灾难性的事情，真是不敢想象。一天8小时的脑力工作对你的大脑来说已经够多了。
-
-2、你写的东西来不及检查，比如代码
-
-　　代码审核（Code Review）在一个团队中是一个非常有用...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/14669248561" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/14457584631" target="_blank">iOS9 HTTP 不能正常使用的解决办法（数据无法加载）</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2015-10-25</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#Bug调试" target="_blank">Bug调试</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#iOS9" target="_blank">iOS9</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#HTTPS协议" target="_blank">HTTPS协议</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">输出错误信息：
-
-  The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.
-
-
-原因：
-
-  iOS9引入了新特性App Transport Security (ATS)。
-
-  新特性要求App内访问的网络必须使用HTTPS协议。
-但是现在公司的项目使用的是HTTP协议，使用私有加密方式保证数据安全。现在也不能马...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/14457584631" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1465,7 +1465,7 @@ picImageView.backgroundColor = [UIColor greenColor];
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.87</span>
+            <span>4.9.88</span>
         </div>
     </div>
 </footer>
@@ -1608,7 +1608,7 @@ picImageView.backgroundColor = [UIColor greenColor];
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.87",
+                "%c版本号 %c V4.9.88",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1867,6 +1867,14 @@ picImageView.backgroundColor = [UIColor greenColor];
   }
 
   const postUrls = [
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
        
         
           "/article/17426995265",

@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-count">223</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">679</span>
+                    <span class="site-state-item-count">687</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">221 </span>
+                  <span class="articleCount">223 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,12 +159,12 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">30</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
                     <a name="web前端" class="default-categoryNav-name">web前端</a>
-                    <a name="web前端" style="" class="articleCount">5</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
@@ -354,11 +354,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>221</p>
+                  <p>223</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>112.2k</p>
+                  <p>112.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-03 14:30:04 +0800">
-                    2025/06/03
+                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
+                    2025/06/06
                   </p>
                 </li>
               </ul>
@@ -824,7 +824,118 @@
     
     
     
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16199142732" target="_blank">SDWebImage实现原理</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2021-05-02</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#SDWebImage" target="_blank">SDWebImage</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#UIImageView" target="_blank">UIImageView</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#SDImageCache" target="_blank">SDImageCache</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一、架构简图
+
+
+二、加载流程
+
+
+三、实现流程
+SDWebImage提供一个UIImageView的类别以支持加载来自互联网的远程图片。具有缓存管理、异步下载，同一个URL下载次数控制和优化等特征。
+
+1、独立的异步图像缓存
+SDImageCache类提供一个管理缓存的单例类。
+SDImageCache *imageCache = [SDImageCache sharedImageCache]
+
+查找和缓存图片时以URL作为key。(先查找内存，如果内存不存在该图片，再查找硬盘；查找硬盘...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16199142732" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16175510629" target="_blank">微信小程序（组件 - 自定义组件）</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2021-04-04</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
+                    微信小程序
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#手势" target="_blank">手势</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#优先级" target="_blank">优先级</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#响应链" target="_blank">响应链</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">版本要求： 
+从小程序基础库版本 1.6.3 开始，小程序支持简洁的组件化编程。开发者可以将页面内的功能模块抽象成自定义组件，以便在不同的页面中重复使用；也可以将复杂的页面拆分成多个低耦合的模块，有助于代码维护。
+注意：自定义组件在使用时与基础组件非常相似
+
+构成部分，每个自定义组件由四个代码文件组成：
+①json文件 用于于放置一些最基本的组件配置
+②wxml 文件 组件模版
+③wxss 文件 组件的样式，只在组件内部节点上生效（这个文件是可选的）
+④js 文件 组件的 JS 代码，承载...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16175510629" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1265,123 +1376,6 @@ GPAPIManager.h
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15987505965" target="_blank">本机号码一键登录</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-08-30</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#一键登录" target="_blank">一键登录</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#手机号" target="_blank">手机号</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#本机号码" target="_blank">本机号码</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">一、前言
-在移动app使用手机号码登录的场景中，传统模式的步骤如下：
-
-  输入手机号码
-  接收验证码
-  输入接收到的验证码
-  点击登陆
-
-
-最近看到很多应用都采用了一种新的模式—本机号码一键登录 ，这种模式对于用户来说，只需要确认下手机号码是否正确，点击确认登陆即可，即需要操作传统模式的最后一步，方便快捷，抖音、淘宝等应用均已经接入。
-
-
-那么本机号码一键登录的原理是什么呢？下面我们来聊一聊。
-
-二、实现原理
-
-目前三大运营商均有介绍和接入文档，原理和流程基本相同，本文从中国移动提...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15987505965" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15981552003" target="_blank">5周年：岁月使然而我在等你</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-08-23</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
-                    个人博客
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#个人博客" target="_blank">个人博客</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#5周年" target="_blank">5周年</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#简洁" target="_blank">简洁</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">gorpeln的个人博客 - gorpeln 博客五周年了。
-  
-转眼间，五年的悠悠岁月已如同手中紧握的沙子，无声无息的流逝。
-光阴似箭，日月如梭。时间像一匹飞驰的骏马，转眼间，从我们的身边飞逝而去。
-后来，南山的风吹散了谷堆，北海的水淹没了墓碑，多少事沧海桑田，无数人来了又回。 
-时间是一直藏在黑暗中的温柔的手，在你一出神一恍惚之间，物走星移。
-
-博 客 五 周 年 快 乐 ！ 
-
-
-
-
-五年前，从最初使用开放模板搭建博客开始…… 
-到后来，GitHub pages，Coding pa...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15981552003" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1480,7 +1474,7 @@ GPAPIManager.h
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.87</span>
+            <span>4.9.88</span>
         </div>
     </div>
 </footer>
@@ -1623,7 +1617,7 @@ GPAPIManager.h
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.87",
+                "%c版本号 %c V4.9.88",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1882,6 +1876,14 @@ GPAPIManager.h
   }
 
   const postUrls = [
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
        
         
           "/article/17426995265",

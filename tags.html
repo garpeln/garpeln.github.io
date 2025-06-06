@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-count">223</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">679</span>
+                    <span class="site-state-item-count">687</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">221 </span>
+                  <span class="articleCount">223 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,12 +159,12 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">30</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
                     <a name="web前端" class="default-categoryNav-name">web前端</a>
-                    <a name="web前端" style="" class="articleCount">5</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
@@ -354,11 +354,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>221</p>
+                  <p>223</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>112.2k</p>
+                  <p>112.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-03 14:30:04 +0800">
-                    2025/06/03
+                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
+                    2025/06/06
                   </p>
                 </li>
               </ul>
@@ -869,7 +869,7 @@ a {
         
         <a class="pjaxlink" href="#Gitalk" name="Gitalk">Gitalk　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#博客" name="博客">博客　<span class="tag-count">(9)</span></a>
+        <a class="pjaxlink" href="#博客" name="博客">博客　<span class="tag-count">(11)</span></a>
         
         <a class="pjaxlink" href="#Client" name="Client">Client　<span class="tag-count">(1)</span></a>
         
@@ -1746,6 +1746,22 @@ a {
         <a class="pjaxlink" href="#blog" name="blog">blog　<span class="tag-count">(1)</span></a>
         
         <a class="pjaxlink" href="#归档" name="归档">归档　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#卡片" name="卡片">卡片　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#西瓜红" name="西瓜红">西瓜红　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#天空之境" name="天空之境">天空之境　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#优雅紫" name="优雅紫">优雅紫　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#Serv00" name="Serv00">Serv00　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#tool" name="tool">tool　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#工具箱" name="工具箱">工具箱　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#部署教程" name="部署教程">部署教程　<span class="tag-count">(1)</span></a>
         
     </div>
     <div class="clear"></div>
@@ -8691,6 +8707,24 @@ a {
     <div class="target-fix" id="博客" name="博客">
       <h1 class="tag-name">博客</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-05-01</span>
+              
+                <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-04-26</span>
+              
+                <a class="pjaxlink" href="/article/17456663587">自定义博客文章卡片</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -19392,6 +19426,190 @@ a {
     </div>
   
 
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="卡片" name="卡片">
+      <h1 class="tag-name">卡片</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-04-26</span>
+              
+                <a class="pjaxlink" href="/article/17456663587">自定义博客文章卡片</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="西瓜红" name="西瓜红">
+      <h1 class="tag-name">西瓜红</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-04-26</span>
+              
+                <a class="pjaxlink" href="/article/17456663587">自定义博客文章卡片</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="天空之境" name="天空之境">
+      <h1 class="tag-name">天空之境</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-04-26</span>
+              
+                <a class="pjaxlink" href="/article/17456663587">自定义博客文章卡片</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="优雅紫" name="优雅紫">
+      <h1 class="tag-name">优雅紫</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-04-26</span>
+              
+                <a class="pjaxlink" href="/article/17456663587">自定义博客文章卡片</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="Serv00" name="Serv00">
+      <h1 class="tag-name">Serv00</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-05-01</span>
+              
+                <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="tool" name="tool">
+      <h1 class="tag-name">tool</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-05-01</span>
+              
+                <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="工具箱" name="工具箱">
+      <h1 class="tag-name">工具箱</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-05-01</span>
+              
+                <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="部署教程" name="部署教程">
+      <h1 class="tag-name">部署教程</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-05-01</span>
+              
+                <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
 </div>
 </div>
           </div>
@@ -19451,7 +19669,7 @@ a {
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.87</span>
+            <span>4.9.88</span>
         </div>
     </div>
 </footer>
@@ -19594,7 +19812,7 @@ a {
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.87",
+                "%c版本号 %c V4.9.88",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -19853,6 +20071,14 @@ a {
   }
 
   const postUrls = [
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
        
         
           "/article/17426995265",

@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-count">223</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">679</span>
+                    <span class="site-state-item-count">687</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">221 </span>
+                  <span class="articleCount">223 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,12 +159,12 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">30</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
                     <a name="web前端" class="default-categoryNav-name">web前端</a>
-                    <a name="web前端" style="" class="articleCount">5</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
@@ -354,11 +354,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>221</p>
+                  <p>223</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>112.2k</p>
+                  <p>112.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-03 14:30:04 +0800">
-                    2025/06/03
+                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
+                    2025/06/06
                   </p>
                 </li>
               </ul>
@@ -824,7 +824,105 @@
     
     
     
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15700906142" target="_blank">锚点跳转距离顶部指定距离</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2019-10-03</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#web前端" target="_blank">
+                    web前端
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#锚点" target="_blank">锚点</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#html" target="_blank">html</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#scrollTop" target="_blank">scrollTop</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">html
+
+&lt;a href="#maodian"&gt;点这里跳&lt;/a&gt;
+&lt;div id="maodian"&gt;跳到这里&lt;/div&gt; 
+
+
+js+jquery
+
+window.onhashchange=function(){
+    var target = $(location.hash);
+    if(target.length==1){
+        var top = target.offset().top-120;// 距离顶部120像...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15700906142" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15692409843" target="_blank">博客文章 - 简单加密</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2019-09-23</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                    个人博客
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#个人博客" target="_blank">个人博客</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#加密" target="_blank">加密</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#password" target="_blank">password</a>
+                            
+                    
+                      </span>  </div>   <div class="contentAbstract">文章已加密，请输入正确的密码进行访问。如果你可以成功进入请留言，有意想不到的惊喜哦，期待你的访问！The article has been encrypted, please enter the correct password to access. If you can successfully enter, please leave a message. There will be unexpected surprises. I look forward to your visit!</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15692409843" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1301,106 +1399,6 @@ top: true
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15599710733" target="_blank">概述 ：微信小程序概述</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2019-06-08</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
-                    微信小程序
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#微信小程序" target="_blank">微信小程序</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#HTML5" target="_blank">HTML5</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#APP" target="_blank">APP</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">一、什么是微信小程序
-
-小程序是有别于传统 Web App、HTML5、原生 App 以及微信公众号的一种新的应用形式，由微信团队于 2017 年 1 月对外发布的，经过近两年的发展，小程序越来越成熟，小程序研发也越来越受到重视。什么是小程序？用张小龙自己的话来说：
-
-
-  小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太多应用的问题。应用将无处不在，随时可用，但又无须安装卸载。
-...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15599710733" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15589479418" target="_blank">编程到底难在哪里？</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2019-05-27</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
-                    程序人生
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#程序人生" target="_blank">程序人生</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#开心一刻" target="_blank">开心一刻</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#段子" target="_blank">段子</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">这篇回答并不是讲述在生活中程序员如何买苹果，而是以买苹果为例说明程序员如何解决问题。程序员需要对问题进行透彻的分析，理清其涉及的所有细节，预测可能发生的所有意外与非意外的情况，列出解决方案的所有步骤，以及对解决方案进行尽量全面的测试。而这些正是编程难的地方。任何一点遗漏都会成为bug，轻则导致挨骂，重则导致经济损失甚至危害安全
-
-普通人：
-我今天要买一斤苹果。
-
-程序员：
-我今天要买一斤苹果。
-
-因为我只喜欢红富士苹果，所以我只买红富士苹果。
-我能接受的最高价格是 10 元 / 斤。
-正常...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15589479418" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1499,7 +1497,7 @@ top: true
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.87</span>
+            <span>4.9.88</span>
         </div>
     </div>
 </footer>
@@ -1642,7 +1640,7 @@ top: true
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.87",
+                "%c版本号 %c V4.9.88",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1901,6 +1899,14 @@ top: true
   }
 
   const postUrls = [
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
        
         
           "/article/17426995265",
