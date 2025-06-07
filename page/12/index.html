@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">223</span>
+                    <span class="site-state-item-count">224</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">687</span>
+                    <span class="site-state-item-count">691</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">223 </span>
+                  <span class="articleCount">224 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -174,7 +174,7 @@
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">22</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -354,7 +354,7 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>223</p>
+                  <p>224</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
-                    2025/06/06
+                  <p id="current-date" data-value="2025-06-07 19:44:14 +0800">
+                    2025/06/07
                   </p>
                 </li>
               </ul>
@@ -828,7 +828,70 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15419058710" target="_blank">Jekyll博客添加Gitalk评论</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2018-11-11</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                    个人博客
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#Jekyll" target="_blank">Jekyll</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#Gitalk" target="_blank">Gitalk</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#个人博客" target="_blank">个人博客</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">之前一直用的是来必力的评论系统，还不错，但是个人不太喜欢来必力的界面，感觉加载速度有点慢（个人感觉）。所以换成GitTalk的评论系统，话不多说，我们来上硬货。
+
+注册申请
+在GitHub上注册新应用，链接：https://github.com/settings/applications/new
+
+
+
+参数说明：
+
+  Application name： 应用名称，随意 
+Homepage URL： 网站URL，对应自己博客地址 
+Application description ：描述，随...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15419058710" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1349,65 +1412,6 @@ zip -r -P yourPassword yo...</div>
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15326844122" target="_blank">触发KVO的修改变量值方法</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2018-07-27</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#KVO" target="_blank">KVO</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#Observer" target="_blank">Observer</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#通知" target="_blank">通知</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">// Student.h
-@interface Student : NSObject
-
-@property (nonatomic , assign) NSInteger score;
-
-- (void)changeScore:(NSInteger)score;
-
-@end
-
-
-// Student.m
-#import "Student.h"
-@implementation Student
-// 改变成员变量的值
-- (void)changeScore:(NSInteger)score{
- ...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15326844122" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1506,7 +1510,7 @@ zip -r -P yourPassword yo...</div>
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.88</span>
+            <span>4.9.89</span>
         </div>
     </div>
 </footer>
@@ -1649,7 +1653,7 @@ zip -r -P yourPassword yo...</div>
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.88",
+                "%c版本号 %c V4.9.89",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1908,6 +1912,10 @@ zip -r -P yourPassword yo...</div>
   }
 
   const postUrls = [
+       
+        
+          "/article/17486910472",
+         
        
         
           "/article/17460739947",

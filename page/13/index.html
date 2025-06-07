@@ -71,7 +71,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">223</span>
+                    <span class="site-state-item-count">224</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">687</span>
+                    <span class="site-state-item-count">691</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +116,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">223 </span>
+                  <span class="articleCount">224 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -174,7 +174,7 @@
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">22</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -354,7 +354,7 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>223</p>
+                  <p>224</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-06 21:42:01 +0800">
-                    2025/06/06
+                  <p id="current-date" data-value="2025-06-07 19:44:14 +0800">
+                    2025/06/07
                   </p>
                 </li>
               </ul>
@@ -828,7 +828,68 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15326844122" target="_blank">触发KVO的修改变量值方法</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2018-07-27</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#KVO" target="_blank">KVO</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#Observer" target="_blank">Observer</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#通知" target="_blank">通知</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">// Student.h
+@interface Student : NSObject
+
+@property (nonatomic , assign) NSInteger score;
+
+- (void)changeScore:(NSInteger)score;
+
+@end
+
+
+// Student.m
+#import "Student.h"
+@implementation Student
+// 改变成员变量的值
+- (void)changeScore:(NSInteger)score{
+ ...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15326844122" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1324,60 +1385,6 @@ NSInteger maxFontNum = 200;//最大输入限制
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15204862561" target="_blank">短信验证码防刷机制</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2018-03-08</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
-                    产品和运营
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#验证码" target="_blank">验证码</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#时间" target="_blank">时间</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#手机号" target="_blank">手机号</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">　　最近遇到一个关于防止短信验证码被刷的产品设计问题，后来在面试一个前来应聘JAVA开发的程序员的时候，他也提到了他以前公司的系统也遭遇过这个被刷短信的问题。因此，就“如何设计短信验证码防刷机制”作一个总结和分享。
-
-1、时间限制：60秒后才能再次发送
-
-
-  从发送验证码开始，前端（客户端）会进行一个60秒的倒数，在这一分钟之内，用户是无法提交多次发送信息的请求的。这种方法虽然使用得比较普遍，但是却不是非常有用，技术稍微好点的人完全可以绕过这个限制，直接发送短信验证码。
-
-
-2、手机号限...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15204862561" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1476,7 +1483,7 @@ NSInteger maxFontNum = 200;//最大输入限制
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.88</span>
+            <span>4.9.89</span>
         </div>
     </div>
 </footer>
@@ -1619,7 +1626,7 @@ NSInteger maxFontNum = 200;//最大输入限制
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.88",
+                "%c版本号 %c V4.9.89",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1878,6 +1885,10 @@ NSInteger maxFontNum = 200;//最大输入限制
   }
 
   const postUrls = [
+       
+        
+          "/article/17486910472",
+         
        
         
           "/article/17460739947",
