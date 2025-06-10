@@ -104,7 +104,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314114.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;05、 接下来正式开始打开 &lt;a href=&quot;https://github.com/gorpeln/tool&quot;&gt;tool&lt;/a&gt; 下载源码。&lt;/p&gt;
+&lt;p&gt;05、 接下来正式开始打开 &lt;a href=&quot;https://github.com/gorpeln/tool&quot;&gt;tool下载源码&lt;/a&gt; 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314115.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
 
@@ -1951,7 +1951,7 @@ if __name__ == &quot;__main__&quot;:
 document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
     const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
     elements.forEach(function(element) {
-        element.textContent = &apos;4.9.90&apos;;
+        element.textContent = &apos;4.9.91&apos;;
     });
 });       
 &lt;/script&gt;
