@@ -1951,7 +1951,7 @@ if __name__ == &quot;__main__&quot;:
 document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
     const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
     elements.forEach(function(element) {
-        element.textContent = &apos;4.9.94&apos;;
+        element.textContent = &apos;4.9.95&apos;;
     });
 });       
 &lt;/script&gt;
