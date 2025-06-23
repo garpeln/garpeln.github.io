@@ -358,7 +358,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>112.5k</p>
+                  <p>112.6k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -366,8 +366,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-06-18 18:24:57 +0800">
-                    2025/06/18
+                  <p id="current-date" data-value="2025-06-23 11:20:21 +0800">
+                    2025/06/23
                   </p>
                 </li>
               </ul>
@@ -514,7 +514,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.9.97</span>
+            <span>4.9.98</span>
         </div>
     </div>
 </footer>
@@ -657,7 +657,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.9.97",
+                "%c版本号 %c V4.9.98",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -706,10 +706,11 @@
 
     // 创建一个映射，用于存储按键与目标操作之间的关系
     const keyToActionMap = {
-        p: () => (window.location.href = "/p"),     // 双击打开 p 页面
-        t: () => (window.location.href = "/tool"),  // 双击打开 tool 页面
-        ArrowDown: scrollToBottom,                  // 双击向下箭头滑动页面最底部
-        ArrowUp: scrollToTop,                       // 双击向上箭头滑动页面最顶部部
+        p: () => window.open("/p", "_blank"),                   // 双击p在新标签页打开p页面
+        t: () => window.open("/tool", "_blank"),                // 双击t在新标签页打开tool页面
+        f: () => window.open("/article/14402966023", "_blank"), // 双击打开 Hello World 格式 页面
+        ArrowDown: scrollToBottom,                              // 双击向下箭头滑动页面最底部
+        ArrowUp: scrollToTop,                                   // 双击向上箭头滑动页面最顶部部
     };
 
     // 存储上一次按键的时间戳和按键标识符
