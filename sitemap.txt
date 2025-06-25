@@ -184,6 +184,7 @@
         https://gorpeln.top/help/blog/copyright
         https://gorpeln.top/help/blog/declaration
         https://gorpeln.top/help/blog/privacy
+        https://gorpeln.top/help/security-warning
         https://gorpeln.top/links
         https://gorpeln.top/nav
         https://gorpeln.top/notes

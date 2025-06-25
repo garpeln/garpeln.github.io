@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- public head -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+	<title>安全警告 - gorpeln's Blog</title>
+	<meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享" />
+	<meta name="description" content="这里是『 gorpeln's Blog 』的安全警告页面，是博主为读者筑牢的安全防线，页面清晰醒目地提醒您注意网络安全风险，以简洁明了的语言告知陌生链接可能潜藏的恶意软件、钓鱼欺诈等隐患。同时，提供详细的安全访问建议，引导您谨慎抉择，避免因误点链接遭受信息泄露、设备受损等不良后果，全方位守护您的上网安全，让读者在网络世界安心遨游。">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="canonical" href="/help/security-warning">
+	<link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+	<!-- Open Graph -->
+	<meta name="author" content="gorpeln">
+	<meta property="og:title" content="安全警告 | gorpeln's Blog">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/help/security-warning">
+	<meta property="og:description" content="这里是『 gorpeln's Blog 』的安全警告页面，是博主为读者筑牢的安全防线，页面清晰醒目地提醒您注意网络安全风险，以简洁明了的语言告知陌生链接可能潜藏的恶意软件、钓鱼欺诈等隐患。同时，提供详细的安全访问建议，引导您谨慎抉择，避免因误点链接遭受信息泄露、设备受损等不良后果，全方位守护您的上网安全，让读者在网络世界安心遨游。">
+	<meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+	<meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
+
+	<!-- private head -->
+    <style>
+    :root {
+
+        --background-color-light: #f2f5f6;
+        --background-color-dark: #3d3d3d;
+
+        --box-color-light: #ffffff;
+        --box-color-dark: #262626;
+
+        --subbox-color-light: #F5F7F8;
+        --subbox-color-dark: #2d2d2d;
+
+        --tiptag-color-light: #f0f0fa;
+        --tiptag-color-dark: #303033;
+
+
+        --font-title-color-light: #37374c;
+        --font-title-color-dark: #bfb9b1;
+
+        --font-des-color-light: #3d3d52;
+        --font-des-color-dark: #c5bfb7;
+
+        --font-light-dark-light: #aaaaaa;
+        --font-light-dark-dark: #5d5d5d;
+
+        --font-active-color-light: #6666cc;
+        --font-active-color-dark: #6666cc;
+    }
+
+    body {
+        font-family: 'Cascadia Code', 'Consolas', 'Microsoft YaHei', SimHei !important;
+        margin: 0;
+        padding: 0 30px;
+        background: #fff;
+        font-size: 12px
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        outline: 0
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    a,
+    a:link,
+    a:visited {
+        color: #645f8a
+    }
+
+    a.btn_blue {
+        display: inline-block;
+        padding: 6px 25px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 3px;
+        color: #fff !important;
+        background-color: #645f8a;
+        float: right;
+    }
+
+    .remind_block .remind_title {
+        margin-bottom: 10px;
+        padding-top: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        font-family: "Microsoft YaHei", "lucida Grande", Verdana;
+        color: #6666cc;
+    }
+
+    .remind_block .remind_detail {
+        line-height: 1.5;
+        font-size: 16px;
+        color: #888888;
+        margin-bottom: 2em;
+    }
+
+    .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding-top: 10em;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 偏移回中心 */
+    }
+
+
+
+    .content {
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #37374c1a;
+    }
+
+    .c-container {
+        padding: 10px
+    }
+
+    .c-footer {
+        padding: 10px 15px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        text-align:center;
+
+    }
+
+    .c-footer-a2 {
+        margin: 8px 0 0 15px;
+        color: #6666cc;
+        font-size:1.25em;
+    }
+
+
+    .footer {
+        margin-top: 18px;
+        text-align: center;
+        color: #a0a0a0;
+        font-size: 12px
+    }
+
+    .footer .dot {
+        margin: 0 .25em
+    }
+
+    .footerDes {
+
+        position: fixed;
+        bottom: 0.6em;
+        left: 0;
+        width: calc(100% - 1.6em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8em;
+    }
+
+    .footerDes,
+    .footerDes a {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*适配黑夜模式*/
+    body.dark-mode {
+        background-color: var(--background-color-dark);
+    }
+
+    body.dark-mode img {
+        filter: brightness(50%);
+    }
+
+    body.dark-mode .header h1,
+    body.dark-mode .remind_block .remind_title {
+        color: var(--font-des-color-dark);
+    }
+
+    body.dark-mode .content {
+        box-shadow: 0 0 10px #6666cc4d;
+        background-color: var(--subbox-color-dark);
+    }
+
+    body.dark-mode .safety-url {
+        border-bottom: 1px solid var(--font-light-dark-dark);
+    }
+
+    body.dark-mode .c-footer-a2,
+    body.dark-mode .footerDes a {
+        color: var(--font-title-color-dark);
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    (function() {
+        var darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    })();
+    </script>
+    <div class="container">
+        <div class="content">
+            <div class="c-container warning">
+                <div id="remind_block" class="remind_block">
+                    <div class="remind_content">
+                        <div class="remind_detail">
+                            <div style="color:#CC0000;font-weight:800;text-align:center;margin:0.5em 0 0.5em 0;font-size:2em;">安全警告</div><br />
+                            <div style="margin-top:5px;text-align:center;line-height: 1.8em;">你当前操作已触发系统安全监测，存在违规风险。请立即停止相关行为并退出操作界面，否则系统将自动启动安全防护机制，由此产生的一切后果需自行承担。感谢你的配合！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-footer">
+                <a class="c-footer-a2" href="https://gorpeln.top" rel="nofollow">返回主页</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

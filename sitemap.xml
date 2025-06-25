@@ -741,6 +741,10 @@
                 <priority>1.0</priority>
             </url>
             <url>
+                <loc>https://gorpeln.top/help/security-warning</loc>
+                <priority>1.0</priority>
+            </url>
+            <url>
                 <loc>https://gorpeln.top/links</loc>
                 <priority>1.0</priority>
             </url>
