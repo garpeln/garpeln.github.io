@@ -1,0 +1,2362 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>杂记八 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
+    <meta name="description" content="​1.堆和栈的区别?```OC语言是C语言的超集。C语言的内存模型分为5个区：栈区、堆区、静态区、常量区、代码区。每个区存储的内容如下：">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/ios/08">
+    <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+    <!-- Open Graph -->
+    <meta name="author" content="gorpeln">
+    <meta property="og:title" content="杂记八 | gorpeln's Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/ios/08">
+    <meta property="og:description" content="​1.堆和栈的区别?```OC语言是C语言的超集。C语言的内存模型分为5个区：栈区、堆区、静态区、常量区、代码区。每个区存储的内容如下：">
+    <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+    <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+    <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+    <link rel="stylesheet" href="/assets/css/warning.min.css">
+    <link rel="stylesheet" href="/assets/css/cb-search.css">
+    <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
+
+    <!-- 站点验证 -->
+    <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
+    <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+    <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
+    <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
+
+    <!-- 分析追踪 -->
+    <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <script>
+          (function () {
+            var darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "enabled") {
+              document.body.classList.add("dark-mode");
+            }
+          })();
+    </script>
+
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <!-- 左侧栏 -->
+          <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+            <!-- 个人信息 -->
+            <div class="profile box-shadow center">
+              <div class="overlay"></div>
+              <div class="center gavatar">
+                <a href="/" class="profile_gavatar">
+                  <img class="circle" src="/assets/img/logo.png" />
+                  <div class="light-sweep"></div>
+                </a>
+              </div>
+              <div class="nickname">风未止</div>
+              <div class="center profile_desc">趁年轻，做自己想做的！</div>
+              <div class="center profile_subdesc">
+                There is no best, only better!
+                <br />
+              </div>
+              <div class="site-state">
+                <div class="site-state-item site-state-posts">
+                  <a href="/archives" target="_blank">
+                    <span class="site-state-item-count">227</span>
+                    <span class="site-state-item-name">归档</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories" target="_blank">
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags" target="_blank">
+                    <span class="site-state-item-count">691</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rss-subscribe">
+                <a target="_blank" href="/feed.xml">
+                    <i class="fas fa-rss" style="padding-right: 5px"></i>RSS
+                </a>
+              </div>
+            </div>
+            <!-- 博客公告 -->
+            <div class="siteNav" style="display: none">
+              <div class="noticeTitle">
+                <i class="fas fa-bullhorn fa-shake"></i> 公告
+              </div>
+              <div class="noticeDetail">
+                欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！
+              </div>
+            </div>
+            <!-- 博客导航 -->
+            <div class="siteNav">
+              <div class="navTitle">博客导航</div>
+              <ul>
+                <li onclick="pushNew('/')">
+                  <a><i class="fas fa-home fa-fw"></i>首页</a>
+                </li>
+                <li onclick="pushNew('/categories')">
+                  <a><i class="fas fa-th fa-fw"></i>分类</a>
+                  <span class="articleCount">10 </span>
+                </li>
+                <li onclick="pushNew('/archives')">
+                  <a><i class="fas fa-archive fa-fw"></i>归档</a>
+                  <span class="articleCount">227 </span>
+                </li>
+                <li onclick="pushNew('/nav')">
+                  <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
+                </li>
+                <li onclick="pushNew('/works')">
+                  <a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                  <span class="articleCount">4 </span>
+                </li>
+                
+                <li onclick="pushNew('/links')">
+                  <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
+                  <span class="articleCount">28 </span>
+                </li>
+                <li onclick="pushNew('/about')">
+                  <a><i class="fas fa-user fa-fw"></i>关于</a>
+                </li>
+                <li onclick="pushNew('/resume')">
+                  <a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                  <span class="articleCount">※</span>
+                </li>
+                <li onclick="pushRandom()">
+                  <a><i class="fas fa-random fa-fw"></i>随机</a>
+                </li>
+                <li id="cb-search-btn">
+                  <a class="search-btn"><i class="fas fa-search fa-fw"></i>搜索</a>
+                  <span class="search-tip">双击 control </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章分类 -->
+            <div class="categoryNav">
+              <div class="categoryNavTitle">文章分类</div>
+              <div>
+                <ul>
+                  
+                  <li onclick="pushNew('/categories#其他')" class="categoryList">
+                    <a name="其他" class="default-categoryNav-name">其他</a>
+                    <a name="其他" style="" class="articleCount">62</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                    <a name="个人博客" class="default-categoryNav-name">个人博客</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                    <a name="web前端" class="default-categoryNav-name">web前端</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                    <a name="iOS" class="default-categoryNav-name">iOS</a>
+                    <a name="iOS" style="" class="articleCount">44</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                    <a name="程序人生" class="default-categoryNav-name">程序人生</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                    <a name="MacOS" class="default-categoryNav-name">MacOS</a>
+                    <a name="MacOS" style="" class="articleCount">22</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                    <a name="产品和运营" class="default-categoryNav-name">产品和运营</a>
+                    <a name="产品和运营" style="" class="articleCount">12</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#Git')" class="categoryList">
+                    <a name="Git" class="default-categoryNav-name">Git</a>
+                    <a name="Git" style="" class="articleCount">7</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                    <a name="微信小程序" class="default-categoryNav-name">微信小程序</a>
+                    <a name="微信小程序" style="" class="articleCount">14</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                    <a name="教程福利" class="default-categoryNav-name">教程福利</a>
+                    <a name="教程福利" style="" class="articleCount">6</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <!-- 个人档案 -->
+            <div class="contactNav">
+              <div class="contactNavTitle">个人档案</div>
+              <div class="contact-container">
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/qqLogo.png" />
+                  <span class="contact-name">contact via email</span>
+                </a>
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/gmailLogo.png" />
+                  <span class="contact-name">help@gor*eln.top</span>
+                </a>
+                <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                  <img src="/assets/img/csdnLogo.png" />
+                  <span class="contact-name">gorpeln.blog.csdn.net</span>
+                </a>
+                <a class="contact-item" href="/about" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="contact-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 友情链接 -->
+            <div class="friendlinkNav" id="friendlinkNav">
+              <div class="friendlinkNavTitle">友情链接</div>
+              <div class="friend-container">
+                
+                    
+                        <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
+                          <img src="https://www.foreverblog.cn/favicon.ico" />
+                          <span class="friend-name">十年之约</span>
+                        </a>
+                    
+                
+                    
+                        <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                          <img src="https://list.travellings.cn/favicon.ico" />
+                          <span class="friend-name">开往-友链接力</span>
+                        </a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <a class="friend-item" href="/links" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="friend-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 节日提醒 -->
+            <div class="countdownNav" id="countdownNav">
+              <div class="card-widget card-countdown">
+                <div class="item-content">
+                  <div class="cd-count-left">
+                    <span class="cd-text">距离</span>
+                    <span class="cd-name" id="eventName">节日</span>
+                    <span class="cd-time" id="daysUntil">00</span>
+                    <span class="cd-date" id="eventDate">
+                      
+                      1970-01-01
+                    </span>
+                  </div>
+                  <div id="countRight" class="cd-count-right">
+                    <div id="countRight" class="cd-count-right">
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">今日</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本周</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本月</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本年</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 网站资讯 -->
+            <div class="siteInfoNav" id="siteInfoNav">
+              <div class="navTitle">网站资讯</div>
+              <ul>
+                <li>
+                  <p>文章数目</p>
+                  <p>227</p>
+                </li>
+                <li>
+                  <p>本站总字数</p>
+                  <p>113.7k</p>
+                </li>
+                <li>
+                  <p>已运行时间</p>
+                  <p id="runtime">加载中...</p>
+                </li>
+                <li>
+                  <p>最近更新时间</p>
+                  <p id="current-date" data-value="2025-08-17 18:30:34 +0800">
+                    2025/08/17
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章目录 -->
+            <div id="toc" class="customCatalog"></div>
+          </div>
+          <!-- 页面详情 -->
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+            <div class="page-content" id="pjax"><div class="post">
+    <header class="post-header">
+        <h1 class="post-title">杂记八</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;margin-right:2em;">2015-01-08</text>
+            分类：
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
+            </a>
+            <text style="margin-right:2em;"></text>
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p>​</p>
+
+<p>1.堆和栈的区别?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OC语言是C语言的超集。C语言的内存模型分为5个区：栈区、堆区、静态区、常量区、代码区。每个区存储的内容如下：
+
+1、堆区：就是通过new、malloc、realloc分配的内存块，编译器不会负责它们的释放工作，需要用程序区释放。分配方式类似于数据结构中的链表。在iOS开发中所说的“内存泄漏”说的就是堆区的内存。
+
+2、栈区：存放函数的参数值、局部变量等，由编译器自动分配和释放，通常在函数执行完后就释放了，其操作方式类似于数据结构中的栈。栈内存分配运算内置于CPU的指令集，效率很高，但是分配的内存量有限，比如iOS中栈区的大小是2M。
+
+3、静态区：全局变量和静态变量（在iOS中就是用static修饰的局部变量或者是全局全局变量）的存储是放在一块的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。程序结束后，由系统释放。
+4、常量区：常量存储在这里，不允许修改。
+5、代码区：存放函数体的二进制代码。
+
+堆和栈的区别：
+
+1.1、堆空间的内存是动态分配的(一般程序员分配释放)，一般存放对象，并且需要手动释放内存。当然了,iOS引入了ARC（自动引用计数）之后，就不就不需要用代码管理对象的内存了。
+
+1.2、栈空间的内存是由系统自动分配，一般存放局部变量。比如对象的地址等值，不需要程序员对这块内存进行管理，比如，函数中的局部变量的作用范围（生命周期）就是在调完这个函数之后就结束了。
+
+2、堆空间比较大,栈空间比较小。
+3、堆空间一般存放对象本身，block的copy等。栈空间中一般存储基本数据类型，对象的地址。
+4、堆（数据结构）：堆可以被看成是一棵树，如：堆排序。栈（数据结构）：一种先进后出的数据结构。
+</code></pre></div></div>
+
+<p>2.什么是程序、进程、线程？ 说一下进程和线程的关系以及区别?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.1 程序(Application)：
+由源代码生成的可执行应用。（例如:QQ 微信）
+
+1.2 进程：
+进程: 是指在操作系统(OS)中正在运行的一个应用程序(一般一个App就一个进程)。程序并不能单独运行，只有将程序装载到内存中，系统为它分配资源才能运行。
+所以一个正在运行的程序可以看做一个进程。（例如: 正在运行的QQ就是一个进程）
+
+1.3 线程：
+线程: 程序(进程)中独立运行的代码段。（例如: 接收QQ消息的代码）
+线程是进程的基本执行单元,一个进程的所有任务(操作)都是在线程中执行
+进程要想执行任务,必须至少有一条线程(程序启动会默认开始一条线程,这条线程被称为主线程(UI线程))
+
+大概说一下:
+每个进程之间是独立的,每个进程都运行在其专用的且受保护的内存中(每个进程拥有独立运行所需的全部资源)。
+一个程序至少包含一个进程(一般一个App就一个进程)，一个进程至少包含一个线程,一个进程中的所有线程共享当前进程所拥有的资源。
+进程有独立的地址空间，一个进程崩溃后，在保护模式的影响下不会对其他进程产生影响。而线程只是一个进程中的不同执行路径，线程有自己的堆栈和局部变量，线程之间没有单独的地址空间。
+
+
+进程与线程的区别:
+1.同一进程内的线程共享本进程的资源(如内存,I/O,CPU等),但进程之间的资源是独立的。
+2.一个进程崩溃后,在保护模式下不会对其他进程产生影响,但是一个线程崩溃整个进程都死掉。所以多进程要比多线程健壮。
+3.进程切换时,消耗的资源大,效率低。所以频繁的切换时,使用线程要高于进程。
+4.每个进程都有一个运行的入口,顺序执行。但是线程不能独立执行,必须依存在进程中,由应用程序提供多个线程操作。
+5.线程是处理器调度(执行任务)的基本单元,但是进程不是。
+</code></pre></div></div>
+
+<p>3.进程的状态有哪些？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.新建
+2.就绪 : 线程对象加入线程池中等待 CPU 调度
+3.运行 : CPU负责调度线程中线程的执行, 线程执行完成前, 状态可能在就绪和运行之间来回切换
+4.阻塞 : 满足某个预定条件, 使用休眠或锁, 阻塞线程执行
+5.死亡 : 线程执行完毕, 或者内部中止执行线程对象
+</code></pre></div></div>
+
+<p>4.什么是线程安全？分别有哪些锁？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>线程安全: 多个线程同时访问一块资源, 容易引发数据错乱和数据安全。
+
+1.互斥锁(加锁): 新线程访问时, 发现其他线程正在执行锁定的代码, 新线程会进入休眠
+   1.1 NSLock
+   1.2 pthread_mutex
+   1.3 @synchronized
+2.自旋锁: 忙等的锁, 新线程会用死循环的方式, 一直等待锁定的代码执行完成, 数据量少的时候用
+3.条件锁: 不满足就休眠, 资源分配到了, 条件锁打开, 进程继续运行, 例如：NSConditionLock
+4.读写锁: 用于解决多线程对公共资源读写问题。 读操作可以并发重入, 写操作是互斥的
+5.信号量: 
+</code></pre></div></div>
+
+<p>5.iOS开启多线程的方法有哪些？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.pthread  2.NSThread  3.GCD  4.NSOperation
+</code></pre></div></div>
+
+<p>6.简单的说一下NSThread的使用 具体使用详情</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.NSThread是基于Objective-C的,更加面向对象。
+2.它可以通过三种方法开启子线程,分别是: initWithTarget:  detachNewThreadSelector:(detachNewThreadWithBlock: 至少iOS10系统) 和 performSelectorInBackground: 。 其中 initWithTarget: 需要调用 start() 方法才能开启子线程。
+3.NSThread可以通过类方法 currentThread() 获取当前线程,通过类方法 mainThread()获得主线程，还可以退出线程(exit)和睡眠线程(sleepForTimeInterval)。
+4.在实际开发中一般很少用其开始子线程,常用的也就[NSThread currentThread];(获取当前线程)和[NSThread sleepForTimeInterval:3.0];(睡眠线程)
+</code></pre></div></div>
+
+<p>7.简单的说一下GCD的使用 具体使用详情</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.GCD是基于C语言的,更加偏向于底层。
+2.使用GCD就两个步骤:
+   2.1 创建一个队列（串行队列或并发队列）
+   2.2 将任务追加到队列中，系统就会根据任务类型执行任务（同步执行或异步执行）
+3.队列的创建和获取
+   3.1 队列可以通过 dispatch_queue_create 来创建，通过设置第二个参数用来识别是串行队列还是并发队列(串行队列: DISPATCH_QUEUE_SERIAL; 并发队列: DISPATCH_QUEUE_CONCURRENT),
+   3.2 队列也可以通过 dispatch_get_global_queue 获取全局的并发队列 和 dispatch_get_main_queue 获取特殊的串行队列(主队列)。
+4.任务都是放在Block中执行的，执行任务分为同步和异步,同步是:dispatch_sync(queue, ^{}); 异步是:dispatch_async(queue, ^{});异步(async)具备开启子线程的能力，但是在主队列中不会开启子线程。同步(sync)不具备开启子线程的能力，在主队列中会造成死锁(线程相互等待)
+5.组合使用情况如下： 
+   5.1 同步(sync)  + 并发队列 (没有开启子线程,串行执行任务,在主线程)
+   5.2 同步(sync)  + 串行队列 (没有开启子线程,串行执行任务,在主线程)
+   5.3 同步(sync)  + 主线程   (造成死锁,主线程和同步任务相互等待)
+   5.4 异步(async) + 并发队列 (有开启子线程 ,并发执行任务,在子线程)
+   5.5 异步(async) + 串行队列 (只开启一条子线程,串行执行任务)
+   5.6 异步(async) + 主线程   (没有开启子线程,串行执行任务,在主线程)
+6.GCD的其他函数(方法)的使用
+   6.1 栅栏函数：dispatch_barrier_sync (同步) 和 dispatch_barrier_async (异步)
+   6.2 延时执行函数：dispatch_after  一定是将任务追加到主队列中(主线程)
+   6.3 一次性函数：dispatch_once
+   6.4 队列组函数： dispatch_group_async  通过: dispatch_group_notify 监听
+   6.5 暂停当前线程函数: dispatch_group_wait
+</code></pre></div></div>
+
+<p>8.简单的说一下NSOperation的使用 具体使用详情</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.NSOperation是基于GCD更高一层的封装，完全面向对象。
+2.NSOperation的使用三个步骤: 
+   2.1 创建操作：先将需要执行的操作封装到 NSOperation 的子类中。
+   2.2 创建队列：创建 NSOperationQueue 对象。
+   2.3 将操作加入到队列中：将 NSOperation 子类添加到 NSOperationQueue(队列) 对象中。
+3.创建操作。在不使用NSOperationQueue的情况下，单独使用 NSOperation 的子类封装操作, 不会开启子线程(同步执行操作)。
+   3.1 NSOperation的子类有 NSInvocationOperation  NSBlockOperation 和自定义继承自NSOperation(通过实现方法(main)来封装操作)。
+4.创建队列。NSOperationQueue 一共有两种队列：主队列、自定义队列。其中自定义队列同时包含了串行、并发功能。
+   4.1 通过 [NSOperationQueue mainQueue]; 获取主队列
+   4.2 通过 [[NSOperationQueue alloc] init]; 创建自定义队列（非主队列,包含了串行、并发功能）。
+5.将操作加入到队列中。NSOperation 需要配合 NSOperationQueue 来实现多线程，我们需要将创建好的操作加入到队列中去。总共有两种方法：
+   5.1 通过 addOperation: 添加操作到队列中 [queueObj addOperation:operationObj];
+   5.2 通过 addOperationWithBlock: 直接创建操作 [queueObj addOperationWithBlock:^{}];
+6.NSOperationQueue 创建的自定义队列同时具有串行、并发功能。通过设置属性 maxConcurrentOperationCount (最大并发操作数) 的个数 决定队列类型，默认情况下为 -1，表示不进行限制，可进行并发执行；为 1 时，队列为串行队列。只能串行执行；大于 1 时，队列为并发队列。
+7.NSOperation其他操作
+  7.1 操作之间添加依赖 addDependency:
+  7.2 操作完成时回调  completionBlock = ^{};
+  7.3 取消队列的所有操作 cancelAllOperations
+  7.4 判断队列是否处于暂停状态  isSuspended
+  7.5 向队列中添加操作数组 addOperations
+  7.6 可取消操作 cancel (实质是标记 isCancelled 状态)
+  7.7 判断操作状态 isFinished(操作是否已经完成)  isCancelled(操作是否已经取消) isExecuting(操作是否正在运行)  isReady(操作是否处于准备就绪状态)
+</code></pre></div></div>
+
+<p>9.NSThread GCD 和 NSOperation 之间的优缺点</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.NSThread
+   优点：比其他两种更加轻量级,使用简单。
+   缺点：线程之间的通信比较麻烦(最大缺点)。需要自己管理线程的生命周期([thread cancel];取消子线程)、线程同步、加锁、睡眠以及唤醒等。
+
+2.GCD 
+   优点：性能最高效(更接近底层)。不需要管理线程的生命周期，数据同步的事情。
+   缺点: 基于C语言实现，不好理解。添加异步操作之间的事务性，顺序性和依赖关系 需要写更多的代码来实现。
+     
+3.Operation:
+   优点：是对GCD的封装，更加面向对象。也是不需要管理线程的生命周期，数据同步的事情。
+        可以使用自定义继承 NSOperation 的类,重写 main 方法,在其里面添加操作(任务)。
+        可以更好的添加操作之间依赖和查看操作的状态，还可以设置操作的优先级和更好的取消正在执行中的操作。
+   缺点：开启操作一般需要用到 NSOperation的两个子类 NSInvocationOperation 和 NSBlockOperation
+        开启的操作需要添加到 NSOperationQueue 中才开启子线程。
+</code></pre></div></div>
+
+<p>10.iOS 代码加锁的几种方式</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.@synchronized(self)
+2.NSConditionLock
+3.NSCondition
+4.NSLock
+5.dispatch_semaphore_t (GCD中的函数)
+6.OSSpinLock
+
+这几种锁都可以带来原子性,性能的损耗从上至下依次更小。
+</code></pre></div></div>
+<p>1、使用 @synchronized(self) 给代码加锁</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@interface ViewController ()
+
+@property (nonatomic,assign) NSInteger ticketNumber;
+
+@end
+  
+#pragma mark -使用GCD创建线程
+-(void)startGCDAction{
+    
+    self.ticketNumber=50;  // 50张票
+    
+    // 1.创建并发队列
+    dispatch_queue_t queueObj=dispatch_queue_create("nameValue",DISPATCH_QUEUE_CONCURRENT);
+    
+    // 2.开启多条异步线程
+    for (NSInteger i=1; i&lt;=5; i++) {
+        dispatch_async(queueObj, ^{
+            NSLog(@"做任务(%zi),当前线程:%@",i,[NSThread currentThread]);
+            [self startSaleTicket]; // 开始卖票
+        });
+    }
+}
+
+// 通过@synchronized()加锁
+-(void)startSaleTicket{
+    do {
+        [NSThread sleepForTimeInterval:0.3];
+        // 下面是加锁的代码内容
+        @synchronized (self) {
+            if (self.ticketNumber&lt;=0) break;
+            NSLog(@"余票是: %zi 当前线程是: %@",self.ticketNumber,[NSThread currentThread]);
+            self.ticketNumber-=1;
+        }
+        
+    }
+    while (self.ticketNumber);
+}
+
+最终运行结果:
+
+2019-08-12 14:15:58.189393+0800 TestModel[87804:13566450] 做任务(2),当前线程:&lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:58.189548+0800 TestModel[87804:13566452] 做任务(1),当前线程:&lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:58.189868+0800 TestModel[87804:13566451] 做任务(3),当前线程:&lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:58.189917+0800 TestModel[87804:13566453] 做任务(4),当前线程:&lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:58.190395+0800 TestModel[87804:13566459] 做任务(5),当前线程:&lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:15:58.490183+0800 TestModel[87804:13566450] 余票是: 50 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:58.490588+0800 TestModel[87804:13566452] 余票是: 49 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:58.495170+0800 TestModel[87804:13566451] 余票是: 48 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:58.495440+0800 TestModel[87804:13566453] 余票是: 47 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:58.495664+0800 TestModel[87804:13566459] 余票是: 46 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:15:58.795679+0800 TestModel[87804:13566450] 余票是: 45 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:58.796089+0800 TestModel[87804:13566452] 余票是: 44 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:58.800381+0800 TestModel[87804:13566451] 余票是: 43 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:58.800643+0800 TestModel[87804:13566453] 余票是: 42 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:58.801037+0800 TestModel[87804:13566459] 余票是: 41 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:15:59.097379+0800 TestModel[87804:13566450] 余票是: 40 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:59.098778+0800 TestModel[87804:13566452] 余票是: 39 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:59.104982+0800 TestModel[87804:13566451] 余票是: 38 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:59.105416+0800 TestModel[87804:13566453] 余票是: 37 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:59.105727+0800 TestModel[87804:13566459] 余票是: 36 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:15:59.401558+0800 TestModel[87804:13566450] 余票是: 35 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:59.404078+0800 TestModel[87804:13566452] 余票是: 34 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:59.406779+0800 TestModel[87804:13566451] 余票是: 33 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:59.407160+0800 TestModel[87804:13566453] 余票是: 32 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:59.407764+0800 TestModel[87804:13566459] 余票是: 31 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:15:59.706818+0800 TestModel[87804:13566450] 余票是: 30 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:15:59.707735+0800 TestModel[87804:13566451] 余票是: 29 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:15:59.709405+0800 TestModel[87804:13566452] 余票是: 28 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:15:59.712616+0800 TestModel[87804:13566453] 余票是: 27 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:15:59.713001+0800 TestModel[87804:13566459] 余票是: 26 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:16:00.016941+0800 TestModel[87804:13566450] 余票是: 25 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:16:00.017259+0800 TestModel[87804:13566451] 余票是: 24 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:16:00.017491+0800 TestModel[87804:13566452] 余票是: 23 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:16:00.018511+0800 TestModel[87804:13566453] 余票是: 22 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:16:00.018640+0800 TestModel[87804:13566459] 余票是: 21 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:16:00.317675+0800 TestModel[87804:13566450] 余票是: 20 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:16:00.318162+0800 TestModel[87804:13566451] 余票是: 19 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:16:00.322806+0800 TestModel[87804:13566452] 余票是: 18 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:16:00.323192+0800 TestModel[87804:13566453] 余票是: 17 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:16:00.323446+0800 TestModel[87804:13566459] 余票是: 16 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:16:00.623299+0800 TestModel[87804:13566450] 余票是: 15 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:16:00.623643+0800 TestModel[87804:13566451] 余票是: 14 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:16:00.628154+0800 TestModel[87804:13566452] 余票是: 13 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:16:00.628523+0800 TestModel[87804:13566453] 余票是: 12 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:16:00.628825+0800 TestModel[87804:13566459] 余票是: 11 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:16:00.928590+0800 TestModel[87804:13566450] 余票是: 10 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:16:00.928799+0800 TestModel[87804:13566451] 余票是: 9 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:16:00.933344+0800 TestModel[87804:13566452] 余票是: 8 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:16:00.933492+0800 TestModel[87804:13566459] 余票是: 7 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+2019-08-12 14:16:00.933836+0800 TestModel[87804:13566453] 余票是: 6 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:16:01.231961+0800 TestModel[87804:13566450] 余票是: 5 当前线程是: &lt;NSThread: 0x283a16cc0&gt;{number = 3, name = (null)}
+2019-08-12 14:16:01.232049+0800 TestModel[87804:13566451] 余票是: 4 当前线程是: &lt;NSThread: 0x283a026c0&gt;{number = 5, name = (null)}
+2019-08-12 14:16:01.233846+0800 TestModel[87804:13566452] 余票是: 3 当前线程是: &lt;NSThread: 0x283a39fc0&gt;{number = 4, name = (null)}
+2019-08-12 14:16:01.234564+0800 TestModel[87804:13566453] 余票是: 2 当前线程是: &lt;NSThread: 0x283a02040&gt;{number = 6, name = (null)}
+2019-08-12 14:16:01.238114+0800 TestModel[87804:13566459] 余票是: 1 当前线程是: &lt;NSThread: 0x283a01c80&gt;{number = 7, name = (null)}
+</code></pre></div></div>
+<p>2、使用 NSLock 给代码加锁</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@interface ViewController ()
+
+@property (nonatomic,strong) NSLock *addLock;
+
+@end
+
+-(NSLock *)addLock{
+    if (_addLock == nil ) {
+        _addLock = [[NSLock alloc]init];
+    }
+    return _addLock;
+}
+ 
+#pragma mark -使用GCD创建线程
+-(void)startGCDAction{
+    
+    self.ticketNumber=50;  // 50张票
+    
+    // 1.创建并发队列
+    dispatch_queue_t queueObj=dispatch_queue_create("nameValue",DISPATCH_QUEUE_CONCURRENT);
+    
+    // 2.开启多条异步线程
+    for (NSInteger i=1; i&lt;=5; i++) {
+        dispatch_async(queueObj, ^{
+            NSLog(@"做任务(%zi),当前线程:%@",i,[NSThread currentThread]);
+            [self startSaleTicket]; // 开始卖票
+        });
+    }
+}
+
+// 通过 NSLock 加锁
+-(void)startSaleTicket{
+
+    do {
+        
+        [NSThread sleepForTimeInterval:0.3];
+        
+        [self.addLock lock];   // 加锁
+        if (self.ticketNumber&lt;=0) break;
+        NSLog(@"余票是: %zi 当前线程是: %@",self.ticketNumber,[NSThread currentThread]);
+        self.ticketNumber-=1;
+        [self.addLock unlock]; // 解锁
+    }
+    while (self.ticketNumber);
+
+}
+
+最终运行结果:
+
+2019-08-12 14:31:28.968327+0800 TestModel[87809:13567989] 做任务(2),当前线程:&lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:28.968620+0800 TestModel[87809:13567988] 做任务(1),当前线程:&lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:28.969657+0800 TestModel[87809:13567986] 做任务(3),当前线程:&lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:28.969713+0800 TestModel[87809:13567987] 做任务(4),当前线程:&lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:28.970159+0800 TestModel[87809:13567992] 做任务(5),当前线程:&lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:29.273489+0800 TestModel[87809:13567989] 余票是: 50 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:29.273594+0800 TestModel[87809:13567988] 余票是: 49 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:29.273889+0800 TestModel[87809:13567992] 余票是: 48 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:29.273965+0800 TestModel[87809:13567987] 余票是: 47 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:29.274026+0800 TestModel[87809:13567986] 余票是: 46 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:29.577287+0800 TestModel[87809:13567989] 余票是: 45 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:29.577437+0800 TestModel[87809:13567988] 余票是: 44 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:29.577606+0800 TestModel[87809:13567992] 余票是: 43 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:29.577718+0800 TestModel[87809:13567987] 余票是: 42 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:29.577993+0800 TestModel[87809:13567986] 余票是: 41 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:29.882881+0800 TestModel[87809:13567989] 余票是: 40 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:29.883291+0800 TestModel[87809:13567988] 余票是: 39 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:29.883545+0800 TestModel[87809:13567987] 余票是: 38 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:29.883949+0800 TestModel[87809:13567986] 余票是: 37 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:29.884300+0800 TestModel[87809:13567992] 余票是: 36 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:30.188301+0800 TestModel[87809:13567989] 余票是: 35 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:30.188728+0800 TestModel[87809:13567988] 余票是: 34 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:30.189026+0800 TestModel[87809:13567987] 余票是: 33 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:30.189603+0800 TestModel[87809:13567986] 余票是: 32 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:30.190006+0800 TestModel[87809:13567992] 余票是: 31 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:30.489850+0800 TestModel[87809:13567988] 余票是: 30 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:30.490175+0800 TestModel[87809:13567987] 余票是: 29 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:30.493747+0800 TestModel[87809:13567989] 余票是: 28 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:30.494048+0800 TestModel[87809:13567986] 余票是: 27 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:30.494877+0800 TestModel[87809:13567992] 余票是: 26 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:30.795292+0800 TestModel[87809:13567988] 余票是: 25 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:30.795687+0800 TestModel[87809:13567987] 余票是: 24 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:30.795958+0800 TestModel[87809:13567989] 余票是: 23 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:30.796489+0800 TestModel[87809:13567986] 余票是: 22 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:30.800184+0800 TestModel[87809:13567992] 余票是: 21 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:31.099967+0800 TestModel[87809:13567986] 余票是: 20 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:31.100050+0800 TestModel[87809:13567988] 余票是: 19 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:31.100090+0800 TestModel[87809:13567987] 余票是: 18 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:31.100198+0800 TestModel[87809:13567989] 余票是: 17 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:31.102069+0800 TestModel[87809:13567992] 余票是: 16 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:31.405114+0800 TestModel[87809:13567986] 余票是: 15 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:31.405197+0800 TestModel[87809:13567988] 余票是: 14 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:31.405238+0800 TestModel[87809:13567987] 余票是: 13 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:31.405293+0800 TestModel[87809:13567989] 余票是: 12 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:31.407180+0800 TestModel[87809:13567992] 余票是: 11 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:31.705607+0800 TestModel[87809:13567986] 余票是: 10 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:31.705747+0800 TestModel[87809:13567988] 余票是: 9 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:31.705857+0800 TestModel[87809:13567987] 余票是: 8 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:31.705953+0800 TestModel[87809:13567989] 余票是: 7 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:31.707719+0800 TestModel[87809:13567992] 余票是: 6 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+2019-08-12 14:31:32.007136+0800 TestModel[87809:13567986] 余票是: 5 当前线程是: &lt;NSThread: 0x281fcc880&gt;{number = 5, name = (null)}
+2019-08-12 14:31:32.007306+0800 TestModel[87809:13567988] 余票是: 4 当前线程是: &lt;NSThread: 0x281fe1400&gt;{number = 3, name = (null)}
+2019-08-12 14:31:32.007378+0800 TestModel[87809:13567987] 余票是: 3 当前线程是: &lt;NSThread: 0x281fc1200&gt;{number = 6, name = (null)}
+2019-08-12 14:31:32.007499+0800 TestModel[87809:13567989] 余票是: 2 当前线程是: &lt;NSThread: 0x281fcc6c0&gt;{number = 4, name = (null)}
+2019-08-12 14:31:32.012931+0800 TestModel[87809:13567992] 余票是: 1 当前线程是: &lt;NSThread: 0x281fc1100&gt;{number = 7, name = (null)}
+</code></pre></div></div>
+
+<p>11.说一下你对Runtime的认识 具体认识</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>题外话：计算机唯一能识别的语言是机器语言，高级编程语言不能被直接识别，需要先编译为汇编语言，再由汇编语言编译为机器语言才能被计算机识别。而 Objective-C语言不能被直接编译为汇编语言，它必须先编译为C语言，然后再编译为汇编语言，最后再由汇编语言编译为机器语言才能被计算机识别。 从OC到C语言的过渡就是由runtime来实现的。我们使用OC进行面向对象开发，但是C语言更多的是面向过程开发，这就需要将面向对象的类转变为面向过程的结构体。
+
+1.Runtime 是iOS中的一个运行时系统，是苹果用C语言和汇编语言编写的一套底层纯C语言API。
+2.Runtime正是 Objective-C这门动态语言的核心(数据类型的确定由编译时推迟到运行时)。从OC到C语言的过渡就是由Runtime来实现的。
+3.OC代码最终都会被编译器转化为运行时代码，通过消息机制决定函数调用方式(objc_msgSend)。
+4.OC类、对象和方法等都会被Runtime转化成C语言中的结构体。
+5.在Runtime中，id 是一个指向 objc_object 结构体的指针；class 是一个指向 objc_class 结构体的指针
+6.SEL 是一个指向 objc_selector 结构体的指针； Ivar 是一个指向 objc_ivar 的结构体的指针
+7.Method 是一个指向 objc_method 的结构体的指针；IMP 是一个函数指针
+</code></pre></div></div>
+
+<p>12.说一下Runtime的使用情景 具体使用</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.动态方法交换  (method_exchangeImplementations)
+2.给分类添加属性 (objc_setAssociatedObject 和 objc_getAssociatedObject)
+3.获取类的详细信息
+   3.1 属性列表(class_copyPropertyList)
+   3.2 获取成员变量(class_copyIvarList)
+   3.3 获取所有方法(class_copyMethodList)
+   3.4 获取当前遵循的所有协议(class_copyProtocolList)
+4.解决同一方法高频率调用的效率问题
+5.方法动态解析与消息转发
+   5.1 动态添加方法
+   5.2 解决方法无响应崩溃问题
+6.动态操作属性
+  6.1 动态修改属性变量
+  6.2 实现 NSCoding 的自动归档和解档
+  6.3 实现字典与模型的转换
+</code></pre></div></div>
+
+
+
+        
+    </article>
+</div>
+<div class="copyright">
+    
+    <div class="custom-font">最后编辑于：2024-09-12</div>
+    
+    <div class="custom-font">本文链接：<a href="/ios/08" class='articleLink'>https://gorpeln.top/ios/08</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+</div>
+</div>
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/ios/07" title="杂记七" class="custom-font" target="_blank">杂记七</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/ios/09" title="杂记九" class="custom-font" target="_blank">杂记九</a>
+    </div>
+    
+</div>
+<div class="livere waline-box">
+    <div id="waline"></div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 右边栏 二维码、主题、返回顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+      <div class="themeModel" id="themeModel"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/ios/08')"></div>
+      <div class="qrcodeImg" id="qrcode"></div>
+      <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
+    </div>
+
+    <!-- search  搜索 -->
+    <div class="cb-search-tool" id="cb-close-btn">
+        <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签" />
+    </div>
+    <!-- 手机菜单 mune -->
+     <header class="site-header-menu">
+  <ul class="menuNav">
+    <li class="menuBtn" style="border-top: 0 solid #aaa">
+      <i class="fas fa-stream fa-fw" style="color: white; font-size: 14px; font-weight: 400"></i>
+      <ul class="sub-nav">
+        <li style="border-radius: 8px 8px 0 0"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+        <li><a href="/nav"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+        <li><div id="themeModelOfmobile"><i class="fas fa-moon fa-fw"></i>黑夜</div></li>
+        <li><a href="" class="safe-item-auto-load"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+        <li style="border-radius: 0 0 8px 8px"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
+ 
+    <!-- footer -->
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)">隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本</div>
+    <div class="footerDes">
+        <div class="post-margin">
+            ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="/assets/img/footer_beian.png" style="height: 16px" class="footerImg" />京ICP备2021024484号-2
+            </a>
+            ·
+            <a target=" _blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="/assets/img/footer_gonganbeian.png" style="height: 16px" class="footerImg" />京公网安备11011202004694号
+            </a>
+            ·
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                <img src="/assets/img/footer_youpaiyun.png" style="height: 22px" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+            ·
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
+            </a>
+            ·
+            <span>4.9.102</span>
+        </div>
+    </div>
+</footer>
+    
+    
+</body>
+
+<!-- js_include -->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
+<!-- 目录 -->
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- 安全跳转页面 -->
+<script type="text/javascript" src="/assets/js/safe.js"></script>
+<!--  樱花背景 -->
+<script type="text/javascript" src="/assets/js/sakura.js"></script>
+<!--  丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
+<!-- search 搜索 -->
+<script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
+<!-- 动态显示网站运行时间 -->
+<script>
+    document.getElementById('currentYear') && (document.getElementById('currentYear').textContent = new Date().getFullYear());
+
+    function siteTime(startDateStr) {
+        const now = new Date();
+
+        // 解析起始时间
+        const start = new Date(startDateStr);
+
+        // 检查是否是合法的时间格式
+        if (isNaN(start.getTime())) {
+            console.error("Invalid start date:", startDateStr);
+            document.getElementById('htmer_time').innerHTML = "时间计算出错，请检查配置。";
+            return;
+        }
+
+        // 计算年份差
+        let diffYears = now.getFullYear() - start.getFullYear();
+
+        // 构造今年对应的纪念日时间点（精确到小时/分/秒）
+        const anniversaryThisYear = new Date(start);
+        anniversaryThisYear.setFullYear(now.getFullYear());
+
+        // 如果还没到今年的纪念日时间点，则减去一年
+        if (now < anniversaryThisYear) {
+            diffYears--;
+        }
+
+        // 根据年份差确定要比较的起始周年时间
+        const anniversaryTargetYear = new Date(start);
+        anniversaryTargetYear.setFullYear(now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1));
+
+        // 计算周年之后的时间差（毫秒）
+        const timeDiff = now - anniversaryTargetYear;
+
+        // 时间单位（毫秒）
+        const daysInMs = 1000 * 60 * 60 * 24;
+        const hoursInMs = 1000 * 60 * 60;
+        const minutesInMs = 1000 * 60;
+
+        // 计算天、小时、分、秒
+        const diffDays = Math.floor(timeDiff / daysInMs);
+        const diffHours = Math.floor((timeDiff % daysInMs) / hoursInMs);
+        const diffMinutes = Math.floor((timeDiff % hoursInMs) / minutesInMs);
+        const diffSeconds = Math.floor((timeDiff % minutesInMs) / 1000);
+
+        // 更新页面内容
+        document.getElementById('htmer_time').innerHTML =
+            `本站已安全运行：${diffYears} 年 ${diffDays} 天 ${diffHours} 时 ${diffMinutes} 分 ${diffSeconds} 秒&nbsp;&nbsp;`;
+
+        // 每秒更新一次
+        setTimeout(() => siteTime(startDateStr), 1000);
+    }   
+
+    const startDate = "2015-08-23 09:00:00 +0800"; 
+    siteTime(startDate);
+</script>
+<!-- 网站运行时间事件 -->
+<script>
+    function over(obj) {
+        obj.innerHTML ="隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {}
+
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = "/record";
+    }
+</script>
+<!-- 控制台输出 -->
+<script>
+    var HoldLog = console.log;
+    console.log = function() {};
+    let nowDate = new Date();
+    queueMicrotask(() => {
+        const Log = function() {
+            HoldLog.apply(console, arguments);
+        };
+        console.log = Log;
+
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客名称%c gorpeln的个人博客 - gorpeln",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客链接%c https://gorpeln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c联系方式%c help@gor*eln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博主寄语%c 趁年轻，做自己想做的！",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c版本号 %c V4.9.102",
+                "",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+
+        const loadTime = Math.round(performance.now() * 100) / 100 / 1000;
+        const formattedLoadTime = loadTime.toFixed(2) + "s";
+        setTimeout(
+            Log.bind(
+                console,
+                `%c页面加载消耗了: %c${formattedLoadTime}`,
+                "",
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+            ),
+        );
+
+        const hitKey = "hit";
+        let hitCount = localStorage.getItem(hitKey) ?
+            parseInt(localStorage.getItem(hitKey)) :
+            0;
+        hitCount++;
+        localStorage.setItem(hitKey, hitCount);
+        setTimeout(
+            Log.bind(
+                console,
+                `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+                "",
+            ),
+        );
+        setTimeout(
+            console.warn.bind(
+                console,
+                "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
+                "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
+                "",
+            ),
+        );
+    });
+</script>
+<!-- 自定义快捷键 -->
+<script>
+    const SCROLL_OFFSET = 500;          // 定义滚动距离底部的偏移量
+    const SCROLL_DURATION = 500;        // 定义滚动动画的持续时间
+    const DOUBLE_CLICK_THRESHOLD = 300; // 定义双击的时间阈值（毫秒）
+
+    // 创建一个映射，用于存储按键与目标操作之间的关系
+    const keyToActionMap = {
+        p: () => window.open("/p", "_blank"),                   // 双击p在新标签页打开p页面
+        t: () => window.open("/tool", "_blank"),                // 双击t在新标签页打开tool页面
+        f: () => window.open("/article/14402966023", "_blank"), // 双击打开 Hello World 格式 页面
+        h: () => window.open("/", "_blank"),                    // 双击打开 首页
+        ArrowDown: scrollToBottom,                              // 双击向下箭头滑动页面最底部
+        ArrowUp: scrollToTop,                                   // 双击向上箭头滑动页面最顶部部
+    };
+
+    // 存储上一次按键的时间戳和按键标识符
+    let lastKeyPress = {};
+
+    document.addEventListener("keydown", function(event) {
+        const keyPressed = event.key;
+        const lowerCaseKey = keyPressed.toLowerCase();
+        const currentKey = keyToActionMap.hasOwnProperty(keyPressed) ?
+            keyPressed :
+            lowerCaseKey;
+
+        if (keyToActionMap.hasOwnProperty(currentKey)) {
+            const now = Date.now();
+            const previousTime = lastKeyPress[currentKey] || 0;
+            const timeDifference = now - previousTime;
+
+            if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+                keyToActionMap[currentKey]();
+                lastKeyPress[currentKey] = 0;
+            } else {
+                lastKeyPress[currentKey] = now;
+            }
+        }
+    });
+
+    // 定义滚动到页面底部的函数
+    function scrollToBottom() {
+        const start = window.scrollY;
+        const end = document.body.scrollHeight - SCROLL_OFFSET;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+
+    // 定义滚动到页面顶部的函数
+    function scrollToTop() {
+        const start = window.scrollY;
+        const end = 0;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+</script>
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+<!-- 网站分析 -->
+<!-- 百度统计 -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ec1e65b309b4205d33b203f2c26a184f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+  (function(){
+  var el = document.createElement("script");
+  el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?1e00c552c856203cd30ebe459d7b7f2f0fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+  el.id = "ttzz";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(el, s);
+  })(window)
+</script>
+<!-- 防镜像 -->
+
+<script>
+   function _0x17aa(){var _0x39ef1b=['left','removeChild','9999','alert-message','flexWrap','port','center','div','appendChild','200FeByLO','className','YmxvZy4yMDIwOTAueHl6','30px','569272slRPwH','parentNode','393071MMVoWd','overflow','add','replace','includes','0.1','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','alignItems','width','transform','whiteSpace','hostname','height','margin','567541SsolIH','YmxvZy5nb3JwZWxuLnRvcA==','location','fontSize','background','position','top','30MixXDM','80px','100%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','hidden','style','zIndex','classList','d3d3LmdvcnBlbG4udG9w','flex','808318iwlhfR','none','Z29ycGVsbi50b3A=','110%','body','25mwMKir','2799NfnTJp','justifyContent','color','opacity','753306DnApFK','MTI3LjAuMC4xOjQwMDA=','fade-out','3352TvwIlh','-5%','nowrap','248372ThEblC'];_0x17aa=function(){return _0x39ef1b;};return _0x17aa();}function _0x50c9(_0x3af4d2,_0x112676){var _0x17aa91=_0x17aa();return _0x50c9=function(_0x50c9ec,_0x458073){_0x50c9ec=_0x50c9ec-0x159;var _0x43c326=_0x17aa91[_0x50c9ec];return _0x43c326;},_0x50c9(_0x3af4d2,_0x112676);}(function(_0xda0fba,_0x406113){var _0x2fc09c=_0x50c9,_0x4fbebc=_0xda0fba();while(!![]){try{var _0x472f1b=parseInt(_0x2fc09c(0x161))/0x1+parseInt(_0x2fc09c(0x172))/0x2+parseInt(_0x2fc09c(0x17c))/0x3+parseInt(_0x2fc09c(0x182))/0x4*(parseInt(_0x2fc09c(0x177))/0x5)+-parseInt(_0x2fc09c(0x168))/0x6*(parseInt(_0x2fc09c(0x192))/0x7)+-parseInt(_0x2fc09c(0x17f))/0x8*(-parseInt(_0x2fc09c(0x178))/0x9)+-parseInt(_0x2fc09c(0x18c))/0xa*(parseInt(_0x2fc09c(0x190))/0xb);if(_0x472f1b===_0x406113)break;else _0x4fbebc['push'](_0x4fbebc['shift']());}catch(_0x88247d){_0x4fbebc['push'](_0x4fbebc['shift']());}}}(_0x17aa,0x54e7b),(function(){var _0x12b93b=_0x50c9,_0x190ee1=[_0x12b93b(0x174),_0x12b93b(0x170),_0x12b93b(0x17d),_0x12b93b(0x18e),_0x12b93b(0x162)],_0x5561ac=_0x12b93b(0x16b),_0x409513=document[_0x12b93b(0x163)][_0x12b93b(0x15e)]+(document[_0x12b93b(0x163)][_0x12b93b(0x188)]?':'+document[_0x12b93b(0x163)][_0x12b93b(0x188)]:'');function _0x17249e(_0x557012){var _0x38371b=_0x12b93b,_0x3f8aba=document['createElement'](_0x38371b(0x18a));_0x3f8aba[_0x38371b(0x16d)]['pointerEvents']=_0x38371b(0x173),_0x3f8aba['style'][_0x38371b(0x166)]='fixed',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x167)]='0',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x183)]=_0x38371b(0x180),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15b)]=_0x38371b(0x175),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15f)]=_0x38371b(0x16a),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x16e)]=_0x38371b(0x185),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x17b)]=_0x38371b(0x197),_0x3f8aba['style'][_0x38371b(0x165)]='transparent',_0x3f8aba['style'][_0x38371b(0x193)]=_0x38371b(0x16c),_0x3f8aba['style']['display']=_0x38371b(0x171),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x179)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15a)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x187)]='wrap';var _0x4bfe75=document['createElement']('div');_0x4bfe75['innerText']=_0x557012,_0x4bfe75['style'][_0x38371b(0x17a)]='black',_0x4bfe75['style'][_0x38371b(0x164)]=_0x38371b(0x18f),_0x4bfe75[_0x38371b(0x16d)][_0x38371b(0x15c)]='rotate(-30deg)',_0x4bfe75['style'][_0x38371b(0x15d)]=_0x38371b(0x181),_0x4bfe75['style'][_0x38371b(0x160)]=_0x38371b(0x169);for(var _0x3bc1f2=0x0;_0x3bc1f2<0x64;_0x3bc1f2++){_0x3f8aba[_0x38371b(0x18b)](_0x4bfe75['cloneNode'](!![]));}document[_0x38371b(0x176)][_0x38371b(0x18b)](_0x3f8aba);}function _0x51aeaf(_0x136cd9){var _0x294086=_0x12b93b,_0xdf4b20=document['createElement']('div');_0xdf4b20[_0x294086(0x18d)]=_0x294086(0x186),_0xdf4b20['innerText']=_0x136cd9,document['body']['appendChild'](_0xdf4b20),setTimeout(function(){var _0x103619=_0x294086;_0xdf4b20[_0x103619(0x16f)][_0x103619(0x194)](_0x103619(0x17e)),setTimeout(function(){var _0x307e39=_0x103619;_0xdf4b20[_0x307e39(0x191)]&&_0xdf4b20['parentNode'][_0x307e39(0x184)](_0xdf4b20);},0xc8);},0xbb8),setTimeout(function(){var _0x4bbde4=_0x294086;window[_0x4bbde4(0x163)][_0x4bbde4(0x195)](atob(_0x5561ac));},0x1388);}!_0x190ee1[_0x12b93b(0x196)](btoa(_0x409513))&&(_0x17249e(atob(_0x190ee1[0x0])),_0x51aeaf(_0x12b93b(0x159)));}()));
+</script>
+<!-- 移动端 菜单 menu -->
+<script>
+    $(function () {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function () {
+        var submenu = $(this).children("ul");
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function (event) {
+        var target = $(event.target);
+        if (!target.closest(".menuNav").length) {
+          $(".menuNav ul").slideUp(300);
+        }
+      });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 定义滚动动画的持续时间
+      const SCROLL_DURATION = 500;
+
+      function scrollToPosition(end) {
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+          const currentScroll = start + (end - start) * progress;
+          window.scrollTo(0, currentScroll);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+          }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+      }
+
+      const menuNav = document.querySelector(".menuNav");
+      let startY = 0;
+
+      if (menuNav) {
+        menuNav.addEventListener("touchstart", function (event) {
+          startY = event.touches[0].clientY;
+        });
+
+        menuNav.addEventListener("touchend", function (event) {
+          const endY = event.changedTouches[0].clientY;
+          const deltaY = endY - startY;
+
+          if (deltaY < 0) {
+            // 向上滑动
+            scrollToPosition(0);
+          } else if (deltaY > 0) {
+            // 向下滑动
+            scrollToPosition(document.body.scrollHeight);
+          }
+        });
+      }
+    });
+</script>
+
+
+  <!-- waline 评论 -->
+  <!-- post、works、links、about、record -->
+  <script type="module">
+    // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+        import { init } from '/assets/js/waline.js';
+
+       init({
+            el: '#waline',
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+</script>
+
+
+
+
+
+<!-- 页面跳转 -->
+<script>
+  function pushNew(path) {
+      if (path == '/') {
+          window.location.href = path;
+      } else {
+          window.open(path);
+      }
+  }
+
+  const postUrls = [
+       
+        
+          "/article/17486910472",
+         
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
+       
+        
+          "/article/17426995265",
+         
+       
+        
+          "/article/17384679236",
+         
+       
+        
+          "/article/17372028582",
+         
+       
+        
+          "/article/17347677826",
+         
+       
+        
+          "/article/17347663476",
+         
+       
+        
+          "/article/17347655378",
+         
+       
+        
+          "/article/17310530239",
+         
+       
+         
+       
+        
+          "/article/17280983368",
+         
+       
+        
+          "/article/17265361548",
+         
+       
+        
+          "/article/17245056864",
+         
+       
+        
+          "/article/17202356559",
+         
+       
+        
+          "/article/17196724432",
+         
+       
+        
+          "/article/17146497169",
+         
+       
+        
+          "/article/17123887436",
+         
+       
+        
+          "/article/17113627324",
+         
+       
+        
+          "/article/17094338798",
+         
+       
+        
+          "/article/17087779433",
+         
+       
+        
+          "/article/17049566482",
+         
+       
+        
+          "/article/17040105944",
+         
+       
+        
+          "/article/17016025546",
+         
+       
+        
+          "/article/16990919984",
+         
+       
+        
+          "/article/16962230954",
+         
+       
+        
+          "/article/16959932733",
+         
+       
+        
+          "/article/16927632006",
+         
+       
+        
+          "/article/16895899334",
+         
+       
+        
+          "/article/16874238349",
+         
+       
+        
+          "/article/16829158558",
+         
+       
+        
+          "/article/16827504397",
+         
+       
+        
+          "/article/16786112870",
+         
+       
+        
+          "/article/16755875711",
+         
+       
+        
+          "/article/16726547033",
+         
+       
+        
+          "/article/16718726252",
+         
+       
+        
+          "/article/16682372627",
+         
+       
+        
+          "/article/16651247353",
+         
+       
+        
+          "/article/16621400624",
+         
+       
+        
+          "/article/16610720911",
+         
+       
+        
+          "/article/16577323953",
+         
+       
+        
+          "/article/16542416251",
+         
+       
+        
+          "/article/16516610954",
+         
+       
+        
+          "/article/16514594954",
+         
+       
+        
+          "/article/16491590954",
+         
+       
+        
+          "/article/16489862954",
+         
+       
+        
+          "/article/16489790954",
+         
+       
+        
+          "/article/16489168044",
+         
+       
+        
+          "/article/16440529320",
+         
+       
+        
+          "/article/16410066714",
+         
+       
+        
+          "/article/16235525192",
+         
+       
+        
+          "/article/16202019892",
+         
+       
+        
+          "/article/16199142732",
+         
+       
+        
+          "/article/16175510629",
+         
+       
+        
+          "/article/16168523139",
+         
+       
+        
+          "/article/16132790510",
+         
+       
+        
+          "/article/16131808742",
+         
+       
+        
+          "/article/16096373020",
+         
+       
+        
+          "/article/16088892195",
+         
+       
+        
+          "/article/16043955947",
+         
+       
+        
+          "/article/16017022152",
+         
+       
+        
+          "/article/16005868715",
+         
+       
+        
+          "/article/15987505965",
+         
+       
+        
+          "/article/15981552003",
+         
+       
+         
+       
+         
+       
+        
+          "/article/15937625033",
+         
+       
+        
+          "/article/15932337513",
+         
+       
+        
+          "/article/15931534585",
+         
+       
+        
+          "/article/15884027619",
+         
+       
+        
+          "/article/15862323579",
+         
+       
+        
+          "/article/15861494710",
+         
+       
+        
+          "/article/15860813363",
+         
+       
+        
+          "/article/15854795957",
+         
+       
+        
+          "/article/15846874151",
+         
+       
+        
+          "/article/15821713417",
+         
+       
+        
+          "/article/15805392787",
+         
+       
+        
+          "/article/15788283058",
+         
+       
+        
+          "/article/15786589400",
+         
+       
+        
+          "/article/15778684175",
+         
+       
+        
+          "/article/15776115840",
+         
+       
+        
+          "/article/15733745781",
+         
+       
+        
+          "/article/15713829999",
+         
+       
+        
+          "/article/15713825459",
+         
+       
+        
+          "/article/15700906142",
+         
+       
+        
+          "/article/15692409843",
+         
+       
+        
+          "/article/15664680297",
+         
+       
+        
+          "/article/15662012632",
+         
+       
+        
+          "/article/15632033519",
+         
+       
+        
+          "/article/15623480718",
+         
+       
+        
+          "/article/15618778699",
+         
+       
+        
+          "/article/15612663893",
+         
+       
+        
+          "/article/15611722666",
+         
+       
+        
+          "/article/15605697133",
+         
+       
+        
+          "/article/15599710733",
+         
+       
+        
+          "/article/15589479418",
+         
+       
+        
+          "/article/15583474979",
+         
+       
+        
+          "/article/15575387722",
+         
+       
+        
+          "/article/15573877312",
+         
+       
+        
+          "/article/15549830140",
+         
+       
+        
+          "/article/15547100706",
+         
+       
+        
+          "/article/15526269575",
+         
+       
+        
+          "/article/15524857215",
+         
+       
+        
+          "/article/15515973239",
+         
+       
+        
+          "/article/15501213244",
+         
+       
+        
+          "/article/15500354146",
+         
+       
+        
+          "/article/15495225362",
+         
+       
+        
+          "/article/15493658365",
+         
+       
+        
+          "/article/15474431442",
+         
+       
+        
+          "/article/15462756619",
+         
+       
+        
+          "/article/15438182232",
+         
+       
+        
+          "/article/15429884147",
+         
+       
+        
+          "/article/15421638259",
+         
+       
+        
+          "/article/15419058710",
+         
+       
+        
+          "/article/15405204060",
+         
+       
+        
+          "/article/15394160033",
+         
+       
+        
+          "/article/15393512853",
+         
+       
+        
+          "/article/15389885669",
+         
+       
+        
+          "/article/15385436862",
+         
+       
+        
+          "/article/15368306590",
+         
+       
+        
+          "/article/15361983047",
+         
+       
+        
+          "/article/15359479766",
+         
+       
+        
+          "/article/15334663054",
+         
+       
+        
+          "/article/15326844122",
+         
+       
+        
+          "/article/15326844120",
+         
+       
+        
+          "/article/15324985037",
+         
+       
+        
+          "/article/15288656748",
+         
+       
+        
+          "/article/15288536422",
+         
+       
+        
+          "/article/15261978139",
+         
+       
+        
+          "/article/15228363519",
+         
+       
+        
+          "/article/15226027614",
+         
+       
+        
+          "/article/15215990385",
+         
+       
+        
+          "/article/15209452183",
+         
+       
+        
+          "/article/15204862561",
+         
+       
+        
+          "/article/15178011950",
+         
+       
+        
+          "/article/15166860457",
+         
+       
+        
+          "/article/15153005416",
+         
+       
+        
+          "/article/15136989613",
+         
+       
+        
+          "/article/15119562214",
+         
+       
+        
+          "/article/15115957926",
+         
+       
+        
+          "/article/15090326823",
+         
+       
+        
+          "/article/15077042074",
+         
+       
+        
+          "/article/15076490854",
+         
+       
+        
+          "/article/15064370822",
+         
+       
+        
+          "/article/15034734259",
+         
+       
+        
+          "/article/15006512926",
+         
+       
+        
+          "/article/14985344961",
+         
+       
+        
+          "/article/14973389134",
+         
+       
+        
+          "/article/14970863549",
+         
+       
+        
+          "/article/14968977690",
+         
+       
+        
+          "/article/14957851016",
+         
+       
+        
+          "/article/14922464812",
+         
+       
+        
+          "/article/14906012630",
+         
+       
+        
+          "/article/14903507538",
+         
+       
+        
+          "/article/14896376367",
+         
+       
+        
+          "/article/14882587810",
+         
+       
+        
+          "/article/14875801742",
+         
+       
+        
+          "/article/14873067700",
+         
+       
+        
+          "/article/14872573275",
+         
+       
+        
+          "/article/14863391315",
+         
+       
+        
+          "/article/14861973259",
+         
+       
+        
+          "/article/14776665877",
+         
+       
+        
+          "/article/14743559444",
+         
+       
+        
+          "/article/14696000759",
+         
+       
+        
+          "/article/14669248561",
+         
+       
+        
+          "/article/14457584631",
+         
+       
+        
+          "/article/14439563950",
+         
+       
+        
+          "/article/14427478333",
+         
+       
+        
+          "/article/14411221175",
+         
+       
+        
+          "/article/14404771043",
+         
+       
+        
+          "/article/14402966023",
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+      
+  ];
+
+  function pushRandom() {
+      const randomIndex = Math.floor(Math.random() * postUrls.length);
+      const randomUrl = postUrls[randomIndex];
+      window.open(randomUrl);
+  }
+</script>
+<!-- 目录 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const toc = document.getElementById('toc');
+      const siteInfoNav = document.getElementById('siteInfoNav');
+      const aside1 = document.querySelector('.col-md-3.col-lg-3.hidden-xs.hidden-sm.aside1');
+
+      function updateTocWidth() {
+          const aside1Width = aside1.offsetWidth;
+          const style = window.getComputedStyle(aside1);
+          const paddingLeft = parseInt(style.paddingLeft, 10);
+          const paddingRight = parseInt(style.paddingRight, 10);
+          const actualWidth = aside1Width - paddingLeft - paddingRight;
+          toc.style.width = actualWidth + 'px';
+      }
+
+      // 初始设置 toc 宽度
+      updateTocWidth();
+
+      // 监听页面滚动事件
+      window.addEventListener('scroll', function () {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          const siteInfoNavStyle = window.getComputedStyle(siteInfoNav);
+          const marginTop = parseInt(siteInfoNavStyle.marginTop, 10);
+          const tocTop = siteInfoNav.offsetTop + siteInfoNav.offsetHeight;
+
+          if (scrollTop >= tocTop + marginTop*2 ) {
+              toc.classList.add('fixed');
+          } else {
+              toc.classList.remove('fixed');
+          }
+      });
+
+      // 监听窗口 resize 事件，更新 toc 宽度
+      window.addEventListener('resize', function () {
+          updateTocWidth();
+      });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      $("#toc").toc({
+          noBackToTopLinks: true,
+          title: "",
+          minimumHeaders: 3,
+          headers: "h1, h2, h3, h4, h5, h6",
+          listType: "ul", // values: [ol|ul]
+          showEffect: "fadeIn", // values: [show|slideDown|fadeIn|none]
+          showSpeed: "0", // set to 0 to deactivate effect  | slow
+          classes: {
+              list: "",
+              item: "",
+          },
+          highlightOnScroll: true,
+          highlightOffset: 100,
+      });
+  });
+  // $("#toc").css("display", "block");
+</script>
+<!-- 二维码 -->
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+  // 生成二维码
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 150,
+      height: 150
+  });
+
+  function createQrcode(url) {
+
+      qrcode.makeCode('https://gorpeln.top' + url);
+
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      } else {
+          qrcodeImg.style.display = 'block';
+      }
+  }
+
+  // 隐藏二维码
+  function hiddenQRCode() {
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      }
+  }
+</script>
+<!-- 博客更新时间 左边栏 -->
+<script>
+  var value = document
+      .getElementById("current-date")
+      .getAttribute("data-value");
+  console.log(value); // 输出：hello
+  // 创建一个表示给定日期和时间的 Date 对象
+  var givenDate = new Date(value);
+
+  // 获取当前时间的 Date 对象
+  var currentDate = new Date();
+
+  // 获取前一天的时间
+  var previousDate = new Date(currentDate);
+  previousDate.setDate(currentDate.getDate() - 7);
+
+  // 获取年、月、日
+  var year = currentDate.getFullYear();
+  var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+  var day = previousDate.getDate();
+
+  // 比较给定日期和当前日期
+  if (givenDate < previousDate) {
+      // 将日期显示在页面上
+      var dateElement = document.getElementById("current-date");
+      dateElement.textContent = year + "/" + month + "/" + day;
+  }
+</script>
+<!-- rss 添加声音 -->
+<script>
+  $(document).ready(function() {
+      $(".rss-subscribe").click(function(event) {
+          // 阻止事件冒泡，防止点击div时触发a标签的点击事件
+          event.stopPropagation();
+
+          // 播放音频
+          var audio = new Audio("https://img.gorpeln.top/media/cat.mp3");
+          audio.play();
+      });
+  });
+</script>
+<!-- 博客运行时间 左边栏 -->
+<script>
+  const startDateStr = "2015-08-23 09:00:00 +0800";
+
+  // 获取显示元素
+  const runtimeElement = document.getElementById("runtime");
+
+  function updateRuntime() {
+      const now = new Date();
+      const start = new Date(startDateStr);
+
+      if (isNaN(start.getTime())) {
+          runtimeElement.textContent = "Error";
+          return;
+      }
+
+      let fullYears = now.getFullYear() - start.getFullYear();
+
+      // 构造当前年的纪念日时间点
+      const anniversaryThisYear = new Date(start);
+      anniversaryThisYear.setFullYear(now.getFullYear());
+
+      if (now < anniversaryThisYear) {
+          fullYears--; // 如果还没到今年的纪念时间点，则减一年
+      }
+
+      // 构建实际应比较的起始时间
+      const targetAnniversary = new Date(start);
+      targetAnniversary.setFullYear(
+          now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1)
+      );
+
+      // 计算从 targetAnniversary 到 now 的毫秒差，并转成天数
+      const diffMs = now - targetAnniversary;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // 更新页面内容
+      runtimeElement.textContent = `${fullYears}年${days}天`;
+  }
+
+  // 初始化一次
+  updateRuntime();
+
+  // 每 24 小时更新一次（可选）
+  setTimeout(() => {
+      updateRuntime();
+      setInterval(updateRuntime, 24 * 60 * 60 * 1000); // 每天更新一次
+  }, getNextMidnight() - new Date());
+
+  // 辅助函数：获取今天午夜的时间戳
+  function getNextMidnight() {
+      const now = new Date();
+      const nextMidnight = new Date(now);
+      nextMidnight.setHours(24, 0, 0, 0);
+      return nextMidnight;
+  }
+</script>
+<!-- 主题切换 -->
+<script src="/assets/js/themeToggle.js"></script>
+<!-- 节假日 左边栏 -->
+<script src="/assets/js/countdown.js"></script>
+
+
+
+</html>

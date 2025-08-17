@@ -1,0 +1,2003 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>杂记六 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
+    <meta name="description" content="一、概述内存泄漏就是“程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果”。">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/ios/06">
+    <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+    <!-- Open Graph -->
+    <meta name="author" content="gorpeln">
+    <meta property="og:title" content="杂记六 | gorpeln's Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/ios/06">
+    <meta property="og:description" content="一、概述内存泄漏就是“程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果”。">
+    <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+    <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+    <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+    <link rel="stylesheet" href="/assets/css/warning.min.css">
+    <link rel="stylesheet" href="/assets/css/cb-search.css">
+    <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
+
+    <!-- 站点验证 -->
+    <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
+    <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+    <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
+    <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
+
+    <!-- 分析追踪 -->
+    <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <script>
+          (function () {
+            var darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "enabled") {
+              document.body.classList.add("dark-mode");
+            }
+          })();
+    </script>
+
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <!-- 左侧栏 -->
+          <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+            <!-- 个人信息 -->
+            <div class="profile box-shadow center">
+              <div class="overlay"></div>
+              <div class="center gavatar">
+                <a href="/" class="profile_gavatar">
+                  <img class="circle" src="/assets/img/logo.png" />
+                  <div class="light-sweep"></div>
+                </a>
+              </div>
+              <div class="nickname">风未止</div>
+              <div class="center profile_desc">趁年轻，做自己想做的！</div>
+              <div class="center profile_subdesc">
+                There is no best, only better!
+                <br />
+              </div>
+              <div class="site-state">
+                <div class="site-state-item site-state-posts">
+                  <a href="/archives" target="_blank">
+                    <span class="site-state-item-count">227</span>
+                    <span class="site-state-item-name">归档</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories" target="_blank">
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags" target="_blank">
+                    <span class="site-state-item-count">691</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rss-subscribe">
+                <a target="_blank" href="/feed.xml">
+                    <i class="fas fa-rss" style="padding-right: 5px"></i>RSS
+                </a>
+              </div>
+            </div>
+            <!-- 博客公告 -->
+            <div class="siteNav" style="display: none">
+              <div class="noticeTitle">
+                <i class="fas fa-bullhorn fa-shake"></i> 公告
+              </div>
+              <div class="noticeDetail">
+                欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！
+              </div>
+            </div>
+            <!-- 博客导航 -->
+            <div class="siteNav">
+              <div class="navTitle">博客导航</div>
+              <ul>
+                <li onclick="pushNew('/')">
+                  <a><i class="fas fa-home fa-fw"></i>首页</a>
+                </li>
+                <li onclick="pushNew('/categories')">
+                  <a><i class="fas fa-th fa-fw"></i>分类</a>
+                  <span class="articleCount">10 </span>
+                </li>
+                <li onclick="pushNew('/archives')">
+                  <a><i class="fas fa-archive fa-fw"></i>归档</a>
+                  <span class="articleCount">227 </span>
+                </li>
+                <li onclick="pushNew('/nav')">
+                  <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
+                </li>
+                <li onclick="pushNew('/works')">
+                  <a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                  <span class="articleCount">4 </span>
+                </li>
+                
+                <li onclick="pushNew('/links')">
+                  <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
+                  <span class="articleCount">28 </span>
+                </li>
+                <li onclick="pushNew('/about')">
+                  <a><i class="fas fa-user fa-fw"></i>关于</a>
+                </li>
+                <li onclick="pushNew('/resume')">
+                  <a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                  <span class="articleCount">※</span>
+                </li>
+                <li onclick="pushRandom()">
+                  <a><i class="fas fa-random fa-fw"></i>随机</a>
+                </li>
+                <li id="cb-search-btn">
+                  <a class="search-btn"><i class="fas fa-search fa-fw"></i>搜索</a>
+                  <span class="search-tip">双击 control </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章分类 -->
+            <div class="categoryNav">
+              <div class="categoryNavTitle">文章分类</div>
+              <div>
+                <ul>
+                  
+                  <li onclick="pushNew('/categories#其他')" class="categoryList">
+                    <a name="其他" class="default-categoryNav-name">其他</a>
+                    <a name="其他" style="" class="articleCount">62</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                    <a name="个人博客" class="default-categoryNav-name">个人博客</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                    <a name="web前端" class="default-categoryNav-name">web前端</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                    <a name="iOS" class="default-categoryNav-name">iOS</a>
+                    <a name="iOS" style="" class="articleCount">44</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                    <a name="程序人生" class="default-categoryNav-name">程序人生</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                    <a name="MacOS" class="default-categoryNav-name">MacOS</a>
+                    <a name="MacOS" style="" class="articleCount">22</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                    <a name="产品和运营" class="default-categoryNav-name">产品和运营</a>
+                    <a name="产品和运营" style="" class="articleCount">12</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#Git')" class="categoryList">
+                    <a name="Git" class="default-categoryNav-name">Git</a>
+                    <a name="Git" style="" class="articleCount">7</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                    <a name="微信小程序" class="default-categoryNav-name">微信小程序</a>
+                    <a name="微信小程序" style="" class="articleCount">14</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                    <a name="教程福利" class="default-categoryNav-name">教程福利</a>
+                    <a name="教程福利" style="" class="articleCount">6</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <!-- 个人档案 -->
+            <div class="contactNav">
+              <div class="contactNavTitle">个人档案</div>
+              <div class="contact-container">
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/qqLogo.png" />
+                  <span class="contact-name">contact via email</span>
+                </a>
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/gmailLogo.png" />
+                  <span class="contact-name">help@gor*eln.top</span>
+                </a>
+                <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                  <img src="/assets/img/csdnLogo.png" />
+                  <span class="contact-name">gorpeln.blog.csdn.net</span>
+                </a>
+                <a class="contact-item" href="/about" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="contact-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 友情链接 -->
+            <div class="friendlinkNav" id="friendlinkNav">
+              <div class="friendlinkNavTitle">友情链接</div>
+              <div class="friend-container">
+                
+                    
+                        <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
+                          <img src="https://www.foreverblog.cn/favicon.ico" />
+                          <span class="friend-name">十年之约</span>
+                        </a>
+                    
+                
+                    
+                        <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                          <img src="https://list.travellings.cn/favicon.ico" />
+                          <span class="friend-name">开往-友链接力</span>
+                        </a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <a class="friend-item" href="/links" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="friend-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 节日提醒 -->
+            <div class="countdownNav" id="countdownNav">
+              <div class="card-widget card-countdown">
+                <div class="item-content">
+                  <div class="cd-count-left">
+                    <span class="cd-text">距离</span>
+                    <span class="cd-name" id="eventName">节日</span>
+                    <span class="cd-time" id="daysUntil">00</span>
+                    <span class="cd-date" id="eventDate">
+                      
+                      1970-01-01
+                    </span>
+                  </div>
+                  <div id="countRight" class="cd-count-right">
+                    <div id="countRight" class="cd-count-right">
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">今日</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本周</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本月</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本年</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 网站资讯 -->
+            <div class="siteInfoNav" id="siteInfoNav">
+              <div class="navTitle">网站资讯</div>
+              <ul>
+                <li>
+                  <p>文章数目</p>
+                  <p>227</p>
+                </li>
+                <li>
+                  <p>本站总字数</p>
+                  <p>113.7k</p>
+                </li>
+                <li>
+                  <p>已运行时间</p>
+                  <p id="runtime">加载中...</p>
+                </li>
+                <li>
+                  <p>最近更新时间</p>
+                  <p id="current-date" data-value="2025-08-17 18:30:34 +0800">
+                    2025/08/17
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章目录 -->
+            <div id="toc" class="customCatalog"></div>
+          </div>
+          <!-- 页面详情 -->
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+            <div class="page-content" id="pjax"><div class="post">
+    <header class="post-header">
+        <h1 class="post-title">杂记六</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;margin-right:2em;">2015-01-06</text>
+            分类：
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
+            </a>
+            <text style="margin-right:2em;"></text>
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="一概述">一、概述</h3>
+<p>内存泄漏就是“程序中已动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果”。</p>
+
+<h3 id="二常见的内存泄漏情况">二、常见的内存泄漏情况：</h3>
+<ul>
+  <li>多个对象间的相互强引用</li>
+  <li>NSTime的循环引用</li>
+  <li>block的循环引用</li>
+  <li>delegate的循环引用</li>
+  <li>通知的循环引用</li>
+  <li>WKWebView 造成的内存泄漏</li>
+</ul>
+
+<h3 id="三内存泄漏检测">三、内存泄漏检测</h3>
+<p>打开Xcode菜单栏中的<code class="language-plaintext highlighter-rouge">Product</code>选项中的<code class="language-plaintext highlighter-rouge">Profile</code>选项,也可以使用快捷键<code class="language-plaintext highlighter-rouge"> command + I</code></p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645873.jpeg!gorpeln" alt="20200202203645873" /></p>
+
+<p>然后在Instruments菜单中找到<code class="language-plaintext highlighter-rouge">Leaks</code>,如下图所示.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645874.jpeg!gorpeln" alt="20200202203645874" /></p>
+
+<p>打开<code class="language-plaintext highlighter-rouge">Leaks</code>工具之后,我们首先在左上角选择我们需要检测的程序,这里我们可以检测当前Mac上任意一个开启的程序,这里我们选择模拟器的Demo程序,如下所示.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645875.jpeg!gorpeln" alt="20200202203645875" /></p>
+
+<p>工具默认的是<code class="language-plaintext highlighter-rouge">Allocations</code>选项,然后我们需要选择Leaks选项,点击红色⭕️按钮,启动检测程序.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645876.jpeg!gorpeln" alt="20200202203645876" /></p>
+
+<p>然后我们运行完成之后,就会得到下面的页面,我们就可以通过页面的信息找到我们内存泄漏的具体位置了.</p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203645877.jpeg!gorpeln" alt="20200202203645877" /></p>
+
+
+
+        
+    </article>
+</div>
+<div class="copyright">
+    
+    <div class="custom-font">最后编辑于：2024-09-12</div>
+    
+    <div class="custom-font">本文链接：<a href="/ios/06" class='articleLink'>https://gorpeln.top/ios/06</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+</div>
+</div>
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/ios/05" title="杂记五" class="custom-font" target="_blank">杂记五</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/ios/07" title="杂记七" class="custom-font" target="_blank">杂记七</a>
+    </div>
+    
+</div>
+<div class="livere waline-box">
+    <div id="waline"></div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 右边栏 二维码、主题、返回顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+      <div class="themeModel" id="themeModel"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/ios/06')"></div>
+      <div class="qrcodeImg" id="qrcode"></div>
+      <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
+    </div>
+
+    <!-- search  搜索 -->
+    <div class="cb-search-tool" id="cb-close-btn">
+        <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签" />
+    </div>
+    <!-- 手机菜单 mune -->
+     <header class="site-header-menu">
+  <ul class="menuNav">
+    <li class="menuBtn" style="border-top: 0 solid #aaa">
+      <i class="fas fa-stream fa-fw" style="color: white; font-size: 14px; font-weight: 400"></i>
+      <ul class="sub-nav">
+        <li style="border-radius: 8px 8px 0 0"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+        <li><a href="/nav"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+        <li><div id="themeModelOfmobile"><i class="fas fa-moon fa-fw"></i>黑夜</div></li>
+        <li><a href="" class="safe-item-auto-load"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+        <li style="border-radius: 0 0 8px 8px"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
+ 
+    <!-- footer -->
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)">隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本</div>
+    <div class="footerDes">
+        <div class="post-margin">
+            ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="/assets/img/footer_beian.png" style="height: 16px" class="footerImg" />京ICP备2021024484号-2
+            </a>
+            ·
+            <a target=" _blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="/assets/img/footer_gonganbeian.png" style="height: 16px" class="footerImg" />京公网安备11011202004694号
+            </a>
+            ·
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                <img src="/assets/img/footer_youpaiyun.png" style="height: 22px" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+            ·
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
+            </a>
+            ·
+            <span>4.9.102</span>
+        </div>
+    </div>
+</footer>
+    
+    
+</body>
+
+<!-- js_include -->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
+<!-- 目录 -->
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- 安全跳转页面 -->
+<script type="text/javascript" src="/assets/js/safe.js"></script>
+<!--  樱花背景 -->
+<script type="text/javascript" src="/assets/js/sakura.js"></script>
+<!--  丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
+<!-- search 搜索 -->
+<script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
+<!-- 动态显示网站运行时间 -->
+<script>
+    document.getElementById('currentYear') && (document.getElementById('currentYear').textContent = new Date().getFullYear());
+
+    function siteTime(startDateStr) {
+        const now = new Date();
+
+        // 解析起始时间
+        const start = new Date(startDateStr);
+
+        // 检查是否是合法的时间格式
+        if (isNaN(start.getTime())) {
+            console.error("Invalid start date:", startDateStr);
+            document.getElementById('htmer_time').innerHTML = "时间计算出错，请检查配置。";
+            return;
+        }
+
+        // 计算年份差
+        let diffYears = now.getFullYear() - start.getFullYear();
+
+        // 构造今年对应的纪念日时间点（精确到小时/分/秒）
+        const anniversaryThisYear = new Date(start);
+        anniversaryThisYear.setFullYear(now.getFullYear());
+
+        // 如果还没到今年的纪念日时间点，则减去一年
+        if (now < anniversaryThisYear) {
+            diffYears--;
+        }
+
+        // 根据年份差确定要比较的起始周年时间
+        const anniversaryTargetYear = new Date(start);
+        anniversaryTargetYear.setFullYear(now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1));
+
+        // 计算周年之后的时间差（毫秒）
+        const timeDiff = now - anniversaryTargetYear;
+
+        // 时间单位（毫秒）
+        const daysInMs = 1000 * 60 * 60 * 24;
+        const hoursInMs = 1000 * 60 * 60;
+        const minutesInMs = 1000 * 60;
+
+        // 计算天、小时、分、秒
+        const diffDays = Math.floor(timeDiff / daysInMs);
+        const diffHours = Math.floor((timeDiff % daysInMs) / hoursInMs);
+        const diffMinutes = Math.floor((timeDiff % hoursInMs) / minutesInMs);
+        const diffSeconds = Math.floor((timeDiff % minutesInMs) / 1000);
+
+        // 更新页面内容
+        document.getElementById('htmer_time').innerHTML =
+            `本站已安全运行：${diffYears} 年 ${diffDays} 天 ${diffHours} 时 ${diffMinutes} 分 ${diffSeconds} 秒&nbsp;&nbsp;`;
+
+        // 每秒更新一次
+        setTimeout(() => siteTime(startDateStr), 1000);
+    }   
+
+    const startDate = "2015-08-23 09:00:00 +0800"; 
+    siteTime(startDate);
+</script>
+<!-- 网站运行时间事件 -->
+<script>
+    function over(obj) {
+        obj.innerHTML ="隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {}
+
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = "/record";
+    }
+</script>
+<!-- 控制台输出 -->
+<script>
+    var HoldLog = console.log;
+    console.log = function() {};
+    let nowDate = new Date();
+    queueMicrotask(() => {
+        const Log = function() {
+            HoldLog.apply(console, arguments);
+        };
+        console.log = Log;
+
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客名称%c gorpeln的个人博客 - gorpeln",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客链接%c https://gorpeln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c联系方式%c help@gor*eln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博主寄语%c 趁年轻，做自己想做的！",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c版本号 %c V4.9.102",
+                "",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+
+        const loadTime = Math.round(performance.now() * 100) / 100 / 1000;
+        const formattedLoadTime = loadTime.toFixed(2) + "s";
+        setTimeout(
+            Log.bind(
+                console,
+                `%c页面加载消耗了: %c${formattedLoadTime}`,
+                "",
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+            ),
+        );
+
+        const hitKey = "hit";
+        let hitCount = localStorage.getItem(hitKey) ?
+            parseInt(localStorage.getItem(hitKey)) :
+            0;
+        hitCount++;
+        localStorage.setItem(hitKey, hitCount);
+        setTimeout(
+            Log.bind(
+                console,
+                `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+                "",
+            ),
+        );
+        setTimeout(
+            console.warn.bind(
+                console,
+                "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
+                "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
+                "",
+            ),
+        );
+    });
+</script>
+<!-- 自定义快捷键 -->
+<script>
+    const SCROLL_OFFSET = 500;          // 定义滚动距离底部的偏移量
+    const SCROLL_DURATION = 500;        // 定义滚动动画的持续时间
+    const DOUBLE_CLICK_THRESHOLD = 300; // 定义双击的时间阈值（毫秒）
+
+    // 创建一个映射，用于存储按键与目标操作之间的关系
+    const keyToActionMap = {
+        p: () => window.open("/p", "_blank"),                   // 双击p在新标签页打开p页面
+        t: () => window.open("/tool", "_blank"),                // 双击t在新标签页打开tool页面
+        f: () => window.open("/article/14402966023", "_blank"), // 双击打开 Hello World 格式 页面
+        h: () => window.open("/", "_blank"),                    // 双击打开 首页
+        ArrowDown: scrollToBottom,                              // 双击向下箭头滑动页面最底部
+        ArrowUp: scrollToTop,                                   // 双击向上箭头滑动页面最顶部部
+    };
+
+    // 存储上一次按键的时间戳和按键标识符
+    let lastKeyPress = {};
+
+    document.addEventListener("keydown", function(event) {
+        const keyPressed = event.key;
+        const lowerCaseKey = keyPressed.toLowerCase();
+        const currentKey = keyToActionMap.hasOwnProperty(keyPressed) ?
+            keyPressed :
+            lowerCaseKey;
+
+        if (keyToActionMap.hasOwnProperty(currentKey)) {
+            const now = Date.now();
+            const previousTime = lastKeyPress[currentKey] || 0;
+            const timeDifference = now - previousTime;
+
+            if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+                keyToActionMap[currentKey]();
+                lastKeyPress[currentKey] = 0;
+            } else {
+                lastKeyPress[currentKey] = now;
+            }
+        }
+    });
+
+    // 定义滚动到页面底部的函数
+    function scrollToBottom() {
+        const start = window.scrollY;
+        const end = document.body.scrollHeight - SCROLL_OFFSET;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+
+    // 定义滚动到页面顶部的函数
+    function scrollToTop() {
+        const start = window.scrollY;
+        const end = 0;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+</script>
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+<!-- 网站分析 -->
+<!-- 百度统计 -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ec1e65b309b4205d33b203f2c26a184f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+  (function(){
+  var el = document.createElement("script");
+  el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?1e00c552c856203cd30ebe459d7b7f2f0fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+  el.id = "ttzz";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(el, s);
+  })(window)
+</script>
+<!-- 防镜像 -->
+
+<script>
+   function _0x17aa(){var _0x39ef1b=['left','removeChild','9999','alert-message','flexWrap','port','center','div','appendChild','200FeByLO','className','YmxvZy4yMDIwOTAueHl6','30px','569272slRPwH','parentNode','393071MMVoWd','overflow','add','replace','includes','0.1','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','alignItems','width','transform','whiteSpace','hostname','height','margin','567541SsolIH','YmxvZy5nb3JwZWxuLnRvcA==','location','fontSize','background','position','top','30MixXDM','80px','100%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','hidden','style','zIndex','classList','d3d3LmdvcnBlbG4udG9w','flex','808318iwlhfR','none','Z29ycGVsbi50b3A=','110%','body','25mwMKir','2799NfnTJp','justifyContent','color','opacity','753306DnApFK','MTI3LjAuMC4xOjQwMDA=','fade-out','3352TvwIlh','-5%','nowrap','248372ThEblC'];_0x17aa=function(){return _0x39ef1b;};return _0x17aa();}function _0x50c9(_0x3af4d2,_0x112676){var _0x17aa91=_0x17aa();return _0x50c9=function(_0x50c9ec,_0x458073){_0x50c9ec=_0x50c9ec-0x159;var _0x43c326=_0x17aa91[_0x50c9ec];return _0x43c326;},_0x50c9(_0x3af4d2,_0x112676);}(function(_0xda0fba,_0x406113){var _0x2fc09c=_0x50c9,_0x4fbebc=_0xda0fba();while(!![]){try{var _0x472f1b=parseInt(_0x2fc09c(0x161))/0x1+parseInt(_0x2fc09c(0x172))/0x2+parseInt(_0x2fc09c(0x17c))/0x3+parseInt(_0x2fc09c(0x182))/0x4*(parseInt(_0x2fc09c(0x177))/0x5)+-parseInt(_0x2fc09c(0x168))/0x6*(parseInt(_0x2fc09c(0x192))/0x7)+-parseInt(_0x2fc09c(0x17f))/0x8*(-parseInt(_0x2fc09c(0x178))/0x9)+-parseInt(_0x2fc09c(0x18c))/0xa*(parseInt(_0x2fc09c(0x190))/0xb);if(_0x472f1b===_0x406113)break;else _0x4fbebc['push'](_0x4fbebc['shift']());}catch(_0x88247d){_0x4fbebc['push'](_0x4fbebc['shift']());}}}(_0x17aa,0x54e7b),(function(){var _0x12b93b=_0x50c9,_0x190ee1=[_0x12b93b(0x174),_0x12b93b(0x170),_0x12b93b(0x17d),_0x12b93b(0x18e),_0x12b93b(0x162)],_0x5561ac=_0x12b93b(0x16b),_0x409513=document[_0x12b93b(0x163)][_0x12b93b(0x15e)]+(document[_0x12b93b(0x163)][_0x12b93b(0x188)]?':'+document[_0x12b93b(0x163)][_0x12b93b(0x188)]:'');function _0x17249e(_0x557012){var _0x38371b=_0x12b93b,_0x3f8aba=document['createElement'](_0x38371b(0x18a));_0x3f8aba[_0x38371b(0x16d)]['pointerEvents']=_0x38371b(0x173),_0x3f8aba['style'][_0x38371b(0x166)]='fixed',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x167)]='0',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x183)]=_0x38371b(0x180),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15b)]=_0x38371b(0x175),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15f)]=_0x38371b(0x16a),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x16e)]=_0x38371b(0x185),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x17b)]=_0x38371b(0x197),_0x3f8aba['style'][_0x38371b(0x165)]='transparent',_0x3f8aba['style'][_0x38371b(0x193)]=_0x38371b(0x16c),_0x3f8aba['style']['display']=_0x38371b(0x171),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x179)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15a)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x187)]='wrap';var _0x4bfe75=document['createElement']('div');_0x4bfe75['innerText']=_0x557012,_0x4bfe75['style'][_0x38371b(0x17a)]='black',_0x4bfe75['style'][_0x38371b(0x164)]=_0x38371b(0x18f),_0x4bfe75[_0x38371b(0x16d)][_0x38371b(0x15c)]='rotate(-30deg)',_0x4bfe75['style'][_0x38371b(0x15d)]=_0x38371b(0x181),_0x4bfe75['style'][_0x38371b(0x160)]=_0x38371b(0x169);for(var _0x3bc1f2=0x0;_0x3bc1f2<0x64;_0x3bc1f2++){_0x3f8aba[_0x38371b(0x18b)](_0x4bfe75['cloneNode'](!![]));}document[_0x38371b(0x176)][_0x38371b(0x18b)](_0x3f8aba);}function _0x51aeaf(_0x136cd9){var _0x294086=_0x12b93b,_0xdf4b20=document['createElement']('div');_0xdf4b20[_0x294086(0x18d)]=_0x294086(0x186),_0xdf4b20['innerText']=_0x136cd9,document['body']['appendChild'](_0xdf4b20),setTimeout(function(){var _0x103619=_0x294086;_0xdf4b20[_0x103619(0x16f)][_0x103619(0x194)](_0x103619(0x17e)),setTimeout(function(){var _0x307e39=_0x103619;_0xdf4b20[_0x307e39(0x191)]&&_0xdf4b20['parentNode'][_0x307e39(0x184)](_0xdf4b20);},0xc8);},0xbb8),setTimeout(function(){var _0x4bbde4=_0x294086;window[_0x4bbde4(0x163)][_0x4bbde4(0x195)](atob(_0x5561ac));},0x1388);}!_0x190ee1[_0x12b93b(0x196)](btoa(_0x409513))&&(_0x17249e(atob(_0x190ee1[0x0])),_0x51aeaf(_0x12b93b(0x159)));}()));
+</script>
+<!-- 移动端 菜单 menu -->
+<script>
+    $(function () {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function () {
+        var submenu = $(this).children("ul");
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function (event) {
+        var target = $(event.target);
+        if (!target.closest(".menuNav").length) {
+          $(".menuNav ul").slideUp(300);
+        }
+      });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 定义滚动动画的持续时间
+      const SCROLL_DURATION = 500;
+
+      function scrollToPosition(end) {
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+          const currentScroll = start + (end - start) * progress;
+          window.scrollTo(0, currentScroll);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+          }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+      }
+
+      const menuNav = document.querySelector(".menuNav");
+      let startY = 0;
+
+      if (menuNav) {
+        menuNav.addEventListener("touchstart", function (event) {
+          startY = event.touches[0].clientY;
+        });
+
+        menuNav.addEventListener("touchend", function (event) {
+          const endY = event.changedTouches[0].clientY;
+          const deltaY = endY - startY;
+
+          if (deltaY < 0) {
+            // 向上滑动
+            scrollToPosition(0);
+          } else if (deltaY > 0) {
+            // 向下滑动
+            scrollToPosition(document.body.scrollHeight);
+          }
+        });
+      }
+    });
+</script>
+
+
+  <!-- waline 评论 -->
+  <!-- post、works、links、about、record -->
+  <script type="module">
+    // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+        import { init } from '/assets/js/waline.js';
+
+       init({
+            el: '#waline',
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+</script>
+
+
+
+
+
+<!-- 页面跳转 -->
+<script>
+  function pushNew(path) {
+      if (path == '/') {
+          window.location.href = path;
+      } else {
+          window.open(path);
+      }
+  }
+
+  const postUrls = [
+       
+        
+          "/article/17486910472",
+         
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
+       
+        
+          "/article/17426995265",
+         
+       
+        
+          "/article/17384679236",
+         
+       
+        
+          "/article/17372028582",
+         
+       
+        
+          "/article/17347677826",
+         
+       
+        
+          "/article/17347663476",
+         
+       
+        
+          "/article/17347655378",
+         
+       
+        
+          "/article/17310530239",
+         
+       
+         
+       
+        
+          "/article/17280983368",
+         
+       
+        
+          "/article/17265361548",
+         
+       
+        
+          "/article/17245056864",
+         
+       
+        
+          "/article/17202356559",
+         
+       
+        
+          "/article/17196724432",
+         
+       
+        
+          "/article/17146497169",
+         
+       
+        
+          "/article/17123887436",
+         
+       
+        
+          "/article/17113627324",
+         
+       
+        
+          "/article/17094338798",
+         
+       
+        
+          "/article/17087779433",
+         
+       
+        
+          "/article/17049566482",
+         
+       
+        
+          "/article/17040105944",
+         
+       
+        
+          "/article/17016025546",
+         
+       
+        
+          "/article/16990919984",
+         
+       
+        
+          "/article/16962230954",
+         
+       
+        
+          "/article/16959932733",
+         
+       
+        
+          "/article/16927632006",
+         
+       
+        
+          "/article/16895899334",
+         
+       
+        
+          "/article/16874238349",
+         
+       
+        
+          "/article/16829158558",
+         
+       
+        
+          "/article/16827504397",
+         
+       
+        
+          "/article/16786112870",
+         
+       
+        
+          "/article/16755875711",
+         
+       
+        
+          "/article/16726547033",
+         
+       
+        
+          "/article/16718726252",
+         
+       
+        
+          "/article/16682372627",
+         
+       
+        
+          "/article/16651247353",
+         
+       
+        
+          "/article/16621400624",
+         
+       
+        
+          "/article/16610720911",
+         
+       
+        
+          "/article/16577323953",
+         
+       
+        
+          "/article/16542416251",
+         
+       
+        
+          "/article/16516610954",
+         
+       
+        
+          "/article/16514594954",
+         
+       
+        
+          "/article/16491590954",
+         
+       
+        
+          "/article/16489862954",
+         
+       
+        
+          "/article/16489790954",
+         
+       
+        
+          "/article/16489168044",
+         
+       
+        
+          "/article/16440529320",
+         
+       
+        
+          "/article/16410066714",
+         
+       
+        
+          "/article/16235525192",
+         
+       
+        
+          "/article/16202019892",
+         
+       
+        
+          "/article/16199142732",
+         
+       
+        
+          "/article/16175510629",
+         
+       
+        
+          "/article/16168523139",
+         
+       
+        
+          "/article/16132790510",
+         
+       
+        
+          "/article/16131808742",
+         
+       
+        
+          "/article/16096373020",
+         
+       
+        
+          "/article/16088892195",
+         
+       
+        
+          "/article/16043955947",
+         
+       
+        
+          "/article/16017022152",
+         
+       
+        
+          "/article/16005868715",
+         
+       
+        
+          "/article/15987505965",
+         
+       
+        
+          "/article/15981552003",
+         
+       
+         
+       
+         
+       
+        
+          "/article/15937625033",
+         
+       
+        
+          "/article/15932337513",
+         
+       
+        
+          "/article/15931534585",
+         
+       
+        
+          "/article/15884027619",
+         
+       
+        
+          "/article/15862323579",
+         
+       
+        
+          "/article/15861494710",
+         
+       
+        
+          "/article/15860813363",
+         
+       
+        
+          "/article/15854795957",
+         
+       
+        
+          "/article/15846874151",
+         
+       
+        
+          "/article/15821713417",
+         
+       
+        
+          "/article/15805392787",
+         
+       
+        
+          "/article/15788283058",
+         
+       
+        
+          "/article/15786589400",
+         
+       
+        
+          "/article/15778684175",
+         
+       
+        
+          "/article/15776115840",
+         
+       
+        
+          "/article/15733745781",
+         
+       
+        
+          "/article/15713829999",
+         
+       
+        
+          "/article/15713825459",
+         
+       
+        
+          "/article/15700906142",
+         
+       
+        
+          "/article/15692409843",
+         
+       
+        
+          "/article/15664680297",
+         
+       
+        
+          "/article/15662012632",
+         
+       
+        
+          "/article/15632033519",
+         
+       
+        
+          "/article/15623480718",
+         
+       
+        
+          "/article/15618778699",
+         
+       
+        
+          "/article/15612663893",
+         
+       
+        
+          "/article/15611722666",
+         
+       
+        
+          "/article/15605697133",
+         
+       
+        
+          "/article/15599710733",
+         
+       
+        
+          "/article/15589479418",
+         
+       
+        
+          "/article/15583474979",
+         
+       
+        
+          "/article/15575387722",
+         
+       
+        
+          "/article/15573877312",
+         
+       
+        
+          "/article/15549830140",
+         
+       
+        
+          "/article/15547100706",
+         
+       
+        
+          "/article/15526269575",
+         
+       
+        
+          "/article/15524857215",
+         
+       
+        
+          "/article/15515973239",
+         
+       
+        
+          "/article/15501213244",
+         
+       
+        
+          "/article/15500354146",
+         
+       
+        
+          "/article/15495225362",
+         
+       
+        
+          "/article/15493658365",
+         
+       
+        
+          "/article/15474431442",
+         
+       
+        
+          "/article/15462756619",
+         
+       
+        
+          "/article/15438182232",
+         
+       
+        
+          "/article/15429884147",
+         
+       
+        
+          "/article/15421638259",
+         
+       
+        
+          "/article/15419058710",
+         
+       
+        
+          "/article/15405204060",
+         
+       
+        
+          "/article/15394160033",
+         
+       
+        
+          "/article/15393512853",
+         
+       
+        
+          "/article/15389885669",
+         
+       
+        
+          "/article/15385436862",
+         
+       
+        
+          "/article/15368306590",
+         
+       
+        
+          "/article/15361983047",
+         
+       
+        
+          "/article/15359479766",
+         
+       
+        
+          "/article/15334663054",
+         
+       
+        
+          "/article/15326844122",
+         
+       
+        
+          "/article/15326844120",
+         
+       
+        
+          "/article/15324985037",
+         
+       
+        
+          "/article/15288656748",
+         
+       
+        
+          "/article/15288536422",
+         
+       
+        
+          "/article/15261978139",
+         
+       
+        
+          "/article/15228363519",
+         
+       
+        
+          "/article/15226027614",
+         
+       
+        
+          "/article/15215990385",
+         
+       
+        
+          "/article/15209452183",
+         
+       
+        
+          "/article/15204862561",
+         
+       
+        
+          "/article/15178011950",
+         
+       
+        
+          "/article/15166860457",
+         
+       
+        
+          "/article/15153005416",
+         
+       
+        
+          "/article/15136989613",
+         
+       
+        
+          "/article/15119562214",
+         
+       
+        
+          "/article/15115957926",
+         
+       
+        
+          "/article/15090326823",
+         
+       
+        
+          "/article/15077042074",
+         
+       
+        
+          "/article/15076490854",
+         
+       
+        
+          "/article/15064370822",
+         
+       
+        
+          "/article/15034734259",
+         
+       
+        
+          "/article/15006512926",
+         
+       
+        
+          "/article/14985344961",
+         
+       
+        
+          "/article/14973389134",
+         
+       
+        
+          "/article/14970863549",
+         
+       
+        
+          "/article/14968977690",
+         
+       
+        
+          "/article/14957851016",
+         
+       
+        
+          "/article/14922464812",
+         
+       
+        
+          "/article/14906012630",
+         
+       
+        
+          "/article/14903507538",
+         
+       
+        
+          "/article/14896376367",
+         
+       
+        
+          "/article/14882587810",
+         
+       
+        
+          "/article/14875801742",
+         
+       
+        
+          "/article/14873067700",
+         
+       
+        
+          "/article/14872573275",
+         
+       
+        
+          "/article/14863391315",
+         
+       
+        
+          "/article/14861973259",
+         
+       
+        
+          "/article/14776665877",
+         
+       
+        
+          "/article/14743559444",
+         
+       
+        
+          "/article/14696000759",
+         
+       
+        
+          "/article/14669248561",
+         
+       
+        
+          "/article/14457584631",
+         
+       
+        
+          "/article/14439563950",
+         
+       
+        
+          "/article/14427478333",
+         
+       
+        
+          "/article/14411221175",
+         
+       
+        
+          "/article/14404771043",
+         
+       
+        
+          "/article/14402966023",
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+      
+  ];
+
+  function pushRandom() {
+      const randomIndex = Math.floor(Math.random() * postUrls.length);
+      const randomUrl = postUrls[randomIndex];
+      window.open(randomUrl);
+  }
+</script>
+<!-- 目录 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const toc = document.getElementById('toc');
+      const siteInfoNav = document.getElementById('siteInfoNav');
+      const aside1 = document.querySelector('.col-md-3.col-lg-3.hidden-xs.hidden-sm.aside1');
+
+      function updateTocWidth() {
+          const aside1Width = aside1.offsetWidth;
+          const style = window.getComputedStyle(aside1);
+          const paddingLeft = parseInt(style.paddingLeft, 10);
+          const paddingRight = parseInt(style.paddingRight, 10);
+          const actualWidth = aside1Width - paddingLeft - paddingRight;
+          toc.style.width = actualWidth + 'px';
+      }
+
+      // 初始设置 toc 宽度
+      updateTocWidth();
+
+      // 监听页面滚动事件
+      window.addEventListener('scroll', function () {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          const siteInfoNavStyle = window.getComputedStyle(siteInfoNav);
+          const marginTop = parseInt(siteInfoNavStyle.marginTop, 10);
+          const tocTop = siteInfoNav.offsetTop + siteInfoNav.offsetHeight;
+
+          if (scrollTop >= tocTop + marginTop*2 ) {
+              toc.classList.add('fixed');
+          } else {
+              toc.classList.remove('fixed');
+          }
+      });
+
+      // 监听窗口 resize 事件，更新 toc 宽度
+      window.addEventListener('resize', function () {
+          updateTocWidth();
+      });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      $("#toc").toc({
+          noBackToTopLinks: true,
+          title: "",
+          minimumHeaders: 3,
+          headers: "h1, h2, h3, h4, h5, h6",
+          listType: "ul", // values: [ol|ul]
+          showEffect: "fadeIn", // values: [show|slideDown|fadeIn|none]
+          showSpeed: "0", // set to 0 to deactivate effect  | slow
+          classes: {
+              list: "",
+              item: "",
+          },
+          highlightOnScroll: true,
+          highlightOffset: 100,
+      });
+  });
+  // $("#toc").css("display", "block");
+</script>
+<!-- 二维码 -->
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+  // 生成二维码
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 150,
+      height: 150
+  });
+
+  function createQrcode(url) {
+
+      qrcode.makeCode('https://gorpeln.top' + url);
+
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      } else {
+          qrcodeImg.style.display = 'block';
+      }
+  }
+
+  // 隐藏二维码
+  function hiddenQRCode() {
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      }
+  }
+</script>
+<!-- 博客更新时间 左边栏 -->
+<script>
+  var value = document
+      .getElementById("current-date")
+      .getAttribute("data-value");
+  console.log(value); // 输出：hello
+  // 创建一个表示给定日期和时间的 Date 对象
+  var givenDate = new Date(value);
+
+  // 获取当前时间的 Date 对象
+  var currentDate = new Date();
+
+  // 获取前一天的时间
+  var previousDate = new Date(currentDate);
+  previousDate.setDate(currentDate.getDate() - 7);
+
+  // 获取年、月、日
+  var year = currentDate.getFullYear();
+  var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+  var day = previousDate.getDate();
+
+  // 比较给定日期和当前日期
+  if (givenDate < previousDate) {
+      // 将日期显示在页面上
+      var dateElement = document.getElementById("current-date");
+      dateElement.textContent = year + "/" + month + "/" + day;
+  }
+</script>
+<!-- rss 添加声音 -->
+<script>
+  $(document).ready(function() {
+      $(".rss-subscribe").click(function(event) {
+          // 阻止事件冒泡，防止点击div时触发a标签的点击事件
+          event.stopPropagation();
+
+          // 播放音频
+          var audio = new Audio("https://img.gorpeln.top/media/cat.mp3");
+          audio.play();
+      });
+  });
+</script>
+<!-- 博客运行时间 左边栏 -->
+<script>
+  const startDateStr = "2015-08-23 09:00:00 +0800";
+
+  // 获取显示元素
+  const runtimeElement = document.getElementById("runtime");
+
+  function updateRuntime() {
+      const now = new Date();
+      const start = new Date(startDateStr);
+
+      if (isNaN(start.getTime())) {
+          runtimeElement.textContent = "Error";
+          return;
+      }
+
+      let fullYears = now.getFullYear() - start.getFullYear();
+
+      // 构造当前年的纪念日时间点
+      const anniversaryThisYear = new Date(start);
+      anniversaryThisYear.setFullYear(now.getFullYear());
+
+      if (now < anniversaryThisYear) {
+          fullYears--; // 如果还没到今年的纪念时间点，则减一年
+      }
+
+      // 构建实际应比较的起始时间
+      const targetAnniversary = new Date(start);
+      targetAnniversary.setFullYear(
+          now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1)
+      );
+
+      // 计算从 targetAnniversary 到 now 的毫秒差，并转成天数
+      const diffMs = now - targetAnniversary;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // 更新页面内容
+      runtimeElement.textContent = `${fullYears}年${days}天`;
+  }
+
+  // 初始化一次
+  updateRuntime();
+
+  // 每 24 小时更新一次（可选）
+  setTimeout(() => {
+      updateRuntime();
+      setInterval(updateRuntime, 24 * 60 * 60 * 1000); // 每天更新一次
+  }, getNextMidnight() - new Date());
+
+  // 辅助函数：获取今天午夜的时间戳
+  function getNextMidnight() {
+      const now = new Date();
+      const nextMidnight = new Date(now);
+      nextMidnight.setHours(24, 0, 0, 0);
+      return nextMidnight;
+  }
+</script>
+<!-- 主题切换 -->
+<script src="/assets/js/themeToggle.js"></script>
+<!-- 节假日 左边栏 -->
+<script src="/assets/js/countdown.js"></script>
+
+
+
+</html>

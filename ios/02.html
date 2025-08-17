@@ -1,0 +1,2911 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>杂记二 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
+    <meta name="description" content="1、设计模式是什么？ 你知道哪些设计模式，并简要叙述？设计模式是一种编码经验，就是用比较成熟的逻辑去处理某一种类型的事情。  在iOS开发中经常用到的设计模式主要有以下几种：1.MVC模式2.MVVM模式3.单例模式4.代理模式5.观察者模式（通知和KVO）6.工厂模式">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/ios/02">
+    <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+    <!-- Open Graph -->
+    <meta name="author" content="gorpeln">
+    <meta property="og:title" content="杂记二 | gorpeln's Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/ios/02">
+    <meta property="og:description" content="1、设计模式是什么？ 你知道哪些设计模式，并简要叙述？设计模式是一种编码经验，就是用比较成熟的逻辑去处理某一种类型的事情。  在iOS开发中经常用到的设计模式主要有以下几种：1.MVC模式2.MVVM模式3.单例模式4.代理模式5.观察者模式（通知和KVO）6.工厂模式">
+    <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+    <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+    <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+    <link rel="stylesheet" href="/assets/css/warning.min.css">
+    <link rel="stylesheet" href="/assets/css/cb-search.css">
+    <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
+
+    <!-- 站点验证 -->
+    <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" />
+    <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+    <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
+    <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1738047196">
+
+    <!-- 分析追踪 -->
+    <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <script>
+          (function () {
+            var darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "enabled") {
+              document.body.classList.add("dark-mode");
+            }
+          })();
+    </script>
+
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <!-- 左侧栏 -->
+          <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+            <!-- 个人信息 -->
+            <div class="profile box-shadow center">
+              <div class="overlay"></div>
+              <div class="center gavatar">
+                <a href="/" class="profile_gavatar">
+                  <img class="circle" src="/assets/img/logo.png" />
+                  <div class="light-sweep"></div>
+                </a>
+              </div>
+              <div class="nickname">风未止</div>
+              <div class="center profile_desc">趁年轻，做自己想做的！</div>
+              <div class="center profile_subdesc">
+                There is no best, only better!
+                <br />
+              </div>
+              <div class="site-state">
+                <div class="site-state-item site-state-posts">
+                  <a href="/archives" target="_blank">
+                    <span class="site-state-item-count">227</span>
+                    <span class="site-state-item-name">归档</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories" target="_blank">
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags" target="_blank">
+                    <span class="site-state-item-count">691</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rss-subscribe">
+                <a target="_blank" href="/feed.xml">
+                    <i class="fas fa-rss" style="padding-right: 5px"></i>RSS
+                </a>
+              </div>
+            </div>
+            <!-- 博客公告 -->
+            <div class="siteNav" style="display: none">
+              <div class="noticeTitle">
+                <i class="fas fa-bullhorn fa-shake"></i> 公告
+              </div>
+              <div class="noticeDetail">
+                欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！
+              </div>
+            </div>
+            <!-- 博客导航 -->
+            <div class="siteNav">
+              <div class="navTitle">博客导航</div>
+              <ul>
+                <li onclick="pushNew('/')">
+                  <a><i class="fas fa-home fa-fw"></i>首页</a>
+                </li>
+                <li onclick="pushNew('/categories')">
+                  <a><i class="fas fa-th fa-fw"></i>分类</a>
+                  <span class="articleCount">10 </span>
+                </li>
+                <li onclick="pushNew('/archives')">
+                  <a><i class="fas fa-archive fa-fw"></i>归档</a>
+                  <span class="articleCount">227 </span>
+                </li>
+                <li onclick="pushNew('/nav')">
+                  <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
+                </li>
+                <li onclick="pushNew('/works')">
+                  <a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                  <span class="articleCount">4 </span>
+                </li>
+                
+                <li onclick="pushNew('/links')">
+                  <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
+                  <span class="articleCount">28 </span>
+                </li>
+                <li onclick="pushNew('/about')">
+                  <a><i class="fas fa-user fa-fw"></i>关于</a>
+                </li>
+                <li onclick="pushNew('/resume')">
+                  <a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                  <span class="articleCount">※</span>
+                </li>
+                <li onclick="pushRandom()">
+                  <a><i class="fas fa-random fa-fw"></i>随机</a>
+                </li>
+                <li id="cb-search-btn">
+                  <a class="search-btn"><i class="fas fa-search fa-fw"></i>搜索</a>
+                  <span class="search-tip">双击 control </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章分类 -->
+            <div class="categoryNav">
+              <div class="categoryNavTitle">文章分类</div>
+              <div>
+                <ul>
+                  
+                  <li onclick="pushNew('/categories#其他')" class="categoryList">
+                    <a name="其他" class="default-categoryNav-name">其他</a>
+                    <a name="其他" style="" class="articleCount">62</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                    <a name="个人博客" class="default-categoryNav-name">个人博客</a>
+                    <a name="个人博客" style="" class="articleCount">31</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                    <a name="web前端" class="default-categoryNav-name">web前端</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                    <a name="iOS" class="default-categoryNav-name">iOS</a>
+                    <a name="iOS" style="" class="articleCount">44</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                    <a name="程序人生" class="default-categoryNav-name">程序人生</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                    <a name="MacOS" class="default-categoryNav-name">MacOS</a>
+                    <a name="MacOS" style="" class="articleCount">22</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                    <a name="产品和运营" class="default-categoryNav-name">产品和运营</a>
+                    <a name="产品和运营" style="" class="articleCount">12</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#Git')" class="categoryList">
+                    <a name="Git" class="default-categoryNav-name">Git</a>
+                    <a name="Git" style="" class="articleCount">7</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                    <a name="微信小程序" class="default-categoryNav-name">微信小程序</a>
+                    <a name="微信小程序" style="" class="articleCount">14</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                    <a name="教程福利" class="default-categoryNav-name">教程福利</a>
+                    <a name="教程福利" style="" class="articleCount">6</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <!-- 个人档案 -->
+            <div class="contactNav">
+              <div class="contactNavTitle">个人档案</div>
+              <div class="contact-container">
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/qqLogo.png" />
+                  <span class="contact-name">contact via email</span>
+                </a>
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/gmailLogo.png" />
+                  <span class="contact-name">help@gor*eln.top</span>
+                </a>
+                <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                  <img src="/assets/img/csdnLogo.png" />
+                  <span class="contact-name">gorpeln.blog.csdn.net</span>
+                </a>
+                <a class="contact-item" href="/about" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="contact-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 友情链接 -->
+            <div class="friendlinkNav" id="friendlinkNav">
+              <div class="friendlinkNavTitle">友情链接</div>
+              <div class="friend-container">
+                
+                    
+                        <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
+                          <img src="https://www.foreverblog.cn/favicon.ico" />
+                          <span class="friend-name">十年之约</span>
+                        </a>
+                    
+                
+                    
+                        <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                          <img src="https://list.travellings.cn/favicon.ico" />
+                          <span class="friend-name">开往-友链接力</span>
+                        </a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <a class="friend-item" href="/links" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="friend-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 节日提醒 -->
+            <div class="countdownNav" id="countdownNav">
+              <div class="card-widget card-countdown">
+                <div class="item-content">
+                  <div class="cd-count-left">
+                    <span class="cd-text">距离</span>
+                    <span class="cd-name" id="eventName">节日</span>
+                    <span class="cd-time" id="daysUntil">00</span>
+                    <span class="cd-date" id="eventDate">
+                      
+                      1970-01-01
+                    </span>
+                  </div>
+                  <div id="countRight" class="cd-count-right">
+                    <div id="countRight" class="cd-count-right">
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">今日</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本周</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本月</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本年</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 网站资讯 -->
+            <div class="siteInfoNav" id="siteInfoNav">
+              <div class="navTitle">网站资讯</div>
+              <ul>
+                <li>
+                  <p>文章数目</p>
+                  <p>227</p>
+                </li>
+                <li>
+                  <p>本站总字数</p>
+                  <p>113.7k</p>
+                </li>
+                <li>
+                  <p>已运行时间</p>
+                  <p id="runtime">加载中...</p>
+                </li>
+                <li>
+                  <p>最近更新时间</p>
+                  <p id="current-date" data-value="2025-08-17 18:30:34 +0800">
+                    2025/08/17
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章目录 -->
+            <div id="toc" class="customCatalog"></div>
+          </div>
+          <!-- 页面详情 -->
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+            <div class="page-content" id="pjax"><div class="post">
+    <header class="post-header">
+        <h1 class="post-title">杂记二</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;margin-right:2em;">2015-01-02</text>
+            分类：
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
+            </a>
+            <text style="margin-right:2em;"></text>
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <p>1、设计模式是什么？ 你知道哪些设计模式，并简要叙述？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>设计模式是一种编码经验，就是用比较成熟的逻辑去处理某一种类型的事情。
+  
+在iOS开发中经常用到的设计模式主要有以下几种：
+1.MVC模式
+2.MVVM模式
+3.单例模式
+4.代理模式
+5.观察者模式（通知和KVO）
+6.工厂模式
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>一、MVC模式：
+通过数据模型，控制器逻辑，视图展示将应用程序进行逻辑划分。
+MVC是一切设计的基础，所有新的设计模式都是基于MVC进行的改进。
+使系统层次清晰，职责分明，易于维护
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>二、MVVM模式：
+Model View ViewModel 把模型 视图 业务逻辑层进行解耦和编写。
+MVVM是对MVC模式的优化，其本质是给控制器减负，将一些弱业务逻辑放到VM
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>三、单例模式：
+在程序运行期间，确保对于一个给定的类只有一个实例存在，这个实例有一个全局唯一的访问点，用于进行资源共享控制。
+优势：使用简单，易于跨模块。最主要的是因为只是创建一次，所以可以节省内存。
+缺点：不易被扩展，单例类的职责过重，在一定程度上违背了“单一职责原则”
+使用：工具类、公共跳转类、管理类、uiapplication、nsuserdefault
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>四、代理模式
+当一个类的某些功能需要由别的类来实现，但是又不确定具体会是哪个类实现。
+优势：解耦合
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>五、观察者模式（通知和KVO）
+1、通知是由一个中心对象为所有观察者提供变更通知，主要是广义上关注程序事件
+
+2、KVO：KVO则是被观察的对象直接向观察者发送通知，观察某个属性的状态，状态发生变化时通知观察者，主要是绑定于特定对象属性的值
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>六、工厂模式
+应用场景：工厂方式创建类的实例，多与代理模式配合，创建可替换代理类。app主题修改等
+</code></pre></div></div>
+
+<p>3、#import跟 #include 有什么区别，@class呢，#import&lt;&gt; 跟 #import””有什么区别？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：
+1). #import是Objective-C导入头文件的关键字，#include是C/C++导入头文件的关键字，使用#import，头文件会自动只导入一次，不会重复导入。
+2). @class告诉编译器某个类的声明，当执行时，才去查看类的实现文件，可以解决头文件的相互包含。
+3). #import&lt;&gt;用来包含系统的头文件，#import””用来包含用户头文件。
+</code></pre></div></div>
+
+<p>4、frame 和 bounds 有什么不同？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>frame指的是：该view在父view坐标系统中的位置和大小。(参照点是父view的坐标系统)
+bounds指的是：该view在本身坐标系统中的位置和大小。(参照点是本身坐标系统)
+</code></pre></div></div>
+
+<p>5、Objective-C的类可以多继承么？可以实现多个接口么？Category是什么？重写一个类的方式用继承好还是分类好？为什么？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：Objective-C的类不可以多继承；可以实现多个接口（协议）；Category是类别；一般情况用分类好，用Category去重写类的方法，仅对本Category有效，不会影响到其他类与原有类的关系。
+    
+PS:
+多继承是指一个子类继承多个父类。多继承对父类的个数没有限制，继承方式可以是公共继承、保护继承和私有继承，
+   
+class Worker{};
+class Farmer{};
+class MigrantWorker :public Worker ,public Farmer{}
+  
+多重继承与多继承不同，当B类从A类派生，C类从B类派生，此时称为多重继承.
+   
+class Person{};
+class Soldier : public Person{};
+class Infantryman : public Soldier{};
+</code></pre></div></div>
+
+<p>6、@property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@property = ivar + getter + setter;
+“属性” (property)有两大概念：ivar（实例变量）、getter+setter（存取方法）
+
+“属性” (property)主要作用是封装对象中的数据。 Objective-C 对象通常会把其所需要的数据保存为各种实例变量。实例变量一般通过“存取方法”(access method)来访问。其中，“获取方法” (getter)用于读取变量值，而“设置方法” (setter)用于写入变量值。
+</code></pre></div></div>
+
+<p>7、@property中有哪些属性关键字？/ @property 后面可以有哪些修饰符？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>属性可以拥有的特质分为四类:
+1.原子性--- nonatomic 特质
+2.读/写权限---readwrite(读写)、readonly (只读)
+3.内存管理语义---assign、strong、 weak、unsafe_unretained、copy
+4.方法名---getter=&lt;name&gt; 、setter=&lt;name&gt;
+5.不常用的：nonnull,null_resettable,nullable
+</code></pre></div></div>
+
+<p>8、属性关键字 readwrite，readonly，assign，retain，copy，nonatomic 各是什么作用，在那种情况下用？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：
+1). readwrite 是可读可写特性。需要生成getter方法和setter方法。
+2). readonly 是只读特性。只会生成getter方法，不会生成setter方法，不希望属性在类外改变。
+3). assign 是赋值特性。setter方法将传入参数赋值给实例变量;仅设置变量时,assign用于基本数据类型。
+4). retain(MRC)/strong(ARC) 表示持有特性。setter方法将传入参数先保留，再赋值，传入参数的retaincount会+1。
+5). copy 表示拷贝特性。setter方法将传入对象复制一份，需要完全一份新的变量时。
+6). nonatomic 非原子操作。决定编译器生成的setter和getter方法是否是原子操作，atomic表示多线程安全，一般使用nonatomic，效率高。
+</code></pre></div></div>
+
+<p>9、什么情况使用 weak 关键字，相比 assign 有什么不同？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.在 ARC 中,在有可能出现循环引用的时候,往往要通过让其中一端使用 weak 来解决,比如: delegate 代理属性。
+2.自身已经对它进行一次强引用,没有必要再强引用一次,此时也会使用 weak,自定义 IBOutlet 控件属性一般也使用 weak；当然，也可以使用strong。
+  
+IBOutlet连出来的视图属性为什么可以被设置成weak?
+    因为父控件的subViews数组已经对它有一个强引用。
+  
+不同点：
+assign 可以用非 OC 对象，而 weak 必须用于 OC 对象。
+weak 表明该属性定义了一种“非拥有关系”。在属性所指的对象销毁时，属性值会自动清空(nil)。
+</code></pre></div></div>
+
+<p>10、怎么用 copy 关键字？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>用途：
+1. NSString、NSArray、NSDictionary 等等经常使用copy关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDictionary；
+2. block 也经常使用 copy 关键字。
+  
+说明：
+block 使用 copy 是从 MRC 遗留下来的“传统”,在 MRC 中,方法内部的 block 是在栈区的,使用 copy 可以把它放到堆区.在 ARC 中写不写都行：对于 block 使用 copy 还是 strong 效果是一样的，但写上 copy 也无伤大雅，还能时刻提醒我们：编译器自动对 block 进行了 copy 操作。如果不写 copy ，该类的调用者有可能会忘记或者根本不知道“编译器会自动对 block 进行了 copy 操作”，他们有可能会在调用之前自行拷贝属性值。这种操作多余而低效。
+</code></pre></div></div>
+
+<p>11、用@property声明的 NSString / NSArray / NSDictionary 经常使用 copy 关键字，为什么？如果改用strong关键字，可能造成什么问题？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：用 @property 声明 NSString、NSArray、NSDictionary 经常使用 copy 关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDictionary，他们之间可能进行赋值操作（就是把可变的赋值给不可变的），为确保对象中的字符串值不会无意间变动，应该在设置新属性值时拷贝一份。    
+  
+1. 因为父类指针可以指向子类对象,使用 copy 的目的是为了让本对象的属性不受外界影响,使用 copy 无论给我传入是一个可变对象还是不可对象,我本身持有的就是一个不可变的副本。
+2. 如果我们使用是 strong ,那么这个属性就有可能指向一个可变对象,如果这个可变对象在外部被修改了,那么会影响该属性。     
+   
+//总结：使用copy的目的是，防止把可变类型的对象赋值给不可变类型的对象时，可变类型对象的值发生变化会无意间篡改不可变类型对象原来的值。
+</code></pre></div></div>
+
+<p>12、浅拷贝和深拷贝的区别？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：
+浅拷贝：只复制指向对象的指针，而不复制引用对象本身。
+深拷贝：复制引用对象本身。内存中存在了两份独立对象本身，当修改A时，A_copy不变。
+</code></pre></div></div>
+
+<p>13、系统对象的 copy 与 mutableCopy 方法</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>不管是集合类对象（NSArray、NSDictionary、NSSet ... 之类的对象），还是非集合类对象（NSString, NSNumber ... 之类的对象），接收到copy和mutableCopy消息时，都遵循以下准则：
+1. copy 返回的是不可变对象（immutableObject）；如果用copy返回值调用mutable对象的方法就会crash。
+2. mutableCopy 返回的是可变对象（mutableObject）。
+   
+一、非集合类对象的copy与mutableCopy
+  在非集合类对象中，对不可变对象进行copy操作，是指针复制，mutableCopy操作是内容复制；
+  对可变对象进行copy和mutableCopy都是内容复制。用代码简单表示如下：
+    NSString *str = @"hello word!";
+    NSString *strCopy = [str copy] // 指针复制，strCopy与str的地址一样
+    NSMutableString *strMCopy = [str mutableCopy] // 内容复制，strMCopy与str的地址不一样
+   
+    NSMutableString *mutableStr = [NSMutableString stringWithString: @"hello word!"];
+    NSString *strCopy = [mutableStr copy] // 内容复制
+    NSMutableString *strMCopy = [mutableStr mutableCopy] // 内容复制
+  
+二、集合类对象的copy与mutableCopy (同上)
+  在集合类对象中，对不可变对象进行copy操作，是指针复制，mutableCopy操作是内容复制；
+  对可变对象进行copy和mutableCopy都是内容复制。但是：集合对象的内容复制仅限于对象本身，对集合内的对象元素仍然是指针复制。(即单层内容复制)
+    NSArray *arr = @[@[@"a", @"b"], @[@"c", @"d"];
+    NSArray *copyArr = [arr copy]; // 指针复制
+    NSMutableArray *mCopyArr = [arr mutableCopy]; //单层内容复制
+     
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:[NSMutableString stringWithString:@"a"],@"b",@"c",nil];
+    NSArray *copyArr = [mutableArr copy]; // 单层内容复制
+    NSMutableArray *mCopyArr = [mutableArr mutableCopy]; // 单层内容复制
+      
+【总结一句话】：
+    只有对不可变对象进行copy操作是指针复制（浅复制），其它情况都是内容复制（深复制）！
+    
+  
+1、如果使用strong来修饰NSArray类型的数组，当array的数组被赋值了可变数组对象时，当可变数组改变时，NSArray数组里的对象也会跟着改变。使用copy修饰，在被赋值可变数组时，会生成一个新的不可变数组对象，这样可变数组之后怎样变化，都不会影响NSArray类型的数组对象。   
+  
+2.使用strong来修饰NSMutableArray类型的数组，当数组被赋值了可变数组对象时，当可变数组改变时，NSMutableArray数组里的对象也会跟着改变，这是符合我们预期的。当使用copy修饰后，被赋值后，会生成一个新的不可变数组对象。这样我们还以为它是可变类型的数组，然后使用增删改查，就会crash，也谈不上可以改变数组对象了。   
+  
+3.综上，用property声明NSArray数组时，最好使用copy。用property声明NSMutableArray数组时，最好使用strong。如果使用copy，又self.mArray来赋值，后面增删改查，程序肯定会crash的。使用_.mArray是可以的。   
+   
+</code></pre></div></div>
+<p><img src="https://img.gorpeln.top/blog/20200202203926361.png!gorpeln" alt="20200202203926361" /></p>
+
+<p>14、这个写法会出什么问题：@property (nonatomic, copy) NSMutableArray *arr;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>问题：添加,删除,修改数组内的元素的时候,程序会因为找不到对应的方法而崩溃。
+//如：-[__NSArray removeObjectAtIndex:]: unrecognized selector sent to instance 0x7fcd1bc30460
+// copy后返回的是不可变对象（即 arr 是 NSArray 类型，NSArray 类型对象不能调用 NSMutableArray 类型对象的方法）
+原因：是因为 copy 就是复制一个不可变 NSArray 的对象，不能对 NSArray 对象进行添加/修改。
+</code></pre></div></div>
+
+<p>15、如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>若想令自己所写的对象具有拷贝功能，则需实现 NSCopying 协议。如果自定义的对象分为可变版本与不可变版本，那么就要同时实现 NSCopying 与 NSMutableCopying 协议。
+具体步骤：
+    1. 需声明该类遵从 NSCopying 协议
+    2. 实现 NSCopying 协议的方法。
+        // 该协议只有一个方法: 
+        - (id)copyWithZone:(NSZone *)zone;
+        // 注意：使用 copy 修饰符，调用的是copy方法，其实真正需要实现的是 “copyWithZone” 方法。
+</code></pre></div></div>
+
+<p>16、写一个 setter 方法用于完成 @property (nonatomic, retain) NSString *name，写一个 setter 方法用于完成 @property (nonatomic, copy) NSString *name</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：
+// retain
+- (void)setName:(NSString *)str {
+  [str retain];
+  [_name release];
+  _name = str;
+}
+// copy
+- (void)setName:(NSString *)str {
+  id t = [str copy];
+  [_name release];
+  _name = t;
+}
+</code></pre></div></div>
+
+<p>17、@synthesize 和 @dynamic 分别有什么作用？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@property有两个对应的词，一个是@synthesize，一个是@dynamic。
+如果@synthesize和@dynamic都没有写，那么默认的就是 @synthesize var = _var;
+// 在类的实现代码里通过 @synthesize 语法可以来指定实例变量的名字。(@synthesize var = _newVar;)
+1. @synthesize 的语义是如果你没有手动实现setter方法和getter方法，那么编译器会自动为你加上这两个方法。
+2. @dynamic 告诉编译器，属性的setter与getter方法由用户自己实现，不自动生成（如，@dynamic var）。
+</code></pre></div></div>
+
+<p>18、常见的 Objective-C 的数据类型有那些，和C的基本数据类型有什么区别？如：NSInteger和int</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：
+Objective-C的数据类型有NSString，NSNumber，NSArray，NSMutableArray，NSData等等，这些都是class，创建后便是对象，而C语言的基本数据类型int，只是一定字节的内存空间，用于存放数值;NSInteger是基本数据类型，并不是NSNumber的子类，当然也不是NSObject的子类。NSInteger是基本数据类型Int或者Long的别名(NSInteger的定义typedef long NSInteger)，它的区别在于，NSInteger会根据系统是32位还是64位来决定是本身是int还是long。
+</code></pre></div></div>
+
+<p>19、id 声明的对象有什么特性？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：id 声明的对象具有运行时的特性，即可以指向任意类型的Objcetive-C的对象。
+</code></pre></div></div>
+
+<p>20、Objective-C 如何对内存管理的，说说你的看法和解决方法？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：Objective-C的内存管理主要有三种方式ARC(自动内存计数)、手动内存计数、内存池。
+1). 自动内存计数ARC：由Xcode自动在App编译阶段，在代码中添加内存管理代码。
+2). 手动内存计数MRC：遵循内存谁申请、谁释放；谁添加，谁释放的原则。
+3). 内存释放池Release Pool：把需要释放的内存统一放在一个池子中，当池子被抽干后(drain)，池子中所有的内存空间也被自动释放掉。内存池的释放操作分为自动和手动。自动释放受runloop机制影响。
+</code></pre></div></div>
+
+<p>22、Category（类别）、 Extension（类扩展）和继承的区别</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>分类：
+1、category可以在不获悉、不改变原来代码的情况下往里面添加新的方法，只能添加，不能删除修改。
+2、类别中的方法优先级高于类中的方法。如果类别和原来类中的方法产生名称冲突，则类别将覆盖原来的方法。
+3、类别不能添加类的属性和实例变量。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>类扩展：形式上看：extension 是匿名的category,为一个类增加私有方法,属性或成员变量,并且只能在本文件中被使用，并且新添加的方法一定要予以实现。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>继承：多个类具有相同的实例变量和方法时，考虑用继承  
+1.继承可以在原来父类的成员变量的基础上，添加新的成员变量 
+2.继承可以增加、修改和删除方法。     
+3.继承可以通过使用super对原来方法进行重载。  
+  
+共同点：都是给一个类进行扩展
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>成员变量和属性的区别: 
+   
+声明一个属性:
+@property (nonatomic, strong) NSString *myString;
+  
+  
+声明一个成员变量(实例变量):
+@interface MyViewController:UIViewController
+{
+ NSString *_myString; //实例变量 
+ int count;
+}
+@end  
+  
+综上所述可知：成员变量是定义在｛｝号中的变量，如果变量的数据类型是一个类则称这个变量为实例变量。因为实例变量是成员变量的一种特殊情况，所以实例变量也是类内部使用的，无需与外部接触的变量，这个也就是所谓的类私有变量。而属性变量是用于与其他对象交互的变量。
+  
+实例变量+基本数据类型变量=成员变量  
+   
+我们声明了一个属性,因为现在我们用的编译器已经是LLVM了，所以不再需要为属性声明实例变量了。如果LLVM发现一个没有匹配实例变量的属性，它将为你生成以下划线开头的实例变量_myString，不需要自己手动再去写实例变量。而且也不需要在.m文件中写@synthesize myString；也会自动为你生成setter，getter方法。  
+@synthesize的作用就是让编译器为你自动生成setter与getter方法。那么在.m文件中可以直接的使用_myString实例变量，也可以通过属性self.myString.两者都是一样的,只不过后者是通过调用_myString的setter/getter方法。
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>分类运用场景举例：  
+问题1：  
+  
+项目中已经有上百个页面了，如果一个一个的加，浪费时间不说，以后增加了新页面，还需要添加方法。
+  
+解决方法：  
+  
+我们可以发现页面都继承了UIViewController，想要在每个页面都执行的代码，可以写在这些页面的父类中。我们可以把代码写在UIViewController中；出现问题2。  
+    
+问题2： 
+  
+UIViewController是官方类，我们只能调用期接口，并不能修改他的实现。
+  
+解决方法：使用分类（category）。
+  
+问题3：
+  
+本类是系统的类，这里是UIViewController，我们可以使用分类扩展他的方法，也可以重写他的方法，可是我需要在调用的地方加头文件，所有子类都写头文件和直接在子类写方法没有什么区别，怎么样可以使得不写头文件，子类就能调用我们写的代码呢？
+  
+回答：
+  
+我们可以进行方法交换（这样可以不必在调用的地方增加头文件），从而使得在实现的时候调用重写的方法。
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.分类不能添加属性的实质原因：  
+  
+我们知道在一个类中用@property声明属性，编译器会自动帮我们生成_成员变量和setter/getter，但分类的指针结构体中，根本没有属性列表。所以在分类中用@property声明属性，既无法生成_成员变量也无法生成setter/getter。 因此结论是：我们可以用@property声明属性，编译和运行都会通过，只要不使用程序也不会崩溃。但如果调用了_成员变量和setter/getter方法，报错就在所难免了。
+  
+2.报错的根本原因是使用了系统没有生成的setter/getter方法，我们可以手动添加setter/getter来避免崩溃，完成调用，如uiview扩展。  
+
+</code></pre></div></div>
+<p>23、我们说的OC是动态运行时语言是什么意思？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：主要是将数据类型的确定由编译时，推迟到了运行时。简单来说，运行时机制使我们直到运行时才去确定一个对象的类别，以及调用该类别对象指定方法。
+</code></pre></div></div>
+
+<p>24、为什么我们常见的delegate属性都用是week而不是retain/strong？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：是为了防止delegate两端产生不必要的循环引用。
+@property (nonatomic, weak) id&lt;UITableViewDelegate&gt; delegate;
+</code></pre></div></div>
+
+<p>25、什么时候用delegate，什么时候用Notification？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Delegate(委托模式)：1对1的反向消息通知功能。
+Notification(通知模式)：只想要把消息发送出去，告知某些状态的变化。但是并不关心谁想要知道这个。
+</code></pre></div></div>
+
+<p>26、什么是 KVO 和 KVC？<a href="https://gorpeln.cn/article/15326844120">KVO用法总结</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). KVC(Key-Value-Coding)：键值编码 是一种通过字符串间接访问对象的方式（即给属性赋值）
+    举例说明：
+    stu.name = @"张三" // 点语法给属性赋值
+    [stu setValue:@"张三" forKey:@"name"]; // 通过字符串使用KVC方式给属性赋值
+    stu1.nameLabel.text = @"张三";
+    [stu1 setValue:@"张三" forKey:@"nameLabel.text"]; // 跨层赋值
+    
+2). KVO(key-Value-Observing)：键值观察机制 他提供了观察某一属性变化的方法，极大的简化了代码。
+     KVO只能被KVC触发，包括使用setValue:forKey:方法和点语法。
+   // 通过下方方法为属性添加KVO观察
+   // keyPath就是要观察的属性值
+   // options给你观察键值变化的选择
+   // context方便传输你需要的数据
+   - (void)addObserver:(NSObject *)observer
+                     forKeyPath:(NSString *)keyPath
+                     options:(NSKeyValueObservingOptions)options
+                     context:(nullable void *)context;
+     
+   // 当被观察的属性发送变化时，会自动触发下方方法 
+   // change里存储了一些变化的数据，比如变化前的数据，变化后的数据；如果注册时context不为空，这里context就能接收到。        
+   - (void)observeValueForKeyPath:(NSString *)keyPath
+                              ofObject:(id)object
+                                  change:(NSDictionary *)change
+                                 context:(void *)context{}
+      
+KVC 和 KVO 的 keyPath 可以是属性、实例变量、成员变量。
+</code></pre></div></div>
+
+<p>27、KVC的底层实现？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>当一个对象调用setValue方法时，方法内部会做以下操作：
+1). 检查是否存在相应的key的set方法，如果存在，就调用set方法。
+2). 如果set方法不存在，就会查找与key相同名称并且带下划线的成员变量，如果有，则直接给成员变量属性赋值。
+3). 如果没有找到_key，就会查找相同名称的属性key，如果有就直接赋值。
+4). 如果还没有找到，则调用valueForUndefinedKey:和setValue:forUndefinedKey:方法。
+这些方法的默认实现都是抛出异常，我们可以根据需要重写它们。
+</code></pre></div></div>
+
+<p>28、KVO的底层实现？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>KVO基于runtime机制实现。
+</code></pre></div></div>
+
+<p>29、ViewController生命周期</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>按照执行顺序排列：
+1、alloc：创建对象，分配空间  
+2、init (initWithNibName)：初始化对象，初始化数据  
+3、loadView：加载控制器的view。  
+4、viewDidLoad：视图控制器的view加载完成  
+5、viewWillAppear：视图将出现在屏幕之前，马上这个视图就会被展现在屏幕上了  
+6、viewDidAppear：视图已在屏幕上渲染完成  
+7、viewWillDisappear：视图将被从屏幕上移除之前执行  
+8、viewDidDisappear：视图已经被从屏幕上移除，用户看不到这个视图了  
+</code></pre></div></div>
+
+<p>30、方法和选择器有何不同？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selector是一个方法的名字，方法是一个组合体，包含了名字和实现。
+</code></pre></div></div>
+
+<p>31、你是否接触过OC中的反射机制？简单聊一下概念和使用</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). class反射
+    通过类名的字符串形式实例化对象。
+        Class class = NSClassFromString(@"student"); 
+        Student *stu = [[class alloc] init];
+    将类名变为字符串。
+        Class class =[Student class];
+        NSString *className = NSStringFromClass(class);
+2). SEL的反射
+    通过方法的字符串形式实例化方法。
+        SEL selector = NSSelectorFromString(@"setName");  
+        [stu performSelector:selector withObject:@"Mike"];
+    将方法变成字符串。
+        NSStringFromSelector(@selector*(setName:));
+</code></pre></div></div>
+
+<p>32、调用方法有两种方式：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 直接通过方法名来调用。[person show];
+2). 间接的通过SEL数据来调用 SEL aaa = @selector(show); [person performSelector:aaa];  
+</code></pre></div></div>
+
+<p>33、如何对iOS设备进行性能测试？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答： Profile-&gt; Instruments -&gt;Time Profiler
+</code></pre></div></div>
+
+<p>34、开发项目时你是怎么检查内存泄露？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 静态分析 analyze。
+2). instruments工具里面有个leak可以动态分析。
+</code></pre></div></div>
+
+<p>35、什么是懒加载？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：懒加载就是只在用到的时候才去初始化。也可以理解成延时加载。
+我觉得最好也最简单的一个例子就是tableView中图片的加载显示了, 一个延时加载, 避免内存过高,一个异步加载,避免线程堵塞提高用户体验。
+</code></pre></div></div>
+
+<p>36、类变量的 @public，@protected，@private，@package 声明各有什么含义？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@public 任何地方都能访问;
+@protected 该类和子类中访问,是默认的;
+@private 只能在本类中访问;
+@package 本包内使用,跨包不可以。
+</code></pre></div></div>
+
+<p>37、什么是谓词？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>谓词就是通过NSPredicate给定的逻辑条件作为约束条件,完成对数据的筛选。
+//定义谓词对象,谓词对象中包含了过滤条件(过滤条件比较多)
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"age&lt;%d",30];
+//使用谓词条件过滤数组中的元素,过滤之后返回查询的结果
+NSArray *array = [persons filteredArrayUsingPredicate:predicate];
+</code></pre></div></div>
+
+<p>38、isa指针问题</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>isa：是一个Class 类型的指针. 每个实例对象有个isa的指针,他指向对象的类,而Class里也有个isa的指针, 指向meteClass(元类)。元类保存了类方法的列表。当类方法被调 用时,先会从本身查找类方法的实现,如果没有,元类会向他父类查找该方法。同时注意的是:元类(meteClass)也是类,它也是对象。元类也有isa指针,它的isa指针最终指向的是一个根元类(root meteClass)。根元类的isa指针指向本身,这样形成了一个封闭的内循环。
+</code></pre></div></div>
+
+<p>39、如何访问并修改一个类的私有属性？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 一种是通过KVC获取。
+2). 通过runtime访问并修改私有属性。
+</code></pre></div></div>
+
+<p>40、一个objc对象的isa的指针指向什么？有什么作用？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：指向他的类对象,从而可以找到对象上的方法。  
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>isa指针是和Class同类型的objc_class结构指针，类对象的指针指向其所属的类，即元类。元类中存储着类对象的类方法，当访问某个类的类方法时会通过该isa指针从元类中寻找方法对应的函数指针。
+</code></pre></div></div>
+
+<p>41、下面的代码输出什么？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@implementation Son : Father
+- (id)init {
+   if (self = [super init]) {
+       NSLog(@"%@", NSStringFromClass([self class])); // Son
+       NSLog(@"%@", NSStringFromClass([super class])); // Son
+   }
+   return self;
+}
+@end
+// 解析：
+self 是类的隐藏参数，指向当前调用方法的这个类的实例。
+super是一个Magic Keyword，它本质是一个编译器标示符，和self是指向的同一个消息接收者。
+不同的是：super会告诉编译器，调用class这个方法时，要去父类的方法，而不是本类里的。
+上面的例子不管调用[self class]还是[super class]，接受消息的对象都是当前 Son *obj 这个对象。
+</code></pre></div></div>
+
+<p>42、写一个完整的代理，包括声明、实现</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+ *  A向B传递信息 就在A中声明delegate 在B中挂上
+ */
+
+
+//  a.h
+/**
+ *  下面是声明协议的固定格式，AViewControllerDelegate是协议的名称，因为是代理协议，名称格式为：类名+Delegate
+ */
+@protocol AViewControllerDelegate &lt;NSObject&gt;
+- (void)doSomething;
+@end
+
+/**
+ *  delegate 是AViewController类的一个属性，weak 关键字是为了避免循环引用，&lt;AViewControllerDelegate&gt;表示遵守AViewControllerDelegate协议
+ *  更加直白点：A控制器需要其他控制器或视图接收他完成某件事情的信号去做一些事情，具体的控制器或视图是谁，A控制器不关心，取代号是delegate
+ */
+@property (nonatomic, weak) id &lt;AViewControllerDelegate&gt; delegate;
+
+
+//a.m
+
+/**
+ *  下面这句是判断一下delegate是否实现了doSomething方法，如果delegate没有实现
+ *  直接[self.delegate doSomethingAftercaiZuohaole];
+ */
+
+/**
+ *  传值
+ *  if ([_delegate respondsToSelector:@selector(sendValue:)]) { // 如果协议响应
+ *  了sendValue:方法
+ *  [_delegate sendValue:_textField.text]; // 通知执行协议方法
+ *  }
+ */
+
+if ([self.delegate respondsToSelector:@selector(doSomething)]) {
+    [self.delegate doSomething];
+}
+
+// /////////////////////////////////////////////////////////////////////
+
+//b.m
+
+&lt;AViewControllerDelegate&gt;
+
+- (void)methodOfBViewController{
+    
+    AViewController *aViewController = [[AViewController alloc] init];
+    aViewController.delegate = self;//说明A控制器充当代理的角色，负责接收A动作完成的信号。
+}
+//代理方法
+- (void)doSomething{
+    NSLog(@"delegate 回调");
+}
+
+</code></pre></div></div>
+
+<p>43、isKindOfClass、isMemberOfClass、selector作用分别是什么</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>isKindOfClass：判断是否是某个类型或者子类的实例。
+isMemberOfClass：判断是否是某个类型的实例，必须完全匹配。
+selector：通过方法名，获取在内存中的函数的入口地址。
+</code></pre></div></div>
+
+<p>44、delegate 和 notification 的区别</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 二者都用于传递消息，不同之处主要在于一个是一对一的，另一个是一对多的。
+2). notification通过维护一个array，实现一对多消息的转发。
+3). delegate需要两者之间必须建立联系，不然没法调用代理的方法；notification不需要两者之间有联系。
+</code></pre></div></div>
+
+<p>45、什么是block？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>闭包（block）：闭包就是获取其它函数局部变量的匿名函数。
+</code></pre></div></div>
+
+<p>46、block反向传值</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在控制器间传值可以使用代理或者block，使用block相对来说简洁。
+    
+在前一个控制器的touchesBegan:方法内实现如下代码。
+   
+  // OneViewController.m
+  TwoViewController *twoVC = [[TwoViewController alloc] init];
+  twoVC.valueBlcok = ^(NSString *str) {
+    NSLog(@"OneViewController拿到值：%@", str); 
+  };
+  [self presentViewController:twoVC animated:YES completion:nil];
+   
+  // TwoViewController.h   （在.h文件中声明一个block属性）
+  @property (nonatomic ,strong) void(^valueBlcok)(NSString *str);
+   
+  // TwoViewController.m   （在.m文件中实现方法）
+- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event {
+    // 传值:调用block
+    if (_valueBlcok) {
+        _valueBlcok(@"123456");
+    }
+}
+</code></pre></div></div>
+
+<p>47、block的注意点</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 在block内部使用外部指针且会造成循环引用情况下，需要用__week修饰外部指针：
+    __weak typeof(self) weakSelf = self; 
+2). 在block内部如果调用了延时函数还使用弱指针会取不到该指针，因为已经被销毁了，需要在block内部再将弱指针重新强引用一下。
+    __strong typeof(self) strongSelf = weakSelf;
+3). 如果需要在block内部改变外部栈区变量的话，需要在用__block修饰外部变量。
+</code></pre></div></div>
+
+<p>48、BAD_ACCESS在什么情况下出现？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：这种问题在开发时经常遇到。原因是访问了野指针，比如访问已经释放对象的成员变量或者发消息、死循环等。
+</code></pre></div></div>
+
+<p>49、lldb（gdb）常用的控制台调试命令？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). p 输出基本类型。是打印命令，需要指定类型。是print的简写
+    p (int)[[[self view] subviews] count]
+2). po 打印对象，会调用对象description方法。是print-object的简写
+    po [self view]
+3). expr 可以在调试时动态执行指定表达式，并将结果打印出来。常用于在调试过程中修改变量的值。
+4). bt：打印调用堆栈，是thread backtrace的简写，加all可打印所有thread的堆栈
+5). br l：是breakpoint list的简写
+</code></pre></div></div>
+
+<p>50、你一般是怎么用Instruments的？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instruments里面工具很多，常用：
+1). Time Profiler: 性能分析，帮助我们分析代码(方法)的执行时间，找出导致程序变慢的原因
+2). Zombies：检查是否访问了僵尸对象，但是这个工具只能从上往下检查，不智能。“僵尸”对象是指在被释放了之后再被访问的对象，事实上已经不存在了
+3). Allocations：用来检查内存，写算法的那批人也用这个来检查。
+4). Leaks：检查内存，看是否有内存泄露。
+</code></pre></div></div>
+
+<p>51、iOS中常用的数据存储方式有哪些？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>数据存储有四种方案：NSUserDefault、KeyChain、file、DB。
+    其中File有三种方式：plist、Archive（归档）
+    DB包括：SQLite、FMDB、CoreData
+</code></pre></div></div>
+<p><img src="https://img.gorpeln.top/blog/20200202203926362.png!gorpeln" alt="20200202203926362" /></p>
+
+<p>52、iOS的沙盒目录结构是怎样的？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>沙盒结构：
+1). Application：存放程序源文件，上架前经过数字签名，上架后不可修改。
+2). Documents：常用目录，iCloud备份目录，存放数据。（这里不能存缓存文件，否则上架不被通过）
+3). Library：
+        Caches：存放体积大又不需要备份的数据。(常用的缓存路径)
+        Preference：设置目录，iCloud会备份设置信息。
+4). tmp：存放临时文件，不会被备份，而且这个文件下的数据有可能随时被清除的可能。
+</code></pre></div></div>
+
+<p>53、iOS多线程技术有哪几种方式？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：pthread、NSThread、GCD、NSOperation
+</code></pre></div></div>
+
+<p>54、GCD 与 NSOperation 的区别：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GCD 和 NSOperation 都是用于实现多线程：
+    GCD 基于C语言的底层API，GCD主要与block结合使用，代码简洁高效。
+    NSOperation 属于Objective-C类，是基于GCD更高一层的封装。复杂任务一般用NSOperation实现。
+</code></pre></div></div>
+
+<p>55、写出使用GCD方式从子线程回到主线程的方法代码</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：dispatch_sync(dispatch_get_main_queue(), ^{ });
+</code></pre></div></div>
+
+<p>56、如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用Dispatch Group追加block到Global Group Queue,这些block如果全部执行完毕，就会执行Main Dispatch Queue中的结束处理的block。
+// 创建队列组
+dispatch_group_t group = dispatch_group_create();
+// 获取全局并发队列
+dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+dispatch_group_async(group, queue, ^{ /*加载图片1 */ });
+dispatch_group_async(group, queue, ^{ /*加载图片2 */ });
+dispatch_group_async(group, queue, ^{ /*加载图片3 */ }); 
+// 当并发队列组中的任务执行完毕后才会执行这里的代码
+dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        // 合并图片
+});
+</code></pre></div></div>
+
+<p>57、dispatch_barrier_async（栅栏函数）的作用是什么？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>函数定义：dispatch_barrier_async(dispatch_queue_t queue, dispatch_block_t block);
+作用：
+    1.在它前面的任务执行结束后它才执行，它后面的任务要等它执行完成后才会开始执行。
+    2.避免数据竞争
+   
+// 1.创建并发队列
+dispatch_queue_t queue = dispatch_queue_create("myQueue", DISPATCH_QUEUE_CONCURRENT);
+// 2.向队列中添加任务
+dispatch_async(queue, ^{  // 1.2是并行的
+    NSLog(@"任务1, %@",[NSThread currentThread]);
+});
+dispatch_async(queue, ^{
+    NSLog(@"任务2, %@",[NSThread currentThread]);
+});
+   
+dispatch_barrier_async(queue, ^{
+    NSLog(@"任务 barrier, %@", [NSThread currentThread]);
+});
+   
+dispatch_async(queue, ^{   // 这两个是同时执行的
+    NSLog(@"任务3, %@",[NSThread currentThread]);
+});
+dispatch_async(queue, ^{
+    NSLog(@"任务4, %@",[NSThread currentThread]);
+});
+  
+// 输出结果: 任务1 任务2 ——》 任务 barrier ——》任务3 任务4 
+// 其中的任务1与任务2，任务3与任务4 由于是并行处理先后顺序不定。
+</code></pre></div></div>
+
+<p>58、以下代码运行结果如何？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSLog(@"1");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+}
+// 只输出：1。（主线程死锁）
+</code></pre></div></div>
+
+<p>59、什么是 RunLoop</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>从字面上讲就是运行循环，它内部就是do-while循环，在这个循环内部不断地处理各种任务。
+一个线程对应一个RunLoop，基本作用就是保持程序的持续运行，处理app中的各种事件。通过runloop，有事运行，没事就休息，可以节省cpu资源，提高程序性能。
+   
+主线程的run loop默认是启动的。iOS的应用程序里面，程序启动后会有一个如下的main()函数
+int main(int argc, char * argv[]) {
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
+</code></pre></div></div>
+
+<p>60、什么是 Runtime</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Runtime又叫运行时，是一套底层的C语言API，其为iOS内部的核心之一，我们平时编写的OC代码，底层都是基于它来实现的。
+</code></pre></div></div>
+
+<p>61、Runtime实现的机制是什么，怎么用，一般用于干嘛？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 使用时需要导入的头文件 &lt;objc/message.h&gt; &lt;objc/runtime.h&gt;
+2). Runtime 运行时机制，它是一套C语言库。
+3). 实际上我们编写的所有OC代码，最终都是转成了runtime库的东西。
+    比如：
+        类转成了 Runtime 库里面的结构体等数据类型，
+        方法转成了 Runtime 库里面的C语言函数，
+        平时调方法都是转成了 objc_msgSend 函数（所以说OC有个消息发送机制）
+    // OC是动态语言，每个方法在运行时会被动态转为消息发送，即：objc_msgSend(receiver, selector)。
+    // [stu show];  在objc动态编译时，会被转意为：objc_msgSend(stu, @selector(show));    
+4). 因此，可以说 Runtime 是OC的底层实现，是OC的幕后执行者。
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>有了Runtime库，能做什么事情呢？
+Runtime库里面包含了跟类、成员变量、方法相关的API。
+比如：
+（1）获取类里面的所有成员变量。
+（2）为类动态添加成员变量。
+（3）动态改变类的方法实现。
+（4）为类动态添加新的方法等。
+因此，有了Runtime，想怎么改就怎么改。
+</code></pre></div></div>
+
+<p>62、什么是 Method Swizzle（黑魔法），什么情况下会使用？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1). 在没有一个类的实现源码的情况下，想改变其中一个方法的实现，除了继承它重写、和借助类别重名方法暴力抢先之外，还有更加灵活的方法 Method Swizzle。
+2). Method Swizzle 指的是改变一个已存在的选择器对应的实现的过程。OC中方法的调用能够在运行时通过改变，通过改变类的调度表中选择器到最终函数间的映射关系。
+3). 在OC中调用一个方法，其实是向一个对象发送消息，查找消息的唯一依据是selector的名字。利用OC的动态特性，可以实现在运行时偷换selector对应的方法实现。
+4). 每个类都有一个方法列表，存放着selector的名字和方法实现的映射关系。IMP有点类似函数指针，指向具体的方法实现。
+5). 我们可以利用 method_exchangeImplementations 来交换2个方法中的IMP。
+6). 我们可以利用 class_replaceMethod 来修改类。
+7). 我们可以利用 method_setImplementation 来直接设置某个方法的IMP。
+8). 归根结底，都是偷换了selector的IMP。
+</code></pre></div></div>
+<p><a href="https://www.jianshu.com/p/54d458e93f29">https://www.jianshu.com/p/54d458e93f29</a></p>
+
+<p>63、_objc_msgForward 函数是做什么的，直接调用它将会发生什么？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：_objc_msgForward是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，_objc_msgForward会尝试做消息转发。
+</code></pre></div></div>
+
+<p>64、什么是 TCP / UDP ?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TCP：传输控制协议。
+UDP：用户数据协议。
+  
+TCP 是面向连接的，建立连接需要经历三次握手，是可靠的传输层协议。
+UDP 是面向无连接的，数据传输是不可靠的，它只管发，不管收不收得到。
+简单的说，TCP注重数据安全，而UDP数据传输快点，但安全性一般。
+</code></pre></div></div>
+
+<p>65、通信底层原理（OSI七层模型）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OSI采用了分层的结构化技术，共分七层：
+    物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。
+</code></pre></div></div>
+
+<p>66、介绍一下XMPP？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XMPP是一种以XML为基础的开放式实时通信协议。
+简单的说，XMPP就是一种协议，一种规定。就是说，在网络上传东西，XMM就是规定你上传大小的格式。
+</code></pre></div></div>
+
+<p>67、OC中创建线程的方法是什么？如果在主线程中执行代码，方法是什么？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 创建线程的方法
+- [NSThread detachNewThreadSelector:nil toTarget:nil withObject:nil]
+- [self performSelectorInBackground:nil withObject:nil];
+- [[NSThread alloc] initWithTarget:nil selector:nil object:nil];
+- dispatch_async(dispatch_get_global_queue(0, 0), ^{});
+- [[NSOperationQueue new] addOperation:nil];
+   
+// 主线程中执行代码的方法
+- [self performSelectorOnMainThread:nil withObject:nil waitUntilDone:YES];
+- dispatch_async(dispatch_get_main_queue(), ^{});
+- [[NSOperationQueue mainQueue] addOperation:nil];
+</code></pre></div></div>
+
+<p>68、tableView的重用机制？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：UITableView 通过重用单元格来达到节省内存的目的: 通过为每个单元格指定一个重用标识符，即指定了单元格的种类,当屏幕上的单元格滑出屏幕时，系统会把这个单元格添加到重用队列中，等待被重用，当有新单元格从屏幕外滑入屏幕内时，从重用队列中找看有没有可以重用的单元格，如果有，就拿过来用，如果没有就创建一个来使用。
+</code></pre></div></div>
+
+<p>69、用伪代码写一个线程安全的单例模式</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 跟上面的方法实现有一点不同
++ (instancetype)sharedManager {
+    static GPSharedManager *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+          // 要使用self来调用
+        sharedManager = [[GPSharedManager alloc] init];
+    });
+    return sharedManager;
+}
+</code></pre></div></div>
+
+<p>70、如何实现视图的变形?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：通过修改view的 transform 属性即可。
+</code></pre></div></div>
+
+<p>71、在手势对象基础类UIGestureRecognizer的常用子类手势类型中哪两个手势发生后，响应只会执行一次？</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>答：UITapGestureRecognizer,UISwipeGestureRecognizer是一次性手势,手势发生后,响应只会执行一次。
+</code></pre></div></div>
+
+<p>72、字符串常用方法：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NSString *str = @"abc*123";
+NSArray *arr = [str componentsSeparatedByString:@"*"]; //以目标字符串把原字符串分割成两部分，存到数组中。@[@"abc", @"123"];
+</code></pre></div></div>
+
+<p>73、如何高性能的给 UIImageView 加个圆角?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>不好的解决方案：使用下面的方式会强制Core Animation提前渲染屏幕的离屏绘制, 而离屏绘制就会给性能带来负面影响，会有卡顿的现象出现。
+   
+self.view.layer.cornerRadius = 5.0f;
+self.view.layer.masksToBounds = YES;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>正确的解决方案：使用绘图技术
+   
+- (UIImage *)circleImage {
+    // NO代表透明
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    // 获得上下文
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    // 添加一个圆
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGContextAddEllipseInRect(ctx, rect);
+    // 裁剪
+    CGContextClip(ctx);
+    // 将图片画上去
+    [self drawInRect:rect];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    // 关闭上下文
+    UIGraphicsEndImageContext();
+    return image;
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>还有一种方案：使用了贝塞尔曲线"切割"个这个图片, 给UIImageView 添加了的圆角，其实也是通过绘图技术来实现的。
+  
+UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+imageView.center = CGPointMake(200, 300);
+UIImage *anotherImage = [UIImage imageNamed:@"image"];
+UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
+[[UIBezierPath bezierPathWithRoundedRect:imageView.bounds
+                       cornerRadius:50] addClip];
+[anotherImage drawInRect:imageView.bounds];
+imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();
+[self.view addSubview:imageView];
+</code></pre></div></div>
+
+<p>74、你是怎么封装一个view的</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1）. 可以通过纯代码或者xib的方式来封装子控件
+2）. 建立一个跟view相关的模型，然后将模型数据传给view，通过模型上的数据给view的子控件赋值
+    
+/**
+ *  纯代码初始化控件时一定会走这个方法
+ */
+- (instancetype)initWithFrame:(CGRect)frame {
+    if(self = [super initWithFrame:frame]) {
+        [self setupUI];
+    }
+    return self;
+}
+    
+/**
+ *  通过xib初始化控件时一定会走这个方法
+ */
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if(self = [super initWithCoder:aDecoder]) {
+        [self setupUI];
+    }
+    return self;
+}
+    
+- (void)setupUI {
+    // 初始化代码
+}
+</code></pre></div></div>
+
+<p>75、HTTP协议中 POST 方法和 GET 方法有那些区别?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. GET用于向服务器请求数据，POST用于提交数据
+2. GET请求，请求参数拼接形式暴露在地址栏，而POST请求参数则放在请求体里面，因此GET请求不适合用于验证密码等操作
+3. GET请求的URL有长度限制，POST请求不会有长度限制
+</code></pre></div></div>
+
+<p>76、请简单的介绍下APNS发送系统消息的机制</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>APNS优势：杜绝了类似安卓那种为了接受通知不停在后台唤醒程序保持长连接的行为，由iOS系统和APNS进行长连接替代。
+APNS的原理：
+    1). 应用在通知中心注册，由iOS系统向APNS请求返回设备令牌(device Token)
+    2). 应用程序接收到设备令牌并发送给自己的后台服务器
+    3). 服务器把要推送的内容和设备发送给APNS
+    4). APNS根据设备令牌找到设备，再由iOS根据APPID把推送内容展示
+</code></pre></div></div>
+<p><img src="https://img.gorpeln.top/blog/20200202203926363.png!gorpeln" alt="20200202203926363" /></p>
+
+<p>77、iOS之事件的传递和响应机制</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>响应者链的事件传递过程：  
+  
+首先看initial view （初始view、当前view）能否处理这个事件，如果不能则会将事件传递给其上级视图（inital view的superView）；如果上级视图仍然无法处理则会继续往上传递；一直传递到视图控制器view controller，首先判断视图控制器的根视图view是否能处理此事件；如果不能则接着判断该视图控制器能否处理此事件，如果还是不能则继续向上传 递；（对于第二个图视图控制器本身还在另一个视图控制器中，则继续交给父视图控制器的根视图，如果根视图不能处理则交给父视图控制器处理）；一直到 window，如果window还是不能处理此事件则继续交给application处理，如果最后application还是不能处理此事件则将其丢弃
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>事件处理的整个流程总结：  
+  
+　　1、触摸屏幕产生触摸事件后，触摸事件会被添加到由UIApplication管理的事件队列中（即，首先接收到事件的是UIApplication）。
+　　2、UIApplication会从事件队列中取出最前面的事件，把事件传递给应用程序的主窗口（keyWindow）。
+　　3、主窗口会在视图层次结构中找到一个最合适的视图来处理触摸事件。（至此，第一步已完成)
+　　4、最合适的view会调用自己的touches方法处理事件
+　　5、touches默认做法是把事件顺着响应者链条向上抛。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>如何做到一个事件多个对象处理：   
+     
+因为系统默认做法是把事件上抛给父控件，所以可以通过重写自己的touches方法和父控件的touches方法来达到一个事件多个对象处理的目的。
+</code></pre></div></div>
+
+<p>78、UIView 􏰸􏰸和 CALayer 􏰘􏷻􏵥 区别</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1）CALayer 无法响应用户事件。UTView 和 CALayer 的最明显区别在于它们的可交互性，即 UIView 可以响应用户事件，而 CALayer 不可以，UTView 是继承自 UIResponder 的，决定了 UTView 类及其子类能够通过响应链（iOS 通过视图层级关系来传递触摸事件）接收并响应用户事件。而 CALayer 直接继承于 NSObject 类，所以它不清楚具体的响应链，也就无法响应用户事件。
+2）分工不同。UIView 类侧重于对显示内容的管理和整体布局，而 CALayer 侧重于显示内容的绘制、显示和动画。
+3）所属框架不同。UTView 类是属于 UIKit.fiamework 框架的，UIKit框架主要就是用来构建用户界面的。CALayer 类是属于 QuartzCore.famework 框架的，而且 CALayer 是作为一个低级的，可以承载绘制内容的底层对象出现在该框架的。
+</code></pre></div></div>
+
+<p>79、冒泡排序</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    NSMutableArray * arr = [NSMutableArray arrayWithObjects:@16,@1,@2,@9,@7,@12,@5,@3,@8,@13,@10, nil];;
+    for (int i = 0; i  &lt; arr.count; i++) {
+        for (int j = 0; j &lt; arr.count - i - 1; j++) {
+            if ([arr[j] intValue] &gt; [arr[j+1] intValue]) {
+                [arr exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+            }
+        }
+    }
+    
+    for (int i = 0 ; i &lt; arr.count; i++) {
+        for (int j = i+1; j &lt; arr.count; j++) {
+            if ([arr[i] intValue] &gt; [arr[j] intValue]) {
+                [arr exchangeObjectAtIndex:i withObjectAtIndex:j];
+            }
+        }
+    }
+    DLog(@"=====%@",arr);
+
+</code></pre></div></div>
+<p>80、APP启动
+<img src="https://img.gorpeln.top/blog/20200202203926364.jpeg!gorpeln" alt="20200202203926364" /></p>
+
+<p><img src="https://img.gorpeln.top/blog/20200202203926365.png!gorpeln" alt="20200202203926365" /></p>
+
+<p>81、UITableView 如何优化</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1、正确使用 reuseIdentifier 来重用 Cells  
+2、提前计算并缓存好高度(布局)，因为 heightForRowAtIndexPath:是调
+用最频繁的方法  
+3、尽量少用 addView 给 Cell 动态添加 View，可以初始化时就添加，然 后通过 hide 来控制是否显示  
+4、大量图片展示，异步加载  
+5、尽量少用或不用透明图层  
+6、减少 subviews 的数量  
+7、复杂界面，异步绘制
+</code></pre></div></div>
+
+
+        
+    </article>
+</div>
+<div class="copyright">
+    
+    <div class="custom-font">最后编辑于：2024-09-12</div>
+    
+    <div class="custom-font">本文链接：<a href="/ios/02" class='articleLink'>https://gorpeln.top/ios/02</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+</div>
+</div>
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/ios/01" title="杂记一" class="custom-font" target="_blank">杂记一</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/ios/03" title="杂记三" class="custom-font" target="_blank">杂记三</a>
+    </div>
+    
+</div>
+<div class="livere waline-box">
+    <div id="waline"></div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 右边栏 二维码、主题、返回顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+      <div class="themeModel" id="themeModel"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/ios/02')"></div>
+      <div class="qrcodeImg" id="qrcode"></div>
+      <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
+    </div>
+
+    <!-- search  搜索 -->
+    <div class="cb-search-tool" id="cb-close-btn">
+        <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签" />
+    </div>
+    <!-- 手机菜单 mune -->
+     <header class="site-header-menu">
+  <ul class="menuNav">
+    <li class="menuBtn" style="border-top: 0 solid #aaa">
+      <i class="fas fa-stream fa-fw" style="color: white; font-size: 14px; font-weight: 400"></i>
+      <ul class="sub-nav">
+        <li style="border-radius: 8px 8px 0 0"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+        <li><a href="/nav"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+        <li><div id="themeModelOfmobile"><i class="fas fa-moon fa-fw"></i>黑夜</div></li>
+        <li><a href="" class="safe-item-auto-load"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+        <li style="border-radius: 0 0 8px 8px"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
+ 
+    <!-- footer -->
+    <footer class="site-footer">
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)">隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本</div>
+    <div class="footerDes">
+        <div class="post-margin">
+            ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="/assets/img/footer_beian.png" style="height: 16px" class="footerImg" />京ICP备2021024484号-2
+            </a>
+            ·
+            <a target=" _blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="/assets/img/footer_gonganbeian.png" style="height: 16px" class="footerImg" />京公网安备11011202004694号
+            </a>
+            ·
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                <img src="/assets/img/footer_youpaiyun.png" style="height: 22px" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+            ·
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
+            </a>
+            ·
+            <span>4.9.102</span>
+        </div>
+    </div>
+</footer>
+    
+    
+</body>
+
+<!-- js_include -->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
+<!-- 目录 -->
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- 安全跳转页面 -->
+<script type="text/javascript" src="/assets/js/safe.js"></script>
+<!--  樱花背景 -->
+<script type="text/javascript" src="/assets/js/sakura.js"></script>
+<!--  丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
+<!-- search 搜索 -->
+<script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
+<!-- 动态显示网站运行时间 -->
+<script>
+    document.getElementById('currentYear') && (document.getElementById('currentYear').textContent = new Date().getFullYear());
+
+    function siteTime(startDateStr) {
+        const now = new Date();
+
+        // 解析起始时间
+        const start = new Date(startDateStr);
+
+        // 检查是否是合法的时间格式
+        if (isNaN(start.getTime())) {
+            console.error("Invalid start date:", startDateStr);
+            document.getElementById('htmer_time').innerHTML = "时间计算出错，请检查配置。";
+            return;
+        }
+
+        // 计算年份差
+        let diffYears = now.getFullYear() - start.getFullYear();
+
+        // 构造今年对应的纪念日时间点（精确到小时/分/秒）
+        const anniversaryThisYear = new Date(start);
+        anniversaryThisYear.setFullYear(now.getFullYear());
+
+        // 如果还没到今年的纪念日时间点，则减去一年
+        if (now < anniversaryThisYear) {
+            diffYears--;
+        }
+
+        // 根据年份差确定要比较的起始周年时间
+        const anniversaryTargetYear = new Date(start);
+        anniversaryTargetYear.setFullYear(now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1));
+
+        // 计算周年之后的时间差（毫秒）
+        const timeDiff = now - anniversaryTargetYear;
+
+        // 时间单位（毫秒）
+        const daysInMs = 1000 * 60 * 60 * 24;
+        const hoursInMs = 1000 * 60 * 60;
+        const minutesInMs = 1000 * 60;
+
+        // 计算天、小时、分、秒
+        const diffDays = Math.floor(timeDiff / daysInMs);
+        const diffHours = Math.floor((timeDiff % daysInMs) / hoursInMs);
+        const diffMinutes = Math.floor((timeDiff % hoursInMs) / minutesInMs);
+        const diffSeconds = Math.floor((timeDiff % minutesInMs) / 1000);
+
+        // 更新页面内容
+        document.getElementById('htmer_time').innerHTML =
+            `本站已安全运行：${diffYears} 年 ${diffDays} 天 ${diffHours} 时 ${diffMinutes} 分 ${diffSeconds} 秒&nbsp;&nbsp;`;
+
+        // 每秒更新一次
+        setTimeout(() => siteTime(startDateStr), 1000);
+    }   
+
+    const startDate = "2015-08-23 09:00:00 +0800"; 
+    siteTime(startDate);
+</script>
+<!-- 网站运行时间事件 -->
+<script>
+    function over(obj) {
+        obj.innerHTML ="隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {}
+
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = "/record";
+    }
+</script>
+<!-- 控制台输出 -->
+<script>
+    var HoldLog = console.log;
+    console.log = function() {};
+    let nowDate = new Date();
+    queueMicrotask(() => {
+        const Log = function() {
+            HoldLog.apply(console, arguments);
+        };
+        console.log = Log;
+
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客名称%c gorpeln的个人博客 - gorpeln",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客链接%c https://gorpeln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c联系方式%c help@gor*eln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博主寄语%c 趁年轻，做自己想做的！",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c版本号 %c V4.9.102",
+                "",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+
+        const loadTime = Math.round(performance.now() * 100) / 100 / 1000;
+        const formattedLoadTime = loadTime.toFixed(2) + "s";
+        setTimeout(
+            Log.bind(
+                console,
+                `%c页面加载消耗了: %c${formattedLoadTime}`,
+                "",
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+            ),
+        );
+
+        const hitKey = "hit";
+        let hitCount = localStorage.getItem(hitKey) ?
+            parseInt(localStorage.getItem(hitKey)) :
+            0;
+        hitCount++;
+        localStorage.setItem(hitKey, hitCount);
+        setTimeout(
+            Log.bind(
+                console,
+                `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+                "",
+            ),
+        );
+        setTimeout(
+            console.warn.bind(
+                console,
+                "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
+                "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
+                "",
+            ),
+        );
+    });
+</script>
+<!-- 自定义快捷键 -->
+<script>
+    const SCROLL_OFFSET = 500;          // 定义滚动距离底部的偏移量
+    const SCROLL_DURATION = 500;        // 定义滚动动画的持续时间
+    const DOUBLE_CLICK_THRESHOLD = 300; // 定义双击的时间阈值（毫秒）
+
+    // 创建一个映射，用于存储按键与目标操作之间的关系
+    const keyToActionMap = {
+        p: () => window.open("/p", "_blank"),                   // 双击p在新标签页打开p页面
+        t: () => window.open("/tool", "_blank"),                // 双击t在新标签页打开tool页面
+        f: () => window.open("/article/14402966023", "_blank"), // 双击打开 Hello World 格式 页面
+        h: () => window.open("/", "_blank"),                    // 双击打开 首页
+        ArrowDown: scrollToBottom,                              // 双击向下箭头滑动页面最底部
+        ArrowUp: scrollToTop,                                   // 双击向上箭头滑动页面最顶部部
+    };
+
+    // 存储上一次按键的时间戳和按键标识符
+    let lastKeyPress = {};
+
+    document.addEventListener("keydown", function(event) {
+        const keyPressed = event.key;
+        const lowerCaseKey = keyPressed.toLowerCase();
+        const currentKey = keyToActionMap.hasOwnProperty(keyPressed) ?
+            keyPressed :
+            lowerCaseKey;
+
+        if (keyToActionMap.hasOwnProperty(currentKey)) {
+            const now = Date.now();
+            const previousTime = lastKeyPress[currentKey] || 0;
+            const timeDifference = now - previousTime;
+
+            if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+                keyToActionMap[currentKey]();
+                lastKeyPress[currentKey] = 0;
+            } else {
+                lastKeyPress[currentKey] = now;
+            }
+        }
+    });
+
+    // 定义滚动到页面底部的函数
+    function scrollToBottom() {
+        const start = window.scrollY;
+        const end = document.body.scrollHeight - SCROLL_OFFSET;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+
+    // 定义滚动到页面顶部的函数
+    function scrollToTop() {
+        const start = window.scrollY;
+        const end = 0;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+</script>
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+<!-- 网站分析 -->
+<!-- 百度统计 -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ec1e65b309b4205d33b203f2c26a184f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+  (function(){
+  var el = document.createElement("script");
+  el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?1e00c552c856203cd30ebe459d7b7f2f0fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+  el.id = "ttzz";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(el, s);
+  })(window)
+</script>
+<!-- 防镜像 -->
+
+<script>
+   function _0x17aa(){var _0x39ef1b=['left','removeChild','9999','alert-message','flexWrap','port','center','div','appendChild','200FeByLO','className','YmxvZy4yMDIwOTAueHl6','30px','569272slRPwH','parentNode','393071MMVoWd','overflow','add','replace','includes','0.1','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','alignItems','width','transform','whiteSpace','hostname','height','margin','567541SsolIH','YmxvZy5nb3JwZWxuLnRvcA==','location','fontSize','background','position','top','30MixXDM','80px','100%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','hidden','style','zIndex','classList','d3d3LmdvcnBlbG4udG9w','flex','808318iwlhfR','none','Z29ycGVsbi50b3A=','110%','body','25mwMKir','2799NfnTJp','justifyContent','color','opacity','753306DnApFK','MTI3LjAuMC4xOjQwMDA=','fade-out','3352TvwIlh','-5%','nowrap','248372ThEblC'];_0x17aa=function(){return _0x39ef1b;};return _0x17aa();}function _0x50c9(_0x3af4d2,_0x112676){var _0x17aa91=_0x17aa();return _0x50c9=function(_0x50c9ec,_0x458073){_0x50c9ec=_0x50c9ec-0x159;var _0x43c326=_0x17aa91[_0x50c9ec];return _0x43c326;},_0x50c9(_0x3af4d2,_0x112676);}(function(_0xda0fba,_0x406113){var _0x2fc09c=_0x50c9,_0x4fbebc=_0xda0fba();while(!![]){try{var _0x472f1b=parseInt(_0x2fc09c(0x161))/0x1+parseInt(_0x2fc09c(0x172))/0x2+parseInt(_0x2fc09c(0x17c))/0x3+parseInt(_0x2fc09c(0x182))/0x4*(parseInt(_0x2fc09c(0x177))/0x5)+-parseInt(_0x2fc09c(0x168))/0x6*(parseInt(_0x2fc09c(0x192))/0x7)+-parseInt(_0x2fc09c(0x17f))/0x8*(-parseInt(_0x2fc09c(0x178))/0x9)+-parseInt(_0x2fc09c(0x18c))/0xa*(parseInt(_0x2fc09c(0x190))/0xb);if(_0x472f1b===_0x406113)break;else _0x4fbebc['push'](_0x4fbebc['shift']());}catch(_0x88247d){_0x4fbebc['push'](_0x4fbebc['shift']());}}}(_0x17aa,0x54e7b),(function(){var _0x12b93b=_0x50c9,_0x190ee1=[_0x12b93b(0x174),_0x12b93b(0x170),_0x12b93b(0x17d),_0x12b93b(0x18e),_0x12b93b(0x162)],_0x5561ac=_0x12b93b(0x16b),_0x409513=document[_0x12b93b(0x163)][_0x12b93b(0x15e)]+(document[_0x12b93b(0x163)][_0x12b93b(0x188)]?':'+document[_0x12b93b(0x163)][_0x12b93b(0x188)]:'');function _0x17249e(_0x557012){var _0x38371b=_0x12b93b,_0x3f8aba=document['createElement'](_0x38371b(0x18a));_0x3f8aba[_0x38371b(0x16d)]['pointerEvents']=_0x38371b(0x173),_0x3f8aba['style'][_0x38371b(0x166)]='fixed',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x167)]='0',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x183)]=_0x38371b(0x180),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15b)]=_0x38371b(0x175),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15f)]=_0x38371b(0x16a),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x16e)]=_0x38371b(0x185),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x17b)]=_0x38371b(0x197),_0x3f8aba['style'][_0x38371b(0x165)]='transparent',_0x3f8aba['style'][_0x38371b(0x193)]=_0x38371b(0x16c),_0x3f8aba['style']['display']=_0x38371b(0x171),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x179)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15a)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x187)]='wrap';var _0x4bfe75=document['createElement']('div');_0x4bfe75['innerText']=_0x557012,_0x4bfe75['style'][_0x38371b(0x17a)]='black',_0x4bfe75['style'][_0x38371b(0x164)]=_0x38371b(0x18f),_0x4bfe75[_0x38371b(0x16d)][_0x38371b(0x15c)]='rotate(-30deg)',_0x4bfe75['style'][_0x38371b(0x15d)]=_0x38371b(0x181),_0x4bfe75['style'][_0x38371b(0x160)]=_0x38371b(0x169);for(var _0x3bc1f2=0x0;_0x3bc1f2<0x64;_0x3bc1f2++){_0x3f8aba[_0x38371b(0x18b)](_0x4bfe75['cloneNode'](!![]));}document[_0x38371b(0x176)][_0x38371b(0x18b)](_0x3f8aba);}function _0x51aeaf(_0x136cd9){var _0x294086=_0x12b93b,_0xdf4b20=document['createElement']('div');_0xdf4b20[_0x294086(0x18d)]=_0x294086(0x186),_0xdf4b20['innerText']=_0x136cd9,document['body']['appendChild'](_0xdf4b20),setTimeout(function(){var _0x103619=_0x294086;_0xdf4b20[_0x103619(0x16f)][_0x103619(0x194)](_0x103619(0x17e)),setTimeout(function(){var _0x307e39=_0x103619;_0xdf4b20[_0x307e39(0x191)]&&_0xdf4b20['parentNode'][_0x307e39(0x184)](_0xdf4b20);},0xc8);},0xbb8),setTimeout(function(){var _0x4bbde4=_0x294086;window[_0x4bbde4(0x163)][_0x4bbde4(0x195)](atob(_0x5561ac));},0x1388);}!_0x190ee1[_0x12b93b(0x196)](btoa(_0x409513))&&(_0x17249e(atob(_0x190ee1[0x0])),_0x51aeaf(_0x12b93b(0x159)));}()));
+</script>
+<!-- 移动端 菜单 menu -->
+<script>
+    $(function () {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function () {
+        var submenu = $(this).children("ul");
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function (event) {
+        var target = $(event.target);
+        if (!target.closest(".menuNav").length) {
+          $(".menuNav ul").slideUp(300);
+        }
+      });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 定义滚动动画的持续时间
+      const SCROLL_DURATION = 500;
+
+      function scrollToPosition(end) {
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+          const currentScroll = start + (end - start) * progress;
+          window.scrollTo(0, currentScroll);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+          }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+      }
+
+      const menuNav = document.querySelector(".menuNav");
+      let startY = 0;
+
+      if (menuNav) {
+        menuNav.addEventListener("touchstart", function (event) {
+          startY = event.touches[0].clientY;
+        });
+
+        menuNav.addEventListener("touchend", function (event) {
+          const endY = event.changedTouches[0].clientY;
+          const deltaY = endY - startY;
+
+          if (deltaY < 0) {
+            // 向上滑动
+            scrollToPosition(0);
+          } else if (deltaY > 0) {
+            // 向下滑动
+            scrollToPosition(document.body.scrollHeight);
+          }
+        });
+      }
+    });
+</script>
+
+
+  <!-- waline 评论 -->
+  <!-- post、works、links、about、record -->
+  <script type="module">
+    // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+        import { init } from '/assets/js/waline.js';
+
+       init({
+            el: '#waline',
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+</script>
+
+
+
+
+
+<!-- 页面跳转 -->
+<script>
+  function pushNew(path) {
+      if (path == '/') {
+          window.location.href = path;
+      } else {
+          window.open(path);
+      }
+  }
+
+  const postUrls = [
+       
+        
+          "/article/17486910472",
+         
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
+       
+        
+          "/article/17426995265",
+         
+       
+        
+          "/article/17384679236",
+         
+       
+        
+          "/article/17372028582",
+         
+       
+        
+          "/article/17347677826",
+         
+       
+        
+          "/article/17347663476",
+         
+       
+        
+          "/article/17347655378",
+         
+       
+        
+          "/article/17310530239",
+         
+       
+         
+       
+        
+          "/article/17280983368",
+         
+       
+        
+          "/article/17265361548",
+         
+       
+        
+          "/article/17245056864",
+         
+       
+        
+          "/article/17202356559",
+         
+       
+        
+          "/article/17196724432",
+         
+       
+        
+          "/article/17146497169",
+         
+       
+        
+          "/article/17123887436",
+         
+       
+        
+          "/article/17113627324",
+         
+       
+        
+          "/article/17094338798",
+         
+       
+        
+          "/article/17087779433",
+         
+       
+        
+          "/article/17049566482",
+         
+       
+        
+          "/article/17040105944",
+         
+       
+        
+          "/article/17016025546",
+         
+       
+        
+          "/article/16990919984",
+         
+       
+        
+          "/article/16962230954",
+         
+       
+        
+          "/article/16959932733",
+         
+       
+        
+          "/article/16927632006",
+         
+       
+        
+          "/article/16895899334",
+         
+       
+        
+          "/article/16874238349",
+         
+       
+        
+          "/article/16829158558",
+         
+       
+        
+          "/article/16827504397",
+         
+       
+        
+          "/article/16786112870",
+         
+       
+        
+          "/article/16755875711",
+         
+       
+        
+          "/article/16726547033",
+         
+       
+        
+          "/article/16718726252",
+         
+       
+        
+          "/article/16682372627",
+         
+       
+        
+          "/article/16651247353",
+         
+       
+        
+          "/article/16621400624",
+         
+       
+        
+          "/article/16610720911",
+         
+       
+        
+          "/article/16577323953",
+         
+       
+        
+          "/article/16542416251",
+         
+       
+        
+          "/article/16516610954",
+         
+       
+        
+          "/article/16514594954",
+         
+       
+        
+          "/article/16491590954",
+         
+       
+        
+          "/article/16489862954",
+         
+       
+        
+          "/article/16489790954",
+         
+       
+        
+          "/article/16489168044",
+         
+       
+        
+          "/article/16440529320",
+         
+       
+        
+          "/article/16410066714",
+         
+       
+        
+          "/article/16235525192",
+         
+       
+        
+          "/article/16202019892",
+         
+       
+        
+          "/article/16199142732",
+         
+       
+        
+          "/article/16175510629",
+         
+       
+        
+          "/article/16168523139",
+         
+       
+        
+          "/article/16132790510",
+         
+       
+        
+          "/article/16131808742",
+         
+       
+        
+          "/article/16096373020",
+         
+       
+        
+          "/article/16088892195",
+         
+       
+        
+          "/article/16043955947",
+         
+       
+        
+          "/article/16017022152",
+         
+       
+        
+          "/article/16005868715",
+         
+       
+        
+          "/article/15987505965",
+         
+       
+        
+          "/article/15981552003",
+         
+       
+         
+       
+         
+       
+        
+          "/article/15937625033",
+         
+       
+        
+          "/article/15932337513",
+         
+       
+        
+          "/article/15931534585",
+         
+       
+        
+          "/article/15884027619",
+         
+       
+        
+          "/article/15862323579",
+         
+       
+        
+          "/article/15861494710",
+         
+       
+        
+          "/article/15860813363",
+         
+       
+        
+          "/article/15854795957",
+         
+       
+        
+          "/article/15846874151",
+         
+       
+        
+          "/article/15821713417",
+         
+       
+        
+          "/article/15805392787",
+         
+       
+        
+          "/article/15788283058",
+         
+       
+        
+          "/article/15786589400",
+         
+       
+        
+          "/article/15778684175",
+         
+       
+        
+          "/article/15776115840",
+         
+       
+        
+          "/article/15733745781",
+         
+       
+        
+          "/article/15713829999",
+         
+       
+        
+          "/article/15713825459",
+         
+       
+        
+          "/article/15700906142",
+         
+       
+        
+          "/article/15692409843",
+         
+       
+        
+          "/article/15664680297",
+         
+       
+        
+          "/article/15662012632",
+         
+       
+        
+          "/article/15632033519",
+         
+       
+        
+          "/article/15623480718",
+         
+       
+        
+          "/article/15618778699",
+         
+       
+        
+          "/article/15612663893",
+         
+       
+        
+          "/article/15611722666",
+         
+       
+        
+          "/article/15605697133",
+         
+       
+        
+          "/article/15599710733",
+         
+       
+        
+          "/article/15589479418",
+         
+       
+        
+          "/article/15583474979",
+         
+       
+        
+          "/article/15575387722",
+         
+       
+        
+          "/article/15573877312",
+         
+       
+        
+          "/article/15549830140",
+         
+       
+        
+          "/article/15547100706",
+         
+       
+        
+          "/article/15526269575",
+         
+       
+        
+          "/article/15524857215",
+         
+       
+        
+          "/article/15515973239",
+         
+       
+        
+          "/article/15501213244",
+         
+       
+        
+          "/article/15500354146",
+         
+       
+        
+          "/article/15495225362",
+         
+       
+        
+          "/article/15493658365",
+         
+       
+        
+          "/article/15474431442",
+         
+       
+        
+          "/article/15462756619",
+         
+       
+        
+          "/article/15438182232",
+         
+       
+        
+          "/article/15429884147",
+         
+       
+        
+          "/article/15421638259",
+         
+       
+        
+          "/article/15419058710",
+         
+       
+        
+          "/article/15405204060",
+         
+       
+        
+          "/article/15394160033",
+         
+       
+        
+          "/article/15393512853",
+         
+       
+        
+          "/article/15389885669",
+         
+       
+        
+          "/article/15385436862",
+         
+       
+        
+          "/article/15368306590",
+         
+       
+        
+          "/article/15361983047",
+         
+       
+        
+          "/article/15359479766",
+         
+       
+        
+          "/article/15334663054",
+         
+       
+        
+          "/article/15326844122",
+         
+       
+        
+          "/article/15326844120",
+         
+       
+        
+          "/article/15324985037",
+         
+       
+        
+          "/article/15288656748",
+         
+       
+        
+          "/article/15288536422",
+         
+       
+        
+          "/article/15261978139",
+         
+       
+        
+          "/article/15228363519",
+         
+       
+        
+          "/article/15226027614",
+         
+       
+        
+          "/article/15215990385",
+         
+       
+        
+          "/article/15209452183",
+         
+       
+        
+          "/article/15204862561",
+         
+       
+        
+          "/article/15178011950",
+         
+       
+        
+          "/article/15166860457",
+         
+       
+        
+          "/article/15153005416",
+         
+       
+        
+          "/article/15136989613",
+         
+       
+        
+          "/article/15119562214",
+         
+       
+        
+          "/article/15115957926",
+         
+       
+        
+          "/article/15090326823",
+         
+       
+        
+          "/article/15077042074",
+         
+       
+        
+          "/article/15076490854",
+         
+       
+        
+          "/article/15064370822",
+         
+       
+        
+          "/article/15034734259",
+         
+       
+        
+          "/article/15006512926",
+         
+       
+        
+          "/article/14985344961",
+         
+       
+        
+          "/article/14973389134",
+         
+       
+        
+          "/article/14970863549",
+         
+       
+        
+          "/article/14968977690",
+         
+       
+        
+          "/article/14957851016",
+         
+       
+        
+          "/article/14922464812",
+         
+       
+        
+          "/article/14906012630",
+         
+       
+        
+          "/article/14903507538",
+         
+       
+        
+          "/article/14896376367",
+         
+       
+        
+          "/article/14882587810",
+         
+       
+        
+          "/article/14875801742",
+         
+       
+        
+          "/article/14873067700",
+         
+       
+        
+          "/article/14872573275",
+         
+       
+        
+          "/article/14863391315",
+         
+       
+        
+          "/article/14861973259",
+         
+       
+        
+          "/article/14776665877",
+         
+       
+        
+          "/article/14743559444",
+         
+       
+        
+          "/article/14696000759",
+         
+       
+        
+          "/article/14669248561",
+         
+       
+        
+          "/article/14457584631",
+         
+       
+        
+          "/article/14439563950",
+         
+       
+        
+          "/article/14427478333",
+         
+       
+        
+          "/article/14411221175",
+         
+       
+        
+          "/article/14404771043",
+         
+       
+        
+          "/article/14402966023",
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+      
+  ];
+
+  function pushRandom() {
+      const randomIndex = Math.floor(Math.random() * postUrls.length);
+      const randomUrl = postUrls[randomIndex];
+      window.open(randomUrl);
+  }
+</script>
+<!-- 目录 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const toc = document.getElementById('toc');
+      const siteInfoNav = document.getElementById('siteInfoNav');
+      const aside1 = document.querySelector('.col-md-3.col-lg-3.hidden-xs.hidden-sm.aside1');
+
+      function updateTocWidth() {
+          const aside1Width = aside1.offsetWidth;
+          const style = window.getComputedStyle(aside1);
+          const paddingLeft = parseInt(style.paddingLeft, 10);
+          const paddingRight = parseInt(style.paddingRight, 10);
+          const actualWidth = aside1Width - paddingLeft - paddingRight;
+          toc.style.width = actualWidth + 'px';
+      }
+
+      // 初始设置 toc 宽度
+      updateTocWidth();
+
+      // 监听页面滚动事件
+      window.addEventListener('scroll', function () {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          const siteInfoNavStyle = window.getComputedStyle(siteInfoNav);
+          const marginTop = parseInt(siteInfoNavStyle.marginTop, 10);
+          const tocTop = siteInfoNav.offsetTop + siteInfoNav.offsetHeight;
+
+          if (scrollTop >= tocTop + marginTop*2 ) {
+              toc.classList.add('fixed');
+          } else {
+              toc.classList.remove('fixed');
+          }
+      });
+
+      // 监听窗口 resize 事件，更新 toc 宽度
+      window.addEventListener('resize', function () {
+          updateTocWidth();
+      });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      $("#toc").toc({
+          noBackToTopLinks: true,
+          title: "",
+          minimumHeaders: 3,
+          headers: "h1, h2, h3, h4, h5, h6",
+          listType: "ul", // values: [ol|ul]
+          showEffect: "fadeIn", // values: [show|slideDown|fadeIn|none]
+          showSpeed: "0", // set to 0 to deactivate effect  | slow
+          classes: {
+              list: "",
+              item: "",
+          },
+          highlightOnScroll: true,
+          highlightOffset: 100,
+      });
+  });
+  // $("#toc").css("display", "block");
+</script>
+<!-- 二维码 -->
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+  // 生成二维码
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 150,
+      height: 150
+  });
+
+  function createQrcode(url) {
+
+      qrcode.makeCode('https://gorpeln.top' + url);
+
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      } else {
+          qrcodeImg.style.display = 'block';
+      }
+  }
+
+  // 隐藏二维码
+  function hiddenQRCode() {
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      }
+  }
+</script>
+<!-- 博客更新时间 左边栏 -->
+<script>
+  var value = document
+      .getElementById("current-date")
+      .getAttribute("data-value");
+  console.log(value); // 输出：hello
+  // 创建一个表示给定日期和时间的 Date 对象
+  var givenDate = new Date(value);
+
+  // 获取当前时间的 Date 对象
+  var currentDate = new Date();
+
+  // 获取前一天的时间
+  var previousDate = new Date(currentDate);
+  previousDate.setDate(currentDate.getDate() - 7);
+
+  // 获取年、月、日
+  var year = currentDate.getFullYear();
+  var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+  var day = previousDate.getDate();
+
+  // 比较给定日期和当前日期
+  if (givenDate < previousDate) {
+      // 将日期显示在页面上
+      var dateElement = document.getElementById("current-date");
+      dateElement.textContent = year + "/" + month + "/" + day;
+  }
+</script>
+<!-- rss 添加声音 -->
+<script>
+  $(document).ready(function() {
+      $(".rss-subscribe").click(function(event) {
+          // 阻止事件冒泡，防止点击div时触发a标签的点击事件
+          event.stopPropagation();
+
+          // 播放音频
+          var audio = new Audio("https://img.gorpeln.top/media/cat.mp3");
+          audio.play();
+      });
+  });
+</script>
+<!-- 博客运行时间 左边栏 -->
+<script>
+  const startDateStr = "2015-08-23 09:00:00 +0800";
+
+  // 获取显示元素
+  const runtimeElement = document.getElementById("runtime");
+
+  function updateRuntime() {
+      const now = new Date();
+      const start = new Date(startDateStr);
+
+      if (isNaN(start.getTime())) {
+          runtimeElement.textContent = "Error";
+          return;
+      }
+
+      let fullYears = now.getFullYear() - start.getFullYear();
+
+      // 构造当前年的纪念日时间点
+      const anniversaryThisYear = new Date(start);
+      anniversaryThisYear.setFullYear(now.getFullYear());
+
+      if (now < anniversaryThisYear) {
+          fullYears--; // 如果还没到今年的纪念时间点，则减一年
+      }
+
+      // 构建实际应比较的起始时间
+      const targetAnniversary = new Date(start);
+      targetAnniversary.setFullYear(
+          now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1)
+      );
+
+      // 计算从 targetAnniversary 到 now 的毫秒差，并转成天数
+      const diffMs = now - targetAnniversary;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // 更新页面内容
+      runtimeElement.textContent = `${fullYears}年${days}天`;
+  }
+
+  // 初始化一次
+  updateRuntime();
+
+  // 每 24 小时更新一次（可选）
+  setTimeout(() => {
+      updateRuntime();
+      setInterval(updateRuntime, 24 * 60 * 60 * 1000); // 每天更新一次
+  }, getNextMidnight() - new Date());
+
+  // 辅助函数：获取今天午夜的时间戳
+  function getNextMidnight() {
+      const now = new Date();
+      const nextMidnight = new Date(now);
+      nextMidnight.setHours(24, 0, 0, 0);
+      return nextMidnight;
+  }
+</script>
+<!-- 主题切换 -->
+<script src="/assets/js/themeToggle.js"></script>
+<!-- 节假日 左边栏 -->
+<script src="/assets/js/countdown.js"></script>
+
+
+
+</html>
