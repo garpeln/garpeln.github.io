@@ -62,6 +62,8 @@
       
     
       
+    
+      
         <item>
           <title>使用Serv00部署在线工具箱</title>
           <link>https://gorpeln.top/article/17460739947</link>
@@ -1951,7 +1953,7 @@ if __name__ == &quot;__main__&quot;:
 document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
     const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
     elements.forEach(function(element) {
-        element.textContent = &apos;4.9.102&apos;;
+        element.textContent = &apos;4.9.103&apos;;
     });
 });       
 &lt;/script&gt;
@@ -2461,158 +2463,6 @@ iziToast.show({
 
 &lt;h3 id=&quot;效果&quot;&gt;效果&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212923.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240325183212923&quot; /&gt;&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>外链跳转到中间页</title>
-          <link>https://gorpeln.top/article/17094338798</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17094338798</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sun, 03 Mar 2024 10:44:39 +0800</pubDate>
-          <description>&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240303104439913.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240303104439913&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-&lt;p&gt;网络安全的问题这些年越来越被关注，所以各大平台网站例如微博、微信、QQ、网易等，都在这几年为自家的网络产品添加了一个安全跳转的中台页面，甚至微博对于跳转链接必须是企业认证才能进入微博的安全白名单，可以说是把安全做到了&lt;del&gt;&lt;strong&gt;极致&lt;/strong&gt;&lt;/del&gt;。&lt;/p&gt;
-
-&lt;p&gt;加了安全跳转中台以后，这样可以让自己的产品主域名成功与外链间接通过中台串联，而不是直接关系，增加安全跳转中台页面也间接提升了网络产品的用户体验。&lt;/p&gt;
-
-&lt;h3 id=&quot;操作&quot;&gt;操作&lt;/h3&gt;
-&lt;p&gt;新建 js 文件，如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;safe.js&lt;/code&gt;。里面的网址为排除跳转中间页。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function checkParent(element, classNames) {
-    while (element) {
-        if (element.classList &amp;amp;&amp;amp; classNames.some(cn =&amp;gt; element.classList.contains(cn))) {
-            return true;
-        }
-        element = element.parentElement;
-    }
-    return false;
-}
-var excludedClasses = [&apos;card-link&apos;, &apos;friend-item&apos;, &apos;contact-item&apos;, &apos;footer-item&apos;]; // 添加需要排除的a标签类名class
-window.addEventListener(&apos;load&apos;, (event) =&amp;gt; {
-    document.body.addEventListener(&apos;click&apos;, function(e) {
-        let target = e.target;
-        while (target &amp;amp;&amp;amp; target.nodeName !== &apos;A&apos;) {
-            target = target.parentNode;
-        }
-        if (target &amp;amp;&amp;amp; target.nodeName === &apos;A&apos; &amp;amp;&amp;amp;
-            !checkParent(target, excludedClasses) &amp;amp;&amp;amp;
-            !target.href.includes(&apos;gorpeln.top&apos;) &amp;amp;&amp;amp;
-            !target.href.includes(&apos;gorpeln.eu.org&apos;) &amp;amp;&amp;amp;
-            !target.href.includes(&apos;lab.gorpeln.top&apos;) &amp;amp;&amp;amp;
-            !target.href.includes(&apos;github.com&apos;) &amp;amp;&amp;amp;
-            target.hostname !== window.location.hostname) {
-            e.preventDefault();
-            let encodedUrl = btoa(target.href); // Base64 encode the URL
-            let url = &apos;/go-wild?target=&apos; + encodedUrl;
-            window.open(url, &apos;_blank&apos;);
-        }
-    });
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;新建一个 html，如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go-wild.html&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;tiaozhuan-all&quot;&amp;gt;
-    &amp;lt;div class=&quot;tiaozhuan-nrong&quot;&amp;gt;
-        &amp;lt;div class=&quot;tiaozhuan-title&quot;&amp;gt;即将离开 『 gorpeln&apos;s Blog 』 ，跳转到以下外部链接&amp;lt;/div&amp;gt;
-        &amp;lt;div id=&quot;tiaozhuan-link&quot;&amp;gt;&amp;lt;/div&amp;gt;
-        &amp;lt;div class=&quot;tiaozhuan-info&quot;&amp;gt;请自行识别该链接是否安全，并保管好个人信息。&amp;lt;/div&amp;gt;
-        &amp;lt;div class=&quot;tiaozhuan-button&quot;&amp;gt;&amp;lt;a href=&apos;&apos; id=&apos;direct-link&apos;&amp;gt;继续访问&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;script&amp;gt;
-    const params = new URLSearchParams(window.location.search);
-    const encodedTarget = params.get(&apos;target&apos;);
-    const target = atob(encodedTarget); // 使用 atob 进行 Base64 解码
-
-    if (target) {
-        document.getElementById(&apos;direct-link&apos;).href = target;
-        document.getElementById(&apos;tiaozhuan-link&apos;).textContent = &apos;&apos; + target; // 直接显示目标地址    
-    } else {
-        console.error(&apos;未指定重定向目标。&apos;);
-    }
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;相关 css，根据主题风格调整。&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;body {
-    background: #ececec;
-}
-
-.tiaozhuan-all {
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -10px;
-    border-radius: 10px;
-    background: #fff url(../assets/img/go-wild.png) no-repeat center center / cover;
-    color: #666;
-    word-break: break-all;
-    max-width: 700px;
-    height: 350px;
-    text-align: center;
-    font-size: 0.85rem;
-    overflow: hidden;
-    margin: 100px auto 0;
-
-    @include breakpoint(&apos;small&apos;) {
-        aspect-ratio: 2 / 1;
-        height: auto;
-    }
-}
-
-.tiaozhuan-nrong {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 20px 30px 20px;
-}
-
-.tiaozhuan-title {
-    font-size: 1.3rem;
-    color: #222;
-    line-height: 1.4;
-    margin-bottom: 4px;
-}
-
-.tiaozhuan-info {
-    margin-top: 6px;
-}
-
-.tiaozhuan-button {
-    margin-top: 20px;
-}
-
-.tiaozhuan-button a {
-    color: #fc9151;
-    border-radius: 4px;
-    padding: 10px 30px;
-    font-size: .85rem;
-    border: 0.5px solid #fc9151;
-    display: inline-block;
-    text-decoration: none;
-
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;最后在页尾引用js文件即可，如&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script src=&quot;/js/safe.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;思路&quot;&gt;思路&lt;/h3&gt;
-&lt;p&gt;js文件识别链接的a标签，并把链接用 base64 编码，同时排除一些不需要跳转中间页的class或网站。然后跳转到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go-wild.html&lt;/code&gt;文件中（链接格式为/go-wild?target=base64编码），html文件承担了中间页具体信息，及跳转动作。如使用base64解码跳转的链接。&lt;/p&gt;
-
-&lt;h3 id=&quot;结语&quot;&gt;结语&lt;/h3&gt;
-&lt;p&gt;对于浏览体验来说，多了一步跳转，总归是不好，但为了愉快的玩耍博客，稳妥一点更佳。如果觉得跳转中间页很烦人，浏览器可以装个 &lt;a href=&quot;https://chromewebstore.google.com/detail/skip-redirect/jaoafjdoijdconemdmodhbfpianehlon&quot;&gt;Skip Redirect&lt;/a&gt; 插件，告别所有网站的中间页跳转，直接抵达目标地址。&lt;/p&gt;
 
 </description>
         </item>

@@ -3329,17 +3329,17 @@ div.contentAbstract img {
 }
 
 
-.waline-box{
+/*.waline-box{
     min-height:32em;
-}
+}*/
 
 @media (max-width: 768px) {
     .livere {
         padding: 1em 1.5em;
     }
-    .waline-box{
+/*    .waline-box{
         min-height:37em;
-    }
+    }*/
 }
 
 /*百度分享*/
