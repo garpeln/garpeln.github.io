@@ -162,7 +162,24 @@ body {
     /*background: url(/assets/img/body_bg_new.png);*/
 
 }
+/*背景格子*/
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -520;
+    pointer-events: none;
+}
 
+body::before {
+    background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: 50%;
+    background-repeat: repeat;
+}
 
 .night-mode {
     background-color: #282c33;
@@ -2398,9 +2415,56 @@ div.gavatar a:hover {
     justify-content: center;
     align-items: center;
     padding: 0.5em 15px;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
     width: 100%;
-  }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    margin-left: auto;
+    position: absolute;
+    bottom: -20px;
+    right: 70px;
+    width: 222px;
+    height: auto;
+
+}
+
+.girlImg {
+    opacity: 0.5;
+}
+
+/* 鼠标悬停时图片变清晰 */
+.img-container:hover .girlImg {
+    opacity: 1;
+}
+
+/* 竖排显示的提示文字 */
+.img-container:after {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    color: #777;
+    content: '好久不见';
+    font-size: 18px;
+    height: 150px;
+    opacity: 0;
+    transition: all .3s;
+    text-align: center;
+    margin-right:16px;
+}
+
+.img-container:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
 
   .runTime {
     color: #777;
@@ -2543,6 +2607,9 @@ div.gavatar a:hover {
     .footer-col-3 {
         width: -webkit-calc(100% - (30px / 2));
         width: calc(100% - (30px / 2));
+    }
+    .img-container{
+        display:none;
     }
 }
 
@@ -3659,6 +3726,9 @@ div.contentAbstract img {
 body.dark-mode {
     background-color: var(--background-color-dark);
 }
+body.dark-mode::before {
+    background-image: linear-gradient(90deg, rgba(195, 245, 225, .04) 3%, transparent 0), linear-gradient(1turn, rgba(195, 245, 225, .04) 3%, transparent 0);
+}
 
 body.dark-mode h1, 
 body.dark-mode h2, 
@@ -3835,7 +3905,9 @@ body.dark-mode .footerDes,
 body.dark-mode .footerDes a {
     color:var(--font-title-color-dark);
 }
-
+body.dark-mode .img-container:after {
+    /*color: var(--font-title-color-dark);*/
+}
 /*
 qrcode
 */
