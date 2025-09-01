@@ -73,6 +73,14 @@
       "link": "https://www.blogplanet.cn/"
     },
     {
+      "name": "博客之家",
+      "avatar": "https://www.perass.com/wp-content/uploads/2025/08/icon-1.png",
+      "descr": " 一个专注收录优质个人博客的导航网站",
+      "status": 2,
+      "siteshot": "",
+      "link": "https://www.perass.com/sites/1675.html"
+    },
+    {
       "name": "gorpeln的个人博客 - gorpeln",
       "avatar": "https://gorpeln.top/favicon.ico",
       "descr": "趁年轻，做自己想做的！",
@@ -225,5 +233,5 @@
       "link": "https://www.4min.top/links"
     }
   ],
-  "length": 28
+  "length": 29
 }
