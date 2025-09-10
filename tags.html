@@ -39,6 +39,8 @@
     
 </head>
 <body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
     <script>
           (function () {
             var darkMode = localStorage.getItem("darkMode");
@@ -71,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">228</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">695</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">228 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">32</a>
+                    <a name="个人博客" style="" class="articleCount">35</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -169,12 +171,12 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">44</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -356,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>228</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>114.9k</p>
+                  <p>115.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -368,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-01 17:21:28 +0800">
-                    2025/09/01
+                  <p id="current-date" data-value="2025-09-10 17:38:30 +0800">
+                    2025/09/10
                   </p>
                 </li>
               </ul>
@@ -393,7 +395,7 @@ a {
         
         <a class="pjaxlink" href="#其他" name="其他">其他　<span class="tag-count">(57)</span></a>
         
-        <a class="pjaxlink" href="#个人博客" name="个人博客">个人博客　<span class="tag-count">(14)</span></a>
+        <a class="pjaxlink" href="#个人博客" name="个人博客">个人博客　<span class="tag-count">(15)</span></a>
         
         <a class="pjaxlink" href="#书写笔记" name="书写笔记">书写笔记　<span class="tag-count">(1)</span></a>
         
@@ -401,7 +403,7 @@ a {
         
         <a class="pjaxlink" href="#纯文本标记语言" name="纯文本标记语言">纯文本标记语言　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#链接" name="链接">链接　<span class="tag-count">(5)</span></a>
+        <a class="pjaxlink" href="#链接" name="链接">链接　<span class="tag-count">(8)</span></a>
         
         <a class="pjaxlink" href="#Linux" name="Linux">Linux　<span class="tag-count">(1)</span></a>
         
@@ -871,7 +873,7 @@ a {
         
         <a class="pjaxlink" href="#Gitalk" name="Gitalk">Gitalk　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#博客" name="博客">博客　<span class="tag-count">(11)</span></a>
+        <a class="pjaxlink" href="#博客" name="博客">博客　<span class="tag-count">(13)</span></a>
         
         <a class="pjaxlink" href="#Client" name="Client">Client　<span class="tag-count">(1)</span></a>
         
@@ -1119,7 +1121,7 @@ a {
         
         <a class="pjaxlink" href="#初恋" name="初恋">初恋　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#时光本" name="时光本">时光本　<span class="tag-count">(5)</span></a>
+        <a class="pjaxlink" href="#时光本" name="时光本">时光本　<span class="tag-count">(8)</span></a>
         
         <a class="pjaxlink" href="#小程序" name="小程序">小程序　<span class="tag-count">(2)</span></a>
         
@@ -1127,25 +1129,25 @@ a {
         
         <a class="pjaxlink" href="#笔记" name="笔记">笔记　<span class="tag-count">(2)</span></a>
         
-        <a class="pjaxlink" href="#便签" name="便签">便签　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#便签" name="便签">便签　<span class="tag-count">(7)</span></a>
         
-        <a class="pjaxlink" href="#清单" name="清单">清单　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#清单" name="清单">清单　<span class="tag-count">(7)</span></a>
         
-        <a class="pjaxlink" href="#图片" name="图片">图片　<span class="tag-count">(5)</span></a>
+        <a class="pjaxlink" href="#图片" name="图片">图片　<span class="tag-count">(8)</span></a>
         
-        <a class="pjaxlink" href="#纪念日" name="纪念日">纪念日　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#纪念日" name="纪念日">纪念日　<span class="tag-count">(7)</span></a>
         
-        <a class="pjaxlink" href="#地址" name="地址">地址　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#地址" name="地址">地址　<span class="tag-count">(7)</span></a>
         
-        <a class="pjaxlink" href="#银行卡" name="银行卡">银行卡　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#银行卡" name="银行卡">银行卡　<span class="tag-count">(7)</span></a>
         
-        <a class="pjaxlink" href="#名片" name="名片">名片　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#名片" name="名片">名片　<span class="tag-count">(7)</span></a>
         
         <a class="pjaxlink" href="#待办" name="待办">待办　<span class="tag-count">(2)</span></a>
         
         <a class="pjaxlink" href="#日程" name="日程">日程　<span class="tag-count">(2)</span></a>
         
-        <a class="pjaxlink" href="#高效" name="高效">高效　<span class="tag-count">(4)</span></a>
+        <a class="pjaxlink" href="#高效" name="高效">高效　<span class="tag-count">(5)</span></a>
         
         <a class="pjaxlink" href="#人性" name="人性">人性　<span class="tag-count">(1)</span></a>
         
@@ -1297,7 +1299,7 @@ a {
         
         <a class="pjaxlink" href="#5周年" name="5周年">5周年　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#简洁" name="简洁">简洁　<span class="tag-count">(2)</span></a>
+        <a class="pjaxlink" href="#简洁" name="简洁">简洁　<span class="tag-count">(3)</span></a>
         
         <a class="pjaxlink" href="#一键登录" name="一键登录">一键登录　<span class="tag-count">(1)</span></a>
         
@@ -1473,7 +1475,7 @@ a {
         
         <a class="pjaxlink" href="#自动升级" name="自动升级">自动升级　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#娱乐" name="娱乐">娱乐　<span class="tag-count">(1)</span></a>
+        <a class="pjaxlink" href="#娱乐" name="娱乐">娱乐　<span class="tag-count">(2)</span></a>
         
         <a class="pjaxlink" href="#代码" name="代码">代码　<span class="tag-count">(1)</span></a>
         
@@ -1709,7 +1711,7 @@ a {
         
         <a class="pjaxlink" href="#python" name="python">python　<span class="tag-count">(1)</span></a>
         
-        <a class="pjaxlink" href="#进度条" name="进度条">进度条　<span class="tag-count">(1)</span></a>
+        <a class="pjaxlink" href="#进度条" name="进度条">进度条　<span class="tag-count">(2)</span></a>
         
         <a class="pjaxlink" href="#博客侧栏" name="博客侧栏">博客侧栏　<span class="tag-count">(1)</span></a>
         
@@ -1780,6 +1782,30 @@ a {
         <a class="pjaxlink" href="#广告" name="广告">广告　<span class="tag-count">(1)</span></a>
         
         <a class="pjaxlink" href="#营销" name="营销">营销　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#页面进度" name="页面进度">页面进度　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#percent" name="percent">percent　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#scroll" name="scroll">scroll　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#毛发" name="毛发">毛发　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#整蛊" name="整蛊">整蛊　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#愚人节" name="愚人节">愚人节　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#下架" name="下架">下架　<span class="tag-count">(3)</span></a>
+        
+        <a class="pjaxlink" href="#10周年" name="10周年">10周年　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#十周年" name="十周年">十周年　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#一程山路" name="一程山路">一程山路　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#一路生花" name="一路生花">一路生花　<span class="tag-count">(1)</span></a>
+        
+        <a class="pjaxlink" href="#送你一朵小红花" name="送你一朵小红花">送你一朵小红花　<span class="tag-count">(1)</span></a>
         
     </div>
     <div class="clear"></div>
@@ -1924,12 +1950,16 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="个人博客" name="个人博客">
       <h1 class="tag-name">个人博客</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -2133,12 +2163,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="链接" name="链接">
       <h1 class="tag-name">链接</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -8747,6 +8789,24 @@ a {
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
+              <span class="time">2025-06-15</span>
+              
+                <a class="pjaxlink" href="/article/17499800077">整蛊代码：你屏幕上有根毛</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-06</span>
+              
+                <a class="pjaxlink" href="/article/17491980488">博客阅读进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
               <span class="time">2025-05-01</span>
               
                 <a class="pjaxlink" href="/article/17460739947">使用Serv00部署在线工具箱</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
@@ -11806,12 +11866,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="时光本" name="时光本">
       <h1 class="tag-name">时光本</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -11956,12 +12028,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="便签" name="便签">
       <h1 class="tag-name">便签</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -11990,6 +12074,12 @@ a {
   
 
   
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
       
@@ -12000,6 +12090,12 @@ a {
       <ul class="tag-ul">
          <!-- 再次遍历tag的文章来生成列表项 -->
           
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
             <li class="article_span">
               <span class="time">2022-06-03</span>
               
@@ -12028,12 +12124,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="图片" name="图片">
       <h1 class="tag-name">图片</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -12073,12 +12181,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="纪念日" name="纪念日">
       <h1 class="tag-name">纪念日</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -12107,6 +12227,12 @@ a {
   
 
   
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
       
@@ -12117,6 +12243,12 @@ a {
       <ul class="tag-ul">
          <!-- 再次遍历tag的文章来生成列表项 -->
           
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
             <li class="article_span">
               <span class="time">2022-06-03</span>
               
@@ -12143,6 +12275,12 @@ a {
   
 
   
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
       
@@ -12153,6 +12291,12 @@ a {
       <ul class="tag-ul">
          <!-- 再次遍历tag的文章来生成列表项 -->
           
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
             <li class="article_span">
               <span class="time">2022-06-03</span>
               
@@ -12181,12 +12325,24 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="名片" name="名片">
       <h1 class="tag-name">名片</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -12281,12 +12437,16 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="高效" name="高效">
       <h1 class="tag-name">高效</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -14122,12 +14282,16 @@ a {
   
    <!-- 修改为遍历tag下的文章，而不是错误的category -->
     
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
       
       
   
     <div class="target-fix" id="简洁" name="简洁">
       <h1 class="tag-name">简洁</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -16260,6 +16424,15 @@ a {
     <div class="target-fix" id="娱乐" name="娱乐">
       <h1 class="tag-name">娱乐</h1>
       <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-15</span>
+              
+                <a class="pjaxlink" href="/article/17499800077">整蛊代码：你屏幕上有根毛</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
@@ -18997,6 +19170,15 @@ a {
          <!-- 再次遍历tag的文章来生成列表项 -->
           
             <li class="article_span">
+              <span class="time">2025-06-06</span>
+              
+                <a class="pjaxlink" href="/article/17491980488">博客阅读进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
               <span class="time">2024-12-21</span>
               
                 <a class="pjaxlink" href="/article/17347655378">节日倒计时与时间进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
@@ -19763,6 +19945,184 @@ a {
     </div>
   
 
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="页面进度" name="页面进度">
+      <h1 class="tag-name">页面进度</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-06</span>
+              
+                <a class="pjaxlink" href="/article/17491980488">博客阅读进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="percent" name="percent">
+      <h1 class="tag-name">percent</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-06</span>
+              
+                <a class="pjaxlink" href="/article/17491980488">博客阅读进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="scroll" name="scroll">
+      <h1 class="tag-name">scroll</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-06</span>
+              
+                <a class="pjaxlink" href="/article/17491980488">博客阅读进度条</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="毛发" name="毛发">
+      <h1 class="tag-name">毛发</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-15</span>
+              
+                <a class="pjaxlink" href="/article/17499800077">整蛊代码：你屏幕上有根毛</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="整蛊" name="整蛊">
+      <h1 class="tag-name">整蛊</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-15</span>
+              
+                <a class="pjaxlink" href="/article/17499800077">整蛊代码：你屏幕上有根毛</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+      
+      
+  
+    <div class="target-fix" id="愚人节" name="愚人节">
+      <h1 class="tag-name">愚人节</h1>
+      <ul class="tag-ul">
+         <!-- 再次遍历tag的文章来生成列表项 -->
+          
+            <li class="article_span">
+              <span class="time">2025-06-15</span>
+              
+                <a class="pjaxlink" href="/article/17499800077">整蛊代码：你屏幕上有根毛</a> <!-- 移除target="_blank"如果不需要新窗口打开 -->
+              
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
+  
+   <!-- 修改为遍历tag下的文章，而不是错误的category -->
+    
+  
+  
+
 </div>
 </div>
           </div>
@@ -19826,7 +20186,7 @@ a {
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.105</span>
+            <span>4.10.106</span>
         </div>
     </div>
 </footer>
@@ -19969,7 +20329,7 @@ a {
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.105",
+                "%c版本号 %c V4.10.106",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -20230,6 +20590,24 @@ a {
   }
 
   const postUrls = [
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
        
         
           "/article/17486910472",
@@ -21223,7 +21601,6 @@ a {
 <script src="/assets/js/themeToggle.js"></script>
 <!-- 节假日 左边栏 -->
 <script src="/assets/js/countdown.js"></script>
-
 
 
 </html>

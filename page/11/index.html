@@ -39,6 +39,8 @@
     
 </head>
 <body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
     <script>
           (function () {
             var darkMode = localStorage.getItem("darkMode");
@@ -71,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">228</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">695</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">228 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">32</a>
+                    <a name="个人博客" style="" class="articleCount">35</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -169,12 +171,12 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">44</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -356,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>228</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>114.9k</p>
+                  <p>115.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -368,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-01 17:21:28 +0800">
-                    2025/09/01
+                  <p id="current-date" data-value="2025-09-10 17:38:30 +0800">
+                    2025/09/10
                   </p>
                 </li>
               </ul>
@@ -840,7 +842,118 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15526269575" target="_blank">iOS App 签名的原理</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2019-03-15</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#签名机制" target="_blank">签名机制</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#App" target="_blank">App</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#Profile" target="_blank">Profile</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">iOS 签名机制挺复杂，各种证书，Provisioning Profile，entitlements，CertificateSigningRequest，p12，AppID，概念一堆，也很容易出错，本文尝试从原理出发，一步步推出为什么会有这么多概念，希望能有助于理解 iOS App 签名的原理和流程。
+
+目的
+先来看看苹果的签名机制是为了做什么。在 iOS 出来之前，在主流操作系统(Mac/Windows/Linux)上开发和运行软件是不需要签名的，软件随便从哪里下载都能运行，导致平台对第...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15526269575" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15524857215" target="_blank">移动 APP 网络优化概述</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2019-03-13</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#网络优化" target="_blank">网络优化</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#AFNetworking" target="_blank">AFNetworking</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#DNS解析" target="_blank">DNS解析</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一般开发一个 APP，会直接调用系统提供的网络请求接口去服务端请求数据，再针对返回的数据进行一些处理，或者使用AFNetworking/OKHttp这样的网络库，管理好请求线程和队列，再自动做一些数据解析，就结束了。
+
+但对于一些大型 APP，还会想针对网络的一些问题进行进一步优化，包括：
+
+　　1、速度：网络请求的速度怎样能进一步提升？
+　　2、弱网：移动端网络环境随时变化，经常出现网络连接很不稳定可用性差的情况，怎样在这种情况下最大限度最快地成功请求？
+　　3、安全：怎样防止被第三方窃...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15524857215" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1299,105 +1412,6 @@ Commits
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15429884147" target="_blank">云开发 与 WePY</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2018-11-23</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
-                    微信小程序
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#微信小程序" target="_blank">微信小程序</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#云开发" target="_blank">云开发</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#WePY" target="_blank">WePY</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">一、Why WePY
-
-首先，先分享一下为什么要选择 WePY ？
-
-在项目开始进行选型的时候，我可选的底层框架有 WePy、MPVue、Taro、`MinUI，这些框架都是工程化做得很好的框架，可以帮助小程序项目长期进行维护。其中，Taro 因为采用的是我所不熟悉的 React ，所以从一开始就被排除。MPVue 我看了以后，它更多是给 Web 开发者提供小程序转化工具，而不是给小程序开发者提供类 Vue 工具，所以，也被我排除。 MinUI 由于其本身仅仅是提供了组件化的方案和 npm...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15429884147" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15421638259" target="_blank">电脑病毒竟然被当宠物养！</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2018-11-14</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
-                    程序人生
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#程序人生" target="_blank">程序人生</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#开心一刻" target="_blank">开心一刻</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#段子" target="_blank">段子</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">1、可爱的病毒
-
-我以前中过一个病毒，在我电脑桌面左侧会多了一个可爱的卡通妹子，在那里吃饭睡觉玩耍，她肚子饿了就去吃掉最靠近她的图标，所以我每天都要准备一堆复制出来的快捷方式让她吃。她有时候无聊的时候会抖动你的屏幕，你如果不哄她玩，她就一直抖你的窗口。最气人的是，如果你玩电脑太晚了，她就会自动关机。看小字好像是说不要吵她睡觉……… 这玩意任务管理器上是看不到的，杀毒很多次了都没用，开机启动项目也发现不了。所以一直就让她闹腾下去了。直到有一次我外出很久没开机，回来的时候发现她已经死了………
-...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15421638259" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1500,7 +1514,7 @@ Commits
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.105</span>
+            <span>4.10.106</span>
         </div>
     </div>
 </footer>
@@ -1643,7 +1657,7 @@ Commits
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.105",
+                "%c版本号 %c V4.10.106",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1904,6 +1918,24 @@ Commits
   }
 
   const postUrls = [
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
        
         
           "/article/17486910472",
@@ -2897,7 +2929,6 @@ Commits
 <script src="/assets/js/themeToggle.js"></script>
 <!-- 节假日 左边栏 -->
 <script src="/assets/js/countdown.js"></script>
-
 
 
 </html>

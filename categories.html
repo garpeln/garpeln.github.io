@@ -39,6 +39,8 @@
     
 </head>
 <body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
     <script>
           (function () {
             var darkMode = localStorage.getItem("darkMode");
@@ -71,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">228</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">695</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">228 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">32</a>
+                    <a name="个人博客" style="" class="articleCount">35</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -169,12 +171,12 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">44</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -356,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>228</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>114.9k</p>
+                  <p>115.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -368,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-01 17:21:28 +0800">
-                    2025/09/01
+                  <p id="current-date" data-value="2025-09-10 17:38:30 +0800">
+                    2025/09/10
                   </p>
                 </li>
               </ul>
@@ -393,13 +395,13 @@ a {
         
         <a class="pjaxlink" href="#其他" name="其他">其他　<span class="tag-count">(62)</span></a>
         
-        <a class="pjaxlink" href="#个人博客" name="个人博客">个人博客　<span class="tag-count">(32)</span></a>
+        <a class="pjaxlink" href="#个人博客" name="个人博客">个人博客　<span class="tag-count">(35)</span></a>
         
         <a class="pjaxlink" href="#web前端" name="web前端">web前端　<span class="tag-count">(6)</span></a>
         
-        <a class="pjaxlink" href="#iOS" name="iOS">iOS　<span class="tag-count">(44)</span></a>
+        <a class="pjaxlink" href="#iOS" name="iOS">iOS　<span class="tag-count">(47)</span></a>
         
-        <a class="pjaxlink" href="#程序人生" name="程序人生">程序人生　<span class="tag-count">(23)</span></a>
+        <a class="pjaxlink" href="#程序人生" name="程序人生">程序人生　<span class="tag-count">(24)</span></a>
         
         <a class="pjaxlink" href="#MacOS" name="MacOS">MacOS　<span class="tag-count">(22)</span></a>
         
@@ -607,6 +609,26 @@ a {
     <div class="class-fix" id="个人博客" name="个人博客">
         <h1 class="tag-name">个人博客</h1>
         <ul class="tag-ul">
+            
+            
+            
+            
+            <li class="article_span">
+                <span class="time">2025-06-15</span>
+                
+                <a class="pjaxlink" href="/article/17499800077" target="_blank">整蛊代码：你屏幕上有根毛</a>
+                
+            </li>
+            
+            
+            
+            <li class="article_span">
+                <span class="time">2025-06-06</span>
+                
+                <a class="pjaxlink" href="/article/17491980488" target="_blank">博客阅读进度条</a>
+                
+            </li>
+            
             
             
             
@@ -960,9 +982,21 @@ a {
     
     
     
+    
+    
+    
+    
+    
+    
     <div class="class-fix" id="iOS" name="iOS">
         <h1 class="tag-name">iOS</h1>
         <ul class="tag-ul">
+            
+            
+            
+            
+            
+            
             
             
             <li class="article_span">
@@ -1356,9 +1390,13 @@ a {
     
     
     
+    
+    
     <div class="class-fix" id="程序人生" name="程序人生">
         <h1 class="tag-name">程序人生</h1>
         <ul class="tag-ul">
+            
+            
             
             
             <li class="article_span">
@@ -2253,7 +2291,7 @@ a {
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.105</span>
+            <span>4.10.106</span>
         </div>
     </div>
 </footer>
@@ -2396,7 +2434,7 @@ a {
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.105",
+                "%c版本号 %c V4.10.106",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -2657,6 +2695,24 @@ a {
   }
 
   const postUrls = [
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
        
         
           "/article/17486910472",
@@ -3650,7 +3706,6 @@ a {
 <script src="/assets/js/themeToggle.js"></script>
 <!-- 节假日 左边栏 -->
 <script src="/assets/js/countdown.js"></script>
-
 
 
 </html>

@@ -444,6 +444,27 @@ figure,
     margin-right: 0.5em;
     text-align: center;
 }
+
+.percentageCounter {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 2px;
+    z-index: 99999;
+    /*background-image: linear-gradient(to right, #E8EAF6, #C5CAE9, #9FA8DA, #7986CB, #5C6BC0, #3F51B5, #3949AB, #303F9F, #283593, #1A237E);*/
+    /*background-image: linear-gradient(to right, #339933,#FF6666);*/
+background-image: linear-gradient(to right, 
+  #E8EAF6, 
+  #D8DDF0, 
+  #C8CCE8, 
+  #B8BAE0, 
+  #B0B1DC, 
+  #A8A8D8, 
+  #ffbe80
+);
+    border-radius: 5px;
+}
+
 /**
  * 标签页
  */
@@ -3087,32 +3108,10 @@ div.contentAbstract img {
 }
 
 
-.prompt-tip {
-    background-color: rgba(123, 247, 144, 0.2) !important;
-    border-left: 5px solid rgba(123, 247, 144, 0.8) !important;
-    border-radius: 0 8px 8px 0;
-}
 
-.prompt-info {
-    background-color: rgb(225 245 254) !important;
-    border-left: 5px solid rgba(0, 112, 203, 0.8) !important;
-    border-radius: 0 8px 8px 0;
-}
-
-
-.prompt-warning {
-    background-color: rgb(255, 243, 205) !important;
-    border-left: 5px solid rgba(239, 156, 3, 0.8) !important;
-    border-radius: 0 8px 8px 0;
-}
-
-.prompt-danger {
-    background-color: rgba(248, 215, 218, 0.56) !important;
-    border-left: 5px solid rgba(223, 60, 48, 0.8) !important;
-    border-radius: 0 8px 8px 0;
-}
 
 /*自定义css*/
+/*自定义 color*/
 .color-gray {
     color: #AAA !important;
     background-color: transparent !important;
@@ -3132,7 +3131,7 @@ div.contentAbstract img {
 .color-light-gray:hover {
     color: #888 !important;
 }
-
+/*自定义 高斯模糊*/
 .blur {
     filter: blur(5px);
     transition: filter 0.3s;
@@ -3144,6 +3143,7 @@ div.contentAbstract img {
     font-style: normal !important;
 }
 
+/*自定义 图片位置*/
 .img-left {
     display: inline !important;
 }
@@ -3155,6 +3155,53 @@ div.contentAbstract img {
     margin-bottom: 1em !important;
 }
 
+/*自定义 背景色bg*/
+.bg-green{
+    background: rgba(123, 247, 144, 0.2) !important;
+    color:#4a5565 !important;
+}
+.bg-blue{
+    background: rgb(225 245 254) !important;
+    color:#4a5565 !important;
+}
+.bg-red{
+    background: rgba(248, 215, 218, 0.56) !important;
+    color:#4a5565 !important;
+}
+.bg-yellow{
+    background: rgb(255, 243, 205)!important;
+    color:#4a5565 !important;
+}
+.bg-purple{
+    background: #f3e8ff !important;
+    color:#4a5565 !important;
+}
+
+/*自定义 提示 tip*/
+.tip-green {
+    background-color: rgba(123, 247, 144, 0.2) !important;
+    border-left: 5px solid rgba(123, 247, 144, 0.8) !important;
+    border-radius: 0 8px 8px 0;
+}
+
+.tip-blue {
+    background-color: rgb(225 245 254) !important;
+    border-left: 5px solid rgba(0, 112, 203, 0.8) !important;
+    border-radius: 0 8px 8px 0;
+}
+
+
+.tip-yellow {
+    background-color: rgb(255, 243, 205) !important;
+    border-left: 5px solid rgba(239, 156, 3, 0.8) !important;
+    border-radius: 0 8px 8px 0;
+}
+
+.tip-red {
+    background-color: rgba(248, 215, 218, 0.56) !important;
+    border-left: 5px solid rgba(223, 60, 48, 0.8) !important;
+    border-radius: 0 8px 8px 0;
+}
 
 .post-content img {
     /*
@@ -3984,24 +4031,40 @@ body.dark-mode .post-green-background{
     border: 1px #1d9a29 solid;
 }
 body.dark-mode .post-green-background ul,
-body.dark-mode .prompt-tip p,
-body.dark-mode .prompt-info p,
-body.dark-mode .prompt-warning p,
-body.dark-mode .prompt-danger p{
-    color:#cbcbcb;
+body.dark-mode .tip-green p,
+body.dark-mode .tip-blue p,
+body.dark-mode .tip-yellow p,
+body.dark-mode .tip-red p{
+    color:#cbcbcb !important;
 }
-body.dark-mode .prompt-tip{
+body.dark-mode .bg-blue,
+body.dark-mode .bg-green,
+body.dark-mode .bg-red,
+body.dark-mode .bg-yellow,
+body.dark-mode .bg-purple{
+    color:#ebe7e7 !important;
+}
+
+body.dark-mode .tip-green,
+body.dark-mode .bg-green{
     background-color:rgb(103 209 121 / 20%) !important;
 }
-body.dark-mode .prompt-info{
+body.dark-mode .tip-blue,
+body.dark-mode .bg-blue{
    background-color:rgb(111 142 157) !important;
 }
-body.dark-mode .prompt-warning{
+body.dark-mode .tip-yellow,
+body.dark-mode .bg-yellow{
    background-color:rgb(179 166 125) !important;
 }
-body.dark-mode .prompt-danger{
+body.dark-mode .tip-red,
+body.dark-mode .bg-red{
    background-color:rgb(127 75 80 / 56%) !important;
 }
+body.dark-mode .bg-purple{
+   background-color:#91859d !important;
+}
+
 body.dark-mode .color-light-gray{
     color: var(--box-color-dark) !important;
 }

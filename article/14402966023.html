@@ -39,6 +39,8 @@
     
 </head>
 <body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
     <script>
           (function () {
             var darkMode = localStorage.getItem("darkMode");
@@ -71,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">228</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">695</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">228 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">32</a>
+                    <a name="个人博客" style="" class="articleCount">35</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -169,12 +171,12 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">44</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -356,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>228</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>114.9k</p>
+                  <p>115.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -368,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-01 17:21:28 +0800">
-                    2025/09/01
+                  <p id="current-date" data-value="2025-09-10 17:38:30 +0800">
+                    2025/09/10
                   </p>
                 </li>
               </ul>
@@ -574,26 +576,31 @@ reference_links:
 </code></pre></div></div>
 <p>效果：<code class="language-plaintext highlighter-rouge">linux</code> <code class="language-plaintext highlighter-rouge">iOS</code> <code class="language-plaintext highlighter-rouge">HTML5</code> <code class="language-plaintext highlighter-rouge">小程序</code> <code class="language-plaintext highlighter-rouge">php</code> <code class="language-plaintext highlighter-rouge">APIClound</code></p>
 
+<p>语法：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`绿色`{:.bg-green} `蓝色`{:.bg-blue} `黄色`{:.bg-yellow} `红色`{:.bg-red} `紫色`{:.bg-purple}
+</code></pre></div></div>
+<p>效果：<code class="language-plaintext bg-green highlighter-rouge">绿色</code> <code class="language-plaintext bg-blue highlighter-rouge">蓝色</code> <code class="language-plaintext bg-yellow highlighter-rouge">黄色</code> <code class="language-plaintext bg-red highlighter-rouge">红色</code> <code class="language-plaintext bg-purple highlighter-rouge">紫色</code></p>
+
 <h4 id="3-块引用">3. 块引用</h4>
 <blockquote>
   <p>此行显示块引用，使用方法：&gt; + 空格</p>
 </blockquote>
 
 <h4 id="4-提示">4. 提示</h4>
-<blockquote class="prompt-tip">
-  <p>显示<code class="language-plaintext highlighter-rouge">tip</code>类型提示符的示例。使用方法：块引用 + {: .prompt-tip }</p>
+<blockquote class="tip-green">
+  <p>显示<code class="language-plaintext highlighter-rouge">tip</code>类型提示符的示例。使用方法：块引用 + {: .tip-green }</p>
 </blockquote>
 
-<blockquote class="prompt-info">
-  <p>显示<code class="language-plaintext highlighter-rouge">info</code>类型提示符的示例。使用方法：块引用 + {: .prompt-info }</p>
+<blockquote class="tip-blue">
+  <p>显示<code class="language-plaintext highlighter-rouge">info</code>类型提示符的示例。使用方法：块引用 + {: .tip-blue }</p>
 </blockquote>
 
-<blockquote class="prompt-warning">
-  <p>显示<code class="language-plaintext highlighter-rouge">warning</code>类型提示符的示例。使用方法：块引用 + {: .prompt-warning }</p>
+<blockquote class="tip-yellow">
+  <p>显示<code class="language-plaintext highlighter-rouge">warning</code>类型提示符的示例。使用方法：块引用 + {: .tip-yellow }</p>
 </blockquote>
 
-<blockquote class="prompt-danger">
-  <p>显示<code class="language-plaintext highlighter-rouge">danger</code>类型提示符的示例。使用方法：块引用 + {: .prompt-danger }</p>
+<blockquote class="tip-red">
+  <p>显示<code class="language-plaintext highlighter-rouge">danger</code>类型提示符的示例。使用方法：块引用 + {: .tip-red }</p>
 </blockquote>
 
 <h4 id="5-卡片提示">5. 卡片提示</h4>
@@ -1006,7 +1013,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.105</span>
+            <span>4.10.106</span>
         </div>
     </div>
 </footer>
@@ -1149,7 +1156,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.105",
+                "%c版本号 %c V4.10.106",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1491,6 +1498,24 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
   }
 
   const postUrls = [
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
        
         
           "/article/17486910472",
@@ -2484,7 +2509,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <script src="/assets/js/themeToggle.js"></script>
 <!-- 节假日 左边栏 -->
 <script src="/assets/js/countdown.js"></script>
-
 
 
 </html>

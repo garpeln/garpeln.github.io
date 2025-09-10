@@ -39,6 +39,8 @@
     
 </head>
 <body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
     <script>
           (function () {
             var darkMode = localStorage.getItem("darkMode");
@@ -71,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">228</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">695</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -116,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">228 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -159,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">32</a>
+                    <a name="个人博客" style="" class="articleCount">35</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -169,12 +171,12 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">44</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -356,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>228</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>114.9k</p>
+                  <p>115.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -368,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-01 17:21:28 +0800">
-                    2025/09/01
+                  <p id="current-date" data-value="2025-09-10 17:38:30 +0800">
+                    2025/09/10
                   </p>
                 </li>
               </ul>
@@ -840,7 +842,146 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16043955947" target="_blank">应用内环境切换</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-11-03</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#测试" target="_blank">测试</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#预发" target="_blank">预发</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#正式" target="_blank">正式</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">需求说明
+
+  可以随意切换环境状态
+  支持自定义环境地址
+  支持关闭切换环境功能
+  恢复默认设置
+
+
+实现效果
+
+
+核心实现
+
+GPAPIManager.h
+
+#import &lt;Foundation/Foundation.h&gt;
+
+#define     HOST_TYPE       0
+
+
+
+#if HOST_TYPE == 0
+#define kIsProduction       @"0" // 0 开发环境 1生产环境 可以用于极光推送等
+
+#elif HOST...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16043955947" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16017022152" target="_blank">微信小程序（Flex布局-容器属性）</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-10-03</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
+                    微信小程序
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#微信小程序" target="_blank">微信小程序</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#Flex布局" target="_blank">Flex布局</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#容器" target="_blank">容器</a>
+                             </span>  </div>  
+            <div class="contentAbstract">前言
+微信小程序 View视图标签支持两种布局方式：Block 和 Flex
+
+注意：
+所有 View 默认都是 block浮动布局，所以如果要使用 flex 布局的话需要进行显式声明
+
+
+容器与项目元素
+日常开发中，采用flex布局的元素，一般简称为“容器”  
+容器内的元素简称为“项目”或者“元素”  
+
+
+主轴与交叉轴
+在介绍各个属性之前，需要先明确一个坐标轴
+水平方向的是主轴（main axis），垂直方向的是交叉轴（cross axis）。下图为默认情况下。
+
+
+项目是在主轴上排...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16017022152" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1300,112 +1441,6 @@ dispatch_async(globalQueue, ^{
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15861494710" target="_blank">iOS多线程：GCD (三)</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-04-06</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#Dispatch" target="_blank">Dispatch</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">什么是CGD呢？以下摘自苹果的官方说明。
-
-  Grand Central Dispatch (GCD) 是异步执行任务的技术之一。应用程序中记述的线程管理用的代码是在系统级中实现的。开发者只需要定义想要执行的任务并追加到适当的Dispatch Queue中，GCD就能生成必要的线程并执行任务。
-  也就是说，GCD用我们难以置信的非常简洁的方法，实现了极为复杂的多线程编程。本文将罗列GCD的API及其用法实例来帮助大家了解GCD。
-
-1、 GCD的队列和任务
-GCD中有两个核心的概念：任...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15861494710" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15860813363" target="_blank">iOS多线程：NSThread (二)</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-04-05</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#NSThread" target="_blank">NSThread</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#线程" target="_blank">线程</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">NSThread 是苹果官方提供的，简单易用，可以直接操作线程对象。不过也需要需要程序员自己管理线程的生命周期(主要是创建)，我们在开发的过程中偶尔使用 NSThread。比如我们会经常调用[NSThread currentThread]来显示当前的进程信息。
-
-1. 创建、启动线程
-
-  先创建线程，再启动线程
-
-
-// 1. 创建线程
-NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15860813363" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1508,7 +1543,7 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.105</span>
+            <span>4.10.106</span>
         </div>
     </div>
 </footer>
@@ -1651,7 +1686,7 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.105",
+                "%c版本号 %c V4.10.106",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1912,6 +1947,24 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
   }
 
   const postUrls = [
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
        
         
           "/article/17486910472",
@@ -2905,7 +2958,6 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
 <script src="/assets/js/themeToggle.js"></script>
 <!-- 节假日 左边栏 -->
 <script src="/assets/js/countdown.js"></script>
-
 
 
 </html>

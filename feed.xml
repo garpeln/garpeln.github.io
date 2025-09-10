@@ -6,6 +6,135 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个追求简洁、高效，专注记录生活点滴、分享技术成长、共享实用资源的个人优秀博客！趁年轻，做自己想做的！欢迎你来这里交流互动，一起探索精彩世界，开启知识与心灵的非凡旅程。</description>
     
       
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <item>
+          <title>整蛊代码：你屏幕上有根毛</title>
+          <link>https://gorpeln.top/article/17499800077</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17499800077</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 15 Jun 2025 17:33:27 +0800</pubDate>
+          <description>&lt;p&gt;我看评论很多人问主页上显示的这跟毛，可以直接放到自己博客，仅为娱乐，请勿滥用哦。&lt;/p&gt;
+
+&lt;p&gt;以下是优化后的完整 js 代码，将代码插入到你的网页中即可看到效果！ 代码中的图片地址可能后续会失效，建议保存到本地使用。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/***
+ * 愚人节彩蛋 - 你屏幕上有根毛
+ * 提示：仅为娱乐，请勿滥用
+ * 整理：gorpeln https://gorpeln.top/
+ */
+!function() {
+    var bottom = Math.floor(60 * Math.random()),
+        right = Math.floor(50 * Math.random()),
+        rotate = Math.floor(360 * Math.random());
+    var foolsEgg = document.createElement(&quot;img&quot;);
+    foolsEgg.src = &quot;https://img.gorpeln.top/blog/20250615173327311.png&quot;;
+    foolsEgg.style.position = &quot;fixed&quot;; 
+    foolsEgg.style.bottom = &quot;&quot;.concat(bottom, &quot;%&quot;);
+    foolsEgg.style.right = &quot;&quot;.concat(right, &quot;%&quot;); 
+    foolsEgg.style.zIndex = &quot;9999&quot;; 
+    foolsEgg.style.pointerEvents = &quot;none&quot;;
+    foolsEgg.style.width = &quot;40%&quot;;
+    foolsEgg.style.maxWidth = &quot;190px&quot;;
+    foolsEgg.style.transform = &quot;&quot;.concat(&quot;rotate(&quot;, rotate, &quot;deg)&quot;); 
+    document.body.append(foolsEgg);
+} ();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;script&gt;
+/***
+ * 愚人节彩蛋 - 你屏幕上有根毛
+ * 提示：仅为娱乐，请勿滥用
+ * 整理：gorpeln https://gorpeln.top/
+ */
+!function() {
+    var bottom = Math.floor(60 * Math.random()),
+        right = Math.floor(50 * Math.random()),
+        rotate = Math.floor(360 * Math.random());
+    var foolsEgg = document.createElement(&quot;img&quot;);
+    foolsEgg.src = &quot;https://img.gorpeln.top/blog/20250615173327311.png&quot;;
+    foolsEgg.style.position = &quot;fixed&quot;; 
+    foolsEgg.style.bottom = &quot;&quot;.concat(bottom, &quot;%&quot;);
+    foolsEgg.style.right = &quot;&quot;.concat(right, &quot;%&quot;); 
+    foolsEgg.style.zIndex = &quot;9999&quot;; 
+    foolsEgg.style.pointerEvents = &quot;none&quot;;
+    foolsEgg.style.width = &quot;40%&quot;;
+    foolsEgg.style.maxWidth = &quot;190px&quot;;
+    foolsEgg.style.transform = &quot;&quot;.concat(&quot;rotate(&quot;, rotate, &quot;deg)&quot;); 
+    document.body.append(foolsEgg);
+} ();
+&lt;/script&gt;
+
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>博客阅读进度条</title>
+          <link>https://gorpeln.top/article/17491980488</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17491980488</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Fri, 06 Jun 2025 16:20:48 +0800</pubDate>
+          <description>&lt;p&gt;将下方代码放到头部HTML代码内&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;percentageCounter&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;css代码：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- 阅读进度条开始 --&amp;gt;
+&amp;lt;style type=&quot;text/css&quot;&amp;gt;
+    #percentageCounter{
+        position:fixed; 
+        left:0; top:0; 
+        height:3px; 
+        z-index:99999; 
+        /*绿红色*/
+        /*background-image: linear-gradient(to right, #339933,#FF6666);*/
+        /*白蓝色*/
+        background-image: linear-gradient(to right, #E8EAF6,#C5CAE9,#9FA8DA,#7986CB,#5C6BC0,#3F51B5,#3949AB,#303F9F,#283593,#1A237E);
+        border-radius:5px;
+    }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;js代码：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;    
+    $(window).scroll(function() {
+        var a = $(window).scrollTop(),
+        c = $(document).height(),
+        b = $(window).height();
+        scrollPercent = a / (c - b) * 100;
+        scrollPercent = scrollPercent.toFixed(1);
+        $(&quot;#percentageCounter&quot;).css({
+            width: scrollPercent + &quot;%&quot;
+        });
+    }).trigger(&quot;scroll&quot;);
+&amp;lt;/script&amp;gt;
+&amp;lt;!-- 阅读进度条结束 --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        </item>
+      
+    
+      
         <item>
           <title>手机真的在监听你的谈话？</title>
           <link>https://gorpeln.top/article/17486910472</link>
@@ -1877,593 +2006,6 @@ if __name__ == &quot;__main__&quot;:
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPO_NAME&lt;/code&gt;：仓库链接后面的就是仓库名，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;upyun_images_sync&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856746.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BRANCH_NAME&lt;/code&gt;：项目分支名，一般为master/main，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;master&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>博客常见问题</title>
-          <link>https://gorpeln.top/article/17265361548</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17265361548</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Tue, 17 Sep 2024 09:22:34 +0800</pubDate>
-          <description>
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;博客目标？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;简洁、高效&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;如何联系博主？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;可以通过 页面留言 或 邮件 联系博主&lt;text class=&quot;problems-detail-light&quot;&gt;（ 注意将邮件地址中的*替换掉 ）&lt;/text&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;评论加载不出来？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;博客已开启CDN，整体访问速度较快&lt;br /&gt;但博客评论、公告、实验室等功能采用不同域名访问，可能存在无法访问的情况&lt;br /&gt;如果可以，请科学上网，或者多次刷新加载&lt;text class=&quot;problems-detail-light&quot;&gt;（5-6次）&lt;/text&gt;，就可以正常展示&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;为什么看到博客更新时间总是更新，但是具体博文却没见更新呢？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;一方面，博客开启了CDN，最新内容有一定的延时&lt;br /&gt;另一方面，博客中的一些内容仅限个人查看，并不会公开展示&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;博客使用的什么主题？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;本博客没有使用任何主题，是博主根据自己喜好和技术能力编写的&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;如何快速滑动到最底部或最顶部？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;电脑端 双击向下按键快速到底部，双击向上按键快速到顶部，或点击页面右侧按键操作&lt;br /&gt;手机端 向上或向下滑过菜单按钮实现快速到页面顶部和底部&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;博客版本号？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;当前博客版本号为：&lt;text class=&quot;problems-version-detail problems-detail-strong&quot;&gt;x.x.x&lt;/text&gt;&lt;br /&gt;第一位为博客大版本号；第二位为博客运行年份；第三位为年度内提交修改次数，具体数值动态变化&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;博客成长记录？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;&lt;a href=&quot;/record&quot; target=&quot;_blank&quot;&gt;查看博客成长记录&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;友链相关问题？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;&lt;a href=&quot;/links#problem&quot; target=&quot;_blank&quot;&gt;查看友链相关问题&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;博客相关协议？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;&lt;a href=&quot;/help/agreements&quot; target=&quot;_blank&quot;&gt;查看博客相关协议&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;blog-problem&quot;&gt;
-    &lt;p id=&quot;blog-problem-title&quot;&gt;其他问题？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;正在整理中...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
-    const elements = document.querySelectorAll(&apos;.problems-version-detail&apos;);
-    elements.forEach(function(element) {
-        element.textContent = &apos;4.10.105&apos;;
-    });
-});       
-&lt;/script&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>防止网站被恶意镜像</title>
-          <link>https://gorpeln.top/article/17245056864</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17245056864</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 24 Aug 2024 21:21:26 +0800</pubDate>
-          <description>&lt;h3 id=&quot;什么是网站镜像&quot;&gt;什么是网站镜像？&lt;/h3&gt;
-&lt;p&gt;网站镜像是指在互联网上出现一个与你的网站几乎一模一样的复制品，除了域名不同之外，其它所有内容都完全相同。这包括网站的布局、LOGO、版块结构等。&lt;/p&gt;
-
-&lt;p&gt;通常，网站被恶意镜像的情况主要有两种：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;完全镜像：这种情况是创建一个与您网站内容完全相同的站点，除了网址不同，其他一切都模仿您的设计和内容。&lt;/li&gt;
-  &lt;li&gt;内容抓取：这种情况常见于博彩网站，它们会恶意抓取您的网页内容，正常浏览时隐藏掉原有内容，显示的却是他们自己的广告。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126440.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240824212126440&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在上述例子中，明显属于第一种情况：对方镜像了我的网站布局和结构。这种行为属于灰色 SEO 和黑帽 SEO 手法，目的是为了借助我博客的权重和流量来提升他们自己网站的排名。 
-&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126441.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240824212126441&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;网站被镜像危害&quot;&gt;网站被镜像危害&lt;/h3&gt;
-&lt;p&gt;从搜索引擎来讲，会对搜索引擎抓取不利，影响原本网站的正常抓取和识别，可能会导致原网站权重丢失，也有可能带来一定的误伤，搜索引擎会对网站进行识别，如果发现是镜像站，会导致网站被搜索引擎屏蔽，将失去搜索引擎带来的流量（这对个人博客来说是致命的）。&lt;/p&gt;
-
-&lt;p&gt;对用户来讲，可能会被镜像网站欺骗，恶意广告插播或欺诈内容造成用户损失。&lt;/p&gt;
-
-&lt;h3 id=&quot;网站被镜像了怎么办&quot;&gt;网站被镜像了怎么办&lt;/h3&gt;
-&lt;h4 id=&quot;添加防镜像跳转代码&quot;&gt;添加防镜像跳转代码&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&quot;zh&quot;&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
-&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&amp;gt;
-&amp;lt;title&amp;gt;not mirroring&amp;lt;/title&amp;gt;
-&amp;lt;style&amp;gt;
-    .alert-message {
-        position: fixed;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f8d7da;
-        color: #721c24;
-        padding: 20px;
-        z-index: 10000;
-        opacity: 1;
-        transition: opacity 3s;
-        border-radius:16px;
-    }
-    .alert-message.fade-out {
-        opacity: 0;
-    }
-&amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;script&amp;gt;
-(function () {
-    // 定义合法域名列表并Base64编码
-    var validDomains = [&apos;Z29ycGVsbi50b3A=&apos;]; // gorpeln.top
-    var redirectUrl = &apos;aHR0cHM6Ly9nb3JwZWxuLnRvcA==&apos;; // https://gorpeln.top
-    var hostname = document.location.hostname + (document.location.port ? &apos;:&apos; + document.location.port : &apos;&apos;);
-
-    function createWatermark(text) {
-        var watermarkDiv = document.createElement(&apos;div&apos;);
-        watermarkDiv.style.pointerEvents = &apos;none&apos;;
-        watermarkDiv.style.position = &apos;fixed&apos;;
-        watermarkDiv.style.top = &apos;0&apos;;
-        watermarkDiv.style.left = &apos;-5%&apos;;
-        watermarkDiv.style.width = &apos;110%&apos;;
-        watermarkDiv.style.height = &apos;100%&apos;;
-        watermarkDiv.style.zIndex = &apos;9999&apos;;
-        watermarkDiv.style.opacity = &apos;0.1&apos;;
-        watermarkDiv.style.background = &apos;transparent&apos;;
-        watermarkDiv.style.overflow = &apos;hidden&apos;;
-        watermarkDiv.style.display = &apos;flex&apos;;
-        watermarkDiv.style.justifyContent = &apos;center&apos;;
-        watermarkDiv.style.alignItems = &apos;center&apos;;
-        watermarkDiv.style.flexWrap = &apos;wrap&apos;;
-
-        var watermarkText = document.createElement(&apos;div&apos;);
-        watermarkText.innerText = text;
-        watermarkText.style.color = &apos;black&apos;;
-        watermarkText.style.fontSize = &apos;30px&apos;;
-        watermarkText.style.transform = &apos;rotate(-30deg)&apos;;
-        watermarkText.style.whiteSpace = &apos;nowrap&apos;;
-        watermarkText.style.margin = &apos;80px&apos;;
-
-        for (var i = 0; i &amp;lt; 100; i++) {
-            watermarkDiv.appendChild(watermarkText.cloneNode(true));
-        }
-
-        document.body.appendChild(watermarkDiv);
-    }
-
-    function showAlertMessage(message) {
-        var alertMessage = document.createElement(&apos;div&apos;);
-        alertMessage.className = &apos;alert-message&apos;;
-        alertMessage.innerText = message;
-
-        document.body.appendChild(alertMessage);
-
-        // 3秒后添加fade-out类，使消息淡出
-        setTimeout(function() {
-            alertMessage.classList.add(&apos;fade-out&apos;);
-
-            // 再等1秒（总共4秒）后删除元素
-            setTimeout(function() {
-                if (alertMessage.parentNode) {
-                    alertMessage.parentNode.removeChild(alertMessage);
-                }
-            }, 200);
-        }, 3000);
-
-        // 5秒后跳转
-        setTimeout(function() {
-            window.location.replace(atob(redirectUrl));
-        }, 5000);
-    }
-
-    // 检查当前域名是否在合法域名列表中
-    if (!validDomains.includes(btoa(hostname))) {
-        createWatermark(atob(validDomains[0])); // 使用合法域名列表中的第一个元素 
-        showAlertMessage(&quot;警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！&quot;);
-    }
-})();
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;代码目的&quot;&gt;代码目的&lt;/h4&gt;
-&lt;p&gt;这个代码的目的是，利用对方会无脑反代一切内容的机制，在所有页面内都插入检测 JS 代码，在网友访问时，检测当前域名是否为所设定自己博客的域名，如果不是所设定的博客域名则在网站背景中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;嵌入带域名水印&lt;/code&gt;并使用 confirm() 打断页面渲染，并弹出&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;弹窗警示&lt;/code&gt;用户&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自动跳转回源站&lt;/code&gt;。
-并且使用 JavaScript 动态插入水印 div 并不设置 id，class 等标识，防止对方通过u正则表达式匹配删除特定 div 元素。&lt;/p&gt;
-
-&lt;h4 id=&quot;代码升级&quot;&gt;代码升级&lt;/h4&gt;
-&lt;p&gt;因为 JavaScript 仍然是以明文方式暴露在 HTML 中，有正则表达式匹配风险，所以如果对方使用正则表达式破坏水印 JavaScript，则会导致水印无法正常显示。反制方法也很简单：使用 JavaScript 混淆。&lt;/p&gt;
-
-&lt;p&gt;这里推荐一个 GitHub 上一个项目：https://github.com/javascript-obfuscator/javascript-obfuscator，该项目可以对 JavaScript 进行混淆，官方也提供了一个在线工具：https://obfuscator.io/#code&lt;/p&gt;
-
-&lt;p&gt;我们可以借此对水印部分的 JavaScript 进行混淆，防止对水印 JavaScript 部分进行正则表达式匹配破坏，上面代码经过中等级混淆后如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function _0x1244(_0x2e9cd0,_0x16f71d){var _0x2ccdb5=_0x2ccd();return _0x1244=function(_0x124436,_0x222862){_0x124436=_0x124436-0x1d3;var _0x36d7fe=_0x2ccdb5[_0x124436];return _0x36d7fe;},_0x1244(_0x2e9cd0,_0x16f71d);}function _0x2ccd(){var _0x519334=[&apos;4159181SScBxf&apos;,&apos;center&apos;,&apos;110%&apos;,&apos;pointerEvents&apos;,&apos;80px&apos;,&apos;left&apos;,&apos;fixed&apos;,&apos;parentNode&apos;,&apos;117310NCrasO&apos;,&apos;width&apos;,&apos;33428dRtpro&apos;,&apos;wrap&apos;,&apos;hostname&apos;,&apos;fade-out&apos;,&apos;background&apos;,&apos;flex&apos;,&apos;30px&apos;,&apos;85638ogEylA&apos;,&apos;none&apos;,&apos;black&apos;,&apos;0.1&apos;,&apos;flexWrap&apos;,&apos;location&apos;,&apos;opacity&apos;,&apos;transform&apos;,&apos;10FNisEK&apos;,&apos;whiteSpace&apos;,&apos;position&apos;,&apos;body&apos;,&apos;100%&apos;,&apos;createElement&apos;,&apos;rotate(-30deg)&apos;,&apos;port&apos;,&apos;transparent&apos;,&apos;hidden&apos;,&apos;36vpXQzg&apos;,&apos;1078040hBJRkh&apos;,&apos;overflow&apos;,&apos;4510488GmCyEv&apos;,&apos;display&apos;,&apos;div&apos;,&apos;1243HhykLg&apos;,&apos;294OWGOMk&apos;,&apos;alert-message&apos;,&apos;-5%&apos;,&apos;margin&apos;,&apos;cloneNode&apos;,&apos;justifyContent&apos;,&apos;appendChild&apos;,&apos;alignItems&apos;,&apos;fontSize&apos;,&apos;zIndex&apos;,&apos;警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！&apos;,&apos;add&apos;,&apos;4592382EinlGm&apos;,&apos;36cjOBwx&apos;,&apos;innerText&apos;,&apos;removeChild&apos;,&apos;5neLlLf&apos;,&apos;style&apos;,&apos;includes&apos;];_0x2ccd=function(){return _0x519334;};return _0x2ccd();}(function(_0x4df09c,_0x8f741a){var _0x8f2856=_0x1244,_0x22b1d8=_0x4df09c();while(!![]){try{var _0x5f3be6=-parseInt(_0x8f2856(0x1f2))/0x1*(parseInt(_0x8f2856(0x201))/0x2)+-parseInt(_0x8f2856(0x1e1))/0x3+-parseInt(_0x8f2856(0x20e))/0x4*(-parseInt(_0x8f2856(0x1e5))/0x5)+-parseInt(_0x8f2856(0x1f9))/0x6*(-parseInt(_0x8f2856(0x1d5))/0x7)+-parseInt(_0x8f2856(0x20c))/0x8*(-parseInt(_0x8f2856(0x20b))/0x9)+parseInt(_0x8f2856(0x1f0))/0xa*(parseInt(_0x8f2856(0x1d4))/0xb)+parseInt(_0x8f2856(0x1e2))/0xc*(-parseInt(_0x8f2856(0x1e8))/0xd);if(_0x5f3be6===_0x8f741a)break;else _0x22b1d8[&apos;push&apos;](_0x22b1d8[&apos;shift&apos;]());}catch(_0x3801aa){_0x22b1d8[&apos;push&apos;](_0x22b1d8[&apos;shift&apos;]());}}}(_0x2ccd,0xe404e),(function(){var _0x2a9a37=_0x1244,_0x3507a2=[&apos;Z29ycGVsbi50b3A=&apos;],_0x49805e=&apos;aHR0cHM6Ly9nb3JwZWxuLnRvcA==&apos;,_0x2e6736=document[&apos;location&apos;][_0x2a9a37(0x1f4)]+(document[_0x2a9a37(0x1fe)][_0x2a9a37(0x208)]?&apos;:&apos;+document[&apos;location&apos;][&apos;port&apos;]:&apos;&apos;);function _0xc49f33(_0x38600e){var _0x202c5e=_0x2a9a37,_0x2660f1=document[&apos;createElement&apos;](&apos;div&apos;);_0x2660f1[&apos;style&apos;][_0x202c5e(0x1eb)]=_0x202c5e(0x1fa),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x203)]=_0x202c5e(0x1ee),_0x2660f1[&apos;style&apos;][&apos;top&apos;]=&apos;0&apos;,_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x1ed)]=_0x202c5e(0x1d7),_0x2660f1[&apos;style&apos;][_0x202c5e(0x1f1)]=_0x202c5e(0x1ea),_0x2660f1[&apos;style&apos;][&apos;height&apos;]=_0x202c5e(0x205),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x1de)]=&apos;9999&apos;,_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x1ff)]=_0x202c5e(0x1fc),_0x2660f1[&apos;style&apos;][_0x202c5e(0x1f6)]=_0x202c5e(0x209),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x20d)]=_0x202c5e(0x20a),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x20f)]=_0x202c5e(0x1f7),_0x2660f1[&apos;style&apos;][_0x202c5e(0x1da)]=_0x202c5e(0x1e9),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x1dc)]=_0x202c5e(0x1e9),_0x2660f1[_0x202c5e(0x1e6)][_0x202c5e(0x1fd)]=_0x202c5e(0x1f3);var _0x323b98=document[_0x202c5e(0x206)](_0x202c5e(0x1d3));_0x323b98[_0x202c5e(0x1e3)]=_0x38600e,_0x323b98[_0x202c5e(0x1e6)][&apos;color&apos;]=_0x202c5e(0x1fb),_0x323b98[_0x202c5e(0x1e6)][_0x202c5e(0x1dd)]=_0x202c5e(0x1f8),_0x323b98[_0x202c5e(0x1e6)][_0x202c5e(0x200)]=_0x202c5e(0x207),_0x323b98[&apos;style&apos;][_0x202c5e(0x202)]=&apos;nowrap&apos;,_0x323b98[_0x202c5e(0x1e6)][_0x202c5e(0x1d8)]=_0x202c5e(0x1ec);for(var _0x17c22c=0x0;_0x17c22c&amp;lt;0x64;_0x17c22c++){_0x2660f1[_0x202c5e(0x1db)](_0x323b98[_0x202c5e(0x1d9)](!![]));}document[_0x202c5e(0x204)][_0x202c5e(0x1db)](_0x2660f1);}function _0x1aa9d7(_0x4e583e){var _0x37bf9d=_0x2a9a37,_0x4d1163=document[_0x37bf9d(0x206)](&apos;div&apos;);_0x4d1163[&apos;className&apos;]=_0x37bf9d(0x1d6),_0x4d1163[_0x37bf9d(0x1e3)]=_0x4e583e,document[_0x37bf9d(0x204)][_0x37bf9d(0x1db)](_0x4d1163),setTimeout(function(){var _0x3d022c=_0x37bf9d;_0x4d1163[&apos;classList&apos;][_0x3d022c(0x1e0)](_0x3d022c(0x1f5)),setTimeout(function(){var _0x68fa28=_0x3d022c;_0x4d1163[_0x68fa28(0x1ef)]&amp;amp;&amp;amp;_0x4d1163[_0x68fa28(0x1ef)][_0x68fa28(0x1e4)](_0x4d1163);},0xc8);},0xbb8),setTimeout(function(){var _0x528155=_0x37bf9d;window[_0x528155(0x1fe)][&apos;replace&apos;](atob(_0x49805e));},0x1388);}!_0x3507a2[_0x2a9a37(0x1e7)](btoa(_0x2e6736))&amp;amp;&amp;amp;(_0xc49f33(atob(_0x3507a2[0x0])),_0x1aa9d7(_0x2a9a37(0x1df)));}()));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;效果示意&quot;&gt;效果示意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240824212126442.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240824212126442&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;其他方法&quot;&gt;其他方法&lt;/h3&gt;
-&lt;p&gt;1、向 google、域名注册商 、域名解析商举报&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;cloudflare 举报：&lt;em class=&quot;color-gray&quot;&gt;https://abuse.cloudflare.com/dmca&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;google 举报：&lt;em class=&quot;color-gray&quot;&gt;https://support.google.com/legal/answer/3110420?visit_id=638624243885343005-291301472&amp;amp;rd=1&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;阿里云举报：&lt;em class=&quot;color-gray&quot;&gt;https://report.aliyun.com/form/phishingForm&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2、设置 IP 黑名单&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;进入自己的服务器设置或者是虚拟主机管理，找到防火墙有的叫黑名单，把对方的 IP 地址添加进行，屏蔽访问和请求自己网站服务器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;3、向谷歌申请移除镜像站的搜索结果&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;因为它会原样照搬反代网页，那其实你可以通过HTML 标记验证方式在 Google Search Console 里把他的反代域名也认证到你自己名下，然后在Google Search Console 向谷歌申请移除搜索结果，嘿嘿😋&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>Follow - 订阅一切</title>
-          <link>https://gorpeln.top/article/17202356559</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17202356559</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 06 Jul 2024 11:14:15 +0800</pubDate>
-          <description>&lt;h3 id=&quot;follow是什么&quot;&gt;Follow是什么？&lt;/h3&gt;
-&lt;p&gt;Follow 是一款面向未来的信息浏览器，致力于将各种信息源整合在一个平台上，让用户便捷地获取和管理资讯。无论是传统的 RSS 订阅、社交媒体账号、博客、播客，还是实时通知，Follow 都能帮您一站式浏览。界面简洁，操作迅速，为用户提供现代化的阅读体验。&lt;/p&gt;
-
-&lt;p&gt;Follow的&lt;strong&gt;slogan&lt;/strong&gt;是：Next generation information browser&lt;/p&gt;
-
-&lt;p&gt;Follow的主要特色：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;信息一体化管理：&lt;em class=&quot;color-gray&quot;&gt;Follow 支持广泛的信息源，除了传统的 RSS，还包括 Twitter、Instagram、YouTube 等社交平台，用户可以在一个界面中浏览全部订阅内容，方便直观。&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;智能化 AI 功能：&lt;em class=&quot;color-gray&quot;&gt;内置的 AI 不仅能实现内容翻译和摘要，还能每日生成两次个性化报告，提炼重要信息，帮助用户轻松跟踪最关心的动态。此外，Follow 还能根据您的订阅喜好建立个性化知识库。&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;区块链激励机制：&lt;em class=&quot;color-gray&quot;&gt;Follow 通过区块链技术为活跃用户和内容创作者提供动力代币奖励，鼓励用户积极参与和分享内容，提升整体使用体验。&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;社交功能：&lt;em class=&quot;color-gray&quot;&gt;Follow 也具备社交平台属性，用户可以关注他人，分享订阅列表，发现新内容。支持与好友同步订阅列表，便捷地分享和发现优质资源。&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240706111415430.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240706111415430&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;follow的访问隐忧&quot;&gt;Follow的访问隐忧&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;由于大平台都可以进行订阅，这种行为在某种程度上会触动大平台的利益。&lt;/li&gt;
-  &lt;li&gt;follow的服务器并不在国内，且爬虫本身就自带法律风险。这些都有可能影响到国内对follow应用的访问。&lt;/li&gt;
-  &lt;li&gt;即使现在可以使用，也并不代表未来能一直访问（直连）。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;follow认证&quot;&gt;Follow认证&lt;/h3&gt;
-&lt;p&gt;Follow的另一个亮点是支持打赏功能，你可以给你喜欢的文章进行打赏，当然前提是这个文章所有者进行了Follow认证，打赏的金额才能进入到他的账户中去。Follow使用的打赏货币名为power，是一种区块链货币，按照官方的说法会根据在Follow上的活跃度和贡献值来获取power。&lt;/p&gt;
-
-&lt;h4 id=&quot;1获取认证码&quot;&gt;1.获取认证码&lt;/h4&gt;
-&lt;p&gt;在Follow中订阅自己博客，然后点击订阅源，申请认证（Claim），便可获取认证码。如下&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This message is used to verify that this feed (feedId:73252521066438656) belongs to me (userId:75520668589921280). Join me in enjoying the next generation information browser https://follow.is.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2验证认证码&quot;&gt;2.验证认证码&lt;/h4&gt;
-&lt;p&gt;在你自己博客中发布一篇博文，内容为刚生成的认证码，然后在Follow中再次点击申请认证（Claim），即可完成认证。认证完成后认证码的相关博文信息就可以删除了。&lt;/p&gt;
-
-&lt;h3 id=&quot;follow订阅&quot;&gt;Follow订阅&lt;/h3&gt;
-&lt;p&gt;目前gorpeln’s Blog已经过认证，在搜索框中直接输入『 gorpeln 』可直接订阅我的更新动态。或者直接填入gorpeln的RSS地址也是可以的 &lt;a href=&quot;https://gorpeln.top/feed.xml&quot;&gt;https://gorpeln.top/feed.xml&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240706111415431.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240706111415431&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;其他top订阅可以访问github开源项目&lt;a href=&quot;https://github.com/weekend-project-space/top-rss-list&quot;&gt;top-rss-list&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>双因素认证(2FA)实现原理</title>
-          <link>https://gorpeln.top/article/17196724432</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17196724432</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 29 Jun 2024 22:47:23 +0800</pubDate>
-          <description>&lt;p&gt;我们往往会在不同的网站上使用相同的密码，这样一旦一个网站账户的密码泄露，就会危及到其他使用相同密码的账户的安全，这也是最近的密码泄露事件造成如此大影响的原因。为了解决这个问题，一些网站在登录时要求除了输入账户密码之外，还需要输入另一个一次性密码，这就是常说的多步验证（多因子认证）。&lt;/p&gt;
-
-&lt;h3 id=&quot;多因子认证&quot;&gt;多因子认证&lt;/h3&gt;
-
-&lt;p&gt;多因子认证（Multi-factor Authentication），简称&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MFA&lt;/code&gt;。在现代网络安全领域，多因子认证已成为保护用户账户安全的重要手段，它要求用户提供两个或更多独立的认证因子，例如：账号密码+短信验证码、账号密码+邮箱验证码、账号密码+TOTP验证码等，当然对于Gtihub要求的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2FA&lt;/code&gt;，指的是Two-Factor Authentication双因子认证，与MFA的主要区别是认证因子的数量，从更广义的层面来看，2FA可以看作是MFA的一种特殊情况，即MFA的一个子集&lt;/p&gt;
-
-&lt;p&gt;MFA的主要目的是增强安全性。相比于单一的用户名和密码认证，MFA增加了额外的验证方式，从而显著降低了账户被入侵的风险。即便攻击者获得了账号的用户名和密码，仍需要其他认证因子才能访问账户，极大地提高了账户的安全性&lt;/p&gt;
-
-&lt;p&gt;常见的&lt;strong&gt;多因子认证&lt;/strong&gt;方式有：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;短信验证码&lt;/code&gt;：这种验证方式非常广泛，在用户在登录时，系统会发送一个一次性验证码到用户的手机上，用户则需要在登录页面输入这个验证码来完成身份验证，这种认证方式的优点是简单方便，用户无需额外的设备或应用就能完成二次验证，缺点则主要是会产生短信费用，同时也可能会受到SIM卡交换攻击或短信拦截&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;邮件验证码&lt;/code&gt;：系统发送一次性验证码到用户的电子邮箱，用户需要在登录页面输入该验证码完成验证，邮箱验证码使用也较为广泛，这种认证方式优点是易于实现和使用，用户无需额外设备，只要有邮箱即可，缺点则主要是邮件响应速度较慢，用户体验不佳，同时安全性较低，邮箱可能被黑客入侵&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;生物识别认证&lt;/code&gt;：使用指纹、面部识别或声纹等生物特征进行身份验证，常用于高安全性需求场景，如解锁智能手机或访问敏感系统。这种认证方式优点是安全性极高，唯一性强、用户体验也好，快速便捷，缺点主要是设备要求高，需要设备支持指纹、面部解锁等，其次一些场景无法支持，例如WEB端，同时也有隐私问题需考虑&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;硬件令牌&lt;/code&gt;：这种常见于财务系统，使用独立的硬件设备生成一次性密码或进行物理验证，用户将硬件令牌插入计算机或使用NFC读取器完成验证。优点是极高的安全性，同时也能防止网络攻击，因为它不依赖移动设备或互联网连接，缺点也比较明显，依赖硬件，成本比较高，使用不方便&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;基于时间的一次性密码&lt;/code&gt;（TOTP）：基于时间生成的一次性密码，有标准的算法，通过标准算法来生成验证码，有许多免费的应用或小程序都能生成，用户需要输入应用生成的验证码来完成身份验证。这种认证方式的主要优点是安全性高，不依赖网络传输，多数MFA应用免费提供，缺点则主要是用户需要额外安装并配置应用&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;基于事件的一次性密码&lt;/code&gt;（HOTP）：基于事件计数生成的一次性密码，类似于TOTP，但使用事件计数而非时间。适用于硬件令牌。这种认证方式的优点是不依赖时间同步，适用于硬件设备，缺点则主要是使用体验不如TOTP方便&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;推送通知&lt;/code&gt;：通过认证应用发送推送通知到用户的设备，用户只需点击“批准”或“拒绝”即可完成身份验证，例如之前遇到过的Google账号认证，会发送消息到你登录Google账号的可信手机上，点击确定就能登录。这种认证方式的优点是：用户体验好，方便快捷、更加安全，防止中间人攻击，缺点则是需要互联网连接、依赖移动设备，也不是所有设备都支持&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;安全问题&lt;/code&gt;：用户设置一系列安全问题，登录时需回答这些问题进行验证。这种认证方式的优点是实施简单，无需额外设备，缺点则主要是安全性较低，容易被猜测或社交工程攻击，长时间不使用还容易遗忘，例如我小时候申请的QQ号密保问题是：你的梦想是什么？现在已经完全想不起来答案了&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;其中，基于时间的一次性密码&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TOTP&lt;/code&gt;是一种非常流行且标准化的多因子认证方式，尤其是在Web系统中，例如阿里云、腾讯云、Github、Google等诸多知名网站都支持TOTP多因子认证，另外一些应用较广的运维相关开源软件也都加入了对TOTP二次认证的支持，例如CODO、Jumpserver等，甚至出现了多因子认证约等于TOTP的现象&lt;/p&gt;
-
-&lt;h3 id=&quot;totp&quot;&gt;TOTP&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240629224723401.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;2fa&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240629224723402.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;totp&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # T表示当前时间的unix时间戳，T0表示初始时间（一般为0，可省略）
-  # Period表示更新周期（一般为30秒）
-  # C表示基于时间生成的计数
-   C = (T - T0) / Period
-
-  # K：加密密码，作为HMAC密码算法输入，由于只有客户端和服务端共享，因此在不知道K的情况下，无法生成，保证安全性。
-  # C：计数器，客户端和服务端基于本地时间分别计算
-  # h：表示使用密码技术得到的一次密码（但是由于h长度较大，不适合作为验证码，因此需要进一步截取
-   h = HMAC(K, C)
-
-  # otp：一次密码，通过对h进行截取处理（这里的digit代表需要截取的位数，通常情况下为6）
-   otp = Trunc(h, digit)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TOTP&lt;/code&gt;（Time-Based One-Time Password）算法使用的是基于时间的一次性密码，这是一种广泛应用于两步验证过程的算法。TOTP的工作原理可以概括如下：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;HMAC算法&lt;/strong&gt;：TOTP是基于HMAC（Hash-Based Message Authentication Code）算法构建的，它结合了一个共享的秘密密钥和当前时间来生成一次性密码。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;共享密钥&lt;/strong&gt;：在设置Google Authenticator时，用户的设备和验证服务器之间会共享一个密钥。这个密钥是安全存储的，并且对于每个账户是唯一的。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;时间作为参数&lt;/strong&gt;：TOTP算法使用当前的时间作为变化因素。时间通常被分割成固定的时间片段（例如，每30秒一个片段）。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;生成一次性密码&lt;/strong&gt;：
-    &lt;ul&gt;
-      &lt;li&gt;首先，当前时间被转换为一个计数器值，这通常是自Unix纪元（1970年1月1日）以来的30秒间隔数。&lt;/li&gt;
-      &lt;li&gt;然后，使用HMAC算法结合这个计数器值和共享密钥来生成一个哈希值。&lt;/li&gt;
-      &lt;li&gt;最后，从这个哈希值中提取一个较短的数字序列，通常是6到8位数，作为一次性密码。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;验证一次性密码&lt;/strong&gt;：当用户输入一次性密码时，验证服务器也会独立生成一个密码，使用相同的共享密钥和当前时间。如果两者匹配，验证成功。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;TOTP的优点：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;密码动态生成&lt;/strong&gt;：由于密码是基于当前时间生成的，它每30秒就会变化一次，并且只能使用一次，这种机制有效防止了密码重用和暴力破解攻击，提高了账户的安全性&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;无需网络&lt;/code&gt;：生成密码不依赖于网络连接，因为它基于时间和共享密钥，这增加了安全性和可用性&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;成本低&lt;/strong&gt;：相比硬件令牌等其他MFA方式，TOTP的成本更低，用户只需在手机上安装一个免费的应用程序即可实现多因子认证，而无需购买额外的硬件设备。对于企业而言，这降低了部署MFA的成本和复杂性&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;标准化&lt;/strong&gt;：TOTP遵循RFC 6238标准，确保了其跨平台的兼容性和一致性&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em class=&quot;color-gray&quot;&gt;举一个不恰当但简单易懂的例子：首先使用手机扫描平台的二维码从服务器获取秘钥（假如为123456），那么TOTP客户端就可以根据秘钥和当前时间（假设为2024年09月12日16时48分15秒）生成一个6位的动态密码，时间截取日时分121648，123456×121648=15018175488直接截取后六位175488，那么48分的动态密码就是175488，同样的49分时，123456×121649=15018298944，得到动态密码为298944，这样当时间发生变化时每分钟都可以生成不一样的密码，同样的服务器也使用相同的方法根据秘钥和时间生成对应的密码，当你登录平台时手动输入TOTP客户端提供的动态密码给服务器，服务器会将结果与自己生成的密码比对，比对结果一致就可以正常登录了。当然这个例子只是帮助你理解TOTP，实际的商用环境下，加密方式肯定比我举例的这种方式复杂，需要考虑更多的因素，如果感兴趣可以去学习了解详细的TOTP算法。&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;totp客户端应用&quot;&gt;TOTP客户端应用&lt;/h3&gt;
-
-&lt;p&gt;TOTP的算法是公开的，所以生成TOTP验证码也较为简单，国内各大云厂商的APP或是一些小程序也都有提供虚拟MFA的功能，例如腾讯云助手小程序等等，知名的MFA应用主要有Google验证器（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Authenticator&lt;/code&gt;）和微软验证器（Microsoft Authenticator）&lt;/p&gt;
-
-&lt;h3 id=&quot;开启2fa&quot;&gt;开启2FA&lt;/h3&gt;
-
-&lt;p&gt;以Github为例开启2FA。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Settings -&amp;gt; Password &amp;amp; authentication -&amp;gt; Two-factor authentication -&amp;gt; Authenticator app&lt;/li&gt;
-  &lt;li&gt;生成绑定二维码&lt;/li&gt;
-  &lt;li&gt;TOTP 应用/插件扫码绑定&lt;/li&gt;
-  &lt;li&gt;登录账号后输入 TOTP 验证码&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;问题解答&quot;&gt;问题解答&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;1.时间T的值怎么选取？&lt;/strong&gt;   &lt;br /&gt;
-因为时间每时每刻都在变化，如果选择一个变化太快的T（例如从某一时间点开始的秒数），那么用户来不及输入密码。如果选择一个变化太慢的T（例如从某一时间点开始的小时数），那么第三方攻击者就有充足的时间去尝试所有可能的一次性密码（试想6位数字的一次性密码仅仅有10^6种组合），降低了密码的安全性。除此之外，变化太慢的T还会导致另一个问题。如果用户需要在短时间内两次登录账户，由于密码是一次性的不可重用，用户必须等到下一个一次性密码被生成时才能登录，这意味着最多需要等待59分59秒！这显然不可接受。综合以上考虑，Google选择了30秒作为时间片，T的数值为从Unix epoch（1970年1月1日 00:00:00）来经历的30秒的个数&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.不在同一间隔内如何处理？&lt;/strong&gt; &lt;br /&gt;
-由于网络延时、用户输入延迟等因素，可能当服务器端接收到一次性密码时，T的数值已经改变，这样就会导致服务器计算的一次性密码值与用户输入的不同，验证失败。解决这个问题个一个方法是，服务器计算当前时间片以及前面的n个时间片内的一次性密码值，只要其中有一个与用户输入的密码相同，则验证通过。当然，n不能太大，否则会降低安全性&lt;/p&gt;
-
-&lt;p&gt;如果客户端和服务器的时钟有偏差，会造成与上面类似的问题，也就是客户端生成的密码和服务端生成的密码不一致。但是，如果服务器通过计算前n个时间片的密码并且成功验证之后，服务器就知道了客户端的时钟偏差。因此，下一次验证时，服务器就可以直接将偏差考虑在内进行计算，而不需要进行n次计算&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.如何保证安全？&lt;/strong&gt;  &lt;br /&gt;
-在扫描 GitHub 给的绑定二维码时，如果被别人拍照、截图、数据劫持，二维码中的秘钥就会泄露，或者Authenticator 应用存储的秘钥被泄露，手机丢失、Authenticator 服务器被攻击等导致秘钥泄露，别人拿到了秘钥之后按照 TOTP 算法生成验证码肯定是有效的，不过前提是对方知道了你的 GitHub 的账号和密码。&lt;/p&gt;
-
-&lt;p&gt;所以，选择一款可靠的 Authenticator 应用很关键，建议使用大厂的应用或者开源应用，甚至自己开发一款 TOTP 验证码生成应用。&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>衣服的洗涤保养说明</title>
-          <link>https://gorpeln.top/article/17146497169</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17146497169</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Thu, 02 May 2024 19:35:16 +0800</pubDate>
-          <description>&lt;p&gt;你认真读过衣服上的洗衣符号嘛？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142831.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142831&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一般来说，主要有以下几类&lt;/p&gt;
-&lt;h3 id=&quot;水洗&quot;&gt;水洗&lt;/h3&gt;
-&lt;p&gt;基本符号是一个水盆&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142832.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142832&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;漂白&quot;&gt;漂白&lt;/h3&gt;
-&lt;p&gt;基本符号是一个三角形
-&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142833.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142833&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;干燥&quot;&gt;干燥&lt;/h3&gt;
-&lt;h4 id=&quot;自然干燥&quot;&gt;自然干燥&lt;/h4&gt;
-&lt;p&gt;自然干燥也就是悬挂晾干，基本符号是一个正方形
-&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142834.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142834&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;翻转干燥&quot;&gt;翻转干燥&lt;/h4&gt;
-&lt;p&gt;翻转干燥也就是烘干，正方形里面有个圆圈，也叫转笼翻转干燥&lt;/p&gt;
-
-&lt;p&gt;圆点表示所允许的最高温度，一个圆点为较低温度（60℃），两个圆点为常规温度（80℃）。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142835.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142835&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;熨烫&quot;&gt;熨烫&lt;/h3&gt;
-&lt;p&gt;基本符号是个熨斗&lt;/p&gt;
-
-&lt;p&gt;圆点表示熨斗底板的最高温度，一个圆点为110℃，二个圆点为150℃，三个圆点为200℃。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142836.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142836&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;专业纺织品维护&quot;&gt;专业纺织品维护&lt;/h3&gt;
-&lt;p&gt;基本符号为圆圈或圆形。包括专业干洗和专业湿洗&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240502170142837.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240502170142837&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;end&quot;&gt;END&lt;/h3&gt;
-&lt;p&gt;所以，最开始那个标签表示&lt;/p&gt;
-
-&lt;p&gt;最高30度，常规洗涤程序，不可漂白，悬挂晾干，熨烫熨斗底板最高温度110℃，不可干洗&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>倒计时关闭的JS 公告</title>
-          <link>https://gorpeln.top/article/17123887436</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17123887436</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 06 Apr 2024 15:32:23 +0800</pubDate>
-          <description>&lt;p&gt;这是一个简洁高效的公告通知系统，它能够帮助您在个人博客中迅速传达重要更新、临时公告或其他关键信息给每一位访问者，确保他们能及时获取最新的站点动态。&lt;/p&gt;
-
-&lt;p&gt;随着网络世界的日新月异，与读者保持有效沟通成为提升用户体验的关键环节之一。为了更好地服务于广大读者朋友，我在博客中集成了一套美观且功能齐全的公告通知模块。这套模块不仅具备直观醒目的视觉设计，还能灵活地调整样式、内容和显示时长，以满足各种场景需求。&lt;/p&gt;
-
-&lt;h3 id=&quot;源码下载&quot;&gt;源码下载&lt;/h3&gt;
-&lt;p&gt;文件下载：&lt;a href=&quot;https://github.com/gorpeln/noticeAlert&quot;&gt;https://github.com/gorpeln/noticeAlert&lt;/a&gt;  &lt;br /&gt;
-其他下载地址：&lt;a href=&quot;https://gorpeln.lanzoul.com/ivzv21wpf0ti&quot;&gt;https://gorpeln.lanzoul.com/ivzv21wpf0ti&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
-&lt;p&gt;放入要显示的页面 &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.css&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;head&amp;gt; 
-&amp;lt;!--其他引入--&amp;gt;
-&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/warning.min.css&quot; &amp;gt;
-&amp;lt;!--其他引入--&amp;gt;
-&amp;lt;/head&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.js&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &amp;lt;!-- 公告 --&amp;gt;
-&amp;lt;script src=&quot;../assets/js/warning.min.js&quot;&amp;gt; &amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-iziToast.show({
-    title: &apos;Hi&apos;,
-    message: &apos;本站启用新域名 gorpeln.top &apos;,
-    icon: &apos;fal fa-exclamation-circle&apos;,
-    color: &apos;yellow&apos;,
-    time: 90000
-});
-&amp;lt;/script&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;效果&quot;&gt;效果&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240406153223632.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240406153223632&quot; /&gt;&lt;/p&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>App更新总提醒缺少出口合规证明</title>
-          <link>https://gorpeln.top/article/17113627324</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17113627324</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Mon, 25 Mar 2024 18:32:12 +0800</pubDate>
-          <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
-&lt;p&gt;每次更新软件时，都要填写缺少出口合规证明，非常的麻烦。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212921.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240325183212921&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;解决方法&quot;&gt;解决方法&lt;/h3&gt;
-&lt;p&gt;其实在xcode中修改应用的plist来让你在提交之前就告知Apple合规证明这个事情。&lt;/p&gt;
-
-&lt;p&gt;添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ITSAppUsesNonExemptEncryption&lt;/code&gt;，键设置为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt;即可。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212922.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240325183212922&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;效果&quot;&gt;效果&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20240325183212923.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20240325183212923&quot; /&gt;&lt;/p&gt;
-
 </description>
         </item>
       
