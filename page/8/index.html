@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">235</span>
+                    <span class="site-state-item-count">234</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">707</span>
+                    <span class="site-state-item-count">704</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">235 </span>
+                  <span class="articleCount">234 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -176,7 +176,7 @@
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">24</a>
+                    <a name="程序人生" style="" class="articleCount">23</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>235</p>
+                  <p>234</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>115.7k</p>
+                  <p>115.8k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-11 20:27:21 +0800">
-                    2025/09/11
+                  <p id="current-date" data-value="2025-09-12 16:44:50 +0800">
+                    2025/09/12
                   </p>
                 </li>
               </ul>
@@ -854,9 +854,189 @@
     
     
     
-    
-    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15931534585" target="_blank">iOS多线程：线程安全 常见锁 (六)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-06-26</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#常见锁" target="_blank">常见锁</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一、前言
+前段时间看了几个开源项目，发现他们保持线程同步的方式各不相同，有@synchronized、NSLock、dispatch_semaphore、NSCondition、pthread_mutex、OSSpinLock。后来网上查了一下，发现他们的实现机制各不相同，性能也各不一样。下面我们先分别介绍每个加锁方式的使用，在使用一个案例来对他们进行性能对比。
+
+二、非线程安全
+举例说明：两个火车票销售窗口 共同销售车站总共的50张车票。看代码你最明白。
+
+/**
+ * 非线程安全
+ *...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15931534585" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15884027619" target="_blank">iOS多线程：NSOperation、NSOperationQueue (五)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-05-02</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#NSOperation" target="_blank">NSOperation</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSOperationQueue" target="_blank">NSOperationQueue</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">1. NSOperation、NSOperationQueue 简介
+NSOperation、NSOperationQueue 是苹果提供给我们的一套多线程解决方案。实际上 NSOperation、NSOperationQueue 是基于 GCD 更高一层的封装，完全面向对象。但是比 GCD 更简单易用、代码可读性也更高。
+
+为什么要使用 NSOperation、NSOperationQueue？
+
+
+  可添加完成的代码块，在操作完成后执行。
+  添加操作之间的依赖关系，方便的控制执行顺...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15884027619" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15862323579" target="_blank">iOS多线程：GCD的实际使用 (四)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-04-07</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#多线程" target="_blank">多线程</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#dispatch_async" target="_blank">dispatch_async</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">1、dispatch_async
+
+dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+dispatch_async(globalQueue, ^{
+    // 一个异步的任务，例如网络请求，耗时的文件操作等等
+    ...
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // UI刷新...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15862323579" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1251,104 +1431,6 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15786589400" target="_blank">临时邮箱 和 短信接码平台</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-01-10</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
-                    其他
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#临时邮箱" target="_blank">临时邮箱</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#短信" target="_blank">短信</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#手机号" target="_blank">手机号</a>
-                             </span>  </div>  
-            <div class="contentAbstract">临时邮箱
-
-https://temp-mail.org/zh/
-https://bccto.me/
-
-国内免费临时手机号
-
-https://www.pdflibr.com/
-https://www.becmd.com/
-http://www.z-sms.com/
-https://www.yinsiduanxin.com/
-https://www.materialtools.com/
-https://yunduanxin.net/
-
-国外免费临时手机号
-
-https://ch.freepho...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15786589400" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15778684175" target="_blank">24张一丝不挂的人性照片，值得你看一看</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-01-01</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#程序人生" target="_blank">
-                    程序人生
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#程序人生" target="_blank">程序人生</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#开心一刻" target="_blank">开心一刻</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#段子" target="_blank">段子</a>
-                            
-                    
-                      </span>  </div>  
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15778684175" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1382,9 +1464,9 @@ https://ch.freepho...</div>
  
             
                 <a href="/page/9" class="btn-outline-paginator"><i class="far fa-angle-double-right"></i></a>
-                <a href="/page/17" class="btn-outline-paginator">末页</a>
+                <a href="/page/18" class="btn-outline-paginator">末页</a>
             
-                <a class="btn-outline-paginator disable-paginator totalCount-paginator">第8页 / 共17页</a>
+                <a class="btn-outline-paginator disable-paginator totalCount-paginator">第8页 / 共18页</a>
         <!-- 只有一页的情况 -->
         
 </div>
@@ -1451,7 +1533,7 @@ https://ch.freepho...</div>
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.107</span>
+            <span>4.10.108</span>
         </div>
     </div>
 </footer>
@@ -1594,7 +1676,7 @@ https://ch.freepho...</div>
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.107",
+                "%c版本号 %c V4.10.108",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1858,12 +1940,16 @@ https://ch.freepho...</div>
        
          
        
+        
+          "/article/17559116027",
          
        
+        
+          "/article/17529840977",
          
        
-         
-       
+        
+          "/article/17529840360",
          
        
         
