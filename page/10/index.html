@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">234</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">704</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">234 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -176,7 +176,7 @@
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -358,7 +358,7 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>234</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-12 16:44:50 +0800">
-                    2025/09/12
+                  <p id="current-date" data-value="2025-09-13 09:04:09 +0800">
+                    2025/09/13
                   </p>
                 </li>
               </ul>
@@ -854,7 +854,60 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15662012632" target="_blank">七牛云上传图片 - 客户端</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2019-08-19</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#七牛云" target="_blank">七牛云</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#上传" target="_blank">上传</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#QiniuSDK" target="_blank">QiniuSDK</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">　　最近做了七牛云存储的有关内容，涉及到与后台交互获取验证的token，这个token是用作验证使用的，官方建议使用后台生成后，客户端再获取使用。但客户端也能独自生成具体生成方法如下：
+　　
+　　
+　　
+#import &lt;QiniuSDK.h&gt;
+#import "QN_GTM_Base64.h"
+#import &lt;CommonCrypto/CommonHMAC.h&gt;
+
+#define kQiniuScope @""
+#define kQiniuAccessKey @...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15662012632" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1378,65 +1431,6 @@ top: true
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15575387722" target="_blank">微信红包算法</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2019-05-11</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
-                    产品和运营
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#抽奖" target="_blank">抽奖</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#算法" target="_blank">算法</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#红包" target="_blank">红包</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">微信是采用什么样的算法做到的？简单百度了下，目前尚未有官方的说明。
-
-我按照自己的逻辑尝试了下，这个算法需要满足以下几点要求：
-
-1、每个人都要能够领取到红包；
-2、每个人领取到的红包金额总和=总金额；
-3、每个人领取到的红包金额不等，但也不能差的太离谱，不然就没趣味；
-4、算法一定要简单，不然对不起腾讯这个招牌；
-
-正式编码之前，先搭建一个递进的模型来分析规律
-
-设定总金额为10元，有N个人随机领取：  
-  
-N=1 
-则红包金额=X元； 
-  
-N=2 
-为保证第二个红包可以正常发出...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15575387722" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1539,7 +1533,7 @@ N=2
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.108</span>
+            <span>4.10.109</span>
         </div>
     </div>
 </footer>
@@ -1682,7 +1676,7 @@ N=2
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.108",
+                "%c版本号 %c V4.10.109",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1943,6 +1937,10 @@ N=2
   }
 
   const postUrls = [
+       
+        
+          "/article/17577220915",
+         
        
          
        

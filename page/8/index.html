@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">234</span>
+                    <span class="site-state-item-count">235</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">704</span>
+                    <span class="site-state-item-count">707</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">234 </span>
+                  <span class="articleCount">235 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -176,7 +176,7 @@
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
                     <a name="程序人生" class="default-categoryNav-name">程序人生</a>
-                    <a name="程序人生" style="" class="articleCount">23</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#MacOS')" class="categoryList">
@@ -358,7 +358,7 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>234</p>
+                  <p>235</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-12 16:44:50 +0800">
-                    2025/09/12
+                  <p id="current-date" data-value="2025-09-13 09:04:09 +0800">
+                    2025/09/13
                   </p>
                 </li>
               </ul>
@@ -854,7 +854,65 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15932337513" target="_blank">开发环境、测试环境、预发布环境、生产环境的区别</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2020-06-27</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#开发环境" target="_blank">开发环境</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#测试环境" target="_blank">测试环境</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#预发布环境" target="_blank">预发布环境</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一个软件产品从开发到用户使用都涉及哪些环境？
+开发环境、测试环境、回归环境、预发布环境、生产环境。
+
+1、开发环境
+顾名思义，开发同学开发时使用的环境，每位开发同学在自己的dev分支上干活，提测前或者开发到一定程度，各位同学会合并代码，进行联调。
+
+2、测试环境
+也就是我们测试同学干活的环境啦，一般会由测试同学自己来部署，然后在此环境进行测试。bug修复后，需要发版更新测试环境来回归bug。
+
+3、回归环境
+回归bug的环境，其实就是我们的测试环境，在测试环境上测试、回归验证bug。
+
+4...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15932337513" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1380,57 +1438,6 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15788283058" target="_blank">iOS 微信打开第三方应用（Universal Links 和 URL Schemes）</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2020-01-12</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#微信" target="_blank">微信</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#Universal Links" target="_blank">Universal Links</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#URL Schemes" target="_blank">URL Schemes</a>
-                            
-                    
-                     
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">一、前言
-项目中时常有这种需求, 是通过链接跳转到应用内部，现在iOS主流的方案有两个
-
-
-  Schema： 常用在于一个应用跳转到另一个应用内部，属于应用间的跳转。当然ios9以下，网页可以通过schema://跳转到App内部。但是这种方式跳转比较生硬，在每次跳转的时候都会弹框询问。如果iPhone中如果没有安装则会直接弹出错误提示。
-  Universal Links（通用链接）： 常用于https链接来打开APP（手机中已经安装此APP），或者跳转到https链接（手机中没有安装...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15788283058" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1533,7 +1540,7 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.108</span>
+            <span>4.10.109</span>
         </div>
     </div>
 </footer>
@@ -1676,7 +1683,7 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.108",
+                "%c版本号 %c V4.10.109",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1937,6 +1944,10 @@ NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(...<
   }
 
   const postUrls = [
+       
+        
+          "/article/17577220915",
+         
        
          
        
