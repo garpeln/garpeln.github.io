@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>GCD 应用场景 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,GCD,定时器,线程,延时,耗时操作" />
-    <meta name="description" content="1.耗时操作这是应用最广泛的场景，为了避免阻塞主线程，将耗时操作放在子线程处理，然后在主线程使用处理结果。">
+    <title>计算机系统知识 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
+    <meta name="description" content="1.1 计算机系统知识1.1.1 计算机系统硬件基本组成计算机的基本硬件系统由运算器、控制器、存储器、输入设备和输出设备五大部件组成  运算器、控制器等部件被集成在一起统称为中央处理单元(CPU)。  存储器是计算机系统中的记忆设备，分为内部存储器 (内存）和外部存储器 (硬盘）。  输入设备和输出设备合称 外部设备(简称外设)">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/15136989613">
+    <link rel="canonical" href="/s/01">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln">
-    <meta property="og:title" content="GCD 应用场景 | gorpeln's Blog">
+    <meta property="og:title" content="计算机系统知识 | gorpeln's Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/article/15136989613">
-    <meta property="og:description" content="1.耗时操作这是应用最广泛的场景，为了避免阻塞主线程，将耗时操作放在子线程处理，然后在主线程使用处理结果。">
+    <meta property="og:url" content="/s/01">
+    <meta property="og:description" content="1.1 计算机系统知识1.1.1 计算机系统硬件基本组成计算机的基本硬件系统由运算器、控制器、存储器、输入设备和输出设备五大部件组成  运算器、控制器等部件被集成在一起统称为中央处理单元(CPU)。  存储器是计算机系统中的记忆设备，分为内部存储器 (内存）和外部存储器 (硬盘）。  输入设备和输出设备合称 外部设备(简称外设)">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -36,7 +36,7 @@
 
     <!-- 分析追踪 -->
     <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
-    
+    <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
     <div id="percentageCounter" class="percentageCounter"></div>
@@ -383,13 +383,13 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
             <div class="page-content" id="pjax"><div class="post">
     <header class="post-header">
-        <h1 class="post-title">GCD 应用场景</h1>
+        <h1 class="post-title">计算机系统知识</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;margin-right:2em;">2017-12-19</text>
+            <text style="padding-top: 0;margin-right:2em;">2015-05-01</text>
             分类：
-            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                iOS
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
             </a>
             <text style="margin-right:2em;"></text>
             标签：
@@ -397,23 +397,7 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#GCD" target="_blank">GCD</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#定时器" target="_blank">定时器</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#线程" target="_blank">线程</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#延时" target="_blank">延时</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#耗时操作" target="_blank">耗时操作</a>
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
                 
                 
             </span>
@@ -421,54 +405,349 @@
         </div>
     </header>
     <article class="post-content">
-        <h3 id="1耗时操作">1.耗时操作</h3>
-<p>这是应用最广泛的场景，为了避免阻塞主线程，将耗时操作放在子线程处理，然后在主线程使用处理结果。</p>
-
-<h3 id="2延时执行">2.延时执行</h3>
-<p>延时一段时间后执行代码，一般见于打开 App 一段时间后，弹出求好评对话框。</p>
-
-<h3 id="3定时器">3.定时器</h3>
-<p>由于 Timer 的 Target 是强引用，对于 Timer 的销毁需要特别处理，此外，Timer 的运行依赖于 Runloop，在 Runloop 的一次循环中，Timer 也只会执行一次，这使得在 Runloop 负担比较重时，可能会跳过 Timer 的执行，因此，在用到定时器的地方，你也可以用 CGD 的 TimerSource 替代</p>
-
-<h3 id="4并发遍历">4.并发遍历</h3>
-<p>如果你需要更快的处理数据，可以用 concurrentPerform 让循环操作并发执行：</p>
-
-<h3 id="5控制并发数">5.控制并发数</h3>
-<p>有时我们需要并发处理一些任务，但是并不想同时开很多线程，GCD 并没有类似 NSOperation 最大并发数的概念，但可以借助信号量实现</p>
-
-<h3 id="6时序管理">6.时序管理</h3>
-
-<p>时序管理主要有几种组合情况：</p>
-
+        <h3 id="11-计算机系统知识">1.1 计算机系统知识</h3>
+<h4 id="111-计算机系统硬件基本组成">1.1.1 计算机系统硬件基本组成</h4>
+<p>计算机的基本硬件系统由<code class="language-plaintext highlighter-rouge">运算器</code>、<code class="language-plaintext highlighter-rouge">控制器</code>、<code class="language-plaintext highlighter-rouge">存储器</code>、<code class="language-plaintext highlighter-rouge">输入设备</code>和<code class="language-plaintext highlighter-rouge">输出设备</code>五大部件组成</p>
 <ul>
-  <li>子任务内不开线程依次执行
+  <li>运算器、控制器等部件被集成在一起统称为<code class="language-plaintext highlighter-rouge">中央处理单元(CPU)</code>。</li>
+  <li>存储器是计算机系统中的记忆设备，分为内部存储器 <em class="color-gray">(内存）</em>和外部存储器 <em class="color-gray">(硬盘）</em>。</li>
+  <li>输入设备和输出设备合称 外部设备(简称<code class="language-plaintext highlighter-rouge">外设</code>)</li>
+</ul>
+
+<h4 id="112-中央处理单元">1.1.2 中央处理单元</h4>
+<p><code class="language-plaintext highlighter-rouge">中央处理单元(CPU)</code>主要由<code class="language-plaintext highlighter-rouge">运算器</code>、<code class="language-plaintext highlighter-rouge">控制器</code>、<code class="language-plaintext highlighter-rouge">寄存器组</code>和<code class="language-plaintext highlighter-rouge">内部总线</code>等部件组成。</p>
+<ul>
+  <li>运算器：算术运算 <em class="color-gray">(加、减、乘、除）</em>和逻辑运算 <em class="color-gray">(与、或、非）</em>
     <ul>
-      <li>参照耗时操作</li>
+      <li><code class="language-plaintext highlighter-rouge">算术逻辑单元</code>（ALU）：负责处理数据，实现对数据的算术运算和逻辑运算</li>
+      <li><code class="language-plaintext highlighter-rouge">累加寄存器</code>（AC）：是一个<strong>通用寄存器</strong>，暂存运算结果</li>
+      <li><code class="language-plaintext highlighter-rouge">数据缓冲寄存器</code>（DR）：作为CPU和内存、外设之间数据传送的中转站，用于缓冲速度上的差异性</li>
+      <li><code class="language-plaintext highlighter-rouge">状态条件寄存器</code>（PSW）：丰要分为状态标志和控制标志，如运算结果进位标志、溢出标志、中断标志等</li>
     </ul>
   </li>
-  <li>子任务内开线程依次执行
+  <li>控制器：它决定了计算机运行过程的自动化。它不仅要保证程序的正确执行，而且要能够处理异常事件。
     <ul>
-      <li>一般见于网络请求，一个接口的请求参数是另一个接口的返回值，这种情况就需要对网络请求进行时序管理</li>
+      <li><code class="language-plaintext highlighter-rouge">指令寄存器</code>（IR）：保存当前正在执行的指令</li>
+      <li><code class="language-plaintext highlighter-rouge">程序计数器</code>（PC）：①指向下一条指令的地址; ②自增的功能</li>
+      <li><code class="language-plaintext highlighter-rouge">地址寄存器</code>（AR）：存放CPU访问的内存单元地址</li>
+      <li><code class="language-plaintext highlighter-rouge">指令译码器</code>（ID）：对指令进行译码</li>
     </ul>
   </li>
-  <li>子任务内开线程不依次执行
+  <li>寄存器组
     <ul>
-      <li>这种情况多见于需要请求多个接口，全部请求完毕后再进行某些操作，这可以借助 GCD 的任务组处理</li>
+      <li>通用寄存器：用途由程序员来决定，AC、DR</li>
+      <li>专用寄存器：PSW、IR、PC、ID</li>
+    </ul>
+  </li>
+  <li>总线
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">内部总线</code>：CPU内部连接各寄存器及运算器部件之间的总线</li>
+      <li>系统总线：CPU和计算机系统中其他高速功能部件相互连接的总线</li>
+      <li>I/O总线：中低速1/O设备相互连接的总线</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="7自定义数据监听">7.自定义数据监听</h3>
-<p>当需要监听某个数据的变化，但不需要频繁的调用其对应的回调处理，可以使用 DispatchSourceUserData 进行监听，它会自动合并更改，并在队列空闲时进行回调，以节省 CPU 开销。</p>
+<h4 id="113-数据表示">1.1.3 数据表示</h4>
+<ul>
+  <li>进制转换
+    <ul>
+      <li>二进制 <em class="color-gray">(B）</em>：11011B</li>
+      <li>八进制 <em class="color-gray">(O或Q）</em>：33Q</li>
+      <li>十进制 <em class="color-gray">(D）</em>：27D</li>
+      <li>十六进制 <em class="color-gray">(H）</em>：1BH</li>
+    </ul>
+  </li>
+  <li>单位换算
+    <ul>
+      <li>1B <em class="color-gray">(字节）</em> = 8b <em class="color-gray">(位）</em></li>
+      <li>1kB = 1024B</li>
+      <li>1MB = 1024KB</li>
+    </ul>
+  </li>
+  <li>定点数：小数点位置固定不变的数。分为纯整数 <em class="color-gray">(定点整数)</em>和纯小数 <em class="color-gray">(定点小数)</em>。表示方式:原码、 反码、补码、移码
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">原码</code>：二进制表示的码。最高位是符号位。<strong>0表示正数，1表示负数</strong>。<em class="color-gray">-19 的原码：10010011</em></li>
+      <li><code class="language-plaintext highlighter-rouge">反码</code>：<em class="color-gray">-19 的反码：11101100</em>
+        <ul>
+          <li>正数的反码与原码相同</li>
+          <li>负数的反码是原码的符号位不变，其他位取反</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">补码</code>：<em class="color-gray">-19 的补码：11101101</em>
+        <ul>
+          <li>正数的补码与原码相同</li>
+          <li>负数的补码等于反码的末尾+1</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">移码</code>：补码符号位取反即可。<em class="color-gray">-19 的移码：01101101</em></li>
+    </ul>
+  </li>
+  <li>浮点数：小数点位置不固定的数
+    <ul>
+      <li>二进制数N的一般形式： N = $2^e$ X M ，其中E为<code class="language-plaintext highlighter-rouge">阶码</code>，决定二进制数的表示范 围;M为尾数，决定二进制数的精度</li>
+      <li>IEEE754标准
+        <ul>
+          <li><img src="https://img.gorpeln.top/p/software/p_s_001.png" alt="IEEE754标准" /></li>
+          <li>S 是浮点数的<code class="language-plaintext highlighter-rouge">符号位</code>，占1位，安排在最高位，S=0 表示正数，S=1表示负数。</li>
+          <li>E 是<code class="language-plaintext highlighter-rouge">阶码</code>，占8位 ，将浮点数的指数真值 e 变成阶码 E 时，应将指数 e 加上一个固定的偏置常数 127，即 <code class="language-plaintext highlighter-rouge">E = e + 127</code>。64位浮点数: E = e + 1023</li>
+          <li>M 是<code class="language-plaintext highlighter-rouge">尾数</code>，放在低位部分，占 23 位，小数点位置放在尾数域最左 <em class="color-gray">(最高）</em>有效位的左边</li>
+          <li><em class="color-gray">利用IEEE754标准将数176.0625表示为单精度浮点数的二进制存储格式：0 10000110 01100000001000000000000</em></li>
+          <li><em class="color-gray">若浮点数的IEEE754标准存储格式为 43301000H，求其浮点数的十进制数值：176.0625</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>浮点数的加减法
+    <ul>
+      <li>零操作数处理：若其中一个数为零，直接返回另一个数作为结果</li>
+      <li>求阶差并对阶。<code class="language-plaintext highlighter-rouge">小阶向大阶看齐</code></li>
+      <li>尾数求和</li>
+      <li>规格化处理</li>
+      <li>舍入处理。在对结果右规时，超过尾数的低位部分要进行舍处理;</li>
+      <li>溢出判断。判断阶码是否溢出。对于32位浮点数，除去全0和全1的特 情况，阶码EE[1,254]</li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="8监听进程">8.监听进程</h3>
-<p>在 Mac 开发中，你可以监听其他进程的开启关闭情况：</p>
+<h4 id="114-校验码">1.1.4 校验码</h4>
+<ul>
+  <li>奇偶校验码：通过在数据码后增加一位校验码，使编码中1的个数为奇数 <em class="color-gray">(奇校验）</em>或偶数 <em class="color-gray">(偶校验）</em></li>
+  <li>循环冗余校验码（CRC）：数据码后多位校验码</li>
+  <li>海明码：校验码分布在 $2^n$  <em class="color-gray">(1、2、4、8、16…）</em>位置上。<em class="color-gray">如 信息位是8位，则校验码分别位于1、2、4、8，也就是最少需要4为校验码</em></li>
+</ul>
 
-<h3 id="9监听目录结构">9.监听目录结构</h3>
-<p>GCD可以用来监听文件变化，例如目录变化，重命名等之类的</p>
+<h3 id="12-计算机体系结构">1.2 计算机体系结构</h3>
+<h4 id="121-计算机体系结构的发展">1.2.1 计算机体系结构的发展</h4>
+<ul>
+  <li>计算机体系结构的分类
+    <ul>
+      <li>从宏观上按处理机的数量分类
+        <ul>
+          <li>单处理系统 <em class="color-gray">利用一个处理单元与其他外部设备结合起来， 现存储、计算、通信、输入和输出等功能的系统</em></li>
+          <li>并行处理与多处理系统 <em class="color-gray">为了充分发挥问题求解过程中处理的并行性，将两个以上 的处理机互连起来，彼此进行通信协调，便于共同求解一个大问题的计算机系统</em></li>
+          <li>分布式处理系统 <em class="color-gray">物理上远距离而松耦合的多计算机系统。物理上的远距离意味着通信时间 与处理时间相比已不可忽略，在通信线路上的数据传输速率要比在处理机总线上传慢得多</em></li>
+        </ul>
+      </li>
+      <li>从微观上按并行程度分类
+        <ul>
+          <li>Flynn分类法</li>
+          <li>马泽云分类法</li>
+          <li>Handler分类法</li>
+          <li>Kuck分类法</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>指令系统
+    <ul>
+      <li>指令格式：指令码 = 操作码OP + 地址码A <em class="color-gray">(操作数）</em> 。<em class="color-gray">操作码指定要完成的操作或功能，地址码指定参与操作的操作数的地址</em></li>
+      <li>指令的寻址方式：
+        <ul>
+          <li>顺序寻址：下一条指令的地址由程序计数器PC给出，PC每次自增+1</li>
+          <li>跳跃寻址：下一条指令的地址由指令本身给出</li>
+        </ul>
+      </li>
+      <li>操作数的寻址方式：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">立即寻址</code>：指令的地址码字段不是操作数的地址，而是操作数本身，速度最快</li>
+          <li><code class="language-plaintext highlighter-rouge">直接寻址</code>：指令的地址码字段给出操作数在内存的地址 <em class="color-gray">(操作数在内存中）</em></li>
+          <li><code class="language-plaintext highlighter-rouge">间接寻址</code>：指令的地址码字段给出操作数在内存的地址的地址 <em class="color-gray">(操作数在内存中）</em></li>
+          <li><code class="language-plaintext highlighter-rouge">寄存器寻址</code>：指令的地址码字段给出操作数在寄存器的编号 <em class="color-gray">(操作数在寄存器中）</em></li>
+          <li><code class="language-plaintext highlighter-rouge">寄存器间接寻址</code>：指令的地址码字段给出寄存器的编号，寄存器中所存的内容为操作数在内存的地址 <em class="color-gray">(操作数在寄存器中）</em></li>
+          <li><code class="language-plaintext highlighter-rouge">相对寻址</code>：指令的地址码字段是一个偏移量，这个偏移量加上程序计数器的值即为操作数在内存的地址</li>
+          <li><code class="language-plaintext highlighter-rouge">基址寻址</code>：指令的地址码字段是 一个偏移量，这个偏移量加上基址寄存器的值即为操作数在内存的地址</li>
+          <li><code class="language-plaintext highlighter-rouge">变址寻址</code>：指令的地址码字段是一个偏移量，这个偏移量加上变址寄存器的值即为操作数在内存的地址</li>
+          <li><code class="language-plaintext highlighter-rouge">从快到慢</code>依次是：
+            <ul>
+              <li>立即寻址 <em class="color-gray">(无内存/寄存器访问，数据直接在指令中）</em></li>
+              <li>寄存器寻址 <em class="color-gray">(访问寄存器1次）</em></li>
+              <li>直接寻址 <em class="color-gray">(访问内存1次）</em></li>
+              <li>寄存器间接寻址 <em class="color-gray">(访问寄存器1次 + 访问内存1次）</em></li>
+              <li>相对寻址/基址寻址/变址寻址 <em class="color-gray">(访问寄存器1次 + 计算 + 访问内存1次）</em></li>
+              <li>间接寻址 <em class="color-gray">(访问内存2次以上）</em></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>指令执行过程：<code class="language-plaintext highlighter-rouge">取指令 -&gt; 分析指令 -&gt; 执行指令</code> 三个步骤，首先将程序计数器PC中的指令地址取出，送入地址总线，CPU依据指令地址去内存中取出指令内容存入指令寄存器IR；之后由指令译码器ID进行分析，分析指令操作码；最后取出指令执行所需的源操作数，执行指令</li>
+      <li><code class="language-plaintext highlighter-rouge">CPU如何区分指令和数据</code>：CPU根据<code class="language-plaintext highlighter-rouge">指令周期的不同阶段</code>来区分二进制的指令和数据，因为在指令周期的不同阶段，指令会命令CPU分别去取指令或数据</li>
+      <li>指令集的分类：
+        <ul>
+          <li>CISC指令集：复杂指令集，各条指令按顺序串行执行</li>
+          <li>RISC指令集 :精简指令集，减少指令总数，大部分等长，寻址少效率高</li>
+        </ul>
+      </li>
+      <li>指令的流水处理
+        <ul>
+          <li>指令流水线原理：将指令的执行划分成若干个过程段，每个过程段由不同的部件进行处理</li>
+          <li>指令流水线的计算
+            <ul>
+              <li>非流水执行时间：一条指令执行的时间又指令总数</li>
+              <li>流水执行时间：<code class="language-plaintext highlighter-rouge">第一条指令的执行时间 + (n-1) × 最长流水段时间，n为指令总数</code></li>
+              <li>加速比：非流水方式与流水方式所用时间之比</li>
+              <li>流水线的操作周期：为最长流水段时间</li>
+              <li>流水线的吞吐率：为最长流水段时间的倒数</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="10线程安全">10.线程安全</h3>
-<p>你可以在资源读写时对其所在线程进行一些限制，而不必使用线程锁</p>
+<h4 id="122-存储系统">1.2.2 存储系统</h4>
+<ul>
+  <li>存储系统的层次结构
+    <ul>
+      <li>CPU内：寄存器、cache</li>
+      <li>主板内：cache、主存储器 <em class="color-gray">(内存）</em></li>
+      <li>主板外：硬盘、光盘</li>
+      <li>离线：磁带</li>
+    </ul>
+  </li>
+  <li>存储器的分类
+    <ul>
+      <li>随机存取存储器（RAM）
+        <ul>
+          <li>静态随机存储器SRAM，用于<code class="language-plaintext highlighter-rouge">Cache</code>；存储元为<code class="language-plaintext highlighter-rouge">触发器</code></li>
+          <li>动态随机存储器DRAM，用于<code class="language-plaintext highlighter-rouge">主存</code>；存储元为<code class="language-plaintext highlighter-rouge">电容器</code>，需要<code class="language-plaintext highlighter-rouge">周期性刷新</code></li>
+        </ul>
+      </li>
+      <li>只读存储器 (ROM)
+        <ul>
+          <li>固定只读存储器(ROM)：电脑中BIOS信息的存储等</li>
+          <li>闪速存储器(闪存)：U盘</li>
+        </ul>
+      </li>
+      <li>高速缓存Cache：位于CPU与主存之间，用于存储当前活跃的程序和数据
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">解决CPU和主存之间的速度不匹配的问题</code></li>
+          <li>Cache的理论依据：程序的局部性原理
+            <ul>
+              <li>时间局部性：最近被访问过的指令和数据很可能会被再次访问</li>
+              <li>空间局部性：最近访问过的指令和数据往往集中在一小片存储区域中</li>
+            </ul>
+          </li>
+          <li>主存与Cache的地址映射：在CPU工作时，送出的是<code class="language-plaintext highlighter-rouge">主存单元的地址</code>，而应从Cache存储器中读/写信息时。就需要将<code class="language-plaintext highlighter-rouge">主存地址转换成Cache的地址</code>，这种地址的转换称为地址映像。<code class="language-plaintext highlighter-rouge">由硬件自动完成映射</code>
+            <ul>
+              <li>直接映像：Cache中一行固定对应主存中的多行。<em class="color-gray">举例：假设 Cache 有 8 块（块号 0-7），主存块号为 10 的块，映射到 Cache 块号 = 10 mod 8=2。</em><code class="language-plaintext highlighter-rouge">冲突概率高，且Cache空间利用率不高，适用于大容量Cache</code></li>
+              <li>全相联映像：主存中的任意一个块可以与Cache中的任意一行相对应。<em class="color-gray">举例：主存块 10 可存入 Cache 的 0-7 任意块，查找时需对比所有 Cache 块的标记。</em><code class="language-plaintext highlighter-rouge">冲突概率小，Cache的利用率高，存取时间长，适用于小容量Cache</code></li>
+              <li>组相联映像：前两种方式的结合。将Cache进行分组，组间采用直接映射方式，组内采用全相联映射方式。<em class="color-gray">举例：Cache 分 4 组，每组 2 块（共 8 块），主存块 10 映射到组号 = 10 mod 4=2，可存入组 2 的块 0 或块 1。</em></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>虚拟存储器、磁盘
+        <ul>
+          <li>虚拟存储器：由主存、辅存和软件组成</li>
+          <li>磁盘：存取时间 = 寻道时间+旋转等待时间+数据传送时间</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="123-输入输出技术">1.2.3 输入/输出技术</h4>
+<p>CPU与外围设备之间的信息交换方式</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">I/O接口</code>与外设之间的信息交换</li>
+  <li>CPU与<code class="language-plaintext highlighter-rouge">I/O</code>接口之间的信息交换
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">程序查询方式</code>：CPU执行程序来<code class="language-plaintext highlighter-rouge">轮询查询外设的状态</code>，判断外设是否准备好接收数据或向CPU输入数据，CPU与外设<code class="language-plaintext highlighter-rouge">串行</code>工作</li>
+      <li><code class="language-plaintext highlighter-rouge">程序中断方式</code>：当I/O接口与外设交换数据过程中，CPU无须等待；当交换数据完成时，I/O接口产生中断，通知CPU处理数据。CPU与外设可<code class="language-plaintext highlighter-rouge">并行</code>工作。<code class="language-plaintext highlighter-rouge">需要CPU保存现场</code>，由CPU将数据放入内存。适用于微型机中<code class="language-plaintext highlighter-rouge">随机出现</code>的服务，如键盘
+        <ul>
+          <li>中断向量：中断服务程序的入口地址</li>
+          <li>中断响应时间：从发出中断请求到开始进入中断处理程序</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">直接内存存取 (DMA)</code>：DMA控制器接管总线的控制权，数据交换不经过CPU，直接在内存和I/O设备间进行成块传送。CPU与外设可<code class="language-plaintext highlighter-rouge">并行</code>工作。仅在传送数据块的<code class="language-plaintext highlighter-rouge">开始和结束</code>时才需要CPU的干预。不需要CPU保护现场。由外设直接将数据放入内存。</li>
+      <li><code class="language-plaintext highlighter-rouge">输入/输出处理机IOP (通道方式）</code>：由通道 (输入输出处理机IOP)管理外围设备。大大提高了CPU的效率。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="124-总线结构">1.2.4 总线结构</h4>
+<p>总线 (Bus)，是指在计算机中，设备和设备之间传输信息的公共数据通道</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">内部总线</code>：<code class="language-plaintext highlighter-rouge">CPU内部</code>连接运算器、控制器、各寄存器部件之间的总线</li>
+  <li><code class="language-plaintext highlighter-rouge">系统总线</code>：<em class="color-gray">是外部总线，是CPU外部总线</em>。CPU和计算机系统中其他高速功能部件相互连接的总线
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">数据总线</code>：用来传输各功能部件之间的数据信息，它是双向传输总线，其 位数 = 机器字长 = 存储字长</li>
+      <li><code class="language-plaintext highlighter-rouge">地址总线</code>：用来指出数据总线上的源数据或目的数据所在的主存单元或I/O端口的地址，它是单向传输总线，地址总线的位数与主存地址空间的大小有关，地址总线的位数 = n，主存地址空间的大小 m = $2^n$</li>
+      <li><code class="language-plaintext highlighter-rouge">控制总线</code>：传输的是控制信息，包括CPU送出的控制命令和主存 (或外设)返回CPU的反馈信号</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">I/O总线</code>：中低速1/O设备相互连接的总线</li>
+  <li>常见的总线
+    <ul>
+      <li>PCI总线：并行内部总线</li>
+      <li>USB：串行系统总线</li>
+      <li>IEEE-1394：串行系统总线</li>
+      <li>IEEE-488：并行 I/O 总线</li>
+      <li>SCSI总线：并行 I/O 总线</li>
+      <li>RS-232C：并行 I/O 总线</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="13-安全性可靠性与系统性能评测">1.3 安全性、可靠性与系统性能评测</h3>
+<h4 id="131-计算机安全概述">1.3.1 计算机安全概述</h4>
+<p>信息安全的基本要素:机密性、完整性、可用性、可控性和可审查性</p>
+
+<h4 id="132-加密技术和认证技术">1.3.2 加密技术和认证技术</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">对称加密</code>：加密和解密的密钥相同
+    <ul>
+      <li>常见对称加密算法:<code class="language-plaintext highlighter-rouge">DES</code>、<code class="language-plaintext highlighter-rouge">3DES</code>、<code class="language-plaintext highlighter-rouge">AES</code>、<code class="language-plaintext highlighter-rouge">RC-5</code>、<code class="language-plaintext highlighter-rouge">IDEA</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">非对称加密</code>：需要两个不同的密钥，公开密钥与私有密钥。
+    <ul>
+      <li>如果用公开密钥对数据进行加密，只有用对应的私有密钥才能解密；如果用私有密钥对数据进行加密，那么只有用对应的公开密钥才能解密</li>
+      <li>常见非对称加密算法：<code class="language-plaintext highlighter-rouge">RSA</code>、<code class="language-plaintext highlighter-rouge">DSA</code>、<code class="language-plaintext highlighter-rouge">ECC</code></li>
+    </ul>
+  </li>
+  <li>数字签名
+    <ul>
+      <li>数字加密
+        <ul>
+          <li>(1) 当信息发送者需要发送信息时，首先生成一个<code class="language-plaintext highlighter-rouge">对称密钥</code>，用该对称密钥加密要发送的报文；</li>
+          <li>(2) 信息发送者用信息接收者的<code class="language-plaintext highlighter-rouge">公钥加密</code>上述对称的密钥；</li>
+          <li>(3) 信息发送者将上述两个步骤的结果集合在一起传给信息接收者，称为数字信封；</li>
+          <li>(4) 信息接收者使用自己的私钥解密被加密的对称密钥，再用此对称密钥解密被发送方加密的密文，最后得到真正的原文。</li>
+        </ul>
+      </li>
+      <li>数字签名
+        <ul>
+          <li>(1) 信息发送者使用一个<code class="language-plaintext highlighter-rouge">单项散列函数</code> <em class="color-gray">(Hash 函数）</em>对信息生成信息摘要；</li>
+          <li>(2) 信息发送者使用自己的<code class="language-plaintext highlighter-rouge">私钥签名</code>信息摘要；</li>
+          <li>(3) 信息发送者把信息本身与已签名的信息摘要一起发送出去；</li>
+          <li>(4) 信息接受者使用与发送者相同的单项散列函数 <em class="color-gray">(Hash 函数）</em>对接收的信息生成新的信息摘要，再使用发送者的公钥对信息摘要进行验证，以确认信息发送者的身份和信息是否被修改过。</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">数字信封</code>运用了对称加密技术和非对称加密技术，本质是使用<code class="language-plaintext highlighter-rouge">对称密钥加密数据</code>，<code class="language-plaintext highlighter-rouge">非对称密钥加密对称密钥</code>，解决了对称密钥的传输问题。</li>
+      <li><code class="language-plaintext highlighter-rouge">数字签名</code>，用发送方的私钥签名，用接收方的公钥验证消息的真实性，可以验证消息的完整性、发送方不可否认性</li>
+      <li><code class="language-plaintext highlighter-rouge">信息摘要</code>的特点：无论数据多长，都会产生固定长度的信息摘要；任何不同的输入数据，都会产生不同的信息摘要：<code class="language-plaintext highlighter-rouge">单向性</code>，即只能由数据生成信息摘要，不能由信息摘要还原数据。常见的信息摘要算法：MD5 <em class="color-gray">(产生128位的输出）</em>、SHA-1 <em class="color-gray">(安全散列算法，产生160位的输出，安全性更高）</em></li>
+    </ul>
+  </li>
+  <li>公钥基础设施PKI
+    <ul>
+      <li>公钥基础设施PKI是以不对称密钥加密技术为基础，以数据机密性、完整性、身份认证和行为不可抵赖性为安全目的，来实施和提供安全服务的具有普适性的安全基础设施</li>
+      <li><code class="language-plaintext highlighter-rouge">PKI</code> 的核心问题：解决 “<code class="language-plaintext highlighter-rouge">公钥</code>是谁的” 这个关键疑问</li>
+      <li>CA（<code class="language-plaintext highlighter-rouge">证书颁发机构</code>）：整个 PKI 的 “权威核心”，负责审核用户身份、签发数字证书，是公认的 “可信第三方”。<em class="color-gray">相当于现实中的 “公安局”“公证处”，负责给公钥 “发身份证”</em></li>
+      <li><code class="language-plaintext highlighter-rouge">数字证书</code>：CA 签发的 “电子凭证”，里面包含：用户身份信息（如人名 / 机构名）、用户公钥、CA 签名、证书有效期等。<em class="color-gray">相当于公钥的 “身份证”，证明 “这张公钥属于这个人 / 机构</em></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="133-计算机可靠性">1.3.3 计算机可靠性</h4>
+<p><code class="language-plaintext highlighter-rouge">系统可靠性</code>是指系统在给定时间间隔内正常运行的概率</p>
+<ul>
+  <li>串联系统可靠性  R = $\prod_{i=1}^{n} R_i$  <em class="color-gray">如：$(R_1\times R_2\times R_3)$</em></li>
+  <li>并联系统可靠性  R = 1 - $\prod_{i=1}^{n} (1 - R_i)$    <em class="color-gray">如：$1 - [(1-R_1)\times(1-R_2)\times(1-R_3)]$</em></li>
+</ul>
+
 
 
         
@@ -476,21 +755,21 @@
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2024-02-20</div>
+    <div class="custom-font">最后编辑于：2025-09-18</div>
     
-    <div class="custom-font">本文链接：<a href="/article/15136989613" class='articleLink'>https://gorpeln.top/article/15136989613</a></div>
+    <div class="custom-font">本文链接：<a href="/s/01" class='articleLink'>https://gorpeln.top/s/01</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/15119562214" title="iOS页面流畅技巧" class="custom-font" target="_blank">iOS页面流畅技巧</a>
+        <span class="custom-font">上一篇 ：</span><a href="/i/04" title="仪态" class="custom-font" target="_blank">仪态</a>
     </div>
     
     
     <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/15153005416" title="编程就像两性关系" class="custom-font" target="_blank">编程就像两性关系</a>
+        <span class="custom-font">下一篇 ：</span><a href="/article/14402966023" title="Hello World" class="custom-font" target="_blank">Hello World</a>
     </div>
     
 </div>
@@ -505,7 +784,7 @@
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
-      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/15136989613')"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/s/01')"></div>
       <div class="qrcodeImg" id="qrcode"></div>
       <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
     </div>
