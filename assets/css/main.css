@@ -3176,6 +3176,9 @@ div.contentAbstract img {
     background: #f3e8ff !important;
     color:#4a5565 !important;
 }
+.bg-gray{
+    color:#666 !important;
+}
 
 /*自定义 提示 tip*/
 .tip-green {
@@ -4041,8 +4044,11 @@ body.dark-mode .bg-blue,
 body.dark-mode .bg-green,
 body.dark-mode .bg-red,
 body.dark-mode .bg-yellow,
-body.dark-mode .bg-purple{
+body.dark-mode .bg-purple,{
     color:#ebe7e7 !important;
+}
+body.dark-mode .bg-gray{
+    color:#bfbfbf !important;
 }
 
 body.dark-mode .tip-green,
