@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>117.6k</p>
+                  <p>117.8k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-20 10:43:18 +0800">
-                    2025/09/20
+                  <p id="current-date" data-value="2025-09-21 20:46:14 +0800">
+                    2025/09/21
                   </p>
                 </li>
               </ul>
@@ -887,58 +887,6 @@
     <div class="postbox">
         <div class="allpost">
             <div class="title">
-                <a class="pjaxlink" href="/article/16489862954" target="_blank">MacOS：使用代码重启应用</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2022-04-03</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-                    MacOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#relaunch" target="_blank">relaunch</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#NSWorkspace" target="_blank">NSWorkspace</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#NSWorkspaceLaunchAsync" target="_blank">NSWorkspaceLaunchAsync</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">@interface AppDelegate : NSObject &lt;NSApplicationDelegate&gt;
--(void)relaunchApp; //重启应用
-@end
-
-
-@interface AppDelegate ()
-@property (nonatomic, assign) BOOL              toRelaunch;   //重启应用
-@end
-
-@implementation AppDelegate  
--(void)application...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/16489862954" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
                 <a class="pjaxlink" href="/article/16489790954" target="_blank">MacOS：鼠标事件</a>
             </div>
             <hr>
@@ -1431,6 +1379,59 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
     
     
     
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16132790510" target="_blank">手势冲突</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2021-02-14</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#手势" target="_blank">手势</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#优先级" target="_blank">优先级</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#响应链" target="_blank">响应链</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">手势冲突主要的三种解决思路：
+
+
+  ①设置手势优先级 requireGestureRecognizerToFail:
+②阻止手势向事件传递链执行 cancelsTouchesInView、delaysTouchesBegan
+③实现协议方法 UIGestureRecognizerDelegate
+
+
+1、自定义手势优先级
+自定义多手势冲突。例如我们设置的单次点击、双击和多指点击手势，需要设置优先识别双击手势，识别失败后再识别单击手势；
+ //单指单击
+    UITapGestureRe...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16132790510" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1533,7 +1534,7 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.113</span>
+            <span>4.10.114</span>
         </div>
     </div>
 </footer>
@@ -1676,7 +1677,7 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.113",
+                "%c版本号 %c V4.10.114",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1938,8 +1939,6 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
 
   const postUrls = [
        
-        
-          "/article/17577220915",
          
        
          
