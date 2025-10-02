@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">247</span>
+                    <span class="site-state-item-count">248</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">707</span>
+                    <span class="site-state-item-count">711</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">247 </span>
+                  <span class="articleCount">248 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">35</a>
+                    <a name="个人博客" style="" class="articleCount">36</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>247</p>
+                  <p>248</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>117.8k</p>
+                  <p>118.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2025-09-21 20:46:14 +0800">
-                    2025/09/21
+                  <p id="current-date" data-value="2025-10-02 18:40:14 +0800">
+                    2025/10/02
                   </p>
                 </li>
               </ul>
@@ -880,7 +880,57 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/14873067700" target="_blank">开发编码规范建议</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2017-02-17</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
+                    产品和运营
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#开发规范" target="_blank">开发规范</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#宏定义" target="_blank">宏定义</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#layoutSubviews" target="_blank">layoutSubviews</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">　　在开发过程中，我们不仅要去看别人的代码，也要让别人看我们的代码。那么，有一个良好的编码习惯将会非常重要。下面将会罗列使用Objective-C来开发iOS的编码建议。
+
+【1】任意函数长度不得超过50行。（其实很容易就超过50行，这就要考虑代码抽取了。）
+
+【2】任意行代码不能超过80字符。（其实也很容易超过80字符，可以考虑多行显示，比如有多个参数时，可以每个参数放一行。）可以在Xcode中设置超过80个字符的提醒，选中“Page guide at column”.设置完之后就会在代...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/14873067700" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1374,60 +1424,6 @@ picImageView.backgroundColor = [UIColor greenColor];
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/14427478333" target="_blank">优化MySQL中的分页</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2015-09-20</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
-                    其他
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#MySQL" target="_blank">MySQL</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#分页" target="_blank">分页</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#数据库" target="_blank">数据库</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">
-  一道面试的问题，当MySQL表中有数据量很大的时候如何做分页。当时只知道在数据量很大的时候可以分表，但不知道不分表时可以怎么做。
-
-
-很多应用往往只展示最新或最热门的几条记录，但为了旧记录仍然可访问，所以就需要个分页的导航栏。然而，如何通过MySQL更好的实现分页，始终是比较令人头疼的问题。虽然没有拿来就能用的解决办法，但了解数据库的底层或多或少有助于优化分页查询。
-我们先从一个常用但性能很差的查询来看一看。
-
-SELECT *
-FROM city
-ORDER BY id DESC
-...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/14427478333" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1530,7 +1526,7 @@ ORDER BY id DESC
                 萌ICP备20240031号
             </a>
             ·
-            <span>4.10.114</span>
+            <span>4.10.115</span>
         </div>
     </div>
 </footer>
@@ -1673,7 +1669,7 @@ ORDER BY id DESC
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.114",
+                "%c版本号 %c V4.10.115",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1934,6 +1930,10 @@ ORDER BY id DESC
   }
 
   const postUrls = [
+       
+        
+          "/article/17592227011",
+         
        
          
        

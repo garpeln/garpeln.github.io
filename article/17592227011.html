@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>外链跳转到中间页 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,外链,中间页,安全,博客,gorpeln" />
-    <meta name="description" content="">
+    <title>博客CDN流量异常 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,CDN,盗刷,流量,频率,攻击" />
+    <meta name="description" content="今天打开博客查看时显示异常，提示connection reset by peer。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/17094338798">
+    <link rel="canonical" href="/article/17592227011">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln">
-    <meta property="og:title" content="外链跳转到中间页 | gorpeln's Blog">
+    <meta property="og:title" content="博客CDN流量异常 | gorpeln's Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/article/17094338798">
-    <meta property="og:description" content="">
+    <meta property="og:url" content="/article/17592227011">
+    <meta property="og:description" content="今天打开博客查看时显示异常，提示connection reset by peer。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -383,10 +383,10 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
             <div class="page-content" id="pjax"><div class="post">
     <header class="post-header">
-        <h1 class="post-title">外链跳转到中间页</h1>
+        <h1 class="post-title">博客CDN流量异常</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;margin-right:2em;">2024-03-03</text>
+            <text style="padding-top: 0;margin-right:2em;">2025-09-30</text>
             分类：
             <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
                 个人博客
@@ -397,23 +397,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#外链" target="_blank">外链</a>
+                <a class="pjaxlink" href="/tags#CDN" target="_blank">CDN</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#中间页" target="_blank">中间页</a>
+                <a class="pjaxlink" href="/tags#盗刷" target="_blank">盗刷</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#安全" target="_blank">安全</a>
+                <a class="pjaxlink" href="/tags#流量" target="_blank">流量</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#博客" target="_blank">博客</a>
+                <a class="pjaxlink" href="/tags#频率" target="_blank">频率</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#gorpeln" target="_blank">gorpeln</a>
+                <a class="pjaxlink" href="/tags#攻击" target="_blank">攻击</a>
                 
                 
             </span>
@@ -421,177 +421,37 @@
         </div>
     </header>
     <article class="post-content">
-        <p><img src="https://img.gorpeln.top/blog/20240303104439913.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20240303104439913" /></p>
+        <p>今天打开博客查看时显示异常，提示<code class="language-plaintext highlighter-rouge">connection reset by peer</code>。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。</p>
 
-<h3 id="前言">前言</h3>
-<p>网络安全的问题这些年越来越被关注，所以各大平台网站例如微博、微信、QQ、网易等，都在这几年为自家的网络产品添加了一个安全跳转的中台页面，甚至微博对于跳转链接必须是企业认证才能进入微博的安全白名单，可以说是把安全做到了<del><strong>极致</strong></del>。</p>
+<p><img src="https://img.gorpeln.top/blog/20250930165821910.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20250930165821910" /></p>
 
-<p>加了安全跳转中台以后，这样可以让自己的产品主域名成功与外链间接通过中台串联，而不是直接关系，增加安全跳转中台页面也间接提升了网络产品的用户体验。</p>
+<p>在检测到持续的异常流量后，CDN系统触发了安全防护机制，对博客访问进行了临时限制，但由于我此前未开启又拍云的异常事件短信/邮件提醒功能，未能第一时间收到预警，导致发现问题时已出现访问中断。截至目前，博客访问链路完全恢复，经测试各项功能均正常可用。</p>
 
-<h3 id="操作">操作</h3>
-<p>新建 js 文件，如：<code class="language-plaintext highlighter-rouge">safe.js</code>。里面的网址为排除跳转中间页。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkParent(element, classNames) {
-    while (element) {
-        if (element.classList &amp;&amp; classNames.some(cn =&gt; element.classList.contains(cn))) {
-            return true;
-        }
-        element = element.parentElement;
-    }
-    return false;
-}
-var excludedClasses = ['card-link', 'friend-item', 'contact-item', 'footer-item']; // 添加需要排除的a标签类名class
-window.addEventListener('load', (event) =&gt; {
-    document.body.addEventListener('click', function(e) {
-        let target = e.target;
-        while (target &amp;&amp; target.nodeName !== 'A') {
-            target = target.parentNode;
-        }
-        if (target &amp;&amp; target.nodeName === 'A' &amp;&amp;
-            !checkParent(target, excludedClasses) &amp;&amp;
-            !target.href.includes('gorpeln.top') &amp;&amp;
-            !target.href.includes('gorpeln.eu.org') &amp;&amp;
-            !target.href.includes('lab.gorpeln.top') &amp;&amp;
-            !target.href.includes('github.com') &amp;&amp;
-            target.hostname !== window.location.hostname) {
-            e.preventDefault();
-            let encodedUrl = btoa(target.href); // Base64 encode the URL
-            let url = '/go-wild?target=' + encodedUrl;
-            window.open(url, '_blank');
-        }
-    });
-});
-</code></pre></div></div>
-
-<p>新建一个 html，如<code class="language-plaintext highlighter-rouge">go-wild.html</code>。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="tiaozhuan-all"&gt;
-    &lt;div class="tiaozhuan-nrong"&gt;
-        &lt;div class="tiaozhuan-title"&gt;即将离开 『 gorpeln's Blog 』 ，跳转到以下外部链接&lt;/div&gt;
-        &lt;div id="tiaozhuan-link"&gt;&lt;/div&gt;
-        &lt;div class="tiaozhuan-info"&gt;请自行识别该链接是否安全，并保管好个人信息。&lt;/div&gt;
-        &lt;div class="tiaozhuan-button"&gt;&lt;a href='' id='direct-link'&gt;继续访问&lt;/a&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    const params = new URLSearchParams(window.location.search);
-    const encodedTarget = params.get('target');
-    const target = atob(encodedTarget); // 使用 atob 进行 Base64 解码
-
-    if (target) {
-        document.getElementById('direct-link').href = target;
-        document.getElementById('tiaozhuan-link').textContent = '' + target; // 直接显示目标地址    
-    } else {
-        console.error('未指定重定向目标。');
-    }
-&lt;/script&gt;
-</code></pre></div></div>
-
-<p>相关 css，根据主题风格调整。</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
-    background: #ececec;
-}
-
-.tiaozhuan-all {
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -10px;
-    border-radius: 10px;
-    background: #fff url(../assets/img/go-wild.png) no-repeat center center / cover;
-    color: #666;
-    word-break: break-all;
-    max-width: 700px;
-    height: 350px;
-    text-align: center;
-    font-size: 0.85rem;
-    overflow: hidden;
-    margin: 100px auto 0;
-
-    @include breakpoint('small') {
-        aspect-ratio: 2 / 1;
-        height: auto;
-    }
-}
-
-.tiaozhuan-nrong {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 20px 30px 20px;
-}
-
-.tiaozhuan-title {
-    font-size: 1.3rem;
-    color: #222;
-    line-height: 1.4;
-    margin-bottom: 4px;
-}
-
-.tiaozhuan-info {
-    margin-top: 6px;
-}
-
-.tiaozhuan-button {
-    margin-top: 20px;
-}
-
-.tiaozhuan-button a {
-    color: #fc9151;
-    border-radius: 4px;
-    padding: 10px 30px;
-    font-size: .85rem;
-    border: 0.5px solid #fc9151;
-    display: inline-block;
-    text-decoration: none;
-
-}
-</code></pre></div></div>
-
-<p>最后在页尾引用js文件即可，如</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="/js/safe.js"&gt;&lt;/script&gt;
-</code></pre></div></div>
-
-<h3 id="思路">思路</h3>
-<p>js文件识别链接的a标签，并把链接用 base64 编码，同时排除一些不需要跳转中间页的class或网站。然后跳转到<code class="language-plaintext highlighter-rouge">go-wild.html</code>文件中（链接格式为/go-wild?target=base64编码），html文件承担了中间页具体信息，及跳转动作。如使用base64解码跳转的链接。</p>
-
-<h3 id="结语">结语</h3>
-<p>对于浏览体验来说，多了一步跳转，总归是不好，但为了愉快的玩耍博客，稳妥一点更佳。如果觉得跳转中间页很烦人，浏览器可以装个 <a href="https://chromewebstore.google.com/detail/skip-redirect/jaoafjdoijdconemdmodhbfpianehlon">Skip Redirect</a> 插件，告别所有网站的中间页跳转，直接抵达目标地址。</p>
+<p>最后建议平时做好防护，避免出现损失：</p>
+<ul>
+  <li>CDN 关键配置必到位：开启「异常提醒」 <em class="color-gray">(短信 + 邮件）</em>，避免错过预警；同时设置 IP 访问频率限制 <em class="color-gray">(如单 IP1 分钟≤60 次）</em>、流量封顶，再给静态资源加 URL 鉴权，筑牢基础防护。</li>
+  <li>定期看数据识异常：每周花几分钟查流量，记住正常 IP 地域、请求时段 <em class="color-gray">(如博客晚间高峰）</em>，若出现海外 IP 突增、凌晨流量异常，及时排查。</li>
+  <li>做好兜底应急准备：每周备份网站数据 <em class="color-gray">(本地 + 云盘）</em>，留存 CDN 服务商紧急联系方式；提前配置临时备用页，避免访问异常时读者误解。</li>
+</ul>
 
 
-
-        
-            <br/>
-<br/>
-<hr/>
-<div style="color: #888888;font-weight: 300;font-size:12px;margin-top:10px;word-wrap: break-word;">参考链接：
-    <div>
-      
-        https://koobai.com/zhongjiantiaozhuan
-        
-      
-    </div>
-</div>
         
     </article>
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2025-04-07</div>
+    <div class="custom-font">最后编辑于：2025-10-02</div>
     
-    <div class="custom-font">本文链接：<a href="/article/17094338798" class='articleLink'>https://gorpeln.top/article/17094338798</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17592227011" class='articleLink'>https://gorpeln.top/article/17592227011</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/17087779433" title="GitHub贡献者可获取 Stark 空投" class="custom-font" target="_blank">GitHub贡献者可获取 Stark 空投</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17577220915" title="一路生花" class="custom-font" target="_blank">一路生花</a>
     </div>
     
-    
-    <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/17113627324" title="App更新总提醒缺少出口合规证明" class="custom-font" target="_blank">App更新总提醒缺少出口合规证明</a>
-    </div>
     
 </div>
 <div class="livere waline-box">
@@ -605,7 +465,7 @@ window.addEventListener('load', (event) =&gt; {
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
-      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17094338798')"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17592227011')"></div>
       <div class="qrcodeImg" id="qrcode"></div>
       <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
     </div>

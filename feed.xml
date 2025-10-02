@@ -6,6 +6,34 @@
     <description>gorpeln的个人博客（https://gorpeln.top/）是一个追求简洁、高效，专注记录生活点滴、分享技术成长、共享实用资源的个人优秀博客！趁年轻，做自己想做的！欢迎你来这里交流互动，一起探索精彩世界，开启知识与心灵的非凡旅程。</description>
     
       
+        <item>
+          <title>博客CDN流量异常</title>
+          <link>https://gorpeln.top/article/17592227011</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17592227011</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Tue, 30 Sep 2025 16:58:21 +0800</pubDate>
+          <description>&lt;p&gt;今天打开博客查看时显示异常，提示&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;connection reset by peer&lt;/code&gt;。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250930165821910.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250930165821910&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在检测到持续的异常流量后，CDN系统触发了安全防护机制，对博客访问进行了临时限制，但由于我此前未开启又拍云的异常事件短信/邮件提醒功能，未能第一时间收到预警，导致发现问题时已出现访问中断。截至目前，博客访问链路完全恢复，经测试各项功能均正常可用。&lt;/p&gt;
+
+&lt;p&gt;最后建议平时做好防护，避免出现损失：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CDN 关键配置必到位：开启「异常提醒」 &lt;em class=&quot;color-gray&quot;&gt;(短信 + 邮件）&lt;/em&gt;，避免错过预警；同时设置 IP 访问频率限制 &lt;em class=&quot;color-gray&quot;&gt;(如单 IP1 分钟≤60 次）&lt;/em&gt;、流量封顶，再给静态资源加 URL 鉴权，筑牢基础防护。&lt;/li&gt;
+  &lt;li&gt;定期看数据识异常：每周花几分钟查流量，记住正常 IP 地域、请求时段 &lt;em class=&quot;color-gray&quot;&gt;(如博客晚间高峰）&lt;/em&gt;，若出现海外 IP 突增、凌晨流量异常，及时排查。&lt;/li&gt;
+  &lt;li&gt;做好兜底应急准备：每周备份网站数据 &lt;em class=&quot;color-gray&quot;&gt;(本地 + 云盘）&lt;/em&gt;，留存 CDN 服务商紧急联系方式；提前配置临时备用页，避免访问异常时读者误解。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+      
+    
+      
     
       
     
@@ -1945,291 +1973,6 @@ https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
         </item>
       
     
-      
-    
-      
-        <item>
-          <title>定期自动备份又拍云存储</title>
-          <link>https://gorpeln.top/article/17280983368</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17280983368</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 05 Oct 2024 11:18:56 +0800</pubDate>
-          <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;数据无价，备份无忧。&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;将其他平台数据备份到不同平台的好处：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;增强数据安全性&lt;/strong&gt;：通过定期备份到GitHub，即使又拍云服务出现问题，你的数据仍然安全。这为你的数据提供了额外的一层保护，尤其是使用&lt;strong&gt;国内免费服务&lt;/strong&gt;的用户。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;便于版本管理&lt;/strong&gt;：GitHub支持Git版本控制系统，这意味着你可以轻松追踪数据的变化历史，这对于需要保存多个版本的数据集或文档非常有用。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;自动化操作&lt;/strong&gt;：使用GitHub Actions，你可以设置自动化的工作流来定期执行备份脚本。这不仅减少了手动操作的需求，还降低了人为错误的风险。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;成本效益&lt;/strong&gt;：对于小规模项目或个人开发者来说，使用GitHub作为备份存储可能比租用额外的云存储空间更经济。特别是当使用GitHub的免费层级时。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;易于访问和分享&lt;/strong&gt;：GitHub上的数据可以通过简单的链接分享给他人，这对于公开数据集或开源项目尤其有益。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;预览&quot;&gt;预览&lt;/h3&gt;
-&lt;p&gt;又拍云目录：
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856740.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241005111856740&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;github目录：
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856741.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241005111856741&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;操作示例&quot;&gt;操作示例&lt;/h3&gt;
-&lt;h4 id=&quot;1-新增-workflow-yml-文件&quot;&gt;1. 新增 Workflow YML 文件&lt;/h4&gt;
-&lt;p&gt;upyun_images_sync/.github/workflows/sync-images.yml&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;name: Sync Images from UpYun to GitHub
-
-on:
-  schedule:
-    - cron: &apos;0 0 * * 3&apos;  # 每周三凌晨 0 点运行
-  workflow_dispatch:  # 允许手动触发
-
-jobs:
-  sync-images:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: &apos;3.x&apos;
-
-    - name: Install dependencies
-      run: |
-        pip install gitpython
-
-    - name: Run sync script
-      env:
-        UPYUN_FTP_HOST: $
-        UPYUN_FTP_USER: $
-        UPYUN_FTP_PASSWORD: $
-        UPYUN_FTP_PATH: $
-        LOCAL_DOWNLOAD_PATH: ./tmp
-        REPO_PATH: ./repo
-        GH_TOKEN: $
-        REPO_OWNER: $
-        REPO_NAME: $
-        BRANCH_NAME: $
-      run: |
-        python3 sync_images.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;2-新建-python-同步脚本&quot;&gt;2. 新建 Python 同步脚本&lt;/h4&gt;
-&lt;p&gt;upyun_images_sync/sync_images.py&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#!/usr/bin/env python3
-# -*- coding: UTF-8 -*-
-
-import os
-from ftplib import FTP
-import git
-import shutil
-
-class MyFTP:
-    def __init__(self, host, port=21):
-        self.host = host
-        self.port = port
-        self.ftp = FTP()
-        self.ftp.encoding = &apos;utf8&apos;
-        self.file_list = []
-
-    def login(self, username, password):
-        try:
-            self.ftp.connect(self.host, self.port)
-            self.ftp.login(username, password)
-            print(f&quot;成功登录到 {self.host}&quot;)
-            print(f&quot;当前工作目录: {self.ftp.pwd()}&quot;)
-        except Exception as err:
-            print(f&quot;FTP 连接或登录失败，错误描述为：{err}&quot;)
-            sys.exit(1)
-
-    def download_file(self, local_file, remote_file):
-        if os.path.exists(local_file):
-            print(f&quot;{local_file} 已存在，跳过下载&quot;)
-            return
-        try:
-            print(f&quot;下载文件 {remote_file} 到 {local_file}&quot;)
-            buf_size = 1024
-            with open(local_file, &apos;wb&apos;) as file_handler:
-                self.ftp.retrbinary(f&apos;RETR {remote_file}&apos;, file_handler.write, buf_size)
-        except Exception as err:
-            print(f&quot;下载文件出错，出现异常：{err}&quot;)
-
-    def download_file_tree(self, local_path, remote_path):
-        try:
-            print(f&quot;尝试切换到远程目录: {remote_path}&quot;)
-            self.ftp.cwd(remote_path)
-            print(f&quot;成功切换到远程目录: {remote_path}&quot;)
-        except Exception as err:
-            print(f&quot;远程目录 {remote_path} 不存在，继续... 具体错误描述为：{err}&quot;)
-            return
-
-        if not os.path.isdir(local_path):
-            os.makedirs(local_path)
-            print(f&quot;创建本地目录 {local_path}&quot;)
-
-        print(f&quot;当前工作目录: {self.ftp.pwd()}&quot;)
-
-        # 列出目录内容
-        remote_files = self.ftp.nlst()
-        print(f&quot;远程目录内容: {remote_files}&quot;)
-
-        for remote_file in remote_files:
-            local = os.path.join(local_path, remote_file)
-            if remote_file in [&apos;.&apos;, &apos;..&apos;]:
-                continue
-            try:
-                self.ftp.cwd(remote_file)
-                print(f&quot;下载目录：{remote_file}&quot;)
-                self.download_file_tree(local, os.path.join(remote_path, remote_file))
-                self.ftp.cwd(&quot;..&quot;)
-            except Exception:
-                print(f&quot;下载文件：{remote_file}&quot;)
-                self.download_file(local, os.path.join(remote_path, remote_file))
-
-    def close(self):
-        print(&quot;FTP退出&quot;)
-        self.ftp.quit()
-
-def sync_to_github(repo_path, branch_name):
-    if os.path.exists(repo_path):
-        shutil.rmtree(repo_path)
-    os.makedirs(repo_path)
-
-    repo_url = f&quot;https://{GH_TOKEN}@github.com/{REPO_OWNER}/{REPO_NAME}.git&quot;
-    print(f&quot;克隆仓库: {repo_url}&quot;)
-    try:
-        repo = git.Repo.clone_from(repo_url, repo_path, branch=branch_name)
-        print(f&quot;克隆仓库到 {repo_path}&quot;)
-    except git.exc.GitCommandError as e:
-        print(f&quot;克隆仓库失败: {e}&quot;)
-        return
-
-    images_dir = os.path.join(repo_path, &apos;images&apos;)
-    if not os.path.exists(images_dir):
-        os.makedirs(images_dir)
-
-    shutil.copytree(LOCAL_DOWNLOAD_PATH, images_dir, dirs_exist_ok=True)
-    print(f&quot;复制文件到 {images_dir}&quot;)
-
-    repo.git.add(all=True)
-    if repo.is_dirty():
-        repo.index.commit(&quot;Sync images from UpYun&quot;)
-        origin = repo.remote(name=&apos;origin&apos;)
-        origin.push()
-        print(&quot;推送更改到 GitHub 仓库&quot;)
-    else:
-        print(&quot;没有更改需要提交&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    # 从环境变量中读取配置
-    UPYUN_FTP_HOST = os.getenv(&apos;UPYUN_FTP_HOST&apos;)
-    UPYUN_FTP_USER = os.getenv(&apos;UPYUN_FTP_USER&apos;)
-    UPYUN_FTP_PASSWORD = os.getenv(&apos;UPYUN_FTP_PASSWORD&apos;)
-    UPYUN_FTP_PATH = os.getenv(&apos;UPYUN_FTP_PATH&apos;, &apos;/&apos;)
-    LOCAL_DOWNLOAD_PATH = os.getenv(&apos;LOCAL_DOWNLOAD_PATH&apos;, &apos;./tmp&apos;)
-    REPO_PATH = os.getenv(&apos;REPO_PATH&apos;, &apos;./repo&apos;)
-    GH_TOKEN = os.getenv(&apos;GH_TOKEN&apos;)
-    REPO_OWNER = os.getenv(&apos;REPO_OWNER&apos;)
-    REPO_NAME = os.getenv(&apos;REPO_NAME&apos;)
-    BRANCH_NAME = os.getenv(&apos;BRANCH_NAME&apos;, &apos;master&apos;)
-
-    # 创建 FTP 对象
-    my_ftp = MyFTP(UPYUN_FTP_HOST)
-    # 登录 FTP 服务器
-    my_ftp.login(UPYUN_FTP_USER, UPYUN_FTP_PASSWORD)
-    
-    # 下载目录
-    my_ftp.download_file_tree(LOCAL_DOWNLOAD_PATH, UPYUN_FTP_PATH)
-    
-    # 关闭 FTP 连接
-    my_ftp.close()
-
-    # 同步到 GitHub
-    sync_to_github(REPO_PATH, BRANCH_NAME)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;3-授予-workflow-读写权限&quot;&gt;3. 授予 Workflow 读写权限&lt;/h4&gt;
-&lt;p&gt;将本地的项目提交到github，然后设置Workflow 读写权限&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856742.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241005111856742&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4-新增-secrets-变量&quot;&gt;4. 新增 Secrets 变量&lt;/h4&gt;
-&lt;p&gt;在github上设置Secrets 变量&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241005111856743.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241005111856743&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;序号&lt;/th&gt;
-      &lt;th&gt;变量名&lt;/th&gt;
-      &lt;th&gt;释义&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;UPYUN_FTP_HOST&lt;/td&gt;
-      &lt;td&gt;又拍云 FTP 主机地址&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;UPYUN_FTP_USER&lt;/td&gt;
-      &lt;td&gt;又拍云 FTP 用户名&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;UPYUN_FTP_PASSWORD&lt;/td&gt;
-      &lt;td&gt;又拍云 FTP 密码&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;UPYUN_FTP_PATH&lt;/td&gt;
-      &lt;td&gt;又拍云 FTP 路径&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;GH_TOKEN&lt;/td&gt;
-      &lt;td&gt;GitHub 个人访问令牌&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;REPO_OWNER&lt;/td&gt;
-      &lt;td&gt;仓库所有者&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;REPO_NAME&lt;/td&gt;
-      &lt;td&gt;仓库名称&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;BRANCH_NAME&lt;/td&gt;
-      &lt;td&gt;分支名称（默认为 master）&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;变量详解：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_HOST&lt;/code&gt;：参考&lt;a href=&quot;https://help.upyun.com/2015/12/28/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-ftp%e3%80%81api-%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6/&quot;&gt;又拍云文档&lt;/a&gt;，直接使用&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;v0.ftp.upyun.com&lt;/code&gt;就行了&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_USER&lt;/code&gt;：格式为 &lt;strong&gt;operator/bucket&lt;/strong&gt;，在又拍云 - 云存储 - 选择对应的bucket点击配置 - 存储管理 - 操作员授权 - 自己添加操作用户名和密码，假设你的又拍云云储存bucket的名称为upai-img，自定义的用户名为user，密码为123456，则UPYUN_FTP_USER就是 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;user/upai-img&lt;/code&gt;，如果你看不懂我说的，参考&lt;a href=&quot;https://techs.upyun.com/videos/cdnpage/creating_storage.html&quot;&gt; 又拍云视频教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_PASSWORD&lt;/code&gt;：就是上面你自己设置的 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;123456&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856744.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UPYUN_FTP_PATH&lt;/code&gt;：直接使用 &lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;/&lt;/code&gt; （根目录）就行了&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GH_TOKEN&lt;/code&gt;：选择github的 Settings - 点击右侧列表最下面的 Developer Settings - Personal access tokens - tokens (classic) - Generated new token (classic)，Note名字可以随意，Expiration时间选择 no Expiration,下面权限全选了，点击Generated token 就生成了想要的token，记得保存，他只显示一次，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;abc_123456789pUS123454321WmJkE987654321&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856745.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPO_OWNER&lt;/code&gt;：就是你的github的用户名，我在github给这个项目创建仓库为https://github.com/gorpeln/upyun_images_sync，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;gorpeln&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REPO_NAME&lt;/code&gt;：仓库链接后面的就是仓库名，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;upyun_images_sync&lt;/code&gt;，&lt;a href=&quot;https://img.gorpeln.top/blog/20241005111856746.png!gorpeln&quot;&gt;图片示例&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BRANCH_NAME&lt;/code&gt;：项目分支名，一般为master/main，示例：&lt;code class=&quot;language-plaintext color-gray highlighter-rouge&quot;&gt;master&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
       
     
   </channel>
