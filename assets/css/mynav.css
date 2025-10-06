@@ -11,7 +11,7 @@ body {
     height: 100%;
     color: white;
     box-sizing: border-box;
-    border-right: 1px dashed #ecec;
+    border-right: 1px dashed #d4acd4cc;
     min-width: 200px;
 }
 
@@ -97,15 +97,25 @@ body {
 .main-content:before {
     content: "";
     position: absolute;
-    background-image: url(/assets/img/logo_seal.png);
+    /*background-image: url(/assets/img/logo_seal.png);*/
     background-size: cover;
     width: 150px;
     height: 150px;
     z-index: 1;
     bottom: -5%;
     right: 6%;
-    opacity: 0.32;
+    /*opacity: 0.5;*/
     pointer-events: none;
+}
+.seal-box{
+    display:block;
+    margin-top: 2em;
+}
+.sidebar-profile-seal{
+    max-width: 50%;
+    vertical-align: middle;
+    border-radius: 4px;
+    margin-left: 25%;
 }
 
 .light-sweep {
@@ -235,6 +245,9 @@ body {
 
     .link-grid {
         grid-template-columns: 1fr;
+    }
+    .seal-box{
+        display:none;
     }
 }
 
