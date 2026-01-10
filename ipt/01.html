@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.7k</p>
+                  <p>119.9k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-05 19:50:01 +0800">
-                    2026/01/05
+                  <p id="current-date" data-value="2026-01-10 20:56:01 +0800">
+                    2026/01/10
                   </p>
                 </li>
               </ul>
@@ -503,7 +503,18 @@
   <li><code class="language-plaintext highlighter-rouge">限制权限</code>可以限制用户复制、编辑文本，也可以限制用户打印文本</li>
   <li>在Word 2023旳编辑状态下，删除一个段落标识后，前后两段文字会合并为一种段落。其中，文字字体：均保持与合并前一致，不发生变化</li>
   <li>“保留”、“保存”、“存储” 等表述通常同义，均指向 Word 的 “Save” 功能，无需额外区分；而 “另存为” 会明确标注 “另存为” 或 “保存为”，避免混淆</li>
-  <li><img src="https://img.gorpeln.top/p/software/p_s_c_1_005.png" alt="功能选项卡" /></li>
+  <li>功能<code class="language-plaintext highlighter-rouge">选项卡</code>
+    <ul>
+      <li>开始：字体、段落</li>
+      <li>插入：图片、表格、艺术字、文本框、页眉页脚</li>
+      <li>页面布局：页面设置 <em class="color-gray">(纸张方向、分栏、）</em>、页面背景</li>
+      <li>引用：目录、脚注</li>
+      <li>邮件：工资条、邀请函</li>
+      <li>审阅：检查、校对、保护设置</li>
+      <li>视图：视图 <em class="color-gray">(页面视图、草稿视图、大纲视图、web版式视图、阅读版式视图）</em>、比例</li>
+      <li><a href="https://img.gorpeln.top/p/software/p_s_c_1_005.png">功能选项卡 图片</a></li>
+    </ul>
+  </li>
   <li><code class="language-plaintext highlighter-rouge">视图</code>：包括页面视图 <em class="color-gray">(默认）</em>、草稿视图 <em class="color-gray">(仅显示标题和正文，2003版本之前叫普通视图）</em>、大纲视图 <em class="color-gray">(显示目录，可以折叠内容）</em>、Web 版式视图 <em class="color-gray">(网页显示样式）</em>、阅读版式视图 <em class="color-gray">(像书本一样，分左右两页）</em></li>
   <li>段落<code class="language-plaintext highlighter-rouge">缩进</code>：
     <ul>
@@ -544,54 +555,144 @@
 </details>
 
 <h3 id="表格处理excel">表格处理（Excel）</h3>
-
-<h4 id="excel-运算符优先级总表软考必记">Excel 运算符优先级总表（软考必记）</h4>
 <ul>
-  <li>Excel 中不同类型运算符的优先级：
+  <li>Excel的 文件<code class="language-plaintext highlighter-rouge">扩展名</code>为<code class="language-plaintext highlighter-rouge">.xls</code>或<code class="language-plaintext highlighter-rouge">.xlsx</code></li>
+  <li>Excel的 列号是1、2、3…，行号是A、B、C…AA、AB、AC…</li>
+  <li>Excel<code class="language-plaintext highlighter-rouge">合并</code>单元格后，只保留第1个单元格中的内容，word中的表格合并单元格后，会保留所有单位格的内容</li>
+  <li>Excel中点击Enter向下跳转，按Tab向右跳转，加Shift向相反方向跳转</li>
+  <li>在行号和列号上调整宽度行高和列宽，<code class="language-plaintext highlighter-rouge">双击</code>可以自适应宽度和高度</li>
+  <li>功能<code class="language-plaintext highlighter-rouge">选项卡</code>
     <ul>
-      <li>引用运算符（:）&gt; 算术运算符（%）&gt; 文本运算符（&amp;）&gt; 比较运算符（&lt;&gt;）。</li>
-      <li><em class="color-gray">如 =A1:B2% &amp; C1&lt;&gt;D1 表示 ① 先执行引用运算 A1:B2（确定单元格区域）；② 再执行算术运算 %（对区域内数值取百分比）；③  接着执行文本运算 &amp;（连接区域结果与 C1 的值）；④ 最后执行比较运算 &lt;&gt;（判断连接后的文本与 D1 是否不等）</em></li>
+      <li>开始：字体、对齐方式 <em class="color-gray">(水平、垂直、自动换行、合并）</em>、数字 <em class="color-gray">(常规、数字、时间、文本）</em>、样式 <em class="color-gray">(条件格式）</em>、编辑 <em class="color-gray">(排序和筛选、查找和选择、填充）</em></li>
+      <li>插入：图片、图表、文本框、页眉页脚</li>
+      <li>页面布局：页面设置 <em class="color-gray">(纸张方向、打印标题、网格线）</em></li>
+      <li>公式：函数库</li>
+      <li>数据：排序筛选、数据有效性、分列</li>
+      <li>审阅：批注、保护</li>
+      <li>视图：视图 <em class="color-gray">(普通、分页预览、页面布局）</em>、比例、冻结窗口</li>
     </ul>
   </li>
-  <li>
-    <table>
-      <thead>
-        <tr>
-          <th>优先级</th>
-          <th>运算符类别</th>
-          <th>包含运算符（按优先级从高到低）</th>
-          <th>核心规则</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>引用运算符</td>
-          <td><code class="language-plaintext highlighter-rouge">:</code> <em class="color-gray">(区域）</em>、<code class="language-plaintext highlighter-rouge">,</code> <em class="color-gray">(联合）</em>、<code class="language-plaintext highlighter-rouge">空格</code> <em class="color-gray">(交叉）</em></td>
-          <td>先确定参与运算的单元格区域</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>算术运算符</td>
-          <td><code class="language-plaintext highlighter-rouge">^</code> <em class="color-gray">(幂）</em>、<code class="language-plaintext highlighter-rouge">%</code> <em class="color-gray">(百分比）</em>、<code class="language-plaintext highlighter-rouge">*/</code> <em class="color-gray">(乘除）</em>、<code class="language-plaintext highlighter-rouge">+-</code> <em class="color-gray">(加减）</em></td>
-          <td>同优先级从左到右，先乘除后加减</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>文本运算符</td>
-          <td><code class="language-plaintext highlighter-rouge">&amp;</code> <em class="color-gray">(连接）</em></td>
-          <td>仅1个，拼接文本/数值</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>比较运算符</td>
-          <td><code class="language-plaintext highlighter-rouge">=</code>、<code class="language-plaintext highlighter-rouge">&lt;&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;</code>、<code class="language-plaintext highlighter-rouge">&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;=</code>、<code class="language-plaintext highlighter-rouge">&gt;=</code></td>
-          <td>同优先级从左到右，返回逻辑值</td>
-        </tr>
-      </tbody>
-    </table>
+  <li><code class="language-plaintext highlighter-rouge">数据输入</code>：
+    <ul>
+      <li>文本：默认左对齐</li>
+      <li>数字、日期：默认右对齐
+        <ul>
+          <li>长数字显示成文本：① 直接设置单元格格式，<code class="language-plaintext highlighter-rouge">要先设置单元格格式为文本，再输入内容</code> ② 数字前先输入英文的单引号<code class="language-plaintext highlighter-rouge">'</code></li>
+          <li>分数：① 直接设置单元格格式 ② 分数前加一个0加空格 <code class="language-plaintext highlighter-rouge">0 </code></li>
+          <li>负数：① 直接设置单元格格式 ② 直接加一个减号 ③ 正数上一个括号</li>
+        </ul>
+      </li>
+      <li>逻辑值：默认居中 <em class="color-gray">(TRUE、FALSE）</em></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">数据填充</code>：开始 - 编辑 - 填充 - 系列 - 等差、等比</li>
+  <li><code class="language-plaintext highlighter-rouge">数据错误类型</code>：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">###</code>：文本<code class="language-plaintext highlighter-rouge">过长</code>不能显示所有内容，一般为数字格式会显示###，文本格式的会被截取遮盖掉</li>
+      <li><code class="language-plaintext highlighter-rouge">#DIV/0!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">除0</code>的错误</li>
+      <li><code class="language-plaintext highlighter-rouge">#NAME!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">函数名</code>或者其他名称错误</li>
+      <li><code class="language-plaintext highlighter-rouge">#VALUE!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">数据类型</code>的错误</li>
+      <li><code class="language-plaintext highlighter-rouge">#N/A</code>：<code class="language-plaintext highlighter-rouge">数据缺失</code>或者引用的数据不存在</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">数据有效性</code>：数据有效性 - 数据有效性 - 序列 <em class="color-gray">(固定值的用序列，如选择男女）</em> - 男女中间用英文逗号隔开</li>
+  <li><code class="language-plaintext highlighter-rouge">运算符</code>
+    <ul>
+      <li>Excel 中不同类型运算符的优先级：
+        <ul>
+          <li>引用运算符（:）&gt; 算术运算符（%）&gt; 文本运算符（&amp;）&gt; 比较运算符（&lt;&gt;）。</li>
+          <li><em class="color-gray">如 =A1:B2% &amp; C1&lt;&gt;D1 表示 ① 先执行引用运算 A1:B2（确定单元格区域）；② 再执行算术运算 %（对区域内数值取百分比）；③  接着执行文本运算 &amp;（连接区域结果与 C1 的值）；④ 最后执行比较运算 &lt;&gt;（判断连接后的文本与 D1 是否不等）</em></li>
+          <li>算术运算符中的优先级为 <code class="language-plaintext highlighter-rouge">^%</code> &gt; <code class="language-plaintext highlighter-rouge">*/</code> &gt; <code class="language-plaintext highlighter-rouge">+-</code>，其中 ^ 和 % 优先级一样</li>
+        </ul>
+      </li>
+      <li>
+        <table>
+          <thead>
+            <tr>
+              <th>优先级</th>
+              <th>运算符类别</th>
+              <th>包含运算符（按优先级从高到低）</th>
+              <th>核心规则</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>引用运算符</td>
+              <td><code class="language-plaintext highlighter-rouge">:</code> <em class="color-gray">(区域）</em>、<code class="language-plaintext highlighter-rouge">,</code> <em class="color-gray">(联合）</em>、<code class="language-plaintext highlighter-rouge">空格</code> <em class="color-gray">(交叉）</em></td>
+              <td>先确定参与运算的单元格区域</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>算术运算符</td>
+              <td><code class="language-plaintext highlighter-rouge">^</code> <em class="color-gray">(乘方）</em>、<code class="language-plaintext highlighter-rouge">%</code> <em class="color-gray">(百分比）</em>、<code class="language-plaintext highlighter-rouge">*/</code>、<code class="language-plaintext highlighter-rouge">+-</code></td>
+              <td>优先级<code class="language-plaintext highlighter-rouge">^%</code> &gt; <code class="language-plaintext highlighter-rouge">*/</code> &gt; <code class="language-plaintext highlighter-rouge">+-</code></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>文本运算符</td>
+              <td><code class="language-plaintext highlighter-rouge">&amp;</code> <em class="color-gray">(连接）</em></td>
+              <td>仅1个，拼接文本/数值</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>比较运算符</td>
+              <td><code class="language-plaintext highlighter-rouge">=</code>、<code class="language-plaintext highlighter-rouge">&lt;&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;</code>、<code class="language-plaintext highlighter-rouge">&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;=</code>、<code class="language-plaintext highlighter-rouge">&gt;=</code></td>
+              <td>同优先级从左到右，返回逻辑值</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>单元格的引用
+    <ul>
+      <li>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">类型</th>
+              <th style="text-align: center">书写规则</th>
+              <th style="text-align: center">特点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center">相对引用</td>
+              <td style="text-align: center"><code class="language-plaintext highlighter-rouge">C1=A1+B1</code></td>
+              <td style="text-align: center">全部变化，如求C2时，C2=A2+B2</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">绝对引用</td>
+              <td style="text-align: center"><code class="language-plaintext highlighter-rouge">C1=$A$1+$B$1</code></td>
+              <td style="text-align: center">全部不变，如求C2时，C2=A1+B1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">混合引用</td>
+              <td style="text-align: center"><code class="language-plaintext highlighter-rouge">C1=$A1+B$1 </code></td>
+              <td style="text-align: center">部分变化，如求C2时，C2=A2+B1</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">三维引用</td>
+              <td style="text-align: center"><code class="language-plaintext highlighter-rouge">C1=Sheet1!A1+[工作簿1]Sheet1!B1</code></td>
+              <td style="text-align: center">跨工作簿，当前工作簿中的Sheet1工作表中的A1和<strong>工作簿1.elsx</strong>工作簿中Sheet1工作表中的B1单元格相加</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
   </li>
 </ul>
+
+<details class="toggle">
+  <summary class="toggle-button">例题</summary>
+  <div class="box-detail">
+    
+    <img src="https://img.gorpeln.top/p/software/p_s_c_1_008.png" alt="" title="选择A" />        
+    <img src="https://img.gorpeln.top/p/software/p_s_c_1_009.png" alt="" title="选择C" />              
+
+  </div>
+</details>
 
 <h4 id="excel-中高频考查函数汇总">Excel 中高频考查函数汇总</h4>
 
@@ -702,7 +803,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.1</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.2</a>
         </div>
     </div>
 </footer>
@@ -845,7 +946,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.1",
+                "%c版本号 %c V4.10.2",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
