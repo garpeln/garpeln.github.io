@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>时光本 - 下线公告 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,时光本,下架,便签,清单,图片,纪念日,地址,链接,银行卡,名片" />
-    <meta name="description" content="重要通知">
+    <title>给博客图片添加水印 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,水印,又拍云,腾讯云,CDN,EdgeOne" />
+    <meta name="description" content="本文分享一种基于对象存储+CDN的组合方案，可实现免费10G存储+无限流量的图片外链，同时配置自动水印功能，该方法理论适用于所有对象存储与 CDN 的搭配。">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/17529840360">
+    <link rel="canonical" href="/article/17594958674">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln">
-    <meta property="og:title" content="时光本 - 下线公告 | gorpeln's Blog">
+    <meta property="og:title" content="给博客图片添加水印 | gorpeln's Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/article/17529840360">
-    <meta property="og:description" content="重要通知">
+    <meta property="og:url" content="/article/17594958674">
+    <meta property="og:description" content="本文分享一种基于对象存储+CDN的组合方案，可实现免费10G存储+无限流量的图片外链，同时配置自动水印功能，该方法理论适用于所有对象存储与 CDN 的搭配。">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -383,13 +383,13 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
             <div class="page-content" id="pjax"><div class="post">
     <header class="post-header">
-        <h1 class="post-title">时光本 - 下线公告</h1>
+        <h1 class="post-title">给博客图片添加水印</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;margin-right:2em;">2025-07-20</text>
+            <text style="padding-top: 0;margin-right:2em;">2025-10-03</text>
             分类：
-            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                iOS
+            <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                个人博客
             </a>
             <text style="margin-right:2em;"></text>
             标签：
@@ -397,43 +397,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#时光本" target="_blank">时光本</a>
+                <a class="pjaxlink" href="/tags#水印" target="_blank">水印</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#下架" target="_blank">下架</a>
+                <a class="pjaxlink" href="/tags#又拍云" target="_blank">又拍云</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#便签" target="_blank">便签</a>
+                <a class="pjaxlink" href="/tags#腾讯云" target="_blank">腾讯云</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#清单" target="_blank">清单</a>
+                <a class="pjaxlink" href="/tags#CDN" target="_blank">CDN</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#图片" target="_blank">图片</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#纪念日" target="_blank">纪念日</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#地址" target="_blank">地址</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#链接" target="_blank">链接</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#银行卡" target="_blank">银行卡</a>
-                /
-                
-                
-                <a class="pjaxlink" href="/tags#名片" target="_blank">名片</a>
+                <a class="pjaxlink" href="/tags#EdgeOne" target="_blank">EdgeOne</a>
                 
                 
             </span>
@@ -441,29 +421,58 @@
         </div>
     </header>
     <article class="post-content">
-        <h3 style="text-align: center;border-bottom: 0;">重要通知</h3>
+        <p>本文分享一种基于对象存储+CDN的组合方案，可实现免费10G存储+无限流量的图片外链，同时配置自动水印功能，该方法理论适用于所有对象存储与 CDN 的搭配。</p>
 
-<p>亲爱的时光本用户们：</p>
+<h3 id="一核心思路">一、核心思路</h3>
+<p>以又拍云存储 + 腾讯云EdgeOne为例，通过对象存储存放图片并配置图片处理规则，再借助 CDN 的 URL 重写功能，实现访问图片时自动添加水印，且无需手动给每张图片链接加后缀。此方案不仅能避免图片被盗用，还能有效控制流量成本。</p>
 
-<p>展信安好。</p>
+<h3 id="二操作步骤">二、操作步骤</h3>
+<h4 id="一对象存储端配置图片水印处理规则">（一）对象存储端：配置图片水印处理规则</h4>
+<p>1). 选择任意对象存储 <em class="color-gray">(本文以又拍云为例）</em>作为图床，可直接上传图片或通过图床程序上传。<br />
+2). 在对象存储后台找到图片处理功能，选择间隔标识符，又拍云提供 <code class="language-plaintext highlighter-rouge">! _ -</code> 三种可选。</p>
 
-<p>首先，由衷地感谢大家这些年来对时光本的支持与陪伴。这款应用最初只是我在工作之余，出于兴趣开发的小小尝试 —— 我总希望能为大家提供一个纯净、便捷、免费且安全的工具，这份初心，从未改变。</p>
+<p><img src="https://img.gorpeln.top/blog/20251003205107691.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20251003205107691" /></p>
 
-<p>但今天，我带着些许不舍却又坚定的心情，想告诉大家一个决定：<strong>时光本将于 2026 年 01 月 20 日 23:59 正式停止运营</strong>。做出这个决定并不容易，反复斟酌后，我还是希望用这样的方式，为这段旅程画上一个平静的句号。未来，我想暂时放缓脚步，去做一些真正属于自己的内容，所以此刻只能道一句：后会有期。</p>
-
-<p>关于后续使用的几点说明，还请大家留意：</p>
-
+<p>3). 创建图片处理规则，按需配置参数：</p>
 <ul>
-  <li>已安装的时光本软件仍可继续使用，但未来将不再进行任何更新与维护；</li>
-  <li>请务必及时备份好个人数据，若使用过程中出现问题，需由用户自行承担；</li>
-  <li>应用结束运营前，时光本 <a href="/article/17529840977">数据导出</a> 方法；</li>
+  <li>1.若上传前已对图片做过压缩、格式转换等处理，建议仅开启添加水印功能。</li>
+  <li>2.支持文字水印或图片水印，设置水印位置及相关参数。</li>
 </ul>
 
-<p>最后，想把最真诚的祝福送给每一位用户：愿大家在未来的日子里，总能与美好不期而遇。</p>
+<p><img src="https://img.gorpeln.top/blog/20251003205107692.jpg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20251003205107692" /></p>
 
-<p><br /></p>
-<p style="text-align: right;margin-bottom: 0.2em;">开发者：gorpeln</p>
-<p style="text-align: right;margin-top: 0.2em;">2025 年 07 月 20 日</p>
+<p>4). 点击预览按钮确认水印效果，满意后保存规则，务必记录规则名称 <em class="color-gray">(如示例中的 shuiyin）</em>，后续配置会用到。</p>
+
+<p>到此就可以进行实际图片测试了，比如原来的图片外链是<a href="https://img.gorpeln.top/gorpeln.png">https://img.gorpeln.top/gorpeln.png</a>，加上前面设置的图片处理参数之后的格式就是<a href="https://img.gorpeln.top/gorpeln.png!gorpeln">https://img.gorpeln.top/gorpeln.png-shuiyin</a>，这样其实还是没有达到目的，因为访问不带图片处理规则的原链接，还是没有水印效果的，想要最终实现不加参数又能加上水印，这就要去CDN加速那边设置了。</p>
+
+<h4 id="二cdn-端配置-url-重写实现自动水印">（二）CDN 端：配置 URL 重写实现自动水印</h4>
+<p>1). 进入腾讯云 EdgeOne 后台，找到图床域名对应的规则引擎。 <br />
+2). 配置回源 URL 重写规则，参数设置如下：</p>
+<ul>
+  <li>1.正则表达式：<code class="language-plaintext highlighter-rouge">^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$</code> <em class="color-gray">(可根据实际使用的图片格式增减后缀）</em></li>
+  <li>2.替换为：<code class="language-plaintext highlighter-rouge">/$1-shuiyin</code> <em class="color-gray">(其中 - 为步骤 2 选择的间隔标识符，shuiyin 为步骤 4 保存的规则名称）</em></li>
+  <li>3.配置完成后，清除该 CDN 域名的缓存，刷新文章中的图片外链，即可实现无后缀自动添加水印。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>正则表达式： ^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$   (这里加上实际使用的图片格式的后缀)
+替换为： /$1-shuiyin  （这里的-就是上面设置的间隔标识符，shuiyin就是上面设置的图片处理规则的名称）
+</code></pre></div></div>
+<p><img src="https://img.gorpeln.top/blog/20251003205107693.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20251003205107693" /></p>
+
+<h3 id="三方案优势">三、方案优势</h3>
+<ol>
+  <li>批量生效：无需手动修改每张图片的外链后缀，所有匹配格式的图片均自动添加水印。</li>
+  <li>灵活调整：后续如需更换水印样式或域名，仅需修改对象存储的水印规则，原图片文件不受影响。</li>
+  <li>跨平台适配：亲测七牛云等其他对象存储，按相同逻辑配置均可实现同等效果。</li>
+</ol>
+
+<h3 id="四流量成本控制技巧">四、流量成本控制技巧</h3>
+<p>很多使用对象存储的博主会因流量被刷产生高额账单，核心解决办法是做好防护配置：</p>
+<ol>
+  <li>选用不限量流量的 CDN <em class="color-gray">(如腾讯云 EdgeOne、ESA）</em>，采用 HTTP 回源 方式对接对象存储 <em class="color-gray">(HTTPS 回源可能产生额外费用）</em>。</li>
+  <li>可搭配支持达量拉闸功能的 CDN <em class="color-gray">(如多吉云）</em>，避免流量超额产生欠费。</li>
+  <li>以又拍云联盟为例，每年 61 元优惠券即可满足需求，按此方案配置后，年花费可控制在 1 元以内。</li>
+</ol>
 
 
 
@@ -472,22 +481,18 @@
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2026-01-03</div>
+    <div class="custom-font">最后编辑于：2026-01-21</div>
     
-    <div class="custom-font">本文链接：<a href="/article/17529840360" class='articleLink'>https://gorpeln.top/article/17529840360</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17594958674" class='articleLink'>https://gorpeln.top/article/17594958674</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/17499800077" title="整蛊代码：你屏幕上有根毛" class="custom-font" target="_blank">整蛊代码：你屏幕上有根毛</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17592227011" title="博客CDN流量异常" class="custom-font" target="_blank">博客CDN流量异常</a>
     </div>
     
-    
-    <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/17529840977" title="时光本 - 数据导出" class="custom-font" target="_blank">时光本 - 数据导出</a>
-    </div>
     
 </div>
 <div class="livere waline-box">
@@ -501,7 +506,7 @@
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
-      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17529840360')"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17594958674')"></div>
       <div class="qrcodeImg" id="qrcode"></div>
       <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
     </div>

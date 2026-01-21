@@ -7,6 +7,75 @@
     
       
         <item>
+          <title>给博客图片添加水印</title>
+          <link>https://gorpeln.top/article/17594958674</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17594958674</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Fri, 03 Oct 2025 20:51:07 +0800</pubDate>
+          <description>&lt;p&gt;本文分享一种基于对象存储+CDN的组合方案，可实现免费10G存储+无限流量的图片外链，同时配置自动水印功能，该方法理论适用于所有对象存储与 CDN 的搭配。&lt;/p&gt;
+
+&lt;h3 id=&quot;一核心思路&quot;&gt;一、核心思路&lt;/h3&gt;
+&lt;p&gt;以又拍云存储 + 腾讯云EdgeOne为例，通过对象存储存放图片并配置图片处理规则，再借助 CDN 的 URL 重写功能，实现访问图片时自动添加水印，且无需手动给每张图片链接加后缀。此方案不仅能避免图片被盗用，还能有效控制流量成本。&lt;/p&gt;
+
+&lt;h3 id=&quot;二操作步骤&quot;&gt;二、操作步骤&lt;/h3&gt;
+&lt;h4 id=&quot;一对象存储端配置图片水印处理规则&quot;&gt;（一）对象存储端：配置图片水印处理规则&lt;/h4&gt;
+&lt;p&gt;1). 选择任意对象存储 &lt;em class=&quot;color-gray&quot;&gt;(本文以又拍云为例）&lt;/em&gt;作为图床，可直接上传图片或通过图床程序上传。&lt;br /&gt;
+2). 在对象存储后台找到图片处理功能，选择间隔标识符，又拍云提供 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;! _ -&lt;/code&gt; 三种可选。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107691.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107691&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3). 创建图片处理规则，按需配置参数：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.若上传前已对图片做过压缩、格式转换等处理，建议仅开启添加水印功能。&lt;/li&gt;
+  &lt;li&gt;2.支持文字水印或图片水印，设置水印位置及相关参数。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107692.jpg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107692&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4). 点击预览按钮确认水印效果，满意后保存规则，务必记录规则名称 &lt;em class=&quot;color-gray&quot;&gt;(如示例中的 shuiyin）&lt;/em&gt;，后续配置会用到。&lt;/p&gt;
+
+&lt;p&gt;到此就可以进行实际图片测试了，比如原来的图片外链是&lt;a href=&quot;https://img.gorpeln.top/gorpeln.png&quot;&gt;https://img.gorpeln.top/gorpeln.png&lt;/a&gt;，加上前面设置的图片处理参数之后的格式就是&lt;a href=&quot;https://img.gorpeln.top/gorpeln.png!gorpeln&quot;&gt;https://img.gorpeln.top/gorpeln.png-shuiyin&lt;/a&gt;，这样其实还是没有达到目的，因为访问不带图片处理规则的原链接，还是没有水印效果的，想要最终实现不加参数又能加上水印，这就要去CDN加速那边设置了。&lt;/p&gt;
+
+&lt;h4 id=&quot;二cdn-端配置-url-重写实现自动水印&quot;&gt;（二）CDN 端：配置 URL 重写实现自动水印&lt;/h4&gt;
+&lt;p&gt;1). 进入腾讯云 EdgeOne 后台，找到图床域名对应的规则引擎。 &lt;br /&gt;
+2). 配置回源 URL 重写规则，参数设置如下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.正则表达式：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$&lt;/code&gt; &lt;em class=&quot;color-gray&quot;&gt;(可根据实际使用的图片格式增减后缀）&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;2.替换为：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/$1-shuiyin&lt;/code&gt; &lt;em class=&quot;color-gray&quot;&gt;(其中 - 为步骤 2 选择的间隔标识符，shuiyin 为步骤 4 保存的规则名称）&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;3.配置完成后，清除该 CDN 域名的缓存，刷新文章中的图片外链，即可实现无后缀自动添加水印。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正则表达式： ^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$   (这里加上实际使用的图片格式的后缀)
+替换为： /$1-shuiyin  （这里的-就是上面设置的间隔标识符，shuiyin就是上面设置的图片处理规则的名称）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107693.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107693&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;三方案优势&quot;&gt;三、方案优势&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;批量生效：无需手动修改每张图片的外链后缀，所有匹配格式的图片均自动添加水印。&lt;/li&gt;
+  &lt;li&gt;灵活调整：后续如需更换水印样式或域名，仅需修改对象存储的水印规则，原图片文件不受影响。&lt;/li&gt;
+  &lt;li&gt;跨平台适配：亲测七牛云等其他对象存储，按相同逻辑配置均可实现同等效果。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;四流量成本控制技巧&quot;&gt;四、流量成本控制技巧&lt;/h3&gt;
+&lt;p&gt;很多使用对象存储的博主会因流量被刷产生高额账单，核心解决办法是做好防护配置：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;选用不限量流量的 CDN &lt;em class=&quot;color-gray&quot;&gt;(如腾讯云 EdgeOne、ESA）&lt;/em&gt;，采用 HTTP 回源 方式对接对象存储 &lt;em class=&quot;color-gray&quot;&gt;(HTTPS 回源可能产生额外费用）&lt;/em&gt;。&lt;/li&gt;
+  &lt;li&gt;可搭配支持达量拉闸功能的 CDN &lt;em class=&quot;color-gray&quot;&gt;(如多吉云）&lt;/em&gt;，避免流量超额产生欠费。&lt;/li&gt;
+  &lt;li&gt;以又拍云联盟为例，每年 61 元优惠券即可满足需求，按此方案配置后，年花费可控制在 1 元以内。&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>博客CDN流量异常</title>
           <link>https://gorpeln.top/article/17592227011</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17592227011</guid>
@@ -19,7 +88,7 @@
           <pubDate>Tue, 30 Sep 2025 16:58:21 +0800</pubDate>
           <description>&lt;p&gt;今天打开博客查看时显示异常，提示&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;connection reset by peer&lt;/code&gt;。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250930165821910.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250930165821910&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250930165821910.png&quot; alt=&quot;20250930165821910&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在检测到持续的异常流量后，CDN系统触发了安全防护机制，对博客访问进行了临时限制，但由于我此前未开启又拍云的异常事件短信/邮件提醒功能，未能第一时间收到预警，导致发现问题时已出现访问中断。截至目前，博客访问链路完全恢复，经测试各项功能均正常可用。&lt;/p&gt;
 
@@ -142,20 +211,20 @@
   &lt;summary class=&quot;toggle-button&quot;&gt;博客成长相关图片&lt;/summary&gt;
   &lt;div class=&quot;box-detail&quot;&gt;
     
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101187.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101184.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101185.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101186.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322631.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322632.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322633.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101187.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101184.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101185.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101186.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322631.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322632.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322633.png&quot; alt=&quot;&quot; /&gt;
 
   &lt;/div&gt;
 &lt;/details&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　&lt;/p&gt;
 </description>
@@ -204,13 +273,13 @@
 
 &lt;h4 id=&quot;二图片流程&quot;&gt;二、图片流程&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137841.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250720120137841&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137841.png&quot; alt=&quot;20250720120137841&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137842.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250720120137842&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137842.png&quot; alt=&quot;20250720120137842&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137843.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250720120137843&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137843.png&quot; alt=&quot;20250720120137843&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137844.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250720120137844&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137844.png&quot; alt=&quot;20250720120137844&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;macos-端&quot;&gt;macOS 端&lt;/h3&gt;
 &lt;p&gt;时光本macOS 端数据导出流程：&lt;/p&gt;
@@ -455,7 +524,7 @@
           
           <pubDate>Thu, 01 May 2025 12:33:14 +0800</pubDate>
           <description>&lt;h3 id=&quot;效果演示&quot;&gt;效果演示&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://tool.202090.xyz/&quot;&gt;在线工具箱 演示网站&lt;/a&gt;&lt;/p&gt;
 
@@ -471,55 +540,55 @@
 
 &lt;p&gt;01、 登录你的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00&lt;/code&gt; 后，点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 添加你的域名我设置为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt; ，点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add&lt;/code&gt; 添加。看到这个提示 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Operation performed successfully&lt;/code&gt; 成功添加。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314111.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314111&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314111.png&quot; alt=&quot;20250501123314111&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;02、 点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage SSL certificates&lt;/code&gt; 可以看到这个ip地址 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;128.204.223.xxx&lt;/code&gt; 然后去你的DNS解析平台绑定。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314112.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314112&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314112.png&quot; alt=&quot;20250501123314112&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;03、 打开DNS解析平台解析。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314113.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314113&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314113.png&quot; alt=&quot;20250501123314113&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;04、 这样设置完，你打开的设置的网站域名，可以看到这样的页面就是成功。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314114.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314114.png&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;05、 接下来正式开始打开 &lt;a href=&quot;https://github.com/gorpeln/tool&quot;&gt;tool下载源码&lt;/a&gt; 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314115.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314115.png&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;06、 点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Details&lt;/code&gt; ，设置你网站的路径，如图所示，修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Open Basedir directories&lt;/code&gt; 中的内容，把下方代码中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00的名称&lt;/code&gt; 替换为你的登录用户名， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自己的域名&lt;/code&gt; 同理，修改完复制进去保存。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/home/serv00的名称/domains/自己的域名/public_html:/tmp:/usr/share:/usr/local/share:/dev:/tmp:/usr/share:/usr/local/share:/dev:/usr/home/serv00的名称/domains/自己的域名
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314116.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314116&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314116.png&quot; alt=&quot;20250501123314116&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;07、 设置完毕，打开serv00 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File manager&lt;/code&gt;，上传从github下载的tool源文件压缩包&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314117.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314117&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314117.png&quot; alt=&quot;20250501123314117&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;08、 进到你域名这个目录，上传你之前下载好的源码。右键压缩包如图。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314118.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314118&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314118.png&quot; alt=&quot;20250501123314118&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;09、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool-main&lt;/code&gt; 这个目录里面，全选除&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;外的所有文件&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314119.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314119&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314119.png&quot; alt=&quot;20250501123314119&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;10、 选择解压到你域名的目录，只要你跟我图一样就没问题。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314120.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314120&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314120.png&quot; alt=&quot;20250501123314120&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;11、 进到命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt; 目录，全选所有文件，右键解压到域名目录中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314121.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314121&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314121.png&quot; alt=&quot;20250501123314121&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314122.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314122&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314122.png&quot; alt=&quot;20250501123314122&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;12、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录，将命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.htaccess&lt;/code&gt; 的文件右键打开使用text方式编辑，你如果没有我图片上的text，就选 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;choose other&lt;/code&gt; 进行选择编辑方式拉到最下面就有了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314123.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314123&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314123.png&quot; alt=&quot;20250501123314123&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;13、 将文件内容改为这个代码 然后保存。&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AddType application/x-httpd-php71 .php
@@ -534,11 +603,11 @@
 
 &lt;p&gt;14、 完成！打开你的网站就可以看到内容了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;15、 （可选项）通过访问 https://你的域名/admin，访问后台，进行相关配置修改。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314125.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250501123314125&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314125.png&quot; alt=&quot;20250501123314125&quot; /&gt;&lt;/p&gt;
 
 </description>
         </item>
@@ -815,7 +884,7 @@
 
 &lt;h4 id=&quot;3复制&quot;&gt;3、复制&lt;/h4&gt;
 &lt;p&gt;需要复制时，在对应公式部分点击 右键 -&amp;gt; Copy to Clipboard  -&amp;gt; TeX Commands  即可完成复制 &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20250202114523962.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20250202114523962&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20250202114523962.png&quot; alt=&quot;20250202114523962&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;三例子&quot;&gt;三、例子&lt;/h3&gt;
 &lt;h4 id=&quot;1四则运算&quot;&gt;1、四则运算&lt;/h4&gt;
@@ -1075,7 +1144,7 @@ $ \phi $,
 $ \chi $, 
 $ \omega $&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://img.gorpeln.top/blog/20250202114523961.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot;&gt;更多希腊字母&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://img.gorpeln.top/blog/20250202114523961.png&quot;&gt;更多希腊字母&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;8多行公式&quot;&gt;8、多行公式&lt;/h4&gt;
 &lt;h5 id=&quot;1换行&quot;&gt;1）换行&lt;/h5&gt;
@@ -1438,7 +1507,7 @@ Please correct the following issues and upload a new binary to App Store Connect
           <description>&lt;p&gt;想为你的博客增添浓浓的春节氛围吗？快来了解我们的独特功能！设定时间后，两个喜庆的灯笼将准时在博客右上角亮起，灯笼上 “新春快乐” 的祝福熠熠生辉，瞬间让你的博客充满节日的欢乐与温馨。这不仅是装饰，更是为访客送上真挚祝福的创意方式，快来探索如何让你的博客在春节别具一格吧。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;   &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857323.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241221151857323&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857323.png&quot; alt=&quot;20241221151857323&quot; /&gt;
 &lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../assets/css/deng.css&quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1524,7 +1593,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
 而烂漫樱花，如粉白的云霞，纷纷扬扬洒落，诉说着春日的温柔。彩带与樱花，在此交织出满是故事的奇妙天地，等你踏入探寻。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;   &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857322.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241221151857322&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857322.png&quot; alt=&quot;20241221151857322&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!--  樱花背景 --&amp;gt;
@@ -1557,7 +1626,7 @@ https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
           <description>&lt;p&gt;不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;  &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857321.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241221151857321&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857321.png&quot; alt=&quot;20241221151857321&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt; &lt;br /&gt;
 1、 countdown.html&lt;/p&gt;
@@ -1964,15 +2033,13 @@ https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
 &lt;h3 id=&quot;预览&quot;&gt;预览&lt;/h3&gt;
 &lt;p&gt;博客中预览：&lt;a href=&quot;https://friends.202090.xyz/&quot;&gt;https://friends.gorpeln.top/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241108160343641.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20241108160343641&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241108160343641.png&quot; alt=&quot;20241108160343641&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
 &lt;p&gt;部署教程：参考文章尾部的参考链接   &lt;br /&gt;
 友链相关的&lt;a href=&quot;/links#problem&quot;&gt;常见问题&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
-      
-    
       
     
   </channel>

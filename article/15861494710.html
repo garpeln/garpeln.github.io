@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -519,9 +519,9 @@ dispatch_queue_t queue = dispatch_queue_create("com.example.gcd",DISPATCH_QUEUE_
 </code></pre></div></div>
 <h3 id="3-不同队列及任务的不同执行方式对比">3、 不同队列及任务的不同执行方式对比</h3>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431552.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431552" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431552.png" alt="20200406130431552" /></p>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431554.jpeg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431554" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431554.jpeg" alt="20200406130431554" /></p>
 
 <blockquote>
   <p>由上我们可以看出：要想并发执行某些任务，只有使用 〖并发队列 + 异步执行〗这种组合方式。这也是我们开发中最常用的组合方式。</p>
@@ -566,7 +566,7 @@ end   ==== &gt;&gt;: &lt;NSThread: 0x1d4074f80&gt;{number = 1, name = main}
 3.任务执行在begin和end之间，同步执行任务会阻塞主线程。</p>
 </blockquote>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431555.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431555" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431555.png" alt="20200406130431555" /></p>
 
 <h4 id="32-串行队列--异步执行">3.2 串行队列 + 异步执行</h4>
 
@@ -719,7 +719,7 @@ end   ==== &gt;&gt;: &lt;NSThread: 0x1d0263e00&gt;{number = 1, name = main}
   <p>发生死锁，任务不会执行。由于主队列为串行队列，主线程在执行mainAndSync 函数，而 mainAndSync 在等待主线程执行结束，就造成了互相等待，均不会执行。(开发中要极力避免这种情况)</p>
 </blockquote>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431556.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431556" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431556.png" alt="20200406130431556" /></p>
 
 <h4 id="36-主队列--异步执行">3.6 主队列 + 异步执行</h4>
 
@@ -1152,7 +1152,7 @@ dispatch_barrier_sync(queue, ^{
 
 <p>因此修改后的代码执行顺序为 reading1和reading2并发执行在前，之后为 writing1 和 writing2 串行执行，最后 reading3和reading4并发执行。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431557.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431557" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431557.png" alt="20200406130431557" /></p>
 
 <h3 id="9-gcd信号量-dispatch_semaphore_t">9. GCD信号量 （dispatch_semaphore_t）</h3>
 <p>信号量(dispatch_semaphore_t)可以理解为有信号通过，无信号则等待。具体的我们慢慢来分析。</p>
@@ -1362,7 +1362,7 @@ static int count = 0;
 <h3 id="13-gcd的实际使用">13. GCD的实际使用</h3>
 <p><a href="/article/15862323579">多线程使用总结 GCD的实际使用 (四)</a></p>
 
-<p><img src="https://img.gorpeln.top/blog/20200406130431551.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20200406130431551" /></p>
+<p><img src="https://img.gorpeln.top/blog/20200406130431551.png" alt="20200406130431551" /></p>
 
 
 
@@ -1454,7 +1454,7 @@ static int count = 0;
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -1597,7 +1597,7 @@ static int count = 0;
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1939,6 +1939,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",

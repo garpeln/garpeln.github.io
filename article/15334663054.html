@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -446,12 +446,12 @@
 <h4 id="1代码上传github">1、代码上传Github</h4>
 <p>首先我们打开github.com，然后创建自己的项目工程：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145236.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145236" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145236.png" alt="20180805185145236" /></p>
 
 <p>这里注意那个MIT License，在后面添加Cocoapods支持的时候会用到（稍后介绍）。然后点击创建即可。（如果是已有项目，创建的时候没有选择MIT，查看本文最后的可能遇到的问题。）
 然后将代码clone到本地，将自己的项目放到里面，文件夹如图所示：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145237.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145237" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145237.png" alt="20180805185145237" /></p>
 
 <p>这里的LICENSE就是刚才说的MIT License添加的文件。
 GPCountDownDemo是示例工程
@@ -465,11 +465,11 @@ GPCountDown就是提供给他人使用的库。</p>
 </code></pre></div></div>
 <p>这里的GPCountDown就是pod添加的名字（例如:SDWebImage）。执行完后的结果：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145238.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145238" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145238.png" alt="20180805185145238" /></p>
 
 <p>此时在工程文件夹下也会多一个GPCountDown.podspec文件。这里我用Sublime Text打开并做了如下编辑：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145239.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145239" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145239.png" alt="20180805185145239" /></p>
 
 <p>这里字段介绍如下：</p>
 <blockquote>
@@ -485,29 +485,29 @@ source_files:要共享的代码，这里是GPCountDown下面的所有代码。<b
 platform:运行平台</p>
 </blockquote>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145240.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145240" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145240.png" alt="20180805185145240" /></p>
 
 <p>接下来执行下面的命令进行验证：（–allow-warnings 忽略警告）</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod lib lint GPCountDown.podspec --allow-warnings
 </code></pre></div></div>
 <p>结果多种多样，如果有错，则按照提示进行改错即可。在这里，我执行的结果如下图：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145241.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145241" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145241.png" alt="20180805185145241" /></p>
 
 <p>当看到GPCountDown passed validation之后，就说明验证通过了。</p>
 
 <h4 id="3在github上创建release版本">3、在Github上创建release版本</h4>
 <p>打开项目的目录，然后创建release版本的类库：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145242.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145242" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145242.png" alt="20180805185145242" /></p>
 
 <p>点击 箭头指向开始创建release版本，（点击 Create a new release）：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145243.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145243" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145243.png" alt="20180805185145243" /></p>
 
 <p>点击Publish release即可。创建完成后如图所示：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145244.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145244" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145244.png" alt="20180805185145244" /></p>
 
 <p>这样第三步就完成了</p>
 <h4 id="4注册cocoapods账号">4、注册CocoaPods账号</h4>
@@ -516,11 +516,11 @@ platform:运行平台</p>
 </code></pre></div></div>
 <p>执行完之后结果如下：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145245.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145245" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145245.png" alt="20180805185145245" /></p>
 
 <p>黄色提示已经发送了一个验证码到邮箱，你可以打开你的邮箱验证即可。打开邮件中的链接后如下：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145246.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145246" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145246.png" alt="20180805185145246" /></p>
 
 <p>这样就成功注册了Cocoapods账号。
 可以用</p>
@@ -529,21 +529,21 @@ platform:运行平台</p>
 </code></pre></div></div>
 <p>检查是否创建成功。成功的结果如下：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145247.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145247" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145247.png" alt="20180805185145247" /></p>
 
 <h4 id="5上传代码到cocoapods">5、上传代码到CocoaPods</h4>
 <p>首先检测文件格式的有效性：(警告,可以使用 –allow-warnings忽略)</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod spec lint --allow-warnings
 </code></pre></div></div>
-<p><img src="https://img.gorpeln.top/blog/20180805185145248.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145248" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145248.png" alt="20180805185145248" /></p>
 
 <p>出现passed validation就说明通过验证了。然后执行：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod trunk push GPCountDown.podspec  --allow-warnings
 </code></pre></div></div>
 <p>执行结果如下：（速度应该有点慢）
-<img src="https://img.gorpeln.top/blog/20180805185145249.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145249" />
+<img src="https://img.gorpeln.top/blog/20180805185145249.png" alt="20180805185145249" />
 说明了已经上传成功。</p>
 
 <h4 id="6-检查上传是否成功">6、 检查上传是否成功</h4>
@@ -552,7 +552,7 @@ platform:运行平台</p>
 </code></pre></div></div>
 <p>结果如下：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145250.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145250" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145250.png" alt="20180805185145250" /></p>
 
 <p>ok，已经成功了。这样就可以让其他人进行搜索使用了。</p>
 
@@ -562,23 +562,23 @@ platform:运行平台</p>
 
 <p>1.打开在GitHub上的项目，选择Creat new file</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145251.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145251" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145251.png" alt="20180805185145251" /></p>
 
 <p>2.填入创建的类型为LICENSE，点击右侧按钮</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145252.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145252" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145252.png" alt="20180805185145252" /></p>
 
 <p>3.进入到现在这个页面时，选择开源协议MIT，点击Review and submit 按钮</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145253.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145253" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145253.png" alt="20180805185145253" /></p>
 
 <p>4.提交文件Commit new file即可 （提交按钮上有两个选项，第一个是直接提交此次修改，第二个是发一个merger Request ，达到的效果是一样的，第二个有合并记录，麻烦一点）</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145254.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145254" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145254.png" alt="20180805185145254" /></p>
 
 <p>5.大功告成，看如图，就可以愉快的进行代码分享了</p>
 
-<p><img src="https://img.gorpeln.top/blog/20180805185145255.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20180805185145255" /></p>
+<p><img src="https://img.gorpeln.top/blog/20180805185145255.png" alt="20180805185145255" /></p>
 
 <p>二、上传成功了但是搜索不到
 使用下面的指令来清理一下缓存:</p>
@@ -676,7 +676,7 @@ platform:运行平台</p>
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -819,7 +819,7 @@ platform:运行平台</p>
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1161,6 +1161,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",

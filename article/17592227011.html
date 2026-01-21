@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -423,7 +423,7 @@
     <article class="post-content">
         <p>今天打开博客查看时显示异常，提示<code class="language-plaintext highlighter-rouge">connection reset by peer</code>。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20250930165821910.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20250930165821910" /></p>
+<p><img src="https://img.gorpeln.top/blog/20250930165821910.png" alt="20250930165821910" /></p>
 
 <p>在检测到持续的异常流量后，CDN系统触发了安全防护机制，对博客访问进行了临时限制，但由于我此前未开启又拍云的异常事件短信/邮件提醒功能，未能第一时间收到预警，导致发现问题时已出现访问中断。截至目前，博客访问链路完全恢复，经测试各项功能均正常可用。</p>
 
@@ -452,6 +452,10 @@
         <span class="custom-font">上一篇 ：</span><a href="/article/17577220915" title="一路生花" class="custom-font" target="_blank">一路生花</a>
     </div>
     
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/article/17594958674" title="给博客图片添加水印" class="custom-font" target="_blank">给博客图片添加水印</a>
+    </div>
     
 </div>
 <div class="livere waline-box">
@@ -519,7 +523,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -662,7 +666,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1004,6 +1008,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",

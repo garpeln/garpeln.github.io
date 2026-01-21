@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -425,7 +425,7 @@
 
 <p><code class="language-plaintext highlighter-rouge">umami.is</code> 则可以看作是 <code class="language-plaintext highlighter-rouge">Google Analytics</code> 的精简版解决方案，它完全免费且开源，非常适合中小站点的网络流量统计分析。相对于复杂的 <code class="language-plaintext highlighter-rouge">Google Analytics</code>，<code class="language-plaintext highlighter-rouge">umami.is</code> 的界面也更加简洁，只关注于核心指标，并方便分享出去。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230501123735961.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735961" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230501123735961.png" alt="20230501123735961" /></p>
 
 <h3 id="前期准备">前期准备</h3>
 <p>你需要完成以下 3 个步骤：</p>
@@ -438,16 +438,16 @@
 <h3 id="1在supabase创建数据库">1、在Supabase创建数据库</h3>
 <p>我们需要先在 Supabase 的主界面中找到 New Project 按钮创建一个新的数据库。名字可以使用 <code class="language-plaintext highlighter-rouge">umami</code>，然后设置一个自己记得住的数据库密码（一会要用）。下方的 Region 区域选择 <code class="language-plaintext highlighter-rouge">Northeast Asia（Tokyo）</code>东京区域。Supabase 本身使用了 AWS 云服务，东京区域在大陆地区的访问速度还是比较理想的。等待数据库建立，需要几分钟的时间。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230501123735962.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735962" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230501123735962.png" alt="20230501123735962" /></p>
 
 <p>建立之后，点击左下方的 Project Settings，选择 Database，找到 Connection string 中的 URL 一栏，<strong>复制内容，并将<code class="language-plaintext highlighter-rouge">[YOUR-PASSWORD]</code>替换为上一步生成的密码</strong>。
 Supabase 平台的操作就结束了。
-<img src="https://img.gorpeln.top/blog/20230501123735963.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735963" /></p>
+<img src="https://img.gorpeln.top/blog/20230501123735963.png" alt="20230501123735963" /></p>
 
 <h3 id="2在-vercel-部署-umami">2、在 Vercel 部署 Umami</h3>
 <p>登录<a href="https://vercel.com/dashboard">Vercel</a> 之后，点击右上角 Add New Project，并导入事先 Fork 的项目仓库。创建项目的页面中，会自动加载你 GitHub 帐号下方的代码仓库。还记得准备步骤 Fork 的 umami.is 仓库吗？选中即可。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230501123735964.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735964" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230501123735964.png" alt="20230501123735964" /></p>
 
 <p>在 Configure Project 中需要设置两个环境变量（<strong>Environment Variables</strong>）。
 分别添加 <code class="language-plaintext highlighter-rouge">DATABASE_URL</code> 和 <code class="language-plaintext highlighter-rouge">HASH_SALT</code>。</p>
@@ -463,7 +463,7 @@ Supabase 平台的操作就结束了。
 
 <p>最后点击 Deploy，等待两分钟。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230501123735965.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735965" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230501123735965.png" alt="20230501123735965" /></p>
 
 <h3 id="3测试和设置">3、测试和设置</h3>
 <p>至此，主要步骤已经顺利完成，你需要做的只是耐心等待项目部署完毕。完成之后，Vercel 会自动跳转到项目主页，并随机分配一个<code class="language-plaintext highlighter-rouge">域名</code>（需要科学上网，可以绑定自己的域名）。点击 <strong>Visit</strong> 访问项目，umami 默认的后台登录的用户名是 <code class="language-plaintext highlighter-rouge">admin</code>，密码是 <code class="language-plaintext highlighter-rouge">umami</code>。</p>
@@ -473,7 +473,7 @@ Supabase 平台的操作就结束了。
 
 <h4 id="2重设-umami-密码并绑定站点">2）重设 umami 密码并绑定站点</h4>
 <p>不要忘记到 umami 后台重设默认的管理员密码。同时，你可以新建站点并获取到数据追踪代码嵌入到你的站点中。
-<img src="https://img.gorpeln.top/blog/20230501123735966.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230501123735966" /></p>
+<img src="https://img.gorpeln.top/blog/20230501123735966.png" alt="20230501123735966" /></p>
 
 <p>这里非常推荐开启「<strong>启用共享链接</strong>」的选项，这是 umami 的一大特色，可以方便分享你的站点访问数据。同时当你自己查看时，可以免登录。你可以 <a href="https://umami.202090.xyz/share/oWC5HwUyPml1gkRI/gorpeln.top">访问我的示例分享页面</a>。</p>
 
@@ -579,7 +579,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -722,7 +722,7 @@ A：Vercel 的部署是自动触发和完成的，也就是说当 GitHub 代码�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1064,6 +1064,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",

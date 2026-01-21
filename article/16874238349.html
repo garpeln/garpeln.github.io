@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -421,16 +421,16 @@
         </div>
     </header>
     <article class="post-content">
-        <p><img src="https://img.gorpeln.top/blog/20230622165034171.jpg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034171" /></p>
+        <p><img src="https://img.gorpeln.top/blog/20230622165034171.jpg" alt="20230622165034171" /></p>
 
 <p>如果你浏览过一些 GitHub 的开源项目，你一定见过很多 README 文档中都会出现的五颜六色、各式各样的「小牌子」。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034172.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034172" />
+<p><img src="https://img.gorpeln.top/blog/20230622165034172.png" alt="20230622165034172" />
 最初，这些「小牌子」的主要作用是为了显示「某个 GitHub 项目」的「某种状态」，比如项目的编译是否成功、文档是否更新至最新、软件的下载数量有多少……不过，从原理的角度来说，这些「小牌子」都是通过我们给「牌子渲染服务器」提供一些数据后，服务器返回给我们一个 SVG 格式的图片来工作的。我们将返回的 SVG 图片嵌入到 GitHub 的 README 文档或其他网页里面，就完成了一个「小牌子」的制作。</p>
 
 <p>因此，我们不仅可以将这些「小牌子」用在 GitHub 里，如果你拥有自己的「个人主页」、「博客」或其他展示个人资料的地方，只要你可以控制网页的 HTML，能自己向其中插入一些自定义代码，你就可以借助于「小牌子服务器」来自制一些好看又能实时更新的「个人资料展示牌」、「订阅地址标识牌」等等。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034173.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034173" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230622165034173.png" alt="20230622165034173" /></p>
 
 <h3 id="shieldsio-的基本用法">Shields.io 的基本用法</h3>
 
@@ -439,14 +439,14 @@
 
 <p>可以发现，简单定制小牌子非常方便，最最基础的语法规则就是：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034174.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034174" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230622165034174.png" alt="20230622165034174" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://img.shields.io/badge/{左半部分标签}-{右半部分标签}-{右半部分颜色}
 
 </code></pre></div></div>
 <p>另外，在 Shields.io 的官网上面有非常方便的「小牌子生成器」，我们可以直接用它来构造一个「小牌子」，只需要按照下图的样子：填入左半边标签、填入右半边标签，再定义右半边的颜色，点击 Make Badge 即可生成。其中，右半边的颜色我们可以用官方提供的几种预设颜色名称（下方 Colors）或者我们自己提供十六进制颜色代码都可以。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034175.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034175" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230622165034175.png" alt="20230622165034175" /></p>
 
 <p>我们按照上面的方法构造一个链接，就制作完成我们的小牌子啦！这样得到的链接是一个 SVG 图片链接，我们可以直接用插入图片的语法规则加到我们的 Markdown 文本文件中或 HTML 里面。</p>
 
@@ -455,7 +455,7 @@
 
 <p>如果我们想要显示一些动态变化的数据，那么我们就需要一个受支持的数据接口，这样我们的「Shields.io 小牌子生成服务器」就会先行从这一数据接口请求相应的动态数据，并按照请求的结果将数据渲染成不同的「小牌子」。（具体的语法请继续向下阅读）</p>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034176.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034176" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230622165034176.png" alt="20230622165034176" /></p>
 
 <p>但是，虽然 Shields.io 服务 API 的功能非常完善，能够支持许多第三方 API 节点的数据服务，但是有一些服务：</p>
 
@@ -544,7 +544,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://img.shields.io/badge/dynamic/json?color=da282a&amp;label=github%E5%85%B3%E6%B3%A8&amp;query=%24.data.totalSubs&amp;url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dgorpeln
 </code></pre></div></div>
 
-<p><img src="https://img.gorpeln.top/blog/20230622165034177.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20230622165034177" /></p>
+<p><img src="https://img.gorpeln.top/blog/20230622165034177.png" alt="20230622165034177" /></p>
 
 <h3 id="其他-substats-api-的功能和语法规则">其他 Substats API 的功能和语法规则</h3>
 <p>另外，Substats API 还可以串联多个不同的数据源和它们对应的请求参数。比如，我同时请求酷安、网易云音乐、GitHub 三个平台上面的关注，即可这样构造请求（多个 source 和 queryKey 组合按照顺序进行请求即可，顺序在请求过程中不会丢失）：</p>
@@ -695,7 +695,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -838,7 +838,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1180,6 +1180,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",

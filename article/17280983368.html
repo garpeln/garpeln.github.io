@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">250</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">711</span>
+                    <span class="site-state-item-count">713</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">250 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -161,7 +161,7 @@
                   
                   <li onclick="pushNew('/categories#个人博客')" class="categoryList">
                     <a name="个人博客" class="default-categoryNav-name">个人博客</a>
-                    <a name="个人博客" style="" class="articleCount">36</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#web前端')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>250</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>119.9k</p>
+                  <p>120.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-18 15:58:17 +0800">
-                    2026/01/18
+                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
+                    2026/01/21
                   </p>
                 </li>
               </ul>
@@ -435,10 +435,10 @@
 
 <h3 id="预览">预览</h3>
 <p>又拍云目录：
-<img src="https://img.gorpeln.top/blog/20241005111856740.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20241005111856740" /></p>
+<img src="https://img.gorpeln.top/blog/20241005111856740.png" alt="20241005111856740" /></p>
 
 <p>github目录：
-<img src="https://img.gorpeln.top/blog/20241005111856741.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20241005111856741" /></p>
+<img src="https://img.gorpeln.top/blog/20241005111856741.png" alt="20241005111856741" /></p>
 
 <h3 id="操作示例">操作示例</h3>
 <h4 id="1-新增-workflow-yml-文件">1. 新增 Workflow YML 文件</h4>
@@ -620,12 +620,12 @@ if __name__ == "__main__":
 <h4 id="3-授予-workflow-读写权限">3. 授予 Workflow 读写权限</h4>
 <p>将本地的项目提交到github，然后设置Workflow 读写权限</p>
 
-<p><img src="https://img.gorpeln.top/blog/20241005111856742.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20241005111856742" /></p>
+<p><img src="https://img.gorpeln.top/blog/20241005111856742.png" alt="20241005111856742" /></p>
 
 <h4 id="4-新增-secrets-变量">4. 新增 Secrets 变量</h4>
 <p>在github上设置Secrets 变量</p>
 
-<p><img src="https://img.gorpeln.top/blog/20241005111856743.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50" alt="20241005111856743" /></p>
+<p><img src="https://img.gorpeln.top/blog/20241005111856743.png" alt="20241005111856743" /></p>
 
 <table>
   <thead>
@@ -683,11 +683,11 @@ if __name__ == "__main__":
 <ol>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_HOST</code>：参考<a href="https://help.upyun.com/2015/12/28/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-ftp%e3%80%81api-%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6/">又拍云文档</a>，直接使用<code class="language-plaintext color-gray highlighter-rouge">v0.ftp.upyun.com</code>就行了</li>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_USER</code>：格式为 <strong>operator/bucket</strong>，在又拍云 - 云存储 - 选择对应的bucket点击配置 - 存储管理 - 操作员授权 - 自己添加操作用户名和密码，假设你的又拍云云储存bucket的名称为upai-img，自定义的用户名为user，密码为123456，则UPYUN_FTP_USER就是 <code class="language-plaintext color-gray highlighter-rouge">user/upai-img</code>，如果你看不懂我说的，参考<a href="https://techs.upyun.com/videos/cdnpage/creating_storage.html"> 又拍云视频教程</a></li>
-  <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_PASSWORD</code>：就是上面你自己设置的 <code class="language-plaintext color-gray highlighter-rouge">123456</code>，<a href="https://img.gorpeln.top/blog/20241005111856744.png!gorpeln">图片示例</a></li>
+  <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_PASSWORD</code>：就是上面你自己设置的 <code class="language-plaintext color-gray highlighter-rouge">123456</code>，<a href="https://img.gorpeln.top/blog/20241005111856744.png">图片示例</a></li>
   <li><code class="language-plaintext highlighter-rouge">UPYUN_FTP_PATH</code>：直接使用 <code class="language-plaintext color-gray highlighter-rouge">/</code> （根目录）就行了</li>
-  <li><code class="language-plaintext highlighter-rouge">GH_TOKEN</code>：选择github的 Settings - 点击右侧列表最下面的 Developer Settings - Personal access tokens - tokens (classic) - Generated new token (classic)，Note名字可以随意，Expiration时间选择 no Expiration,下面权限全选了，点击Generated token 就生成了想要的token，记得保存，他只显示一次，示例：<code class="language-plaintext color-gray highlighter-rouge">abc_123456789pUS123454321WmJkE987654321</code>，<a href="https://img.gorpeln.top/blog/20241005111856745.png!gorpeln">图片示例</a></li>
+  <li><code class="language-plaintext highlighter-rouge">GH_TOKEN</code>：选择github的 Settings - 点击右侧列表最下面的 Developer Settings - Personal access tokens - tokens (classic) - Generated new token (classic)，Note名字可以随意，Expiration时间选择 no Expiration,下面权限全选了，点击Generated token 就生成了想要的token，记得保存，他只显示一次，示例：<code class="language-plaintext color-gray highlighter-rouge">abc_123456789pUS123454321WmJkE987654321</code>，<a href="https://img.gorpeln.top/blog/20241005111856745.png">图片示例</a></li>
   <li><code class="language-plaintext highlighter-rouge">REPO_OWNER</code>：就是你的github的用户名，我在github给这个项目创建仓库为https://github.com/gorpeln/upyun_images_sync，示例：<code class="language-plaintext color-gray highlighter-rouge">gorpeln</code></li>
-  <li><code class="language-plaintext highlighter-rouge">REPO_NAME</code>：仓库链接后面的就是仓库名，示例：<code class="language-plaintext color-gray highlighter-rouge">upyun_images_sync</code>，<a href="https://img.gorpeln.top/blog/20241005111856746.png!gorpeln">图片示例</a></li>
+  <li><code class="language-plaintext highlighter-rouge">REPO_NAME</code>：仓库链接后面的就是仓库名，示例：<code class="language-plaintext color-gray highlighter-rouge">upyun_images_sync</code>，<a href="https://img.gorpeln.top/blog/20241005111856746.png">图片示例</a></li>
   <li><code class="language-plaintext highlighter-rouge">BRANCH_NAME</code>：项目分支名，一般为master/main，示例：<code class="language-plaintext color-gray highlighter-rouge">master</code></li>
 </ol>
 
@@ -780,7 +780,7 @@ if __name__ == "__main__":
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.5</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
         </div>
     </div>
 </footer>
@@ -923,7 +923,7 @@ if __name__ == "__main__":
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.5",
+                "%c版本号 %c V4.10.6",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1265,6 +1265,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17594958674",
+         
        
         
           "/article/17592227011",
