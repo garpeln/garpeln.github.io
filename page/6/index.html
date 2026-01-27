@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>120.0k</p>
+                  <p>120.2k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-21 21:22:37 +0800">
-                    2026/01/21
+                  <p id="current-date" data-value="2026-01-27 21:21:20 +0800">
+                    2026/01/27
                   </p>
                 </li>
               </ul>
@@ -895,6 +895,106 @@
     <div class="postbox">
         <div class="allpost">
             <div class="title">
+                <a class="pjaxlink" href="/article/16516610954" target="_blank">MacOS：NSMenu</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2022-05-04</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                    MacOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#NSMenu" target="_blank">NSMenu</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSMenuItem" target="_blank">NSMenuItem</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSApp" target="_blank">NSApp</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一、添加顶部(mainMenu)目录
+1、简单常用的一级目录
+- (void)addMenu{
+    
+    //获取主目录
+    NSMenu *mainMenu = [NSApp mainMenu];
+    NSLog(@"%@ - %@",mainMenu,[mainMenu itemArray]);
+    
+    //添加一级目录
+    NSMenuItem *oneItem = [[NSMenuItem alloc] init];
+    [oneItem setT...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16516610954" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/16514594954" target="_blank">MacOS：NSButton</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2022-05-02</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
+                    MacOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#NSButton" target="_blank">NSButton</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#NSImageOnly" target="_blank">NSImageOnly</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#setAction" target="_blank">setAction</a>
+                            
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">一、创建
+1、常见创建代码
+- (void)testBtn{
+    
+    NSButton *btn = [[NSButton alloc]initWithFrame:NSMakeRect(100, 100, 100, 45)];
+    btn.title = @"标题";                                   // 按钮文字
+    btn.image = [NSImage imageNamed:@"icon_norm"];             ...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/16514594954" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
                 <a class="pjaxlink" href="/article/16491590954" target="_blank">MacOS：NSWindow、NSWindowController、NSViewController、NSView 的关系和创建</a>
             </div>
             <hr>
@@ -1328,113 +1428,6 @@ CSDN
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/16199142732" target="_blank">SDWebImage实现原理</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2021-05-02</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#SDWebImage" target="_blank">SDWebImage</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#UIImageView" target="_blank">UIImageView</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#SDImageCache" target="_blank">SDImageCache</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">一、架构简图
-
-
-二、加载流程
-
-
-三、实现流程
-SDWebImage提供一个UIImageView的类别以支持加载来自互联网的远程图片。具有缓存管理、异步下载，同一个URL下载次数控制和优化等特征。
-
-1、独立的异步图像缓存
-SDImageCache类提供一个管理缓存的单例类。
-SDImageCache *imageCache = [SDImageCache sharedImageCache]
-
-查找和缓存图片时以URL作为key。(先查找内存，如果内存不存在该图片，再查找硬盘；查找硬盘...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/16199142732" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/16175510629" target="_blank">微信小程序（组件 - 自定义组件）</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2021-04-04</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#微信小程序" target="_blank">
-                    微信小程序
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#手势" target="_blank">手势</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#优先级" target="_blank">优先级</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#响应链" target="_blank">响应链</a>
-                            
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">版本要求： 
-从小程序基础库版本 1.6.3 开始，小程序支持简洁的组件化编程。开发者可以将页面内的功能模块抽象成自定义组件，以便在不同的页面中重复使用；也可以将复杂的页面拆分成多个低耦合的模块，有助于代码维护。
-注意：自定义组件在使用时与基础组件非常相似
-
-构成部分，每个自定义组件由四个代码文件组成：
-①json文件 用于于放置一些最基本的组件配置
-②wxml 文件 组件模版
-③wxss 文件 组件的样式，只在组件内部节点上生效（这个文件是可选的）
-④js 文件 组件的 JS 代码，承载...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/16175510629" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1537,7 +1530,7 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.6</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.7</a>
         </div>
     </div>
 </footer>
@@ -1680,7 +1673,7 @@ SDImageCache *imageCache = [SDImageCache sharedImageCache]
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.6",
+                "%c版本号 %c V4.10.7",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1943,6 +1936,10 @@ var _hmt = _hmt || [];
   const postUrls = [
        
         
+          "/article/17644183553",
+         
+       
+        
           "/article/17594958674",
          
        
@@ -1950,8 +1947,8 @@ var _hmt = _hmt || [];
           "/article/17592227011",
          
        
-         
-       
+        
+          "/article/17577220915",
          
        
         

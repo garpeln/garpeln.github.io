@@ -7,6 +7,100 @@
     
       
         <item>
+          <title>时光本的故事 - 始于热爱，归于珍藏</title>
+          <link>https://gorpeln.top/article/17644183553</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17644183553</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 29 Nov 2025 20:12:35 +0800</pubDate>
+          <description>&lt;p&gt;大家好，我是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;时光本&lt;/code&gt;的开发者，&lt;em class=&quot;color-gray&quot;&gt;时光本是一款专注效率与记录的笔记工具。可以帮助你整理各种信息，包括便签、清单、图片、纪念日、地址、链接、银行卡、名片、账号、密码等&lt;/em&gt;。今天想和大家聊聊这款 APP 从诞生到即将下线的全过程 —— 没有什么高大上的商业计划，只是一个技术人 “折腾” 出来的小成果，以及一些想和用户说的真心话。&lt;/p&gt;
+
+&lt;h3 id=&quot;一为什么会做时光本&quot;&gt;一、为什么会做时光本？&lt;/h3&gt;
+&lt;p&gt;我本身是 iOS 端开发，2020 年的时候，主要抱着两个想法开始做这个 APP：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;一是想给自己攒一个 “拿得出手的个人项目”—— 毕竟做开发的都知道，找工作或者职场进阶时，光有公司项目不够，一个完整的个人作品，能更直观体现自己的技术思路和执行力，相当于给简历加了个 “加分项”；&lt;/li&gt;
+  &lt;li&gt;二是真的被 “记东西” 这件事烦透了：既要记账号密码、银行卡信息这种敏感数据，又想存日常看到的优美句子、突发的灵感，或者随手记点生活小事。但当时找了一圈，要么是功能太单一的备忘录，要么是第三方工具 —— 满是广告，用起来闹心；核心功能要收费，性价比不高，还总担心隐私泄露。完全不符合我对 “简洁、免费、安全”APP 的追求，干脆自己动手做一个。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所以时光本从一开始就设计了两大模块：一个管 “笔记”，能存日常灵感、纪念日、银行卡信息、名片、网址这些；另一个管 “账号密码”，专门用来安全存储各类登录信息，就是想一次性解决 “记东西麻烦” 的问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;二一个人扛下所有流程&quot;&gt;二、一个人，扛下所有流程&lt;/h3&gt;
+&lt;p&gt;很多人问我，个人开发一个全平台 APP 难吗？说实话，难，但难的不是写代码。&lt;/p&gt;
+
+&lt;p&gt;我虽然做 iOS 开发，但产品设计、UI、交互、推广这些完全是门外汉。为了让时光本 “像个正经 APP”，我逼着自己走完了完整的开发流程：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;需求调研&lt;/code&gt;：先列了自己和身边朋友的痛点 —— 要能记密码、便签、纪念日、银行卡；要苹果多端能用；要安全不泄露数据。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;原型与设计&lt;/code&gt;：先后画了好几版原型图，最终确定各个页面的功能模块。接着学 Sketch 做 UI，为了一个简洁的 icon，改了三十多版才满意；按钮的颜色、弹窗的圆角，甚至文字的字号，都反复调过，就想让用户打开时觉得 “舒服不刺眼”。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;交互设计&lt;/code&gt;：用 Axure 模拟用户操作 —— 比如添加银行卡时，要先选卡类型再填卡号，避免字段混乱；输入密码后，要有 “隐藏 / 显示” 按钮；解锁时，指纹识别失败要弹友好提示，而不是冷冰冰的报错。这些细节，我对着自己的使用习惯改了又改，就怕用户用的时候觉得 “不顺手”。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;多端开发&lt;/code&gt;：作为iOS开发，iOS端的开发 &lt;em class=&quot;color-gray&quot;&gt;(主要包括iCloud云同步，本地通知、远程推送，分享，统计，安全锁（指纹/面部、数字密码、图形密码），账号排序、搜索，扫一扫、证书申请、上线、谷歌广告、内购等）&lt;/em&gt;，没遇到太大麻烦；但 MacOS 端因为涉猎较少，网上资料也较少的情况下，我只能下班和周末啃官方文档，从基础语法开始学，遇到同步 bug 时，熬夜查论坛、试代码，终于打通了 iPhone、iPad、Mac 的 iCloud 同步 —— 虽然切换设备要登 iCloud，但至少数据能无缝衔接了。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;测试与上线&lt;/code&gt;：没有测试团队，就自己测：单元测试保证每个功能不崩，集成测试确认多端同步不会丢数据，还找了十几个朋友试用，比如有朋友说 “Mac 端同步慢”，我就优化了 iCloud 的同步策略；有人说 “想给笔记分类”，我就加了标签功能。最后提交 App Store 审核时，连截图的尺寸、描述的关键词都改了五遍，终于在 2020 年 1 月 22 日上线了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上线后，我没做过什么推广，全靠用户口口相传。看到有人说 “时光本帮我记住了奶奶的生日”“再也不用怕忘银行卡密码了”，那种开心，比涨工资还爽。&lt;/p&gt;
+
+&lt;h3 id=&quot;三为什么决定让时光本下线&quot;&gt;三、为什么决定让时光本下线？&lt;/h3&gt;
+&lt;p&gt;其实不是时光本不好用，而是我发现了它的 “局限性”：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;多端切换麻烦：虽然打通了苹果生态，但切换设备要登 iCloud，有些用户觉得麻烦，甚至担心账号安全；我自己平时也用安卓和 PC，跨系统看数据时，得先打开 Mac 同步 iCloud，再转到手机，真的很折腾。&lt;/li&gt;
+  &lt;li&gt;使用频率不高：账号密码、笔记这种东西，记一次可能好久才会看一次，专门下载个 APP 放在手机里，总觉得 “大材小用”—— 需要的时候找半天，反而不方便。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后来我琢磨，要是把时光本的功能移到 H5 网页端，会不会更方便？不用下载 APP，不管用什么设备，打开网页登一次密码 &lt;em class=&quot;color-gray&quot;&gt;(之后会用缓存保持登录，除非手动登出）&lt;/em&gt;，就能直接看数据，刚好解决了 “偶尔用但要用得顺” 的问题。&lt;/p&gt;
+
+&lt;p&gt;不过，H5 网页端暂时没开放给普通用户：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;一来，隐私数据不能存在我的服务器里，需要用户自己搞数据库，这对很多人来说成本高、门槛高；&lt;/li&gt;
+  &lt;li&gt;二来，部署流程还有技术门槛，很多人可能无法操作。所以目前我在整理文档，慢慢优化流程，要是以后能把门槛降下来，说不定会以更方便的样子和大家见面。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;四关于数据导出我想跟大家说声-放心&quot;&gt;四、关于数据导出，我想跟大家说声 “放心”&lt;/h3&gt;
+&lt;p&gt;决定下线后，我最担心的就是用户的数据丢了。所以特意写了详细的&lt;a href=&quot;/article/17529840977&quot;&gt;时光本数据导出指南&lt;/a&gt;：&lt;/p&gt;
+
+&lt;p&gt;为确保数据安全，我准备了 iOS &lt;em class=&quot;color-gray&quot;&gt;(适用于 iPhone）&lt;/em&gt;  和 macOS &lt;em class=&quot;color-gray&quot;&gt;(适用于 Mac 电脑）&lt;/em&gt;  版本的图文导出流程，操作中若有疑问，请留言，我会协助你完成迁移 —— 毕竟，时光本里存的不是数据，是大家的回忆和重要信息，我得帮大家守好。&lt;/p&gt;
+
+&lt;h3 id=&quot;五最后想说的话&quot;&gt;五、最后想说的话&lt;/h3&gt;
+&lt;p&gt;从 2020 年到 2026 年，时光本陪了大家六年。它不是什么爆款 APP，却有一群每天打开的忠实用户；它没有团队运营，却收到了无数暖心的反馈。&lt;/p&gt;
+
+&lt;p&gt;对我来说，时光本不只是一个项目，更是我作为 iOS 开发者的成长印记 —— 从只会写前端代码，到学会设计、交互、多端开发，每一步都藏在时光本的版本更新里。&lt;/p&gt;
+
+&lt;p&gt;虽然时光本要下线了，但我没有放弃 “做好用的记录工具” 的想法。以后不管是优化 H5，还是做新的小工具，我都会保持这份初心：做简洁、安全、真正帮到人的东西。&lt;/p&gt;
+
+&lt;p&gt;最后，谢谢每一位用过时光本的人。谢谢你们包容它的不完美，谢谢你们给我的反馈，谢谢你们让我的 “折腾” 有了意义。&lt;/p&gt;
+
+&lt;p&gt;时光本会停在这里，但我们记录生活的方式，永远不会停。 &lt;br /&gt;
+祝大家，都能找到适合自己的 “时光容器”，好好记住那些重要的人和事。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;时光本内容汇总：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/notes&quot;&gt;时光本-日记本·笔记本·记事本·备忘录&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/article/17529840977&quot;&gt;时光本 - 数据导出&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/article/17529840360&quot;&gt;时光本 - 下线公告&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/article/17372028582&quot;&gt;Mac应用发布错误：ITMS-91109&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/article/15945227879&quot;&gt;时光本 - 常见问题&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/article/15942881574&quot;&gt;如果打开iCloud同步 - 时光本&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/help/app/privacy&quot;&gt;隐私政策 - 时光本&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/help/app/service&quot;&gt;用户服务条款 - 时光本&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gorpeln.top/help/app/vip&quot;&gt;会员服务协议 - 时光本&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>给博客图片添加水印</title>
           <link>https://gorpeln.top/article/17594958674</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17594958674</guid>
@@ -27,7 +121,7 @@
 &lt;p&gt;1). 选择任意对象存储 &lt;em class=&quot;color-gray&quot;&gt;(本文以又拍云为例）&lt;/em&gt;作为图床，可直接上传图片或通过图床程序上传。&lt;br /&gt;
 2). 在对象存储后台找到图片处理功能，选择间隔标识符，又拍云提供 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;! _ -&lt;/code&gt; 三种可选。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107691.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107691&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107691.png&quot; alt=&quot;20251003205107691&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3). 创建图片处理规则，按需配置参数：&lt;/p&gt;
 &lt;ul&gt;
@@ -35,7 +129,7 @@
   &lt;li&gt;2.支持文字水印或图片水印，设置水印位置及相关参数。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107692.jpg!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107692&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107692.jpg&quot; alt=&quot;20251003205107692&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4). 点击预览按钮确认水印效果，满意后保存规则，务必记录规则名称 &lt;em class=&quot;color-gray&quot;&gt;(如示例中的 shuiyin）&lt;/em&gt;，后续配置会用到。&lt;/p&gt;
 
@@ -53,7 +147,7 @@
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正则表达式： ^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$   (这里加上实际使用的图片格式的后缀)
 替换为： /$1-shuiyin  （这里的-就是上面设置的间隔标识符，shuiyin就是上面设置的图片处理规则的名称）
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107693.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; alt=&quot;20251003205107693&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107693.png&quot; alt=&quot;20251003205107693&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;三方案优势&quot;&gt;三、方案优势&lt;/h3&gt;
 &lt;ol&gt;
@@ -103,7 +197,71 @@
       
     
       
-    
+        <item>
+          <title>一路生花</title>
+          <link>https://gorpeln.top/article/17577220915</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17577220915</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sat, 13 Sep 2025 08:08:11 +0800</pubDate>
+          <description>&lt;p&gt;一路生花&lt;/p&gt;
+
+&lt;p&gt;唱：温奕心  &lt;br /&gt;
+词：宋普照&lt;br /&gt;
+曲：张博文&lt;/p&gt;
+
+&lt;p&gt;海上的晚霞像年少的画&lt;br /&gt;
+铺在天空等海鸥衔走它&lt;br /&gt;
+遥远的帆任风浪拍打&lt;br /&gt;
+为梦再痛也不会害怕&lt;br /&gt;
+远走的风沙去谁的天涯&lt;br /&gt;
+春天可曾在哪里见过他&lt;br /&gt;
+时间的手抚过了脸颊&lt;br /&gt;
+他们谁都沉默不说话&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+护送那时的梦抵挡过风沙&lt;br /&gt;
+指尖的樱花如诗写谁的韶华&lt;br /&gt;
+疯狂的热爱夹带着文雅&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+将那雨中的人藏在屋檐下&lt;br /&gt;
+岁月在冲刷逆流沧桑的喧哗&lt;br /&gt;
+安静的夜晚你在想谁吗&lt;br /&gt;
+远走的风沙去谁的天涯&lt;br /&gt;
+春天可曾在哪里见过他&lt;br /&gt;
+时间的手抚过了脸颊&lt;br /&gt;
+他们谁都沉默不说话&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+护送那时的梦抵挡过风沙&lt;br /&gt;
+指尖的樱花如诗写谁的韶华&lt;br /&gt;
+疯狂的热爱夹带着文雅&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+将那雨中的人藏在屋檐下&lt;br /&gt;
+岁月在冲刷逆流沧桑的喧哗&lt;br /&gt;
+安静的夜晚你在想谁吗&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+护送那时的梦抵挡过风沙&lt;br /&gt;
+指尖的樱花如诗写谁的韶华&lt;br /&gt;
+疯狂的热爱夹带着文雅&lt;br /&gt;
+我希望许过的愿望一路生花&lt;br /&gt;
+将那雨中的人藏在屋檐下&lt;br /&gt;
+岁月在冲刷逆流沧桑的喧哗&lt;br /&gt;
+安静的夜晚你在想谁吗&lt;br /&gt;
+安静的夜晚你在想谁吗&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;style&gt;
+.post-content{
+    text-align: center;
+}
+&lt;/style&gt;
+
+</description>
+        </item>
       
     
       
@@ -494,7 +652,7 @@
 &lt;p&gt;科学实证研究美国东北大学研究团队在2018年进行了一项全面的实验，分析了超过1.7万个App，并未发现任何一个App在用户未授权的情况下秘密录音并上传语音数据。研究团队明确表示，目前尚无证据表明手机存在监听用户谈话的行为。
 科技公司公开声明及第三方监督苹果、谷歌等科技巨头多次公开表示从未监听用户对话。若这些声明不属实，面临的法律风险和名誉损害都远远超出任何商业利益。同时，各国监管部门和第三方隐私保护机构也定期审计这些公司，未发现监听行为。&lt;/p&gt;
 
-&lt;h3 id=&quot;为什么会产生这种错觉&quot;&gt;为什么会产生这种错觉？&lt;/h3&gt;
+&lt;h3 id=&quot;五为什么会产生这种错觉&quot;&gt;五、为什么会产生这种错觉？&lt;/h3&gt;
 &lt;p&gt;人们之所以误以为手机在监听，很可能是因为：&lt;/p&gt;
 
 &lt;p&gt;选择性注意和心理暗示用户谈论了某个话题后，当看到相关广告时，更容易引起注意并加深记忆，形成“被监听”的错觉。实际上，这类广告可能早就出现，只是用户之前并未留意。
