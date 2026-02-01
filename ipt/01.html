@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>120.2k</p>
+                  <p>120.3k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-01-27 21:21:20 +0800">
-                    2026/01/27
+                  <p id="current-date" data-value="2026-02-01 10:35:21 +0800">
+                    2026/02/01
                   </p>
                 </li>
               </ul>
@@ -507,23 +507,48 @@
       <li>Word 支持添加<code class="language-plaintext highlighter-rouge">数字签名</code> <em class="color-gray">(可见或不可见）</em>，用于确定文档来源的真实、内容完整未被篡改、签署人的不可抵赖。这是 Office 的安全功能之一</li>
     </ul>
   </li>
-  <li>在Word 2023旳编辑状态下，删除一个段落标识后，前后两段文字会合并为一种段落。其中，文字字体：均保持与合并前一致，不发生变化</li>
-  <li>“保留”、“保存”、“存储” 等表述通常同义，均指向 Word 的 “Save” 功能，无需额外区分；而 “另存为” 会明确标注 “另存为” 或 “保存为”，避免混淆</li>
+  <li>在Word中，两段文字<code class="language-plaintext highlighter-rouge">删除中间的段落标识</code>后，前后两段文字会合并为一种段落。其中，两段文字的字体字号均保持与合并前一致，不发生变化；段落格式会保持第一段的格式。</li>
+  <li>“保留”、“保存”、“存储” 等表述通常同义，均指向 Word 的 “Save” 功能，无需额外区分；而 “<code class="language-plaintext highlighter-rouge">另存为</code>” 会明确标注 “另存为” 或 “保存为”，避免混淆</li>
   <li>功能<code class="language-plaintext highlighter-rouge">选项卡</code>
     <ul>
-      <li>开始：字体、段落</li>
-      <li>插入：图片、表格、艺术字、文本框、页眉页脚、首字下沉</li>
-      <li>页面布局：页面设置 <em class="color-gray">(纸张方向、分栏、）</em>、页面背景</li>
+      <li>开始：字体、段落、查找替换</li>
+      <li>插入：图片、表格、艺术字、页眉页脚、文本框、首字下沉</li>
+      <li>页面布局：页面设置 <em class="color-gray">(纸张方向、分栏、文档网格）</em>、页面背景</li>
       <li>引用：目录、脚注</li>
       <li>邮件：工资条、邀请函</li>
       <li>审阅：检查、校对、保护设置</li>
-      <li>视图：视图 <em class="color-gray">(页面视图、草稿视图、大纲视图、web版式视图、阅读版式视图）</em>、比例</li>
+      <li>视图：
+        <ul>
+          <li>视图类型：
+            <ul>
+              <li>页面视图 <em class="color-gray">(默认）</em></li>
+              <li>草稿视图 <em class="color-gray">(仅显示标题和正文，2003版本之前叫普通视图）</em></li>
+              <li>大纲视图 <em class="color-gray">(显示目录，可以折叠内容）</em></li>
+              <li>Web 版式视图 <em class="color-gray">(网页显示样式）</em></li>
+              <li>阅读版式视图 <em class="color-gray">(像书本一样，分左右两页）</em></li>
+            </ul>
+          </li>
+          <li>标尺显示：
+            <ul>
+              <li>页面视图：可以显示水平、垂直标尺</li>
+              <li>阅读、大纲视图：水平、垂直标尺都不显示</li>
+              <li>草稿、web视图：仅可显示水平标尺，无法显示垂直标尺</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><a href="https://img.gorpeln.top/software/p_s_c_1_005.png">功能选项卡 图片</a></li>
     </ul>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">视图</code>：包括页面视图 <em class="color-gray">(默认）</em>、草稿视图 <em class="color-gray">(仅显示标题和正文，2003版本之前叫普通视图）</em>、大纲视图 <em class="color-gray">(显示目录，可以折叠内容）</em>、Web 版式视图 <em class="color-gray">(网页显示样式）</em>、阅读版式视图 <em class="color-gray">(像书本一样，分左右两页）</em></li>
-  <li><code class="language-plaintext highlighter-rouge">分栏</code>：均匀分栏需要在段落后面多加一个回车，但不选中这个换行，然后点击<code class="language-plaintext highlighter-rouge">页面布局 - 分栏</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">首字下沉</code>：<code class="language-plaintext highlighter-rouge">插入 - 首字下沉</code></li>
+  <li>Word<code class="language-plaintext highlighter-rouge">查找替换</code>常用通配符
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">^#</code>：匹配0~9的任意单个数字</li>
+      <li><code class="language-plaintext highlighter-rouge">^$</code>：匹配任意单个英文字母（含大小写）</li>
+      <li><code class="language-plaintext highlighter-rouge">^@</code>：匹配任意单个汉字</li>
+      <li><code class="language-plaintext highlighter-rouge">^?</code>：匹配任意单个字符（数字、字母、符号、汉字等）</li>
+      <li><code class="language-plaintext highlighter-rouge">*</code>：匹配任意长度的字符（0个及以上，官方标准写法）</li>
+    </ul>
+  </li>
   <li>段落<code class="language-plaintext highlighter-rouge">缩进</code>：
     <ul>
       <li>左缩进：整个段落左边整体缩进</li>
@@ -532,20 +557,20 @@
       <li>悬挂缩进：整个段落除了第一行都缩进</li>
     </ul>
   </li>
-  <li>段落<code class="language-plaintext highlighter-rouge">边框和底纹</code>：边框包括<strong>字体边框</strong>、<strong>段落边框</strong>、<strong>页面边框</strong>，字体边框设置应用于字体，段落边框设置应用于段落即可。
+  <li>段落<code class="language-plaintext highlighter-rouge">边框和底纹</code>：边框包括<strong>字体边框</strong>、<strong>段落边框</strong>、<strong>页面边框</strong>，字体边框设置应用于字体，段落边框设置应用于段落即可。</li>
+  <li><code class="language-plaintext highlighter-rouge">首字下沉</code>：<code class="language-plaintext highlighter-rouge">插入 - 首字下沉</code></li>
+  <li><code class="language-plaintext highlighter-rouge">分栏</code>：均匀分栏需要在段落后面多加一个回车，但不选中这个换行，然后点击<code class="language-plaintext highlighter-rouge">页面布局 - 分栏</code>。</li>
+  <li>通过<code class="language-plaintext highlighter-rouge">页面布局 - 文档网格</code>，可以对设定好纸张大小的文档进行每页行数和每行字数进行调整。</li>
+  <li>边框、分栏、首字下沉
     <ul>
-      <li>如果同时要设置边框和<code class="language-plaintext highlighter-rouge">首字下沉</code>，要先设置边框，最后设置首字下沉，如果先设置首字下沉再设置边框，下沉字体也会出现边框的。</li>
-      <li>如果同时要设置边框和<code class="language-plaintext highlighter-rouge">分栏</code>，需要在设置好分栏后，插入<code class="language-plaintext highlighter-rouge">文本框</code>或<code class="language-plaintext highlighter-rouge">形状</code>，设置插入的文本框或形状的颜色和边框后，选择 <code class="language-plaintext highlighter-rouge">自动换行 - 衬于文字下方</code>，和<code class="language-plaintext highlighter-rouge">后移一层 - 置于底层</code>，通过移动实现边框效果。</li>
-      <li>
-        <blockquote>
-          <p>考试中，要先看看题目整体中有没有要设置边框、首字下沉、分栏等冲突的内容，没有就正常设置，如果有就要按照冲突的解决方式解决。有首字下沉，首字下沉就要最后做，有分栏，就没办法设置边框，需要手动插入文本或形状设置边框。</p>
-        </blockquote>
-      </li>
+      <li>如果同时要设置<code class="language-plaintext highlighter-rouge">边框和首字下沉</code>，要先设置边框，最后设置首字下沉，如果先设置首字下沉再设置边框，下沉字体也会出现边框的。</li>
+      <li>如果同时要设置<code class="language-plaintext highlighter-rouge">边框和分栏</code>，需要在设置好分栏后，插入<code class="language-plaintext highlighter-rouge">文本框</code>或<code class="language-plaintext highlighter-rouge">形状</code>，设置插入的文本框或形状的颜色和边框后，选择 <code class="language-plaintext highlighter-rouge">自动换行 - 衬于文字下方</code>，和<code class="language-plaintext highlighter-rouge">后移一层 - 置于底层</code>，通过移动实现边框效果。</li>
+      <li>考试中，要先看看题目整体中有没有要设置<code class="language-plaintext highlighter-rouge">边框、首字下沉、分栏</code>等冲突的内容，没有就正常设置，如果有就要按照冲突的解决方式解决。有首字下沉，首字下沉就要最后做，有分栏，就没办法设置边框，需要手动插入文本或形状设置边框。</li>
     </ul>
   </li>
   <li>在word文档中输入<code class="language-plaintext highlighter-rouge">=rand()</code>可以在word中插入随机文本段落，方便练习操作</li>
   <li>通过<code class="language-plaintext highlighter-rouge">Shift + F1</code>可以显示某段文字设置的格式</li>
-  <li>word操作题中没有要求首行缩进2个字符的，也要设置，不设置会扣分的。</li>
+  <li>word操作题中没有要求<code class="language-plaintext highlighter-rouge">首行缩进</code>2个字符的，也要设置，不设置会扣分的。</li>
 </ul>
 
 <details class="toggle">
@@ -816,7 +841,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.7</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.8</a>
         </div>
     </div>
 </footer>
@@ -959,7 +984,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.7",
+                "%c版本号 %c V4.10.8",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
