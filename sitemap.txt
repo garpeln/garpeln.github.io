@@ -180,6 +180,7 @@
         https://gorpeln.top/404
         https://gorpeln.top/CNAME
         https://gorpeln.top/about
+        https://gorpeln.top/album/
         https://gorpeln.top/apple-app-site-association
         https://gorpeln.top/archives
         https://gorpeln.top/categories
