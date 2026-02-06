@@ -54,6 +54,8 @@
      background-size: 100% 100%;
      box-shadow: 0px 0px 10px #4ba0ff;
      border-radius: 24px;
+ /*   filter: grayscale(100%);
+    opacity: .5;*/
  }
 
  h2 {
@@ -86,6 +88,8 @@
      border-radius: 42px;
      margin: 40px auto 10px auto;
      text-decoration: none;
+ /*   filter: grayscale(100%);
+    opacity: .5;*/
  }
 
  .in-bate-tip {

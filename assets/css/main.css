@@ -1343,6 +1343,7 @@ li.article a:hover,li.article a:focus{
       bottom: 4em;
       left: 0;
       display: none;
+      z-index:999;
     }
 
     .menuNav * {

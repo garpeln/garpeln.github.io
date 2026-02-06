@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-02-05 22:18:12 +0800">
-                    2026/02/05
+                  <p id="current-date" data-value="2026-02-06 21:33:29 +0800">
+                    2026/02/06
                   </p>
                 </li>
               </ul>
@@ -437,7 +437,6 @@
         
     </div>
 </div>
-
 <style>
 .album-list-grid {
     display: grid;
@@ -455,17 +454,10 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    box-shadow: 1px 1px 2px #dfd6d6;
-}
-
-.album-list-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .album-list-cover {
     height: 20em;
-
 }
 
 .album-list-cover img {
@@ -475,12 +467,10 @@
     display: block;
     transition: transform 0.5s ease;
     object-position: center;
-    /* 居中对齐（默认值，可不写） */
-
 }
 
 .album-list-card:hover .album-list-cover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .album-list-overlay {
@@ -531,6 +521,15 @@
 .album-list-nodata-icon {
     font-size: 4rem;
     margin: 0 0 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .album-list-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        margin: 1em;
+    }
 }
 </style></div>
           </div>
@@ -594,7 +593,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.11</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.12</a>
         </div>
     </div>
 </footer>
@@ -737,7 +736,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.11",
+                "%c版本号 %c V4.10.12",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
