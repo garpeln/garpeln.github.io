@@ -3,17 +3,18 @@ $(function() {
     var isiOS = !!window.navigator.userAgent.toLowerCase().match(/\(i[^;]+;( u;)? cpu.+mac os x/);
     var isWeiXin = window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
     var appUrl = "https://apps.apple.com/cn/app/id1495623965";
-    var appUrl_bate = "https://gorpeln.top";
+    var appUrl_bate = "https://gorpeln.top/article/17529840360";
 
     // 浏览器支持跨域访问
     jQuery.support.cors = true;
 
-    window.onload = requestDetailData();
+    // window.onload = requestDetailData();
 
 
     // 下载按钮点击
     $('.in-download').click(function() {
-        window.location.href = appUrl;
+    TipHub.show('应用已下架\n感谢您的一路支持与陪伴❤️', 15000);
+        // window.location.href = appUrl;
         return;
     });
 

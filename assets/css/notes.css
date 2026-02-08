@@ -88,8 +88,8 @@
      border-radius: 42px;
      margin: 40px auto 10px auto;
      text-decoration: none;
- /*   filter: grayscale(100%);
-    opacity: .5;*/
+    filter: grayscale(100%);
+    opacity: .5;
  }
 
  .in-bate-tip {
@@ -511,3 +511,9 @@
  body.dark-mode .timeline-content{
     color: #919aa1;
  }
+
+
+ .tip-hub {
+  white-space: pre-wrap; /* 保留换行符，自动换行 */
+  text-align:center;
+}

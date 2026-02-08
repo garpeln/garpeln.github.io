@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-02-06 21:33:29 +0800">
-                    2026/02/06
+                  <p id="current-date" data-value="2026-02-08 21:13:56 +0800">
+                    2026/02/08
                   </p>
                 </li>
               </ul>
@@ -651,7 +651,7 @@ thread.threadPriority = 1;
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.12</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.13</a>
         </div>
     </div>
 </footer>
@@ -794,7 +794,7 @@ thread.threadPriority = 1;
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.12",
+                "%c版本号 %c V4.10.13",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1083,7 +1083,8 @@ var _hmt = _hmt || [];
           reactionTitle: '你认为这篇文章怎么样？',
         };
 
-        import { init } from '/assets/js/waline.js';
+        // import { init } from '/assets/js/waline.js';
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
        init({
             el: '#waline',
