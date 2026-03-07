@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-02-10 20:37:49 +0800">
-                    2026/02/10
+                  <p id="current-date" data-value="2026-03-07 18:36:43 +0800">
+                    2026/03/07
                   </p>
                 </li>
               </ul>
@@ -440,7 +440,9 @@
       <li>③ <code class="language-plaintext highlighter-rouge">数据处理</code>：
         <ul>
           <li>信息的数据表示，计算机内所有信息以二进制进行加工和处理</li>
-          <li>数据的收集和处理是工作量大、花费时间最长的阶段</li>
+          <li>数据收集是信息处理全过程中最耗时、成本最高的阶段</li>
+          <li>数据收集和处理是信息处理中工作量最大、花费时间最长的阶段，<em class="color-gray">官方教材里就是两句话都写了：它就是同一意思的两种官方表述，不是让你推理，是让你背原文。</em></li>
+          <li>数据整顿（清洗、校对、去重）是数据处理阶段内最耗时的核心工作</li>
         </ul>
       </li>
       <li>④ <code class="language-plaintext highlighter-rouge">数据分析</code>：
@@ -516,7 +518,7 @@
       <li>页面布局：页面设置 <em class="color-gray">(纸张方向、分栏、文档网格）</em>、页面背景</li>
       <li>引用：目录、脚注</li>
       <li>邮件：工资条、邀请函</li>
-      <li>审阅：检查、校对、保护设置</li>
+      <li>审阅：检查、校对、批注、保护</li>
       <li>视图：
         <ul>
           <li>视图类型：
@@ -593,11 +595,11 @@
   <li>功能<code class="language-plaintext highlighter-rouge">选项卡</code>
     <ul>
       <li>开始：字体、对齐方式 <em class="color-gray">(水平、垂直、自动换行、合并）</em>、数字 <em class="color-gray">(常规、数字、时间、文本）</em>、样式 <em class="color-gray">(条件格式）</em>、编辑 <em class="color-gray">(排序和筛选、查找和选择、填充）</em></li>
-      <li>插入：图片、图表、文本框、页眉页脚</li>
+      <li>插入：图片、表格、艺术字、页眉页脚、文本框</li>
       <li>页面布局：页面设置 <em class="color-gray">(纸张方向、打印标题、网格线）</em></li>
       <li>公式：函数库</li>
       <li>数据：排序筛选、数据有效性、分列</li>
-      <li>审阅：批注、保护</li>
+      <li>审阅：检查、校对、批注、保护</li>
       <li>视图：视图 <em class="color-gray">(普通、分页预览、页面布局）</em>、比例、冻结窗口</li>
     </ul>
   </li>
@@ -619,9 +621,10 @@
     <ul>
       <li><code class="language-plaintext highlighter-rouge">###</code>：文本<code class="language-plaintext highlighter-rouge">过长</code>不能显示所有内容，一般为数字格式会显示###，文本格式的会被截取遮盖掉</li>
       <li><code class="language-plaintext highlighter-rouge">#DIV/0!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">除0</code>的错误</li>
-      <li><code class="language-plaintext highlighter-rouge">#NAME!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">函数名</code>或者其他名称错误</li>
+      <li><code class="language-plaintext highlighter-rouge">#NAME?</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">函数名</code>或者其他名称错误</li>
       <li><code class="language-plaintext highlighter-rouge">#VALUE!</code>：输入的公式中存在<code class="language-plaintext highlighter-rouge">数据类型</code>的错误</li>
       <li><code class="language-plaintext highlighter-rouge">#N/A</code>：<code class="language-plaintext highlighter-rouge">数据缺失</code>或者引用的数据不存在</li>
+      <li><code class="language-plaintext highlighter-rouge">#REF!</code>：<code class="language-plaintext highlighter-rouge">引用错误</code>，引用位置不存在</li>
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">数据有效性</code>：数据 - 数据有效性 - 序列 <em class="color-gray">(固定值的用序列，如选择男女）</em> - 男女中间用英文逗号隔开</li>
@@ -839,7 +842,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.14</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.15</a>
         </div>
     </div>
 </footer>
@@ -982,7 +985,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.14",
+                "%c版本号 %c V4.10.15",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
