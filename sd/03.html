@@ -1,0 +1,2564 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+    <title>数据结构 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
+    <meta name="description" content="3.1 线性结构3.1.1 线性表  线性表的定义：n个元素的有限序列  线性表的存储结构          顺序存储                  用一组地址连续的存储单元依次存储线性表中的数据元素，使得逻辑上相邻的元素物理上也相邻          优点：可以随机存取表中元素，读取、查找比较方便。          缺点：必须按最大可能长度预分配存储空间，存储空间的利用率低，表的容量...">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/sd/03">
+    <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
+    <!-- Open Graph -->
+    <meta name="author" content="gorpeln">
+    <meta property="og:title" content="数据结构 | gorpeln's Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/sd/03">
+    <meta property="og:description" content="3.1 线性结构3.1.1 线性表  线性表的定义：n个元素的有限序列  线性表的存储结构          顺序存储                  用一组地址连续的存储单元依次存储线性表中的数据元素，使得逻辑上相邻的元素物理上也相邻          优点：可以随机存取表中元素，读取、查找比较方便。          缺点：必须按最大可能长度预分配存储空间，存储空间的利用率低，表的容量...">
+    <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
+    <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/js/prettify/prettify.css">
+    <link rel="stylesheet" href="/assets/fontawesome-pro/css/all.css">
+    <link rel="stylesheet" href="/assets/css/warning.min.css">
+    <link rel="stylesheet" href="/assets/css/cb-search.css">
+    <link rel="stylesheet" href="/assets/css/waline.css">
+    <link rel="stylesheet" href="/assets/css/deng.css">
+
+    <!-- 站点验证 -->
+    <!-- <meta name="baidu-site-verification" content="codeva-ecAQzAyzAH" /> -->
+    <meta name="google-site-verification" content="NHkkNJPy6eQF4_7HqhTiaf9rttREYHhSZ73TbHQtCSQ" />
+    <meta name="bytedance-verification-code" content="jggixz6LOxpGdFP9NnX2" />
+    <meta name="shenma-site-verification" content="53874434c2c9ca0abf46059648dd5bc8_1768723034">
+
+    <!-- 分析追踪 -->
+    <script async src="https://umami.202090.xyz/4080547E-5575-D430-4F85-93518B7BFD1A" data-website-id="f8a549ac-991b-4c33-a0e3-509dc7fe1c2b"></script>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div id="percentageCounter" class="percentageCounter"></div>
+
+    <script>
+          (function () {
+            var darkMode = localStorage.getItem("darkMode");
+            if (darkMode === "enabled") {
+              document.body.classList.add("dark-mode");
+            }
+          })();
+    </script>
+
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <!-- 左侧栏 -->
+          <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+            <!-- 个人信息 -->
+            <div class="profile box-shadow center">
+              <div class="overlay"></div>
+              <div class="center gavatar">
+                <a href="/" class="profile_gavatar">
+                  <img class="circle" src="/assets/img/logo.png" />
+                  <div class="light-sweep"></div>
+                </a>
+              </div>
+              <div class="nickname">风未止</div>
+              <div class="center profile_desc">趁年轻，做自己想做的！</div>
+              <div class="center profile_subdesc">
+                There is no best, only better!
+                <br />
+              </div>
+              <div class="site-state">
+                <div class="site-state-item site-state-posts">
+                  <a href="/archives" target="_blank">
+                    <span class="site-state-item-count">256</span>
+                    <span class="site-state-item-name">归档</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories" target="_blank">
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags" target="_blank">
+                    <span class="site-state-item-count">713</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rss-subscribe">
+                <a target="_blank" href="/feed.xml">
+                    <i class="fas fa-rss" style="padding-right: 5px"></i>RSS
+                </a>
+              </div>
+            </div>
+            <!-- 博客公告 -->
+            <div class="siteNav" style="display: none">
+              <div class="noticeTitle">
+                <i class="fas fa-bullhorn fa-shake"></i> 公告
+              </div>
+              <div class="noticeDetail">
+                欢迎访问 gorpeln's Blog ，如有任何问题可以随时联系我！
+              </div>
+            </div>
+            <!-- 博客导航 -->
+            <div class="siteNav">
+              <div class="navTitle">博客导航</div>
+              <ul>
+                <li onclick="pushNew('/')">
+                  <a><i class="fas fa-home fa-fw"></i>首页</a>
+                </li>
+                <li onclick="pushNew('/categories')">
+                  <a><i class="fas fa-th fa-fw"></i>分类</a>
+                  <span class="articleCount">10 </span>
+                </li>
+                <li onclick="pushNew('/archives')">
+                  <a><i class="fas fa-archive fa-fw"></i>归档</a>
+                  <span class="articleCount">256 </span>
+                </li>
+                <li onclick="pushNew('/nav')">
+                  <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
+                </li>
+                <li onclick="pushNew('/works')">
+                  <a><i class="fab fa-git-square fa-fw"></i>项目</a>
+                  <span class="articleCount">4 </span>
+                </li>
+                
+                <li onclick="pushNew('/links')">
+                  <a><i class="fas fa-comment-dots fa-fw"></i>友链</a>
+                  <span class="articleCount">27 </span>
+                </li>
+                <li onclick="pushNew('/about')">
+                  <a><i class="fas fa-user fa-fw"></i>关于</a>
+                </li>
+                <li onclick="pushNew('/resume')">
+                  <a><i class="fas fa-envelope-open-text fa-fw"></i>简历</a>
+                  <span class="articleCount">※</span>
+                </li>
+                <li onclick="pushRandom()">
+                  <a><i class="fas fa-random fa-fw"></i>随机</a>
+                </li>
+                <li id="cb-search-btn">
+                  <a class="search-btn"><i class="fas fa-search fa-fw"></i>搜索</a>
+                  <span class="search-tip">双击 control </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章分类 -->
+            <div class="categoryNav">
+              <div class="categoryNavTitle">文章分类</div>
+              <div>
+                <ul>
+                  
+                  <li onclick="pushNew('/categories#其他')" class="categoryList">
+                    <a name="其他" class="default-categoryNav-name">其他</a>
+                    <a name="其他" style="" class="articleCount">81</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#个人博客')" class="categoryList">
+                    <a name="个人博客" class="default-categoryNav-name">个人博客</a>
+                    <a name="个人博客" style="" class="articleCount">37</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#web前端')" class="categoryList">
+                    <a name="web前端" class="default-categoryNav-name">web前端</a>
+                    <a name="web前端" style="" class="articleCount">6</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#iOS')" class="categoryList">
+                    <a name="iOS" class="default-categoryNav-name">iOS</a>
+                    <a name="iOS" style="" class="articleCount">47</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#程序人生')" class="categoryList">
+                    <a name="程序人生" class="default-categoryNav-name">程序人生</a>
+                    <a name="程序人生" style="" class="articleCount">24</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#MacOS')" class="categoryList">
+                    <a name="MacOS" class="default-categoryNav-name">MacOS</a>
+                    <a name="MacOS" style="" class="articleCount">22</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#产品和运营')" class="categoryList">
+                    <a name="产品和运营" class="default-categoryNav-name">产品和运营</a>
+                    <a name="产品和运营" style="" class="articleCount">12</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#Git')" class="categoryList">
+                    <a name="Git" class="default-categoryNav-name">Git</a>
+                    <a name="Git" style="" class="articleCount">7</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#微信小程序')" class="categoryList">
+                    <a name="微信小程序" class="default-categoryNav-name">微信小程序</a>
+                    <a name="微信小程序" style="" class="articleCount">14</a>
+                  </li>
+                  
+                  <li onclick="pushNew('/categories#教程福利')" class="categoryList">
+                    <a name="教程福利" class="default-categoryNav-name">教程福利</a>
+                    <a name="教程福利" style="" class="articleCount">6</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <!-- 个人档案 -->
+            <div class="contactNav">
+              <div class="contactNavTitle">个人档案</div>
+              <div class="contact-container">
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/qqLogo.png" />
+                  <span class="contact-name">contact via email</span>
+                </a>
+                <a class="contact-item" href="/" target="_blank">
+                  <img src="/assets/img/gmailLogo.png" />
+                  <span class="contact-name">help@gor*eln.top</span>
+                </a>
+                <a class="contact-item" href="https://gorpeln.blog.csdn.net" target="_blank">
+                  <img src="/assets/img/csdnLogo.png" />
+                  <span class="contact-name">gorpeln.blog.csdn.net</span>
+                </a>
+                <a class="contact-item" href="/about" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="contact-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 友情链接 -->
+            <div class="friendlinkNav" id="friendlinkNav">
+              <div class="friendlinkNavTitle">友情链接</div>
+              <div class="friend-container">
+                
+                    
+                        <a class="friend-item" href="https://www.foreverblog.cn/blog/577.html" target="_blank">
+                          <img src="https://www.foreverblog.cn/favicon.ico" />
+                          <span class="friend-name">十年之约</span>
+                        </a>
+                    
+                
+                    
+                        <a class="friend-item" href="https://www.travellings.cn/go.html" target="_blank">
+                          <img src="https://list.travellings.cn/favicon.ico" />
+                          <span class="friend-name">开往-友链接力</span>
+                        </a>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <a class="friend-item" href="/links" target="_blank">
+                  <img src="/assets/img/list_more.png" />
+                  <span class="friend-name">更多...</span>
+                </a>
+              </div>
+            </div>
+            <!-- 节日提醒 -->
+            <div class="countdownNav" id="countdownNav">
+              <div class="card-widget card-countdown">
+                <div class="item-content">
+                  <div class="cd-count-left">
+                    <span class="cd-text">距离</span>
+                    <span class="cd-name" id="eventName">节日</span>
+                    <span class="cd-time" id="daysUntil">00</span>
+                    <span class="cd-date" id="eventDate">
+                      
+                      1970-01-01
+                    </span>
+                  </div>
+                  <div id="countRight" class="cd-count-right">
+                    <div id="countRight" class="cd-count-right">
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">今日</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本周</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本月</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                      <div class="cd-count-item">
+                        <div class="cd-item-name">本年</div>
+                        <div class="cd-item-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 网站资讯 -->
+            <div class="siteInfoNav" id="siteInfoNav">
+              <div class="navTitle">网站资讯</div>
+              <ul>
+                <li>
+                  <p>文章数目</p>
+                  <p>256</p>
+                </li>
+                <li>
+                  <p>本站总字数</p>
+                  <p>121.2k</p>
+                </li>
+                <li>
+                  <p>已运行时间</p>
+                  <p id="runtime">加载中...</p>
+                </li>
+                <li>
+                  <p>最近更新时间</p>
+                  <p id="current-date" data-value="2026-03-15 21:07:35 +0800">
+                    2026/03/15
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- 文章目录 -->
+            <div id="toc" class="customCatalog"></div>
+          </div>
+          <!-- 页面详情 -->
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
+            <div class="page-content" id="pjax"><div class="post">
+    <header class="post-header">
+        <h1 class="post-title">数据结构</h1>
+        <div class="info">
+            时间：
+            <text style="padding-top: 0;margin-right:2em;">2015-05-03</text>
+            分类：
+            <a class="item-date tags-a" href="/categories.html#其他" target="_blank">
+                其他
+            </a>
+            <text style="margin-right:2em;"></text>
+            标签：
+            
+            <span class="index-post-tag">
+                
+                
+                <a class="pjaxlink" href="/tags#其他" target="_blank">其他</a>
+                
+                
+            </span>
+            
+        </div>
+    </header>
+    <article class="post-content">
+        <h3 id="31-线性结构">3.1 线性结构</h3>
+<h4 id="311-线性表">3.1.1 线性表</h4>
+<ul>
+  <li>线性表的定义：n个元素的有限序列</li>
+  <li>线性表的存储结构
+    <ul>
+      <li>顺序存储
+        <ul>
+          <li>用一组<code class="language-plaintext highlighter-rouge">地址连续</code>的存储单元依次存储线性表中的数据元素，使得<code class="language-plaintext highlighter-rouge">逻辑上相邻的元素物理上也相邻</code></li>
+          <li>优点：可以<code class="language-plaintext highlighter-rouge">随机存取</code>表中元素，读取、查找比较方便。</li>
+          <li>缺点：必须按最大可能长度预分配存储空间，存储空间的利用率低，表的容量难以扩容，是一种静态存储结构；<code class="language-plaintext highlighter-rouge">插入与删除需要移动大量元素</code>，平均移动次数为n/2</li>
+          <li><img src="https://img.gorpeln.top/software/p_s_3_001.png!/scale/20" alt="顺序存储" class="img-left" /></li>
+        </ul>
+      </li>
+      <li>链式存储
+        <ul>
+          <li>存储各元素的结点的地址并不要求是连续的，<code class="language-plaintext highlighter-rouge">逻辑上相邻的数据元素，物理上不一定相邻</code></li>
+          <li>链式存储中每个元素都包括<code class="language-plaintext highlighter-rouge">数据域</code>和<code class="language-plaintext highlighter-rouge">指针域</code>两部分。如a元素就由数据<code class="language-plaintext bg-gray highlighter-rouge">a</code>和指针<code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next</code>两部分组成</li>
+          <li>优点：<code class="language-plaintext highlighter-rouge">插入与删除不需要移动元素</code>，较为方便，只需要修改指针即可；存储空间不需要提前确定，可以动态改变，是一种动态存储结构。</li>
+          <li>缺点：不能对数据元素进行随机访问；需要存储指针，有空间浪费存在。</li>
+          <li><img src="https://img.gorpeln.top/software/p_s_3_002.png!/scale/20" alt="链式存储" class="img-left" /></li>
+          <li>单链表的<code class="language-plaintext highlighter-rouge">插入</code>和<code class="language-plaintext highlighter-rouge">删除</code>操作
+            <ul>
+              <li>在ab之间插入s元素：
+                <ul>
+                  <li>①将<code class="language-plaintext bg-gray highlighter-rouge">s-&gt;next指向b</code>，即<code class="language-plaintext bg-gray highlighter-rouge">s-&gt;next = b</code></li>
+                  <li>②将<code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next指向s</code>，即<code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next = s</code></li>
+                  <li>两步不能颠倒，如果先执行 <code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next = s</code>，会导致原有的 <code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next</code>（也就是 b 的地址）被覆盖丢失</li>
+                </ul>
+              </li>
+              <li>删除abs中的b元素：<code class="language-plaintext bg-gray highlighter-rouge">a-&gt;next = a-&gt;next-&gt;next</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="312-栈和队列">3.1.2 栈和队列</h4>
+<p>栈和队列属于受限线性表，极特殊的线性表。</p>
+<ul>
+  <li>栈
+    <ul>
+      <li>栈是限定仅在表尾 <em class="color-gray">(栈顶）</em>进行插入或删除操作的线性表，是一种<code class="language-plaintext highlighter-rouge">先进后出</code> <em class="color-gray">(LIFO）</em> 的线性结构。</li>
+      <li>表尾称为<code class="language-plaintext highlighter-rouge">栈顶</code>，表头称为<code class="language-plaintext highlighter-rouge">栈底</code></li>
+      <li>栈的应用：括号匹配、迷宫求解、汉诺塔</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_003.png!/scale/20" alt="栈" class="img-left" /></li>
+    </ul>
+  </li>
+  <li>队列
+    <ul>
+      <li>队列是只允许在表的一端进行插入，在另一端进行删除操作的线性，是一种<code class="language-plaintext highlighter-rouge">先进先出</code> <em class="color-gray">(FIFO）</em> 的线性结构。</li>
+      <li>允许插入的一端称为队尾，允许删除的一端称为队头</li>
+      <li>队列的应用：操作系统中的作业排队</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_004.png!/scale/20" alt="队列" class="img-left" /></li>
+    </ul>
+  </li>
+  <li>循环队列
+    <ul>
+      <li>循环队列是一种顺序表示的队列，用一组地址连续的存储单元依次存放从队头到队尾的元素。由 于队列中队头和队尾的位置是动态变化的，要附设两个指针<code class="language-plaintext highlighter-rouge">front</code>和<code class="language-plaintext highlighter-rouge">rear</code>，分别指示队头元素和队尾元素在数组中的位置</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_005.png!/scale/20" alt="循环队列" class="img-left" /></li>
+      <li>设置循环队列Q的容量为M
+        <ul>
+          <li>队空：Q.front == Q.rear</li>
+          <li>队满：Q.front == (Q.rear + 1) % M</li>
+          <li>入队：Q.rear = (Q.rear + 1) % M</li>
+          <li>出队：Q.front = (Q.front + 1) % M</li>
+          <li>队长：(Q.rear - Q.front + M) % M</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="313-串">3.1.3 串</h4>
+<ul>
+  <li>串是仅由字符构成的有限序列，是一种线性表。本质就是<code class="language-plaintext highlighter-rouge">字符串</code></li>
+  <li>串的模式匹配算法
+    <ul>
+      <li>基本概念
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">主串</code>：就是原始字符串 <em class="color-gray">(如：S = “ABCABD”）</em></li>
+          <li><code class="language-plaintext highlighter-rouge">模式串</code>：待查找的子字符串 <em class="color-gray">(如 P = “ABD”）</em></li>
+          <li>匹配成功：即在主串中能匹配到模式串</li>
+        </ul>
+      </li>
+      <li>匹配算法
+        <ul>
+          <li>基本算法：一个字符一个字符匹配，直到匹配到。</li>
+          <li><code class="language-plaintext highlighter-rouge">KMP</code>算法 <em class="color-gray">(3个人名的简称）</em>：是对基本匹配算法的改进，其改进之处在于：每当匹配过程中出现相比较的字符不相等时，不再需要回溯主串的字符位置指针，而是利用己经得到“部分匹配”结果，将模式串向右“滑动”尽可能远的距离，再继续比较即可
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">next函数</code>：当模式串第j个字符与主串失配时，模式串中与主串继续匹配的位置</li>
+              <li><img src="https://img.gorpeln.top/software/p_s_3_006.png!/scale/20" alt="KMP算法" class="img-left" /></li>
+              <li><img src="https://img.gorpeln.top/software/p_s_3_007.png!/scale/20" alt="KMP算法" class="img-left" /></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="32-数组矩阵和广义表">3.2 数组、矩阵和广义表</h3>
+<h4 id="321-数组">3.2.1 数组</h4>
+<ul>
+  <li>一维数组a[n]
+    <ul>
+      <li>则a[i]的存储地址为：<code class="language-plaintext highlighter-rouge">a[0]的地址 + i*len</code></li>
+    </ul>
+  </li>
+  <li>二维数组a[m][n]  <em class="color-gray">(m行n列）</em>
+    <ul>
+      <li>按行存储：则a[i][j]的存储地址为：<code class="language-plaintext highlighter-rouge">a[0]的地址 + (i*n+j)*len</code></li>
+      <li>按列存储：则a[i][j]的存储地址为：<code class="language-plaintext highlighter-rouge">a[0]的地址 + (j*m+i)*len</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="322-矩阵">3.2.2 矩阵</h4>
+<p><code class="language-plaintext highlighter-rouge">所有矩阵都可以用数组表示，但并非所有数组都能称为矩阵，矩阵在形式上常表现为二维数组</code>。</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">对称矩阵</code>
+    <ul>
+      <li>n阶矩阵A中的元素满足<code class="language-plaintext highlighter-rouge">a[i][j] = a[j][i]</code> <em class="color-gray">(其中i≥1，j≥1）</em>，则称为n阶对称矩阵</li>
+    </ul>
+  </li>
+  <li><a href="https://img.gorpeln.top/software/p_s_3_008.png!/scale/20">三角矩阵</a>
+    <ul>
+      <li>矩阵的上三角或下三角 <em class="color-gray">(不包括对角线）</em>中的元素均为<code class="language-plaintext highlighter-rouge">常数c</code>或<code class="language-plaintext highlighter-rouge">0</code>的n阶矩阵。</li>
+    </ul>
+  </li>
+  <li><a href="https://img.gorpeln.top/software/p_s_3_009.png!/scale/20">对角矩阵</a>
+    <ul>
+      <li>矩阵中的<code class="language-plaintext highlighter-rouge">非零元素</code>都集中在以<code class="language-plaintext highlighter-rouge">主对角线</code>为中心的带状区域</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">稀疏矩阵</code>
+    <ul>
+      <li>在一个矩阵中，若<code class="language-plaintext highlighter-rouge">非零元素</code>的个数<code class="language-plaintext highlighter-rouge">远远小于零元素</code>的个数，且非零元素的分布没有规律，则称之为稀疏矩阵</li>
+      <li>稀疏矩阵的存储方式：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">三元组</code>，用三个域存储每个非零元素，即行、列、值。</li>
+          <li><code class="language-plaintext highlighter-rouge">十字链表</code>，对于每个非零元素会有5个域，分别是行、列、值、指向同行下一个非零元素的指针right和指向同列下一个非零元素的指针down</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="323-广义表">3.2.3 广义表</h4>
+<ul>
+  <li><em class="color-gray">了解即可</em></li>
+  <li>是由0个或多个单元素或子表组成的有限序列，线性表的元素都是结构上不可分的单元素，而广义表的元素既可以是单元素，也可以是有结构的表，包括其本身</li>
+  <li>head() 和tail()：
+    <ul>
+      <li>取表头 <em class="color-gray">(广义表的第一个表元素，可以是子表，也可以是单元素）</em></li>
+      <li>取表尾 <em class="color-gray">(广义表中，除了第一个表元素之外的 其他所有表元素构成的表，非空广义表的表尾必定是一个表，即使表尾是单元素）</em></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="33-树">3.3 树</h3>
+<h4 id="331-树与二叉树的定义">3.3.1 树与二叉树的定义</h4>
+<ul>
+  <li>树是一种<code class="language-plaintext highlighter-rouge">非线性结构</code>，树中的每一个数据元素可以有两个或两个以上的直接后继元素，用来描述层次结构关系</li>
+  <li>树的基本概念
+    <ul>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_010.png!/scale/20" alt="KMP算法" class="img-left" /></li>
+      <li>双亲、孩子和兄弟
+        <ul>
+          <li>结点子树的根称为该结点的孩子结点，<em class="color-gray">B、C、D分别是节点A的孩子节点</em></li>
+          <li>该结点称为其子结点的双亲，<em class="color-gray">A是B、C、D的双亲节点</em></li>
+          <li>具有相同双亲的结点互为兄弟，<em class="color-gray">B、C、D互为兄弟节点</em></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">结点的度</code>：一个结点拥有子树的个数称力该结点的度，即斜线的数量。<em class="color-gray">A的度为3，B的度为2，C的度为1，D的度为1</em></li>
+      <li><code class="language-plaintext highlighter-rouge">叶子结点</code>：度为O的结点。<em class="color-gray">E、F、G、H都是叶子结点</em></li>
+      <li><code class="language-plaintext highlighter-rouge">结点的层次</code>：<em class="color-gray">结点A在第一层，B、C、D在第二层，E、F、G、H在第三层</em></li>
+      <li><code class="language-plaintext highlighter-rouge">树的深度</code>：<em class="color-gray">树的深度为3</em></li>
+      <li><code class="language-plaintext highlighter-rouge">结点总数n = 分支总数m  + 1</code>
+        <ul>
+          <li>假设树T的度为4，则n0是度为0的结点数，n1是度为1的结点数，n2是度为2的结点数，n3是度为3的结点数，n4是度为4的结点数。</li>
+          <li>结点总数n = n0 + n1 + n2 + n3 + n4</li>
+          <li>分支总数m = n0*0 + n1*1 + n2*2 + n3*3 + n4*4</li>
+          <li>所以：n0 + n1 + n2 + n3 + n4 = n0*0 + n1*1 + n2*2 + n3*3 + n4*4 + 1</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>二叉树
+    <ul>
+      <li>与树的区别是<code class="language-plaintext highlighter-rouge">二叉树各个结点的度最大为2</code></li>
+      <li><code class="language-plaintext highlighter-rouge">满二叉树</code>：在一棵二叉树中，如果所有非叶子结点都同时具有左孩子和右孩子，并且所有叶子结点都在同一层上，即一棵深度为k并且含有 <em class="color-gray">$2^k$-1</em> 个结点的二叉树称为满二叉树</li>
+      <li><code class="language-plaintext highlighter-rouge">完全二叉树</code>：一棵深度为k，有n个结点的二叉树，对树中的结点按从上至下、从左到右的顺序进行编号，如果编号为i <em class="color-gray">(1≤i≤n）</em>的结点与满二叉树中编号为i的结点在二叉树中的位置相同，则这棵二叉树称为完全二叉树，<em class="color-gray">完全二叉树几乎和满二叉树一样，仅是最后一层的叶子节点不满而已</em></li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_011.png!/scale/20" alt="二叉树" class="img-left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="332-二叉树的性质与存储结构">3.3.2 二叉树的性质与存储结构</h4>
+<ul>
+  <li>二叉树的性质
+    <ul>
+      <li>在二叉树的第i层上最多有 <em class="color-gray">$2^{i-1}$</em> 个结点 <em class="color-gray">(i≥1）</em></li>
+      <li>深度为k的二叉树最多有 <em class="color-gray">$2^k$-1</em> 个结点 <em class="color-gray">(k≥1）</em></li>
+      <li>对于任何一棵二叉树，如果其叶子结点数为n0，度为2的结点数为n2，则有<code class="language-plaintext highlighter-rouge">n0= n2+1</code>。 <code class="language-plaintext highlighter-rouge">注意叶子节点，即度为0的节点，他可能不是在最后一层的</code></li>
+    </ul>
+  </li>
+  <li>二叉树的存储结构
+    <ul>
+      <li>顺序存储：在采用顺序存储时，完全二叉树与一般二叉树相比节省了空间，这是因为一般二叉树需要添加一些“虚结点”而造成了空间的浪费。即<a href="https://img.gorpeln.top/software/p_s_3_012.png">没有孩子节点的位置会存空值</a>。</li>
+      <li><code class="language-plaintext highlighter-rouge">链式存储</code>：一般用<code class="language-plaintext highlighter-rouge">二叉链表</code>来存储二叉树结点，二叉链表中除了该结点本身的数据外，还存储有<code class="language-plaintext highlighter-rouge">左孩子结点的指针</code>、<code class="language-plaintext highlighter-rouge">右孩子结点的指针</code>，即<code class="language-plaintext highlighter-rouge">一个数据+两个指针</code> <em class="color-gray">(lchild、data、rchild）</em>。每个二叉链表结点存储一个二叉树结点，头指针则指向根结点。</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_013.png!/scale/20" alt="二叉树链式存储" class="img-left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="333-二叉树的遍历">3.3.3 二叉树的遍历</h4>
+<ul>
+  <li><img src="https://img.gorpeln.top/software/p_s_3_014.png!/scale/20" alt="二叉树遍历" class="img-left" /></li>
+  <li><code class="language-plaintext highlighter-rouge">前序遍历</code>：根左右
+    <ul>
+      <li>无轮那种遍历方式都是<code class="language-plaintext highlighter-rouge">从上到小，从左到右</code></li>
+      <li>① abc</li>
+      <li>② bde，也就是将①中的b替换成②中的bde，即abdec</li>
+      <li>③ cf，也就是将②中的c替换成cf，即abdecf</li>
+      <li>④ eg，也就是将③中的e替换成eg，即abdegcf</li>
+      <li>⑤ gh，也就是将④中的g替换成gh，即<code class="language-plaintext highlighter-rouge">abdeghcf</code></li>
+      <li>中序遍历和后续遍历也是一样的道理</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">中序遍历</code>：左根右，<code class="language-plaintext highlighter-rouge">dbgheacf</code></li>
+  <li><code class="language-plaintext highlighter-rouge">后序遍历</code>：左右根，<code class="language-plaintext highlighter-rouge">dhgebfca</code></li>
+  <li><code class="language-plaintext highlighter-rouge">层次遍历</code>：按层次，从上到下，从左到右，<code class="language-plaintext highlighter-rouge">abcdefgh</code></li>
+</ul>
+
+<h4 id="334-线索二叉树">3.3.4 线索二叉树</h4>
+<ul>
+  <li>① 若n个结点的二叉树使用二叉链表存储，则必然有<code class="language-plaintext highlighter-rouge">n+1个空指针域</code>，这些空指针完全闲置，相当于浪费了近一半的指针存储空间</li>
+  <li>② 普通二叉树的遍历 <em class="color-gray">(如中序遍历）</em>依赖递归或栈，空间复杂度高。如果需要定位某个节点的 “前驱” 或 “后继” <em class="color-gray">(比如中序遍历中某节点的前一个/后一个节点）</em>，普通二叉树必须重新完整遍历一次树</li>
+  <li>为了解决①空间利用率不高和②遍历的空间效率低的问题，就引入了线索二叉树。利用这些空指针域来存储结点的<code class="language-plaintext highlighter-rouge">前驱结点</code>和<code class="language-plaintext highlighter-rouge">后继结点</code>信息，为此需要增加两个标志，以区分指针域存放的到底是孩子结点还是遍历结点
+    <ul>
+      <li>线索二叉树结构为：<code class="language-plaintext highlighter-rouge">ltag、lchild、data、rchild、rtag</code> ，
+        <ul>
+          <li>ltag为0，lchild 指向左子节点；ltag为1，lchild 遍历顺序下的前驱节点 <em class="color-gray">(左线索）</em>；</li>
+          <li>rtag为0，rchild 指向右子节点；rtag为1，rchild 遍历顺序下的后继节点 <em class="color-gray">(右线索）</em>；</li>
+        </ul>
+      </li>
+      <li>遍历过程中，如中序遍历结果为<code class="language-plaintext highlighter-rouge">dbgheacf</code>，则d的前驱为空，后继为b，就是遍历结果前后内容</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="335-最优二叉树">3.3.5 最优二叉树</h4>
+<ul>
+  <li>最优二叉树
+    <ul>
+      <li>最优二叉树也称为<code class="language-plaintext highlighter-rouge">哈夫曼树</code> <em class="color-gray">(霍夫曼、赫夫曼）</em>，是一种带权路径长度最短的二叉树</li>
+      <li>哈夫曼树的<code class="language-plaintext highlighter-rouge">结点数一定为奇数</code></li>
+      <li>哈夫曼树的<code class="language-plaintext highlighter-rouge">结点的度为0或者2，不能为1</code></li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_015.png!/scale/40" alt="二叉树遍历" class="img-left" /></li>
+      <li><code class="language-plaintext highlighter-rouge">路径</code>：树中一个结点到另一个结点之间的通路，<em class="color-gray">A到F的路径为A-C-E-F</em></li>
+      <li><code class="language-plaintext highlighter-rouge">路径长度</code>：通路上的分支个数，<em class="color-gray">A到F的路径长度为3</em></li>
+      <li><code class="language-plaintext highlighter-rouge">树的路径长度</code>：根结点到每一个叶子结点之间的路径长度之和，<em class="color-gray">到B为1，到D为2，到F为3，到G为3，所以输的路径长度为1+2+3+3=9</em></li>
+      <li><code class="language-plaintext highlighter-rouge">权</code>：结点代表的值，<em class="color-gray">B旁边的数字5，就是权值</em></li>
+      <li><code class="language-plaintext highlighter-rouge">结点的带权路径长度</code>：该结点到根结点之间的路径长度与该结点权值的乘积，<em class="color-gray">F结点的带权路径长度=3*1=3</em></li>
+      <li><code class="language-plaintext highlighter-rouge">树的带权路径长度</code>：树中所有叶子结点的带权路径长度之和，<em class="color-gray">5*1+4*2+1*3+2*3 = 22</em></li>
+    </ul>
+  </li>
+  <li>最优二叉树的构建
+    <ul>
+      <li>有n个权值，则构造出的哈夫曼树有n个叶子结点</li>
+      <li>构造哈夫曼树时一般遵循权值<code class="language-plaintext highlighter-rouge">左小右大</code>的原则</li>
+      <li>构建步骤：
+        <ul>
+          <li>（1）将所有权值看成是有n棵树的森林</li>
+          <li>（2）选权值最小的两个数，作为一棵<code class="language-plaintext highlighter-rouge">新树</code>的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和</li>
+          <li>（3）从森林中删除选取的两棵树，并将新树加入森林</li>
+          <li>（4）重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>哈夫曼编码
+    <ul>
+      <li>先构造哈夫曼树，左分支表示字符<code class="language-plaintext highlighter-rouge">0</code>，右分支表示字符<code class="language-plaintext highlighter-rouge">1</code>，可得到字符的哈夫曼编码，<em class="color-gray">如上面A到F的哈夫曼编码值就是110</em></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="336-树和森林">3.3.6 树和森林</h4>
+<ul>
+  <li>树的存储结构：<em class="color-gray">了解即可</em>，双亲表示法、孩子表示法、孩子兄弟表示法</li>
+  <li>树和森林的遍历：<code class="language-plaintext highlighter-rouge">和二叉树的遍历方法一样</code>
+    <ul>
+      <li>树的先根遍历</li>
+      <li>树的后根遍历</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">树、森林和二叉树之间的相互转换</code>
+    <ul>
+      <li>树转二叉树原理：树的最左边结点作为二叉树的左子树，树的其他兄弟结点作为其左边兄弟结点的右子树。
+        <ul>
+          <li>用 “左孩子” 表示原树中的 “父子关系”</li>
+          <li>用 “右孩子” 表示原树中的 “兄弟关系”</li>
+        </ul>
+      </li>
+      <li>任何一颗与树对应的二叉树，其右子树必为空</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_016.png!/scale/20" alt="树、森林和二叉树之间的相互转换" class="img-left" /></li>
+    </ul>
+  </li>
+  <li>二叉排序树
+    <ul>
+      <li>① 要么为空树，要么具有②、③点的性质</li>
+      <li>② 若左子树不为空，则左子树的所有结点值均小于根结点</li>
+      <li>③ 若右子树不为空，则右子树的所有结点值均大于根结点</li>
+    </ul>
+  </li>
+  <li>平衡二叉树
+    <ul>
+      <li>① 要么为空树，要么具有②、③点的性质</li>
+      <li>② 它的左子树和右子树都是平衡二叉树</li>
+      <li>③ 左子树和右子树的深度之差的绝对值不超过1</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="34-图">3.4 图</h3>
+<h4 id="341-图的定义与存储">3.4.1 图的定义与存储</h4>
+<p>图也是一种<code class="language-plaintext highlighter-rouge">非线性结构</code>，图中任意两个顶点之间都可能有直接关系</p>
+<ul>
+  <li><img src="https://img.gorpeln.top/software/p_s_3_017.png!/scale/30" alt="图" class="img-left" /></li>
+  <li><code class="language-plaintext highlighter-rouge">有向边</code>和<code class="language-plaintext highlighter-rouge">无向边</code>：带箭头的单通道为有向边，不带箭头的双通道为无向边</li>
+  <li><code class="language-plaintext highlighter-rouge">无向图</code>：图中任意顶点之间均为无向边</li>
+  <li><code class="language-plaintext highlighter-rouge">有向图</code>：图中任意顶点之间均为有向边</li>
+  <li><code class="language-plaintext highlighter-rouge">完全图</code>：
+    <ul>
+      <li>① 无向完全图中，两两顶点之间均有连线，n个项点的无向完全图有<code class="language-plaintext highlighter-rouge">n*(n-1)/2</code>条边</li>
+      <li>② 有向完全图中，两两顶点之间均有连线，n个顶点的有向完全图有<code class="language-plaintext highlighter-rouge">n*(n-1)</code>条边</li>
+    </ul>
+  </li>
+  <li>度、出度和入度：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">度</code>：进出某个顶点的边的数目，<em class="color-gray">有向图中，顶点的度为出度和入度之和</em></li>
+      <li><code class="language-plaintext highlighter-rouge">入度</code>：在有向图中，进入该顶点的边数</li>
+      <li><code class="language-plaintext highlighter-rouge">出度</code>：在有向图中，从该顶点出去的边数，<em class="color-gray">在无向图中，不分入度和出度</em></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">路径</code>：存在一条通路，可以从一个顶点到达另一个顶点，<code class="language-plaintext highlighter-rouge">有向图的路径也是有方向的</code></li>
+  <li><code class="language-plaintext highlighter-rouge">连通图和连通分量</code>：针对<code class="language-plaintext highlighter-rouge">无向图</code>。若从顶点v到顶点u之间是有路径的，则说明v和u之间是连通的，若无向图中<code class="language-plaintext highlighter-rouge">任意两个顶点之间都是连通的</code>，则成为连通图。无向图G的极大连通子图称为其连通分量。</li>
+  <li><code class="language-plaintext highlighter-rouge">强连通图和强连通分量</code>：针对<code class="language-plaintext highlighter-rouge">有向图</code>。若有向图中<code class="language-plaintext highlighter-rouge">任意两个顶点之间都相互存在路径</code>，即存在顶点v到顶点u，也存在顶点u到顶点v的路径，则称为强连通图。有向图中的极大连通子图称为其强连通分量</li>
+  <li><code class="language-plaintext highlighter-rouge">生成树</code>：一个连通图的生成树就是该图的连通性不变，但没有环路的子图。一个有n个顶点的生成树有且仅有n-1条边</li>
+  <li><code class="language-plaintext highlighter-rouge">网</code>：边带权值的图称为网</li>
+</ul>
+
+<p>图的存储结构</p>
+<ul>
+  <li>邻接矩阵
+    <ul>
+      <li>n个顶点的图可以用<code class="language-plaintext highlighter-rouge">n*n</code>的邻接矩阵来表示。<code class="language-plaintext highlighter-rouge">如果顶点i到顶点j存在边，则矩阵元素A[i,j]的值置为1，否则为0</code></li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_018.png!/scale/30" alt="邻接矩阵" class="img-left" /></li>
+    </ul>
+  </li>
+  <li>邻接表
+    <ul>
+      <li>邻接表是链式存储结构。<code class="language-plaintext highlighter-rouge">用一个一维数组存储所有的顶点，对于数组中的每个顶点都生成一个链表。链表中每个顶点(表结点)包括顶点号、顶点信息(如边的权值)、以及指向下一个顶点的指针</code></li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_019.png!/scale/30" alt="邻接表" class="img-left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="342-图的遍历">3.4.2 图的遍历</h4>
+<p>图的遍历是从图中的任意一个顶点出发，对图中的所有顶点<code class="language-plaintext highlighter-rouge">访问一次</code>且只访问一次。分为深度优先搜索和广度优先搜索</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">深度优先搜索</code>：类似于树的<code class="language-plaintext highlighter-rouge">先根遍历</code>，一条分支走到头，直到无路可走再退回上一层</li>
+  <li><code class="language-plaintext highlighter-rouge">广度优先搜索</code>：类似于树的<code class="language-plaintext highlighter-rouge">层次遍历</code>，访问所有同层次邻居，本层次结束访问下一层</li>
+  <li>具体步骤：
+    <ul>
+      <li>第一步：必须先将图转化为邻接矩阵或邻接表 <em class="color-gray">(计算机只能理解这种结构化数据）</em></li>
+      <li>第二步：从起始顶点开始，以 “当前访问的顶点” 为核心，通过存储结构 <em class="color-gray">(邻接矩阵的行/邻接表的链表）</em>找到它的邻居</li>
+      <li>第三步：按 DFS <em class="color-gray">(栈/递归）</em>或 BFS <em class="color-gray">(队列）</em>的规则，选择下一个要访问的邻居，重复第二步直到所有顶点访问完</li>
+    </ul>
+  </li>
+  <li>两种优先搜索的时间复杂度：使用<code class="language-plaintext highlighter-rouge">邻接矩阵</code>均为 O($n^2$)，使用<code class="language-plaintext highlighter-rouge">邻接表</code>均为 O(n+e)，其中n为顶点的 个数，e为边的个数</li>
+</ul>
+
+<h4 id="343-生成树及最小生成树">3.4.3 生成树及最小生成树</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">生成树</code>：一个<code class="language-plaintext highlighter-rouge">连通图</code>的生成树就是该图的连通性不变，但<code class="language-plaintext highlighter-rouge">没有环路的子图</code>。一个有n个顶点的生成树有且仅有<code class="language-plaintext highlighter-rouge">n-1</code>条边。本质是<code class="language-plaintext highlighter-rouge">树</code></li>
+  <li><code class="language-plaintext highlighter-rouge">最小生成树</code>：所有可能的生成树中，<code class="language-plaintext highlighter-rouge">边的权值之和最小</code>的那棵树。<em class="color-gray">注意：最小生成树是一棵树，而不是图，也没有环路</em></li>
+  <li>求连通带权无向图的最小生成树：
+    <ul>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_020.png!/scale/30" alt="最小生成树" class="img-left" /></li>
+      <li><code class="language-plaintext highlighter-rouge">普里姆算法</code> <em class="color-gray">(Prim）</em>
+        <ul>
+          <li>选择一条<code class="language-plaintext highlighter-rouge">权值最小的边</code>，并选中边的顶点，<code class="language-plaintext highlighter-rouge">从已选顶点中连接权值量小的边</code>，直至连接所有顶点，<code class="language-plaintext highlighter-rouge">但不能出现环路</code>。时间复杂度为 O($n^2$)，n为<code class="language-plaintext highlighter-rouge">顶点</code>个数，因此只与顶点相关，适用于求稠密图的最小生成树</li>
+          <li><em class="color-gray">①先选权值最小的边，即1，选中的顶点就是v1和v3；</em></li>
+          <li><em class="color-gray">②从已选的顶点中选择权值最小的边，v1和v3连接的边的权值有v1的5、6和v3的4、5、5、6，权值最小的为4，选中的顶点就为v6，所有选中的顶点为v1、v3、v6；</em></li>
+          <li><em class="color-gray">③重复第②步，找到权值最小的边，即v6和v4之间的2，选中的顶点为v1、v3、v6、v4；</em></li>
+          <li><em class="color-gray">④重复第②步，找到v1、v3、v6、v4对应的权值最小的边为5，有v1-v4、v3-v4、v2-v3，由于如果选v1-v4、v3-v4会形成环路，所以只能选v2-v3，选中的顶点为v1、v3、v6、v4、v2；</em></li>
+          <li><em class="color-gray">⑤接着选中v2权值最小的边，v2-v5，至此顶点v1、v3、v6、v4、v2、v5都被包含，就生成了最小生成树。</em></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">克鲁斯卡尔算法</code> <em class="color-gray">(Kruskal）</em>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">选择权值最小的边连接，直至连接所有的顶点</code>，但<code class="language-plaintext highlighter-rouge">不能出现环路</code>。时间复杂度为O(elog2e)，e为边的个数，因此只与<code class="language-plaintext highlighter-rouge">边</code>相关，适用于求稀疏图的最小生成树。</li>
+          <li>如果过程中出现相同权值，并且连接后不出现环路，可以随意连接一条就行，接着可以尝试连接另一个相同权值的边，如果没有环路仍可以连接</li>
+          <li><em class="color-gray">①择权值最小的边连接，即1，连接边为v1-v3；</em></li>
+          <li><em class="color-gray">②重复第①步，即2，连接边为v4-v6；</em></li>
+          <li><em class="color-gray">③重复第①步，即3，连接边为v2-v5；</em></li>
+          <li><em class="color-gray">④重复第①步，即4，连接边为v3-v6；</em></li>
+          <li><em class="color-gray">⑤重复第①步，即5，因为连接v1-v4、v3-v4会形成环路，所以只能连接v2-v3，至此顶点v1、v2、v3、v4、v5、v6都被包含，就生成了最小生成树。；</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="344-拓扑排序和关键路径">3.4.4 拓扑排序和关键路径</h4>
+<ul>
+  <li>拓扑排序
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">AOV网</code> <em class="color-gray">(Activity On Vertex）</em>：<em class="color-gray">顶点 = 活动，侧重 “谁先谁后”</em>，指<code class="language-plaintext highlighter-rouge">顶点</code>表示活动的网络，是一种用节点代表任务、用边表示任务间先后依赖关系的有向图。</li>
+      <li><code class="language-plaintext highlighter-rouge">拓扑排序</code>：<code class="language-plaintext highlighter-rouge">拓扑排序并不唯一</code>
+        <ul>
+          <li><img src="https://img.gorpeln.top/software/p_s_3_021.png!/scale/20" alt="拓扑排序" class="img-left" /></li>
+          <li>① 在AOV网中选择入度为0的顶点并输出</li>
+          <li>② 从网中删除该顶点及与该顶点有关的弧</li>
+          <li>③ 重复前两步，直到网中不存在入度为0的顶点为止</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>关键路径
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">AOE网</code> <em class="color-gray">(Activity On Edge）</em>：<em class="color-gray">边 = 活动，侧重 “多久完成”</em>，指<code class="language-plaintext highlighter-rouge">边</code>表示活动的网络，是一种用边代表任务、用节点代表事件（状态）的有向图，常用于估算项目完成的最短时间</li>
+      <li><code class="language-plaintext highlighter-rouge">关键路径</code>：<code class="language-plaintext highlighter-rouge">关键路径并不唯一</code>
+        <ul>
+          <li><img src="https://img.gorpeln.top/software/p_s_3_022.png!/scale/20" alt="关键路径" class="img-left" /></li>
+          <li>在从源点到汇点的路径中，长度最长的路径称力关键路径。关键路径上的所有活动均是关键活动。如果任何一项关键活动没有按期完成，就会影响整个工程的进度，而缩短关键活动的工期通常可以缩短整个工程的工期。关键路径上的长度就是完成整个工程项目的<code class="language-plaintext highlighter-rouge">最短工期</code></li>
+          <li>不同路径相当于并行的任务线，要完成该任务就需要完成所有任务线，所以任务完成的最短工期，就是耗时最长的任务线的耗时。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="345-最短路径">3.4.5 最短路径</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">最短路径</code>：从源点到各顶点最短的路径</li>
+  <li>关键路径：从源点到汇点最短的路径</li>
+</ul>
+
+<h3 id="35-查找">3.5 查找</h3>
+<h4 id="351-查找的基本概念">3.5.1 查找的基本概念</h4>
+<p>略</p>
+<h4 id="352-静态查找表的查找方法">3.5.2 静态查找表的查找方法</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">顺序查找</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">从表的一端开始，将给定值与表中记录的关键字逐个进行比较</code>，若相等，则查找成功；若整个表中记录的关键字与给定值均不相等，则查找失败</li>
+      <li>平均查找长度：(1+2+…+n)/n = (n+1)/2，其中为表中记录的个数</li>
+      <li>优点：算法简单且适应面广，对表的结构没有要求，表中记录也无须有序。</li>
+      <li>缺点：<code class="language-plaintext highlighter-rouge">n值较大时，平均查找长度较大，查找效率较低</code>。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">折半查找</code>
+    <ul>
+      <li>假设表中的元素存储在一维数组r[1，…，N]中，且表中元素按递增方式排序（），则折半查找的基本思想：将给定值key与表中中间位置元素r[mid]进行比较，<code class="language-plaintext highlighter-rouge">若key==r[mid]，则查找成功；若key&gt;r[mid]，则给定值key在后半个子表r[mid+1，...，n]中继续递归查找：若key&lt;r[mid]，则给定值key在前半个子表r[1，...mid-1]中继续递归查找；</code>递归以上步骤，直到查找成功或子表为空为止</li>
+      <li>平均查找长度：log2(n+1) - 1</li>
+      <li>优点：查找效率较高</li>
+      <li>缺点：<code class="language-plaintext highlighter-rouge">顺序存储且表中元素必须有序排列</code>；插入和删除需要移动大量元素</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">分块查找</code>
+    <ul>
+      <li>又称为<code class="language-plaintext highlighter-rouge">索引顺序查找</code>，是对顺序查找方法的一种改进，<code class="language-plaintext highlighter-rouge">查找效率介于顺序查找和折半查找之间</code>。在分块查找中，首先将表分成若干块，每一块内的关键字不一定有序，但块之间是有序的；此外还建立了一个索引表，索引表引表按关键字有序排列。分块查找的基本思想：在索引表中确定给定值所在的块，在块内顺序查找。</li>
+      <li>平均查找长度：(b+1)/2+(s+1)/2，b是块数，s是块内元素数</li>
+      <li>优点：查找效率好于顺序查找，可通过索引表，查找给定值所在的块</li>
+      <li>缺点：查找效率不及折半查找</li>
+      <li><img src="https://img.gorpeln.top/software/p_s_3_023.png!/scale/20" alt="分块查找" class="img-left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="353-动态查找表">3.5.3 动态查找表</h4>
+<p>略</p>
+<h4 id="354-哈希表">3.5.4 哈希表</h4>
+<ul>
+  <li>也称为<code class="language-plaintext highlighter-rouge">散列表</code>，通过计算以记录的关键字为自变量的函数(哈希函数)来得到该记录的存储地址。在查找操作时，用同一哈希函数H(key)计算待查记录的存储地址，到相应的存储单元中匹配信息来判定是否查找成功。<em class="color-gray">如 存储时，12 mod 11=1，就将12存储到1的位置，查找时，依然使用12 mod 11=1，去1的位置查找是否为12</em></li>
+  <li>对于不同的关键字，却有相同的哈希函数值，则称为<code class="language-plaintext highlighter-rouge">冲突</code>，<em class="color-gray">12 mod 11=1，34 mod 11=1，这就会出现12和34都要存储在1的位置，这就出现了冲突</em></li>
+  <li>常见的处理冲突的方法：
+    <ul>
+      <li>线性探测再散列</li>
+      <li>链地址法</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="36-排序">3.6 排序</h3>
+<h4 id="361-排序的基本概念">3.6.1 排序的基本概念</h4>
+<h4 id="362-简单排序">3.6.2 简单排序</h4>
+<h4 id="363-希尔排序">3.6.3 希尔排序</h4>
+<h4 id="364-快速排序">3.6.4 快速排序</h4>
+<h4 id="365-堆排序">3.6.5 堆排序</h4>
+<h4 id="366-归并排序">3.6.6 归并排序</h4>
+<h4 id="367-基数排序">3.6.7 基数排序</h4>
+<h4 id="368-内部排序方法小结">3.6.8 内部排序方法小结</h4>
+<h4 id="369-外部排序">3.6.9 外部排序</h4>
+
+
+
+        
+    </article>
+</div>
+<div class="copyright">
+    
+    <div class="custom-font">最后编辑于：2026-03-14</div>
+    
+    <div class="custom-font">本文链接：<a href="/sd/03" class='articleLink'>https://gorpeln.top/sd/03</a></div>
+    <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
+</div>
+</div>
+<div class="prevandnext">
+    
+    <div>
+        <span class="custom-font">上一篇 ：</span><a href="/sd/02" title="程序设计语言基础知识" class="custom-font" target="_blank">程序设计语言基础知识</a>
+    </div>
+    
+    
+    <div>
+        <span class="custom-font">下一篇 ：</span><a href="/ipt/01" title="信息处理技术员" class="custom-font" target="_blank">信息处理技术员</a>
+    </div>
+    
+</div>
+<div class="livere waline-box">
+    <div id="waline"></div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 右边栏 二维码、主题、返回顶部 -->
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
+      <div class="themeModel" id="themeModel"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/sd/03')"></div>
+      <div class="qrcodeImg" id="qrcode"></div>
+      <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
+    </div>
+
+    <!-- search  搜索 -->
+    <div class="cb-search-tool" id="cb-close-btn">
+        <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 6em" placeholder="文章标题 日期 标签" />
+    </div>
+    <!-- 手机菜单 mune -->
+     <header class="site-header-menu">
+  <ul class="menuNav">
+    <li class="menuBtn" style="border-top: 0 solid #aaa">
+      <i class="fas fa-stream fa-fw" style="color: white; font-size: 14px; font-weight: 400"></i>
+      <ul class="sub-nav">
+        <li style="border-radius: 8px 8px 0 0"><a href="/"><i class="fas fa-home fa-fw"></i>首页</a></li>
+        <li><a href="/archives"><i class="fas fa-archive fa-fw"></i>归档</a></li>
+        <li><a href="/nav"><i class="fas fa-globe-asia fa-fw"></i>导航</a></li>
+        <li><a href="/links"><i class="fas fa-comment-dots fa-fw"></i>友链</a></li>
+        <li><a href="/about"><i class="fas fa-user fa-fw"></i>关于</a></li>
+        <li><div id="themeModelOfmobile"><i class="fas fa-moon fa-fw"></i>黑夜</div></li>
+        <li><a href="https://www.travellings.cn/go.html" class="safe-item-auto-load"><i class="fas fa-subway fa-fw"></i>开往</a></li>
+        <li style="border-radius: 0 0 8px 8px"><a id="cb-search-btn-two" class="safe-item-auto-load"><i class="fas fa-search fa-fw"></i>搜索</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
+ 
+    <!-- footer -->
+    <footer class="site-footer">
+
+    <div class="img-container">
+        <img src="https://img.gorpeln.top/p/footer_girl.png" class="girlImg" alt="底部图片">
+    </div>
+    <div id="htmer_time" class="runTime" onmouseover="over(this)" onmouseout="out(this)" onclick="clickHandler(this)">隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本</div>
+    <div class="footerDes">
+        <div class="post-margin">
+            ©2015 - <text id="currentYear"></text> gorpeln 版权所有 ·
+            <a href="http://beian.miit.gov.cn/" class="footer-item">
+                <img src="/assets/img/footer_beian.png" style="height: 16px" class="footerImg" />京ICP备2021024484号-2
+            </a>
+            ·
+            <a target=" _blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202004694" class="footer-item">
+                <img src="/assets/img/footer_gonganbeian.png" style="height: 16px" class="footerImg" />京公网安备11011202004694号
+            </a>
+            ·
+            <a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" class="footer-item">
+                <img src="/assets/img/footer_youpaiyun.png" style="height: 22px" class="footerImg" />提供CDN加速/云存储服务
+            </a>
+            ·
+            <a target="_blank" href="https://icp.gov.moe/?keyword=20240031" class="footer-item">
+                萌ICP备20240031号
+            </a>
+            ·
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.16</a>
+        </div>
+    </div>
+</footer>
+    
+    
+</body>
+
+<!-- js_include -->
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.pjax.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
+<script type="text/javascript" src="/assets/js/stickUp.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/search/bootstrap3-typeahead.min.js"></script>
+<!-- 目录 -->
+<script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- 安全跳转页面 -->
+<script type="text/javascript" src="/assets/js/safe.js"></script>
+<!--  樱花背景 -->
+<script type="text/javascript" src="/assets/js/sakura.js"></script>
+<!--  丝带背景 -->
+<script size="150" alpha="0.3" zindex="-2" src="/assets/js/ribbon.min.js"></script>
+<!-- search 搜索 -->
+<script type="text/javascript" src="/assets/js/search/cb-search.js"></script>
+<!-- 动态显示网站运行时间 -->
+<script>
+    document.getElementById('currentYear') && (document.getElementById('currentYear').textContent = new Date().getFullYear());
+
+    function siteTime(startDateStr) {
+        const now = new Date();
+
+        // 解析起始时间
+        const start = new Date(startDateStr);
+
+        // 检查是否是合法的时间格式
+        if (isNaN(start.getTime())) {
+            console.error("Invalid start date:", startDateStr);
+            document.getElementById('htmer_time').innerHTML = "时间计算出错，请检查配置。";
+            return;
+        }
+
+        // 计算年份差
+        let diffYears = now.getFullYear() - start.getFullYear();
+
+        // 构造今年对应的纪念日时间点（精确到小时/分/秒）
+        const anniversaryThisYear = new Date(start);
+        anniversaryThisYear.setFullYear(now.getFullYear());
+
+        // 如果还没到今年的纪念日时间点，则减去一年
+        if (now < anniversaryThisYear) {
+            diffYears--;
+        }
+
+        // 根据年份差确定要比较的起始周年时间
+        const anniversaryTargetYear = new Date(start);
+        anniversaryTargetYear.setFullYear(now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1));
+
+        // 计算周年之后的时间差（毫秒）
+        const timeDiff = now - anniversaryTargetYear;
+
+        // 时间单位（毫秒）
+        const daysInMs = 1000 * 60 * 60 * 24;
+        const hoursInMs = 1000 * 60 * 60;
+        const minutesInMs = 1000 * 60;
+
+        // 计算天、小时、分、秒
+        const diffDays = Math.floor(timeDiff / daysInMs);
+        const diffHours = Math.floor((timeDiff % daysInMs) / hoursInMs);
+        const diffMinutes = Math.floor((timeDiff % hoursInMs) / minutesInMs);
+        const diffSeconds = Math.floor((timeDiff % minutesInMs) / 1000);
+
+        // 更新页面内容
+        document.getElementById('htmer_time').innerHTML =
+            `本站已安全运行：${diffYears} 年 ${diffDays} 天 ${diffHours} 时 ${diffMinutes} 分 ${diffSeconds} 秒&nbsp;&nbsp;`;
+
+        // 每秒更新一次
+        setTimeout(() => siteTime(startDateStr), 1000);
+    }   
+
+    const startDate = "2015-08-23 09:00:00 +0800"; 
+    siteTime(startDate);
+</script>
+<!-- 网站运行时间事件 -->
+<script>
+    function over(obj) {
+        obj.innerHTML ="隐秘的角落：gorpeln,gorpeln的个人博客,冠鹏,gpchen,风未止,风未止的个人博客,个人博客,iOS,时光本";
+    }
+
+    function out(obj) {}
+
+    function clickHandler() {
+        // 跳转到指定的URL
+        window.location.href = "/record";
+    }
+</script>
+<!-- 控制台输出 -->
+<script>
+    var HoldLog = console.log;
+    console.log = function() {};
+    let nowDate = new Date();
+    queueMicrotask(() => {
+        const Log = function() {
+            HoldLog.apply(console, arguments);
+        };
+        console.log = Log;
+
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客名称%c gorpeln的个人博客 - gorpeln",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博客链接%c https://gorpeln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c联系方式%c help@gor*eln.top",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c博主寄语%c 趁年轻，做自己想做的！",
+                "line-height:24px;",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+        setTimeout(
+            Log.bind(
+                console,
+                "%c版本号 %c V4.10.16",
+                "",
+                "color:#6666cc;line-height:22px;font-size:12px;",
+            ),
+        );
+
+        const loadTime = Math.round(performance.now() * 100) / 100 / 1000;
+        const formattedLoadTime = loadTime.toFixed(2) + "s";
+        setTimeout(
+            Log.bind(
+                console,
+                `%c页面加载消耗了: %c${formattedLoadTime}`,
+                "",
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+            ),
+        );
+
+        const hitKey = "hit";
+        let hitCount = localStorage.getItem(hitKey) ?
+            parseInt(localStorage.getItem(hitKey)) :
+            0;
+        hitCount++;
+        localStorage.setItem(hitKey, hitCount);
+        setTimeout(
+            Log.bind(
+                console,
+                `这是你第 %c${hitCount}%c 次在本站打开控制台，你想知道什么秘密吗 ～_～`,
+                "font-weight: 400;line-height:22px;color:#6666cc;font-size:12px;",
+                "",
+            ),
+        );
+        setTimeout(
+            console.warn.bind(
+                console,
+                "%c NCC2-036 %c 调用前置摄像头拍照成功，你现在正处于监控中...",
+                "color:white; background-color:#d9534f;border-radius: 2px;line-height:16px;",
+                "",
+            ),
+        );
+    });
+</script>
+<!-- 自定义快捷键 -->
+<script>
+    const SCROLL_OFFSET = 500;          // 定义滚动距离底部的偏移量
+    const SCROLL_DURATION = 500;        // 定义滚动动画的持续时间
+    const DOUBLE_CLICK_THRESHOLD = 300; // 定义双击的时间阈值（毫秒）
+
+    // 创建一个映射，用于存储按键与目标操作之间的关系
+    const keyToActionMap = {
+        p: () => window.open("/p", "_blank"),                   // 双击p在新标签页打开p页面
+        t: () => window.open("/tool", "_blank"),                // 双击t在新标签页打开tool页面
+        f: () => window.open("/article/14402966023", "_blank"), // 双击打开 Hello World 格式 页面
+        h: () => window.open("/", "_blank"),                    // 双击打开 首页
+        ArrowDown: scrollToBottom,                              // 双击向下箭头滑动页面最底部
+        ArrowUp: scrollToTop,                                   // 双击向上箭头滑动页面最顶部部
+    };
+
+    // 存储上一次按键的时间戳和按键标识符
+    let lastKeyPress = {};
+
+    document.addEventListener("keydown", function(event) {
+        const keyPressed = event.key;
+        const lowerCaseKey = keyPressed.toLowerCase();
+        const currentKey = keyToActionMap.hasOwnProperty(keyPressed) ?
+            keyPressed :
+            lowerCaseKey;
+
+        if (keyToActionMap.hasOwnProperty(currentKey)) {
+            const now = Date.now();
+            const previousTime = lastKeyPress[currentKey] || 0;
+            const timeDifference = now - previousTime;
+
+            if (timeDifference < DOUBLE_CLICK_THRESHOLD && timeDifference > 0) {
+                keyToActionMap[currentKey]();
+                lastKeyPress[currentKey] = 0;
+            } else {
+                lastKeyPress[currentKey] = now;
+            }
+        }
+    });
+
+    // 定义滚动到页面底部的函数
+    function scrollToBottom() {
+        const start = window.scrollY;
+        const end = document.body.scrollHeight - SCROLL_OFFSET;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+
+    // 定义滚动到页面顶部的函数
+    function scrollToTop() {
+        const start = window.scrollY;
+        const end = 0;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+            const currentScroll = start + (end - start) * progress;
+            window.scrollTo(0, currentScroll);
+
+            if (progress < 1) {
+                window.requestAnimationFrame(scrollStep);
+            }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+    }
+</script>
+<!-- 渲染数学公式 -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)']
+            ],
+            displayMath: [
+                ['$$', '$$'],
+                ['\\[', '\\]']
+            ]
+        }
+    };
+</script>
+<script type="text/javascript" src="/assets/js/mathjax/tex-mml-chtml.js"></script>
+<!-- 网站分析 -->
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f6f6caffb2365e545b75821d5d116c62";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 百度自动收录 -->
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+<!-- 头条自动收录 -->
+<script>
+  (function(){
+  var el = document.createElement("script");
+  el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?1e00c552c856203cd30ebe459d7b7f2f0fbac7661d05e8193da5880b90f3b4d119d1c501ebd3301f5e2290626f5b53d078c8250527fa0dfd9783a026ff3cf719";
+  el.id = "ttzz";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(el, s);
+  })(window)
+</script>
+<!-- 防镜像 -->
+
+<script>
+   function _0x17aa(){var _0x39ef1b=['left','removeChild','9999','alert-message','flexWrap','port','center','div','appendChild','200FeByLO','className','YmxvZy4yMDIwOTAueHl6','30px','569272slRPwH','parentNode','393071MMVoWd','overflow','add','replace','includes','0.1','警告：你当前浏览的页面非官方页面，可能存在有害信息！将在5秒后为你跳转至官方页面进行浏览！','alignItems','width','transform','whiteSpace','hostname','height','margin','567541SsolIH','YmxvZy5nb3JwZWxuLnRvcA==','location','fontSize','background','position','top','30MixXDM','80px','100%','aHR0cHM6Ly9nb3JwZWxuLnRvcA==','hidden','style','zIndex','classList','d3d3LmdvcnBlbG4udG9w','flex','808318iwlhfR','none','Z29ycGVsbi50b3A=','110%','body','25mwMKir','2799NfnTJp','justifyContent','color','opacity','753306DnApFK','MTI3LjAuMC4xOjQwMDA=','fade-out','3352TvwIlh','-5%','nowrap','248372ThEblC'];_0x17aa=function(){return _0x39ef1b;};return _0x17aa();}function _0x50c9(_0x3af4d2,_0x112676){var _0x17aa91=_0x17aa();return _0x50c9=function(_0x50c9ec,_0x458073){_0x50c9ec=_0x50c9ec-0x159;var _0x43c326=_0x17aa91[_0x50c9ec];return _0x43c326;},_0x50c9(_0x3af4d2,_0x112676);}(function(_0xda0fba,_0x406113){var _0x2fc09c=_0x50c9,_0x4fbebc=_0xda0fba();while(!![]){try{var _0x472f1b=parseInt(_0x2fc09c(0x161))/0x1+parseInt(_0x2fc09c(0x172))/0x2+parseInt(_0x2fc09c(0x17c))/0x3+parseInt(_0x2fc09c(0x182))/0x4*(parseInt(_0x2fc09c(0x177))/0x5)+-parseInt(_0x2fc09c(0x168))/0x6*(parseInt(_0x2fc09c(0x192))/0x7)+-parseInt(_0x2fc09c(0x17f))/0x8*(-parseInt(_0x2fc09c(0x178))/0x9)+-parseInt(_0x2fc09c(0x18c))/0xa*(parseInt(_0x2fc09c(0x190))/0xb);if(_0x472f1b===_0x406113)break;else _0x4fbebc['push'](_0x4fbebc['shift']());}catch(_0x88247d){_0x4fbebc['push'](_0x4fbebc['shift']());}}}(_0x17aa,0x54e7b),(function(){var _0x12b93b=_0x50c9,_0x190ee1=[_0x12b93b(0x174),_0x12b93b(0x170),_0x12b93b(0x17d),_0x12b93b(0x18e),_0x12b93b(0x162)],_0x5561ac=_0x12b93b(0x16b),_0x409513=document[_0x12b93b(0x163)][_0x12b93b(0x15e)]+(document[_0x12b93b(0x163)][_0x12b93b(0x188)]?':'+document[_0x12b93b(0x163)][_0x12b93b(0x188)]:'');function _0x17249e(_0x557012){var _0x38371b=_0x12b93b,_0x3f8aba=document['createElement'](_0x38371b(0x18a));_0x3f8aba[_0x38371b(0x16d)]['pointerEvents']=_0x38371b(0x173),_0x3f8aba['style'][_0x38371b(0x166)]='fixed',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x167)]='0',_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x183)]=_0x38371b(0x180),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15b)]=_0x38371b(0x175),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15f)]=_0x38371b(0x16a),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x16e)]=_0x38371b(0x185),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x17b)]=_0x38371b(0x197),_0x3f8aba['style'][_0x38371b(0x165)]='transparent',_0x3f8aba['style'][_0x38371b(0x193)]=_0x38371b(0x16c),_0x3f8aba['style']['display']=_0x38371b(0x171),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x179)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x15a)]=_0x38371b(0x189),_0x3f8aba[_0x38371b(0x16d)][_0x38371b(0x187)]='wrap';var _0x4bfe75=document['createElement']('div');_0x4bfe75['innerText']=_0x557012,_0x4bfe75['style'][_0x38371b(0x17a)]='black',_0x4bfe75['style'][_0x38371b(0x164)]=_0x38371b(0x18f),_0x4bfe75[_0x38371b(0x16d)][_0x38371b(0x15c)]='rotate(-30deg)',_0x4bfe75['style'][_0x38371b(0x15d)]=_0x38371b(0x181),_0x4bfe75['style'][_0x38371b(0x160)]=_0x38371b(0x169);for(var _0x3bc1f2=0x0;_0x3bc1f2<0x64;_0x3bc1f2++){_0x3f8aba[_0x38371b(0x18b)](_0x4bfe75['cloneNode'](!![]));}document[_0x38371b(0x176)][_0x38371b(0x18b)](_0x3f8aba);}function _0x51aeaf(_0x136cd9){var _0x294086=_0x12b93b,_0xdf4b20=document['createElement']('div');_0xdf4b20[_0x294086(0x18d)]=_0x294086(0x186),_0xdf4b20['innerText']=_0x136cd9,document['body']['appendChild'](_0xdf4b20),setTimeout(function(){var _0x103619=_0x294086;_0xdf4b20[_0x103619(0x16f)][_0x103619(0x194)](_0x103619(0x17e)),setTimeout(function(){var _0x307e39=_0x103619;_0xdf4b20[_0x307e39(0x191)]&&_0xdf4b20['parentNode'][_0x307e39(0x184)](_0xdf4b20);},0xc8);},0xbb8),setTimeout(function(){var _0x4bbde4=_0x294086;window[_0x4bbde4(0x163)][_0x4bbde4(0x195)](atob(_0x5561ac));},0x1388);}!_0x190ee1[_0x12b93b(0x196)](btoa(_0x409513))&&(_0x17249e(atob(_0x190ee1[0x0])),_0x51aeaf(_0x12b93b(0x159)));}()));
+</script>
+<!-- 移动端 菜单 menu -->
+<script>
+    $(function () {
+      // 点击菜单项时显示/隐藏子菜单
+      $(".menuNav>li").click(function () {
+        var submenu = $(this).children("ul");
+        submenu.slideToggle(300);
+      });
+
+      // 点击页面其他区域时隐藏子菜单
+      $(document).click(function (event) {
+        var target = $(event.target);
+        if (!target.closest(".menuNav").length) {
+          $(".menuNav ul").slideUp(300);
+        }
+      });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 定义滚动动画的持续时间
+      const SCROLL_DURATION = 500;
+
+      function scrollToPosition(end) {
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollStep(timestamp) {
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / SCROLL_DURATION, 1);
+          const currentScroll = start + (end - start) * progress;
+          window.scrollTo(0, currentScroll);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(scrollStep);
+          }
+        }
+
+        window.requestAnimationFrame(scrollStep);
+      }
+
+      const menuNav = document.querySelector(".menuNav");
+      let startY = 0;
+
+      if (menuNav) {
+        menuNav.addEventListener("touchstart", function (event) {
+          startY = event.touches[0].clientY;
+        });
+
+        menuNav.addEventListener("touchend", function (event) {
+          const endY = event.changedTouches[0].clientY;
+          const deltaY = endY - startY;
+
+          if (deltaY < 0) {
+            // 向上滑动
+            scrollToPosition(0);
+          } else if (deltaY > 0) {
+            // 向下滑动
+            scrollToPosition(document.body.scrollHeight);
+          }
+        });
+      }
+    });
+</script>
+
+
+  <!-- waline 评论 -->
+  <!-- post、works、links、about、record -->
+  <script type="module">
+    // 中文默认
+        const locale = {
+          placeholder: '快来评论吧~',
+          sofa: '评论区空空如也~喵呜呜呜~',
+          more: '加载更多...',
+          preview: '预览',
+          emoji: '表情',
+          uploadImage: '上传图片',
+          seconds: '秒前',
+          minutes: '分钟前',
+          hours: '小时前',
+          days: '天前',
+          now: '刚刚',
+          uploading: '正在上传',
+          login: '登录(可选)',
+          logout: '退出',
+          admin: '博主',
+          sticky: '置顶',
+          word: '字',
+          wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+          anonymous: '匿名',
+          level0: '潜水',
+          level1: '冒泡',
+          level2: '吐槽',
+          level3: '活跃',
+          level4: '话痨',
+          level5: '传说',
+          gif: '表情包',
+          gifSearchPlaceholder: '搜索表情包',
+          profile: '个人资料',
+          approved: '通过',
+          waiting: '待审核',
+          spam: '垃圾',
+          unsticky: '取消置顶',
+          oldest: '按倒序',
+          latest: '按正序',
+          hottest: '按热度',
+          reactionTitle: '你认为这篇文章怎么样？',
+        };
+
+        // import { init } from '/assets/js/waline.js';
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+       init({
+            el: '#waline',
+            serverURL: 'https://waline.202090.xyz', //https://waline.202090.xyz
+            lang: 'zh-CN',
+            pageview: true, // 浏览量统计
+            comment: true, // 评论数统计
+            meta: ['nick', 'mail', 'link'],     // 评论者相关属性，默认['nick', 'mail', 'link'],
+            requiredMeta: ['nick', 'mail'],     // 设置评论者属性必填项，默认[]（即匿名）
+            pageSize: 10,
+            copyright: true, // 是否显示页脚版权信息
+            login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
+            locale,
+            reaction: false,// 文章评分
+            devtool: false, // 禁用 Source Map
+        });
+
+
+      window.onload = function() {
+        var nick_input = document.getElementById("wl-nick");
+        if (nick_input) {
+          nick_input.placeholder = "昵称/QQ号（必填）";
+        }
+
+        var mail_input = document.getElementById("wl-mail");
+        if (mail_input) {
+          mail_input.placeholder = "邮箱（必填）";
+        }
+
+        var link_input = document.getElementById("wl-link");
+        if (link_input) {
+          link_input.placeholder = "网址（https://、非必填）";
+        }
+
+      };
+</script>
+
+
+
+
+
+<!-- 页面跳转 -->
+<script>
+  function pushNew(path) {
+      if (path == '/') {
+          window.location.href = path;
+      } else {
+          window.open(path);
+      }
+  }
+
+  const postUrls = [
+       
+        
+          "/article/17644183553",
+         
+       
+        
+          "/article/17594958674",
+         
+       
+        
+          "/article/17592227011",
+         
+       
+        
+          "/article/17577220915",
+         
+       
+        
+          "/article/17559116027",
+         
+       
+        
+          "/article/17529840977",
+         
+       
+        
+          "/article/17529840360",
+         
+       
+        
+          "/article/17499800077",
+         
+       
+        
+          "/article/17491980488",
+         
+       
+        
+          "/article/17486910472",
+         
+       
+         
+       
+        
+          "/article/17460739947",
+         
+       
+        
+          "/article/17456663587",
+         
+       
+        
+          "/article/17426995265",
+         
+       
+        
+          "/article/17384679236",
+         
+       
+        
+          "/article/17372028582",
+         
+       
+        
+          "/article/17347677826",
+         
+       
+        
+          "/article/17347663476",
+         
+       
+        
+          "/article/17347655378",
+         
+       
+        
+          "/article/17310530239",
+         
+       
+         
+       
+        
+          "/article/17280983368",
+         
+       
+        
+          "/article/17265361548",
+         
+       
+        
+          "/article/17245056864",
+         
+       
+        
+          "/article/17202356559",
+         
+       
+        
+          "/article/17196724432",
+         
+       
+        
+          "/article/17146497169",
+         
+       
+        
+          "/article/17123887436",
+         
+       
+        
+          "/article/17113627324",
+         
+       
+        
+          "/article/17094338798",
+         
+       
+        
+          "/article/17087779433",
+         
+       
+        
+          "/article/17049566482",
+         
+       
+        
+          "/article/17040105944",
+         
+       
+        
+          "/article/17016025546",
+         
+       
+        
+          "/article/16990919984",
+         
+       
+        
+          "/article/16962230954",
+         
+       
+        
+          "/article/16959932733",
+         
+       
+        
+          "/article/16927632006",
+         
+       
+        
+          "/article/16895899334",
+         
+       
+        
+          "/article/16874238349",
+         
+       
+        
+          "/article/16829158558",
+         
+       
+        
+          "/article/16827504397",
+         
+       
+        
+          "/article/16786112870",
+         
+       
+        
+          "/article/16755875711",
+         
+       
+        
+          "/article/16726547033",
+         
+       
+        
+          "/article/16718726252",
+         
+       
+        
+          "/article/16682372627",
+         
+       
+        
+          "/article/16651247353",
+         
+       
+        
+          "/article/16621400624",
+         
+       
+        
+          "/article/16610720911",
+         
+       
+        
+          "/article/16577323953",
+         
+       
+        
+          "/article/16542416251",
+         
+       
+        
+          "/article/16516610954",
+         
+       
+        
+          "/article/16514594954",
+         
+       
+        
+          "/article/16491590954",
+         
+       
+        
+          "/article/16489862954",
+         
+       
+        
+          "/article/16489790954",
+         
+       
+        
+          "/article/16489168044",
+         
+       
+        
+          "/article/16440529320",
+         
+       
+        
+          "/article/16410066714",
+         
+       
+        
+          "/article/16235525192",
+         
+       
+        
+          "/article/16202019892",
+         
+       
+        
+          "/article/16199142732",
+         
+       
+        
+          "/article/16175510629",
+         
+       
+        
+          "/article/16168523139",
+         
+       
+        
+          "/article/16132790510",
+         
+       
+        
+          "/article/16131808742",
+         
+       
+        
+          "/article/16096373020",
+         
+       
+        
+          "/article/16088892195",
+         
+       
+        
+          "/article/16043955947",
+         
+       
+        
+          "/article/16017022152",
+         
+       
+        
+          "/article/16005868715",
+         
+       
+        
+          "/article/15987505965",
+         
+       
+        
+          "/article/15981552003",
+         
+       
+         
+       
+         
+       
+        
+          "/article/15937625033",
+         
+       
+        
+          "/article/15932337513",
+         
+       
+        
+          "/article/15931534585",
+         
+       
+        
+          "/article/15884027619",
+         
+       
+        
+          "/article/15862323579",
+         
+       
+        
+          "/article/15861494710",
+         
+       
+        
+          "/article/15860813363",
+         
+       
+        
+          "/article/15854795957",
+         
+       
+        
+          "/article/15846874151",
+         
+       
+        
+          "/article/15821713417",
+         
+       
+        
+          "/article/15805392787",
+         
+       
+        
+          "/article/15788283058",
+         
+       
+        
+          "/article/15786589400",
+         
+       
+        
+          "/article/15778684175",
+         
+       
+        
+          "/article/15776115840",
+         
+       
+        
+          "/article/15733745781",
+         
+       
+        
+          "/article/15713829999",
+         
+       
+        
+          "/article/15713825459",
+         
+       
+        
+          "/article/15700906142",
+         
+       
+        
+          "/article/15692409843",
+         
+       
+        
+          "/article/15664680297",
+         
+       
+        
+          "/article/15662012632",
+         
+       
+        
+          "/article/15632033519",
+         
+       
+        
+          "/article/15623480718",
+         
+       
+        
+          "/article/15618778699",
+         
+       
+        
+          "/article/15612663893",
+         
+       
+        
+          "/article/15611722666",
+         
+       
+        
+          "/article/15605697133",
+         
+       
+        
+          "/article/15599710733",
+         
+       
+        
+          "/article/15589479418",
+         
+       
+        
+          "/article/15583474979",
+         
+       
+        
+          "/article/15575387722",
+         
+       
+        
+          "/article/15573877312",
+         
+       
+        
+          "/article/15549830140",
+         
+       
+        
+          "/article/15547100706",
+         
+       
+        
+          "/article/15526269575",
+         
+       
+        
+          "/article/15524857215",
+         
+       
+        
+          "/article/15515973239",
+         
+       
+        
+          "/article/15501213244",
+         
+       
+        
+          "/article/15500354146",
+         
+       
+        
+          "/article/15495225362",
+         
+       
+        
+          "/article/15493658365",
+         
+       
+        
+          "/article/15474431442",
+         
+       
+        
+          "/article/15462756619",
+         
+       
+        
+          "/article/15438182232",
+         
+       
+        
+          "/article/15429884147",
+         
+       
+        
+          "/article/15421638259",
+         
+       
+        
+          "/article/15419058710",
+         
+       
+        
+          "/article/15405204060",
+         
+       
+        
+          "/article/15394160033",
+         
+       
+        
+          "/article/15393512853",
+         
+       
+        
+          "/article/15389885669",
+         
+       
+        
+          "/article/15385436862",
+         
+       
+        
+          "/article/15368306590",
+         
+       
+        
+          "/article/15361983047",
+         
+       
+        
+          "/article/15359479766",
+         
+       
+        
+          "/article/15334663054",
+         
+       
+        
+          "/article/15326844122",
+         
+       
+        
+          "/article/15326844120",
+         
+       
+        
+          "/article/15324985037",
+         
+       
+        
+          "/article/15288656748",
+         
+       
+        
+          "/article/15288536422",
+         
+       
+        
+          "/article/15261978139",
+         
+       
+        
+          "/article/15228363519",
+         
+       
+        
+          "/article/15226027614",
+         
+       
+        
+          "/article/15215990385",
+         
+       
+        
+          "/article/15209452183",
+         
+       
+        
+          "/article/15204862561",
+         
+       
+        
+          "/article/15178011950",
+         
+       
+        
+          "/article/15166860457",
+         
+       
+        
+          "/article/15153005416",
+         
+       
+        
+          "/article/15136989613",
+         
+       
+        
+          "/article/15119562214",
+         
+       
+        
+          "/article/15115957926",
+         
+       
+        
+          "/article/15090326823",
+         
+       
+        
+          "/article/15077042074",
+         
+       
+        
+          "/article/15076490854",
+         
+       
+        
+          "/article/15064370822",
+         
+       
+        
+          "/article/15034734259",
+         
+       
+        
+          "/article/15006512926",
+         
+       
+        
+          "/article/14985344961",
+         
+       
+        
+          "/article/14973389134",
+         
+       
+        
+          "/article/14970863549",
+         
+       
+        
+          "/article/14968977690",
+         
+       
+        
+          "/article/14957851016",
+         
+       
+        
+          "/article/14922464812",
+         
+       
+        
+          "/article/14906012630",
+         
+       
+        
+          "/article/14903507538",
+         
+       
+        
+          "/article/14896376367",
+         
+       
+        
+          "/article/14882587810",
+         
+       
+        
+          "/article/14875801742",
+         
+       
+        
+          "/article/14873067700",
+         
+       
+        
+          "/article/14872573275",
+         
+       
+        
+          "/article/14863391315",
+         
+       
+        
+          "/article/14861973259",
+         
+       
+        
+          "/article/14776665877",
+         
+       
+        
+          "/article/14743559444",
+         
+       
+        
+          "/article/14696000759",
+         
+       
+        
+          "/article/14669248561",
+         
+       
+        
+          "/article/14457584631",
+         
+       
+        
+          "/article/14439563950",
+         
+       
+        
+          "/article/14427478333",
+         
+       
+        
+          "/article/14411221175",
+         
+       
+        
+          "/article/14404771043",
+         
+       
+        
+          "/article/14402966023",
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+       
+         
+      
+  ];
+
+  function pushRandom() {
+      const randomIndex = Math.floor(Math.random() * postUrls.length);
+      const randomUrl = postUrls[randomIndex];
+      window.open(randomUrl);
+  }
+</script>
+<!-- 目录 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const toc = document.getElementById('toc');
+      const siteInfoNav = document.getElementById('siteInfoNav');
+      const aside1 = document.querySelector('.col-md-3.col-lg-3.hidden-xs.hidden-sm.aside1');
+
+      function updateTocWidth() {
+          const aside1Width = aside1.offsetWidth;
+          const style = window.getComputedStyle(aside1);
+          const paddingLeft = parseInt(style.paddingLeft, 10);
+          const paddingRight = parseInt(style.paddingRight, 10);
+          const actualWidth = aside1Width - paddingLeft - paddingRight;
+          toc.style.width = actualWidth + 'px';
+      }
+
+      // 初始设置 toc 宽度
+      updateTocWidth();
+
+      // 监听页面滚动事件
+      window.addEventListener('scroll', function () {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          const siteInfoNavStyle = window.getComputedStyle(siteInfoNav);
+          const marginTop = parseInt(siteInfoNavStyle.marginTop, 10);
+          const tocTop = siteInfoNav.offsetTop + siteInfoNav.offsetHeight;
+
+          if (scrollTop >= tocTop + marginTop*2 ) {
+              toc.classList.add('fixed');
+          } else {
+              toc.classList.remove('fixed');
+          }
+      });
+
+      // 监听窗口 resize 事件，更新 toc 宽度
+      window.addEventListener('resize', function () {
+          updateTocWidth();
+      });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      $("#toc").toc({
+          noBackToTopLinks: true,
+          title: "",
+          minimumHeaders: 3,
+          headers: "h1, h2, h3, h4, h5, h6",
+          listType: "ul", // values: [ol|ul]
+          showEffect: "fadeIn", // values: [show|slideDown|fadeIn|none]
+          showSpeed: "0", // set to 0 to deactivate effect  | slow
+          classes: {
+              list: "",
+              item: "",
+          },
+          highlightOnScroll: true,
+          highlightOffset: 100,
+      });
+  });
+  // $("#toc").css("display", "block");
+</script>
+<!-- 二维码 -->
+<script type="text/javascript" src="/assets/js/qrcode.js"></script>
+<script>
+  // 生成二维码
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 150,
+      height: 150
+  });
+
+  function createQrcode(url) {
+
+      qrcode.makeCode('https://gorpeln.top' + url);
+
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      } else {
+          qrcodeImg.style.display = 'block';
+      }
+  }
+
+  // 隐藏二维码
+  function hiddenQRCode() {
+      var qrcodeImg = document.getElementById('qrcode');
+      if (qrcodeImg.style.display == 'block') {
+          qrcodeImg.style.display = 'none';
+          qrcode.clear();
+      }
+  }
+</script>
+<!-- 博客更新时间 左边栏 -->
+<script>
+  var value = document
+      .getElementById("current-date")
+      .getAttribute("data-value");
+  console.log(value); // 输出：hello
+  // 创建一个表示给定日期和时间的 Date 对象
+  var givenDate = new Date(value);
+
+  // 获取当前时间的 Date 对象
+  var currentDate = new Date();
+
+  // 获取前一天的时间
+  var previousDate = new Date(currentDate);
+  previousDate.setDate(currentDate.getDate() - 7);
+
+  // 获取年、月、日
+  var year = currentDate.getFullYear();
+  var month = currentDate.getMonth() + 1; // 月份从 0 开始，需要加 1
+  var day = previousDate.getDate();
+
+  // 比较给定日期和当前日期
+  if (givenDate < previousDate) {
+      // 将日期显示在页面上
+      var dateElement = document.getElementById("current-date");
+      dateElement.textContent = year + "/" + month + "/" + day;
+  }
+</script>
+<!-- rss 添加声音 -->
+<script>
+  $(document).ready(function() {
+      $(".rss-subscribe").click(function(event) {
+          // 阻止事件冒泡，防止点击div时触发a标签的点击事件
+          event.stopPropagation();
+
+          // 播放音频
+          var audio = new Audio("https://img.gorpeln.top/media/cat.mp3");
+          audio.play();
+      });
+  });
+</script>
+<!-- 博客运行时间 左边栏 -->
+<script>
+  const startDateStr = "2015-08-23 09:00:00 +0800";
+
+  // 获取显示元素
+  const runtimeElement = document.getElementById("runtime");
+
+  function updateRuntime() {
+      const now = new Date();
+      const start = new Date(startDateStr);
+
+      if (isNaN(start.getTime())) {
+          runtimeElement.textContent = "Error";
+          return;
+      }
+
+      let fullYears = now.getFullYear() - start.getFullYear();
+
+      // 构造当前年的纪念日时间点
+      const anniversaryThisYear = new Date(start);
+      anniversaryThisYear.setFullYear(now.getFullYear());
+
+      if (now < anniversaryThisYear) {
+          fullYears--; // 如果还没到今年的纪念时间点，则减一年
+      }
+
+      // 构建实际应比较的起始时间
+      const targetAnniversary = new Date(start);
+      targetAnniversary.setFullYear(
+          now.getFullYear() + (now >= anniversaryThisYear ? 0 : -1)
+      );
+
+      // 计算从 targetAnniversary 到 now 的毫秒差，并转成天数
+      const diffMs = now - targetAnniversary;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // 更新页面内容
+      runtimeElement.textContent = `${fullYears}年${days}天`;
+  }
+
+  // 初始化一次
+  updateRuntime();
+
+  // 每 24 小时更新一次（可选）
+  setTimeout(() => {
+      updateRuntime();
+      setInterval(updateRuntime, 24 * 60 * 60 * 1000); // 每天更新一次
+  }, getNextMidnight() - new Date());
+
+  // 辅助函数：获取今天午夜的时间戳
+  function getNextMidnight() {
+      const now = new Date();
+      const nextMidnight = new Date(now);
+      nextMidnight.setHours(24, 0, 0, 0);
+      return nextMidnight;
+  }
+</script>
+<!-- 主题切换 -->
+<script src="/assets/js/themeToggle.js"></script>
+<!-- 节假日 左边栏 -->
+<script src="/assets/js/countdown.js"></script>
+
+
+</html>
