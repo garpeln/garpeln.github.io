@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">256</span>
+                    <span class="site-state-item-count">257</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">256 </span>
+                  <span class="articleCount">257 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -171,7 +171,7 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">47</a>
+                    <a name="iOS" style="" class="articleCount">48</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>256</p>
+                  <p>257</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>121.2k</p>
+                  <p>121.3k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-03-15 21:07:35 +0800">
-                    2026/03/15
+                  <p id="current-date" data-value="2026-03-17 21:07:26 +0800">
+                    2026/03/17
                   </p>
                 </li>
               </ul>
@@ -898,7 +898,63 @@
     
     
     
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/15204862561" target="_blank">短信验证码防刷机制</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2018-03-08</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#产品和运营" target="_blank">
+                    产品和运营
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#验证码" target="_blank">验证码</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#时间" target="_blank">时间</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#手机号" target="_blank">手机号</a>
+                            
+                    
+                     
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">　　最近遇到一个关于防止短信验证码被刷的产品设计问题，后来在面试一个前来应聘JAVA开发的程序员的时候，他也提到了他以前公司的系统也遭遇过这个被刷短信的问题。因此，就“如何设计短信验证码防刷机制”作一个总结和分享。
+
+1、时间限制：60秒后才能再次发送
+
+
+  从发送验证码开始，前端（客户端）会进行一个60秒的倒数，在这一分钟之内，用户是无法提交多次发送信息的请求的。这种方法虽然使用得比较普遍，但是却不是非常有用，技术稍微好点的人完全可以绕过这个限制，直接发送短信验证码。
+
+
+2、手机号限...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/15204862561" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1437,59 +1493,6 @@ http://jetbrains.tencent.click
     
     
     
-    
-    
-    <div class="postbox">
-        <div class="allpost">
-            <div class="title">
-                <a class="pjaxlink" href="/article/15064370822" target="_blank">iOS11开发遇到的坑</a>
-            </div>
-            <hr>
-            <div class="info">
-                时间：
-                <text style="padding-top: 0;margin-right:2em;">2017-09-26</text>
-                分类：
-                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
-                    iOS
-                </a>
-                <text style="margin-right:2em;"></text>
-                标签：
-                
-                <span class="index-post-tag">
-                    
-                    
-                     <a class="pjaxlink" href="/tags#iOS" target="_blank">iOS</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#iOS11" target="_blank">iOS11</a>
-                         /   
-                    
-                     <a class="pjaxlink" href="/tags#Xcode" target="_blank">Xcode</a>
-                            
-                    
-                     
-                    
-                      </span>  </div>  
-            <div class="contentAbstract">1、Xcode 9 使用 command + 单击 直接跳转到定义
-
-Xcode 9 之前按住command +鼠标左键 即可跳转定义。如今不一样了，如图：
-
-
-首先整块区域高亮，弹出菜单，Jump to Definition在菜单第一项，点击才会跳转，我想大部分人都不喜欢这种操作，多了一步，回到之前的快速跳转定义的姿势方法:
-
-鼠标用户: 对准你的对象，Command+鼠标右键 
-触摸板用户: 对准你的对象, Command+双指点击
-如果你有强迫症,非要找回之前一模一样的感觉,可以这样...</div>
-            
-            
-        </div>
-        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
-            <a href="/article/15064370822" class="readmore" target="_blank">阅读全文 》</a>
-        </div>
-    </div>
-    
-    
-    
     <!-- 分页 -->
     <!-- 分页链接 -->
 <div class="box_paginator">
@@ -1592,7 +1595,7 @@ Xcode 9 之前按住command +鼠标左键 即可跳转定义。如今不一样�
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.16</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.17</a>
         </div>
     </div>
 </footer>
@@ -1735,7 +1738,7 @@ Xcode 9 之前按住command +鼠标左键 即可跳转定义。如今不一样�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.16",
+                "%c版本号 %c V4.10.17",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1996,6 +1999,10 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17657167928",
+         
        
         
           "/article/17644183553",

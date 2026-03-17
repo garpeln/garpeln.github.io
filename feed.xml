@@ -7,6 +7,38 @@
     
       
         <item>
+          <title>毫无破绽的自我批评</title>
+          <link>https://gorpeln.top/article/17657167928</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17657167928</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 14 Dec 2025 20:53:12 +0800</pubDate>
+          <description>&lt;p&gt;在工作自评中，我们总会陷入两难：不谈缺点显得虚伪，坦诚不足又怕被否定能力。其实很多所谓的 “短板”，不过是自我要求过高、追求极致过程中产生的副作用。于是我梳理了这份特殊的自我剖析，将职场自评的痛点转化为高标准下的完美主义瑕疵，找到最得体又真实的自我表达方式。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;工作推进偏保守，习惯于按部就班完成流程，主动突破、大胆尝试的意识不足，导致部分工作推进不够高效，创新亮点不多。&lt;/li&gt;
+  &lt;li&gt;业务钻研不够深入，满足于把日常事务处理到位，主动钻研新流程、新方法的劲头不足，专业能力提升速度跟不上岗位要求。&lt;/li&gt;
+  &lt;li&gt;工作思考不够靠前，多是被动落实任务，主动提前谋划、提前预判的意识较弱，对工作整体节奏把控不够精准。&lt;/li&gt;
+  &lt;li&gt;细节把控不够严格，完成任务时更注重速度，对质量、细节打磨不够，精益求精的意识有待加强。&lt;/li&gt;
+  &lt;li&gt;重点工作聚焦不够，日常事务占用精力较多，对核心工作的持续跟进、深度推进力度不足，成效不够突出。&lt;/li&gt;
+  &lt;li&gt;沟通衔接不够主动，与同事、协作方的沟通多停留在事务层面，深入交流思路、共同优化工作的频次偏少，协作效率有待提升。&lt;/li&gt;
+  &lt;li&gt;经验沉淀不够系统，做完工作后复盘梳理不及时，好的做法没有及时固化，问题没有提前规避，重复消耗精力。&lt;/li&gt;
+  &lt;li&gt;落实力度不够扎实，安排部署后跟踪问效不够，对过程中的新情况、新问题掌握不及时，解决问题的及时性不足。&lt;/li&gt;
+  &lt;li&gt;工作标准要求较高，有时过于追求细节完美，在统筹推进速度与质量平衡上把握不够到位，一定程度上影响了整体工作效率。&lt;/li&gt;
+  &lt;li&gt;对待工作责任心较强，凡事习惯亲力亲为、把关到底，在合理分工、放手放权方面思考不够，导致自身精力分散、统筹压力较大。&lt;/li&gt;
+  &lt;li&gt;工作态度较为严谨，对任务完成质量要求较高，有时容易陷入局部细节纠结，对整体工作的宏观统筹和节奏把控仍需进一步加强。&lt;/li&gt;
+  &lt;li&gt;自我要求相对严格，习惯于对标更高标准找差距，在及时总结成绩、提炼亮点方面重视不够，工作成果展示不够充分。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>时光本的故事 - 始于热爱，归于珍藏</title>
           <link>https://gorpeln.top/article/17644183553</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17644183553</guid>
@@ -2154,48 +2186,6 @@ https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
     opacity: 0;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>友链自动监测</title>
-          <link>https://gorpeln.top/article/17310530239</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17310530239</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Fri, 08 Nov 2024 16:03:43 +0800</pubDate>
-          <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
-&lt;p&gt;管理友链时采取手动点击检验的方式，随着时间的推移，友链数量逐渐增加，这一做法显然已不再高效。于是就需要写了一项类似API的功能，输出所有友链数据的可达性。&lt;/p&gt;
-
-&lt;h3 id=&quot;功能概览&quot;&gt;功能概览&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;github action自动定时检测友链状态，结果输出到page分支下的result.json。&lt;/li&gt;
-  &lt;li&gt;友链状态展示页面，可以部署到zeabur或者vercel，加速api访问速度。&lt;/li&gt;
-  &lt;li&gt;为确保兼容性，实现了两种检测方案：
-    &lt;ul&gt;
-      &lt;li&gt;非兼容：使用格式文件动态读取友链内容，实现功能，友链列表自动实时性更新。&lt;/li&gt;
-      &lt;li&gt;兼容：使用TXT存储所有友链信息，兼容性好，适合所有站点，但是添加友链后可能需要手动更新文件。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;API访问数据，api包含数据包括可达链接、不可达链接、可达链接数目、不可达链接数目、更新时间戳，其中链接中包含站点名称和地址，便于前端部署。&lt;/li&gt;
-  &lt;li&gt;测试脚本使用python，使用Request包的get和head两种检测方式检测，尽可能减少误判概率。&lt;/li&gt;
-  &lt;li&gt;前端采用本地缓存，减少api调用次数，缓存半个小时刷新，不影响实时性。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;预览&quot;&gt;预览&lt;/h3&gt;
-&lt;p&gt;博客中预览：&lt;a href=&quot;https://friends.202090.xyz/&quot;&gt;https://friends.gorpeln.top/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20241108160343641.png&quot; alt=&quot;20241108160343641&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
-&lt;p&gt;部署教程：参考文章尾部的参考链接   &lt;br /&gt;
-友链相关的&lt;a href=&quot;/links#problem&quot;&gt;常见问题&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
       
