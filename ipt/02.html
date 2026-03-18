@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
     <title>Excel 中高频考查函数汇总 - gorpeln's Blog</title>
     <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,其他" />
-    <meta name="description" content="            函数类别      函数名称      核心功能      语法格式      参数说明      实际示例（结合数据）      软考高频考点                  求和统计类      SUM      计算多个数值/单元格区域的总和      SUM(值1, 值2, ...) 或 SUM(区域)      - 值/区域：可输入单个数值、单元格引用（如...">
+    <meta name="description" content="Excel 常用函数">
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="canonical" href="/ipt/02">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Excel 中高频考查函数汇总 | gorpeln's Blog">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/ipt/02">
-    <meta property="og:description" content="            函数类别      函数名称      核心功能      语法格式      参数说明      实际示例（结合数据）      软考高频考点                  求和统计类      SUM      计算多个数值/单元格区域的总和      SUM(值1, 值2, ...) 或 SUM(区域)      - 值/区域：可输入单个数值、单元格引用（如...">
+    <meta property="og:description" content="Excel 常用函数">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">713</span>
+                    <span class="site-state-item-count">718</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>121.3k</p>
+                  <p>121.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-03-17 21:07:26 +0800">
-                    2026/03/17
+                  <p id="current-date" data-value="2026-03-18 20:49:32 +0800">
+                    2026/03/18
                   </p>
                 </li>
               </ul>
@@ -405,7 +405,145 @@
         </div>
     </header>
     <article class="post-content">
-        <table>
+        <h3 id="excel-常用函数">Excel 常用函数</h3>
+
+<h4 id="1-逻辑判断类">1. 逻辑判断类</h4>
+<ul>
+  <li>IF：条件判断
+    <ul>
+      <li>语法： IF(条件, 满足时结果, 不满足时结果)</li>
+      <li>例： IF(A1&gt;60,”及格”,”不及格”)</li>
+    </ul>
+  </li>
+  <li>IF：多层嵌套
+    <ul>
+      <li>语法： IF(条件1,结果1,IF(条件2,结果2,结果3))</li>
+      <li>例： IF(A1&gt;90,”优秀”,IF(A1&gt;60,”及格”,”不及格”))</li>
+    </ul>
+  </li>
+  <li>AND：多条件同时满足
+    <ul>
+      <li>语法： AND(条件1, 条件2, …)</li>
+      <li>例： AND(A1&gt;60, B1&gt;60)</li>
+    </ul>
+  </li>
+  <li>OR：多条件任一满足
+    <ul>
+      <li>语法： OR(条件1, 条件2, …)</li>
+      <li>例： OR(A1&gt;60, B1&gt;60)</li>
+    </ul>
+  </li>
+  <li>NOT：取反
+    <ul>
+      <li>语法： NOT(条件)</li>
+      <li>例： NOT(A1&gt;60)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="2-数学计算类">2. 数学计算类</h4>
+<ul>
+  <li>SUM：求和
+    <ul>
+      <li>语法： SUM(数值1, 数值2, …)</li>
+      <li>例： SUM(A1:A10)</li>
+    </ul>
+  </li>
+  <li>SUMIF：条件求和
+    <ul>
+      <li>语法： SUMIF(范围, 条件, [求和范围])</li>
+      <li>例： SUMIF(A1:A10, “&gt;60”, B1:B10)</li>
+    </ul>
+  </li>
+  <li>ROUND：四舍五入
+    <ul>
+      <li>语法： ROUND(数值, 保留小数位数)</li>
+      <li>例： ROUND(653.54897,2) → 653.55</li>
+    </ul>
+  </li>
+  <li>ABS：绝对值
+    <ul>
+      <li>语法： ABS(数值)</li>
+      <li>例： ABS(-5) → 5</li>
+    </ul>
+  </li>
+  <li>INT：向下取整
+    <ul>
+      <li>语法： INT(数值)</li>
+      <li>例： INT(12.6) → 12；INT(-12.6) → -13</li>
+    </ul>
+  </li>
+  <li>SIGN：符号判断
+    <ul>
+      <li>语法： SIGN(数值)</li>
+      <li>例： SIGN(-5) → -1；SIGN(5) → 1</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3-统计类">3. 统计类</h4>
+<ul>
+  <li>COUNT：统计数值单元格数量
+    <ul>
+      <li>语法： COUNT(范围)</li>
+      <li>例： COUNT(A1:A10)</li>
+    </ul>
+  </li>
+  <li>COUNTA：统计非空单元格数量
+    <ul>
+      <li>语法： COUNTA(范围)</li>
+      <li>例： COUNTA(A1:A10)</li>
+    </ul>
+  </li>
+  <li>MAX：最大值
+    <ul>
+      <li>语法： MAX(范围)</li>
+      <li>例： MAX(A1:A10)</li>
+    </ul>
+  </li>
+  <li>MIN：最小值
+    <ul>
+      <li>语法： MIN(范围)</li>
+      <li>例： MIN(A1:A10)</li>
+    </ul>
+  </li>
+  <li>AVERAGE：平均值
+    <ul>
+      <li>语法： AVERAGE(范围)</li>
+      <li>例： AVERAGE(A1:A10)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="4-文本处理类">4. 文本处理类</h4>
+<ul>
+  <li>LEFT：提取左侧字符
+    <ul>
+      <li>语法： LEFT(文本, 提取长度)</li>
+      <li>例： LEFT(“Excel”, 2) → “Ex”</li>
+    </ul>
+  </li>
+  <li>RIGHT：提取右侧字符
+    <ul>
+      <li>语法： RIGHT(文本, 提取长度)</li>
+      <li>例： RIGHT(“Excel”, 2) → “el”</li>
+    </ul>
+  </li>
+  <li>MID：提取中间字符
+    <ul>
+      <li>语法： MID(文本, 起始位置, 提取长度)</li>
+      <li>例： MID(“Excel”, 2, 3) → “xce”</li>
+    </ul>
+  </li>
+  <li>LEN：文本长度
+    <ul>
+      <li>语法： LEN(文本)</li>
+      <li>例： LEN(“Excel”) → 5</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
   <thead>
     <tr>
       <th>函数类别</th>
@@ -646,7 +784,7 @@
   </tbody>
 </table>
 
-<script>
+<!--<script>
 document.querySelector('.aside1').style.display = 'none';
 
 var element = document.querySelector('.aside2');
@@ -655,6 +793,7 @@ element.style.margin = '0';
 element.style.padding = '0 1em';
 
 </script>
+-->
 
 
 
@@ -746,7 +885,7 @@ element.style.padding = '0 1em';
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.17</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.18</a>
         </div>
     </div>
 </footer>
@@ -889,7 +1028,7 @@ element.style.padding = '0 1em';
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.17",
+                "%c版本号 %c V4.10.18",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1192,9 +1331,26 @@ var _hmt = _hmt || [];
             pageSize: 10,
             copyright: true, // 是否显示页脚版权信息
             login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
-            locale,
-            reaction: false,// 文章评分
+            // locale,
+            reaction: true,// 文章评分
             devtool: false, // 禁用 Source Map
+            noRss: true,
+            imageUploader: (file) => {
+                const formData = new FormData();
+                formData.append('smfile', file);
+                return fetch('https://api.sm.ms/v2/upload', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'YOUR_SM_MS_TOKEN' // 需要在 sm.ms 后台获取
+                    },
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(res => {
+                    if (res.code === 'success') return res.data.url;
+                    throw new Error(res.messages);
+                });
+            }
         });
 
 
@@ -1211,7 +1367,7 @@ var _hmt = _hmt || [];
 
         var link_input = document.getElementById("wl-link");
         if (link_input) {
-          link_input.placeholder = "网址（https://、非必填）";
+          link_input.placeholder = "网址（可选）";
         }
 
       };

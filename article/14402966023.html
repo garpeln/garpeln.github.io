@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">713</span>
+                    <span class="site-state-item-count">718</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>121.3k</p>
+                  <p>121.5k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-03-17 21:07:26 +0800">
-                    2026/03/17
+                  <p id="current-date" data-value="2026-03-18 20:49:32 +0800">
+                    2026/03/18
                   </p>
                 </li>
               </ul>
@@ -1013,7 +1013,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.17</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.18</a>
         </div>
     </div>
 </footer>
@@ -1156,7 +1156,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.17",
+                "%c版本号 %c V4.10.18",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1459,9 +1459,26 @@ var _hmt = _hmt || [];
             pageSize: 10,
             copyright: true, // 是否显示页脚版权信息
             login: 'enable',  // 登录模式状态，默认值enable，force可以强制登录
-            locale,
-            reaction: false,// 文章评分
+            // locale,
+            reaction: true,// 文章评分
             devtool: false, // 禁用 Source Map
+            noRss: true,
+            imageUploader: (file) => {
+                const formData = new FormData();
+                formData.append('smfile', file);
+                return fetch('https://api.sm.ms/v2/upload', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'YOUR_SM_MS_TOKEN' // 需要在 sm.ms 后台获取
+                    },
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(res => {
+                    if (res.code === 'success') return res.data.url;
+                    throw new Error(res.messages);
+                });
+            }
         });
 
 
@@ -1478,7 +1495,7 @@ var _hmt = _hmt || [];
 
         var link_input = document.getElementById("wl-link");
         if (link_input) {
-          link_input.placeholder = "网址（https://、非必填）";
+          link_input.placeholder = "网址（可选）";
         }
 
       };
