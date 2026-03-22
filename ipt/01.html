@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>121.5k</p>
+                  <p>120.9k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-03-18 20:49:32 +0800">
-                    2026/03/18
+                  <p id="current-date" data-value="2026-03-22 22:02:40 +0800">
+                    2026/03/22
                   </p>
                 </li>
               </ul>
@@ -627,15 +627,10 @@
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">数据有效性</code>：数据 - 数据有效性 - 序列 <em class="color-gray">(固定值的用序列，如选择男女）</em> - 男女中间用英文逗号隔开</li>
-  <li><code class="language-plaintext highlighter-rouge">运算符</code>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">运算符</code></p>
+
     <ul>
-      <li>Excel 中不同类型运算符的优先级：
-        <ul>
-          <li>引用运算符（:）&gt; 算术运算符（%）&gt; 文本运算符（&amp;）&gt; 比较运算符（&lt;&gt;）。</li>
-          <li><em class="color-gray">如 =A1:B2% &amp; C1&lt;&gt;D1 表示 ① 先执行引用运算 A1:B2（确定单元格区域）；② 再执行算术运算 %（对区域内数值取百分比）；③  接着执行文本运算 &amp;（连接区域结果与 C1 的值）；④ 最后执行比较运算 &lt;&gt;（判断连接后的文本与 D1 是否不等）</em></li>
-          <li>算术运算符中的优先级为 <code class="language-plaintext highlighter-rouge">^%</code> &gt; <code class="language-plaintext highlighter-rouge">*/</code> &gt; <code class="language-plaintext highlighter-rouge">+-</code>，其中 ^ 和 % 优先级一样</li>
-        </ul>
-      </li>
       <li>
         <table>
           <thead>
@@ -674,9 +669,17 @@
           </tbody>
         </table>
       </li>
+      <li></li>
+      <li>Excel 中不同类型运算符的优先级：
+        <ul>
+          <li>引用运算符（:）&gt; 算术运算符（%）&gt; 文本运算符（&amp;）&gt; 比较运算符（&lt;&gt;）。</li>
+          <li><em class="color-gray">如 =A1:B2% &amp; C1&lt;&gt;D1 表示 ① 先执行引用运算 A1:B2（确定单元格区域）；② 再执行算术运算 %（对区域内数值取百分比）；③  接着执行文本运算 &amp;（连接区域结果与 C1 的值）；④ 最后执行比较运算 &lt;&gt;（判断连接后的文本与 D1 是否不等）</em></li>
+          <li>算术运算符中的优先级为 <code class="language-plaintext highlighter-rouge">^%</code> &gt; <code class="language-plaintext highlighter-rouge">*/</code> &gt; <code class="language-plaintext highlighter-rouge">+-</code>，其中 ^ 和 % 优先级一样</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>单元格的引用
+  <li><code class="language-plaintext highlighter-rouge">单元格的引用</code>
     <ul>
       <li>
         <table>
@@ -706,11 +709,12 @@
             <tr>
               <td style="text-align: center">三维引用</td>
               <td style="text-align: center"><code class="language-plaintext highlighter-rouge">C1=Sheet1!A1+[工作簿1]Sheet1!B1</code></td>
-              <td style="text-align: center">跨工作簿，当前工作簿中的Sheet1工作表中的A1和<strong>工作簿1.xlsx</strong>工作簿中Sheet1工作表中的B1单元格相加</td>
+              <td style="text-align: center">跨工作簿，当前工作簿中的Sheet1工作表中的A1单元格和<strong>工作簿1.xlsx</strong>工作簿中Sheet1工作表中的B1单元格相加</td>
             </tr>
           </tbody>
         </table>
       </li>
+      <li>直接选中A1后按<code class="language-plaintext highlighter-rouge">F4</code>可以快速切换不同的引用类型</li>
     </ul>
   </li>
   <li><a href="/ipt/02">Excel 中高频考查函数汇总</a></li>
@@ -722,6 +726,7 @@
     
     <img src="https://img.gorpeln.top/software/p_s_c_1_008.png" alt="" title="选择A" />        
     <img src="https://img.gorpeln.top/software/p_s_c_1_009.png" alt="" title="选择C" />              
+    <img src="https://img.gorpeln.top/software/p_s_c_1_010.png" alt="" title="选择B" />              
 
   </div>
 </details>
@@ -730,9 +735,9 @@
 <ul>
   <li>演示文稿另存为类型
     <ul>
-      <li>PowerPoint 演示文稿 (.pptx)</li>
-      <li>PowerPoint 放映文稿 (.ppsx)：只读的放映文件</li>
-      <li>PowerPoint 图片演示文稿 (.pptx)：内容固化为图片的 PPTX 文件</li>
+      <li>PowerPoint <code class="language-plaintext highlighter-rouge">演示文稿</code> (.pptx)</li>
+      <li>PowerPoint <code class="language-plaintext highlighter-rouge">放映文稿</code> (.ppsx)：只读的放映文件</li>
+      <li>PowerPoint <code class="language-plaintext highlighter-rouge">图片演示文稿</code> (.pptx)：内容固化为图片的 PPTX 文件</li>
     </ul>
   </li>
   <li>在演示文稿中，插入超级链接时，所链接旳目旳可以是：
@@ -742,51 +747,49 @@
       <li>③ 同一演示文稿旳某一张幻灯片。不能链接到某张幻灯片中旳某个对象</li>
     </ul>
   </li>
+  <li>基本构成：演示文稿 - 幻灯片 - 对象</li>
+  <li></li>
 </ul>
 
 <h3 id="数据库管理系统access">数据库管理系统（Access）</h3>
 
 <h3 id="其他">其他</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">打印机</code>类型
-    <ul>
-      <li>
-        <table>
-          <thead>
-            <tr>
-              <th>类型</th>
-              <th>速度</th>
-              <th>噪音</th>
-              <th style="text-align: left">功能</th>
-              <th style="text-align: left">其他</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>针式打印机</td>
-              <td>最慢</td>
-              <td>最大</td>
-              <td style="text-align: left">发票、多联单</td>
-              <td style="text-align: left">色带</td>
-            </tr>
-            <tr>
-              <td>喷墨打印机</td>
-              <td>中等</td>
-              <td>最小</td>
-              <td style="text-align: left">大量文档、办公</td>
-              <td style="text-align: left">墨盒</td>
-            </tr>
-            <tr>
-              <td>激光打印机</td>
-              <td>最快</td>
-              <td>中等</td>
-              <td style="text-align: left">彩色、照片</td>
-              <td style="text-align: left">硒鼓/粉盒</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
+  <li>
+    <table>
+      <thead>
+        <tr>
+          <th>打印机类型</th>
+          <th>速度</th>
+          <th>噪音</th>
+          <th style="text-align: left">功能</th>
+          <th style="text-align: left">其他</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>针式打印机</td>
+          <td>最慢</td>
+          <td>最大</td>
+          <td style="text-align: left">发票、多联单</td>
+          <td style="text-align: left">色带</td>
+        </tr>
+        <tr>
+          <td>喷墨打印机</td>
+          <td>中等</td>
+          <td>最小</td>
+          <td style="text-align: left">大量文档、办公</td>
+          <td style="text-align: left">墨盒</td>
+        </tr>
+        <tr>
+          <td>激光打印机</td>
+          <td>最快</td>
+          <td>中等</td>
+          <td style="text-align: left">彩色、照片</td>
+          <td style="text-align: left">硒鼓/粉盒</td>
+        </tr>
+      </tbody>
+    </table>
   </li>
   <li>Windows <code class="language-plaintext highlighter-rouge">回收站</code>只管本地硬盘，U 盘、移动硬盘、网络盘里删除的文件不进回收站，是直接删除。</li>
   <li>Word的<code class="language-plaintext highlighter-rouge">查找和替代</code>功能可以提高编辑效率，区分大小写、可以按照字体字号查找、不能以“公式”作为查找范围</li>
@@ -807,7 +810,7 @@
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2026-03-17</div>
+    <div class="custom-font">最后编辑于：2026-03-18</div>
     
     <div class="custom-font">本文链接：<a href="/ipt/01" class='articleLink'>https://gorpeln.top/ipt/01</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
@@ -890,7 +893,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.18</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.19</a>
         </div>
     </div>
 </footer>
@@ -1033,7 +1036,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.18",
+                "%c版本号 %c V4.10.19",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1355,7 +1358,7 @@ var _hmt = _hmt || [];
                     if (res.code === 'success') return res.data.url;
                     throw new Error(res.messages);
                 });
-            }
+            } // 测试中，还没有配置好
         });
 
 

@@ -213,7 +213,9 @@ figure,
 .highlight{
     min-height:3.6125em;;
 }
-
+p{
+    /*text-indent: 2em;*/
+}
 /**
  * custom style
  */
