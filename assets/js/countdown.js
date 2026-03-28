@@ -1,14 +1,20 @@
 const CountdownTimer = (() => {
     const config = {
         events: [
-            { targetDate: "2025-04-04", targetName: "清明节" },
-            { targetDate: "2025-05-01", targetName: "劳动节" },
-            { targetDate: "2025-05-31", targetName: "端午节" },
-            { targetDate: "2025-10-01", targetName: "国庆节" },    
-            { targetDate: "2026-02-17", targetName: "春节" },            
-            { targetDate: "2027-02-06", targetName: "春节" },            
-            { targetDate: "2028-01-26", targetName: "春节" },            
-            { targetDate: "2029-02-13", targetName: "春节" },            
+            { targetDate: "2026-01-01", targetName: "元旦" },
+            { targetDate: "2026-02-17", targetName: "春节" },
+            { targetDate: "2026-04-05", targetName: "清明节" },
+            { targetDate: "2026-05-01", targetName: "劳动节" },
+            { targetDate: "2026-06-19", targetName: "端午节" },    
+            { targetDate: "2026-09-25", targetName: "中秋节" },            
+            { targetDate: "2026-10-01", targetName: "国庆节" },            
+            { targetDate: "2027-01-01", targetName: "元旦" },            
+            { targetDate: "2027-02-06", targetName: "春节" },
+            { targetDate: "2028-01-01", targetName: "元旦" },            
+            { targetDate: "2028-01-26", targetName: "春节" }, 
+            { targetDate: "2029-01-01", targetName: "元旦" },            
+            { targetDate: "2029-02-13", targetName: "春节" }, 
+            { targetDate: "2030-01-01", targetName: "元旦" },            
             { targetDate: "2030-02-03", targetName: "春节" }           
         ],
         units: {

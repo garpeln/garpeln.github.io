@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>120.9k</p>
+                  <p>121.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-03-22 22:08:00 +0800">
-                    2026/03/22
+                  <p id="current-date" data-value="2026-03-28 17:37:39 +0800">
+                    2026/03/28
                   </p>
                 </li>
               </ul>
@@ -551,8 +551,14 @@
   </li>
   <li>RANK：排名
     <ul>
-      <li>语法：RANK (数值，区域，排序方式)</li>
-      <li>例：RANK (A1,$A$1:$A$10) → 成绩排名（如 1）</li>
+      <li>语法：RANK (数值，区域，[排序方式])
+        <ul>
+          <li>数值：要参与排序的值</li>
+          <li>区域：区域要<code class="language-plaintext highlighter-rouge">绝对引用</code></li>
+          <li>排序方式：0 或省略：降序（从大到小，默认） 1：升序（从小到大）</li>
+        </ul>
+      </li>
+      <li>例：RANK (A1,<code class="language-plaintext highlighter-rouge">$A$1:$A$10</code>) → 成绩排名（如 1）</li>
     </ul>
   </li>
 </ul>
@@ -561,19 +567,19 @@
 <ul>
   <li>LEFT：提取左侧字符 <em class="color-gray">(提取长度 默认值为1）</em>
     <ul>
-      <li>语法： LEFT(文本, 提取长度)</li>
+      <li>语法： LEFT(文本, [提取长度])</li>
       <li>例： LEFT(“Excel”, 2) → “Ex”</li>
     </ul>
   </li>
   <li>RIGHT：提取右侧字符
     <ul>
-      <li>语法： RIGHT(文本, 提取长度)</li>
+      <li>语法： RIGHT(文本, [提取长度])</li>
       <li>例： RIGHT(“Excel”, 2) → “el”</li>
     </ul>
   </li>
   <li>MID：提取中间字符
     <ul>
-      <li>语法： MID(文本, 起始位置, 提取长度)</li>
+      <li>语法： MID(文本, 起始位置, [提取长度])</li>
       <li>例： MID(“Excel”, 2, 3) → “xce”</li>
     </ul>
   </li>
@@ -594,7 +600,7 @@
           <li>查找值：两个表中共同的关键字段</li>
           <li>查找区域：查找范围，<code class="language-plaintext highlighter-rouge">要上锁$</code></li>
           <li>返回列数：目标数据在查找区域中的第几列</li>
-          <li>匹配类型：0 = 精确查找 1 = 模糊查找 ，省略默认 = 1</li>
+          <li>匹配类型：0 = 精确查找 1或默认 = 模糊查找</li>
         </ul>
       </li>
       <li>例：VLOOKUP (A2,<code class="language-plaintext highlighter-rouge">$B$1:$D$4</code>,2,0)</li>
@@ -708,7 +714,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.20</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.21</a>
         </div>
     </div>
 </footer>
@@ -851,7 +857,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.20",
+                "%c版本号 %c V4.10.21",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
