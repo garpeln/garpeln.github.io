@@ -18,11 +18,11 @@
     },
     {
       "name": "中文博客",
-      "avatar": "https://www.zhblogs.net/logo-light.webp",
-      "descr": "中文博客列表导航项目",
+      "avatar": "https://www.zhblogs.net/favicon.svg",
+      "descr": "集博栈",
       "status": 2,
       "siteshot": "",
-      "link": "https://zhblogs.ohyee.cc/?tab=blog_list&page=1&tags=&search=gorpeln"
+      "link": "https://www.zhblogs.net/site/019ded7f-5828-7138-8a78-7da40cfe5d18"
     },
     {
       "name": "个站商店",
