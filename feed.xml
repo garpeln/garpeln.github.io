@@ -7,6 +7,305 @@
     
       
         <item>
+          <title>免费领取Synology C2的30G对象存储空间</title>
+          <link>https://gorpeln.top/article/17711167178</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17711167178</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 15 Feb 2026 08:51:57 +0800</pubDate>
+          <description>&lt;h3 id=&quot;前言&quot;&gt;前言&lt;/h3&gt;
+&lt;p&gt;今天继续为大家分享一款实用的免费云存储服务——Synology C2 对象存储。该服务提供与 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S3协议&lt;/code&gt; 兼容的对象存储能力，具备企业级的数据安全性，定价透明，并与 Synology NAS 设备深度整合，适合中小团队或企业用户搭建云存储基础设施。&lt;/p&gt;
+
+&lt;p&gt;更重要的是，它支持&lt;strong&gt;免费套餐，无需认证&lt;/strong&gt;即可使用，每个区域提供&lt;strong&gt;15GB存储空间&lt;/strong&gt;和&lt;strong&gt;15GB下载流量&lt;/strong&gt;。当前可选区域共两个，总计可享&lt;strong&gt;30GB存储&lt;/strong&gt; + 30GB下载流量。&lt;/p&gt;
+
+&lt;h3 id=&quot;synology-c2对象存储&quot;&gt;Synology C2对象存储&lt;/h3&gt;
+&lt;h4 id=&quot;注册账号&quot;&gt;注册账号&lt;/h4&gt;
+&lt;p&gt;点击下方链接注册账号，也可以直接用Google邮箱快捷登录：&lt;br /&gt;
+&lt;a href=&quot;https://account.synology.com/en-global/register/quick/a62fb91981af4796b902b525c8b216c5?lang=en-global&quot;&gt;https://account.synology.com/en-global/register/quick/a62fb91981af4796b902b525c8b216c5?lang=en-global&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;创建桶&quot;&gt;创建桶&lt;/h4&gt;
+&lt;p&gt;注册登录后进入：&lt;a href=&quot;https://c2.synology.com/en-global/object-storage/overview&quot;&gt;https://c2.synology.com/en-global/object-storage/overview&lt;/a&gt;&lt;br /&gt;
+点击【Get 15 GB for free】
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157741.jpg&quot; alt=&quot;20260215085157741&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;控制台界面很简洁哈，直接在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Buckets&lt;/code&gt; 栏目中【创建桶】
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157742.jpg&quot; alt=&quot;20260215085157742&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;创建存储桶基础信息
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bucket name&lt;/code&gt; 是必须的。&lt;strong&gt;Create Access Key&lt;/strong&gt; 是指单独为这个存储桶创建一个访问的密钥，这里我们点击勾选方便一会使用，一定要备份记住密钥，然后点击【Next】
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157743.jpg&quot; alt=&quot;20260215085157743&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数据保护设置
+下面的步骤就是是否开启桶的版本控制，和桶对象锁。这两项是保证数据安全的，建议开启。或者根据你自己的需求来，可以都勾选上，也可以不勾选。然后点击【create bucket】按钮。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157744.jpg&quot; alt=&quot;20260215085157744&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;备份密钥
+创建完成会展示 Access Key ID 与 Secret Key，密钥关闭窗口后无法再次查看，务必复制或下载备份。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157745.jpg&quot; alt=&quot;20260215085157745&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;查看桶Endpoint
+存储桶创建完成后，桶列表右侧可查看对应区域Endpoint地址：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157746.jpg&quot; alt=&quot;20260215085157746&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;进入桶内可创建文件夹、上传文件，支持查看历史版本、清理分片上传碎片释放空间。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157747.jpg&quot; alt=&quot;20260215085157747&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;跨区域开通免费额度&quot;&gt;跨区域开通免费额度&lt;/h3&gt;
+&lt;p&gt;每个区域的免费资源（15G存储+15G流量）需单独激活。
+控制台右上角切换区域，可选：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;North America - Seattle&lt;/li&gt;
+  &lt;li&gt;Europe - Frankfurt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;切换未开通免费额度的区域，即可再次领取15GB存储+15GB流量，两个区域合计30GB存储+30GB下载流量；已开通区域不会再显示激活入口。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157748.jpg&quot; alt=&quot;20260215085157748&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;搭配图床cloudflare-imgbed&quot;&gt;搭配图床：CloudFlare-ImgBed&lt;/h3&gt;
+&lt;p&gt;在图片上传客户端的选择上，推荐 MarSeventh 开源的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CloudFlare-ImgBed&lt;/code&gt;，界面简洁直观，可免费部署在CloudFlare，也支持Docker一键部署，兼容多存储后端。&lt;/p&gt;
+
+&lt;p&gt;不推荐PicGo/PicList原因：Synology C2桶默认私有，直链访问存在不便；替代方案还有OpenList等可自行尝试。&lt;/p&gt;
+
+&lt;h4 id=&quot;1搭建cloudflare-imgbed&quot;&gt;1、搭建CloudFlare-ImgBed&lt;/h4&gt;
+&lt;p&gt;搭建教程可参考往期文章：&lt;a href=&quot;/article/17687280368&quot;&gt;用HuggingFace搭建100G超大图床&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2synology-c2-存储信息配置&quot;&gt;2、Synology C2 存储信息配置&lt;/h4&gt;
+&lt;p&gt;1). 进入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CloudFlare-ImgBed&lt;/code&gt; 系统后台，在系统设置中，点击【系统设置】-&amp;gt;在【上传设置】中添加上传渠道。如下
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157749.jpg&quot; alt=&quot;20260215085157749&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2). S3渠道填写参数对照表&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;填写项&lt;/th&gt;
+      &lt;th&gt;填写内容&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;渠道类型&lt;/td&gt;
+      &lt;td&gt;S3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;渠道名称&lt;/td&gt;
+      &lt;td&gt;自定义如：synology-1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Endpoint&lt;/td&gt;
+      &lt;td&gt;创建桶的endpoint（例：https://us-004.s3.synologyc2.net）&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;存储桶名称&lt;/td&gt;
+      &lt;td&gt;自己创建的桶名&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;存储桶区域&lt;/td&gt;
+      &lt;td&gt;对应区域标识（例：us-004）&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;访问密钥 ID&lt;/td&gt;
+      &lt;td&gt;备份的Access key ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;机密访问密钥&lt;/td&gt;
+      &lt;td&gt;备份的Secret key&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;容量限制&lt;/td&gt;
+      &lt;td&gt;15GB&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;停用阙值&lt;/td&gt;
+      &lt;td&gt;95%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CDN域名&lt;/td&gt;
+      &lt;td&gt;可选，有自有CDN可填写，加速访问&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;填写界面参考：
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157750.jpg&quot; alt=&quot;20260215085157750&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3). 首页上传配置
+回到首页右下角【上传设置】，上传渠道选择刚刚新增的S3渠道，自定义上传目录、文件命名规则、图片压缩等参数，保存后即可拖拽粘贴上传图片。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157751.jpg&quot; alt=&quot;20260215085157751&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Synology C2 对象存储&lt;/strong&gt;免费套餐优势：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;无需实名认证，门槛低；&lt;/li&gt;
+  &lt;li&gt;单区域15GB存储+15GB下载流量，双区域合计30GB存储+30GB流量；&lt;/li&gt;
+  &lt;li&gt;标准S3协议兼容，各类S3客户端/图床工具通用；&lt;/li&gt;
+  &lt;li&gt;企业级安全：桶版本控制、对象锁防误删覆盖；&lt;/li&gt;
+  &lt;li&gt;可用于个人图床、文件网盘、小型团队文件存储。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;操作简单，新手也能快速上手搭建专属图床/网盘。&lt;/p&gt;
+
+</description>
+        </item>
+      
+    
+      
+        <item>
+          <title>用HuggingFace搭建100G超大图床</title>
+          <link>https://gorpeln.top/article/17687280368</link>
+          <guid isPermaLink="true">https://gorpeln.top/article/17687280368</guid>
+          
+          
+          
+          
+          
+          
+          <pubDate>Sun, 18 Jan 2026 17:20:36 +0800</pubDate>
+          <description>&lt;p&gt;今天要分享一个超级实用的黑科技教程——如何利用 HuggingFace 免费搭建一个 100G 的图床和网盘，而且全程无需实名认证，操作简单，小白也能轻松上手！&lt;/p&gt;
+
+&lt;p&gt;这个项目其实是一个开源的“宝藏”，名字叫 CloudFlare-ImgBed，是一个基于 Cloudflare Pages 打造的文件托管平台。它不仅完全免费，还非常稳定高效，目前在 GitHub 上已经收获了超过 4k 的 star，热度非常高！项目的作者是 MarSeventh 大佬，不得不说，这个设计真的很良心。&lt;/p&gt;
+
+&lt;p&gt;它支持多种存储方式，配置灵活，可以满足不同场景下的需求。无论是做图床、分享文件，还是搭建个人小网盘，都非常方便。话不多说，咱们直接进入正题，开搞！&lt;/p&gt;
+
+&lt;h3 id=&quot;项目预览&quot;&gt;项目预览&lt;/h3&gt;
+&lt;p&gt;官方文档：&lt;a href=&quot;https://cfbed.sanyue.de/&quot;&gt;https://cfbed.sanyue.de/&lt;/a&gt;&lt;br /&gt;
+演示站点：&lt;a href=&quot;https://cfbed.1314883.xyz/&quot;&gt;https://cfbed.1314883.xyz/&lt;/a&gt; 访问密码：cfbed&lt;br /&gt;
+我自己搭建的实例：&lt;a href=&quot;https://imgbed.202090.xyz/&quot;&gt;https://imgbed.202090.xyz/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前台界面&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036871.jpg&quot; alt=&quot;20260118172036871&quot; /&gt;
+后台界面&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036872.jpg&quot; alt=&quot;20260118172036872&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;技术架构&quot;&gt;技术架构&lt;/h3&gt;
+&lt;p&gt;采用了&lt;strong&gt;前后端分离&lt;/strong&gt;的架构：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;前端&lt;/strong&gt;：基于 Vue.js 开发，界面响应式，用起来很流畅。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;后端&lt;/strong&gt;：跑在 Cloudflare Workers 上，无服务器架构，省心又省钱。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;存储层&lt;/strong&gt;：支持多种存储后端，包括 Telegram、R2、S3、Discard，以及我们今天要用到的 HuggingFace。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;元数据管理&lt;/strong&gt;：统一通过 Cloudflare KV 进行管理，数据清晰又高效。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;简单来说，就是通过 Cloudflare 的强大边缘网络，把 HuggingFace 的 100G 免费存储空间利用起来，变成一个私人的图床或网盘。&lt;/p&gt;
+
+&lt;h3 id=&quot;项目部署&quot;&gt;项目部署&lt;/h3&gt;
+&lt;p&gt;作者提供了两种部署方式：一种是 Cloudflare Pages 托管（推荐，免费），另一种是 Docker 部署（适合有服务器的朋友）,本博客仅展示 Cloudflare Pages 托管方式。&lt;/p&gt;
+
+&lt;p&gt;首先 fork 源码仓库：&lt;a href=&quot;https://github.com/MarSeventh/CloudFlare-ImgBed&quot;&gt;https://github.com/MarSeventh/CloudFlare-ImgBed&lt;/a&gt; 到自己的 GitHub 。如果有更新就可以直接将更新的立马部署到 Cloudflare Pages 上。&lt;/p&gt;
+
+&lt;p&gt;1、在控制面板找到【计算和AI】然后点击【Worker and Pages】在页面的右上角点击【创建应用程序】，然后点击下面的想要部署 Pages？的【开始按钮】。如下图&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036873.jpg&quot; alt=&quot;20260118172036873&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、在 “导入现有 Git 存储库” 处点击 “开始使用”&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036874.jpg&quot; alt=&quot;20260118172036874&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、选择【CloudFlare-ImgBed】项目，然后点击【开始设置】按钮&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036875.jpg&quot; alt=&quot;20260118172036875&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4、项目名称自定义，然后构建命令填入： npm install ,其他默认，点击【保存并部署】&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036876.jpg&quot; alt=&quot;20260118172036876&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5、配置数据库&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;数据库用于存储文件元数据，是必需的组件，可选数据库为 KV 数据库和 D1 数据库。两者对比如下表所示，根据自己使用场景从其中选择一种配置即可。&lt;/p&gt;
+
+  &lt;p&gt;重要提示：KV 数据库和 D1 数据库&lt;strong&gt;只需要配置其中一个即可&lt;/strong&gt;，不需要同时配置两个！建议根据下表选择适合自己的数据库类型。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;特点&lt;/th&gt;
+      &lt;th&gt;KV 数据库&lt;/th&gt;
+      &lt;th&gt;D1 数据库&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;读写性能&lt;/td&gt;
+      &lt;td&gt;高&lt;/td&gt;
+      &lt;td&gt;较低&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;免费额度&lt;/td&gt;
+      &lt;td&gt;少&lt;/td&gt;
+      &lt;td&gt;多&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;在【存储和数据库】-&amp;gt;【workers KV】添加KV数据库，KV名称填写 img_url&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036877.jpg&quot; alt=&quot;20260118172036877&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果要使用D1数据库，就在【存储和数据库】-&amp;gt;【D1 SQL数据库】，点击右上角的【创建数据库实例】，这里就不做详细说明了。&lt;/p&gt;
+
+&lt;p&gt;6、将数据库绑定到项目上。&lt;/p&gt;
+
+&lt;p&gt;在Workers and Pages中点击刚刚部署好的项目，在面板中找到【设置】选项，点击绑定按钮，添加绑定KV数据库的信息如下。点击保存以后，项目会重新部署。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;变量名称：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;img_url&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;KV命名空间：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;img_url&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036878.jpg&quot; alt=&quot;20260118172036878&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;7、重新部署以后，就可以使用CloudFlare分配的域名访问了，当然建议绑定自己的域名
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036879.jpg&quot; alt=&quot;20260118172036879&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;huggingface注册&quot;&gt;HuggingFace注册&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;官方地址：https://huggingface.co &lt;br /&gt;
+&lt;em&gt;HuggingFace 渠道支持大文件直传，适合上传超过 20MB 的文件。对于大文件，系统会自动使用 LFS 协议进行分片上传。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1、注册登陆后，在控制面板新建一个新空间，空间名字自定义。&lt;br /&gt;
+&lt;strong&gt;Select the Space SDK&lt;/strong&gt; 选择 &lt;strong&gt;docker&lt;/strong&gt; 的空项目或者是其他&lt;br /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036880.jpg&quot; alt=&quot;20260118172036880&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Space hardware&lt;/strong&gt;选择&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FREE&lt;/code&gt;版本不要钱的。空间的可见性也是根据你自己的意向选择就好了
+然后点击下面的【Create Space 】按钮
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036881.jpg&quot; alt=&quot;20260118172036881&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、创建 &lt;a href=&quot;https://huggingface.co/settings/tokens&quot;&gt;HuggingFace Access Token&lt;/a&gt;，在【Setting】中的【Access Tokens】中点击【Create New Token】就行了，token的名称自定义，然后勾选仓库的读写权限，如下。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036882.jpg&quot; alt=&quot;20260118172036882&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;存储配置&quot;&gt;存储配置&lt;/h3&gt;
+&lt;p&gt;1、进入CloudFlare-ImgBed系统后台，在系统设置中，点击【系统设置】-&amp;gt;在【上传设置】中添加上传渠道。如下
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036883.jpg&quot; alt=&quot;20260118172036883&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、添加一个HF存储的渠道方式，渠道名称自定义，然后仓库名称一定是 用户名/仓库名 的格式，然后填入上面申请的Acess Token信息。点击保存就行了。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036884.jpg&quot; alt=&quot;20260118172036884&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3、在系统设置中，点击【系统设置】-&amp;gt;【页面设置】中去配置默认上传渠道信息和其他的配置就行了，如下。
+&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036885.jpg&quot; alt=&quot;20260118172036885&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;你也可以增加其他的上传渠道，还可以开启负载均衡！&lt;/p&gt;
+
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+&lt;p&gt;这个方案是不是超级香？不需要实名认证，访问速度还杠杠的，最关键的是——完全免费！100G 的 HuggingFace 空间，加上 Cloudflare 的全球加速，无论是放博客图片、分享文件，还是当个人网盘，都绰绰有余。&lt;/p&gt;
+
+&lt;p&gt;而且全程无需自己买服务器、不用装任何客户端，只要有个 GitHub 账号和 Cloudflare 账号就能搞定。还要什么自行车？赶紧去搭建一个吧！&lt;/p&gt;
+
+</description>
+        </item>
+      
+    
+      
+        <item>
           <title>毫无破绽的自我批评</title>
           <link>https://gorpeln.top/article/17657167928</link>
           <guid isPermaLink="true">https://gorpeln.top/article/17657167928</guid>
@@ -1772,429 +2071,6 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>彩带、樱花背景</title>
-          <link>https://gorpeln.top/article/17347663476</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17347663476</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 21 Dec 2024 15:32:27 +0800</pubDate>
-          <description>&lt;p&gt;飘舞的彩带，似灵动的画笔，在空中勾勒出绚丽色彩，为世界添一抹活力。    &lt;br /&gt;
-而烂漫樱花，如粉白的云霞，纷纷扬扬洒落，诉说着春日的温柔。彩带与樱花，在此交织出满是故事的奇妙天地，等你踏入探寻。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;   &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857322.png&quot; alt=&quot;20241221151857322&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!--  樱花背景 --&amp;gt;
-&amp;lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/sakura.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;!--  丝带背景 --&amp;gt;
-&amp;lt;script size=&quot;150&quot; alpha=&quot;0.3&quot; zindex=&quot;-2&quot; src=&quot;/assets/js/ribbon.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;注意：将文件下载到自己博客使用  &lt;br /&gt;
-https://gorpeln.top/assets/js/sakura.js  &lt;br /&gt;
-https://gorpeln.top/assets/js/ribbon.min.js&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-        </item>
-      
-    
-      
-        <item>
-          <title>节日倒计时与时间进度条</title>
-          <link>https://gorpeln.top/article/17347655378</link>
-          <guid isPermaLink="true">https://gorpeln.top/article/17347655378</guid>
-          
-          
-          
-          
-          
-          
-          <pubDate>Sat, 21 Dec 2024 15:18:57 +0800</pubDate>
-          <description>&lt;p&gt;不仅能够精准显示距离特定节日的剩余时间，满足用户对重要节庆的期待与关注，还能直观展示今日、本周、本月乃至本年已悄然流逝的时间比例，帮助用户实时洞察时间的流转，让每一刻都能在时间的刻度中清晰呈现，实现对时间的高效感知与管理。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;  &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20241221151857321.png&quot; alt=&quot;20241221151857321&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;方法&lt;/strong&gt; &lt;br /&gt;
-1、 countdown.html&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;countdownNav&quot; id=&quot;countdownNav&quot;&amp;gt;
-    &amp;lt;div class=&quot;card-widget card-countdown&quot;&amp;gt;
-        &amp;lt;div class=&quot;item-headline&quot;&amp;gt;&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
-        &amp;lt;div class=&quot;item-content&quot;&amp;gt;
-            &amp;lt;div class=&quot;cd-count-left&quot;&amp;gt;
-                &amp;lt;span class=&quot;cd-text&quot;&amp;gt;距离&amp;lt;/span&amp;gt;
-                &amp;lt;span class=&quot;cd-name&quot; id=&quot;eventName&quot;&amp;gt;节日&amp;lt;/span&amp;gt;
-                &amp;lt;span class=&quot;cd-time&quot; id=&quot;daysUntil&quot;&amp;gt;000&amp;lt;/span&amp;gt;
-                &amp;lt;span class=&quot;cd-date&quot; id=&quot;eventDate&quot;&amp;gt;&amp;lt;/span&amp;gt;
-            &amp;lt;/div&amp;gt;
-            &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
-                &amp;lt;div id=&quot;countRight&quot; class=&quot;cd-count-right&quot;&amp;gt;
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;今日&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本周&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本月&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;本年&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                &amp;lt;/div&amp;gt;
-            &amp;lt;/div&amp;gt;
-        &amp;lt;/div&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;2、 countdown-1.js&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const CountdownTimer = (() =&amp;gt; {
-    const config = {
-        targetDate: &quot;2025-10-01&quot;,
-        targetName: &quot;国庆&quot;,
-        units: {
-            day: { text: &quot;今日&quot;, unit: &quot;小时&quot; },
-            week: { text: &quot;本周&quot;, unit: &quot;天&quot; },
-            month: { text: &quot;本月&quot;, unit: &quot;天&quot; },
-            year: { text: &quot;本年&quot;, unit: &quot;天&quot; }
-        }
-    };
-
-    const calculators = {
-        day: () =&amp;gt; {
-            const hours = new Date().getHours();
-            return {
-                remaining: 24 - hours,
-                percentage: (hours / 24) * 100
-            };
-        },
-        week: () =&amp;gt; {
-            const day = new Date().getDay();
-            const passed = day === 0 ? 6 : day - 1;
-            return {
-                remaining: 6 - passed,
-                percentage: ((passed + 1) / 7) * 100
-            };
-        },
-        month: () =&amp;gt; {
-            const now = new Date();
-            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-            const passed = now.getDate() - 1;
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        },
-        year: () =&amp;gt; {
-            const now = new Date();
-            const start = new Date(now.getFullYear(), 0, 1);
-            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
-            const passed = Math.floor((now - start) / 86400000);
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        }
-    };
-
-    function updateCountdown() {
-        const elements = [&apos;eventName&apos;, &apos;eventDate&apos;, &apos;daysUntil&apos;, &apos;countRight&apos;]
-           .map(id =&amp;gt; document.getElementById(id));
-
-        if (elements.some(el =&amp;gt; !el)) return;
-
-        const [eventName, eventDate, daysUntil, countRight] = elements;
-        const now = new Date();
-        const target = new Date(config.targetDate);
-
-        eventName.textContent = config.targetName;
-        eventDate.textContent = config.targetDate;
-        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
-
-        countRight.innerHTML = Object.entries(config.units)
-           .map(([key, { text, unit }]) =&amp;gt; {
-                const { remaining, percentage } = calculators[key]();
-                return `
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;${text}&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;
-                            &amp;lt;div class=&quot;cd-progress-bar&quot; style=&quot;width: ${percentage}%; opacity: ${percentage}&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                            &amp;lt;span class=&quot;cd-percentage ${percentage &amp;gt;= 46 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;${percentage.toFixed(2)}%&amp;lt;/span&amp;gt;
-                            &amp;lt;span class=&quot;cd-remaining ${percentage &amp;gt;= 60 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;
-                                &amp;lt;span class=&quot;cd-tip&quot;&amp;gt;还剩&amp;lt;/span&amp;gt;${remaining}&amp;lt;span class=&quot;cd-tip&quot;&amp;gt;${unit}&amp;lt;/span&amp;gt;
-                            &amp;lt;/span&amp;gt;
-                        &amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                `;
-            }).join(&apos;&apos;);
-    }
-
-    let timer;
-    const start = () =&amp;gt; {
-        updateCountdown();
-        timer = setInterval(updateCountdown, 600000);
-    };
-
-    [&apos;pjax:complete&apos;, &apos;DOMContentLoaded&apos;].forEach(event =&amp;gt; document.addEventListener(event, start));
-    document.addEventListener(&apos;pjax:send&apos;, () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer));
-
-    return { start, stop: () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer) };
-})();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;优化后代码，实现倒计时包含多个时间，自动识别最近的期望时间，如果现在时间超过了所有的期望时间，就以最后一个期望时间为准。两个js二选一即可。   &lt;br /&gt;
- countdown-2.js&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const CountdownTimer = (() =&amp;gt; {
-    const config = {
-        events: [
-            { targetDate: &quot;2025-04-04&quot;, targetName: &quot;清明节&quot; },
-            { targetDate: &quot;2025-05-01&quot;, targetName: &quot;劳动节&quot; },
-            { targetDate: &quot;2025-05-31&quot;, targetName: &quot;端午节&quot; },
-            { targetDate: &quot;2025-10-01&quot;, targetName: &quot;国庆节&quot; },    
-            { targetDate: &quot;2026-02-17&quot;, targetName: &quot;春节&quot; }            
-        ],
-        units: {
-            day: { text: &quot;今日&quot;, unit: &quot;小时&quot; },
-            week: { text: &quot;本周&quot;, unit: &quot;天&quot; },
-            month: { text: &quot;本月&quot;, unit: &quot;天&quot; },
-            year: { text: &quot;本年&quot;, unit: &quot;天&quot; }
-        }
-    };
-
-    const calculators = {
-        day: () =&amp;gt; {
-            const hours = new Date().getHours();
-            return {
-                remaining: 24 - hours,
-                percentage: (hours / 24) * 100
-            };
-        },
-        week: () =&amp;gt; {
-            const day = new Date().getDay();
-            const passed = day === 0 ? 6 : day - 1;
-            return {
-                remaining: 6 - passed,
-                percentage: ((passed + 1) / 7) * 100
-            };
-        },
-        month: () =&amp;gt; {
-            const now = new Date();
-            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-            const passed = now.getDate() - 1;
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        },
-        year: () =&amp;gt; {
-            const now = new Date();
-            const start = new Date(now.getFullYear(), 0, 1);
-            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
-            const passed = Math.floor((now - start) / 86400000);
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        }
-    };
-
-    function getNextEvent() {
-        const now = new Date();
-        for (let i = 0; i &amp;lt; config.events.length; i++) {
-            const eventDate = new Date(config.events[i].targetDate);
-            if (eventDate &amp;gt; now) {
-                return config.events[i];
-            }
-        }
-        return config.events[config.events.length - 1];
-    }
-
-    function updateCountdown() {
-        const elements = [&apos;eventName&apos;, &apos;eventDate&apos;, &apos;daysUntil&apos;, &apos;countRight&apos;]
-           .map(id =&amp;gt; document.getElementById(id));
-
-        if (elements.some(el =&amp;gt; !el)) return;
-
-        const [eventName, eventDate, daysUntil, countRight] = elements;
-        const now = new Date();
-        const nextEvent = getNextEvent();
-        const target = new Date(nextEvent.targetDate);
-
-        eventName.textContent = nextEvent.targetName;
-        eventDate.textContent = nextEvent.targetDate;
-        daysUntil.textContent = Math.round((target - now.setHours(0, 0, 0, 0)) / 86400000);
-
-        countRight.innerHTML = Object.entries(config.units)
-           .map(([key, { text, unit }]) =&amp;gt; {
-                const { remaining, percentage } = calculators[key]();
-                return `
-                    &amp;lt;div class=&quot;cd-count-item&quot;&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-name&quot;&amp;gt;${text}&amp;lt;/div&amp;gt;
-                        &amp;lt;div class=&quot;cd-item-progress&quot;&amp;gt;
-                            &amp;lt;div class=&quot;cd-progress-bar&quot; style=&quot;width: ${percentage}%; opacity: ${percentage}&quot;&amp;gt;&amp;lt;/div&amp;gt;
-                            &amp;lt;span class=&quot;cd-percentage ${percentage &amp;gt;= 46 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;${percentage.toFixed(2)}%&amp;lt;/span&amp;gt;
-                            &amp;lt;span class=&quot;cd-remaining ${percentage &amp;gt;= 60 ? &apos;cd-many&apos; : &apos;&apos;}&quot;&amp;gt;
-                                &amp;lt;span class=&quot;cd-tip&quot;&amp;gt;还剩&amp;lt;/span&amp;gt;${remaining}&amp;lt;span class=&quot;cd-tip&quot;&amp;gt;${unit}&amp;lt;/span&amp;gt;
-                            &amp;lt;/span&amp;gt;
-                        &amp;lt;/div&amp;gt;
-                    &amp;lt;/div&amp;gt;
-                `;
-            }).join(&apos;&apos;);
-    }
-
-    let timer;
-    const start = () =&amp;gt; {
-        updateCountdown();
-        timer = setInterval(updateCountdown, 600000);
-    };
-
-    [&apos;pjax:complete&apos;, &apos;DOMContentLoaded&apos;].forEach(event =&amp;gt; document.addEventListener(event, start));
-    document.addEventListener(&apos;pjax:send&apos;, () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer));
-
-    return { start, stop: () =&amp;gt; timer &amp;amp;&amp;amp; clearInterval(timer) };
-})();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;3、 style.css&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/*倒计时*/
-.countdownNav {
-    margin-top: 1em;
-    background-color: var(--box-color-light);
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-}
-.card-countdown {
-    margin: 0.75em 1.5em;
-}
-
-.card-countdown .item-content {
-    display: flex;
-}
-
-.cd-count-left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-right: 0.8rem;
-    line-height: 1.5;
-    align-items: center;
-    justify-content: center;
-}
-
-.cd-count-left .cd-text {
-    font-size: 14px;
-}
-
-.cd-count-left .cd-name {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.cd-count-left .cd-time {
-    font-size: 30px;
-    font-weight: bold;
-    color: #dad9e6;
-}
-
-.cd-count-left .cd-date {
-    font-size: 12px;
-    opacity: 0.6;
-}
-
-.cd-count-left::after {
-    content: &quot;&quot;;
-    position: absolute;
-    right: -0.8rem;
-    width: 2px;
-    height: 80%;
-    background-color: #dad9e6;
-    opacity: 0.5;
-}
-
-.cd-count-right {
-    flex: 1;
-    margin-left: .8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.cd-count-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 24px;
-}
-
-.cd-item-name {
-    font-size: 14px;
-    margin-right: 0.8rem;
-    white-space: nowrap;
-}
-
-.cd-item-progress {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-    background-color: var(--background-color-light);
-    overflow: hidden;
-}
-
-.cd-progress-bar {
-    height: 100%;
-    border-radius: 8px;
-    background-color: #dad9e6;
-}
-
-.cd-percentage,
-.cd-remaining {
-    position: absolute;
-    font-size: 12px;
-    margin: 0 6px;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.cd-many {
-    color: #fff;
-}
-
-.cd-remaining {
-    opacity: 0;
-    transform: translateX(10px);
-}
-
-.card-countdown .item-content:hover .cd-remaining {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.card-countdown .item-content:hover .cd-percentage {
-    transform: translateX(-10px);
-    opacity: 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         </item>
       

@@ -73,7 +73,7 @@
               <div class="site-state">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives" target="_blank">
-                    <span class="site-state-item-count">249</span>
+                    <span class="site-state-item-count">251</span>
                     <span class="site-state-item-name">归档</span>
                   </a>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags" target="_blank">
-                    <span class="site-state-item-count">718</span>
+                    <span class="site-state-item-count">721</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -118,7 +118,7 @@
                 </li>
                 <li onclick="pushNew('/archives')">
                   <a><i class="fas fa-archive fa-fw"></i>归档</a>
-                  <span class="articleCount">249 </span>
+                  <span class="articleCount">251 </span>
                 </li>
                 <li onclick="pushNew('/nav')">
                   <a><i class="fas fa-globe-asia fa-fw"></i>导航</a>
@@ -171,7 +171,7 @@
                   
                   <li onclick="pushNew('/categories#iOS')" class="categoryList">
                     <a name="iOS" class="default-categoryNav-name">iOS</a>
-                    <a name="iOS" style="" class="articleCount">48</a>
+                    <a name="iOS" style="" class="articleCount">50</a>
                   </li>
                   
                   <li onclick="pushNew('/categories#程序人生')" class="categoryList">
@@ -358,11 +358,11 @@
               <ul>
                 <li>
                   <p>文章数目</p>
-                  <p>249</p>
+                  <p>251</p>
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>124.2k</p>
+                  <p>124.7k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-05 19:11:54 +0800">
-                    2026/07/05
+                  <p id="current-date" data-value="2026-07-08 14:51:41 +0800">
+                    2026/07/08
                   </p>
                 </li>
               </ul>
@@ -884,7 +884,120 @@
     
     
     
+    
+    
+    
+    
     <!-- 普通文章 -->
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/14776665877" target="_blank">push,pop到任意控制器(一)</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2016-10-28</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#push" target="_blank">push</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#pop" target="_blank">pop</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#代码段" target="_blank">代码段</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">主题思想：如A、B、C、D 四个视图控制器
+想要在 A push B 后， B 在push 到 D ，然后从 D pop 到 C ,再从 C pop 的A
+
+
+解决方法如下：
+
+假如此时在 A 控制器下，想要到 push 到 B， 可以这样写
+
+[self.navigationController pushViewController: B :YES];  
+
+
+这时 self.navigationController.viewControllers 中按顺序含有 [A，B]
+
+此时已经到...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/14776665877" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="postbox">
+        <div class="allpost">
+            <div class="title">
+                <a class="pjaxlink" href="/article/14743559444" target="_blank">设置任意某个角为圆角</a>
+            </div>
+            <hr>
+            <div class="info">
+                时间：
+                <text style="padding-top: 0;margin-right:2em;">2016-09-20</text>
+                分类：
+                <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                    iOS
+                </a>
+                <text style="margin-right:2em;"></text>
+                标签：
+                
+                <span class="index-post-tag">
+                    
+                    
+                     <a class="pjaxlink" href="/tags#贝塞尔曲线" target="_blank">贝塞尔曲线</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#代码段" target="_blank">代码段</a>
+                         /   
+                    
+                     <a class="pjaxlink" href="/tags#圆角" target="_blank">圆角</a>
+                            
+                    
+                     
+                    
+                      </span>  </div>  
+            <div class="contentAbstract">设置控件圆角，只设置上面两个角的圆角，下面两个角依然是直角，如图效果：
+
+
+代码（通过贝塞尔曲线重绘layer层）：
+
+
+UIImageView *picImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];    
+picImageView.backgroundColor = [UIColor greenColor];    
+[self.view addSubview:picImag...</div>
+            
+            
+        </div>
+        <div style="height:25px;width:100%;margin-top:5px;margin-bottom:5px">
+            <a href="/article/14743559444" class="readmore" target="_blank">阅读全文 》</a>
+        </div>
+    </div>
+    
+    
     
     
     
@@ -1461,7 +1574,7 @@ Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以�
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.47</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.48</a>
         </div>
     </div>
 </footer>
@@ -1604,7 +1717,7 @@ Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.47",
+                "%c版本号 %c V4.10.48",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1865,6 +1978,14 @@ var _hmt = _hmt || [];
   }
 
   const postUrls = [
+       
+        
+          "/article/17711167178",
+         
+       
+        
+          "/article/17687280368",
+         
        
         
           "/article/17657167928",

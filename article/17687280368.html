@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>Sublime Text 常用插件 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,Sublime,插件,备忘,ColorHelper,HTML" />
-    <meta name="description" content="一、Package Control无法使用解决办法">
+    <title>用HuggingFace搭建100G超大图床 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,陈冠鹏,时光本,个人博客,程序人生,技术分享,实用资源共享,图床,HuggingFace,免费,CloudFlare,存储" />
+    <meta name="description" content="今天要分享一个超级实用的黑科技教程——如何利用 HuggingFace 免费搭建一个 100G 的图床和网盘，而且全程无需实名认证，操作简单，小白也能轻松上手！">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/16962230954">
+    <link rel="canonical" href="/article/17687280368">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln">
-    <meta property="og:title" content="Sublime Text 常用插件 | gorpeln's Blog">
+    <meta property="og:title" content="用HuggingFace搭建100G超大图床 | gorpeln's Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/article/16962230954">
-    <meta property="og:description" content="一、Package Control无法使用解决办法">
+    <meta property="og:url" content="/article/17687280368">
+    <meta property="og:description" content="今天要分享一个超级实用的黑科技教程——如何利用 HuggingFace 免费搭建一个 100G 的图床和网盘，而且全程无需实名认证，操作简单，小白也能轻松上手！">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -383,13 +383,13 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
             <div class="page-content" id="pjax"><div class="post">
     <header class="post-header">
-        <h1 class="post-title">Sublime Text 常用插件</h1>
+        <h1 class="post-title">用HuggingFace搭建100G超大图床</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;margin-right:2em;">2023-10-02</text>
+            <text style="padding-top: 0;margin-right:2em;">2026-01-18</text>
             分类：
-            <a class="item-date tags-a" href="/categories.html#MacOS" target="_blank">
-                MacOS
+            <a class="item-date tags-a" href="/categories.html#iOS" target="_blank">
+                iOS
             </a>
             <text style="margin-right:2em;"></text>
             标签：
@@ -397,23 +397,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#Sublime" target="_blank">Sublime</a>
+                <a class="pjaxlink" href="/tags#图床" target="_blank">图床</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#插件" target="_blank">插件</a>
+                <a class="pjaxlink" href="/tags#HuggingFace" target="_blank">HuggingFace</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#备忘" target="_blank">备忘</a>
+                <a class="pjaxlink" href="/tags#免费" target="_blank">免费</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#ColorHelper" target="_blank">ColorHelper</a>
+                <a class="pjaxlink" href="/tags#CloudFlare" target="_blank">CloudFlare</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#HTML" target="_blank">HTML</a>
+                <a class="pjaxlink" href="/tags#存储" target="_blank">存储</a>
                 
                 
             </span>
@@ -421,47 +421,134 @@
         </div>
     </header>
     <article class="post-content">
-        <h4 id="一package-control无法使用解决办法">一、Package Control无法使用解决办法</h4>
+        <p>今天要分享一个超级实用的黑科技教程——如何利用 HuggingFace 免费搭建一个 100G 的图床和网盘，而且全程无需实名认证，操作简单，小白也能轻松上手！</p>
 
-<p>最新升级了MacOS到Ventura和Sonoma,发现安装Sublime Text4之后，无法使用Install Package Control，即使安装了Install Package Control也无法正常使用Install Pakcage。</p>
+<p>这个项目其实是一个开源的“宝藏”，名字叫 CloudFlare-ImgBed，是一个基于 Cloudflare Pages 打造的文件托管平台。它不仅完全免费，还非常稳定高效，目前在 GitHub 上已经收获了超过 4k 的 star，热度非常高！项目的作者是 MarSeventh 大佬，不得不说，这个设计真的很良心。</p>
 
-<p>解决方法：</p>
+<p>它支持多种存储方式，配置灵活，可以满足不同场景下的需求。无论是做图床、分享文件，还是搭建个人小网盘，都非常方便。话不多说，咱们直接进入正题，开搞！</p>
 
-<p>下载：<a href="https://github.com/wbond/package_control/releases">PackageControl</a> （https://github.com/wbond/package_control/releases）</p>
+<h3 id="项目预览">项目预览</h3>
+<p>官方文档：<a href="https://cfbed.sanyue.de/">https://cfbed.sanyue.de/</a><br />
+演示站点：<a href="https://cfbed.1314883.xyz/">https://cfbed.1314883.xyz/</a> 访问密码：cfbed<br />
+我自己搭建的实例：<a href="https://imgbed.202090.xyz/">https://imgbed.202090.xyz/</a></p>
 
-<p>之后得到一个<code class="language-plaintext highlighter-rouge">Package.Control.sublime.package</code>文件，将文件重命名为<code class="language-plaintext highlighter-rouge">Package Control.sublime-package</code><br />
-随后将这个文件放置到插件安装目录的（<code class="language-plaintext highlighter-rouge">Installed Packages</code>）目录下，路径为：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/用户名/Library/Application Support/Sublime Text/Installed Packages
-</code></pre></div></div>
+<p>前台界面<br />
+<img src="https://img.gorpeln.top/blog/20260118172036871.jpg" alt="20260118172036871" />
+后台界面<br />
+<img src="https://img.gorpeln.top/blog/20260118172036872.jpg" alt="20260118172036872" /></p>
 
-<h4 id="二package-control使用方法">二、Package Control使用方法</h4>
-
-<p>为插件管理包，通过快捷键 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code>
-打开，之后可以很方便的浏览、安装和卸载 Sublime Text 中的插件。</p>
+<h3 id="技术架构">技术架构</h3>
+<p>采用了<strong>前后端分离</strong>的架构：</p>
 
 <ul>
-  <li>插件安装：输入 <code class="language-plaintext highlighter-rouge">install</code> <br />
-  后选择 <code class="language-plaintext highlighter-rouge">Package Control: Install Package</code></li>
-  <li>插件列表：输入 <code class="language-plaintext highlighter-rouge">list</code> <br />
-  后选择 <code class="language-plaintext highlighter-rouge">Package Control: List Packages</code></li>
-  <li>插件删除：输入 <code class="language-plaintext highlighter-rouge">remove</code> <br />
-  后选择 <code class="language-plaintext highlighter-rouge">Package Control: Remove Packages</code></li>
+  <li><strong>前端</strong>：基于 Vue.js 开发，界面响应式，用起来很流畅。</li>
+  <li><strong>后端</strong>：跑在 Cloudflare Workers 上，无服务器架构，省心又省钱。</li>
+  <li><strong>存储层</strong>：支持多种存储后端，包括 Telegram、R2、S3、Discard，以及我们今天要用到的 HuggingFace。</li>
+  <li><strong>元数据管理</strong>：统一通过 Cloudflare KV 进行管理，数据清晰又高效。</li>
 </ul>
 
-<h4 id="三常用插件">三、常用插件：</h4>
+<p>简单来说，就是通过 Cloudflare 的强大边缘网络，把 HuggingFace 的 100G 免费存储空间利用起来，变成一个私人的图床或网盘。</p>
+
+<h3 id="项目部署">项目部署</h3>
+<p>作者提供了两种部署方式：一种是 Cloudflare Pages 托管（推荐，免费），另一种是 Docker 部署（适合有服务器的朋友）,本博客仅展示 Cloudflare Pages 托管方式。</p>
+
+<p>首先 fork 源码仓库：<a href="https://github.com/MarSeventh/CloudFlare-ImgBed">https://github.com/MarSeventh/CloudFlare-ImgBed</a> 到自己的 GitHub 。如果有更新就可以直接将更新的立马部署到 Cloudflare Pages 上。</p>
+
+<p>1、在控制面板找到【计算和AI】然后点击【Worker and Pages】在页面的右上角点击【创建应用程序】，然后点击下面的想要部署 Pages？的【开始按钮】。如下图<br />
+<img src="https://img.gorpeln.top/blog/20260118172036873.jpg" alt="20260118172036873" /></p>
+
+<p>2、在 “导入现有 Git 存储库” 处点击 “开始使用”<br />
+<img src="https://img.gorpeln.top/blog/20260118172036874.jpg" alt="20260118172036874" /></p>
+
+<p>3、选择【CloudFlare-ImgBed】项目，然后点击【开始设置】按钮<br />
+<img src="https://img.gorpeln.top/blog/20260118172036875.jpg" alt="20260118172036875" /></p>
+
+<p>4、项目名称自定义，然后构建命令填入： npm install ,其他默认，点击【保存并部署】<br />
+<img src="https://img.gorpeln.top/blog/20260118172036876.jpg" alt="20260118172036876" /></p>
+
+<p>5、配置数据库</p>
+<blockquote>
+  <p>数据库用于存储文件元数据，是必需的组件，可选数据库为 KV 数据库和 D1 数据库。两者对比如下表所示，根据自己使用场景从其中选择一种配置即可。</p>
+
+  <p>重要提示：KV 数据库和 D1 数据库<strong>只需要配置其中一个即可</strong>，不需要同时配置两个！建议根据下表选择适合自己的数据库类型。</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>特点</th>
+      <th>KV 数据库</th>
+      <th>D1 数据库</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>读写性能</td>
+      <td>高</td>
+      <td>较低</td>
+    </tr>
+    <tr>
+      <td>免费额度</td>
+      <td>少</td>
+      <td>多</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>在【存储和数据库】-&gt;【workers KV】添加KV数据库，KV名称填写 img_url<br />
+<img src="https://img.gorpeln.top/blog/20260118172036877.jpg" alt="20260118172036877" /></p>
+
+<p>如果要使用D1数据库，就在【存储和数据库】-&gt;【D1 SQL数据库】，点击右上角的【创建数据库实例】，这里就不做详细说明了。</p>
+
+<p>6、将数据库绑定到项目上。</p>
+
+<p>在Workers and Pages中点击刚刚部署好的项目，在面板中找到【设置】选项，点击绑定按钮，添加绑定KV数据库的信息如下。点击保存以后，项目会重新部署。</p>
+
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ChineseLocalization</code> 汉化包</li>
-  <li><code class="language-plaintext highlighter-rouge">ColorHelper</code> 显示所选颜色值的颜色</li>
-  <li><code class="language-plaintext highlighter-rouge">HTML-CSS-JS Prettify</code> 一款集成了格式化（美化）html、css、js三种文件类型的插件</li>
-  <li><code class="language-plaintext highlighter-rouge">Auto Close HTML Tags</code> 写HTML代码时，自动补全闭合标签</li>
-  <li><code class="language-plaintext highlighter-rouge">BracketHighlighter</code> 代码匹配，可以匹配括号，引号等符号内的范围</li>
-  <li><code class="language-plaintext highlighter-rouge">Alignment</code> 使多行代码中的等号对齐</li>
-  <li><code class="language-plaintext highlighter-rouge">AutoFileName</code> 快捷输入文件名</li>
-  <li><code class="language-plaintext highlighter-rouge">SublimeCodeInte</code> 代码提示、补全</li>
-  <li><code class="language-plaintext highlighter-rouge">SublimeLinter</code> 代码检查的功能</li>
-  <li><code class="language-plaintext highlighter-rouge">View In Browser</code> Sublime Text 保存后网页自动同步更新</li>
-  <li><code class="language-plaintext highlighter-rouge">LiveReload</code> 调试网页实时自动更新</li>
+  <li>变量名称：<code class="language-plaintext highlighter-rouge">img_url</code></li>
+  <li>KV命名空间：<code class="language-plaintext highlighter-rouge">img_url</code></li>
 </ul>
+
+<p><img src="https://img.gorpeln.top/blog/20260118172036878.jpg" alt="20260118172036878" /></p>
+
+<p>7、重新部署以后，就可以使用CloudFlare分配的域名访问了，当然建议绑定自己的域名
+<img src="https://img.gorpeln.top/blog/20260118172036879.jpg" alt="20260118172036879" /></p>
+
+<h3 id="huggingface注册">HuggingFace注册</h3>
+
+<blockquote>
+  <p>官方地址：https://huggingface.co <br />
+<em>HuggingFace 渠道支持大文件直传，适合上传超过 20MB 的文件。对于大文件，系统会自动使用 LFS 协议进行分片上传。</em></p>
+</blockquote>
+
+<p>1、注册登陆后，在控制面板新建一个新空间，空间名字自定义。<br />
+<strong>Select the Space SDK</strong> 选择 <strong>docker</strong> 的空项目或者是其他<br />
+<img src="https://img.gorpeln.top/blog/20260118172036880.jpg" alt="20260118172036880" /></p>
+
+<p><strong>Space hardware</strong>选择<code class="language-plaintext highlighter-rouge">FREE</code>版本不要钱的。空间的可见性也是根据你自己的意向选择就好了
+然后点击下面的【Create Space 】按钮
+<img src="https://img.gorpeln.top/blog/20260118172036881.jpg" alt="20260118172036881" /></p>
+
+<p>2、创建 <a href="https://huggingface.co/settings/tokens">HuggingFace Access Token</a>，在【Setting】中的【Access Tokens】中点击【Create New Token】就行了，token的名称自定义，然后勾选仓库的读写权限，如下。
+<img src="https://img.gorpeln.top/blog/20260118172036882.jpg" alt="20260118172036882" /></p>
+
+<h3 id="存储配置">存储配置</h3>
+<p>1、进入CloudFlare-ImgBed系统后台，在系统设置中，点击【系统设置】-&gt;在【上传设置】中添加上传渠道。如下
+<img src="https://img.gorpeln.top/blog/20260118172036883.jpg" alt="20260118172036883" /></p>
+
+<p>2、添加一个HF存储的渠道方式，渠道名称自定义，然后仓库名称一定是 用户名/仓库名 的格式，然后填入上面申请的Acess Token信息。点击保存就行了。
+<img src="https://img.gorpeln.top/blog/20260118172036884.jpg" alt="20260118172036884" /></p>
+
+<p>3、在系统设置中，点击【系统设置】-&gt;【页面设置】中去配置默认上传渠道信息和其他的配置就行了，如下。
+<img src="https://img.gorpeln.top/blog/20260118172036885.jpg" alt="20260118172036885" /></p>
+
+<p>你也可以增加其他的上传渠道，还可以开启负载均衡！</p>
+
+<h3 id="总结">总结</h3>
+<p>这个方案是不是超级香？不需要实名认证，访问速度还杠杠的，最关键的是——完全免费！100G 的 HuggingFace 空间，加上 Cloudflare 的全球加速，无论是放博客图片、分享文件，还是当个人网盘，都绰绰有余。</p>
+
+<p>而且全程无需自己买服务器、不用装任何客户端，只要有个 GitHub 账号和 Cloudflare 账号就能搞定。还要什么自行车？赶紧去搭建一个吧！</p>
+
 
 
         
@@ -469,21 +556,21 @@
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2024-03-06</div>
+    <div class="custom-font">最后编辑于：2026-07-08</div>
     
-    <div class="custom-font">本文链接：<a href="/article/16962230954" class='articleLink'>https://gorpeln.top/article/16962230954</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17687280368" class='articleLink'>https://gorpeln.top/article/17687280368</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/16959932733" title="博客评论时一键填写自己的信息" class="custom-font" target="_blank">博客评论时一键填写自己的信息</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17657167928" title="毫无破绽的自我批评" class="custom-font" target="_blank">毫无破绽的自我批评</a>
     </div>
     
     
     <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/16990919984" title="个性二维码合集" class="custom-font" target="_blank">个性二维码合集</a>
+        <span class="custom-font">下一篇 ：</span><a href="/article/17711167178" title="免费领取Synology C2的30G对象存储空间" class="custom-font" target="_blank">免费领取Synology C2的30G对象存储空间</a>
     </div>
     
 </div>
@@ -498,7 +585,7 @@
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
-      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/16962230954')"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17687280368')"></div>
       <div class="qrcodeImg" id="qrcode"></div>
       <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
     </div>
