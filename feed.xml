@@ -56,10 +56,11 @@
 存储桶创建完成后，桶列表右侧可查看对应区域Endpoint地址：
 &lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157746.jpg&quot; alt=&quot;20260215085157746&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;进入桶内可创建文件夹、上传文件，支持查看历史版本、清理分片上传碎片释放空间。
+  &lt;li&gt;
+    &lt;p&gt;进入桶内可创建文件夹、上传文件，支持查看历史版本、清理分片上传碎片释放空间。
 &lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157747.jpg&quot; alt=&quot;20260215085157747&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3 id=&quot;跨区域开通免费额度&quot;&gt;跨区域开通免费额度&lt;/h3&gt;
 &lt;p&gt;每个区域的免费资源（15G存储+15G流量）需单独激活。
