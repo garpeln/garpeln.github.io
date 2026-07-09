@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
-    <title>GitHub贡献者可获取 Stark 空投 - gorpeln's Blog</title>
-    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,时光本,个人博客,程序人生,技术分享,实用资源共享,GitHub,Stark,空投,STRK,欧易" />
-    <meta name="description" content="Starknet 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。">
+    <title>GitHub Pages + EdgeOne CDN 多域名301跳转配置备忘 - gorpeln's Blog</title>
+    <meta name="keywords" content="gorpeln,gorpeln.top,gorpeln's Blog,gpchen,gorpeln的个人博客,iOS 开发,风未止,时光本,个人博客,程序人生,技术分享,实用资源共享,EdgeOne,阿里云,CDN,腾讯云,服务器" />
+    <meta name="description" content="  用途：主站test.top正常展示博客，blog.test.top、www.test.top全站301跳转至主站，解决GitHub Pages 404/423报错，统一域名权重">
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/article/17087779433">
+    <link rel="canonical" href="/article/17836002095">
     <link rel="alternate" type="application/rss+xml" title="gorpeln的个人博客 - gorpeln" href="/feed.xml" />
     <!-- Open Graph -->
     <meta name="author" content="gorpeln">
-    <meta property="og:title" content="GitHub贡献者可获取 Stark 空投 | gorpeln's Blog">
+    <meta property="og:title" content="GitHub Pages + EdgeOne CDN 多域名301跳转配置备忘 | gorpeln's Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/article/17087779433">
-    <meta property="og:description" content="Starknet 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。">
+    <meta property="og:url" content="/article/17836002095">
+    <meta property="og:description" content="  用途：主站test.top正常展示博客，blog.test.top、www.test.top全站301跳转至主站，解决GitHub Pages 404/423报错，统一域名权重">
     <meta property="og:image" content="https://gorpeln.top/assets/img/logo.png">
     <meta property="og:site_name" content="gorpeln的个人博客 - gorpeln">
     <!-- 样式表 -->
@@ -383,13 +383,13 @@
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 box-shadow aside2" onclick="hiddenQRCode()">
             <div class="page-content" id="pjax"><div class="post">
     <header class="post-header">
-        <h1 class="post-title">GitHub贡献者可获取 Stark 空投</h1>
+        <h1 class="post-title">GitHub Pages + EdgeOne CDN 多域名301跳转配置备忘</h1>
         <div class="info">
             时间：
-            <text style="padding-top: 0;margin-right:2em;">2024-02-24</text>
+            <text style="padding-top: 0;margin-right:2em;">2026-07-09</text>
             分类：
-            <a class="item-date tags-a" href="/categories.html#教程福利" target="_blank">
-                教程福利
+            <a class="item-date tags-a" href="/categories.html#个人博客" target="_blank">
+                个人博客
             </a>
             <text style="margin-right:2em;"></text>
             标签：
@@ -397,23 +397,23 @@
             <span class="index-post-tag">
                 
                 
-                <a class="pjaxlink" href="/tags#GitHub" target="_blank">GitHub</a>
+                <a class="pjaxlink" href="/tags#EdgeOne" target="_blank">EdgeOne</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#Stark" target="_blank">Stark</a>
+                <a class="pjaxlink" href="/tags#阿里云" target="_blank">阿里云</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#空投" target="_blank">空投</a>
+                <a class="pjaxlink" href="/tags#CDN" target="_blank">CDN</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#STRK" target="_blank">STRK</a>
+                <a class="pjaxlink" href="/tags#腾讯云" target="_blank">腾讯云</a>
                 /
                 
                 
-                <a class="pjaxlink" href="/tags#欧易" target="_blank">欧易</a>
+                <a class="pjaxlink" href="/tags#服务器" target="_blank">服务器</a>
                 
                 
             </span>
@@ -421,47 +421,136 @@
         </div>
     </header>
     <article class="post-content">
-        <p><code class="language-plaintext highlighter-rouge">Starknet</code> 正在向给 Github 按 star 排前 5000 个 repo 贡献过代码的人发钱，可以领领看。仔细研究了一下，最终我也拿到了这笔意外之财。</p>
-
-<p><img src="https://img.gorpeln.top/blog/20240224203223424.jpg" alt="20240224203223424" /></p>
-
-<h3 id="领取条件">领取条件</h3>
-
-<blockquote>
-  <p>在 2023 年 11 月 15 日之前，您至少向全球星数排名前 5,000 位的版本库提交了三次内容。其中至少一次提交发生在 2018 年或之后。</p>
+        <blockquote>
+  <p>用途：主站<code class="language-plaintext highlighter-rouge">test.top</code>正常展示博客，<code class="language-plaintext highlighter-rouge">blog.test.top</code>、<code class="language-plaintext highlighter-rouge">www.test.top</code>全站301跳转至主站，解决GitHub Pages 404/423报错，统一域名权重</p>
 </blockquote>
 
-<p>即使不符合条件也先不要气馁，可以试着查一下资格，因为这 5000 个仓库的范围比较迷，我甚至都不记得自己是给哪个仓库贡献达标的……</p>
-
-<p>打开 <a href="https://provisions.starknet.io">provisions.starknet.io</a>，点击 <code class="language-plaintext highlighter-rouge">Eligibility check only</code>，选择 GitHub，输入 GitHub 用户名，点击 Go，如果提示 <code class="language-plaintext highlighter-rouge">Congratulations</code>，那你就可以领到这笔钱了。</p>
-
-<p>接着点击 <code class="language-plaintext highlighter-rouge">Disconnect</code>，点 <code class="language-plaintext highlighter-rouge">Claim STRK</code>，按步骤下载浏览器插件（选哪个都可以，我选择的是 <code class="language-plaintext highlighter-rouge">Argent X</code>），创建一个钱包地址，在核验资格的步骤选择最后一个 GitHub，授权 GitHub 账号，然后这笔钱就到自己的钱包里了，不知道各位都领了多少，我领到了 <code class="language-plaintext highlighter-rouge">111.1</code>。大约 1~2 分钟检查钱包到账情况。</p>
-
-<h3 id="提现">提现</h3>
-<p>接下来提现到支付宝。由于我国的加密货币政策原因，提现一定要选择安全正规的大平台进行，提现的大致过程如下</p>
-
-<blockquote class="prompt-danger">
-  <p>提醒！ <br />
-此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！</p>
-</blockquote>
-
+<h3 id="一github-仓库固定配置一次配置永久生效">一、GitHub 仓库固定配置（一次配置永久生效）</h3>
 <ol>
-  <li>申请交易所账号：我用的是 <a href="https://www.okx.com/cn">欧易</a></li>
-  <li>下载 APP 进行实名认证：有实名认证的交易所能更大程度确保资金来源安全</li>
-  <li>充币：币种选择 <code class="language-plaintext highlighter-rouge">STRK</code>，充至交易账户，打开钱包按步骤将币转入欧易提供的地址内，等待 5~10 分钟到账</li>
-  <li>卖出 <code class="language-plaintext highlighter-rouge">STRK</code> 获得 <code class="language-plaintext highlighter-rouge">USDT</code>：前往 STRK/USDT 的交易页面选择卖出，挂单，选市价委托（设置一个合理的限价也可以），数量 100%，等成交</li>
-  <li>提币：卖完到资产页面，把 <code class="language-plaintext highlighter-rouge">USDT</code> 余额从交易账户转到资金账户，点提币，C2C 交易，支付方式推荐选支付宝，选一个成交量比较高的靠谱的买家，填写支付宝账户并上传支付宝收款码，将 USDT 全部出售，1~20 分钟后即可到账，确认到账金额、付款方姓名正确后，回到交易所页面确认收款，交易完成</li>
+  <li>仓库根目录新建 <code class="language-plaintext highlighter-rouge">CNAME</code> 文件，内容仅一行，无多余空格换行。内容为：<code class="language-plaintext highlighter-rouge">test.top</code></li>
+  <li>仓库 <code class="language-plaintext highlighter-rouge">Settings</code> - <code class="language-plaintext highlighter-rouge">Pages</code> 设置
+    <ul>
+      <li>Custom domain：填写 <code class="language-plaintext highlighter-rouge">test.top</code></li>
+      <li>勾选 <code class="language-plaintext highlighter-rouge">Enforce HTTPS</code> 强制HTTPS</li>
+    </ul>
+  </li>
+  <li>等待页面自动部署完成</li>
 </ol>
 
-<blockquote class="prompt-danger">
-  <p>最后再次提醒！ <br />
-此教程仅提供大致的加密货币提现方法，用于国内优秀开源贡献者兑换奖金。参与加密货币交易违反国内政策，投资须谨慎，加密货币风险高，请不要参与炒币，场外交易有刑事风险！</p>
-</blockquote>
+<h3 id="二edgeone-cdn-加速域名基础配置">二、EdgeOne CDN 加速域名基础配置</h3>
+<h4 id="1-接入域名清单">1. 接入域名清单</h4>
+<p>需在EdgeOne后台添加3个加速域名：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">test.top</code>（主站，正常展示页面）</li>
+  <li><code class="language-plaintext highlighter-rouge">blog.test.top</code>（跳转域名）</li>
+  <li><code class="language-plaintext highlighter-rouge">www.test.top</code>（跳转域名）</li>
+</ul>
 
-<h3 id="结语">结语</h3>
-<p>感谢那些一直默默付出的贡献者们，这次空投给开源社区打了一剂振奋剂，也引来了不少别出心裁之人……
-还有一些开源项目表示自己收到了许多垃圾 PR，或许是一些人希望借此抢下一次的空投。</p>
+<h4 id="2-所有域名统一源站参数关键防止404423">2. 所有域名统一源站参数（关键，防止404/423）</h4>
+<ul>
+  <li>源站类型：域名源站</li>
+  <li>源站地址：<code class="language-plaintext highlighter-rouge">test.github.io</code></li>
+  <li>回源HOST：自定义填写 <code class="language-plaintext highlighter-rouge">test.top</code></li>
+  <li>回源协议：HTTPS:443</li>
+  <li>SSL加密模式：Full</li>
+</ul>
 
+<h4 id="3-域名dns解析配置域名服务商后台">3. 域名DNS解析配置（域名服务商后台）</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>主机记录</th>
+      <th>记录类型</th>
+      <th>记录值</th>
+      <th>TTL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@</td>
+      <td>CNAME</td>
+      <td>EdgeOne分配的CDN专属CNAME</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>blog</td>
+      <td>CNAME</td>
+      <td>EdgeOne分配的CDN专属CNAME</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>www</td>
+      <td>CNAME</td>
+      <td>EdgeOne分配的CDN专属CNAME</td>
+      <td>600</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>说明：所有域名流量全部接入EdgeOne节点，才能使用CDN规则实现HTTPS跳转。</p>
+
+<h3 id="三edgeone-规则引擎-301跳转核心配置">三、EdgeOne 规则引擎 301跳转核心配置</h3>
+<ol>
+  <li>进入站点 → 站点加速 → 规则引擎 → 创建规则</li>
+  <li>匹配条件：HOST 属于任意，填入 <code class="language-plaintext highlighter-rouge">blog.test.top</code>、<code class="language-plaintext highlighter-rouge">www.test.top</code></li>
+  <li>添加执行动作：访问URL重定向
+    <ul>
+      <li>状态码：301 永久重定向</li>
+      <li>目标协议：HTTPS</li>
+      <li>目标主机名：<code class="language-plaintext highlighter-rouge">test.top</code></li>
+      <li>路径匹配正则：<code class="language-plaintext highlighter-rouge">(.*)</code>，替换内容：<code class="language-plaintext highlighter-rouge">$1</code></li>
+      <li>勾选：携带URL查询参数</li>
+    </ul>
+  </li>
+  <li>保存规则，发布生效</li>
+</ol>
+
+<h4 id="配置逻辑释义">配置逻辑释义</h4>
+<p>用户访问 blog / www 域名时，CDN节点直接返回跳转响应，<strong>不会回源GitHub</strong>，不消耗回源流量；仅 <code class="language-plaintext highlighter-rouge">test.top</code> 无匹配规则，正常请求 GitHub 页面。</p>
+
+<h3 id="四两种跳转方案对比备忘区分">四、两种跳转方案对比（备忘区分）</h3>
+<ol>
+  <li>
+    <p>EdgeOne CDN跳转（当前使用方案）
+优点：支持HTTPS无安全警告、完整保留文章子路径、访问速度快、自带防护、二级域名无需单独备案</p>
+  </li>
+  <li>
+    <p>域名服务商DNS显性转发（不推荐切换）
+缺点：HTTPS访问证书报错、丢失子页面路径、稳定性差、二级域名需备案</p>
+  </li>
+</ol>
+
+<h3 id="五常见故障排查备忘">五、常见故障排查备忘</h3>
+<ol>
+  <li>
+    <p>访问 blog.test.top 出现404页面不存在<br />
+原因：CDN回源HOST未填写 <code class="language-plaintext highlighter-rouge">test.top</code>，GitHub无法识别HOST头<br />
+修复：3个加速域名统一检查回源HOST配置</p>
+  </li>
+  <li>
+    <p>ERR_CONNECTION_CLOSED / 连接被关闭<br />
+原因：回源协议设为HTTP、SSL模式非Full、双层嵌套回源<br />
+修复：回源强制HTTPS，所有域名直接源站指向github.io，不二次回源主域名</p>
+  </li>
+  <li>
+    <p>跳转失效，直接打开blog页面<br />
+原因：规则未发布、匹配HOST填写错误、DNS未生效<br />
+修复：重新发布规则，清空浏览器缓存，等待10分钟DNS同步</p>
+  </li>
+  <li>
+    <p>访问报423 Locked<br />
+原因：裸域名直连GitHub，未走CDN代理<br />
+修复：DNS必须CNAME指向EdgeOne，不能直接解析github.io</p>
+  </li>
+</ol>
+
+<h3 id="六长期维护注意事项">六、长期维护注意事项</h3>
+<ol>
+  <li>不要删除 EdgeOne 内 blog、www 两个加速域名，不要删除对应DNS解析记录，否则跳转直接失效</li>
+  <li>仅当CDN免费域名额度不足时，再考虑切换为DNS显性转发（牺牲路径与HTTPS体验）</li>
+  <li>后续新增二级域名统一在此规则内添加HOST匹配项即可，无需新增多条独立规则</li>
+</ol>
 
 
         
@@ -469,22 +558,18 @@
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2026-01-21</div>
+    <div class="custom-font">最后编辑于：2026-07-09</div>
     
-    <div class="custom-font">本文链接：<a href="/article/17087779433" class='articleLink'>https://gorpeln.top/article/17087779433</a></div>
+    <div class="custom-font">本文链接：<a href="/article/17836002095" class='articleLink'>https://gorpeln.top/article/17836002095</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
 </div>
 </div>
 <div class="prevandnext">
     
     <div>
-        <span class="custom-font">上一篇 ：</span><a href="/article/17049566482" title="部署友链朋友圈" class="custom-font" target="_blank">部署友链朋友圈</a>
+        <span class="custom-font">上一篇 ：</span><a href="/article/17711167178" title="免费领取Synology C2的30G对象存储空间" class="custom-font" target="_blank">免费领取Synology C2的30G对象存储空间</a>
     </div>
     
-    
-    <div>
-        <span class="custom-font">下一篇 ：</span><a href="/article/17094338798" title="外链跳转到中间页" class="custom-font" target="_blank">外链跳转到中间页</a>
-    </div>
     
 </div>
 <div class="livere waline-box">
@@ -498,7 +583,7 @@
     <!-- 右边栏 二维码、主题、返回顶部 -->
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm aside1">
       <div class="themeModel" id="themeModel"></div>
-      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17087779433')"></div>
+      <div class="qrcode" id="qrcodeBtn" onclick="createQrcode('/article/17836002095')"></div>
       <div class="qrcodeImg" id="qrcode"></div>
       <div id="backtotop"><a href="#"><div class="bttbg"></div></a></div>
     </div>
