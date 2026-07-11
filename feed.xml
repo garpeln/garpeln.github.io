@@ -32,35 +32,35 @@
 &lt;h4 id=&quot;创建桶&quot;&gt;创建桶&lt;/h4&gt;
 &lt;p&gt;注册登录后进入：&lt;a href=&quot;https://c2.synology.com/en-global/object-storage/overview&quot;&gt;https://c2.synology.com/en-global/object-storage/overview&lt;/a&gt;&lt;br /&gt;
 点击【Get 15 GB for free】
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157741.jpg&quot; alt=&quot;20260215085157741&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157741.jpg&quot; alt=&quot;20260215085157741&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;控制台界面很简洁哈，直接在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Buckets&lt;/code&gt; 栏目中【创建桶】
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157742.jpg&quot; alt=&quot;20260215085157742&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157742.jpg&quot; alt=&quot;20260215085157742&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;创建存储桶基础信息
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bucket name&lt;/code&gt; 是必须的。&lt;strong&gt;Create Access Key&lt;/strong&gt; 是指单独为这个存储桶创建一个访问的密钥，这里我们点击勾选方便一会使用，一定要备份记住密钥，然后点击【Next】
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157743.jpg&quot; alt=&quot;20260215085157743&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157743.jpg&quot; alt=&quot;20260215085157743&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;数据保护设置
 下面的步骤就是是否开启桶的版本控制，和桶对象锁。这两项是保证数据安全的，建议开启。或者根据你自己的需求来，可以都勾选上，也可以不勾选。然后点击【create bucket】按钮。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157744.jpg&quot; alt=&quot;20260215085157744&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157744.jpg&quot; alt=&quot;20260215085157744&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;备份密钥
 创建完成会展示 Access Key ID 与 Secret Key，密钥关闭窗口后无法再次查看，务必复制或下载备份。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157745.jpg&quot; alt=&quot;20260215085157745&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157745.jpg&quot; alt=&quot;20260215085157745&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;查看桶Endpoint
 存储桶创建完成后，桶列表右侧可查看对应区域Endpoint地址：
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157746.jpg&quot; alt=&quot;20260215085157746&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157746.jpg&quot; alt=&quot;20260215085157746&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;进入桶内可创建文件夹、上传文件，支持查看历史版本、清理分片上传碎片释放空间。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157747.jpg&quot; alt=&quot;20260215085157747&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157747.jpg&quot; alt=&quot;20260215085157747&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -73,7 +73,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;切换未开通免费额度的区域，即可再次领取15GB存储+15GB流量，两个区域合计30GB存储+30GB下载流量；已开通区域不会再显示激活入口。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157748.jpg&quot; alt=&quot;20260215085157748&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157748.jpg&quot; alt=&quot;20260215085157748&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;搭配图床cloudflare-imgbed&quot;&gt;搭配图床：CloudFlare-ImgBed&lt;/h3&gt;
 &lt;p&gt;在图片上传客户端的选择上，推荐 MarSeventh 开源的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CloudFlare-ImgBed&lt;/code&gt;，界面简洁直观，可免费部署在CloudFlare，也支持Docker一键部署，兼容多存储后端。&lt;/p&gt;
@@ -85,7 +85,7 @@
 
 &lt;h4 id=&quot;2synology-c2-存储信息配置&quot;&gt;2、Synology C2 存储信息配置&lt;/h4&gt;
 &lt;p&gt;1). 进入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CloudFlare-ImgBed&lt;/code&gt; 系统后台，在系统设置中，点击【系统设置】-&amp;gt;在【上传设置】中添加上传渠道。如下
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157749.jpg&quot; alt=&quot;20260215085157749&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157749.jpg&quot; alt=&quot;20260215085157749&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2). S3渠道填写参数对照表&lt;/p&gt;
 
@@ -141,11 +141,11 @@
 &lt;/table&gt;
 
 &lt;p&gt;填写界面参考：
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157750.jpg&quot; alt=&quot;20260215085157750&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157750.jpg&quot; alt=&quot;20260215085157750&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3). 首页上传配置
 回到首页右下角【上传设置】，上传渠道选择刚刚新增的S3渠道，自定义上传目录、文件命名规则、图片压缩等参数，保存后即可拖拽粘贴上传图片。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260215085157751.jpg&quot; alt=&quot;20260215085157751&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17711167178/20260215085157751.jpg&quot; alt=&quot;20260215085157751&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Synology C2 对象存储&lt;/strong&gt;免费套餐优势：&lt;/p&gt;
@@ -187,9 +187,9 @@
 我自己搭建的实例：&lt;a href=&quot;https://imgbed.202090.xyz/&quot;&gt;https://imgbed.202090.xyz/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;前台界面&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036871.jpg&quot; alt=&quot;20260118172036871&quot; /&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036871.jpg&quot; alt=&quot;20260118172036871&quot; /&gt;
 后台界面&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036872.jpg&quot; alt=&quot;20260118172036872&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036872.jpg&quot; alt=&quot;20260118172036872&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;技术架构&quot;&gt;技术架构&lt;/h3&gt;
 &lt;p&gt;采用了&lt;strong&gt;前后端分离&lt;/strong&gt;的架构：&lt;/p&gt;
@@ -209,16 +209,16 @@
 &lt;p&gt;首先 fork 源码仓库：&lt;a href=&quot;https://github.com/MarSeventh/CloudFlare-ImgBed&quot;&gt;https://github.com/MarSeventh/CloudFlare-ImgBed&lt;/a&gt; 到自己的 GitHub 。如果有更新就可以直接将更新的立马部署到 Cloudflare Pages 上。&lt;/p&gt;
 
 &lt;p&gt;1、在控制面板找到【计算和AI】然后点击【Worker and Pages】在页面的右上角点击【创建应用程序】，然后点击下面的想要部署 Pages？的【开始按钮】。如下图&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036873.jpg&quot; alt=&quot;20260118172036873&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036873.jpg&quot; alt=&quot;20260118172036873&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2、在 “导入现有 Git 存储库” 处点击 “开始使用”&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036874.jpg&quot; alt=&quot;20260118172036874&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036874.jpg&quot; alt=&quot;20260118172036874&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3、选择【CloudFlare-ImgBed】项目，然后点击【开始设置】按钮&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036875.jpg&quot; alt=&quot;20260118172036875&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036875.jpg&quot; alt=&quot;20260118172036875&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4、项目名称自定义，然后构建命令填入： npm install ,其他默认，点击【保存并部署】&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036876.jpg&quot; alt=&quot;20260118172036876&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036876.jpg&quot; alt=&quot;20260118172036876&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;5、配置数据库&lt;/p&gt;
 &lt;blockquote&gt;
@@ -250,7 +250,7 @@
 &lt;/table&gt;
 
 &lt;p&gt;在【存储和数据库】-&amp;gt;【workers KV】添加KV数据库，KV名称填写 img_url&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036877.jpg&quot; alt=&quot;20260118172036877&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036877.jpg&quot; alt=&quot;20260118172036877&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;如果要使用D1数据库，就在【存储和数据库】-&amp;gt;【D1 SQL数据库】，点击右上角的【创建数据库实例】，这里就不做详细说明了。&lt;/p&gt;
 
@@ -263,10 +263,10 @@
   &lt;li&gt;KV命名空间：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;img_url&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036878.jpg&quot; alt=&quot;20260118172036878&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036878.jpg&quot; alt=&quot;20260118172036878&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;7、重新部署以后，就可以使用CloudFlare分配的域名访问了，当然建议绑定自己的域名
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036879.jpg&quot; alt=&quot;20260118172036879&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036879.jpg&quot; alt=&quot;20260118172036879&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;huggingface注册&quot;&gt;HuggingFace注册&lt;/h3&gt;
 
@@ -277,24 +277,24 @@
 
 &lt;p&gt;1、注册登陆后，在控制面板新建一个新空间，空间名字自定义。&lt;br /&gt;
 &lt;strong&gt;Select the Space SDK&lt;/strong&gt; 选择 &lt;strong&gt;docker&lt;/strong&gt; 的空项目或者是其他&lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036880.jpg&quot; alt=&quot;20260118172036880&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036880.jpg&quot; alt=&quot;20260118172036880&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Space hardware&lt;/strong&gt;选择&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FREE&lt;/code&gt;版本不要钱的。空间的可见性也是根据你自己的意向选择就好了
 然后点击下面的【Create Space 】按钮
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036881.jpg&quot; alt=&quot;20260118172036881&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036881.jpg&quot; alt=&quot;20260118172036881&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2、创建 &lt;a href=&quot;https://huggingface.co/settings/tokens&quot;&gt;HuggingFace Access Token&lt;/a&gt;，在【Setting】中的【Access Tokens】中点击【Create New Token】就行了，token的名称自定义，然后勾选仓库的读写权限，如下。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036882.jpg&quot; alt=&quot;20260118172036882&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036882.jpg&quot; alt=&quot;20260118172036882&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;存储配置&quot;&gt;存储配置&lt;/h3&gt;
 &lt;p&gt;1、进入CloudFlare-ImgBed系统后台，在系统设置中，点击【系统设置】-&amp;gt;在【上传设置】中添加上传渠道。如下
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036883.jpg&quot; alt=&quot;20260118172036883&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036883.jpg&quot; alt=&quot;20260118172036883&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2、添加一个HF存储的渠道方式，渠道名称自定义，然后仓库名称一定是 用户名/仓库名 的格式，然后填入上面申请的Acess Token信息。点击保存就行了。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036884.jpg&quot; alt=&quot;20260118172036884&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036884.jpg&quot; alt=&quot;20260118172036884&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3、在系统设置中，点击【系统设置】-&amp;gt;【页面设置】中去配置默认上传渠道信息和其他的配置就行了，如下。
-&lt;img src=&quot;https://img.gorpeln.top/blog/20260118172036885.jpg&quot; alt=&quot;20260118172036885&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2026/17687280368/20260118172036885.jpg&quot; alt=&quot;20260118172036885&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;你也可以增加其他的上传渠道，还可以开启负载均衡！&lt;/p&gt;
 
@@ -464,7 +464,7 @@
 &lt;p&gt;1). 选择任意对象存储 &lt;em class=&quot;color-gray&quot;&gt;(本文以又拍云为例）&lt;/em&gt;作为图床，可直接上传图片或通过图床程序上传。&lt;br /&gt;
 2). 在对象存储后台找到图片处理功能，选择间隔标识符，又拍云提供 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;! _ -&lt;/code&gt; 三种可选。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107691.png&quot; alt=&quot;20251003205107691&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17594958674/20251003205107691.png&quot; alt=&quot;20251003205107691&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3). 创建图片处理规则，按需配置参数：&lt;/p&gt;
 &lt;ul&gt;
@@ -472,7 +472,7 @@
   &lt;li&gt;2.支持文字水印或图片水印，设置水印位置及相关参数。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107692.jpg&quot; alt=&quot;20251003205107692&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17594958674/20251003205107692.jpg&quot; alt=&quot;20251003205107692&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4). 点击预览按钮确认水印效果，满意后保存规则，务必记录规则名称 &lt;em class=&quot;color-gray&quot;&gt;(如示例中的 shuiyin）&lt;/em&gt;，后续配置会用到。&lt;/p&gt;
 
@@ -490,7 +490,7 @@
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正则表达式： ^/(.*\.(jpg|jpeg|png|gif|webp|bmp))$   (这里加上实际使用的图片格式的后缀)
 替换为： /$1-shuiyin  （这里的-就是上面设置的间隔标识符，shuiyin就是上面设置的图片处理规则的名称）
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20251003205107693.png&quot; alt=&quot;20251003205107693&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17594958674/20251003205107693.png&quot; alt=&quot;20251003205107693&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;三方案优势&quot;&gt;三、方案优势&lt;/h3&gt;
 &lt;ol&gt;
@@ -525,7 +525,7 @@
           <pubDate>Tue, 30 Sep 2025 16:58:21 +0800</pubDate>
           <description>&lt;p&gt;今天打开博客查看时显示异常，提示&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;connection reset by peer&lt;/code&gt;。通过控制台数据回溯发现，9 月 26 日 - 9 月 30 日期间，博客流量已出现明显异常波动：访问请求量远超日常均值，且来源 IP 分散、访问行为不符合正常用户逻辑，初步判断为恶意流量攻击。所幸此前已针对博客安全做了基础防护配置 —— 开启了IP访问频率限制与流量封顶限制，所以在本次攻击中损失较小。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250930165821910.png&quot; alt=&quot;20250930165821910&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17592227011/20250930165821910.png&quot; alt=&quot;20250930165821910&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在检测到持续的异常流量后，CDN系统触发了安全防护机制，对博客访问进行了临时限制，但由于我此前未开启又拍云的异常事件短信/邮件提醒功能，未能第一时间收到预警，导致发现问题时已出现访问中断。截至目前，博客访问链路完全恢复，经测试各项功能均正常可用。&lt;/p&gt;
 
@@ -653,7 +653,7 @@
 
 &lt;div id=&quot;blog-problem&quot;&gt;
     &lt;p id=&quot;blog-problem-title&quot;&gt;为什么选用TOP域名？&lt;/p&gt;
-    &lt;p id=&quot;blog-problem-des&quot;&gt;感觉走了很多弯路才最终选择使用top域名。&lt;br /&gt;刚开始用的都是com域名，但是名称一直没有确定，使用过 guanpengchen、gpchen、gpchenx 等名字，2018年左右确定了名字 gorpeln ，从而形成了 &lt;a href=&quot;https://img.gorpeln.top/blog/20190101010101185.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; target=&quot;_blank&quot;&gt;gorpeln#com&lt;/a&gt; 域名，当时博客收录量较好，也有一定的权重，但在一个平凡的午后，一位陌生人问我域名出手吗？博主最后妥协了。博主改用 &lt;a href=&quot;https://img.gorpeln.top/blog/20190101010101184.png!gorpeln/watermark/url/L2Jsb2cvMC5wbmc=/opacity/10/align/center/percent/50&quot; target=&quot;_blank&quot;&gt;gorpeln#cn&lt;/a&gt; 域名，但是CN域名在使用过程中存在一些弊端，博主认为不适合自己，还是得申请国际顶级域名，COM域名一直没有释放，就只能选用TOP域名了。&lt;/p&gt;
+    &lt;p id=&quot;blog-problem-des&quot;&gt;感觉走了很多弯路才最终选择使用top域名。&lt;br /&gt;刚开始用的都是com域名，但是名称一直没有确定，使用过 guanpengchen、gpchen、gpchenx 等名字，2018年左右确定了名字 gorpeln ，从而形成了 &lt;a href=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101185.png&quot; target=&quot;_blank&quot;&gt;gorpeln#com&lt;/a&gt; 域名，当时博客收录量较好，也有一定的权重，但在一个平凡的午后，一位陌生人问我域名出手吗？博主最后妥协了。博主改用 &lt;a href=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101184.png&quot; target=&quot;_blank&quot;&gt;gorpeln#cn&lt;/a&gt; 域名，但是CN域名在使用过程中存在一些弊端，博主认为不适合自己，还是得申请国际顶级域名，COM域名一直没有释放，就只能选用TOP域名了。&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;blog-problem&quot;&gt;
@@ -712,20 +712,20 @@
   &lt;summary class=&quot;toggle-button&quot;&gt;博客成长相关图片&lt;/summary&gt;
   &lt;div class=&quot;box-detail&quot;&gt;
     
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101187.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101184.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101185.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20190101010101186.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322631.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322632.png&quot; alt=&quot;&quot; /&gt;
-    &lt;img src=&quot;https://img.gorpeln.top/blog/20250823091322633.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101187.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101184.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101185.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2019/15462756619/20190101010101186.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2025/17559116027/20250823091322631.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2025/17559116027/20250823091322632.png&quot; alt=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://img.gorpeln.top/blog/2025/17559116027/20250823091322633.png&quot; alt=&quot;&quot; /&gt;
 
   &lt;/div&gt;
 &lt;/details&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20200823120000260.jpg&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2020/15981552003/20200823120000260.jpg&quot; alt=&quot;20200823120000260&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;　　&lt;/p&gt;
 </description>
@@ -774,13 +774,13 @@
 
 &lt;h4 id=&quot;二图片流程&quot;&gt;二、图片流程&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137841.png&quot; alt=&quot;20250720120137841&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17529840977/20250720120137841.png&quot; alt=&quot;20250720120137841&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137842.png&quot; alt=&quot;20250720120137842&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17529840977/20250720120137842.png&quot; alt=&quot;20250720120137842&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137843.png&quot; alt=&quot;20250720120137843&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17529840977/20250720120137843.png&quot; alt=&quot;20250720120137843&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250720120137844.png&quot; alt=&quot;20250720120137844&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17529840977/20250720120137844.png&quot; alt=&quot;20250720120137844&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;macos-端&quot;&gt;macOS 端&lt;/h3&gt;
 &lt;p&gt;时光本macOS 端数据导出流程：&lt;/p&gt;
@@ -861,7 +861,7 @@
         right = Math.floor(50 * Math.random()),
         rotate = Math.floor(360 * Math.random());
     var foolsEgg = document.createElement(&quot;img&quot;);
-    foolsEgg.src = &quot;https://img.gorpeln.top/blog/20250615173327311.png&quot;;
+    foolsEgg.src = &quot;https://img.gorpeln.top/blog/2025/17499800077/20250615173327311.png&quot;;
     foolsEgg.style.position = &quot;fixed&quot;; 
     foolsEgg.style.bottom = &quot;&quot;.concat(bottom, &quot;%&quot;);
     foolsEgg.style.right = &quot;&quot;.concat(right, &quot;%&quot;); 
@@ -885,7 +885,7 @@
         right = Math.floor(50 * Math.random()),
         rotate = Math.floor(360 * Math.random());
     var foolsEgg = document.createElement(&quot;img&quot;);
-    foolsEgg.src = &quot;https://img.gorpeln.top/blog/20250615173327311.png&quot;;
+    foolsEgg.src = &quot;https://img.gorpeln.top/blog/2025/17499800077/20250615173327311.png&quot;;
     foolsEgg.style.position = &quot;fixed&quot;; 
     foolsEgg.style.bottom = &quot;&quot;.concat(bottom, &quot;%&quot;);
     foolsEgg.style.right = &quot;&quot;.concat(right, &quot;%&quot;); 
@@ -1025,7 +1025,7 @@
           
           <pubDate>Thu, 01 May 2025 12:33:14 +0800</pubDate>
           <description>&lt;h3 id=&quot;效果演示&quot;&gt;效果演示&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://tool.202090.xyz/&quot;&gt;在线工具箱 演示网站&lt;/a&gt;&lt;/p&gt;
 
@@ -1041,55 +1041,55 @@
 
 &lt;p&gt;01、 登录你的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00&lt;/code&gt; 后，点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 添加你的域名我设置为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt; ，点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add&lt;/code&gt; 添加。看到这个提示 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Operation performed successfully&lt;/code&gt; 成功添加。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314111.png&quot; alt=&quot;20250501123314111&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314111.png&quot; alt=&quot;20250501123314111&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;02、 点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage SSL certificates&lt;/code&gt; 可以看到这个ip地址 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;128.204.223.xxx&lt;/code&gt; 然后去你的DNS解析平台绑定。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314112.png&quot; alt=&quot;20250501123314112&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314112.png&quot; alt=&quot;20250501123314112&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;03、 打开DNS解析平台解析。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314113.png&quot; alt=&quot;20250501123314113&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314113.png&quot; alt=&quot;20250501123314113&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;04、 这样设置完，你打开的设置的网站域名，可以看到这样的页面就是成功。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314114.png&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314114.png&quot; alt=&quot;20250501123314114&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;05、 接下来正式开始打开 &lt;a href=&quot;https://github.com/gorpeln/tool&quot;&gt;tool下载源码&lt;/a&gt; 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314115.png&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314115.png&quot; alt=&quot;20250501123314115&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;06、 点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WWW websites&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add new website&lt;/code&gt; 再点 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool.gorpeln.top&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Details&lt;/code&gt; ，设置你网站的路径，如图所示，修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Open Basedir directories&lt;/code&gt; 中的内容，把下方代码中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serv00的名称&lt;/code&gt; 替换为你的登录用户名， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;自己的域名&lt;/code&gt; 同理，修改完复制进去保存。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/home/serv00的名称/domains/自己的域名/public_html:/tmp:/usr/share:/usr/local/share:/dev:/tmp:/usr/share:/usr/local/share:/dev:/usr/home/serv00的名称/domains/自己的域名
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314116.png&quot; alt=&quot;20250501123314116&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314116.png&quot; alt=&quot;20250501123314116&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;07、 设置完毕，打开serv00 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;File manager&lt;/code&gt;，上传从github下载的tool源文件压缩包&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314117.png&quot; alt=&quot;20250501123314117&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314117.png&quot; alt=&quot;20250501123314117&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;08、 进到你域名这个目录，上传你之前下载好的源码。右键压缩包如图。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314118.png&quot; alt=&quot;20250501123314118&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314118.png&quot; alt=&quot;20250501123314118&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;09、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tool-main&lt;/code&gt; 这个目录里面，全选除&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;外的所有文件&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314119.png&quot; alt=&quot;20250501123314119&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314119.png&quot; alt=&quot;20250501123314119&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;10、 选择解压到你域名的目录，只要你跟我图一样就没问题。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314120.png&quot; alt=&quot;20250501123314120&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314120.png&quot; alt=&quot;20250501123314120&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;11、 进到命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt; 目录，全选所有文件，右键解压到域名目录中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314121.png&quot; alt=&quot;20250501123314121&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314121.png&quot; alt=&quot;20250501123314121&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314122.png&quot; alt=&quot;20250501123314122&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314122.png&quot; alt=&quot;20250501123314122&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;12、 进到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public_html&lt;/code&gt; 目录，将命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.htaccess&lt;/code&gt; 的文件右键打开使用text方式编辑，你如果没有我图片上的text，就选 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;choose other&lt;/code&gt; 进行选择编辑方式拉到最下面就有了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314123.png&quot; alt=&quot;20250501123314123&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314123.png&quot; alt=&quot;20250501123314123&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;13、 将文件内容改为这个代码 然后保存。&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AddType application/x-httpd-php71 .php
@@ -1104,11 +1104,11 @@
 
 &lt;p&gt;14、 完成！打开你的网站就可以看到内容了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314124.png&quot; alt=&quot;20250501123314124&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;15、 （可选项）通过访问 https://你的域名/admin，访问后台，进行相关配置修改。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/20250501123314125.png&quot; alt=&quot;20250501123314125&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17460739947/20250501123314125.png&quot; alt=&quot;20250501123314125&quot; /&gt;&lt;/p&gt;
 
 </description>
         </item>
@@ -1385,7 +1385,7 @@
 
 &lt;h4 id=&quot;3复制&quot;&gt;3、复制&lt;/h4&gt;
 &lt;p&gt;需要复制时，在对应公式部分点击 右键 -&amp;gt; Copy to Clipboard  -&amp;gt; TeX Commands  即可完成复制 &lt;br /&gt;
-&lt;img src=&quot;https://img.gorpeln.top/blog/20250202114523962.png&quot; alt=&quot;20250202114523962&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://img.gorpeln.top/blog/2025/17384679236/20250202114523962.png&quot; alt=&quot;20250202114523962&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;三例子&quot;&gt;三、例子&lt;/h3&gt;
 &lt;h4 id=&quot;1四则运算&quot;&gt;1、四则运算&lt;/h4&gt;
@@ -1645,7 +1645,7 @@ $ \phi $,
 $ \chi $, 
 $ \omega $&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://img.gorpeln.top/blog/20250202114523961.png&quot;&gt;更多希腊字母&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://img.gorpeln.top/blog/2025/17384679236/20250202114523961.png&quot;&gt;更多希腊字母&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;8多行公式&quot;&gt;8、多行公式&lt;/h4&gt;
 &lt;h5 id=&quot;1换行&quot;&gt;1）换行&lt;/h5&gt;

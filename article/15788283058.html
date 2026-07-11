@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>124.9k</p>
+                  <p>125.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-09 21:54:30 +0800">
-                    2026/07/09
+                  <p id="current-date" data-value="2026-07-11 21:29:15 +0800">
+                    2026/07/11
                   </p>
                 </li>
               </ul>
@@ -477,7 +477,7 @@
 　　appID 格式为 teamID.bundleId形式，譬如说我的teamID是xxxxxxxxxxx，bundleId是com.gorpeln.notes那么我的appID就是：xxxxxxxxxxx.com.gorpeln.notes。<br />
 　　teamID：打开<a href="https://developer.apple.com/account/">苹果官网</a>，点击Account，点击左边栏的 Membership,查找teamID</p>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505921.png" alt="20200112192505921" /></p>
+<p><img src="https://img.gorpeln.top/blog/2020/15788283058/20200112192505921.png" alt="20200112192505921" /></p>
 
 <p><strong><em>2) paths：</em></strong>  <br />
 　　设定一个App的路径支持列表，只有这些指定的路径链接才会被App所处理。格式如下：</p>
@@ -498,7 +498,7 @@
   <li>也可以使用苹果的<a href="https://search.developer.apple.com/appsearch-validation-tool">验证网站</a>，验证文件是否能被苹果请求到。出现该提示为<code class="language-plaintext highlighter-rouge">apple-app-site-association</code>文件配置正确。</li>
 </ul>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505922.png" alt="20200112192505922" /></p>
+<p><img src="https://img.gorpeln.top/blog/2020/15788283058/20200112192505922.png" alt="20200112192505922" /></p>
 
 <ul>
   <li>出现404错误码提示，则为<code class="language-plaintext highlighter-rouge">apple-app-site-association</code>文件未上传成功，或者使用<code class="language-plaintext highlighter-rouge">https://yourdomain.com/apple-app-site-association</code>路径无法访问。</li>
@@ -507,12 +507,12 @@
 <h4 id="2-建立web网页和app应用之间的关联---app-ids配置-和-项目配置">2. 建立web网页和app应用之间的关联 -&gt; app IDs配置 和 项目配置</h4>
 <p><strong><em>（1）app IDs 配置</em></strong><br />
 　　进入开发者网站，找到你自己的bundleId，可以点击edit按钮，开启associate domains，如下图：
-<img src="https://img.gorpeln.top/blog/20200112192505923.png" alt="20200112192505923" /></p>
+<img src="https://img.gorpeln.top/blog/2020/15788283058/20200112192505923.png" alt="20200112192505923" /></p>
 
 <p><strong><em>（2）项目配置</em></strong> <br />
 　　在项目的Capablities中开启Associated domains，如下图：</p>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505924.png" alt="20200112192505924" /></p>
+<p><img src="https://img.gorpeln.top/blog/2020/15788283058/20200112192505924.png" alt="20200112192505924" /></p>
 
 <p>注意<code class="language-plaintext highlighter-rouge">domains</code>可以添加多个，前缀必须为<code class="language-plaintext highlighter-rouge">applinks:</code>，<code class="language-plaintext highlighter-rouge">applinks:</code>后为你的服务器的域名。</p>
 
@@ -538,7 +538,7 @@
 <p><strong><em>（3）验证以上配置</em></strong> <br />
 　　快捷验证，在备忘录中输入<code class="language-plaintext highlighter-rouge">https://yourdomain.com/apple-app-site-association</code>，长按这个链接，出现下图提示则配置成功。</p>
 
-<p><img src="https://img.gorpeln.top/blog/20200112192505925.png" alt="20200112192505925" /></p>
+<p><img src="https://img.gorpeln.top/blog/2020/15788283058/20200112192505925.png" alt="20200112192505925" /></p>
 
 <p>备注：如果我们在手机上没有安装相应的应用，就可以通过Universal Links重定向进行跳转到下载也进行下载操作。因为我们在paths设置了路径限制，只要我们重定向的路径符合限制，就能先走本地是否安装程序，如果没有再跳转到相应下载页。</p>
 
@@ -632,7 +632,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.50</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.51</a>
         </div>
     </div>
 </footer>
@@ -775,7 +775,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.50",
+                "%c版本号 %c V4.10.51",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),

@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>124.9k</p>
+                  <p>125.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-09 21:54:30 +0800">
-                    2026/07/09
+                  <p id="current-date" data-value="2026-07-11 21:29:15 +0800">
+                    2026/07/11
                   </p>
                 </li>
               </ul>
@@ -434,35 +434,35 @@
 <h4 id="创建桶">创建桶</h4>
 <p>注册登录后进入：<a href="https://c2.synology.com/en-global/object-storage/overview">https://c2.synology.com/en-global/object-storage/overview</a><br />
 点击【Get 15 GB for free】
-<img src="https://img.gorpeln.top/blog/20260215085157741.jpg" alt="20260215085157741" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157741.jpg" alt="20260215085157741" /></p>
 
 <p>控制台界面很简洁哈，直接在 <code class="language-plaintext highlighter-rouge">Buckets</code> 栏目中【创建桶】
-<img src="https://img.gorpeln.top/blog/20260215085157742.jpg" alt="20260215085157742" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157742.jpg" alt="20260215085157742" /></p>
 
 <ol>
   <li>
     <p>创建存储桶基础信息
 <code class="language-plaintext highlighter-rouge">Bucket name</code> 是必须的。<strong>Create Access Key</strong> 是指单独为这个存储桶创建一个访问的密钥，这里我们点击勾选方便一会使用，一定要备份记住密钥，然后点击【Next】
-<img src="https://img.gorpeln.top/blog/20260215085157743.jpg" alt="20260215085157743" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157743.jpg" alt="20260215085157743" /></p>
   </li>
   <li>
     <p>数据保护设置
 下面的步骤就是是否开启桶的版本控制，和桶对象锁。这两项是保证数据安全的，建议开启。或者根据你自己的需求来，可以都勾选上，也可以不勾选。然后点击【create bucket】按钮。
-<img src="https://img.gorpeln.top/blog/20260215085157744.jpg" alt="20260215085157744" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157744.jpg" alt="20260215085157744" /></p>
   </li>
   <li>
     <p>备份密钥
 创建完成会展示 Access Key ID 与 Secret Key，密钥关闭窗口后无法再次查看，务必复制或下载备份。
-<img src="https://img.gorpeln.top/blog/20260215085157745.jpg" alt="20260215085157745" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157745.jpg" alt="20260215085157745" /></p>
   </li>
   <li>
     <p>查看桶Endpoint
 存储桶创建完成后，桶列表右侧可查看对应区域Endpoint地址：
-<img src="https://img.gorpeln.top/blog/20260215085157746.jpg" alt="20260215085157746" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157746.jpg" alt="20260215085157746" /></p>
   </li>
   <li>
     <p>进入桶内可创建文件夹、上传文件，支持查看历史版本、清理分片上传碎片释放空间。
-<img src="https://img.gorpeln.top/blog/20260215085157747.jpg" alt="20260215085157747" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157747.jpg" alt="20260215085157747" /></p>
   </li>
 </ol>
 
@@ -475,7 +475,7 @@
 </ul>
 
 <p>切换未开通免费额度的区域，即可再次领取15GB存储+15GB流量，两个区域合计30GB存储+30GB下载流量；已开通区域不会再显示激活入口。
-<img src="https://img.gorpeln.top/blog/20260215085157748.jpg" alt="20260215085157748" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157748.jpg" alt="20260215085157748" /></p>
 
 <h3 id="搭配图床cloudflare-imgbed">搭配图床：CloudFlare-ImgBed</h3>
 <p>在图片上传客户端的选择上，推荐 MarSeventh 开源的 <code class="language-plaintext highlighter-rouge">CloudFlare-ImgBed</code>，界面简洁直观，可免费部署在CloudFlare，也支持Docker一键部署，兼容多存储后端。</p>
@@ -487,7 +487,7 @@
 
 <h4 id="2synology-c2-存储信息配置">2、Synology C2 存储信息配置</h4>
 <p>1). 进入 <code class="language-plaintext highlighter-rouge">CloudFlare-ImgBed</code> 系统后台，在系统设置中，点击【系统设置】-&gt;在【上传设置】中添加上传渠道。如下
-<img src="https://img.gorpeln.top/blog/20260215085157749.jpg" alt="20260215085157749" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157749.jpg" alt="20260215085157749" /></p>
 
 <p>2). S3渠道填写参数对照表</p>
 
@@ -543,11 +543,11 @@
 </table>
 
 <p>填写界面参考：
-<img src="https://img.gorpeln.top/blog/20260215085157750.jpg" alt="20260215085157750" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157750.jpg" alt="20260215085157750" /></p>
 
 <p>3). 首页上传配置
 回到首页右下角【上传设置】，上传渠道选择刚刚新增的S3渠道，自定义上传目录、文件命名规则、图片压缩等参数，保存后即可拖拽粘贴上传图片。
-<img src="https://img.gorpeln.top/blog/20260215085157751.jpg" alt="20260215085157751" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17711167178/20260215085157751.jpg" alt="20260215085157751" /></p>
 
 <h3 id="总结">总结</h3>
 <p><strong>Synology C2 对象存储</strong>免费套餐优势：</p>
@@ -651,7 +651,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.50</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.51</a>
         </div>
     </div>
 </footer>
@@ -794,7 +794,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.50",
+                "%c版本号 %c V4.10.51",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),

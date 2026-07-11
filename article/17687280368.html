@@ -362,7 +362,7 @@
                 </li>
                 <li>
                   <p>本站总字数</p>
-                  <p>124.9k</p>
+                  <p>125.0k</p>
                 </li>
                 <li>
                   <p>已运行时间</p>
@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-09 21:54:30 +0800">
-                    2026/07/09
+                  <p id="current-date" data-value="2026-07-11 21:29:15 +0800">
+                    2026/07/11
                   </p>
                 </li>
               </ul>
@@ -433,9 +433,9 @@
 我自己搭建的实例：<a href="https://imgbed.202090.xyz/">https://imgbed.202090.xyz/</a></p>
 
 <p>前台界面<br />
-<img src="https://img.gorpeln.top/blog/20260118172036871.jpg" alt="20260118172036871" />
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036871.jpg" alt="20260118172036871" />
 后台界面<br />
-<img src="https://img.gorpeln.top/blog/20260118172036872.jpg" alt="20260118172036872" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036872.jpg" alt="20260118172036872" /></p>
 
 <h3 id="技术架构">技术架构</h3>
 <p>采用了<strong>前后端分离</strong>的架构：</p>
@@ -455,16 +455,16 @@
 <p>首先 fork 源码仓库：<a href="https://github.com/MarSeventh/CloudFlare-ImgBed">https://github.com/MarSeventh/CloudFlare-ImgBed</a> 到自己的 GitHub 。如果有更新就可以直接将更新的立马部署到 Cloudflare Pages 上。</p>
 
 <p>1、在控制面板找到【计算和AI】然后点击【Worker and Pages】在页面的右上角点击【创建应用程序】，然后点击下面的想要部署 Pages？的【开始按钮】。如下图<br />
-<img src="https://img.gorpeln.top/blog/20260118172036873.jpg" alt="20260118172036873" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036873.jpg" alt="20260118172036873" /></p>
 
 <p>2、在 “导入现有 Git 存储库” 处点击 “开始使用”<br />
-<img src="https://img.gorpeln.top/blog/20260118172036874.jpg" alt="20260118172036874" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036874.jpg" alt="20260118172036874" /></p>
 
 <p>3、选择【CloudFlare-ImgBed】项目，然后点击【开始设置】按钮<br />
-<img src="https://img.gorpeln.top/blog/20260118172036875.jpg" alt="20260118172036875" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036875.jpg" alt="20260118172036875" /></p>
 
 <p>4、项目名称自定义，然后构建命令填入： npm install ,其他默认，点击【保存并部署】<br />
-<img src="https://img.gorpeln.top/blog/20260118172036876.jpg" alt="20260118172036876" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036876.jpg" alt="20260118172036876" /></p>
 
 <p>5、配置数据库</p>
 <blockquote>
@@ -496,7 +496,7 @@
 </table>
 
 <p>在【存储和数据库】-&gt;【workers KV】添加KV数据库，KV名称填写 img_url<br />
-<img src="https://img.gorpeln.top/blog/20260118172036877.jpg" alt="20260118172036877" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036877.jpg" alt="20260118172036877" /></p>
 
 <p>如果要使用D1数据库，就在【存储和数据库】-&gt;【D1 SQL数据库】，点击右上角的【创建数据库实例】，这里就不做详细说明了。</p>
 
@@ -509,10 +509,10 @@
   <li>KV命名空间：<code class="language-plaintext highlighter-rouge">img_url</code></li>
 </ul>
 
-<p><img src="https://img.gorpeln.top/blog/20260118172036878.jpg" alt="20260118172036878" /></p>
+<p><img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036878.jpg" alt="20260118172036878" /></p>
 
 <p>7、重新部署以后，就可以使用CloudFlare分配的域名访问了，当然建议绑定自己的域名
-<img src="https://img.gorpeln.top/blog/20260118172036879.jpg" alt="20260118172036879" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036879.jpg" alt="20260118172036879" /></p>
 
 <h3 id="huggingface注册">HuggingFace注册</h3>
 
@@ -523,24 +523,24 @@
 
 <p>1、注册登陆后，在控制面板新建一个新空间，空间名字自定义。<br />
 <strong>Select the Space SDK</strong> 选择 <strong>docker</strong> 的空项目或者是其他<br />
-<img src="https://img.gorpeln.top/blog/20260118172036880.jpg" alt="20260118172036880" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036880.jpg" alt="20260118172036880" /></p>
 
 <p><strong>Space hardware</strong>选择<code class="language-plaintext highlighter-rouge">FREE</code>版本不要钱的。空间的可见性也是根据你自己的意向选择就好了
 然后点击下面的【Create Space 】按钮
-<img src="https://img.gorpeln.top/blog/20260118172036881.jpg" alt="20260118172036881" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036881.jpg" alt="20260118172036881" /></p>
 
 <p>2、创建 <a href="https://huggingface.co/settings/tokens">HuggingFace Access Token</a>，在【Setting】中的【Access Tokens】中点击【Create New Token】就行了，token的名称自定义，然后勾选仓库的读写权限，如下。
-<img src="https://img.gorpeln.top/blog/20260118172036882.jpg" alt="20260118172036882" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036882.jpg" alt="20260118172036882" /></p>
 
 <h3 id="存储配置">存储配置</h3>
 <p>1、进入CloudFlare-ImgBed系统后台，在系统设置中，点击【系统设置】-&gt;在【上传设置】中添加上传渠道。如下
-<img src="https://img.gorpeln.top/blog/20260118172036883.jpg" alt="20260118172036883" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036883.jpg" alt="20260118172036883" /></p>
 
 <p>2、添加一个HF存储的渠道方式，渠道名称自定义，然后仓库名称一定是 用户名/仓库名 的格式，然后填入上面申请的Acess Token信息。点击保存就行了。
-<img src="https://img.gorpeln.top/blog/20260118172036884.jpg" alt="20260118172036884" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036884.jpg" alt="20260118172036884" /></p>
 
 <p>3、在系统设置中，点击【系统设置】-&gt;【页面设置】中去配置默认上传渠道信息和其他的配置就行了，如下。
-<img src="https://img.gorpeln.top/blog/20260118172036885.jpg" alt="20260118172036885" /></p>
+<img src="https://img.gorpeln.top/blog/2026/17687280368/20260118172036885.jpg" alt="20260118172036885" /></p>
 
 <p>你也可以增加其他的上传渠道，还可以开启负载均衡！</p>
 
@@ -639,7 +639,7 @@
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.50</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.51</a>
         </div>
     </div>
 </footer>
@@ -782,7 +782,7 @@
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.50",
+                "%c版本号 %c V4.10.51",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
