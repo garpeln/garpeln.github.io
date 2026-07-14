@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-11 21:29:15 +0800">
-                    2026/07/11
+                  <p id="current-date" data-value="2026-07-14 20:19:40 +0800">
+                    2026/07/14
                   </p>
                 </li>
               </ul>
@@ -562,7 +562,7 @@ fn1
 </div>
 <div class="copyright">
     
-    <div class="custom-font">最后编辑于：2026-01-21</div>
+    <div class="custom-font">最后编辑于：2026-07-11</div>
     
     <div class="custom-font">本文链接：<a href="/article/16168523139" class='articleLink'>https://gorpeln.top/article/16168523139</a></div>
     <div class="custom-font">如有任何知识产权、版权问题或理论错误，还请指正。转载请附上原文出处链接。</div>
@@ -645,7 +645,7 @@ fn1
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.51</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.52</a>
         </div>
     </div>
 </footer>
@@ -788,7 +788,7 @@ fn1
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.51",
+                "%c版本号 %c V4.10.52",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1094,6 +1094,9 @@ var _hmt = _hmt || [];
             // locale,
             reaction: true,// 文章评分
             devtool: false, // 禁用 Source Map
+            avatar: 'gravatar',
+            avatarCDN: 'https://www.gravatar.com/avatar',
+            mathjax: false, //关闭 LaTeX 公式解析
             noRss: true,
             imageUploader: (file) => {
                 const formData = new FormData();
@@ -1101,7 +1104,7 @@ var _hmt = _hmt || [];
                 return fetch('https://api.sm.ms/v2/upload', {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'YOUR_SM_MS_TOKEN' // 需要在 sm.ms 后台获取
+                        'Authorization': 'd85fb434-fee6-517c-e317-55a4185854f7' // 需要在 sm.ms 后台获取
                     },
                     body: formData
                 })
