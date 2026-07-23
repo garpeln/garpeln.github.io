@@ -370,8 +370,8 @@
                 </li>
                 <li>
                   <p>最近更新时间</p>
-                  <p id="current-date" data-value="2026-07-22 20:44:36 +0800">
-                    2026/07/22
+                  <p id="current-date" data-value="2026-07-23 20:15:35 +0800">
+                    2026/07/23
                   </p>
                 </li>
               </ul>
@@ -1013,7 +1013,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
                 萌ICP备20240031号
             </a>
             ·
-            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.55</a>
+            <a target="_blank" href="/article/17265361548" class="footer-item">4.10.56</a>
         </div>
     </div>
 </footer>
@@ -1156,7 +1156,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
         setTimeout(
             Log.bind(
                 console,
-                "%c版本号 %c V4.10.55",
+                "%c版本号 %c V4.10.56",
                 "",
                 "color:#6666cc;line-height:22px;font-size:12px;",
             ),
@@ -1296,14 +1296,25 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 <!-- 网站分析 -->
 <!-- 百度统计 -->
 <script>
+// 先拦截卸载事件绑定，再加载百度统计
+(function () {
+  const originAddEvt = window.addEventListener;
+  window.addEventListener = function (type) {
+    if (type === 'beforeunload' || type === 'unload') return;
+    return originAddEvt.apply(this, arguments);
+  };
+  Object.defineProperty(window, 'onbeforeunload', { set: () => {} });
+})();
+
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?f6f6caffb2365e545b75821d5d116c62";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+
 
 <!-- 百度自动收录 -->
 <script>
