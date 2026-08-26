@@ -367,10 +367,10 @@ var QRCode;
 			this._el.appendChild(this._elImage);
 			this._bSupportDataURI = null;
 			    // 创建并添加“手机扫描浏览”文字的div
-    var textDiv = document.createElement('div');
-    textDiv.className = 'scan-text'; // 可自定义CSS类名
-    textDiv.textContent = '手机扫描浏览';
-    this._el.appendChild(textDiv);
+		    var textDiv = document.createElement('div');
+		    textDiv.className = 'scan-text'; // 可自定义CSS类名
+		    textDiv.textContent = '在手机上浏览此页面';
+		    this._el.appendChild(textDiv);
 		};
 			
 		/**
